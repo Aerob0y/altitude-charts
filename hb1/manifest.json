@@ -1,0 +1,87 @@
+{
+  "name": "hb1",
+  "title": "Exchange rates",
+  "source": "Reserve Bank of New Zealand (RBNZ)",
+  "note": "Shows how much foreign currency the New Zealand dollar buys. Use the selectors to compare currencies and the trade-weighted index.",
+  "updated": "2026-10-03",
+  "views": [
+    {
+      "label": "NZD/USD",
+      "spec": "nzd-usd.json"
+    },
+    {
+      "label": "Index",
+      "spec": "index.json"
+    },
+    {
+      "label": "NZD/GBP",
+      "spec": "nzd-gbp.json"
+    },
+    {
+      "label": "NZD/AUD",
+      "spec": "nzd-aud.json"
+    },
+    {
+      "label": "NZD/JPY",
+      "spec": "nzd-jpy.json"
+    },
+    {
+      "label": "NZD/EUR",
+      "spec": "nzd-eur.json"
+    },
+    {
+      "label": "NZD/CAD",
+      "spec": "nzd-cad.json"
+    },
+    {
+      "label": "NZD/KRW",
+      "spec": "nzd-krw.json"
+    },
+    {
+      "label": "NZD/CNY",
+      "spec": "nzd-cny.json"
+    },
+    {
+      "label": "NZD/MYR",
+      "spec": "nzd-myr.json"
+    },
+    {
+      "label": "NZD/HKD",
+      "spec": "nzd-hkd.json"
+    },
+    {
+      "label": "NZD/IDR",
+      "spec": "nzd-idr.json"
+    },
+    {
+      "label": "NZD/THB",
+      "spec": "nzd-thb.json"
+    },
+    {
+      "label": "NZD/SGD",
+      "spec": "nzd-sgd.json"
+    },
+    {
+      "label": "NZD/TWD",
+      "spec": "nzd-twd.json"
+    },
+    {
+      "label": "NZD/INR",
+      "spec": "nzd-inr.json"
+    },
+    {
+      "label": "NZD/PHP",
+      "spec": "nzd-php.json"
+    },
+    {
+      "label": "NZD/VND",
+      "spec": "nzd-vnd.json"
+    },
+    {
+      "label": "Index Historic",
+      "spec": "index-historic.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": null
+}
