@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Altitude chart</title>
+  <link rel="icon" href="data:,">
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; }
+    body { background: #fbfaf7; color: #142e2c; font-family: Arial, sans-serif; }
+    .page { height: 100%; min-height: 560px; padding: 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    header, footer, .controls { flex: 0 0 auto; min-width: 0; }
+    h1 { margin: 0 0 6px; font: 28px/1.1 Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
+    #note { margin: 0; color: #48605e; font-size: 13px; line-height: 1.45; }
+    .controls { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 6px 12px; font-size: 13px; }
+    .controls label { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    select { min-width: 0; width: 100%; padding: 7px; border: 1px solid #c4d3cd; background: white; color: inherit; font: inherit; }
+    .chart-area { flex: 1 1 auto; min-height: 300px; min-width: 0; position: relative; background: white; }
+    #chart { position: absolute; inset: 0; width: 100%; height: 100%; }
+    #status { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: #48605e; background: white; z-index: 2; }
+    [hidden] { display: none !important; }
+    footer { border-top: 1px solid #cbd6d1; padding-top: 8px; font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
+    #downloads { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 4px; }
+    a { color: #164b45; text-underline-offset: 3px; }
+    :focus-visible { outline: 2px solid #164b45; outline-offset: 3px; }
+    @media (max-width: 599px) {
+      .page { padding: 10px; gap: 8px; }
+      h1 { font-size: 23px; }
+      #note { font-size: 12px; }
+      .controls { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header><h1 id="title">Altitude chart</h1><p id="note"></p></header>
+    <div class="controls" id="controls" hidden></div>
+    <section class="chart-area" aria-label="Interactive chart">
+      <div id="chart"></div><div id="status" role="status" aria-live="polite">Loading chart…</div>
+    </section>
+    <footer>
+      <span id="source"></span><span id="updated"></span>
+      <nav id="downloads" aria-label="Chart downloads"></nav>
+    </footer>
+  </main>
+  <script>
+    (() => {
+      const chart = document.getElementById("chart");
+      const status = document.getElementById("status");
+      const controls = document.getElementById("controls");
+      const folder = new URL("./", location.href);
+      const destinationSplits = ["Residency/Country", "Travel Purpose"];
+      let manifest, cube, specs = {}, splitSelect, filterSelects = {};
+
+      async function readJson(path) {
+        const response = await fetch(new URL(path, folder));
+        if (!response.ok) throw new Error("Chart file is unavailable");
+        return response.json();
+      }
+
+      function formattedDate(value) {
+        if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return "not recorded";
+        const date = new Date(value + "T12:00:00Z");
+        return new Intl.DateTimeFormat("en-NZ", {day: "numeric", month: "short", year: "numeric", timeZone: "UTC"}).format(date);
+      }
+
+      function frameLayout(layout) {
+        layout = structuredClone(layout || {});
+        delete layout.width;
+        delete layout.height;
+        layout.autosize = true;
+        if (innerWidth < 600) {
+          layout.legend = {...layout.legend, orientation: "h", x: 0, xanchor: "left", y: -0.25, yanchor: "top"};
+          if (layout.title) layout.title = {...layout.title, font: {...layout.title.font, size: 13}};
+          layout.margin = {...layout.margin, l: 44, r: 12, b: Math.max(layout.margin?.b || 0, 90)};
+          const selector = layout.xaxis?.rangeselector;
+          if (selector) layout.xaxis.rangeselector = {...selector, x: 0, xanchor: "left", font: {...selector.font, size: 10}};
+        }
+        return layout;
+      }
+
+      function plotConfig(spec) {
+        const config = {...spec.config, responsive: true};
+        if (innerWidth < 600) config.displayModeBar = false;
+        return config;
+      }
+
+      // Re-total the cube for the chosen split and filters: one array of monthly
+      // arrivals per split value, using the same rows as the dashboard tab.
+      function retotal(split, filters) {
+        const cols = cube.columns, arrivals = cube.arrivals;
+        const versions = cube.dims.Version;
+        const allowed = versions.map(v => destinationSplits.includes(split) ? v !== "Port" : v !== "Destination");
+        const splitCol = cols[split], splitTotal = cube.total_index[split];
+        const active = Object.entries(filters).filter(([, value]) => value >= 0).map(([dim, value]) => [cols[dim], value]);
+        const nMonths = cube.months.length;
+        const sums = new Map();
+        let row = 0;
+        for (let m = 0; m < nMonths; m++) {
+          const end = row + cube.month_rows[m];
+          rows: for (; row < end; row++) {
+            if (!allowed[cols.Version[row]]) continue;
+            const value = splitCol[row];
+            if (value === splitTotal) continue;
+            for (const [col, wanted] of active) if (col[row] !== wanted) continue rows;
+            const label = cube.dims[split][value];
+            let series = sums.get(label);
+            if (!series) sums.set(label, series = new Float64Array(nMonths).fill(NaN));
+            series[m] = (Number.isNaN(series[m]) ? 0 : series[m]) + arrivals[row];
+          }
+        }
+        if (sums.size > cube.top_n + 1) {
+          // Keep the largest values over the latest year, as the R export does
+          const last = new Date(cube.months[nMonths - 1] + "T00:00:00Z");
+          const from = new Date(last.getTime() - 365 * 864e5);
+          const recent = cube.months.map(m => new Date(m + "T00:00:00Z") >= from);
+          const ranked = [...sums].map(([label, s]) => [label, s.reduce((t, v, i) => recent[i] && !Number.isNaN(v) ? t + v : t, 0)])
+            .sort((a, b) => b[1] - a[1]).slice(0, cube.top_n).map(([label]) => label);
+          const other = new Float64Array(nMonths).fill(NaN);
+          for (const [label, s] of sums) {
+            if (ranked.includes(label)) continue;
+            s.forEach((v, i) => { if (!Number.isNaN(v)) other[i] = (Number.isNaN(other[i]) ? 0 : other[i]) + v; });
+            sums.delete(label);
+          }
+          sums.set("All other", other);
+        }
+        // Same order as standard_plot(), which sorts split values in C-locale order
+        const labels = [...sums.keys()].sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
+        return labels.map(label => [label, sums.get(label)]);
+      }
+
+      function traces(split, totals) {
+        const spec = specs[split];
+        const template = spec.data[0];
+        const base = template.name.replace(/ \(.*\)$/, "");
+        const byName = new Map(spec.data.map(t => [t.name, t]));
+        return totals.map(([label, series], i) => {
+          const name = `${base} (${label})`;
+          const style = byName.get(name) || spec.data[i % spec.data.length];
+          const x = [], y = [];
+          series.forEach((v, m) => { if (!Number.isNaN(v)) { x.push(cube.months[m]); y.push(v); } });
+          const {x: _x, y: _y, name: _n, ...rest} = style;
+          return {...rest, name, x, y};
+        });
+      }
+
+      function subtitle() {
+        const chosen = Object.entries(filterSelects).filter(([, s]) => s.value !== "-1")
+          .map(([, s]) => s.selectedOptions[0].textContent);
+        return chosen.length ? chosen.join(", ") : "all arrivals";
+      }
+
+      function redraw() {
+        const started = performance.now();
+        const split = splitSelect.value;
+        const filters = {};
+        for (const [dim, select] of Object.entries(filterSelects)) {
+          const value = Number(select.value);
+          filters[dim] = dim === split ? -1 : value;
+          select.disabled = dim === split;
+        }
+        const spec = specs[split];
+        const layout = frameLayout(spec.layout);
+        if (layout.title?.text) layout.title.text = layout.title.text.replace("all arrivals", subtitle());
+        const data = traces(split, retotal(split, filters));
+        Plotly.react(chart, data, layout, plotConfig(spec));
+        status.textContent = "No arrivals match these filters.";
+        status.hidden = data.length > 0;
+        window.lastRedrawMs = performance.now() - started;
+      }
+
+      function addSelect(id, labelText, options) {
+        const label = document.createElement("label");
+        label.textContent = labelText;
+        const select = document.createElement("select");
+        select.id = id;
+        for (const [value, text] of options) select.add(new Option(text, value));
+        select.addEventListener("change", redraw);
+        label.append(select);
+        controls.append(label);
+        return select;
+      }
+
+      async function start() {
+        manifest = await readJson("manifest.json");
+        document.title = manifest.title;
+        document.getElementById("title").textContent = manifest.title;
+        document.getElementById("note").textContent = manifest.note || "";
+        document.getElementById("source").textContent = "Source: " + manifest.source;
+        document.getElementById("updated").textContent = " · Data last updated: " + formattedDate(manifest.updated);
+        const downloads = document.getElementById("downloads");
+        if (manifest.data) {
+          const link = document.createElement("a");
+          link.href = new URL(manifest.data, folder).href;
+          link.textContent = "Download monthly totals (CSV)";
+          link.setAttribute("download", "");
+          downloads.append(link);
+        }
+        // Draw the default view first; load the data for filtering alongside it.
+        const first = manifest.views[0];
+        const cubeRequest = readJson("cube.json");
+        specs[first.label] = await readJson(first.spec);
+        const spec = specs[first.label];
+        await Plotly.react(chart, spec.data, frameLayout(spec.layout), plotConfig(spec));
+        status.hidden = true;
+
+        cube = await cubeRequest;
+        await Promise.all(manifest.views.slice(1).map(async view => { specs[view.label] = await readJson(view.spec); }));
+        splitSelect = addSelect("split", "Split by", manifest.views.map(v => [v.label, v.label]));
+        for (const dim of manifest.views.map(v => v.label)) {
+          const labels = cube.dims[dim];
+          const choices = labels.map((text, i) => [i, text])
+            .filter(([i, text]) => i !== cube.total_index[dim] && text !== "Not stated")
+            .sort((a, b) => a[1].localeCompare(b[1], "en"));
+          filterSelects[dim] = addSelect("filter-" + dim.replace(/\W+/g, "-").toLowerCase(), dim, [[-1, "All"], ...choices]);
+        }
+        controls.hidden = false;
+        redraw();
+        let wasNarrow = innerWidth < 600;
+        addEventListener("resize", () => {
+          if ((innerWidth < 600) !== wasNarrow) { wasNarrow = !wasNarrow; redraw(); }
+        });
+      }
+
+      start().catch(() => {
+        status.textContent = "We couldn’t load this chart. Please try again later.";
+        status.hidden = false;
+      });
+    })();
+  </script>
+</body>
+</html>

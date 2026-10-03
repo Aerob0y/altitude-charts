@@ -1,0 +1,31 @@
+{
+  "name": "border",
+  "title": "Border",
+  "source": "Stats NZ border movements",
+  "note": "Counts border crossings by port, passenger type, travel purpose and residency. Counts are movements, not unique people.",
+  "updated": "2026-10-03",
+  "views": [
+    {
+      "label": "New Zealand Port",
+      "spec": "new-zealand-port.json"
+    },
+    {
+      "label": "Overseas Port",
+      "spec": "overseas-port.json"
+    },
+    {
+      "label": "Passenger Type",
+      "spec": "passenger-type.json"
+    },
+    {
+      "label": "Travel Purpose",
+      "spec": "travel-purpose.json"
+    },
+    {
+      "label": "Residency/Country",
+      "spec": "residency-country.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": null
+}
