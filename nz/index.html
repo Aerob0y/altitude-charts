@@ -53,7 +53,7 @@
     .topic h1 { margin: 0 0 6px; font: 28px/1.1 Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
     #note { margin: 0; color: #48605e; font-size: 13px; line-height: 1.45; max-width: 900px; }
     .controls { display: flex; align-items: center; gap: 10px; font-size: 13px; }
-    #picks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+    #picks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; min-width: 0; max-width: 100%; }
     select { min-width: 0; max-width: 100%; padding: 7px; border: 1px solid #c4d3cd; background: white; color: inherit; font: inherit; }
     .chart-area { flex: 1 1 auto; min-height: 260px; min-width: 0; position: relative; background: white; }
     #chart { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -330,55 +330,28 @@
         return loadSpec(signal => readJson(manifest.views[index].spec, folder, signal), number, index === 0);
       }
 
+      const isPickDefault = chosen => String(chosen) === String(manifest.pick.default || [0]);
+
       function loadPicks(chosen, number) {
         return loadSpec(async signal => {
           const specs = await Promise.all(chosen.map(i => readJson(manifest.views[i].spec, folder, signal)));
           if (specs.length === 1) return specs[0];
           await loadPick();
           return AltitudePick.combine(specs, manifest.pick, chosen, manifest.views.map(item => item.label));
-        }, number, chosen.length === 1 && chosen[0] === 0);
+        }, number, isPickDefault(chosen));
       }
 
-      // One select per pick label; the first is required, later ones may be None.
-      // Series with a third unit are disabled, since a chart has two axes.
-      function setupPicks(name, requested, number) {
-        const picks = $("picks"), slugs = manifest.views.map(slugOf), dims = manifest.pick.dims;
-        let chosen = [...new Set(requested.map(slug => slugs.indexOf(slug)).filter(i => i >= 0))].slice(0, manifest.pick.labels.length);
-        if (!chosen.length) chosen = [0];
-        picks.replaceChildren();
-        const selects = manifest.pick.labels.map((label, k) => {
-          const select = document.createElement("select");
-          select.id = "pick-" + k;
-          const text = document.createElement("label");
-          text.htmlFor = select.id;
-          text.textContent = label;
-          picks.append(text, select);
-          return select;
-        });
-        const fill = () => selects.forEach((select, k) => {
-          const others = chosen.filter((_, j) => j !== k);
-          const units = new Set(others.map(i => dims[i]));
-          select.replaceChildren();
-          if (k > 0) select.append(new Option("None", ""));
-          manifest.views.forEach((item, i) => {
-            if (others.includes(i)) return;
-            const option = new Option(item.label, String(i));
-            option.disabled = units.size > 1 && !units.has(dims[i]);
-            select.append(option);
-          });
-          select.value = k < chosen.length ? String(chosen[k]) : "";
-          select.disabled = k > chosen.length;
-        });
-        selects.forEach(select => select.addEventListener("change", () => {
-          chosen = [...new Set(selects.map(item => item.value).filter(Boolean).map(Number))];
-          fill();
-          const query = chosen.length === 1 && chosen[0] === 0 ? "" : "?series=" + chosen.map(i => encodeURIComponent(slugs[i])).join(",");
+      // pick.js builds the boxes (see AltitudePick.setup).
+      async function setupPicks(name, requested, number) {
+        await loadPick();
+        if (number !== requestNumber) return;
+        const chosen = AltitudePick.setup($("picks"), manifest, requested, (picks, slugs) => {
+          const query = isPickDefault(picks) ? "" : "?series=" + slugs.map(encodeURIComponent).join(",");
           history.replaceState(null, "", "#" + name + query);
-          loadPicks(chosen, ++requestNumber);
-        }));
-        fill();
+          loadPicks(picks, ++requestNumber);
+        });
         $("view-control").hidden = true;
-        picks.hidden = false;
+        $("picks").hidden = false;
         $("controls").hidden = false;
         return loadPicks(chosen, number);
       }

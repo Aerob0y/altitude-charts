@@ -6,115 +6,132 @@
   "updated": "2026-10-04",
   "views": [
     {
-      "label": "Opening position — Net",
-      "spec": "opening-position-net.json"
+      "label": "All lending: Opening position",
+      "spec": "all-lending-opening-position.json"
     },
     {
-      "label": "Drawdowns — NZDm",
-      "spec": "drawdowns-nzdm.json"
+      "label": "All lending: Drawdowns",
+      "spec": "all-lending-drawdowns.json"
     },
     {
-      "label": "Interest charged — NZDm",
-      "spec": "interest-charged-nzdm.json"
+      "label": "All lending: Interest charged",
+      "spec": "all-lending-interest-charged.json"
     },
     {
-      "label": "Scheduled repayments — NZDm",
-      "spec": "scheduled-repayments-nzdm.json"
+      "label": "All lending: Scheduled repayments",
+      "spec": "all-lending-scheduled-repayments.json"
     },
     {
-      "label": "Repayment of loan in full — NZDm",
-      "spec": "repayment-of-loan-in-full-nzdm.json"
+      "label": "All lending: Repayment of loan in full",
+      "spec": "all-lending-repayment-of-loan-in-full.json"
     },
     {
-      "label": "Other excess repayments — NZDm",
-      "spec": "other-excess-repayments-nzdm.json"
+      "label": "All lending: Other excess repayments",
+      "spec": "all-lending-other-excess-repayments.json"
     },
     {
-      "label": "Repayment deficiencies — NZDm",
-      "spec": "repayment-deficiencies-nzdm.json"
+      "label": "All lending: Repayment deficiencies",
+      "spec": "all-lending-repayment-deficiencies.json"
     },
     {
-      "label": "Net write-offs — NZDm",
-      "spec": "net-write-offs-nzdm.json"
+      "label": "All lending: Net write-offs",
+      "spec": "all-lending-net-write-offs.json"
     },
     {
-      "label": "Other adjustments — NZDm",
-      "spec": "other-adjustments-nzdm.json"
+      "label": "All lending: Other adjustments",
+      "spec": "all-lending-other-adjustments.json"
     },
     {
-      "label": "Opening position — Net.1",
-      "spec": "opening-position-net-1.json"
+      "label": "Over 80% LVR: Opening position",
+      "spec": "over-80-lvr-opening-position.json"
     },
     {
-      "label": "Drawdowns — NZDm.1",
-      "spec": "drawdowns-nzdm-1.json"
+      "label": "Over 80% LVR: Drawdowns",
+      "spec": "over-80-lvr-drawdowns.json"
     },
     {
-      "label": "Interest charged — NZDm.1",
-      "spec": "interest-charged-nzdm-1.json"
+      "label": "Over 80% LVR: Interest charged",
+      "spec": "over-80-lvr-interest-charged.json"
     },
     {
-      "label": "Scheduled repayments — NZDm.1",
-      "spec": "scheduled-repayments-nzdm-1.json"
+      "label": "Over 80% LVR: Scheduled repayments",
+      "spec": "over-80-lvr-scheduled-repayments.json"
     },
     {
-      "label": "Repayment of loan in full — NZDm.1",
-      "spec": "repayment-of-loan-in-full-nzdm-1.json"
+      "label": "Over 80% LVR: Repayment of loan in full",
+      "spec": "over-80-lvr-repayment-of-loan-in-full.json"
     },
     {
-      "label": "Other excess repayment — NZDm",
-      "spec": "other-excess-repayment-nzdm.json"
+      "label": "Over 80% LVR: Other excess repayment",
+      "spec": "over-80-lvr-other-excess-repayment.json"
     },
     {
-      "label": "Repayment deficiencies — NZDm.1",
-      "spec": "repayment-deficiencies-nzdm-1.json"
+      "label": "Over 80% LVR: Repayment deficiencies",
+      "spec": "over-80-lvr-repayment-deficiencies.json"
     },
     {
-      "label": "Net write-offs — NZDm.1",
-      "spec": "net-write-offs-nzdm-1.json"
+      "label": "Over 80% LVR: Net write-offs",
+      "spec": "over-80-lvr-net-write-offs.json"
     },
     {
-      "label": "Other adjustments — NZDm.1",
-      "spec": "other-adjustments-nzdm-1.json"
+      "label": "Over 80% LVR: Other adjustments",
+      "spec": "over-80-lvr-other-adjustments.json"
     },
     {
-      "label": "Opening position — Net.2",
-      "spec": "opening-position-net-2.json"
+      "label": "80% LVR or less: Opening position",
+      "spec": "80-lvr-or-less-opening-position.json"
     },
     {
-      "label": "Drawdowns — NZDm.2",
-      "spec": "drawdowns-nzdm-2.json"
+      "label": "80% LVR or less: Drawdowns",
+      "spec": "80-lvr-or-less-drawdowns.json"
     },
     {
-      "label": "Interest charged — NZDm.2",
-      "spec": "interest-charged-nzdm-2.json"
+      "label": "80% LVR or less: Interest charged",
+      "spec": "80-lvr-or-less-interest-charged.json"
     },
     {
-      "label": "Scheduled repayments — NZDm.2",
-      "spec": "scheduled-repayments-nzdm-2.json"
+      "label": "80% LVR or less: Scheduled repayments",
+      "spec": "80-lvr-or-less-scheduled-repayments.json"
     },
     {
-      "label": "Repayment of loan in full — NZDm.2",
-      "spec": "repayment-of-loan-in-full-nzdm-2.json"
+      "label": "80% LVR or less: Repayment of loan in full",
+      "spec": "80-lvr-or-less-repayment-of-loan-in-full.json"
     },
     {
-      "label": "Other excess repayments — NZDm.1",
-      "spec": "other-excess-repayments-nzdm-1.json"
+      "label": "80% LVR or less: Other excess repayments",
+      "spec": "80-lvr-or-less-other-excess-repayments.json"
     },
     {
-      "label": "Repayment deficiencies — NZDm.2",
-      "spec": "repayment-deficiencies-nzdm-2.json"
+      "label": "80% LVR or less: Repayment deficiencies",
+      "spec": "80-lvr-or-less-repayment-deficiencies.json"
     },
     {
-      "label": "Net write-offs — NZDm.2",
-      "spec": "net-write-offs-nzdm-2.json"
+      "label": "80% LVR or less: Net write-offs",
+      "spec": "80-lvr-or-less-net-write-offs.json"
     },
     {
-      "label": "Other adjustments — NZDm.2",
-      "spec": "other-adjustments-nzdm-2.json"
+      "label": "80% LVR or less: Other adjustments",
+      "spec": "80-lvr-or-less-other-adjustments.json"
     }
   ],
   "data": "data.csv",
-  "image": null,
-  "image_alt": "Residential mortgages Reserve Bank of New Zealand (RBNZ): Opening position — Net"
+  "image": "hc35.png",
+  "image_alt": "Residential mortgages Reserve Bank of New Zealand (RBNZ): Opening position, Interest charged, and Scheduled repayments (All lending)",
+  "pick": {
+    "labels": ["Lending 1", "Lending 2", "Lending 3", "Lending 4"],
+    "title": "Residential mortgages",
+    "subtitle": "Reserve Bank of New Zealand (RBNZ)",
+    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
+    "margin_r": 30,
+    "default": [0, 2, 3],
+    "dims": ["Net", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "Net", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "Net", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm"],
+    "groups": ["Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", ">80% LVR", ">80% LVR", ">80% LVR", ">80% LVR", ">80% LVR", ">80% LVR", ">80% LVR", ">80% LVR", ">80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR"],
+    "items": ["Opening position", "Drawdowns", "Interest charged", "Scheduled repayments", "Repayment of loan in full", "Other excess repayments", "Repayment deficiencies", "Net write-offs", "Other adjustments", "Opening position", "Drawdowns", "Interest charged", "Scheduled repayments", "Repayment of loan in full", "Other excess repayment", "Repayment deficiencies", "Net write-offs", "Other adjustments", "Opening position", "Drawdowns", "Interest charged", "Scheduled repayments", "Repayment of loan in full", "Other excess repayments", "Repayment deficiencies", "Net write-offs", "Other adjustments"],
+    "group_label": "Lending group",
+    "group_names": {
+      "Total": "All lending",
+      ">80% LVR": "Over 80% LVR",
+      "<=80% LVR": "80% LVR or less"
+    }
+  }
 }

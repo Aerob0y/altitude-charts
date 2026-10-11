@@ -6,55 +6,64 @@
   "updated": "2026-10-04",
   "views": [
     {
-      "label": "Residential Building Consents (s.a.) — Number",
-      "spec": "residential-building-consents-s-a-number.json"
+      "label": "Residential Building Consents (s.a.)",
+      "spec": "residential-building-consents-s-a.json"
     },
     {
-      "label": "Residential Building Consents (q/q% s.a.) — q/q%",
-      "spec": "residential-building-consents-q-q-s-a-q-q.json"
+      "label": "Residential Building Consents (q/q% s.a.)",
+      "spec": "residential-building-consents-q-q-s-a.json"
     },
     {
-      "label": "Residential buildings (GDP) (Real $m) — Real $m",
-      "spec": "residential-buildings-gdp-real-m-real-m.json"
+      "label": "Residential buildings (GDP) (Real $m)",
+      "spec": "residential-buildings-gdp-real-m.json"
     },
     {
-      "label": "Residential buildings (GDP) (Real $m s.a.) — Real $m",
-      "spec": "residential-buildings-gdp-real-m-s-a-real-m.json"
+      "label": "Residential buildings (GDP) (Real $m s.a.)",
+      "spec": "residential-buildings-gdp-real-m-s-a.json"
     },
     {
-      "label": "Residential buildings (GDP) (Real q/q% s.a) — Real q/q",
-      "spec": "residential-buildings-gdp-real-q-q-s-a-real-q-q.json"
+      "label": "Residential buildings (GDP) (Real q/q% s.a)",
+      "spec": "residential-buildings-gdp-real-q-q-s-a.json"
     },
     {
-      "label": "Residential buildings (GDP) (Real y/y%) — Real y/y",
-      "spec": "residential-buildings-gdp-real-y-y-real-y-y.json"
+      "label": "Residential buildings (GDP) (Real y/y%)",
+      "spec": "residential-buildings-gdp-real-y-y.json"
     },
     {
-      "label": "Other fixed assets (GDP) (Real $m) — Real $m",
-      "spec": "other-fixed-assets-gdp-real-m-real-m.json"
+      "label": "Other fixed assets (GDP) (Real $m)",
+      "spec": "other-fixed-assets-gdp-real-m.json"
     },
     {
-      "label": "Other fixed assets (GDP) (Real $m s.a.) — Real $m",
-      "spec": "other-fixed-assets-gdp-real-m-s-a-real-m.json"
+      "label": "Other fixed assets (GDP) (Real $m s.a.)",
+      "spec": "other-fixed-assets-gdp-real-m-s-a.json"
     },
     {
-      "label": "Other fixed assets (GDP) (Real q/q% s.a.) — Real q/q",
-      "spec": "other-fixed-assets-gdp-real-q-q-s-a-real-q-q.json"
+      "label": "Other fixed assets (GDP) (Real q/q% s.a.)",
+      "spec": "other-fixed-assets-gdp-real-q-q-s-a.json"
     },
     {
-      "label": "Other fixed assets (GDP) (Real y/y%) — Real y/y",
-      "spec": "other-fixed-assets-gdp-real-y-y-real-y-y.json"
+      "label": "Other fixed assets (GDP) (Real y/y%)",
+      "spec": "other-fixed-assets-gdp-real-y-y.json"
     },
     {
-      "label": "Change in inventories (GDP) (Real $m) — Real $m",
-      "spec": "change-in-inventories-gdp-real-m-real-m.json"
+      "label": "Change in inventories (GDP) (Real $m)",
+      "spec": "change-in-inventories-gdp-real-m.json"
     },
     {
-      "label": "Change in inventories (GDP) (Real $m s.a.) — Real $m",
-      "spec": "change-in-inventories-gdp-real-m-s-a-real-m.json"
+      "label": "Change in inventories (GDP) (Real $m s.a.)",
+      "spec": "change-in-inventories-gdp-real-m-s-a.json"
     }
   ],
   "data": "data.csv",
-  "image": null,
-  "image_alt": "Investment RBNZ and Stats NZ series · HM3: Residential Building Consents (s.a.) — Number"
+  "image": "hm3.png",
+  "image_alt": "Investment RBNZ and Stats NZ series · HM3: Residential Building Consents (s.a.) and Residential buildings (GDP) (Real $m s.a.)",
+  "pick": {
+    "labels": ["Series 1", "Series 2", "Series 3", "Series 4"],
+    "title": "Investment",
+    "subtitle": "RBNZ and Stats NZ series · HM3",
+    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
+    "margin_r": 30,
+    "default": [0, 3],
+    "dims": ["Number", "q/q%", "Real $m", "Real $m", "Real q/q", "Real y/y", "Real $m", "Real $m", "Real q/q", "Real y/y", "Real $m", "Real $m"]
+  }
 }

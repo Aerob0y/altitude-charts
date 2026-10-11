@@ -6,47 +6,56 @@
   "updated": "2026-10-04",
   "views": [
     {
-      "label": "Official Cash Rate (OCR) — %",
+      "label": "Official Cash Rate (OCR)",
       "spec": "official-cash-rate-ocr.json"
     },
     {
-      "label": "1 year (bond) — %",
+      "label": "1 year (bond)",
       "spec": "1-year-bond.json"
     },
     {
-      "label": "2 year (bond) — %",
+      "label": "2 year (bond)",
       "spec": "2-year-bond.json"
     },
     {
-      "label": "5 year (bond) — %",
+      "label": "5 year (bond)",
       "spec": "5-year-bond.json"
     },
     {
-      "label": "10 year (bond) — %",
+      "label": "10 year (bond)",
       "spec": "10-year-bond.json"
     },
     {
-      "label": "1 year (swap) — %",
+      "label": "1 year (swap)",
       "spec": "1-year-swap.json"
     },
     {
-      "label": "2 year (swap) — %",
+      "label": "2 year (swap)",
       "spec": "2-year-swap.json"
     },
     {
-      "label": "5 year (swap) — %",
+      "label": "5 year (swap)",
       "spec": "5-year-swap.json"
     },
     {
-      "label": "10 year (swap) — %",
+      "label": "10 year (swap)",
       "spec": "10-year-swap.json"
     },
     {
-      "label": "Spread 2-10 year — bps",
-      "spec": "spread-2-10-year-bps.json"
+      "label": "Spread 2-10 year",
+      "spec": "spread-2-10-year.json"
     }
   ],
   "data": "data.csv",
-  "image": null,
-  "image_alt": "Interest rates Reserve Bank of New Zealand (RBNZ): Official Cash Rate (OCR) — %"
+  "image": "hb2.png",
+  "image_alt": "Interest rates Reserve Bank of New Zealand (RBNZ): Official Cash Rate (OCR), 1 year (swap), 2 year (swap), 5 year (swap), and 10 year (swap)",
+  "pick": {
+    "labels": ["Rate 1", "Rate 2", "Rate 3", "Rate 4", "Rate 5"],
+    "title": "Interest rates",
+    "subtitle": "Reserve Bank of New Zealand (RBNZ)",
+    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
+    "margin_r": 30,
+    "default": [0, 5, 6, 7, 8],
+    "dims": ["%", "%", "%", "%", "%", "%", "%", "%", "%", "bps"]
+  }
 }

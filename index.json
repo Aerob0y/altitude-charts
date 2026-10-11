@@ -8,19 +8,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hb1/index.html",
-      "image": null,
-      "site": "nz",
-      "menu": "Economic"
-    },
-    {
-      "name": "hb1pick",
-      "title": "Exchange rates: compare two currencies",
-      "source": "Reserve Bank of New Zealand (RBNZ)",
-      "note": "Shows how much foreign currency the New Zealand dollar buys. Use the selectors to compare currencies and the trade-weighted index.",
-      "target": "rbnz",
-      "updated": "2026-10-04",
-      "page": "hb1pick/index.html",
-      "image": null,
+      "image": "hb1/hb1.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -32,7 +20,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hb2/index.html",
-      "image": null,
+      "image": "hb2/hb2.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -44,7 +32,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hc35/index.html",
-      "image": null,
+      "image": "hc35/hc35.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -56,7 +44,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm1/index.html",
-      "image": null,
+      "image": "hm1/hm1.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -68,7 +56,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm2/index.html",
-      "image": null,
+      "image": "hm2/hm2.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -80,7 +68,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm3/index.html",
-      "image": null,
+      "image": "hm3/hm3.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -92,7 +80,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm8/index.html",
-      "image": null,
+      "image": "hm8/hm8.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -104,7 +92,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm9/index.html",
-      "image": null,
+      "image": "hm9/hm9.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -116,7 +104,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm14/index.html",
-      "image": null,
+      "image": "hm14/hm14.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -128,7 +116,7 @@
       "target": "fuel",
       "updated": "2026-10-04",
       "page": "fuel/index.html",
-      "image": null,
+      "image": "fuel/fuel.png",
       "site": "nz",
       "menu": "Tourism & Migration"
     },
@@ -140,7 +128,7 @@
       "target": "cso",
       "updated": "2026-10-09",
       "page": "ndm01/index.html",
-      "image": null,
+      "image": "ndm01/ndm01.png",
       "site": "ireland",
       "menu": "Housing"
     },
@@ -152,7 +140,7 @@
       "target": "ect",
       "updated": "2026-10-04",
       "page": "ect/index.html",
-      "image": null,
+      "image": "ect/ect.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -164,7 +152,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm5/index.html",
-      "image": null,
+      "image": "hm5/hm5.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -176,7 +164,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "yield/index.html",
-      "image": null,
+      "image": "yield/yield.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -188,7 +176,7 @@
       "target": "adp",
       "updated": "2026-10-09",
       "page": "adp/index.html",
-      "image": null,
+      "image": "adp/adp.png",
       "site": "nz",
       "menu": "Tourism & Migration"
     },
@@ -200,7 +188,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hs32/index.html",
-      "image": null,
+      "image": "hs32/hs32.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -212,7 +200,7 @@
       "target": "bond",
       "updated": "2026-10-04",
       "page": "bond/index.html",
-      "image": null,
+      "image": "bond/bond.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -224,7 +212,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm10/index.html",
-      "image": null,
+      "image": "hm10/hm10.png",
       "site": "nz",
       "menu": "Economic"
     }
@@ -238,7 +226,7 @@
       "menus": [
         {
           "label": "Economic",
-          "topics": ["hb1", "hb1pick", "hb2", "yield", "hc35", "hm1", "hm2", "ect", "hm3", "hm5", "hm8", "hm9", "hm10", "hm14", "hs32", "bond"]
+          "topics": ["hb1", "hb2", "yield", "hc35", "hm1", "hm2", "ect", "hm3", "hm5", "hm8", "hm9", "hm10", "hm14", "hs32", "bond"]
         },
         {
           "label": "Tourism & Migration",

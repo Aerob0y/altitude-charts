@@ -39,6 +39,15 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
-  "image_alt": "Rental market New Zealand, number of bonds a month. Source: Tenancy Services bond data (MBIE)"
+  "image": "bond.png",
+  "image_alt": "Rental market New Zealand, number of bonds a month. Source: Tenancy Services bond data (MBIE)",
+  "pick": {
+    "labels": ["Measure", "Compare with"],
+    "title": "Rental market",
+    "subtitle": "Tenancy Services bond data (MBIE)",
+    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
+    "margin_r": 30,
+    "default": [0],
+    "dims": ["n", "n", "n", "$", "$", "$", "$", "$"]
+  }
 }

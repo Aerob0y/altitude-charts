@@ -6,71 +6,80 @@
   "updated": "2026-10-04",
   "views": [
     {
-      "label": "Retail trade sales — NZDm",
+      "label": "Retail trade sales NZDm",
       "spec": "retail-trade-sales-nzdm.json"
     },
     {
-      "label": "Retail trade sales — NZDm.1",
-      "spec": "retail-trade-sales-nzdm-1.json"
+      "label": "Retail trade sales NZDm s.a.",
+      "spec": "retail-trade-sales-nzdm-s-a.json"
     },
     {
-      "label": "Retail trade sales — %",
-      "spec": "retail-trade-sales.json"
+      "label": "Retail trade % s.a.",
+      "spec": "retail-trade-s-a.json"
     },
     {
-      "label": "Retail trade sales — %.1",
-      "spec": "retail-trade-sales-1.json"
+      "label": "Retail trade %",
+      "spec": "retail-trade.json"
     },
     {
-      "label": "Retail trade volumes — NZDm",
-      "spec": "retail-trade-volumes-nzdm.json"
+      "label": "Retail trade volumes NZDm(r)",
+      "spec": "retail-trade-volumes-nzdm-r.json"
     },
     {
-      "label": "Retail trade volumes — NZDm.1",
-      "spec": "retail-trade-volumes-nzdm-1.json"
+      "label": "Retail trade volumes NZDm(r) s.a.",
+      "spec": "retail-trade-volumes-nzdm-r-s-a.json"
     },
     {
-      "label": "Retail trade volumes — %",
-      "spec": "retail-trade-volumes.json"
+      "label": "Retail trade volumes %(r) s.a.",
+      "spec": "retail-trade-volumes-r-s-a.json"
     },
     {
-      "label": "Retail trade volumes — %.1",
-      "spec": "retail-trade-volumes-1.json"
+      "label": "Retail trade %(r)",
+      "spec": "retail-trade-r.json"
     },
     {
-      "label": "Private consumption expenditure (GDP) — NZDm",
-      "spec": "private-consumption-expenditure-gdp-nzdm.json"
+      "label": "Private consumption expenditure (GDP) NZDm(r)",
+      "spec": "private-consumption-expenditure-gdp-nzdm-r.json"
     },
     {
-      "label": "Private consumption expenditure (GDP) — NZDm.1",
-      "spec": "private-consumption-expenditure-gdp-nzdm-1.json"
+      "label": "Private consumption expenditure (GDP) NZDm(r) s.a.",
+      "spec": "private-consumption-expenditure-gdp-nzdm-r-s-a.json"
     },
     {
-      "label": "Private consumption expenditure (GDP) — %",
-      "spec": "private-consumption-expenditure-gdp.json"
+      "label": "Private consumption expenditure (GDP) %(r) s.a.",
+      "spec": "private-consumption-expenditure-gdp-r-s-a.json"
     },
     {
-      "label": "Private consumption expenditure (GDP) — %.1",
-      "spec": "private-consumption-expenditure-gdp-1.json"
+      "label": "Private consumption expenditure (GDP) %(r)",
+      "spec": "private-consumption-expenditure-gdp-r.json"
     },
     {
-      "label": "General government consumption expenditure (GDP) — NZDm",
-      "spec": "general-government-consumption-expenditure-gdp-nzdm.json"
+      "label": "General government consumption expenditure (GDP) NZDm(r)",
+      "spec": "general-government-consumption-expenditure-gdp-nzdm-r.json"
     },
     {
-      "label": "General government consumption expenditure (GDP) — NZDm.1",
-      "spec": "general-government-consumption-expenditure-gdp-nzdm-1.json"
+      "label": "General government consumption expenditure (GDP) NZDm(r) s.a.",
+      "spec": "general-government-consumption-expenditure-gdp-nzdm-r-s-a.json"
     },
     {
-      "label": "General government consumption expenditure (GDP) — %",
-      "spec": "general-government-consumption-expenditure-gdp.json"
+      "label": "General government consumption expenditure (GDP) %(r) s.a.",
+      "spec": "general-government-consumption-expenditure-gdp-r-s-a.json"
     },
     {
-      "label": "General government consumption expenditure (GDP) — %.1",
-      "spec": "general-government-consumption-expenditure-gdp-1.json"
+      "label": "General government consumption expenditure (GDP) %(r)",
+      "spec": "general-government-consumption-expenditure-gdp-r.json"
     }
   ],
   "data": "data.csv",
-  "image": null,
-  "image_alt": "Consumption RBNZ and Stats NZ series: Retail trade sales — NZDm"
+  "image": "hm2.png",
+  "image_alt": "Consumption RBNZ and Stats NZ series: Retail trade sales NZDm",
+  "pick": {
+    "labels": ["Consumption", "Compare with"],
+    "title": "Consumption",
+    "subtitle": "RBNZ and Stats NZ series",
+    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
+    "margin_r": 30,
+    "default": [0],
+    "dims": ["NZDm", "NZDm", "%", "%", "NZDm", "NZDm", "%", "%", "NZDm", "NZDm", "%", "%", "NZDm", "NZDm", "%", "%"]
+  }
 }

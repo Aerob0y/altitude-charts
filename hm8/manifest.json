@@ -6,95 +6,120 @@
   "updated": "2026-10-04",
   "views": [
     {
-      "label": "Export values $m s.a. — $m",
-      "spec": "export-values-m-s-a-m.json"
+      "label": "Values ($m s.a.): Export",
+      "spec": "values-m-s-a-export.json"
     },
     {
-      "label": "Import values $m s.a. — $m",
-      "spec": "import-values-m-s-a-m.json"
+      "label": "Values ($m s.a.): Import",
+      "spec": "values-m-s-a-import.json"
     },
     {
-      "label": "Export values $m — $m",
-      "spec": "export-values-m-m.json"
+      "label": "Values ($m): Export",
+      "spec": "values-m-export.json"
     },
     {
-      "label": "Import values $m — $m",
-      "spec": "import-values-m-m.json"
+      "label": "Values ($m): Import",
+      "spec": "values-m-import.json"
     },
     {
-      "label": "Export values q/q% s.a. — %",
-      "spec": "export-values-q-q-s-a.json"
+      "label": "Values (q/q% s.a.): Export",
+      "spec": "values-q-q-s-a-export.json"
     },
     {
-      "label": "Import values q/q% s.a. — %",
-      "spec": "import-values-q-q-s-a.json"
+      "label": "Values (q/q% s.a.): Import",
+      "spec": "values-q-q-s-a-import.json"
     },
     {
-      "label": "Export values y/y% — %",
-      "spec": "export-values-y-y.json"
+      "label": "Values (y/y%): Export",
+      "spec": "values-y-y-export.json"
     },
     {
-      "label": "Import values y/y% — %",
-      "spec": "import-values-y-y.json"
+      "label": "Values (y/y%): Import",
+      "spec": "values-y-y-import.json"
     },
     {
-      "label": "Export prices Index — Index",
-      "spec": "export-prices-index-index.json"
+      "label": "Prices (Index): Export",
+      "spec": "prices-index-export.json"
     },
     {
-      "label": "Import prices Index — Index",
-      "spec": "import-prices-index-index.json"
+      "label": "Prices (Index): Import",
+      "spec": "prices-index-import.json"
     },
     {
-      "label": "Export prices q/q% — %",
-      "spec": "export-prices-q-q.json"
+      "label": "Prices (q/q%): Export",
+      "spec": "prices-q-q-export.json"
     },
     {
-      "label": "Import prices q/q% — %",
-      "spec": "import-prices-q-q.json"
+      "label": "Prices (q/q%): Import",
+      "spec": "prices-q-q-import.json"
     },
     {
-      "label": "Export prices y/y% — %",
-      "spec": "export-prices-y-y.json"
+      "label": "Prices (y/y%): Export",
+      "spec": "prices-y-y-export.json"
     },
     {
-      "label": "Import prices y/y% — %",
-      "spec": "import-prices-y-y.json"
+      "label": "Prices (y/y%): Import",
+      "spec": "prices-y-y-import.json"
     },
     {
-      "label": "Export volumes Index — Index",
-      "spec": "export-volumes-index-index.json"
+      "label": "Volumes (Index): Export",
+      "spec": "volumes-index-export.json"
     },
     {
-      "label": "Import volumes Index — Index",
-      "spec": "import-volumes-index-index.json"
+      "label": "Volumes (Index): Import",
+      "spec": "volumes-index-import.json"
     },
     {
-      "label": "Export volumes q/q% s.a. — %",
-      "spec": "export-volumes-q-q-s-a.json"
+      "label": "Volumes (q/q% s.a.): Export",
+      "spec": "volumes-q-q-s-a-export.json"
     },
     {
-      "label": "Import volumes q/q% s.a. — %",
-      "spec": "import-volumes-q-q-s-a.json"
+      "label": "Volumes (q/q% s.a.): Import",
+      "spec": "volumes-q-q-s-a-import.json"
     },
     {
-      "label": "Export volumes y/y% — %",
-      "spec": "export-volumes-y-y.json"
+      "label": "Volumes (y/y%): Export",
+      "spec": "volumes-y-y-export.json"
     },
     {
-      "label": "Import volumes y/y% — %",
-      "spec": "import-volumes-y-y.json"
+      "label": "Volumes (y/y%): Import",
+      "spec": "volumes-y-y-import.json"
     },
     {
-      "label": "Export volumes Index s.a. — Index",
-      "spec": "export-volumes-index-s-a-index.json"
+      "label": "Volumes (Index s.a.): Export",
+      "spec": "volumes-index-s-a-export.json"
     },
     {
-      "label": "Import volumes Index s.a. — Index",
-      "spec": "import-volumes-index-s-a-index.json"
+      "label": "Volumes (Index s.a.): Import",
+      "spec": "volumes-index-s-a-import.json"
     }
   ],
   "data": "data.csv",
-  "image": null,
-  "image_alt": "Overseas trade RBNZ and Stats NZ series: Export values $m s.a. — $m"
+  "image": "hm8.png",
+  "image_alt": "Overseas trade RBNZ and Stats NZ series: Export and Import (Values ($m s.a.))",
+  "pick": {
+    "labels": ["Trade type 1", "Trade type 2"],
+    "title": "Overseas trade",
+    "subtitle": "RBNZ and Stats NZ series",
+    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
+    "margin_r": 30,
+    "default": [0, 1],
+    "dims": ["$m", "$m", "$m", "$m", "%", "%", "%", "%", "Index", "Index", "%", "%", "%", "%", "Index", "Index", "%", "%", "%", "%", "Index", "Index"],
+    "groups": ["Values ($m s.a.)", "Values ($m s.a.)", "Values ($m)", "Values ($m)", "Values (q/q% s.a.)", "Values (q/q% s.a.)", "Values (y/y%)", "Values (y/y%)", "Prices (Index)", "Prices (Index)", "Prices (q/q%)", "Prices (q/q%)", "Prices (y/y%)", "Prices (y/y%)", "Volumes (Index)", "Volumes (Index)", "Volumes (q/q% s.a.)", "Volumes (q/q% s.a.)", "Volumes (y/y%)", "Volumes (y/y%)", "Volumes (Index s.a.)", "Volumes (Index s.a.)"],
+    "items": ["Export", "Import", "Export", "Import", "Export", "Import", "Export", "Import", "Export", "Import", "Export", "Import", "Export", "Import", "Export", "Import", "Export", "Import", "Export", "Import", "Export", "Import"],
+    "group_label": "Metric",
+    "group_names": {
+      "Values ($m s.a.)": "Values ($m s.a.)",
+      "Values ($m)": "Values ($m)",
+      "Values (q/q% s.a.)": "Values (q/q% s.a.)",
+      "Values (y/y%)": "Values (y/y%)",
+      "Prices (Index)": "Prices (Index)",
+      "Prices (q/q%)": "Prices (q/q%)",
+      "Prices (y/y%)": "Prices (y/y%)",
+      "Volumes (Index)": "Volumes (Index)",
+      "Volumes (q/q% s.a.)": "Volumes (q/q% s.a.)",
+      "Volumes (y/y%)": "Volumes (y/y%)",
+      "Volumes (Index s.a.)": "Volumes (Index s.a.)"
+    }
+  }
 }

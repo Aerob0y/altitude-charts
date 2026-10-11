@@ -48,16 +48,24 @@
 
   function combine(specs, pick, chosen, labels) {
     const palette = pick.palette;
+    labels = pick.items || labels;
     const dims = chosen.map(i => pick.dims[i]);
     const axes = dims.map(dim => dim === dims[0] ? "y" : "y2");
     const twoAxes = axes.includes("y2");
     const lines = [], endLabels = [];
+    // Views can share a series name (e.g. a value and its % change); then name them by view.
+    const names = specs.map(spec => spec.data.find(trace => trace.mode !== "text")?.name);
+    const clash = new Set(names).size < names.length;
     specs.forEach((spec, k) => {
       for (const source of spec.data) {
         const trace = structuredClone(source);
         trace.yaxis = axes[k];
         trace.legendgroup = "series_" + (k + 1);
         recolour(trace, palette[k % palette.length]);
+        if (clash) {
+          trace.name = labels[chosen[k]];
+          if (trace.mode === "text") trace.text = trace.name;
+        }
         // Plotly specs store a lone end label's y as a number.
         if (trace.mode === "text") {
           if (twoAxes) continue;
@@ -88,9 +96,78 @@
       layout.margin = {...layout.margin, r: Math.max(...specs.map(spec => spec.layout?.margin?.r || 0))};
     }
     layout.title = {...layout.title, text: `<b>${escapeHtml(pick.title)}</b><br><span style='font-size:0.8em; color:gray;'>` +
-      `${escapeHtml(pick.subtitle)}: ${escapeHtml(shortTitle(chosen.map(i => labels[i])))}</span>`};
+      `${escapeHtml(pick.subtitle)}: ${escapeHtml(shortTitle(chosen.map(i => labels[i])))}` +
+      `${pick.groups ? escapeHtml(` (${pick.group_names?.[pick.groups[chosen[0]]] || pick.groups[chosen[0]]})`) : ""}</span>`};
     return {data: [...lines, ...endLabels], layout, config: specs[0].config};
   }
 
-  window.AltitudePick = {combine};
+  // Builds the pick boxes in `container` and returns the starting picks. A pick block
+  // with `groups` gets a group box first, which filters the series boxes. The first
+  // series box is required and later ones may be None; a series with a third unit is
+  // disabled, since a chart has two axes. `onChange` gets the new picks.
+  function setup(container, manifest, requested, onChange) {
+    const pick = manifest.pick, dims = pick.dims, groups = pick.groups;
+    const names = pick.items || manifest.views.map(view => view.label);
+    const slugs = manifest.views.map(view => view.spec.replace(/\.json$/i, "").split("/").pop());
+    const groupOf = i => groups ? groups[i] : "";
+    const twoUnits = picks => picks.filter((i, k) => new Set(picks.slice(0, k + 1).map(j => dims[j])).size <= 2);
+    let chosen = [...new Set(requested.map(slug => slugs.indexOf(slug)).filter(i => i >= 0))];
+    chosen = twoUnits(chosen.filter(i => groupOf(i) === groupOf(chosen[0]))).slice(0, pick.labels.length);
+    if (!chosen.length) chosen = [...(pick.default || [0])];
+
+    container.replaceChildren();
+    const addSelect = (id, label) => {
+      const select = document.createElement("select");
+      select.id = id;
+      const text = document.createElement("label");
+      text.htmlFor = id;
+      text.textContent = label;
+      container.append(text, select);
+      return select;
+    };
+    const groupSelect = groups && addSelect("pick-group", pick.group_label || "Group");
+    const groupNames = pick.group_names || {};
+    if (groupSelect) [...new Set([...Object.keys(groupNames), ...groups])].filter(group => groups.includes(group))
+      .forEach(group => groupSelect.append(new Option(groupNames[group] || group, group)));
+    const selects = pick.labels.map((label, k) => addSelect("pick-" + k, label));
+
+    const fill = () => {
+      const group = groupOf(chosen[0]);
+      if (groupSelect) groupSelect.value = group;
+      selects.forEach((select, k) => {
+        const others = chosen.filter((_, j) => j !== k);
+        const units = new Set(others.map(i => dims[i]));
+        select.replaceChildren();
+        if (k > 0) select.append(new Option("None", ""));
+        names.forEach((name, i) => {
+          if (others.includes(i) || groupOf(i) !== group) return;
+          const option = new Option(name, String(i));
+          option.disabled = units.size > 1 && !units.has(dims[i]);
+          select.append(option);
+        });
+        select.value = k < chosen.length ? String(chosen[k]) : "";
+        select.disabled = k > chosen.length;
+      });
+    };
+    const changed = () => {
+      fill();
+      onChange([...chosen], chosen.map(i => slugs[i]));
+    };
+    selects.forEach(select => select.addEventListener("change", () => {
+      chosen = [...new Set(selects.map(item => item.value).filter(Boolean).map(Number))];
+      changed();
+    }));
+    // A new group keeps the same items where the group has them.
+    groupSelect?.addEventListener("change", () => {
+      const group = groupSelect.value;
+      const inGroup = names.map((_, i) => i).filter(i => groups[i] === group);
+      const kept = chosen.map(i => inGroup.find(j => names[j] === names[i])).filter(i => i !== undefined);
+      chosen = twoUnits(kept.length ? kept : inGroup.slice(0, 1));
+      changed();
+    });
+    fill();
+    return chosen;
+  }
+
+  window.AltitudePick = {combine, setup};
 })();
