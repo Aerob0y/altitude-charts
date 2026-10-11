@@ -46,6 +46,28 @@
 
   const titleOf = (axis, text) => ({...(typeof axis?.title === "object" ? axis.title : {}), text});
 
+  function viewSpec(source, view) {
+    if (view.location === undefined) return source;
+    const spec = structuredClone(source);
+    const packed = spec.location_data;
+    const values = packed.values[view.location];
+    const last = values.findLastIndex(Number.isFinite);
+    spec.data.forEach(trace => {
+      trace.name = view.label;
+      if (trace.mode === "text") {
+        trace.x = [packed.dates[last]];
+        trace.y = [values[last]];
+        trace.text = view.label;
+      } else {
+        trace.x = packed.dates;
+        trace.y = values;
+      }
+    });
+    spec.layout.title.text = `<b>Rental market</b><br>${escapeHtml(view.subtitle)}: ${escapeHtml(view.label)}`;
+    delete spec.location_data;
+    return spec;
+  }
+
   function combine(specs, pick, chosen, labels) {
     const palette = pick.palette;
     labels = pick.items || labels;
@@ -79,13 +101,13 @@
 
     const layout = structuredClone(specs[0].layout || {});
     const second = axes.indexOf("y2");
-    layout.yaxis = {...layout.yaxis, color: twoAxes ? palette[0] : "black"};
+    layout.yaxis = {...layout.yaxis, color: twoAxes ? palette[0] : "black", zerolinecolor: "black"};
     if (twoAxes) {
       layout.yaxis.title = titleOf(layout.yaxis, dims[0]);
       const from = specs[second].layout.yaxis || {};
       layout.yaxis2 = {
         ...(layout.yaxis2 || {}), overlaying: "y", side: "right", anchor: "x", showgrid: false,
-        rangemode: "tozero", automargin: true,
+        rangemode: "tozero", automargin: true, zerolinecolor: "black",
         tickformat: from.tickformat, tickprefix: from.tickprefix, color: palette[second % palette.length],
         title: titleOf(layout.yaxis2, dims[second])
       };
@@ -96,19 +118,18 @@
       layout.margin = {...layout.margin, r: Math.max(...specs.map(spec => spec.layout?.margin?.r || 0))};
     }
     layout.title = {...layout.title, text: `<b>${escapeHtml(pick.title)}</b><br><span style='font-size:0.8em; color:gray;'>` +
-      `${escapeHtml(pick.subtitle)}: ${escapeHtml(shortTitle(chosen.map(i => labels[i])))}` +
-      `${pick.groups ? escapeHtml(` (${pick.group_names?.[pick.groups[chosen[0]]] || pick.groups[chosen[0]]})`) : ""}</span>`};
+      `${escapeHtml(pick.subtitles?.[chosen[0]] || pick.subtitle)}: ${escapeHtml(shortTitle(chosen.map(i => labels[i])))}` +
+      `${pick.groups && !pick.subtitles ? escapeHtml(` (${pick.group_names?.[pick.groups[chosen[0]]] || pick.groups[chosen[0]]})`) : ""}</span>`};
     return {data: [...lines, ...endLabels], layout, config: specs[0].config};
   }
 
-  // Builds the pick boxes in `container` and returns the starting picks. A pick block
-  // with `groups` gets a group box first, which filters the series boxes. The first
-  // series box is required and later ones may be None; a series with a third unit is
-  // disabled, since a chart has two axes. `onChange` gets the new picks.
+  const setupListeners = new WeakMap();
+
+  // Keep tick order: the first chosen series sets the left axis.
   function setup(container, manifest, requested, onChange) {
     const pick = manifest.pick, dims = pick.dims, groups = pick.groups;
     const names = pick.items || manifest.views.map(view => view.label);
-    const slugs = manifest.views.map(view => view.spec.replace(/\.json$/i, "").split("/").pop());
+    const slugs = manifest.views.map(view => view.id || view.spec.replace(/\.json$/i, "").split("/").pop());
     const groupOf = i => groups ? groups[i] : "";
     const twoUnits = picks => picks.filter((i, k) => new Set(picks.slice(0, k + 1).map(j => dims[j])).size <= 2);
     let chosen = [...new Set(requested.map(slug => slugs.indexOf(slug)).filter(i => i >= 0))];
@@ -116,6 +137,9 @@
     if (!chosen.length) chosen = [...(pick.default || [0])];
 
     container.replaceChildren();
+    setupListeners.get(container)?.abort();
+    const listeners = new AbortController();
+    setupListeners.set(container, listeners);
     const addSelect = (id, label) => {
       const select = document.createElement("select");
       select.id = id;
@@ -129,34 +153,100 @@
     const groupNames = pick.group_names || {};
     if (groupSelect) [...new Set([...Object.keys(groupNames), ...groups])].filter(group => groups.includes(group))
       .forEach(group => groupSelect.append(new Option(groupNames[group] || group, group)));
-    const selects = pick.labels.map((label, k) => addSelect("pick-" + k, label));
+    const dropdown = document.createElement("span");
+    dropdown.className = "series-picker";
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "series-button";
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-controls", "series-options");
+    const panel = document.createElement("span");
+    panel.id = "series-options";
+    panel.className = "series-options";
+    panel.hidden = true;
+    panel.setAttribute("role", "group");
+    panel.setAttribute("aria-label", "Choose series");
+    const hint = document.createElement("span");
+    hint.className = "series-hint";
+    hint.id = "series-hint";
+    hint.textContent = `Tick up to ${pick.labels.length}. First tick sets the left axis.`;
+    panel.setAttribute("aria-describedby", hint.id);
+    panel.append(hint);
+    const headings = [];
+    const options = names.map((name, i) => {
+      const category = pick.item_categories?.[i];
+      if (category && (category !== pick.item_categories[i - 1] || groupOf(i) !== groupOf(i - 1))) {
+        const heading = document.createElement("strong");
+        heading.textContent = category;
+        heading.style.display = "block";
+        panel.append(heading);
+        headings.push({heading, group: groupOf(i)});
+      }
+      const row = document.createElement("label");
+      row.className = "series-option";
+      const input = document.createElement("input");
+      input.type = "checkbox";
+      input.value = String(i);
+      row.append(input, document.createTextNode(name));
+      panel.append(row);
+      input.addEventListener("change", () => {
+        chosen = input.checked ? [...chosen, i] : chosen.filter(j => j !== i);
+        changed();
+      });
+      return {row, input};
+    });
+    dropdown.append(button, panel);
+    container.append(dropdown);
+    const open = value => {
+      panel.hidden = !value;
+      button.setAttribute("aria-expanded", String(value));
+    };
+    button.addEventListener("click", () => open(panel.hidden));
+    button.addEventListener("keydown", event => {
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+        open(true);
+        options.find(({row, input}) => !row.hidden && !input.disabled)?.input.focus();
+      }
+    });
+    dropdown.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        event.stopPropagation();
+        open(false);
+        button.focus();
+      }
+    });
+    document.addEventListener("click", event => {
+      if (!dropdown.contains(event.target)) open(false);
+    }, {signal: listeners.signal});
+    // Tabbing away closes the list. A click on a row's text moves focus to nothing
+    // (relatedTarget null), so leave that to the outside-click listener.
+    dropdown.addEventListener("focusout", event => {
+      if (event.relatedTarget && !dropdown.contains(event.relatedTarget)) open(false);
+    });
 
     const fill = () => {
       const group = groupOf(chosen[0]);
       if (groupSelect) groupSelect.value = group;
-      selects.forEach((select, k) => {
-        const others = chosen.filter((_, j) => j !== k);
-        const units = new Set(others.map(i => dims[i]));
-        select.replaceChildren();
-        if (k > 0) select.append(new Option("None", ""));
-        names.forEach((name, i) => {
-          if (others.includes(i) || groupOf(i) !== group) return;
-          const option = new Option(name, String(i));
-          option.disabled = units.size > 1 && !units.has(dims[i]);
-          select.append(option);
-        });
-        select.value = k < chosen.length ? String(chosen[k]) : "";
-        select.disabled = k > chosen.length;
+      headings.forEach(({heading, group: mine}) => { heading.hidden = mine !== group; heading.style.display = mine === group ? "block" : "none"; });
+      button.textContent = "Series: " + chosen.map(i => names[i]).join(", ") + " ▾";
+      const units = new Set(chosen.map(i => dims[i]));
+      options.forEach(({row, input}, i) => {
+        row.hidden = groupOf(i) !== group;
+        input.checked = chosen.includes(i);
+        const reason = input.checked ? (chosen.length === 1 ? "Keep at least one series selected." : "")
+          : units.size === 2 && !units.has(dims[i]) ? "Only two units can share a chart. Untick a series to change units."
+          : chosen.length >= pick.labels.length ? `Tick up to ${pick.labels.length} series. Untick one to add another.` : "";
+        input.disabled = Boolean(reason);
+        row.title = reason;
+        input.title = reason;
+        row.classList.toggle("disabled", Boolean(reason));
       });
     };
     const changed = () => {
       fill();
       onChange([...chosen], chosen.map(i => slugs[i]));
     };
-    selects.forEach(select => select.addEventListener("change", () => {
-      chosen = [...new Set(selects.map(item => item.value).filter(Boolean).map(Number))];
-      changed();
-    }));
     // A new group keeps the same items where the group has them.
     groupSelect?.addEventListener("change", () => {
       const group = groupSelect.value;
@@ -169,5 +259,5 @@
     return chosen;
   }
 
-  window.AltitudePick = {combine, setup};
+  window.AltitudePick = {combine, setup, viewSpec};
 })();

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Altitude charts</title>
   <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../export_options.css">
+  <link rel="stylesheet" href="../phone_chart.css">
   <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; width: 100%; height: 100%; }
@@ -54,6 +56,14 @@
     #note { margin: 0; color: #48605e; font-size: 13px; line-height: 1.45; max-width: 900px; }
     .controls { display: flex; align-items: center; gap: 10px; font-size: 13px; }
     #picks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; min-width: 0; max-width: 100%; }
+    .series-picker { position: relative; display: block; min-width: 0; max-width: 100%; }
+    .series-button { display: block; max-width: 100%; width: 520px; padding: 8px 10px; border: 1px solid #c4d3cd; background: white; color: inherit; font: inherit; text-align: left; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .series-options { position: absolute; top: calc(100% + 4px); left: 0; z-index: 20; width: 100%; min-width: 240px; max-width: calc(100vw - 32px); max-height: min(360px, 55vh); overflow-y: auto; padding: 8px; border: 1px solid #c4d3cd; background: white; box-shadow: 0 8px 20px rgba(20,46,44,.12); }
+    .series-hint { display: block; padding: 4px 6px 8px; color: #48605e; font-size: 12px; line-height: 1.4; }
+    .series-option { display: flex; align-items: start; gap: 8px; padding: 7px 6px; line-height: 1.35; cursor: pointer; overflow-wrap: anywhere; }
+    .series-option:hover { background: #f4f0e8; }
+    .series-option input { flex: 0 0 auto; margin: 2px 0 0; accent-color: #164b45; }
+    .series-option.disabled { color: #737d7b; cursor: default; }
     select { min-width: 0; max-width: 100%; padding: 7px; border: 1px solid #c4d3cd; background: white; color: inherit; font: inherit; }
     .chart-area { flex: 1 1 auto; min-height: 260px; min-width: 0; position: relative; background: white; }
     #chart { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -89,7 +99,8 @@
       <h1 id="heading">New Zealand and Ireland in charts</h1>
       <p><span id="intro">Economic, tourism and housing data from public sources, updated as new figures are released.</span> Pick a topic from the menus above or a card below.</p>
       <p class="doors" id="doors" hidden></p>
-      <p class="doors"><a href="../route-map/">Aviation route map</a> · Open your route table and download a map.</p>
+      <p class="doors"><a href="../route-map/">Aviation route map</a> (Beta) · Open your route table and download a map.</p>
+      <p class="doors"><a href="../catchments/">Airport catchments</a> (Beta) · Who lives closer to which airport, by road.</p>
       <div id="groups"></div>
     </section>
     <section class="topic" id="topic" hidden>
@@ -97,6 +108,7 @@
       <div class="controls" id="controls" hidden>
         <span id="view-control"><label for="view">Chart view</label> <select id="view"></select></span>
         <span id="picks" hidden></span>
+        <span id="range-control" hidden><label for="range" id="range-label">Axis range</label> <select id="range"></select></span>
       </div>
       <section class="chart-area" aria-label="Interactive chart">
         <img id="preview" width="1200" height="600" alt="" hidden>
@@ -108,6 +120,9 @@
       </footer>
     </section>
   </main>
+  <script src="../export_options.js"></script>
+  <script src="../phone_chart.js"></script>
+  <script src="../zero_axes.js"></script>
   <script>
     (() => {
       // Each front door (publish/nz/, publish/ireland/) is this page with data-site set.
@@ -297,14 +312,47 @@
         chart.setAttribute("aria-hidden", "true");
       }
 
-      async function draw(spec) {
+      async function draw(spec, xRange) {
         await loadPlotly();
         if (!window.Plotly) throw new Error("Chart library is unavailable");
         if (!Array.isArray(spec.data)) throw new Error("Invalid chart");
         const config = {...spec.config, responsive: true};
         if (innerWidth < 600) config.displayModeBar = false;
-        await Plotly.react(chart, spec.data, frameLayout(spec), config);
+        const layout = frameLayout(spec);
+        const limit = rangeLimit();
+        if (limit) layout.yaxis = {...layout.yaxis, range: [-limit, limit], autorange: false};
+        if (xRange) layout.xaxis = {...layout.xaxis, range: xRange, autorange: false};
+        const phone = AltitudePhone.prepare(chart, spec, layout);
+        await Plotly.react(chart, phone.data, phone.layout, config);
+        await AltitudeZeroAxes.attach(chart, Plotly);
       }
+
+      // manifest.y_range (card spending) offers fixed ± y-axis ranges on some views.
+      const rangeSelect = document.getElementById("range");
+      let viewLabel = "";
+      const rangeViews = () => manifest?.y_range?.views || [];
+      const rangeLimit = () => rangeViews().includes(viewLabel) ? Number(rangeSelect.value) || 0 : 0;
+      function setupRange() {
+        const options = manifest.y_range?.options || [];
+        rangeSelect.replaceChildren(...[0, ...options].map(value => {
+          const option = document.createElement("option");
+          option.value = String(value);
+          option.textContent = value ? "±" + value + (manifest.y_range.unit || "") : "Auto";
+          return option;
+        }));
+        document.getElementById("range-label").textContent = manifest.y_range?.label || "Axis range";
+        document.getElementById("range-control").hidden = true;
+      }
+      function showRange(index) {
+        viewLabel = manifest.views[index]?.label || "";
+        document.getElementById("range-control").hidden = !rangeViews().includes(viewLabel);
+      }
+      rangeSelect.addEventListener("change", async () => {
+        if (!activeSpec) return;
+        // Keep the reader's date window when only the axis range changes.
+        const dates = chart.layout?.xaxis?.range;
+        try { await draw(activeSpec, dates); } catch (error) { showError(); }
+      });
 
       async function loadSpec(getSpec, number, isDefault) {
         fetchController?.abort();
@@ -327,6 +375,7 @@
       }
 
       function loadView(index, number) {
+        showRange(index);
         return loadSpec(signal => readJson(manifest.views[index].spec, folder, signal), number, index === 0);
       }
 
@@ -334,7 +383,13 @@
 
       function loadPicks(chosen, number) {
         return loadSpec(async signal => {
-          const specs = await Promise.all(chosen.map(i => readJson(manifest.views[i].spec, folder, signal)));
+          await loadPick();
+          const files = new Map();
+          const specs = await Promise.all(chosen.map(async i => {
+            const view = manifest.views[i];
+            if (!files.has(view.spec)) files.set(view.spec, readJson(view.spec, folder, signal));
+            return AltitudePick.viewSpec(await files.get(view.spec), view);
+          }));
           if (specs.length === 1) return specs[0];
           await loadPick();
           return AltitudePick.combine(specs, manifest.pick, chosen, manifest.views.map(item => item.label));
@@ -385,6 +440,7 @@
         $("controls").hidden = true;
         $("view-control").hidden = false;
         $("picks").hidden = true;
+        $("range-control").hidden = true;
         preview.hidden = true;
         status.textContent = "Loading chart…";
         status.hidden = false;
@@ -396,7 +452,7 @@
           $("source").textContent = "Source: " + (manifest.source || "not recorded");
           $("updated").textContent = " · Data last updated: " + formattedDate(manifest.updated);
           addDownload("Download data", manifest.data);
-          addDownload("Download image", manifest.image);
+          AltitudeExport.setup($("downloads"), chart, manifest, manifest.image ? assetUrl(manifest.image) : null);
           if (manifest.image) {
             preview.src = assetUrl(manifest.image, folder);
             preview.alt = manifest.image_alt || manifest.title || "Chart preview";
@@ -404,6 +460,7 @@
             status.hidden = true;
             preview.onerror = () => { preview.hidden = true; if (!activeSpec) status.hidden = false; };
           }
+          setupRange();
           if (manifest.pick) return await setupPicks(name, series, number);
           manifest.views.forEach((item, index) => {
             const option = document.createElement("option");

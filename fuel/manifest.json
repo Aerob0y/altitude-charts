@@ -1,9 +1,9 @@
 {
   "name": "fuel",
-  "title": "Fuel",
-  "source": "Public fuel-price series",
-  "note": "Tracks fuel prices over time, a practical indicator of transport costs for households, visitors and tourism operators.",
-  "updated": "2026-10-04",
+  "title": "Jet fuel price",
+  "source": "US Energy Information Administration (EIA)",
+  "note": "Daily US Gulf Coast jet fuel spot price, a benchmark for airline fuel costs, in US dollars per barrel or New Zealand dollars per barrel at the RBNZ exchange rate.",
+  "updated": "2026-10-12",
   "views": [
     {
       "label": "USD per Barrel",
@@ -15,6 +15,6 @@
     }
   ],
   "data": "data.csv",
-  "image": "fuel.png",
-  "image_alt": "Fuel Public fuel-price series: USD per Barrel"
+  "image": null,
+  "image_alt": "Jet fuel price US Energy Information Administration (EIA): USD per Barrel"
 }

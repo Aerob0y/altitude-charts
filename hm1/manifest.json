@@ -183,7 +183,7 @@
     }
   ],
   "data": "data.csv",
-  "image": "hm1.png",
+  "image": null,
   "image_alt": "Inflation RBNZ and Stats NZ series: Consumers price index (CPI), Food, Housing and household utilities, and Transportation (Annual % change)",
   "pick": {
     "labels": ["Price index 1", "Price index 2", "Price index 3", "Price index 4", "Price index 5"],

@@ -1,19 +1,63 @@
 /* Reusable geometry and input validation. No browser or network dependencies. */
 (function (root) {
   "use strict";
-  const airports = {
-    ZQN: [168.7392, -45.0211, "Queenstown"], AKL: [174.785, -37.0082, "Auckland"],
-    SYD: [151.1772, -33.9461, "Sydney"], MEL: [144.841, -37.669, "Melbourne"],
-    BNE: [153.1175, -27.3842, "Brisbane"], OOL: [153.5047, -28.1644, "Gold Coast"],
-    CBR: [149.195, -35.3069, "Canberra"], CHC: [172.5322, -43.4894, "Christchurch"],
-    WLG: [174.8053, -41.3272, "Wellington"], DUD: [170.1983, -45.9281, "Dunedin"],
-    PER: [115.9672, -31.9403, "Perth"], ADL: [138.5306, -34.945, "Adelaide"],
-    HBA: [147.5103, -42.8361, "Hobart"], CNS: [145.7553, -16.8858, "Cairns"],
-    DUB: [-6.2701, 53.4213, "Dublin"], ORK: [-8.4911, 51.8413, "Cork"],
-    SNN: [-8.9248, 52.702, "Shannon"], NOC: [-8.8185, 53.9103, "Ireland West"],
-    KIR: [-9.5238, 52.1809, "Kerry"]
+  const airports = Object.create(null);
+  // Preserve familiar labels; the source city field often names a suburb.
+  const airport_names = {
+    ZQN: "Queenstown", AKL: "Auckland", SYD: "Sydney", MEL: "Melbourne",
+    BNE: "Brisbane", OOL: "Gold Coast", CBR: "Canberra", CHC: "Christchurch",
+    WLG: "Wellington", DUD: "Dunedin", PER: "Perth", ADL: "Adelaide",
+    HBA: "Hobart", CNS: "Cairns", DUB: "Dublin", ORK: "Cork",
+    SNN: "Shannon", NOC: "Ireland West", KIR: "Kerry"
   };
+  function set_airports(records) {
+    for (const key of Object.keys(airports)) delete airports[key];
+    for (const record of records) {
+      if (!Number.isFinite(record.lat) || !Number.isFinite(record.lon)) continue;
+      const point = [record.lon, record.lat, airport_names[record.code] || String(record.name || record.code || record.icao).replace(/(?: International)? Airport$/i, "")];
+      for (const code of [record.code, record.icao]) {
+        if (code && !airports[code]) airports[code] = point;
+      }
+    }
+  }
+  function parse_routes(text) {
+    const table = [['origin', 'destination', 'colour']];
+    for (const entry of text.split(/[,\n\r]+/).map(s => s.trim()).filter(Boolean)) {
+      const match = entry.match(/^(.*?)(?:\s+(#[0-9a-f]{6}))?$/i);
+      const branches = match[1].toUpperCase().split('/');
+      const chain = branches.shift().split('-').map(s => s.trim());
+      if (chain.length < 2 || [...chain, ...branches].some(code => !/^[A-Z0-9]{3,4}$/.test(code.trim()))) {
+        throw Error(`Invalid route: ${entry}. Use AKL-ZQN, chains or AKL-ZQN/SYD with an optional #rrggbb colour.`);
+      }
+      for (let i = 1; i < chain.length; i++) table.push([chain[i - 1], chain[i], match[2] || '']);
+      for (const branch of branches) table.push([chain.at(-2), branch.trim(), match[2] || '']);
+    }
+    return normalise(table);
+  }
   const MAX_ROWS = 2000;
+  function png_dpi(bytes, dpi) {
+    const chunk = new Uint8Array(21), view = new DataView(chunk.buffer);
+    view.setUint32(0, 9); chunk.set([112, 72, 89, 115], 4);
+    view.setUint32(8, Math.round(dpi / .0254)); view.setUint32(12, Math.round(dpi / .0254)); chunk[16] = 1;
+    let crc = 0xffffffff;
+    for (const value of chunk.slice(4, 17)) {
+      crc ^= value;
+      for (let i = 0; i < 8; i++) crc = (crc >>> 1) ^ (crc & 1 ? 0xedb88320 : 0);
+    }
+    view.setUint32(17, (crc ^ 0xffffffff) >>> 0);
+    let offset = 8, previous = 0;
+    const input = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+    while (offset < bytes.length) {
+      const length = input.getUint32(offset);
+      if (String.fromCharCode(...bytes.slice(offset + 4, offset + 8)) === "pHYs") { previous = length + 12; break; }
+      offset += length + 12;
+    }
+    if (!previous) offset = 33;
+    const result = new Uint8Array(bytes.length - previous + chunk.length);
+    result.set(bytes.slice(0, offset)); result.set(chunk, offset);
+    result.set(bytes.slice(offset + previous), offset + chunk.length);
+    return result;
+  }
   const number = (v, name, row, min, max) => {
     if (v == null || String(v).trim() === "") return null;
     const n = Number(String(v).trim());
@@ -62,7 +106,9 @@
     const parsed = rows.map((values, i) => {
       const row = i + 2, record = Object.fromEntries(columns.map((key, j) => [key, values[j] ?? ""]));
       if (values.length > columns.length) throw Error(`Row ${row}: more fields than column headings.`);
-      const result = { airline: String(record.airline || "").trim().slice(0, 100) };
+      const colour = String(record.colour || record.color || "").trim().toLowerCase();
+      if (colour && !/^#[0-9a-f]{6}$/.test(colour)) throw Error(`Row ${row}: colour must be #rrggbb.`);
+      const result = { colour, airline: String(record.airline || "").trim().slice(0, 100) };
       for (const end of ["origin", "destination"]) {
         const code = String(record[end]).trim().toUpperCase();
         if (!/^[A-Z0-9]{3,4}$/.test(code)) throw Error(`Row ${row}: ${end} must be a 3–4 character airport code.`);
@@ -82,6 +128,8 @@
       for (const metric of ["flights", "seats"]) result[metric] = number(record[metric], metric, row, 0, 1e12);
       return result;
     });
+    const unknown = [...new Set(parsed.flatMap(r => [r.origin, r.destination]).filter(code => !coordinates.has(code) && !airports[code]))];
+    if (unknown.length) throw Error(`Unknown airport codes: ${unknown.join(", ")}. Check IATA/ICAO codes or supply coordinates in an upload.`);
     for (const route of parsed) for (const end of ["origin", "destination"]) {
       const code = route[end];
       const point = coordinates.get(code) || airports[code];
@@ -121,18 +169,18 @@
     return [centre - Math.min(360, span + xpad * 2) / 2, centre + Math.min(360, span + xpad * 2) / 2,
       Math.max(-90, low - ypad), Math.min(90, high + ypad)];
   }
-  function aggregate(routes, airline = "") {
+  function aggregate(routes, airline = "", colour_by = "single") {
     const groups = new Map();
     for (const route of routes.filter(r => !airline || r.airline === airline)) {
-      const pair = [route.origin, route.destination].sort(), key = pair.join("-");
-      if (!groups.has(key)) groups.set(key, { origin: pair[0], destination: pair[1], flights: 0, seats: 0, airlines: new Set() });
+      const pair = [route.origin, route.destination].sort(), key = pair.join("-") + (colour_by === "route" ? "|" + (route.colour || "") : colour_by === "airline" ? "|" + (route.airline || "") : "");
+      if (!groups.has(key)) groups.set(key, { origin: pair[0], destination: pair[1], flights: 0, seats: 0, colour: route.colour || "", airline: route.airline || "", airlines: new Set() });
       const group = groups.get(key);
       for (const metric of ["flights", "seats"]) group[metric] = group[metric] == null || route[metric] == null ? null : group[metric] + route[metric];
       if (route.airline) group.airlines.add(route.airline);
     }
     return [...groups.values()];
   }
-  const api = { airports, MAX_ROWS, parse_csv, normalise, great_circle, fit_extent, wrap, aggregate };
+  const api = { airports, set_airports, parse_routes, png_dpi, MAX_ROWS, parse_csv, normalise, great_circle, fit_extent, wrap, aggregate };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.RouteMap = api;
 })(typeof window !== "undefined" ? window : globalThis);

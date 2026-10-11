@@ -6,48 +6,3779 @@
   "updated": "2026-10-04",
   "views": [
     {
-      "label": "Lodged Bonds",
-      "spec": "lodged-bonds.json"
+      "label": "New Zealand",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-1",
+      "location": 0,
+      "subtitle": "Lodged Bonds, number of bonds a month"
     },
     {
-      "label": "Active Bonds",
-      "spec": "active-bonds.json"
+      "label": "Ashburton District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-2",
+      "location": 1,
+      "subtitle": "Lodged Bonds, number of bonds a month"
     },
     {
-      "label": "Closed Bonds",
-      "spec": "closed-bonds.json"
+      "label": "Auckland",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-3",
+      "location": 2,
+      "subtitle": "Lodged Bonds, number of bonds a month"
     },
     {
-      "label": "Median Rent",
-      "spec": "median-rent.json"
+      "label": "Buller District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-4",
+      "location": 3,
+      "subtitle": "Lodged Bonds, number of bonds a month"
     },
     {
-      "label": "Geometric Mean Rent",
-      "spec": "geometric-mean-rent.json"
+      "label": "Carterton District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-5",
+      "location": 4,
+      "subtitle": "Lodged Bonds, number of bonds a month"
     },
     {
-      "label": "Upper Quartile Rent",
-      "spec": "upper-quartile-rent.json"
+      "label": "Central Hawke's Bay District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-6",
+      "location": 5,
+      "subtitle": "Lodged Bonds, number of bonds a month"
     },
     {
-      "label": "Lower Quartile Rent",
-      "spec": "lower-quartile-rent.json"
+      "label": "Central Otago District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-7",
+      "location": 6,
+      "subtitle": "Lodged Bonds, number of bonds a month"
     },
     {
-      "label": "Log Std Dev Weekly Rent",
-      "spec": "log-std-dev-weekly-rent.json"
+      "label": "Christchurch City",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-8",
+      "location": 7,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Clutha District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-9",
+      "location": 8,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Dunedin City",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-10",
+      "location": 9,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Far North District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-11",
+      "location": 10,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Gisborne District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-12",
+      "location": 11,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Gore District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-13",
+      "location": 12,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Grey District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-14",
+      "location": 13,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Hamilton City",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-15",
+      "location": 14,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Hastings District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-16",
+      "location": 15,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Hauraki District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-17",
+      "location": 16,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Horowhenua District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-18",
+      "location": 17,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Hurunui District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-19",
+      "location": 18,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Invercargill City",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-20",
+      "location": 19,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Kaikoura District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-21",
+      "location": 20,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Kaipara District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-22",
+      "location": 21,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Kapiti Coast District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-23",
+      "location": 22,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Kawerau District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-24",
+      "location": 23,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Lower Hutt City",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-25",
+      "location": 24,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Mackenzie District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-26",
+      "location": 25,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Manawatu District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-27",
+      "location": 26,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Marlborough District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-28",
+      "location": 27,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Masterton District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-29",
+      "location": 28,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Matamata-Piako District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-30",
+      "location": 29,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Napier City",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-31",
+      "location": 30,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Nelson City",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-32",
+      "location": 31,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "New Plymouth District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-33",
+      "location": 32,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Opotiki District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-34",
+      "location": 33,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Otorohanga District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-35",
+      "location": 34,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Palmerston North City",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-36",
+      "location": 35,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Porirua City",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-37",
+      "location": 36,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Queenstown-Lakes District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-38",
+      "location": 37,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Rangitikei District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-39",
+      "location": 38,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Rotorua District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-40",
+      "location": 39,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Ruapehu District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-41",
+      "location": 40,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Selwyn District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-42",
+      "location": 41,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "South Taranaki District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-43",
+      "location": 42,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "South Waikato District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-44",
+      "location": 43,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "South Wairarapa District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-45",
+      "location": 44,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Southland District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-46",
+      "location": 45,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Stratford District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-47",
+      "location": 46,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Tararua District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-48",
+      "location": 47,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Tasman District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-49",
+      "location": 48,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Taupo District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-50",
+      "location": 49,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Tauranga City",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-51",
+      "location": 50,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Thames-Coromandel District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-52",
+      "location": 51,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Timaru District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-53",
+      "location": 52,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Upper Hutt City",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-54",
+      "location": 53,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Waikato District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-55",
+      "location": 54,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Waimakariri District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-56",
+      "location": 55,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Waimate District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-57",
+      "location": 56,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Waipa District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-58",
+      "location": 57,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Wairoa District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-59",
+      "location": 58,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Waitaki District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-60",
+      "location": 59,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Waitomo District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-61",
+      "location": 60,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Wellington City",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-62",
+      "location": 61,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Western Bay of Plenty District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-63",
+      "location": 62,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Westland District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-64",
+      "location": 63,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Whakatane District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-65",
+      "location": 64,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Whanganui District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-66",
+      "location": 65,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "Whangarei District",
+      "spec": "lodged-bonds.json",
+      "id": "lodged-bonds-67",
+      "location": 66,
+      "subtitle": "Lodged Bonds, number of bonds a month"
+    },
+    {
+      "label": "New Zealand",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-1",
+      "location": 0,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Ashburton District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-2",
+      "location": 1,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Auckland",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-3",
+      "location": 2,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Buller District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-4",
+      "location": 3,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Carterton District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-5",
+      "location": 4,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Central Hawke's Bay District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-6",
+      "location": 5,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Central Otago District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-7",
+      "location": 6,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Christchurch City",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-8",
+      "location": 7,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Clutha District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-9",
+      "location": 8,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Dunedin City",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-10",
+      "location": 9,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Far North District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-11",
+      "location": 10,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Gisborne District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-12",
+      "location": 11,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Gore District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-13",
+      "location": 12,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Grey District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-14",
+      "location": 13,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Hamilton City",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-15",
+      "location": 14,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Hastings District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-16",
+      "location": 15,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Hauraki District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-17",
+      "location": 16,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Horowhenua District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-18",
+      "location": 17,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Hurunui District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-19",
+      "location": 18,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Invercargill City",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-20",
+      "location": 19,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Kaikoura District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-21",
+      "location": 20,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Kaipara District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-22",
+      "location": 21,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Kapiti Coast District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-23",
+      "location": 22,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Kawerau District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-24",
+      "location": 23,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Lower Hutt City",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-25",
+      "location": 24,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Mackenzie District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-26",
+      "location": 25,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Manawatu District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-27",
+      "location": 26,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Marlborough District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-28",
+      "location": 27,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Masterton District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-29",
+      "location": 28,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Matamata-Piako District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-30",
+      "location": 29,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Napier City",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-31",
+      "location": 30,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Nelson City",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-32",
+      "location": 31,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "New Plymouth District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-33",
+      "location": 32,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Opotiki District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-34",
+      "location": 33,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Otorohanga District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-35",
+      "location": 34,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Palmerston North City",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-36",
+      "location": 35,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Porirua City",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-37",
+      "location": 36,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Queenstown-Lakes District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-38",
+      "location": 37,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Rangitikei District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-39",
+      "location": 38,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Rotorua District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-40",
+      "location": 39,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Ruapehu District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-41",
+      "location": 40,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Selwyn District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-42",
+      "location": 41,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "South Taranaki District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-43",
+      "location": 42,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "South Waikato District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-44",
+      "location": 43,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "South Wairarapa District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-45",
+      "location": 44,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Southland District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-46",
+      "location": 45,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Stratford District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-47",
+      "location": 46,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Tararua District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-48",
+      "location": 47,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Tasman District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-49",
+      "location": 48,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Taupo District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-50",
+      "location": 49,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Tauranga City",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-51",
+      "location": 50,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Thames-Coromandel District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-52",
+      "location": 51,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Timaru District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-53",
+      "location": 52,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Upper Hutt City",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-54",
+      "location": 53,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Waikato District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-55",
+      "location": 54,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Waimakariri District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-56",
+      "location": 55,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Waimate District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-57",
+      "location": 56,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Waipa District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-58",
+      "location": 57,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Wairoa District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-59",
+      "location": 58,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Waitaki District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-60",
+      "location": 59,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Waitomo District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-61",
+      "location": 60,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Wellington City",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-62",
+      "location": 61,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Western Bay of Plenty District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-63",
+      "location": 62,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Westland District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-64",
+      "location": 63,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Whakatane District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-65",
+      "location": 64,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Whanganui District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-66",
+      "location": 65,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "Whangarei District",
+      "spec": "active-bonds.json",
+      "id": "active-bonds-67",
+      "location": 66,
+      "subtitle": "Active Bonds, number of active bonds"
+    },
+    {
+      "label": "New Zealand",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-1",
+      "location": 0,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Ashburton District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-2",
+      "location": 1,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Auckland",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-3",
+      "location": 2,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Buller District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-4",
+      "location": 3,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Carterton District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-5",
+      "location": 4,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Central Hawke's Bay District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-6",
+      "location": 5,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Central Otago District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-7",
+      "location": 6,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Christchurch City",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-8",
+      "location": 7,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Clutha District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-9",
+      "location": 8,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Dunedin City",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-10",
+      "location": 9,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Far North District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-11",
+      "location": 10,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Gisborne District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-12",
+      "location": 11,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Gore District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-13",
+      "location": 12,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Grey District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-14",
+      "location": 13,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Hamilton City",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-15",
+      "location": 14,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Hastings District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-16",
+      "location": 15,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Hauraki District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-17",
+      "location": 16,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Horowhenua District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-18",
+      "location": 17,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Hurunui District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-19",
+      "location": 18,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Invercargill City",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-20",
+      "location": 19,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Kaikoura District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-21",
+      "location": 20,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Kaipara District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-22",
+      "location": 21,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Kapiti Coast District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-23",
+      "location": 22,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Kawerau District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-24",
+      "location": 23,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Lower Hutt City",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-25",
+      "location": 24,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Mackenzie District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-26",
+      "location": 25,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Manawatu District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-27",
+      "location": 26,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Marlborough District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-28",
+      "location": 27,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Masterton District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-29",
+      "location": 28,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Matamata-Piako District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-30",
+      "location": 29,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Napier City",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-31",
+      "location": 30,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Nelson City",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-32",
+      "location": 31,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "New Plymouth District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-33",
+      "location": 32,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Opotiki District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-34",
+      "location": 33,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Otorohanga District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-35",
+      "location": 34,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Palmerston North City",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-36",
+      "location": 35,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Porirua City",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-37",
+      "location": 36,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Queenstown-Lakes District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-38",
+      "location": 37,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Rangitikei District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-39",
+      "location": 38,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Rotorua District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-40",
+      "location": 39,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Ruapehu District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-41",
+      "location": 40,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Selwyn District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-42",
+      "location": 41,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "South Taranaki District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-43",
+      "location": 42,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "South Waikato District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-44",
+      "location": 43,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "South Wairarapa District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-45",
+      "location": 44,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Southland District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-46",
+      "location": 45,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Stratford District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-47",
+      "location": 46,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Tararua District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-48",
+      "location": 47,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Tasman District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-49",
+      "location": 48,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Taupo District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-50",
+      "location": 49,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Tauranga City",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-51",
+      "location": 50,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Thames-Coromandel District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-52",
+      "location": 51,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Timaru District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-53",
+      "location": 52,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Upper Hutt City",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-54",
+      "location": 53,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Waikato District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-55",
+      "location": 54,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Waimakariri District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-56",
+      "location": 55,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Waimate District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-57",
+      "location": 56,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Waipa District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-58",
+      "location": 57,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Wairoa District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-59",
+      "location": 58,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Waitaki District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-60",
+      "location": 59,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Waitomo District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-61",
+      "location": 60,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Wellington City",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-62",
+      "location": 61,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Western Bay of Plenty District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-63",
+      "location": 62,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Westland District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-64",
+      "location": 63,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Whakatane District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-65",
+      "location": 64,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Whanganui District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-66",
+      "location": 65,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "Whangarei District",
+      "spec": "closed-bonds.json",
+      "id": "closed-bonds-67",
+      "location": 66,
+      "subtitle": "Closed Bonds, number of bonds a month"
+    },
+    {
+      "label": "New Zealand",
+      "spec": "median-rent.json",
+      "id": "median-rent-1",
+      "location": 0,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Ashburton District",
+      "spec": "median-rent.json",
+      "id": "median-rent-2",
+      "location": 1,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Auckland",
+      "spec": "median-rent.json",
+      "id": "median-rent-3",
+      "location": 2,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Buller District",
+      "spec": "median-rent.json",
+      "id": "median-rent-4",
+      "location": 3,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Carterton District",
+      "spec": "median-rent.json",
+      "id": "median-rent-5",
+      "location": 4,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Central Hawke's Bay District",
+      "spec": "median-rent.json",
+      "id": "median-rent-6",
+      "location": 5,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Central Otago District",
+      "spec": "median-rent.json",
+      "id": "median-rent-7",
+      "location": 6,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Christchurch City",
+      "spec": "median-rent.json",
+      "id": "median-rent-8",
+      "location": 7,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Clutha District",
+      "spec": "median-rent.json",
+      "id": "median-rent-9",
+      "location": 8,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Dunedin City",
+      "spec": "median-rent.json",
+      "id": "median-rent-10",
+      "location": 9,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Far North District",
+      "spec": "median-rent.json",
+      "id": "median-rent-11",
+      "location": 10,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Gisborne District",
+      "spec": "median-rent.json",
+      "id": "median-rent-12",
+      "location": 11,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Gore District",
+      "spec": "median-rent.json",
+      "id": "median-rent-13",
+      "location": 12,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Grey District",
+      "spec": "median-rent.json",
+      "id": "median-rent-14",
+      "location": 13,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Hamilton City",
+      "spec": "median-rent.json",
+      "id": "median-rent-15",
+      "location": 14,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Hastings District",
+      "spec": "median-rent.json",
+      "id": "median-rent-16",
+      "location": 15,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Hauraki District",
+      "spec": "median-rent.json",
+      "id": "median-rent-17",
+      "location": 16,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Horowhenua District",
+      "spec": "median-rent.json",
+      "id": "median-rent-18",
+      "location": 17,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Hurunui District",
+      "spec": "median-rent.json",
+      "id": "median-rent-19",
+      "location": 18,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Invercargill City",
+      "spec": "median-rent.json",
+      "id": "median-rent-20",
+      "location": 19,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Kaikoura District",
+      "spec": "median-rent.json",
+      "id": "median-rent-21",
+      "location": 20,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Kaipara District",
+      "spec": "median-rent.json",
+      "id": "median-rent-22",
+      "location": 21,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Kapiti Coast District",
+      "spec": "median-rent.json",
+      "id": "median-rent-23",
+      "location": 22,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Kawerau District",
+      "spec": "median-rent.json",
+      "id": "median-rent-24",
+      "location": 23,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Lower Hutt City",
+      "spec": "median-rent.json",
+      "id": "median-rent-25",
+      "location": 24,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Mackenzie District",
+      "spec": "median-rent.json",
+      "id": "median-rent-26",
+      "location": 25,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Manawatu District",
+      "spec": "median-rent.json",
+      "id": "median-rent-27",
+      "location": 26,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Marlborough District",
+      "spec": "median-rent.json",
+      "id": "median-rent-28",
+      "location": 27,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Masterton District",
+      "spec": "median-rent.json",
+      "id": "median-rent-29",
+      "location": 28,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Matamata-Piako District",
+      "spec": "median-rent.json",
+      "id": "median-rent-30",
+      "location": 29,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Napier City",
+      "spec": "median-rent.json",
+      "id": "median-rent-31",
+      "location": 30,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Nelson City",
+      "spec": "median-rent.json",
+      "id": "median-rent-32",
+      "location": 31,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "New Plymouth District",
+      "spec": "median-rent.json",
+      "id": "median-rent-33",
+      "location": 32,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Opotiki District",
+      "spec": "median-rent.json",
+      "id": "median-rent-34",
+      "location": 33,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Otorohanga District",
+      "spec": "median-rent.json",
+      "id": "median-rent-35",
+      "location": 34,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Palmerston North City",
+      "spec": "median-rent.json",
+      "id": "median-rent-36",
+      "location": 35,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Porirua City",
+      "spec": "median-rent.json",
+      "id": "median-rent-37",
+      "location": 36,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Queenstown-Lakes District",
+      "spec": "median-rent.json",
+      "id": "median-rent-38",
+      "location": 37,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Rangitikei District",
+      "spec": "median-rent.json",
+      "id": "median-rent-39",
+      "location": 38,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Rotorua District",
+      "spec": "median-rent.json",
+      "id": "median-rent-40",
+      "location": 39,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Ruapehu District",
+      "spec": "median-rent.json",
+      "id": "median-rent-41",
+      "location": 40,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Selwyn District",
+      "spec": "median-rent.json",
+      "id": "median-rent-42",
+      "location": 41,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "South Taranaki District",
+      "spec": "median-rent.json",
+      "id": "median-rent-43",
+      "location": 42,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "South Waikato District",
+      "spec": "median-rent.json",
+      "id": "median-rent-44",
+      "location": 43,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "South Wairarapa District",
+      "spec": "median-rent.json",
+      "id": "median-rent-45",
+      "location": 44,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Southland District",
+      "spec": "median-rent.json",
+      "id": "median-rent-46",
+      "location": 45,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Stratford District",
+      "spec": "median-rent.json",
+      "id": "median-rent-47",
+      "location": 46,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Tararua District",
+      "spec": "median-rent.json",
+      "id": "median-rent-48",
+      "location": 47,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Tasman District",
+      "spec": "median-rent.json",
+      "id": "median-rent-49",
+      "location": 48,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Taupo District",
+      "spec": "median-rent.json",
+      "id": "median-rent-50",
+      "location": 49,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Tauranga City",
+      "spec": "median-rent.json",
+      "id": "median-rent-51",
+      "location": 50,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Thames-Coromandel District",
+      "spec": "median-rent.json",
+      "id": "median-rent-52",
+      "location": 51,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Timaru District",
+      "spec": "median-rent.json",
+      "id": "median-rent-53",
+      "location": 52,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Upper Hutt City",
+      "spec": "median-rent.json",
+      "id": "median-rent-54",
+      "location": 53,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Waikato District",
+      "spec": "median-rent.json",
+      "id": "median-rent-55",
+      "location": 54,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Waimakariri District",
+      "spec": "median-rent.json",
+      "id": "median-rent-56",
+      "location": 55,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Waimate District",
+      "spec": "median-rent.json",
+      "id": "median-rent-57",
+      "location": 56,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Waipa District",
+      "spec": "median-rent.json",
+      "id": "median-rent-58",
+      "location": 57,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Wairoa District",
+      "spec": "median-rent.json",
+      "id": "median-rent-59",
+      "location": 58,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Waitaki District",
+      "spec": "median-rent.json",
+      "id": "median-rent-60",
+      "location": 59,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Waitomo District",
+      "spec": "median-rent.json",
+      "id": "median-rent-61",
+      "location": 60,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Wellington City",
+      "spec": "median-rent.json",
+      "id": "median-rent-62",
+      "location": 61,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Western Bay of Plenty District",
+      "spec": "median-rent.json",
+      "id": "median-rent-63",
+      "location": 62,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Westland District",
+      "spec": "median-rent.json",
+      "id": "median-rent-64",
+      "location": 63,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Whakatane District",
+      "spec": "median-rent.json",
+      "id": "median-rent-65",
+      "location": 64,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Whanganui District",
+      "spec": "median-rent.json",
+      "id": "median-rent-66",
+      "location": 65,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "Whangarei District",
+      "spec": "median-rent.json",
+      "id": "median-rent-67",
+      "location": 66,
+      "subtitle": "Median Rent, NZD a week"
+    },
+    {
+      "label": "New Zealand",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-1",
+      "location": 0,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Ashburton District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-2",
+      "location": 1,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Auckland",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-3",
+      "location": 2,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Buller District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-4",
+      "location": 3,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Carterton District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-5",
+      "location": 4,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Central Hawke's Bay District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-6",
+      "location": 5,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Central Otago District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-7",
+      "location": 6,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Christchurch City",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-8",
+      "location": 7,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Clutha District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-9",
+      "location": 8,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Dunedin City",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-10",
+      "location": 9,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Far North District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-11",
+      "location": 10,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Gisborne District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-12",
+      "location": 11,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Gore District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-13",
+      "location": 12,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Grey District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-14",
+      "location": 13,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Hamilton City",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-15",
+      "location": 14,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Hastings District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-16",
+      "location": 15,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Hauraki District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-17",
+      "location": 16,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Horowhenua District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-18",
+      "location": 17,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Hurunui District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-19",
+      "location": 18,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Invercargill City",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-20",
+      "location": 19,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Kaikoura District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-21",
+      "location": 20,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Kaipara District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-22",
+      "location": 21,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Kapiti Coast District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-23",
+      "location": 22,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Kawerau District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-24",
+      "location": 23,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Lower Hutt City",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-25",
+      "location": 24,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Mackenzie District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-26",
+      "location": 25,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Manawatu District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-27",
+      "location": 26,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Marlborough District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-28",
+      "location": 27,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Masterton District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-29",
+      "location": 28,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Matamata-Piako District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-30",
+      "location": 29,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Napier City",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-31",
+      "location": 30,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Nelson City",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-32",
+      "location": 31,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "New Plymouth District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-33",
+      "location": 32,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Opotiki District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-34",
+      "location": 33,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Otorohanga District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-35",
+      "location": 34,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Palmerston North City",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-36",
+      "location": 35,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Porirua City",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-37",
+      "location": 36,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Queenstown-Lakes District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-38",
+      "location": 37,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Rangitikei District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-39",
+      "location": 38,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Rotorua District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-40",
+      "location": 39,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Ruapehu District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-41",
+      "location": 40,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Selwyn District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-42",
+      "location": 41,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "South Taranaki District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-43",
+      "location": 42,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "South Waikato District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-44",
+      "location": 43,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "South Wairarapa District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-45",
+      "location": 44,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Southland District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-46",
+      "location": 45,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Stratford District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-47",
+      "location": 46,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Tararua District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-48",
+      "location": 47,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Tasman District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-49",
+      "location": 48,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Taupo District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-50",
+      "location": 49,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Tauranga City",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-51",
+      "location": 50,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Thames-Coromandel District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-52",
+      "location": 51,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Timaru District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-53",
+      "location": 52,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Upper Hutt City",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-54",
+      "location": 53,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Waikato District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-55",
+      "location": 54,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Waimakariri District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-56",
+      "location": 55,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Waimate District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-57",
+      "location": 56,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Waipa District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-58",
+      "location": 57,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Wairoa District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-59",
+      "location": 58,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Waitaki District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-60",
+      "location": 59,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Waitomo District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-61",
+      "location": 60,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Wellington City",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-62",
+      "location": 61,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Western Bay of Plenty District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-63",
+      "location": 62,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Westland District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-64",
+      "location": 63,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Whakatane District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-65",
+      "location": 64,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Whanganui District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-66",
+      "location": 65,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "Whangarei District",
+      "spec": "geometric-mean-rent.json",
+      "id": "geometric-mean-rent-67",
+      "location": 66,
+      "subtitle": "Geometric Mean Rent, NZD a week"
+    },
+    {
+      "label": "New Zealand",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-1",
+      "location": 0,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Ashburton District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-2",
+      "location": 1,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Auckland",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-3",
+      "location": 2,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Buller District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-4",
+      "location": 3,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Carterton District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-5",
+      "location": 4,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Central Hawke's Bay District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-6",
+      "location": 5,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Central Otago District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-7",
+      "location": 6,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Christchurch City",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-8",
+      "location": 7,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Clutha District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-9",
+      "location": 8,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Dunedin City",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-10",
+      "location": 9,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Far North District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-11",
+      "location": 10,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Gisborne District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-12",
+      "location": 11,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Gore District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-13",
+      "location": 12,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Grey District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-14",
+      "location": 13,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Hamilton City",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-15",
+      "location": 14,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Hastings District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-16",
+      "location": 15,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Hauraki District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-17",
+      "location": 16,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Horowhenua District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-18",
+      "location": 17,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Hurunui District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-19",
+      "location": 18,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Invercargill City",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-20",
+      "location": 19,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Kaikoura District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-21",
+      "location": 20,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Kaipara District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-22",
+      "location": 21,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Kapiti Coast District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-23",
+      "location": 22,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Kawerau District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-24",
+      "location": 23,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Lower Hutt City",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-25",
+      "location": 24,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Mackenzie District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-26",
+      "location": 25,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Manawatu District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-27",
+      "location": 26,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Marlborough District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-28",
+      "location": 27,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Masterton District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-29",
+      "location": 28,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Matamata-Piako District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-30",
+      "location": 29,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Napier City",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-31",
+      "location": 30,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Nelson City",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-32",
+      "location": 31,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "New Plymouth District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-33",
+      "location": 32,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Opotiki District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-34",
+      "location": 33,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Otorohanga District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-35",
+      "location": 34,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Palmerston North City",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-36",
+      "location": 35,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Porirua City",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-37",
+      "location": 36,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Queenstown-Lakes District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-38",
+      "location": 37,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Rangitikei District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-39",
+      "location": 38,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Rotorua District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-40",
+      "location": 39,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Ruapehu District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-41",
+      "location": 40,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Selwyn District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-42",
+      "location": 41,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "South Taranaki District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-43",
+      "location": 42,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "South Waikato District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-44",
+      "location": 43,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "South Wairarapa District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-45",
+      "location": 44,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Southland District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-46",
+      "location": 45,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Stratford District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-47",
+      "location": 46,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Tararua District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-48",
+      "location": 47,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Tasman District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-49",
+      "location": 48,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Taupo District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-50",
+      "location": 49,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Tauranga City",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-51",
+      "location": 50,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Thames-Coromandel District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-52",
+      "location": 51,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Timaru District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-53",
+      "location": 52,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Upper Hutt City",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-54",
+      "location": 53,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Waikato District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-55",
+      "location": 54,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Waimakariri District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-56",
+      "location": 55,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Waimate District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-57",
+      "location": 56,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Waipa District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-58",
+      "location": 57,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Wairoa District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-59",
+      "location": 58,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Waitaki District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-60",
+      "location": 59,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Waitomo District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-61",
+      "location": 60,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Wellington City",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-62",
+      "location": 61,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Western Bay of Plenty District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-63",
+      "location": 62,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Westland District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-64",
+      "location": 63,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Whakatane District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-65",
+      "location": 64,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Whanganui District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-66",
+      "location": 65,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Whangarei District",
+      "spec": "upper-quartile-rent.json",
+      "id": "upper-quartile-rent-67",
+      "location": 66,
+      "subtitle": "Upper Quartile Rent, NZD a week"
+    },
+    {
+      "label": "New Zealand",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-1",
+      "location": 0,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Ashburton District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-2",
+      "location": 1,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Auckland",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-3",
+      "location": 2,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Buller District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-4",
+      "location": 3,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Carterton District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-5",
+      "location": 4,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Central Hawke's Bay District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-6",
+      "location": 5,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Central Otago District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-7",
+      "location": 6,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Christchurch City",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-8",
+      "location": 7,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Clutha District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-9",
+      "location": 8,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Dunedin City",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-10",
+      "location": 9,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Far North District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-11",
+      "location": 10,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Gisborne District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-12",
+      "location": 11,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Gore District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-13",
+      "location": 12,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Grey District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-14",
+      "location": 13,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Hamilton City",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-15",
+      "location": 14,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Hastings District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-16",
+      "location": 15,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Hauraki District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-17",
+      "location": 16,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Horowhenua District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-18",
+      "location": 17,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Hurunui District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-19",
+      "location": 18,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Invercargill City",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-20",
+      "location": 19,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Kaikoura District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-21",
+      "location": 20,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Kaipara District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-22",
+      "location": 21,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Kapiti Coast District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-23",
+      "location": 22,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Kawerau District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-24",
+      "location": 23,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Lower Hutt City",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-25",
+      "location": 24,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Mackenzie District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-26",
+      "location": 25,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Manawatu District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-27",
+      "location": 26,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Marlborough District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-28",
+      "location": 27,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Masterton District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-29",
+      "location": 28,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Matamata-Piako District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-30",
+      "location": 29,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Napier City",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-31",
+      "location": 30,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Nelson City",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-32",
+      "location": 31,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "New Plymouth District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-33",
+      "location": 32,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Opotiki District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-34",
+      "location": 33,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Otorohanga District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-35",
+      "location": 34,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Palmerston North City",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-36",
+      "location": 35,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Porirua City",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-37",
+      "location": 36,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Queenstown-Lakes District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-38",
+      "location": 37,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Rangitikei District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-39",
+      "location": 38,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Rotorua District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-40",
+      "location": 39,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Ruapehu District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-41",
+      "location": 40,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Selwyn District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-42",
+      "location": 41,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "South Taranaki District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-43",
+      "location": 42,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "South Waikato District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-44",
+      "location": 43,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "South Wairarapa District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-45",
+      "location": 44,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Southland District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-46",
+      "location": 45,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Stratford District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-47",
+      "location": 46,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Tararua District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-48",
+      "location": 47,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Tasman District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-49",
+      "location": 48,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Taupo District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-50",
+      "location": 49,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Tauranga City",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-51",
+      "location": 50,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Thames-Coromandel District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-52",
+      "location": 51,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Timaru District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-53",
+      "location": 52,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Upper Hutt City",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-54",
+      "location": 53,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Waikato District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-55",
+      "location": 54,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Waimakariri District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-56",
+      "location": 55,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Waimate District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-57",
+      "location": 56,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Waipa District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-58",
+      "location": 57,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Wairoa District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-59",
+      "location": 58,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Waitaki District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-60",
+      "location": 59,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Waitomo District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-61",
+      "location": 60,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Wellington City",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-62",
+      "location": 61,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Western Bay of Plenty District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-63",
+      "location": 62,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Westland District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-64",
+      "location": 63,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Whakatane District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-65",
+      "location": 64,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Whanganui District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-66",
+      "location": 65,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "Whangarei District",
+      "spec": "lower-quartile-rent.json",
+      "id": "lower-quartile-rent-67",
+      "location": 66,
+      "subtitle": "Lower Quartile Rent, NZD a week"
+    },
+    {
+      "label": "New Zealand",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-1",
+      "location": 0,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Ashburton District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-2",
+      "location": 1,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Auckland",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-3",
+      "location": 2,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Buller District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-4",
+      "location": 3,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Carterton District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-5",
+      "location": 4,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Central Hawke's Bay District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-6",
+      "location": 5,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Central Otago District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-7",
+      "location": 6,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Christchurch City",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-8",
+      "location": 7,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Clutha District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-9",
+      "location": 8,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Dunedin City",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-10",
+      "location": 9,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Far North District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-11",
+      "location": 10,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Gisborne District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-12",
+      "location": 11,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Gore District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-13",
+      "location": 12,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Grey District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-14",
+      "location": 13,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Hamilton City",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-15",
+      "location": 14,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Hastings District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-16",
+      "location": 15,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Hauraki District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-17",
+      "location": 16,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Horowhenua District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-18",
+      "location": 17,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Hurunui District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-19",
+      "location": 18,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Invercargill City",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-20",
+      "location": 19,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Kaikoura District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-21",
+      "location": 20,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Kaipara District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-22",
+      "location": 21,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Kapiti Coast District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-23",
+      "location": 22,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Kawerau District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-24",
+      "location": 23,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Lower Hutt City",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-25",
+      "location": 24,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Mackenzie District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-26",
+      "location": 25,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Manawatu District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-27",
+      "location": 26,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Marlborough District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-28",
+      "location": 27,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Masterton District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-29",
+      "location": 28,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Matamata-Piako District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-30",
+      "location": 29,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Napier City",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-31",
+      "location": 30,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Nelson City",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-32",
+      "location": 31,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "New Plymouth District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-33",
+      "location": 32,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Opotiki District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-34",
+      "location": 33,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Otorohanga District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-35",
+      "location": 34,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Palmerston North City",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-36",
+      "location": 35,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Porirua City",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-37",
+      "location": 36,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Queenstown-Lakes District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-38",
+      "location": 37,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Rangitikei District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-39",
+      "location": 38,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Rotorua District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-40",
+      "location": 39,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Ruapehu District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-41",
+      "location": 40,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Selwyn District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-42",
+      "location": 41,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "South Taranaki District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-43",
+      "location": 42,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "South Waikato District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-44",
+      "location": 43,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "South Wairarapa District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-45",
+      "location": 44,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Southland District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-46",
+      "location": 45,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Stratford District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-47",
+      "location": 46,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Tararua District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-48",
+      "location": 47,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Tasman District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-49",
+      "location": 48,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Taupo District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-50",
+      "location": 49,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Tauranga City",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-51",
+      "location": 50,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Thames-Coromandel District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-52",
+      "location": 51,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Timaru District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-53",
+      "location": 52,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Upper Hutt City",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-54",
+      "location": 53,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Waikato District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-55",
+      "location": 54,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Waimakariri District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-56",
+      "location": 55,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Waimate District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-57",
+      "location": 56,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Waipa District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-58",
+      "location": 57,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Wairoa District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-59",
+      "location": 58,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Waitaki District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-60",
+      "location": 59,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Waitomo District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-61",
+      "location": 60,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Wellington City",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-62",
+      "location": 61,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Western Bay of Plenty District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-63",
+      "location": 62,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Westland District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-64",
+      "location": 63,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Whakatane District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-65",
+      "location": 64,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Whanganui District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-66",
+      "location": 65,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
+    },
+    {
+      "label": "Whangarei District",
+      "spec": "log-std-dev-weekly-rent.json",
+      "id": "log-std-dev-weekly-rent-67",
+      "location": 66,
+      "subtitle": "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"
     }
   ],
   "data": "data.csv",
-  "image": "bond.png",
-  "image_alt": "Rental market New Zealand, number of bonds a month. Source: Tenancy Services bond data (MBIE)",
+  "image": null,
+  "image_alt": "Rental market Geometric Mean Rent, NZD a week: New Zealand. Source: Tenancy Services bond data (MBIE)",
   "pick": {
-    "labels": ["Measure", "Compare with"],
+    "labels": ["Location 1", "Location 2", "Location 3", "Location 4"],
     "title": "Rental market",
     "subtitle": "Tenancy Services bond data (MBIE)",
-    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
+    "palette": [
+      "#2A5CB8",
+      "#D9692E",
+      "#13A08C",
+      "#B04E92",
+      "#6B7280"
+    ],
     "margin_r": 30,
-    "default": [0],
-    "dims": ["n", "n", "n", "$", "$", "$", "$", "$"]
+    "default": [268],
+    "dims": ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$"],
+    "groups": ["Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Lodged Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Active Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Closed Bonds", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Median Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Geometric Mean Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Upper Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Lower Quartile Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent"],
+    "group_label": "Measure",
+    "items": ["New Zealand", "Ashburton District", "Auckland", "Buller District", "Carterton District", "Central Hawke's Bay District", "Central Otago District", "Christchurch City", "Clutha District", "Dunedin City", "Far North District", "Gisborne District", "Gore District", "Grey District", "Hamilton City", "Hastings District", "Hauraki District", "Horowhenua District", "Hurunui District", "Invercargill City", "Kaikoura District", "Kaipara District", "Kapiti Coast District", "Kawerau District", "Lower Hutt City", "Mackenzie District", "Manawatu District", "Marlborough District", "Masterton District", "Matamata-Piako District", "Napier City", "Nelson City", "New Plymouth District", "Opotiki District", "Otorohanga District", "Palmerston North City", "Porirua City", "Queenstown-Lakes District", "Rangitikei District", "Rotorua District", "Ruapehu District", "Selwyn District", "South Taranaki District", "South Waikato District", "South Wairarapa District", "Southland District", "Stratford District", "Tararua District", "Tasman District", "Taupo District", "Tauranga City", "Thames-Coromandel District", "Timaru District", "Upper Hutt City", "Waikato District", "Waimakariri District", "Waimate District", "Waipa District", "Wairoa District", "Waitaki District", "Waitomo District", "Wellington City", "Western Bay of Plenty District", "Westland District", "Whakatane District", "Whanganui District", "Whangarei District", "New Zealand", "Ashburton District", "Auckland", "Buller District", "Carterton District", "Central Hawke's Bay District", "Central Otago District", "Christchurch City", "Clutha District", "Dunedin City", "Far North District", "Gisborne District", "Gore District", "Grey District", "Hamilton City", "Hastings District", "Hauraki District", "Horowhenua District", "Hurunui District", "Invercargill City", "Kaikoura District", "Kaipara District", "Kapiti Coast District", "Kawerau District", "Lower Hutt City", "Mackenzie District", "Manawatu District", "Marlborough District", "Masterton District", "Matamata-Piako District", "Napier City", "Nelson City", "New Plymouth District", "Opotiki District", "Otorohanga District", "Palmerston North City", "Porirua City", "Queenstown-Lakes District", "Rangitikei District", "Rotorua District", "Ruapehu District", "Selwyn District", "South Taranaki District", "South Waikato District", "South Wairarapa District", "Southland District", "Stratford District", "Tararua District", "Tasman District", "Taupo District", "Tauranga City", "Thames-Coromandel District", "Timaru District", "Upper Hutt City", "Waikato District", "Waimakariri District", "Waimate District", "Waipa District", "Wairoa District", "Waitaki District", "Waitomo District", "Wellington City", "Western Bay of Plenty District", "Westland District", "Whakatane District", "Whanganui District", "Whangarei District", "New Zealand", "Ashburton District", "Auckland", "Buller District", "Carterton District", "Central Hawke's Bay District", "Central Otago District", "Christchurch City", "Clutha District", "Dunedin City", "Far North District", "Gisborne District", "Gore District", "Grey District", "Hamilton City", "Hastings District", "Hauraki District", "Horowhenua District", "Hurunui District", "Invercargill City", "Kaikoura District", "Kaipara District", "Kapiti Coast District", "Kawerau District", "Lower Hutt City", "Mackenzie District", "Manawatu District", "Marlborough District", "Masterton District", "Matamata-Piako District", "Napier City", "Nelson City", "New Plymouth District", "Opotiki District", "Otorohanga District", "Palmerston North City", "Porirua City", "Queenstown-Lakes District", "Rangitikei District", "Rotorua District", "Ruapehu District", "Selwyn District", "South Taranaki District", "South Waikato District", "South Wairarapa District", "Southland District", "Stratford District", "Tararua District", "Tasman District", "Taupo District", "Tauranga City", "Thames-Coromandel District", "Timaru District", "Upper Hutt City", "Waikato District", "Waimakariri District", "Waimate District", "Waipa District", "Wairoa District", "Waitaki District", "Waitomo District", "Wellington City", "Western Bay of Plenty District", "Westland District", "Whakatane District", "Whanganui District", "Whangarei District", "New Zealand", "Ashburton District", "Auckland", "Buller District", "Carterton District", "Central Hawke's Bay District", "Central Otago District", "Christchurch City", "Clutha District", "Dunedin City", "Far North District", "Gisborne District", "Gore District", "Grey District", "Hamilton City", "Hastings District", "Hauraki District", "Horowhenua District", "Hurunui District", "Invercargill City", "Kaikoura District", "Kaipara District", "Kapiti Coast District", "Kawerau District", "Lower Hutt City", "Mackenzie District", "Manawatu District", "Marlborough District", "Masterton District", "Matamata-Piako District", "Napier City", "Nelson City", "New Plymouth District", "Opotiki District", "Otorohanga District", "Palmerston North City", "Porirua City", "Queenstown-Lakes District", "Rangitikei District", "Rotorua District", "Ruapehu District", "Selwyn District", "South Taranaki District", "South Waikato District", "South Wairarapa District", "Southland District", "Stratford District", "Tararua District", "Tasman District", "Taupo District", "Tauranga City", "Thames-Coromandel District", "Timaru District", "Upper Hutt City", "Waikato District", "Waimakariri District", "Waimate District", "Waipa District", "Wairoa District", "Waitaki District", "Waitomo District", "Wellington City", "Western Bay of Plenty District", "Westland District", "Whakatane District", "Whanganui District", "Whangarei District", "New Zealand", "Ashburton District", "Auckland", "Buller District", "Carterton District", "Central Hawke's Bay District", "Central Otago District", "Christchurch City", "Clutha District", "Dunedin City", "Far North District", "Gisborne District", "Gore District", "Grey District", "Hamilton City", "Hastings District", "Hauraki District", "Horowhenua District", "Hurunui District", "Invercargill City", "Kaikoura District", "Kaipara District", "Kapiti Coast District", "Kawerau District", "Lower Hutt City", "Mackenzie District", "Manawatu District", "Marlborough District", "Masterton District", "Matamata-Piako District", "Napier City", "Nelson City", "New Plymouth District", "Opotiki District", "Otorohanga District", "Palmerston North City", "Porirua City", "Queenstown-Lakes District", "Rangitikei District", "Rotorua District", "Ruapehu District", "Selwyn District", "South Taranaki District", "South Waikato District", "South Wairarapa District", "Southland District", "Stratford District", "Tararua District", "Tasman District", "Taupo District", "Tauranga City", "Thames-Coromandel District", "Timaru District", "Upper Hutt City", "Waikato District", "Waimakariri District", "Waimate District", "Waipa District", "Wairoa District", "Waitaki District", "Waitomo District", "Wellington City", "Western Bay of Plenty District", "Westland District", "Whakatane District", "Whanganui District", "Whangarei District", "New Zealand", "Ashburton District", "Auckland", "Buller District", "Carterton District", "Central Hawke's Bay District", "Central Otago District", "Christchurch City", "Clutha District", "Dunedin City", "Far North District", "Gisborne District", "Gore District", "Grey District", "Hamilton City", "Hastings District", "Hauraki District", "Horowhenua District", "Hurunui District", "Invercargill City", "Kaikoura District", "Kaipara District", "Kapiti Coast District", "Kawerau District", "Lower Hutt City", "Mackenzie District", "Manawatu District", "Marlborough District", "Masterton District", "Matamata-Piako District", "Napier City", "Nelson City", "New Plymouth District", "Opotiki District", "Otorohanga District", "Palmerston North City", "Porirua City", "Queenstown-Lakes District", "Rangitikei District", "Rotorua District", "Ruapehu District", "Selwyn District", "South Taranaki District", "South Waikato District", "South Wairarapa District", "Southland District", "Stratford District", "Tararua District", "Tasman District", "Taupo District", "Tauranga City", "Thames-Coromandel District", "Timaru District", "Upper Hutt City", "Waikato District", "Waimakariri District", "Waimate District", "Waipa District", "Wairoa District", "Waitaki District", "Waitomo District", "Wellington City", "Western Bay of Plenty District", "Westland District", "Whakatane District", "Whanganui District", "Whangarei District", "New Zealand", "Ashburton District", "Auckland", "Buller District", "Carterton District", "Central Hawke's Bay District", "Central Otago District", "Christchurch City", "Clutha District", "Dunedin City", "Far North District", "Gisborne District", "Gore District", "Grey District", "Hamilton City", "Hastings District", "Hauraki District", "Horowhenua District", "Hurunui District", "Invercargill City", "Kaikoura District", "Kaipara District", "Kapiti Coast District", "Kawerau District", "Lower Hutt City", "Mackenzie District", "Manawatu District", "Marlborough District", "Masterton District", "Matamata-Piako District", "Napier City", "Nelson City", "New Plymouth District", "Opotiki District", "Otorohanga District", "Palmerston North City", "Porirua City", "Queenstown-Lakes District", "Rangitikei District", "Rotorua District", "Ruapehu District", "Selwyn District", "South Taranaki District", "South Waikato District", "South Wairarapa District", "Southland District", "Stratford District", "Tararua District", "Tasman District", "Taupo District", "Tauranga City", "Thames-Coromandel District", "Timaru District", "Upper Hutt City", "Waikato District", "Waimakariri District", "Waimate District", "Waipa District", "Wairoa District", "Waitaki District", "Waitomo District", "Wellington City", "Western Bay of Plenty District", "Westland District", "Whakatane District", "Whanganui District", "Whangarei District", "New Zealand", "Ashburton District", "Auckland", "Buller District", "Carterton District", "Central Hawke's Bay District", "Central Otago District", "Christchurch City", "Clutha District", "Dunedin City", "Far North District", "Gisborne District", "Gore District", "Grey District", "Hamilton City", "Hastings District", "Hauraki District", "Horowhenua District", "Hurunui District", "Invercargill City", "Kaikoura District", "Kaipara District", "Kapiti Coast District", "Kawerau District", "Lower Hutt City", "Mackenzie District", "Manawatu District", "Marlborough District", "Masterton District", "Matamata-Piako District", "Napier City", "Nelson City", "New Plymouth District", "Opotiki District", "Otorohanga District", "Palmerston North City", "Porirua City", "Queenstown-Lakes District", "Rangitikei District", "Rotorua District", "Ruapehu District", "Selwyn District", "South Taranaki District", "South Waikato District", "South Wairarapa District", "Southland District", "Stratford District", "Tararua District", "Tasman District", "Taupo District", "Tauranga City", "Thames-Coromandel District", "Timaru District", "Upper Hutt City", "Waikato District", "Waimakariri District", "Waimate District", "Waipa District", "Wairoa District", "Waitaki District", "Waitomo District", "Wellington City", "Western Bay of Plenty District", "Westland District", "Whakatane District", "Whanganui District", "Whangarei District"],
+    "subtitles": ["Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Lodged Bonds, number of bonds a month", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Active Bonds, number of active bonds", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Closed Bonds, number of bonds a month", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Median Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Geometric Mean Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Upper Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Lower Quartile Rent, NZD a week", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)", "Log Std Dev Weekly Rent, spread of weekly rents (log scale)"],
+    "item_categories": ["New Zealand", "Districts and cities", "Region", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "New Zealand", "Districts and cities", "Region", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "New Zealand", "Districts and cities", "Region", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "New Zealand", "Districts and cities", "Region", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "New Zealand", "Districts and cities", "Region", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "New Zealand", "Districts and cities", "Region", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "New Zealand", "Districts and cities", "Region", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "New Zealand", "Districts and cities", "Region", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities", "Districts and cities"]
   }
 }

@@ -19,7 +19,7 @@
     }
   ],
   "data": "data.csv",
-  "image": "hm5.png",
+  "image": null,
   "image_alt": "Economic growth Real GDP: annual % change. Source: RBNZ and Stats NZ",
   "pick": {
     "labels": ["Show", "Compare with"],

@@ -23,7 +23,7 @@
     }
   ],
   "data": null,
-  "image": "hm10.png",
+  "image": null,
   "image_alt": "CoreLogic CoreLogic via RBNZ: House sales and House price index (HPI)",
   "pick": {
     "labels": ["Metric 1", "Metric 2"],

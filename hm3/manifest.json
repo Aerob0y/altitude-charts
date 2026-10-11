@@ -55,7 +55,7 @@
     }
   ],
   "data": "data.csv",
-  "image": "hm3.png",
+  "image": null,
   "image_alt": "Investment RBNZ and Stats NZ series · HM3: Residential Building Consents (s.a.) and Residential buildings (GDP) (Real $m s.a.)",
   "pick": {
     "labels": ["Series 1", "Series 2", "Series 3", "Series 4"],

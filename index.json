@@ -8,7 +8,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hb1/index.html",
-      "image": "hb1/hb1.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -20,7 +20,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hb2/index.html",
-      "image": "hb2/hb2.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -32,7 +32,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hc35/index.html",
-      "image": "hc35/hc35.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -44,7 +44,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm1/index.html",
-      "image": "hm1/hm1.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -56,7 +56,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm2/index.html",
-      "image": "hm2/hm2.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -68,7 +68,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm3/index.html",
-      "image": "hm3/hm3.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -80,7 +80,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm8/index.html",
-      "image": "hm8/hm8.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -92,7 +92,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm9/index.html",
-      "image": "hm9/hm9.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -104,19 +104,19 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm14/index.html",
-      "image": "hm14/hm14.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
     {
       "name": "fuel",
-      "title": "Fuel",
-      "source": "Public fuel-price series",
-      "note": "Tracks fuel prices over time, a practical indicator of transport costs for households, visitors and tourism operators.",
+      "title": "Jet fuel price",
+      "source": "US Energy Information Administration (EIA)",
+      "note": "Daily US Gulf Coast jet fuel spot price, a benchmark for airline fuel costs, in US dollars per barrel or New Zealand dollars per barrel at the RBNZ exchange rate.",
       "target": "fuel",
-      "updated": "2026-10-04",
+      "updated": "2026-10-12",
       "page": "fuel/index.html",
-      "image": "fuel/fuel.png",
+      "image": null,
       "site": "nz",
       "menu": "Tourism & Migration"
     },
@@ -128,7 +128,7 @@
       "target": "cso",
       "updated": "2026-10-09",
       "page": "ndm01/index.html",
-      "image": "ndm01/ndm01.png",
+      "image": null,
       "site": "ireland",
       "menu": "Housing"
     },
@@ -140,7 +140,7 @@
       "target": "ect",
       "updated": "2026-10-04",
       "page": "ect/index.html",
-      "image": "ect/ect.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -152,7 +152,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm5/index.html",
-      "image": "hm5/hm5.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -160,11 +160,11 @@
       "name": "yield",
       "title": "Yield curve",
       "source": "Reserve Bank of New Zealand (RBNZ)",
-      "note": "A spread below zero means long rates are below short rates, which has often come before a slowdown. Spreads are in basis points; rates are in percent.",
+      "note": "Compare up to four bond and swap rates or spreads. A negative spread means the first rate is lower than the second. Spreads are in basis points; rates are in percent.",
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "yield/index.html",
-      "image": "yield/yield.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -176,7 +176,7 @@
       "target": "adp",
       "updated": "2026-10-09",
       "page": "adp/index.html",
-      "image": "adp/adp.png",
+      "image": null,
       "site": "nz",
       "menu": "Tourism & Migration"
     },
@@ -188,7 +188,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hs32/index.html",
-      "image": "hs32/hs32.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -200,7 +200,7 @@
       "target": "bond",
       "updated": "2026-10-04",
       "page": "bond/index.html",
-      "image": "bond/bond.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -212,7 +212,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm10/index.html",
-      "image": "hm10/hm10.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     }
@@ -251,7 +251,14 @@
     {
       "key": "route-map",
       "title": "Aviation route map",
-      "page": "route-map/index.html"
+      "page": "route-map/index.html",
+      "beta": true
+    },
+    {
+      "key": "catchments",
+      "title": "Airport catchments",
+      "page": "catchments/index.html",
+      "beta": true
     }
   ]
 }

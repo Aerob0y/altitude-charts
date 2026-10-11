@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Airport catchments (Beta) · Altitude</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="catchments.css">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script defer src="catchments.js"></script>
+</head>
+<body>
+  <header class="bar"><a class="brand" href="../">Altitude</a><span>Mapping tools</span></header>
+  <main>
+    <header class="intro">
+      <p class="eyebrow">AIRPORT CATCHMENTS <span class="beta">Beta</span></p>
+      <h1>Who lives closer to which airport?</h1>
+      <p>Pick an airport and its competitors. Each area is coloured by population density or by how many minutes
+        of driving the airport saves over the nearest competitor.</p>
+      <p class="beta-note"><strong>Beta.</strong> Built from saved drive-time snapshots. Coverage is limited and
+        figures may change as the source data is checked.</p>
+    </header>
+    <div class="workspace">
+      <details class="options" id="options" open>
+        <summary>Map options</summary>
+        <form id="controls" aria-label="Map options">
+          <label for="country">Area covered</label>
+          <select id="country">
+            <option value="nz">New Zealand</option>
+            <option value="au">Australia: Canberra study area</option>
+          </select>
+          <label for="airport">Airport</label>
+          <select id="airport"></select>
+          <fieldset><legend>Competing airports</legend><div class="ticks" id="competitors"></div></fieldset>
+          <fieldset id="regions-box" hidden><legend>States shown</legend><div class="ticks" id="regions"></div></fieldset>
+          <label for="style">Colour areas by</label>
+          <select id="style">
+            <option value="density">Population density</option>
+            <option value="advantage">Time saved (minutes)</option>
+          </select>
+          <div class="pair">
+            <div><label for="threshold">Minutes saved to count</label><input id="threshold" type="number" min="0" max="240" step="5" value="0"></div>
+            <div><label for="radius">Study radius (km)</label><input id="radius" type="number" min="1" max="400" step="10" value="400"></div>
+          </div>
+          <p class="hint">Areas within the radius (straight line) of the airport are shown. Gold outlines mark areas where
+            the airport is at least the chosen number of minutes closer by road than every selected competitor.</p>
+        </form>
+      </details>
+      <section class="result" aria-label="Catchment map">
+        <div class="summary" id="summary" role="status" aria-live="polite">Loading map…</div>
+        <div id="map"></div>
+        <div class="legend" id="legend" aria-hidden="true"></div>
+        <h2>Population by drive time to the airport</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Drive time</th><th>All areas shown</th><th>Cumulative</th><th>Catchment</th><th>Cumulative</th></tr></thead>
+            <tbody id="bands"></tbody>
+          </table>
+        </div>
+        <p class="downloads"><button id="csv" type="button" disabled>Download area data (CSV)</button></p>
+      </section>
+    </div>
+    <footer>
+      <p id="notice"></p>
+      <p>Sources: population from Stats NZ (New Zealand) and the ABS (Australia); drive times calculated with
+        OpenRouteService. Where a road time is missing, a straight-line estimate at 60 km/h is used and labelled;
+        it does not allow for roads or ferries. Background map © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
+    </footer>
+  </main>
+</body>
+</html>

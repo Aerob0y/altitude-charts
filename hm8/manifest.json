@@ -95,7 +95,7 @@
     }
   ],
   "data": "data.csv",
-  "image": "hm8.png",
+  "image": null,
   "image_alt": "Overseas trade RBNZ and Stats NZ series: Export and Import (Values ($m s.a.))",
   "pick": {
     "labels": ["Trade type 1", "Trade type 2"],

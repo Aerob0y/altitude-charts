@@ -107,7 +107,7 @@
     }
   ],
   "data": "data.csv",
-  "image": "hm14.png",
+  "image": null,
   "image_alt": "Survey of expectations Reserve Bank of New Zealand (RBNZ): Annual GDP growth - 1 year out, Annual CPI growth - 1 year out, and Perception of monetary conditions (net) - 1 year out",
   "pick": {
     "labels": ["Expectation 1", "Expectation 2", "Expectation 3", "Expectation 4"],

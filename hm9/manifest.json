@@ -99,7 +99,7 @@
     }
   ],
   "data": "data.csv",
-  "image": "hm9.png",
+  "image": null,
   "image_alt": "Labour market RBNZ and Stats NZ series: Labour force participation rate - % s.a. and Labour cost index (LCI) - y/y%",
   "pick": {
     "labels": ["Metric 1", "Metric 2", "Metric 3", "Metric 4"],

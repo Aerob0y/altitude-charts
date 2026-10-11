@@ -49,3 +49,5 @@ footer { margin-top: 28px; border-top: 1px solid #d9dfdc; padding-top: 12px; }
   form { padding: 16px; }
   .export-bar { align-items: flex-start; }
 }
+
+textarea { width: 100%; max-width: 100%; padding: 8px; font: inherit; border: 1px solid #c4d3cd; border-radius: 3px; resize: vertical; }

@@ -71,7 +71,7 @@
     }
   ],
   "data": "data.csv",
-  "image": "hm2.png",
+  "image": null,
   "image_alt": "Consumption RBNZ and Stats NZ series: Retail trade sales NZDm",
   "pick": {
     "labels": ["Consumption", "Compare with"],

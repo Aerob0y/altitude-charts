@@ -15,6 +15,12 @@
     }
   ],
   "data": "data.csv",
-  "image": "ect.png",
-  "image_alt": "Card spending Annual % change in monthly spending. Source: Stats NZ"
+  "image": null,
+  "image_alt": "Card spending Annual % change in monthly spending. Source: Stats NZ",
+  "y_range": {
+    "label": "Axis range",
+    "views": ["Annual % change"],
+    "options": [10, 20],
+    "unit": "%"
+  }
 }

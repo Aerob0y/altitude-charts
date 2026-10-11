@@ -2,23 +2,119 @@
   "name": "yield",
   "title": "Yield curve",
   "source": "Reserve Bank of New Zealand (RBNZ)",
-  "note": "A spread below zero means long rates are below short rates, which has often come before a slowdown. Spreads are in basis points; rates are in percent.",
+  "note": "Compare up to four bond and swap rates or spreads. A negative spread means the first rate is lower than the second. Spreads are in basis points; rates are in percent.",
   "updated": "2026-10-04",
   "views": [
     {
-      "label": "Spread: swaps",
-      "spec": "spread-swaps.json"
+      "label": "Spreads: Swaps: 10-year minus 2-year",
+      "spec": "spreads-swaps-10-year-minus-2-year.json"
     },
     {
-      "label": "Spread: government bonds",
-      "spec": "spread-government-bonds.json"
+      "label": "Spreads: Swaps: 10-year minus 1-year",
+      "spec": "spreads-swaps-10-year-minus-1-year.json"
     },
     {
-      "label": "Rates",
-      "spec": "rates.json"
+      "label": "Spreads: Swaps: 5-year minus 2-year",
+      "spec": "spreads-swaps-5-year-minus-2-year.json"
+    },
+    {
+      "label": "Spreads: Swaps: 10-year minus 5-year",
+      "spec": "spreads-swaps-10-year-minus-5-year.json"
+    },
+    {
+      "label": "Spreads: Swaps: 10-year minus OCR",
+      "spec": "spreads-swaps-10-year-minus-ocr.json"
+    },
+    {
+      "label": "Spreads: Swaps: 2-year minus OCR",
+      "spec": "spreads-swaps-2-year-minus-ocr.json"
+    },
+    {
+      "label": "Spreads: Bonds: 10-year minus 2-year",
+      "spec": "spreads-bonds-10-year-minus-2-year.json"
+    },
+    {
+      "label": "Spreads: Bonds: 10-year minus 1-year",
+      "spec": "spreads-bonds-10-year-minus-1-year.json"
+    },
+    {
+      "label": "Spreads: Bonds: 5-year minus 2-year",
+      "spec": "spreads-bonds-5-year-minus-2-year.json"
+    },
+    {
+      "label": "Spreads: Bonds: 10-year minus 5-year",
+      "spec": "spreads-bonds-10-year-minus-5-year.json"
+    },
+    {
+      "label": "Spreads: Bonds: 10-year minus OCR",
+      "spec": "spreads-bonds-10-year-minus-ocr.json"
+    },
+    {
+      "label": "Spreads: Bonds: 2-year minus OCR",
+      "spec": "spreads-bonds-2-year-minus-ocr.json"
+    },
+    {
+      "label": "Spreads: 2-year bond minus swap",
+      "spec": "spreads-2-year-bond-minus-swap.json"
+    },
+    {
+      "label": "Spreads: 10-year bond minus swap",
+      "spec": "spreads-10-year-bond-minus-swap.json"
+    },
+    {
+      "label": "Rates: Official Cash Rate (OCR)",
+      "spec": "rates-official-cash-rate-ocr.json"
+    },
+    {
+      "label": "Rates: 1 year (bond)",
+      "spec": "rates-1-year-bond.json"
+    },
+    {
+      "label": "Rates: 2 year (bond)",
+      "spec": "rates-2-year-bond.json"
+    },
+    {
+      "label": "Rates: 5 year (bond)",
+      "spec": "rates-5-year-bond.json"
+    },
+    {
+      "label": "Rates: 10 year (bond)",
+      "spec": "rates-10-year-bond.json"
+    },
+    {
+      "label": "Rates: 1 year (swap)",
+      "spec": "rates-1-year-swap.json"
+    },
+    {
+      "label": "Rates: 2 year (swap)",
+      "spec": "rates-2-year-swap.json"
+    },
+    {
+      "label": "Rates: 5 year (swap)",
+      "spec": "rates-5-year-swap.json"
+    },
+    {
+      "label": "Rates: 10 year (swap)",
+      "spec": "rates-10-year-swap.json"
     }
   ],
   "data": "data.csv",
-  "image": "yield.png",
-  "image_alt": "Yield curve Swaps: 10-year minus 2-year rate, basis points. Source: RBNZ"
+  "image": null,
+  "image_alt": "Yield curve Rate differences, basis points. Source: RBNZ",
+  "pick": {
+    "labels": ["Series 1", "Series 2", "Series 3", "Series 4"],
+    "title": "Yield curve",
+    "subtitle": "Reserve Bank of New Zealand (RBNZ)",
+    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
+    "margin_r": 30,
+    "default": [0],
+    "dims": ["bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "%", "%", "%", "%", "%", "%", "%", "%", "%"],
+    "groups": ["spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "rates", "rates", "rates", "rates", "rates", "rates", "rates", "rates", "rates"],
+    "items": ["Swaps: 10-year minus 2-year", "Swaps: 10-year minus 1-year", "Swaps: 5-year minus 2-year", "Swaps: 10-year minus 5-year", "Swaps: 10-year minus OCR", "Swaps: 2-year minus OCR", "Bonds: 10-year minus 2-year", "Bonds: 10-year minus 1-year", "Bonds: 5-year minus 2-year", "Bonds: 10-year minus 5-year", "Bonds: 10-year minus OCR", "Bonds: 2-year minus OCR", "2-year bond minus swap", "10-year bond minus swap", "Official Cash Rate (OCR)", "1 year (bond)", "2 year (bond)", "5 year (bond)", "10 year (bond)", "1 year (swap)", "2 year (swap)", "5 year (swap)", "10 year (swap)"],
+    "group_label": "Show",
+    "group_names": {
+      "spread": "Spreads",
+      "rates": "Rates"
+    }
+  }
 }
