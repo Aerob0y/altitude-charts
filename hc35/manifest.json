@@ -6,115 +6,115 @@
   "updated": "2026-10-04",
   "views": [
     {
-      "label": "Opening position b",
+      "label": "Opening position — Net",
       "spec": "opening-position-net.json"
     },
     {
-      "label": "Drawdowns b",
+      "label": "Drawdowns — NZDm",
       "spec": "drawdowns-nzdm.json"
     },
     {
-      "label": "Interest charged b",
+      "label": "Interest charged — NZDm",
       "spec": "interest-charged-nzdm.json"
     },
     {
-      "label": "Scheduled repayments b",
+      "label": "Scheduled repayments — NZDm",
       "spec": "scheduled-repayments-nzdm.json"
     },
     {
-      "label": "Repayment of loan in full b",
+      "label": "Repayment of loan in full — NZDm",
       "spec": "repayment-of-loan-in-full-nzdm.json"
     },
     {
-      "label": "Other excess repayments b",
+      "label": "Other excess repayments — NZDm",
       "spec": "other-excess-repayments-nzdm.json"
     },
     {
-      "label": "Repayment deficiencies b",
+      "label": "Repayment deficiencies — NZDm",
       "spec": "repayment-deficiencies-nzdm.json"
     },
     {
-      "label": "Net write-offs b",
+      "label": "Net write-offs — NZDm",
       "spec": "net-write-offs-nzdm.json"
     },
     {
-      "label": "Other adjustments b",
+      "label": "Other adjustments — NZDm",
       "spec": "other-adjustments-nzdm.json"
     },
     {
-      "label": "Opening position b",
+      "label": "Opening position — Net.1",
       "spec": "opening-position-net-1.json"
     },
     {
-      "label": "Drawdowns b",
+      "label": "Drawdowns — NZDm.1",
       "spec": "drawdowns-nzdm-1.json"
     },
     {
-      "label": "Interest charged b",
+      "label": "Interest charged — NZDm.1",
       "spec": "interest-charged-nzdm-1.json"
     },
     {
-      "label": "Scheduled repayments b",
+      "label": "Scheduled repayments — NZDm.1",
       "spec": "scheduled-repayments-nzdm-1.json"
     },
     {
-      "label": "Repayment of loan in full b",
+      "label": "Repayment of loan in full — NZDm.1",
       "spec": "repayment-of-loan-in-full-nzdm-1.json"
     },
     {
-      "label": "Other excess repayment b",
+      "label": "Other excess repayment — NZDm",
       "spec": "other-excess-repayment-nzdm.json"
     },
     {
-      "label": "Repayment deficiencies b",
+      "label": "Repayment deficiencies — NZDm.1",
       "spec": "repayment-deficiencies-nzdm-1.json"
     },
     {
-      "label": "Net write-offs b",
+      "label": "Net write-offs — NZDm.1",
       "spec": "net-write-offs-nzdm-1.json"
     },
     {
-      "label": "Other adjustments b",
+      "label": "Other adjustments — NZDm.1",
       "spec": "other-adjustments-nzdm-1.json"
     },
     {
-      "label": "Opening position b",
+      "label": "Opening position — Net.2",
       "spec": "opening-position-net-2.json"
     },
     {
-      "label": "Drawdowns b",
+      "label": "Drawdowns — NZDm.2",
       "spec": "drawdowns-nzdm-2.json"
     },
     {
-      "label": "Interest charged b",
+      "label": "Interest charged — NZDm.2",
       "spec": "interest-charged-nzdm-2.json"
     },
     {
-      "label": "Scheduled repayments b",
+      "label": "Scheduled repayments — NZDm.2",
       "spec": "scheduled-repayments-nzdm-2.json"
     },
     {
-      "label": "Repayment of loan in full b",
+      "label": "Repayment of loan in full — NZDm.2",
       "spec": "repayment-of-loan-in-full-nzdm-2.json"
     },
     {
-      "label": "Other excess repayments b",
+      "label": "Other excess repayments — NZDm.1",
       "spec": "other-excess-repayments-nzdm-1.json"
     },
     {
-      "label": "Repayment deficiencies b",
+      "label": "Repayment deficiencies — NZDm.2",
       "spec": "repayment-deficiencies-nzdm-2.json"
     },
     {
-      "label": "Net write-offs b",
+      "label": "Net write-offs — NZDm.2",
       "spec": "net-write-offs-nzdm-2.json"
     },
     {
-      "label": "Other adjustments b",
+      "label": "Other adjustments — NZDm.2",
       "spec": "other-adjustments-nzdm-2.json"
     }
   ],
   "data": "data.csv",
-  "image": "hc35.png",
-  "image_alt": "Residential mortgages Reserve Bank of New Zealand (RBNZ): Opening position b"
+  "image": null,
+  "image_alt": "Residential mortgages Reserve Bank of New Zealand (RBNZ): Opening position — Net"
 }

@@ -19,6 +19,6 @@
     }
   ],
   "data": "data.csv",
-  "image": "yield.png",
+  "image": null,
   "image_alt": "Yield curve Swaps: 10-year minus 2-year rate, basis points. Source: RBNZ"
 }

@@ -8,7 +8,19 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hb1/index.html",
-      "image": "hb1/hb1.png",
+      "image": null,
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "hb1pick",
+      "title": "Exchange rates: compare two currencies",
+      "source": "Reserve Bank of New Zealand (RBNZ)",
+      "note": "Shows how much foreign currency the New Zealand dollar buys. Use the selectors to compare currencies and the trade-weighted index.",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "hb1pick/index.html",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -20,7 +32,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hb2/index.html",
-      "image": "hb2/hb2.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -32,7 +44,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hc35/index.html",
-      "image": "hc35/hc35.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -44,7 +56,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm1/index.html",
-      "image": "hm1/hm1.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -52,23 +64,23 @@
       "name": "hm2",
       "title": "Consumption",
       "source": "RBNZ and Stats NZ series",
-      "note": "Describes household spending on goods and servicesb",
+      "note": "Describes household spending on goods and services—an important signal of demand and confidence in the economy.",
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm2/index.html",
-      "image": "hm2/hm2.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
     {
       "name": "hm3",
       "title": "Investment",
-      "source": "RBNZ and Stats NZ series B7 HM3",
+      "source": "RBNZ and Stats NZ series · HM3",
       "note": "Covers spending that builds future capacity. This view compares broad investment types.",
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm3/index.html",
-      "image": "hm3/hm3.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -80,7 +92,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm8/index.html",
-      "image": "hm8/hm8.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -92,7 +104,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm9/index.html",
-      "image": "hm9/hm9.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -104,7 +116,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm14/index.html",
-      "image": "hm14/hm14.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -116,19 +128,19 @@
       "target": "fuel",
       "updated": "2026-10-04",
       "page": "fuel/index.html",
-      "image": "fuel/fuel.png",
+      "image": null,
       "site": "nz",
       "menu": "Tourism & Migration"
     },
     {
       "name": "ndm01",
       "title": "New dwelling completions",
-      "source": "Central Statistics Office Ireland (CSO) B7 NDM01",
+      "source": "Central Statistics Office Ireland (CSO) · NDM01",
       "note": "Counts new homes completed each month in Ireland, by dwelling type.",
       "target": "cso",
       "updated": "2026-10-09",
       "page": "ndm01/index.html",
-      "image": "ndm01/ndm01.png",
+      "image": null,
       "site": "ireland",
       "menu": "Housing"
     },
@@ -140,7 +152,7 @@
       "target": "ect",
       "updated": "2026-10-04",
       "page": "ect/index.html",
-      "image": "ect/ect.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -152,7 +164,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm5/index.html",
-      "image": "hm5/hm5.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -164,7 +176,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "yield/index.html",
-      "image": "yield/yield.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -176,7 +188,7 @@
       "target": "adp",
       "updated": "2026-10-09",
       "page": "adp/index.html",
-      "image": "adp/adp.png",
+      "image": null,
       "site": "nz",
       "menu": "Tourism & Migration"
     },
@@ -188,7 +200,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hs32/index.html",
-      "image": "hs32/hs32.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -200,7 +212,7 @@
       "target": "bond",
       "updated": "2026-10-04",
       "page": "bond/index.html",
-      "image": "bond/bond.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -212,7 +224,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm10/index.html",
-      "image": "hm10/hm10.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     }
@@ -226,7 +238,7 @@
       "menus": [
         {
           "label": "Economic",
-          "topics": ["hb1", "hb2", "yield", "hc35", "hm1", "hm2", "ect", "hm3", "hm5", "hm8", "hm9", "hm10", "hm14", "hs32", "bond"]
+          "topics": ["hb1", "hb1pick", "hb2", "yield", "hc35", "hm1", "hm2", "ect", "hm3", "hm5", "hm8", "hm9", "hm10", "hm14", "hs32", "bond"]
         },
         {
           "label": "Tourism & Migration",

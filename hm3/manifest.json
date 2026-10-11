@@ -1,60 +1,60 @@
 {
   "name": "hm3",
   "title": "Investment",
-  "source": "RBNZ and Stats NZ series B7 HM3",
+  "source": "RBNZ and Stats NZ series · HM3",
   "note": "Covers spending that builds future capacity. This view compares broad investment types.",
   "updated": "2026-10-04",
   "views": [
     {
-      "label": "Residential Building Consents (s.a.) b",
+      "label": "Residential Building Consents (s.a.) — Number",
       "spec": "residential-building-consents-s-a-number.json"
     },
     {
-      "label": "Residential Building Consents (q/q% s.a.) b",
+      "label": "Residential Building Consents (q/q% s.a.) — q/q%",
       "spec": "residential-building-consents-q-q-s-a-q-q.json"
     },
     {
-      "label": "Residential buildings (GDP) (Real $m) b",
+      "label": "Residential buildings (GDP) (Real $m) — Real $m",
       "spec": "residential-buildings-gdp-real-m-real-m.json"
     },
     {
-      "label": "Residential buildings (GDP) (Real $m s.a.) b",
+      "label": "Residential buildings (GDP) (Real $m s.a.) — Real $m",
       "spec": "residential-buildings-gdp-real-m-s-a-real-m.json"
     },
     {
-      "label": "Residential buildings (GDP) (Real q/q% s.a) b",
+      "label": "Residential buildings (GDP) (Real q/q% s.a) — Real q/q",
       "spec": "residential-buildings-gdp-real-q-q-s-a-real-q-q.json"
     },
     {
-      "label": "Residential buildings (GDP) (Real y/y%) b",
+      "label": "Residential buildings (GDP) (Real y/y%) — Real y/y",
       "spec": "residential-buildings-gdp-real-y-y-real-y-y.json"
     },
     {
-      "label": "Other fixed assets (GDP) (Real $m) b",
+      "label": "Other fixed assets (GDP) (Real $m) — Real $m",
       "spec": "other-fixed-assets-gdp-real-m-real-m.json"
     },
     {
-      "label": "Other fixed assets (GDP) (Real $m s.a.) b",
+      "label": "Other fixed assets (GDP) (Real $m s.a.) — Real $m",
       "spec": "other-fixed-assets-gdp-real-m-s-a-real-m.json"
     },
     {
-      "label": "Other fixed assets (GDP) (Real q/q% s.a.) b",
+      "label": "Other fixed assets (GDP) (Real q/q% s.a.) — Real q/q",
       "spec": "other-fixed-assets-gdp-real-q-q-s-a-real-q-q.json"
     },
     {
-      "label": "Other fixed assets (GDP) (Real y/y%) b",
+      "label": "Other fixed assets (GDP) (Real y/y%) — Real y/y",
       "spec": "other-fixed-assets-gdp-real-y-y-real-y-y.json"
     },
     {
-      "label": "Change in inventories (GDP) (Real $m) b",
+      "label": "Change in inventories (GDP) (Real $m) — Real $m",
       "spec": "change-in-inventories-gdp-real-m-real-m.json"
     },
     {
-      "label": "Change in inventories (GDP) (Real $m s.a.) b",
+      "label": "Change in inventories (GDP) (Real $m s.a.) — Real $m",
       "spec": "change-in-inventories-gdp-real-m-s-a-real-m.json"
     }
   ],
   "data": "data.csv",
-  "image": "hm3.png",
-  "image_alt": "Investment RBNZ and Stats NZ series B7 HM3: Residential Building Consents (s.a.) b"
+  "image": null,
+  "image_alt": "Investment RBNZ and Stats NZ series · HM3: Residential Building Consents (s.a.) — Number"
 }

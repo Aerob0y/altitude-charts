@@ -1,28 +1,28 @@
 {
   "name": "ndm01",
   "title": "New dwelling completions",
-  "source": "Central Statistics Office Ireland (CSO) B7 NDM01",
+  "source": "Central Statistics Office Ireland (CSO) · NDM01",
   "note": "Counts new homes completed each month in Ireland, by dwelling type.",
   "updated": "2026-10-09",
   "views": [
     {
-      "label": "All house types b",
+      "label": "All house types — -",
       "spec": "all-house-types.json"
     },
     {
-      "label": "Single house b",
+      "label": "Single house — -",
       "spec": "single-house.json"
     },
     {
-      "label": "Scheme house b",
+      "label": "Scheme house — -",
       "spec": "scheme-house.json"
     },
     {
-      "label": "Apartment b",
+      "label": "Apartment — -",
       "spec": "apartment.json"
     }
   ],
   "data": "data.csv",
-  "image": "ndm01.png",
-  "image_alt": "New dwelling completions Central Statistics Office Ireland (CSO) B7 NDM01: All house types b"
+  "image": null,
+  "image_alt": "New dwelling completions Central Statistics Office Ireland (CSO) · NDM01: All house types — -"
 }

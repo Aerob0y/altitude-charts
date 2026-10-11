@@ -6,183 +6,183 @@
   "updated": "2026-10-04",
   "views": [
     {
-      "label": "Consumers price index (CPI) b",
+      "label": "Consumers price index (CPI) — Index",
       "spec": "consumers-price-index-cpi-index.json"
     },
     {
-      "label": "Consumers price index (CPI) b",
+      "label": "Consumers price index (CPI) — q/q%",
       "spec": "consumers-price-index-cpi-q-q.json"
     },
     {
-      "label": "Consumers price index (CPI) b",
+      "label": "Consumers price index (CPI) — y/y%",
       "spec": "consumers-price-index-cpi-y-y.json"
     },
     {
-      "label": "Tradable inflation b",
+      "label": "Tradable inflation — Index",
       "spec": "tradable-inflation-index.json"
     },
     {
-      "label": "Tradable inflation b",
+      "label": "Tradable inflation — q/q%",
       "spec": "tradable-inflation-q-q.json"
     },
     {
-      "label": "Tradable inflation b",
+      "label": "Tradable inflation — y/y%",
       "spec": "tradable-inflation-y-y.json"
     },
     {
-      "label": "Non-tradable inflation b",
+      "label": "Non-tradable inflation — Index",
       "spec": "non-tradable-inflation-index.json"
     },
     {
-      "label": "Non-tradable inflation b",
+      "label": "Non-tradable inflation — q/q%",
       "spec": "non-tradable-inflation-q-q.json"
     },
     {
-      "label": "Non-tradable inflation b",
+      "label": "Non-tradable inflation — y/y%",
       "spec": "non-tradable-inflation-y-y.json"
     },
     {
-      "label": "Food b",
+      "label": "Food — Index",
       "spec": "food-index.json"
     },
     {
-      "label": "Food b",
+      "label": "Food — q/q%",
       "spec": "food-q-q.json"
     },
     {
-      "label": "Food b",
+      "label": "Food — y/y%",
       "spec": "food-y-y.json"
     },
     {
-      "label": "Housing and household utilities b",
+      "label": "Housing and household utilities — Index",
       "spec": "housing-and-household-utilities-index.json"
     },
     {
-      "label": "Housing and household utilities b",
+      "label": "Housing and household utilities — q/q%",
       "spec": "housing-and-household-utilities-q-q.json"
     },
     {
-      "label": "Housing and household utilities b",
+      "label": "Housing and household utilities — y/y%",
       "spec": "housing-and-household-utilities-y-y.json"
     },
     {
-      "label": "Transportation b",
+      "label": "Transportation — Index",
       "spec": "transportation-index.json"
     },
     {
-      "label": "Transportation b",
+      "label": "Transportation — q/q%",
       "spec": "transportation-q-q.json"
     },
     {
-      "label": "Transportation b",
+      "label": "Transportation — y/y%",
       "spec": "transportation-y-y.json"
     },
     {
-      "label": "Petrol b",
+      "label": "Petrol — Index",
       "spec": "petrol-index.json"
     },
     {
-      "label": "Petrol b",
+      "label": "Petrol — q/q%",
       "spec": "petrol-q-q.json"
     },
     {
-      "label": "Petrol b",
+      "label": "Petrol — y/y%",
       "spec": "petrol-y-y.json"
     },
     {
-      "label": "CPI excluding petrol b",
+      "label": "CPI excluding petrol — Index",
       "spec": "cpi-excluding-petrol-index.json"
     },
     {
-      "label": "CPI excluding petrol b",
+      "label": "CPI excluding petrol — q/q%",
       "spec": "cpi-excluding-petrol-q-q.json"
     },
     {
-      "label": "CPI excluding petrol b",
+      "label": "CPI excluding petrol — y/y%",
       "spec": "cpi-excluding-petrol-y-y.json"
     },
     {
-      "label": "Trimmed mean b",
+      "label": "Trimmed mean — q/q%",
       "spec": "trimmed-mean-q-q.json"
     },
     {
-      "label": "Trimmed mean b",
+      "label": "Trimmed mean — y/y%",
       "spec": "trimmed-mean-y-y.json"
     },
     {
-      "label": "Weighted median b",
+      "label": "Weighted median — q/q%",
       "spec": "weighted-median-q-q.json"
     },
     {
-      "label": "Weighted median b",
+      "label": "Weighted median — y/y%",
       "spec": "weighted-median-y-y.json"
     },
     {
-      "label": "Factor model b",
+      "label": "Factor model — y/y%",
       "spec": "factor-model-y-y.json"
     },
     {
-      "label": "Sectoral factor model b",
+      "label": "Sectoral factor model — y/y%",
       "spec": "sectoral-factor-model-y-y.json"
     },
     {
-      "label": "Sectoral factor model - tradable core b",
+      "label": "Sectoral factor model - tradable core — y/y%",
       "spec": "sectoral-factor-model-tradable-core-y-y.json"
     },
     {
-      "label": "Sectoral factor model - non-tradable core b",
+      "label": "Sectoral factor model - non-tradable core — y/y%",
       "spec": "sectoral-factor-model-non-tradable-core-y-y.json"
     },
     {
-      "label": "PropertyIQ House price index (HPI) b",
+      "label": "PropertyIQ House price index (HPI) — Index",
       "spec": "propertyiq-house-price-index-hpi-index.json"
     },
     {
-      "label": "PropertyIQ House price index (HPI) b",
+      "label": "PropertyIQ House price index (HPI) — q/q%",
       "spec": "propertyiq-house-price-index-hpi-q-q.json"
     },
     {
-      "label": "PropertyIQ House price index (HPI) b",
+      "label": "PropertyIQ House price index (HPI) — y/y%",
       "spec": "propertyiq-house-price-index-hpi-y-y.json"
     },
     {
-      "label": "GDP deflator b",
+      "label": "GDP deflator — Index",
       "spec": "gdp-deflator-index.json"
     },
     {
-      "label": "GDP deflator b",
+      "label": "GDP deflator — q/q%",
       "spec": "gdp-deflator-q-q.json"
     },
     {
-      "label": "GDP deflator b",
+      "label": "GDP deflator — y/y%",
       "spec": "gdp-deflator-y-y.json"
     },
     {
-      "label": "Producers price index (PPI) inputs b",
+      "label": "Producers price index (PPI) inputs — Index",
       "spec": "producers-price-index-ppi-inputs-index.json"
     },
     {
-      "label": "Producers price index (PPI) inputs b",
+      "label": "Producers price index (PPI) inputs — q/q%",
       "spec": "producers-price-index-ppi-inputs-q-q.json"
     },
     {
-      "label": "Producers price index (PPI) inputs b",
+      "label": "Producers price index (PPI) inputs — y/y%",
       "spec": "producers-price-index-ppi-inputs-y-y.json"
     },
     {
-      "label": "Producers price index (PPI) outputs b",
+      "label": "Producers price index (PPI) outputs — Index",
       "spec": "producers-price-index-ppi-outputs-index.json"
     },
     {
-      "label": "Producers price index (PPI) outputs b",
+      "label": "Producers price index (PPI) outputs — q/q%",
       "spec": "producers-price-index-ppi-outputs-q-q.json"
     },
     {
-      "label": "Producers price index (PPI) outputs b",
+      "label": "Producers price index (PPI) outputs — y/y%",
       "spec": "producers-price-index-ppi-outputs-y-y.json"
     }
   ],
   "data": "data.csv",
-  "image": "hm1.png",
-  "image_alt": "Inflation RBNZ and Stats NZ series: Consumers price index (CPI) b"
+  "image": null,
+  "image_alt": "Inflation RBNZ and Stats NZ series: Consumers price index (CPI) — Index"
 }

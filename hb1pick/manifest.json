@@ -1,0 +1,96 @@
+{
+  "name": "hb1pick",
+  "title": "Exchange rates: compare two currencies",
+  "source": "Reserve Bank of New Zealand (RBNZ)",
+  "note": "Shows how much foreign currency the New Zealand dollar buys. Use the selectors to compare currencies and the trade-weighted index.",
+  "updated": "2026-10-04",
+  "views": [
+    {
+      "label": "NZD/USD",
+      "spec": "nzd-usd.json"
+    },
+    {
+      "label": "Index",
+      "spec": "index.json"
+    },
+    {
+      "label": "NZD/GBP",
+      "spec": "nzd-gbp.json"
+    },
+    {
+      "label": "NZD/AUD",
+      "spec": "nzd-aud.json"
+    },
+    {
+      "label": "NZD/JPY",
+      "spec": "nzd-jpy.json"
+    },
+    {
+      "label": "NZD/EUR",
+      "spec": "nzd-eur.json"
+    },
+    {
+      "label": "NZD/CAD",
+      "spec": "nzd-cad.json"
+    },
+    {
+      "label": "NZD/KRW",
+      "spec": "nzd-krw.json"
+    },
+    {
+      "label": "NZD/CNY",
+      "spec": "nzd-cny.json"
+    },
+    {
+      "label": "NZD/MYR",
+      "spec": "nzd-myr.json"
+    },
+    {
+      "label": "NZD/HKD",
+      "spec": "nzd-hkd.json"
+    },
+    {
+      "label": "NZD/IDR",
+      "spec": "nzd-idr.json"
+    },
+    {
+      "label": "NZD/THB",
+      "spec": "nzd-thb.json"
+    },
+    {
+      "label": "NZD/SGD",
+      "spec": "nzd-sgd.json"
+    },
+    {
+      "label": "NZD/TWD",
+      "spec": "nzd-twd.json"
+    },
+    {
+      "label": "NZD/INR",
+      "spec": "nzd-inr.json"
+    },
+    {
+      "label": "NZD/PHP",
+      "spec": "nzd-php.json"
+    },
+    {
+      "label": "NZD/VND",
+      "spec": "nzd-vnd.json"
+    },
+    {
+      "label": "Index Historic",
+      "spec": "index-historic.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": null,
+  "image_alt": "Exchange rates Reserve Bank of New Zealand (RBNZ): NZD/USD",
+  "pick": {
+    "labels": ["Currency", "Second currency"],
+    "title": "Exchange rates",
+    "subtitle": "Reserve Bank of New Zealand (RBNZ)",
+    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
+    "margin_r": 30,
+    "dims": ["NZD to $USD", "TWI", "NZD to £GBP", "NZD to $AUD", "NZD to ¥JPY", "NZD to €EUR", "NZD to $CAD", "NZD to ₩KRW", "NZD to ¥CNY", "NZD to RM", "NZD to $HK", "NZD to p (IDR)", "NZD to B (THB)", "NZD to $SGD", "NZD to $NT", "NZD to ₹INR", "NZD to ₱PHP", "NZD to ₫VND", "TWI (H)"]
+  }
+}

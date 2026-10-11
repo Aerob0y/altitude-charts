@@ -6,107 +6,107 @@
   "updated": "2026-10-04",
   "views": [
     {
-      "label": "Perception of monetary conditions (net) - End of current quarter b",
+      "label": "Perception of monetary conditions (net) - End of current quarter — Total %",
       "spec": "perception-of-monetary-conditions-net-end-of-current-quarter-total.json"
     },
     {
-      "label": "Perception of monetary conditions (net) - Next quarter b",
+      "label": "Perception of monetary conditions (net) - Next quarter — Total %",
       "spec": "perception-of-monetary-conditions-net-next-quarter-total.json"
     },
     {
-      "label": "Perception of monetary conditions (net) - 1 year out b",
+      "label": "Perception of monetary conditions (net) - 1 year out — Total %",
       "spec": "perception-of-monetary-conditions-net-1-year-out-total.json"
     },
     {
-      "label": "Annual CPI growth - 1 year out b",
+      "label": "Annual CPI growth - 1 year out — %",
       "spec": "annual-cpi-growth-1-year-out.json"
     },
     {
-      "label": "Annual CPI growth - 2 years out b",
+      "label": "Annual CPI growth - 2 years out — %",
       "spec": "annual-cpi-growth-2-years-out.json"
     },
     {
-      "label": "Annual CPI growth - 5 years out b",
+      "label": "Annual CPI growth - 5 years out — %",
       "spec": "annual-cpi-growth-5-years-out.json"
     },
     {
-      "label": "Annual CPI growth - 10 years out b",
+      "label": "Annual CPI growth - 10 years out — %",
       "spec": "annual-cpi-growth-10-years-out.json"
     },
     {
-      "label": "Official Cash Rate (OCR) - End of current quarter b",
+      "label": "Official Cash Rate (OCR) - End of current quarter — %",
       "spec": "official-cash-rate-ocr-end-of-current-quarter.json"
     },
     {
-      "label": "Official Cash Rate (OCR) - 1 year out b",
+      "label": "Official Cash Rate (OCR) - 1 year out — %",
       "spec": "official-cash-rate-ocr-1-year-out.json"
     },
     {
-      "label": "Official Cash Rate (OCR) - 10 years out b",
+      "label": "Official Cash Rate (OCR) - 10 years out — %",
       "spec": "official-cash-rate-ocr-10-years-out.json"
     },
     {
-      "label": "Official Cash Rate (OCR) - 10 year average b",
+      "label": "Official Cash Rate (OCR) - 10 year average — %",
       "spec": "official-cash-rate-ocr-10-year-average.json"
     },
     {
-      "label": "10 year government bond yields - End of current quarter b",
+      "label": "10 year government bond yields - End of current quarter — %",
       "spec": "10-year-government-bond-yields-end-of-current-quarter.json"
     },
     {
-      "label": "10 year government bond yields - 1 year out b",
+      "label": "10 year government bond yields - 1 year out — %",
       "spec": "10-year-government-bond-yields-1-year-out.json"
     },
     {
-      "label": "Annual GDP growth - 1 year out b",
+      "label": "Annual GDP growth - 1 year out — %",
       "spec": "annual-gdp-growth-1-year-out.json"
     },
     {
-      "label": "Annual GDP growth - 2 years out b",
+      "label": "Annual GDP growth - 2 years out — %",
       "spec": "annual-gdp-growth-2-years-out.json"
     },
     {
-      "label": "Annual hourly wage growth - 1 year out b",
+      "label": "Annual hourly wage growth - 1 year out — %",
       "spec": "annual-hourly-wage-growth-1-year-out.json"
     },
     {
-      "label": "Annual hourly wage growth - 2 years out b",
+      "label": "Annual hourly wage growth - 2 years out — %",
       "spec": "annual-hourly-wage-growth-2-years-out.json"
     },
     {
-      "label": "Unemployment rate - 1 year out b",
+      "label": "Unemployment rate - 1 year out — Total %",
       "spec": "unemployment-rate-1-year-out-total.json"
     },
     {
-      "label": "Unemployment rate - 2 years out b",
+      "label": "Unemployment rate - 2 years out — Total %",
       "spec": "unemployment-rate-2-years-out-total.json"
     },
     {
-      "label": "US dollar exchange rate - Next quarter b",
+      "label": "US dollar exchange rate - Next quarter — NZD/USD",
       "spec": "us-dollar-exchange-rate-next-quarter-nzd-usd.json"
     },
     {
-      "label": "US dollar exchange rate - 1 year out b",
+      "label": "US dollar exchange rate - 1 year out — NZD/USD",
       "spec": "us-dollar-exchange-rate-1-year-out-nzd-usd.json"
     },
     {
-      "label": "Australian dollar exchange rate - Next quarter b",
+      "label": "Australian dollar exchange rate - Next quarter — NZD/AUD",
       "spec": "australian-dollar-exchange-rate-next-quarter-nzd-aud.json"
     },
     {
-      "label": "Australian dollar exchange rate - 1 year out b",
+      "label": "Australian dollar exchange rate - 1 year out — NZD/AUD",
       "spec": "australian-dollar-exchange-rate-1-year-out-nzd-aud.json"
     },
     {
-      "label": "House price index - 1 year out b",
+      "label": "House price index - 1 year out — %",
       "spec": "house-price-index-1-year-out.json"
     },
     {
-      "label": "House price index - 2 years out b",
+      "label": "House price index - 2 years out — %",
       "spec": "house-price-index-2-years-out.json"
     }
   ],
   "data": "data.csv",
-  "image": "hm14.png",
-  "image_alt": "Survey of expectations Reserve Bank of New Zealand (RBNZ): Perception of monetary conditions (net) - End of current quarter b"
+  "image": null,
+  "image_alt": "Survey of expectations Reserve Bank of New Zealand (RBNZ): Perception of monetary conditions (net) - End of current quarter — Total %"
 }

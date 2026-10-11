@@ -14,6 +14,7 @@
     h1 { margin: 0 0 6px; font: 28px/1.1 Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
     #note { margin: 0; color: #48605e; font-size: 13px; line-height: 1.45; }
     .controls { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+    #picks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
     select { min-width: 0; max-width: 100%; padding: 7px; border: 1px solid #c4d3cd; background: white; color: inherit; font: inherit; }
     .chart-area { flex: 1 1 auto; min-height: 220px; min-width: 0; position: relative; background: white; }
     #chart { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -36,10 +37,11 @@
   <main class="page">
     <header><h1 id="title">Altitude chart</h1><p id="note"></p></header>
     <div class="controls" id="controls" hidden>
-      <label for="view">Chart view</label><select id="view"></select>
+      <span id="view-control"><label for="view">Chart view</label> <select id="view"></select></span>
+      <span id="picks" hidden></span>
     </div>
     <section class="chart-area" aria-label="Interactive chart">
-      <img id="preview" width="1200" height="600" src="bond.png" alt="Rental market New Zealand, number of bonds a month. Source: Tenancy Services bond data (MBIE)" fetchpriority="high" decoding="async">
+      <img id="preview" width="1200" height="600" alt="" hidden>
       <div id="chart"></div><div id="status" role="status" aria-live="polite">Loading chart…</div>
     </section>
     <footer>
@@ -133,15 +135,15 @@
         await Plotly.react(chart, spec.data, frameLayout(spec), config);
       }
 
-      async function loadView(index) {
+      async function loadSpec(getSpec, isDefault) {
         const number = ++requestNumber;
         fetchController?.abort();
         fetchController = new AbortController();
         status.textContent = "Loading chart…";
-        status.hidden = !preview.hidden && index === 0;
+        status.hidden = !preview.hidden && isDefault;
         chart.setAttribute("aria-hidden", "true");
         try {
-          const spec = await readJson(manifest.views[index].spec, fetchController.signal);
+          const spec = await getSpec(fetchController.signal);
           if (number !== requestNumber) return;
           await draw(spec);
           if (number !== requestNumber) return;
@@ -152,6 +154,78 @@
         } catch (error) {
           if (number === requestNumber && error.name !== "AbortError") showError();
         }
+      }
+
+      function loadView(index) {
+        return loadSpec(signal => readJson(manifest.views[index].spec, signal), index === 0);
+      }
+
+      // pick.js combines single-series views for charts whose manifest has a pick block.
+      let pickReady;
+      function loadPick() {
+        pickReady ??= new Promise((resolve, reject) => {
+          const script = document.createElement("script");
+          script.src = assetUrl("pick.js");
+          script.onload = resolve;
+          script.onerror = () => reject(new Error("Chart helper is unavailable"));
+          document.head.append(script);
+        });
+        return pickReady;
+      }
+
+      function loadPicks(chosen) {
+        return loadSpec(async signal => {
+          const specs = await Promise.all(chosen.map(i => readJson(manifest.views[i].spec, signal)));
+          if (specs.length === 1) return specs[0];
+          await loadPick();
+          return AltitudePick.combine(specs, manifest.pick, chosen, manifest.views.map(view => view.label));
+        }, chosen.length === 1 && chosen[0] === 0);
+      }
+
+      // One select per pick label; the first is required, later ones may be None.
+      // Series with a third unit are disabled, since a chart has two axes.
+      function setupPicks(requested) {
+        const picks = document.getElementById("picks"), dims = manifest.pick.dims;
+        const slugs = manifest.views.map(view => view.spec.replace(/\.json$/i, "").split("/").pop());
+        let chosen = [...new Set(requested.map(slug => slugs.indexOf(slug)).filter(i => i >= 0))].slice(0, manifest.pick.labels.length);
+        if (!chosen.length) chosen = [0];
+        const selects = manifest.pick.labels.map((label, k) => {
+          const select = document.createElement("select");
+          select.id = "pick-" + k;
+          const text = document.createElement("label");
+          text.htmlFor = select.id;
+          text.textContent = label;
+          picks.append(text, select);
+          return select;
+        });
+        const fill = () => selects.forEach((select, k) => {
+          const others = chosen.filter((_, j) => j !== k);
+          const units = new Set(others.map(i => dims[i]));
+          select.replaceChildren();
+          if (k > 0) select.append(new Option("None", ""));
+          manifest.views.forEach((view, i) => {
+            if (others.includes(i)) return;
+            const option = new Option(view.label, String(i));
+            option.disabled = units.size > 1 && !units.has(dims[i]);
+            select.append(option);
+          });
+          select.value = k < chosen.length ? String(chosen[k]) : "";
+          select.disabled = k > chosen.length;
+        });
+        selects.forEach(select => select.addEventListener("change", () => {
+          chosen = [...new Set(selects.map(item => item.value).filter(Boolean).map(Number))];
+          fill();
+          const url = new URL(location.href);
+          if (chosen.length === 1 && chosen[0] === 0) url.searchParams.delete("series");
+          else url.searchParams.set("series", chosen.map(i => slugs[i]).join(","));
+          history.replaceState(null, "", url);
+          loadPicks(chosen);
+        }));
+        fill();
+        document.getElementById("view-control").hidden = true;
+        picks.hidden = false;
+        document.getElementById("controls").hidden = false;
+        return loadPicks(chosen);
       }
 
       function addDownload(label, path) {
@@ -179,6 +253,9 @@
             preview.alt = manifest.image_alt || manifest.title || "Chart preview";
             preview.hidden = false;
             preview.onerror = () => { preview.hidden = true; if (!activeSpec) status.hidden = false; };
+          }
+          if (manifest.pick) {
+            return await setupPicks((new URLSearchParams(location.search).get("series") || "").split(",").filter(Boolean));
           }
           manifest.views.forEach((view, index) => {
             const option = document.createElement("option");
