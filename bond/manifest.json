@@ -1,0 +1,44 @@
+{
+  "name": "bond",
+  "title": "Rental market",
+  "source": "Tenancy Services bond data (MBIE)",
+  "note": "Shows lodged, active and closed tenancy bonds and weekly rents by location, a direct read on the rental market.",
+  "updated": "2026-10-04",
+  "views": [
+    {
+      "label": "Lodged Bonds",
+      "spec": "lodged-bonds.json"
+    },
+    {
+      "label": "Active Bonds",
+      "spec": "active-bonds.json"
+    },
+    {
+      "label": "Closed Bonds",
+      "spec": "closed-bonds.json"
+    },
+    {
+      "label": "Median Rent",
+      "spec": "median-rent.json"
+    },
+    {
+      "label": "Geometric Mean Rent",
+      "spec": "geometric-mean-rent.json"
+    },
+    {
+      "label": "Upper Quartile Rent",
+      "spec": "upper-quartile-rent.json"
+    },
+    {
+      "label": "Lower Quartile Rent",
+      "spec": "lower-quartile-rent.json"
+    },
+    {
+      "label": "Log Std Dev Weekly Rent",
+      "spec": "log-std-dev-weekly-rent.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "bond.png",
+  "image_alt": "Rental market New Zealand, number of bonds a month. Source: Tenancy Services bond data (MBIE)"
+}

@@ -1,0 +1,188 @@
+{
+  "name": "hm1",
+  "title": "Inflation",
+  "source": "RBNZ and Stats NZ series",
+  "note": "Measures how prices change over time. Compare up to five headline or component price indexes using a common metric.",
+  "updated": "2026-10-04",
+  "views": [
+    {
+      "label": "Consumers price index (CPI) b",
+      "spec": "consumers-price-index-cpi-index.json"
+    },
+    {
+      "label": "Consumers price index (CPI) b",
+      "spec": "consumers-price-index-cpi-q-q.json"
+    },
+    {
+      "label": "Consumers price index (CPI) b",
+      "spec": "consumers-price-index-cpi-y-y.json"
+    },
+    {
+      "label": "Tradable inflation b",
+      "spec": "tradable-inflation-index.json"
+    },
+    {
+      "label": "Tradable inflation b",
+      "spec": "tradable-inflation-q-q.json"
+    },
+    {
+      "label": "Tradable inflation b",
+      "spec": "tradable-inflation-y-y.json"
+    },
+    {
+      "label": "Non-tradable inflation b",
+      "spec": "non-tradable-inflation-index.json"
+    },
+    {
+      "label": "Non-tradable inflation b",
+      "spec": "non-tradable-inflation-q-q.json"
+    },
+    {
+      "label": "Non-tradable inflation b",
+      "spec": "non-tradable-inflation-y-y.json"
+    },
+    {
+      "label": "Food b",
+      "spec": "food-index.json"
+    },
+    {
+      "label": "Food b",
+      "spec": "food-q-q.json"
+    },
+    {
+      "label": "Food b",
+      "spec": "food-y-y.json"
+    },
+    {
+      "label": "Housing and household utilities b",
+      "spec": "housing-and-household-utilities-index.json"
+    },
+    {
+      "label": "Housing and household utilities b",
+      "spec": "housing-and-household-utilities-q-q.json"
+    },
+    {
+      "label": "Housing and household utilities b",
+      "spec": "housing-and-household-utilities-y-y.json"
+    },
+    {
+      "label": "Transportation b",
+      "spec": "transportation-index.json"
+    },
+    {
+      "label": "Transportation b",
+      "spec": "transportation-q-q.json"
+    },
+    {
+      "label": "Transportation b",
+      "spec": "transportation-y-y.json"
+    },
+    {
+      "label": "Petrol b",
+      "spec": "petrol-index.json"
+    },
+    {
+      "label": "Petrol b",
+      "spec": "petrol-q-q.json"
+    },
+    {
+      "label": "Petrol b",
+      "spec": "petrol-y-y.json"
+    },
+    {
+      "label": "CPI excluding petrol b",
+      "spec": "cpi-excluding-petrol-index.json"
+    },
+    {
+      "label": "CPI excluding petrol b",
+      "spec": "cpi-excluding-petrol-q-q.json"
+    },
+    {
+      "label": "CPI excluding petrol b",
+      "spec": "cpi-excluding-petrol-y-y.json"
+    },
+    {
+      "label": "Trimmed mean b",
+      "spec": "trimmed-mean-q-q.json"
+    },
+    {
+      "label": "Trimmed mean b",
+      "spec": "trimmed-mean-y-y.json"
+    },
+    {
+      "label": "Weighted median b",
+      "spec": "weighted-median-q-q.json"
+    },
+    {
+      "label": "Weighted median b",
+      "spec": "weighted-median-y-y.json"
+    },
+    {
+      "label": "Factor model b",
+      "spec": "factor-model-y-y.json"
+    },
+    {
+      "label": "Sectoral factor model b",
+      "spec": "sectoral-factor-model-y-y.json"
+    },
+    {
+      "label": "Sectoral factor model - tradable core b",
+      "spec": "sectoral-factor-model-tradable-core-y-y.json"
+    },
+    {
+      "label": "Sectoral factor model - non-tradable core b",
+      "spec": "sectoral-factor-model-non-tradable-core-y-y.json"
+    },
+    {
+      "label": "PropertyIQ House price index (HPI) b",
+      "spec": "propertyiq-house-price-index-hpi-index.json"
+    },
+    {
+      "label": "PropertyIQ House price index (HPI) b",
+      "spec": "propertyiq-house-price-index-hpi-q-q.json"
+    },
+    {
+      "label": "PropertyIQ House price index (HPI) b",
+      "spec": "propertyiq-house-price-index-hpi-y-y.json"
+    },
+    {
+      "label": "GDP deflator b",
+      "spec": "gdp-deflator-index.json"
+    },
+    {
+      "label": "GDP deflator b",
+      "spec": "gdp-deflator-q-q.json"
+    },
+    {
+      "label": "GDP deflator b",
+      "spec": "gdp-deflator-y-y.json"
+    },
+    {
+      "label": "Producers price index (PPI) inputs b",
+      "spec": "producers-price-index-ppi-inputs-index.json"
+    },
+    {
+      "label": "Producers price index (PPI) inputs b",
+      "spec": "producers-price-index-ppi-inputs-q-q.json"
+    },
+    {
+      "label": "Producers price index (PPI) inputs b",
+      "spec": "producers-price-index-ppi-inputs-y-y.json"
+    },
+    {
+      "label": "Producers price index (PPI) outputs b",
+      "spec": "producers-price-index-ppi-outputs-index.json"
+    },
+    {
+      "label": "Producers price index (PPI) outputs b",
+      "spec": "producers-price-index-ppi-outputs-q-q.json"
+    },
+    {
+      "label": "Producers price index (PPI) outputs b",
+      "spec": "producers-price-index-ppi-outputs-y-y.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "hm1.png",
+  "image_alt": "Inflation RBNZ and Stats NZ series: Consumers price index (CPI) b"
+}

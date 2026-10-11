@@ -1,0 +1,52 @@
+{
+  "name": "hb2",
+  "title": "Interest rates",
+  "source": "Reserve Bank of New Zealand (RBNZ)",
+  "note": "Tracks wholesale and retail borrowing rates. Select up to five series to compare changes in borrowing conditions over time.",
+  "updated": "2026-10-04",
+  "views": [
+    {
+      "label": "Official Cash Rate (OCR) b",
+      "spec": "official-cash-rate-ocr.json"
+    },
+    {
+      "label": "1 year (bond) b",
+      "spec": "1-year-bond.json"
+    },
+    {
+      "label": "2 year (bond) b",
+      "spec": "2-year-bond.json"
+    },
+    {
+      "label": "5 year (bond) b",
+      "spec": "5-year-bond.json"
+    },
+    {
+      "label": "10 year (bond) b",
+      "spec": "10-year-bond.json"
+    },
+    {
+      "label": "1 year (swap) b",
+      "spec": "1-year-swap.json"
+    },
+    {
+      "label": "2 year (swap) b",
+      "spec": "2-year-swap.json"
+    },
+    {
+      "label": "5 year (swap) b",
+      "spec": "5-year-swap.json"
+    },
+    {
+      "label": "10 year (swap) b",
+      "spec": "10-year-swap.json"
+    },
+    {
+      "label": "Spread 2-10 year b",
+      "spec": "spread-2-10-year-bps.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "hb2.png",
+  "image_alt": "Interest rates Reserve Bank of New Zealand (RBNZ): Official Cash Rate (OCR) b"
+}

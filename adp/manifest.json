@@ -1,0 +1,420 @@
+{
+  "name": "adp",
+  "title": "Accommodation",
+  "source": "Stats NZ accommodation data",
+  "note": "Compare monthly domestic and international guest nights, occupancy and capacity utilisation for New Zealand or a regional tourism organisation.",
+  "updated": "2026-10-09",
+  "views": [
+    {
+      "label": "New Zealand: Guest nights",
+      "spec": "new-zealand-guest-nights.json"
+    },
+    {
+      "label": "New Zealand: Occupancy rate (%)",
+      "spec": "new-zealand-occupancy-rate.json"
+    },
+    {
+      "label": "New Zealand: Capacity utilisation (%)",
+      "spec": "new-zealand-capacity-utilisation.json"
+    },
+    {
+      "label": "Auckland: Guest nights",
+      "spec": "auckland-guest-nights.json"
+    },
+    {
+      "label": "Auckland: Occupancy rate (%)",
+      "spec": "auckland-occupancy-rate.json"
+    },
+    {
+      "label": "Auckland: Capacity utilisation (%)",
+      "spec": "auckland-capacity-utilisation.json"
+    },
+    {
+      "label": "Bay of Plenty: Guest nights",
+      "spec": "bay-of-plenty-guest-nights.json"
+    },
+    {
+      "label": "Bay of Plenty: Occupancy rate (%)",
+      "spec": "bay-of-plenty-occupancy-rate.json"
+    },
+    {
+      "label": "Bay of Plenty: Capacity utilisation (%)",
+      "spec": "bay-of-plenty-capacity-utilisation.json"
+    },
+    {
+      "label": "Canterbury: Guest nights",
+      "spec": "canterbury-guest-nights.json"
+    },
+    {
+      "label": "Canterbury: Occupancy rate (%)",
+      "spec": "canterbury-occupancy-rate.json"
+    },
+    {
+      "label": "Canterbury: Capacity utilisation (%)",
+      "spec": "canterbury-capacity-utilisation.json"
+    },
+    {
+      "label": "Central Otago: Guest nights",
+      "spec": "central-otago-guest-nights.json"
+    },
+    {
+      "label": "Central Otago: Occupancy rate (%)",
+      "spec": "central-otago-occupancy-rate.json"
+    },
+    {
+      "label": "Central Otago: Capacity utilisation (%)",
+      "spec": "central-otago-capacity-utilisation.json"
+    },
+    {
+      "label": "Clutha: Guest nights",
+      "spec": "clutha-guest-nights.json"
+    },
+    {
+      "label": "Clutha: Occupancy rate (%)",
+      "spec": "clutha-occupancy-rate.json"
+    },
+    {
+      "label": "Clutha: Capacity utilisation (%)",
+      "spec": "clutha-capacity-utilisation.json"
+    },
+    {
+      "label": "Coromandel: Guest nights",
+      "spec": "coromandel-guest-nights.json"
+    },
+    {
+      "label": "Coromandel: Occupancy rate (%)",
+      "spec": "coromandel-occupancy-rate.json"
+    },
+    {
+      "label": "Coromandel: Capacity utilisation (%)",
+      "spec": "coromandel-capacity-utilisation.json"
+    },
+    {
+      "label": "Dunedin: Guest nights",
+      "spec": "dunedin-guest-nights.json"
+    },
+    {
+      "label": "Dunedin: Occupancy rate (%)",
+      "spec": "dunedin-occupancy-rate.json"
+    },
+    {
+      "label": "Dunedin: Capacity utilisation (%)",
+      "spec": "dunedin-capacity-utilisation.json"
+    },
+    {
+      "label": "Fiordland: Guest nights",
+      "spec": "fiordland-guest-nights.json"
+    },
+    {
+      "label": "Fiordland: Occupancy rate (%)",
+      "spec": "fiordland-occupancy-rate.json"
+    },
+    {
+      "label": "Fiordland: Capacity utilisation (%)",
+      "spec": "fiordland-capacity-utilisation.json"
+    },
+    {
+      "label": "Gisborne: Guest nights",
+      "spec": "gisborne-guest-nights.json"
+    },
+    {
+      "label": "Gisborne: Occupancy rate (%)",
+      "spec": "gisborne-occupancy-rate.json"
+    },
+    {
+      "label": "Gisborne: Capacity utilisation (%)",
+      "spec": "gisborne-capacity-utilisation.json"
+    },
+    {
+      "label": "Hawke's Bay: Guest nights",
+      "spec": "hawke-s-bay-guest-nights.json"
+    },
+    {
+      "label": "Hawke's Bay: Occupancy rate (%)",
+      "spec": "hawke-s-bay-occupancy-rate.json"
+    },
+    {
+      "label": "Hawke's Bay: Capacity utilisation (%)",
+      "spec": "hawke-s-bay-capacity-utilisation.json"
+    },
+    {
+      "label": "Hurunui: Guest nights",
+      "spec": "hurunui-guest-nights.json"
+    },
+    {
+      "label": "Hurunui: Occupancy rate (%)",
+      "spec": "hurunui-occupancy-rate.json"
+    },
+    {
+      "label": "Hurunui: Capacity utilisation (%)",
+      "spec": "hurunui-capacity-utilisation.json"
+    },
+    {
+      "label": "Kaikōura: Guest nights",
+      "spec": "kaik-ura-guest-nights.json"
+    },
+    {
+      "label": "Kaikōura: Occupancy rate (%)",
+      "spec": "kaik-ura-occupancy-rate.json"
+    },
+    {
+      "label": "Kaikōura: Capacity utilisation (%)",
+      "spec": "kaik-ura-capacity-utilisation.json"
+    },
+    {
+      "label": "Kapiti-Horowhenua: Guest nights",
+      "spec": "kapiti-horowhenua-guest-nights.json"
+    },
+    {
+      "label": "Kapiti-Horowhenua: Occupancy rate (%)",
+      "spec": "kapiti-horowhenua-occupancy-rate.json"
+    },
+    {
+      "label": "Mackenzie: Guest nights",
+      "spec": "mackenzie-guest-nights.json"
+    },
+    {
+      "label": "Mackenzie: Occupancy rate (%)",
+      "spec": "mackenzie-occupancy-rate.json"
+    },
+    {
+      "label": "Mackenzie: Capacity utilisation (%)",
+      "spec": "mackenzie-capacity-utilisation.json"
+    },
+    {
+      "label": "Manawatu: Guest nights",
+      "spec": "manawatu-guest-nights.json"
+    },
+    {
+      "label": "Manawatu: Occupancy rate (%)",
+      "spec": "manawatu-occupancy-rate.json"
+    },
+    {
+      "label": "Manawatu: Capacity utilisation (%)",
+      "spec": "manawatu-capacity-utilisation.json"
+    },
+    {
+      "label": "Marlborough: Guest nights",
+      "spec": "marlborough-guest-nights.json"
+    },
+    {
+      "label": "Marlborough: Occupancy rate (%)",
+      "spec": "marlborough-occupancy-rate.json"
+    },
+    {
+      "label": "Marlborough: Capacity utilisation (%)",
+      "spec": "marlborough-capacity-utilisation.json"
+    },
+    {
+      "label": "Nelson-Tasman: Guest nights",
+      "spec": "nelson-tasman-guest-nights.json"
+    },
+    {
+      "label": "Nelson-Tasman: Occupancy rate (%)",
+      "spec": "nelson-tasman-occupancy-rate.json"
+    },
+    {
+      "label": "Nelson-Tasman: Capacity utilisation (%)",
+      "spec": "nelson-tasman-capacity-utilisation.json"
+    },
+    {
+      "label": "Northland: Guest nights",
+      "spec": "northland-guest-nights.json"
+    },
+    {
+      "label": "Northland: Occupancy rate (%)",
+      "spec": "northland-occupancy-rate.json"
+    },
+    {
+      "label": "Northland: Capacity utilisation (%)",
+      "spec": "northland-capacity-utilisation.json"
+    },
+    {
+      "label": "Queenstown: Guest nights",
+      "spec": "queenstown-guest-nights.json"
+    },
+    {
+      "label": "Queenstown: Occupancy rate (%)",
+      "spec": "queenstown-occupancy-rate.json"
+    },
+    {
+      "label": "Queenstown: Capacity utilisation (%)",
+      "spec": "queenstown-capacity-utilisation.json"
+    },
+    {
+      "label": "Rotorua: Guest nights",
+      "spec": "rotorua-guest-nights.json"
+    },
+    {
+      "label": "Rotorua: Occupancy rate (%)",
+      "spec": "rotorua-occupancy-rate.json"
+    },
+    {
+      "label": "Rotorua: Capacity utilisation (%)",
+      "spec": "rotorua-capacity-utilisation.json"
+    },
+    {
+      "label": "Ruapehu: Guest nights",
+      "spec": "ruapehu-guest-nights.json"
+    },
+    {
+      "label": "Ruapehu: Occupancy rate (%)",
+      "spec": "ruapehu-occupancy-rate.json"
+    },
+    {
+      "label": "Ruapehu: Capacity utilisation (%)",
+      "spec": "ruapehu-capacity-utilisation.json"
+    },
+    {
+      "label": "Southland: Guest nights",
+      "spec": "southland-guest-nights.json"
+    },
+    {
+      "label": "Southland: Occupancy rate (%)",
+      "spec": "southland-occupancy-rate.json"
+    },
+    {
+      "label": "Southland: Capacity utilisation (%)",
+      "spec": "southland-capacity-utilisation.json"
+    },
+    {
+      "label": "Taranaki: Guest nights",
+      "spec": "taranaki-guest-nights.json"
+    },
+    {
+      "label": "Taranaki: Occupancy rate (%)",
+      "spec": "taranaki-occupancy-rate.json"
+    },
+    {
+      "label": "Taranaki: Capacity utilisation (%)",
+      "spec": "taranaki-capacity-utilisation.json"
+    },
+    {
+      "label": "Taupo: Guest nights",
+      "spec": "taupo-guest-nights.json"
+    },
+    {
+      "label": "Taupo: Occupancy rate (%)",
+      "spec": "taupo-occupancy-rate.json"
+    },
+    {
+      "label": "Taupo: Capacity utilisation (%)",
+      "spec": "taupo-capacity-utilisation.json"
+    },
+    {
+      "label": "Timaru: Guest nights",
+      "spec": "timaru-guest-nights.json"
+    },
+    {
+      "label": "Timaru: Occupancy rate (%)",
+      "spec": "timaru-occupancy-rate.json"
+    },
+    {
+      "label": "Timaru: Capacity utilisation (%)",
+      "spec": "timaru-capacity-utilisation.json"
+    },
+    {
+      "label": "Waikato: Guest nights",
+      "spec": "waikato-guest-nights.json"
+    },
+    {
+      "label": "Waikato: Occupancy rate (%)",
+      "spec": "waikato-occupancy-rate.json"
+    },
+    {
+      "label": "Waikato: Capacity utilisation (%)",
+      "spec": "waikato-capacity-utilisation.json"
+    },
+    {
+      "label": "Wairarapa: Guest nights",
+      "spec": "wairarapa-guest-nights.json"
+    },
+    {
+      "label": "Wairarapa: Occupancy rate (%)",
+      "spec": "wairarapa-occupancy-rate.json"
+    },
+    {
+      "label": "Wairarapa: Capacity utilisation (%)",
+      "spec": "wairarapa-capacity-utilisation.json"
+    },
+    {
+      "label": "Waitaki: Guest nights",
+      "spec": "waitaki-guest-nights.json"
+    },
+    {
+      "label": "Waitaki: Occupancy rate (%)",
+      "spec": "waitaki-occupancy-rate.json"
+    },
+    {
+      "label": "Waitaki: Capacity utilisation (%)",
+      "spec": "waitaki-capacity-utilisation.json"
+    },
+    {
+      "label": "Wanaka: Guest nights",
+      "spec": "wanaka-guest-nights.json"
+    },
+    {
+      "label": "Wanaka: Occupancy rate (%)",
+      "spec": "wanaka-occupancy-rate.json"
+    },
+    {
+      "label": "Wanaka: Capacity utilisation (%)",
+      "spec": "wanaka-capacity-utilisation.json"
+    },
+    {
+      "label": "Wanganui: Guest nights",
+      "spec": "wanganui-guest-nights.json"
+    },
+    {
+      "label": "Wanganui: Occupancy rate (%)",
+      "spec": "wanganui-occupancy-rate.json"
+    },
+    {
+      "label": "Wanganui: Capacity utilisation (%)",
+      "spec": "wanganui-capacity-utilisation.json"
+    },
+    {
+      "label": "Wellington: Guest nights",
+      "spec": "wellington-guest-nights.json"
+    },
+    {
+      "label": "Wellington: Occupancy rate (%)",
+      "spec": "wellington-occupancy-rate.json"
+    },
+    {
+      "label": "Wellington: Capacity utilisation (%)",
+      "spec": "wellington-capacity-utilisation.json"
+    },
+    {
+      "label": "Wellington City: Guest nights",
+      "spec": "wellington-city-guest-nights.json"
+    },
+    {
+      "label": "Wellington City: Occupancy rate (%)",
+      "spec": "wellington-city-occupancy-rate.json"
+    },
+    {
+      "label": "West Coast: Guest nights",
+      "spec": "west-coast-guest-nights.json"
+    },
+    {
+      "label": "West Coast: Occupancy rate (%)",
+      "spec": "west-coast-occupancy-rate.json"
+    },
+    {
+      "label": "West Coast: Capacity utilisation (%)",
+      "spec": "west-coast-capacity-utilisation.json"
+    },
+    {
+      "label": "Whakatane-Kawerau: Guest nights",
+      "spec": "whakatane-kawerau-guest-nights.json"
+    },
+    {
+      "label": "Whakatane-Kawerau: Occupancy rate (%)",
+      "spec": "whakatane-kawerau-occupancy-rate.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "adp.png",
+  "image_alt": "Accommodation: New Zealand Monthly guest nights. Source: Stats NZ accommodation data"
+}

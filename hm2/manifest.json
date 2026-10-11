@@ -1,0 +1,76 @@
+{
+  "name": "hm2",
+  "title": "Consumption",
+  "source": "RBNZ and Stats NZ series",
+  "note": "Describes household spending on goods and servicesb",
+  "updated": "2026-10-04",
+  "views": [
+    {
+      "label": "Retail trade sales b",
+      "spec": "retail-trade-sales-nzdm.json"
+    },
+    {
+      "label": "Retail trade sales b",
+      "spec": "retail-trade-sales-nzdm-1.json"
+    },
+    {
+      "label": "Retail trade sales b",
+      "spec": "retail-trade-sales.json"
+    },
+    {
+      "label": "Retail trade sales b",
+      "spec": "retail-trade-sales-1.json"
+    },
+    {
+      "label": "Retail trade volumes b",
+      "spec": "retail-trade-volumes-nzdm.json"
+    },
+    {
+      "label": "Retail trade volumes b",
+      "spec": "retail-trade-volumes-nzdm-1.json"
+    },
+    {
+      "label": "Retail trade volumes b",
+      "spec": "retail-trade-volumes.json"
+    },
+    {
+      "label": "Retail trade volumes b",
+      "spec": "retail-trade-volumes-1.json"
+    },
+    {
+      "label": "Private consumption expenditure (GDP) b",
+      "spec": "private-consumption-expenditure-gdp-nzdm.json"
+    },
+    {
+      "label": "Private consumption expenditure (GDP) b",
+      "spec": "private-consumption-expenditure-gdp-nzdm-1.json"
+    },
+    {
+      "label": "Private consumption expenditure (GDP) b",
+      "spec": "private-consumption-expenditure-gdp.json"
+    },
+    {
+      "label": "Private consumption expenditure (GDP) b",
+      "spec": "private-consumption-expenditure-gdp-1.json"
+    },
+    {
+      "label": "General government consumption expenditure (GDP) b",
+      "spec": "general-government-consumption-expenditure-gdp-nzdm.json"
+    },
+    {
+      "label": "General government consumption expenditure (GDP) b",
+      "spec": "general-government-consumption-expenditure-gdp-nzdm-1.json"
+    },
+    {
+      "label": "General government consumption expenditure (GDP) b",
+      "spec": "general-government-consumption-expenditure-gdp.json"
+    },
+    {
+      "label": "General government consumption expenditure (GDP) b",
+      "spec": "general-government-consumption-expenditure-gdp-1.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "hm2.png",
+  "image_alt": "Consumption RBNZ and Stats NZ series: Retail trade sales b"
+}

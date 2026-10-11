@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Altitude charts</title>
+  <link rel="icon" href="data:,">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; background: #fbfaf7; color: #142e2c; font-family: Arial, sans-serif; }
+    main { width: 100%; max-width: 640px; }
+    h1 { margin: 0 0 8px; font: 34px/1.1 Georgia, "Times New Roman", serif; letter-spacing: -.03em; }
+    p { margin: 0 0 24px; color: #48605e; line-height: 1.6; }
+    .doors { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    a { display: block; padding: 20px; background: white; border: 1px solid #d9dfdc; color: inherit; text-decoration: none; font: 22px/1.2 Georgia, "Times New Roman", serif; }
+    a:hover { box-shadow: 0 12px 28px rgba(20,46,44,.1); }
+    a span { display: block; margin-top: 6px; color: #367069; font: 13px Arial, sans-serif; }
+    :focus-visible { outline: 2px solid #164b45; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Altitude charts</h1>
+    <p>Charts of public economic, housing, tourism and migration data. Choose a country.</p>
+    <nav class="doors" aria-label="Countries">
+      <a href="nz/">New Zealand<span>Exchange rates, inflation, housing, tourism and more</span></a>
+      <a href="ireland/">Ireland<span>New dwellings and more to come</span></a>
+      <a href="route-map/">Aviation route map<span>Open your route table; download SVG and PNG</span></a>
+    </nav>
+  </main>
+</body>
+</html>

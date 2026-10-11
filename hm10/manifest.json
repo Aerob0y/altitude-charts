@@ -1,0 +1,32 @@
+{
+  "name": "hm10",
+  "title": "CoreLogic",
+  "source": "CoreLogic series via RBNZ",
+  "note": "Provides housing-market measures such as property values. Movements vary by place and do not represent every home.",
+  "updated": "2026-10-04",
+  "views": [
+    {
+      "label": "House sales and House price index (HPI)",
+      "spec": "house-sales-and-house-price-index-hpi.json"
+    },
+    {
+      "label": "House sales",
+      "spec": "house-sales.json"
+    },
+    {
+      "label": "House price index (HPI)",
+      "spec": "house-price-index-hpi.json"
+    },
+    {
+      "label": "Total value of housing stock",
+      "spec": "total-value-of-housing-stock.json"
+    },
+    {
+      "label": "Residential investment (GDP)",
+      "spec": "residential-investment-gdp.json"
+    }
+  ],
+  "data": null,
+  "image": "hm10.png",
+  "image_alt": "CoreLogic CoreLogic via RBNZ: House sales and House price index (HPI)"
+}

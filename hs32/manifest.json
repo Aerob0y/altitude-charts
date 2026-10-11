@@ -1,0 +1,44 @@
+{
+  "name": "hs32",
+  "title": "Banks: loans by product",
+  "source": "Reserve Bank of New Zealand (RBNZ)",
+  "note": "Breaks registered-bank lending into products and borrower groups to show where credit is growing or contracting.",
+  "updated": "2026-10-04",
+  "views": [
+    {
+      "label": "Totals: Owner occupier property use, Residential investor property use, Personal consumer loans",
+      "spec": "totals-owner-occupier-property-use-residential-investor-property-use-personal-consumer-loans.json"
+    },
+    {
+      "label": "Owner occupier property use: by loan type",
+      "spec": "owner-occupier-property-use-by-loan-type.json"
+    },
+    {
+      "label": "Residential investor property use: by loan type",
+      "spec": "residential-investor-property-use-by-loan-type.json"
+    },
+    {
+      "label": "Personal consumer loans: by loan type",
+      "spec": "personal-consumer-loans-by-loan-type.json"
+    },
+    {
+      "label": "Business loans: by loan type",
+      "spec": "business-loans-by-loan-type.json"
+    },
+    {
+      "label": "Agriculture loans: by loan type",
+      "spec": "agriculture-loans-by-loan-type.json"
+    },
+    {
+      "label": "Financial institutions loans: by loan type",
+      "spec": "financial-institutions-loans-by-loan-type.json"
+    },
+    {
+      "label": "Other loans: by loan type",
+      "spec": "other-loans-by-loan-type.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "hs32.png",
+  "image_alt": "Banks: loans by product Totals: Owner occupier property use, Residential investor property use, Personal consumer loans. NZD millions. Source: RBNZ"
+}

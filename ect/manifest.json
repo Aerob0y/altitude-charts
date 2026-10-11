@@ -1,0 +1,20 @@
+{
+  "name": "ect",
+  "title": "Card spending",
+  "source": "Stats NZ electronic card transactions",
+  "note": "Compare monthly card spending by category in NZD millions or annual percent change; levels use seasonal adjustment where available.",
+  "updated": "2026-10-04",
+  "views": [
+    {
+      "label": "Annual % change",
+      "spec": "annual-change.json"
+    },
+    {
+      "label": "NZD millions",
+      "spec": "nzd-millions.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "ect.png",
+  "image_alt": "Card spending Annual % change in monthly spending. Source: Stats NZ"
+}

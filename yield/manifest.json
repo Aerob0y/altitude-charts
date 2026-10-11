@@ -1,0 +1,24 @@
+{
+  "name": "yield",
+  "title": "Yield curve",
+  "source": "Reserve Bank of New Zealand (RBNZ)",
+  "note": "A spread below zero means long rates are below short rates, which has often come before a slowdown. Spreads are in basis points; rates are in percent.",
+  "updated": "2026-10-04",
+  "views": [
+    {
+      "label": "Spread: swaps",
+      "spec": "spread-swaps.json"
+    },
+    {
+      "label": "Spread: government bonds",
+      "spec": "spread-government-bonds.json"
+    },
+    {
+      "label": "Rates",
+      "spec": "rates.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "yield.png",
+  "image_alt": "Yield curve Swaps: 10-year minus 2-year rate, basis points. Source: RBNZ"
+}

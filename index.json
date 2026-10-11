@@ -1,0 +1,257 @@
+{
+  "charts": [
+    {
+      "name": "hb1",
+      "title": "Exchange rates",
+      "source": "Reserve Bank of New Zealand (RBNZ)",
+      "note": "Shows how much foreign currency the New Zealand dollar buys. Use the selectors to compare currencies and the trade-weighted index.",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "hb1/index.html",
+      "image": "hb1/hb1.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "hb2",
+      "title": "Interest rates",
+      "source": "Reserve Bank of New Zealand (RBNZ)",
+      "note": "Tracks wholesale and retail borrowing rates. Select up to five series to compare changes in borrowing conditions over time.",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "hb2/index.html",
+      "image": "hb2/hb2.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "hc35",
+      "title": "Residential mortgages",
+      "source": "Reserve Bank of New Zealand (RBNZ)",
+      "note": "Shows mortgage lending across lending groups and loan types, providing context on household borrowing conditions.",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "hc35/index.html",
+      "image": "hc35/hc35.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "hm1",
+      "title": "Inflation",
+      "source": "RBNZ and Stats NZ series",
+      "note": "Measures how prices change over time. Compare up to five headline or component price indexes using a common metric.",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "hm1/index.html",
+      "image": "hm1/hm1.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "hm2",
+      "title": "Consumption",
+      "source": "RBNZ and Stats NZ series",
+      "note": "Describes household spending on goods and servicesb",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "hm2/index.html",
+      "image": "hm2/hm2.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "hm3",
+      "title": "Investment",
+      "source": "RBNZ and Stats NZ series B7 HM3",
+      "note": "Covers spending that builds future capacity. This view compares broad investment types.",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "hm3/index.html",
+      "image": "hm3/hm3.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "hm8",
+      "title": "Overseas trade",
+      "source": "RBNZ and Stats NZ series",
+      "note": "Tracks the value and volume of goods and services bought from and sold to other countries.",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "hm8/index.html",
+      "image": "hm8/hm8.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "hm9",
+      "title": "Labour market",
+      "source": "RBNZ and Stats NZ series",
+      "note": "Brings together employment, participation, hours and wages to show how work and earnings are changing.",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "hm9/index.html",
+      "image": "hm9/hm9.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "hm14",
+      "title": "Survey of expectations",
+      "source": "Reserve Bank of New Zealand (RBNZ)",
+      "note": "Summarises surveyed expectations for inflation and other economic measures. Expectations are opinions, not guaranteed forecasts.",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "hm14/index.html",
+      "image": "hm14/hm14.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "fuel",
+      "title": "Fuel",
+      "source": "Public fuel-price series",
+      "note": "Tracks fuel prices over time, a practical indicator of transport costs for households, visitors and tourism operators.",
+      "target": "fuel",
+      "updated": "2026-10-04",
+      "page": "fuel/index.html",
+      "image": "fuel/fuel.png",
+      "site": "nz",
+      "menu": "Tourism & Migration"
+    },
+    {
+      "name": "ndm01",
+      "title": "New dwelling completions",
+      "source": "Central Statistics Office Ireland (CSO) B7 NDM01",
+      "note": "Counts new homes completed each month in Ireland, by dwelling type.",
+      "target": "cso",
+      "updated": "2026-10-09",
+      "page": "ndm01/index.html",
+      "image": "ndm01/ndm01.png",
+      "site": "ireland",
+      "menu": "Housing"
+    },
+    {
+      "name": "ect",
+      "title": "Card spending",
+      "source": "Stats NZ electronic card transactions",
+      "note": "Compare monthly card spending by category in NZD millions or annual percent change; levels use seasonal adjustment where available.",
+      "target": "ect",
+      "updated": "2026-10-04",
+      "page": "ect/index.html",
+      "image": "ect/ect.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "hm5",
+      "title": "Economic growth",
+      "source": "RBNZ and Stats NZ series",
+      "note": "Compare real GDP growth, the current account as a share of GDP, and the household saving rate, all in percent.",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "hm5/index.html",
+      "image": "hm5/hm5.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "yield",
+      "title": "Yield curve",
+      "source": "Reserve Bank of New Zealand (RBNZ)",
+      "note": "A spread below zero means long rates are below short rates, which has often come before a slowdown. Spreads are in basis points; rates are in percent.",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "yield/index.html",
+      "image": "yield/yield.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "adp",
+      "title": "Accommodation",
+      "source": "Stats NZ accommodation data",
+      "note": "Compare monthly domestic and international guest nights, occupancy and capacity utilisation for New Zealand or a regional tourism organisation.",
+      "target": "adp",
+      "updated": "2026-10-09",
+      "page": "adp/index.html",
+      "image": "adp/adp.png",
+      "site": "nz",
+      "menu": "Tourism & Migration"
+    },
+    {
+      "name": "hs32",
+      "title": "Banks: loans by product",
+      "source": "Reserve Bank of New Zealand (RBNZ)",
+      "note": "Breaks registered-bank lending into products and borrower groups to show where credit is growing or contracting.",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "hs32/index.html",
+      "image": "hs32/hs32.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "bond",
+      "title": "Rental market",
+      "source": "Tenancy Services bond data (MBIE)",
+      "note": "Shows lodged, active and closed tenancy bonds and weekly rents by location, a direct read on the rental market.",
+      "target": "bond",
+      "updated": "2026-10-04",
+      "page": "bond/index.html",
+      "image": "bond/bond.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "hm10",
+      "title": "CoreLogic",
+      "source": "CoreLogic series via RBNZ",
+      "note": "Provides housing-market measures such as property values. Movements vary by place and do not represent every home.",
+      "target": "rbnz",
+      "updated": "2026-10-04",
+      "page": "hm10/index.html",
+      "image": "hm10/hm10.png",
+      "site": "nz",
+      "menu": "Economic"
+    }
+  ],
+  "sites": [
+    {
+      "key": "nz",
+      "label": "New Zealand",
+      "heading": "New Zealand in charts",
+      "intro": "Economic, housing, tourism and migration data from public New Zealand sources, updated as new figures are released.",
+      "menus": [
+        {
+          "label": "Economic",
+          "topics": ["hb1", "hb2", "yield", "hc35", "hm1", "hm2", "ect", "hm3", "hm5", "hm8", "hm9", "hm10", "hm14", "hs32", "bond"]
+        },
+        {
+          "label": "Tourism & Migration",
+          "topics": ["adp", "fuel"]
+        }
+      ]
+    },
+    {
+      "key": "ireland",
+      "label": "Ireland",
+      "heading": "Ireland in charts",
+      "intro": "Housing and economic data from the Central Statistics Office, updated as new figures are released.",
+      "menus": [
+        {
+          "label": "Housing",
+          "topics": ["ndm01"]
+        }
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "key": "route-map",
+      "title": "Aviation route map",
+      "page": "route-map/index.html"
+    }
+  ]
+}

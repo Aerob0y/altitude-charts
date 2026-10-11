@@ -1,0 +1,120 @@
+{
+  "name": "hc35",
+  "title": "Residential mortgages",
+  "source": "Reserve Bank of New Zealand (RBNZ)",
+  "note": "Shows mortgage lending across lending groups and loan types, providing context on household borrowing conditions.",
+  "updated": "2026-10-04",
+  "views": [
+    {
+      "label": "Opening position b",
+      "spec": "opening-position-net.json"
+    },
+    {
+      "label": "Drawdowns b",
+      "spec": "drawdowns-nzdm.json"
+    },
+    {
+      "label": "Interest charged b",
+      "spec": "interest-charged-nzdm.json"
+    },
+    {
+      "label": "Scheduled repayments b",
+      "spec": "scheduled-repayments-nzdm.json"
+    },
+    {
+      "label": "Repayment of loan in full b",
+      "spec": "repayment-of-loan-in-full-nzdm.json"
+    },
+    {
+      "label": "Other excess repayments b",
+      "spec": "other-excess-repayments-nzdm.json"
+    },
+    {
+      "label": "Repayment deficiencies b",
+      "spec": "repayment-deficiencies-nzdm.json"
+    },
+    {
+      "label": "Net write-offs b",
+      "spec": "net-write-offs-nzdm.json"
+    },
+    {
+      "label": "Other adjustments b",
+      "spec": "other-adjustments-nzdm.json"
+    },
+    {
+      "label": "Opening position b",
+      "spec": "opening-position-net-1.json"
+    },
+    {
+      "label": "Drawdowns b",
+      "spec": "drawdowns-nzdm-1.json"
+    },
+    {
+      "label": "Interest charged b",
+      "spec": "interest-charged-nzdm-1.json"
+    },
+    {
+      "label": "Scheduled repayments b",
+      "spec": "scheduled-repayments-nzdm-1.json"
+    },
+    {
+      "label": "Repayment of loan in full b",
+      "spec": "repayment-of-loan-in-full-nzdm-1.json"
+    },
+    {
+      "label": "Other excess repayment b",
+      "spec": "other-excess-repayment-nzdm.json"
+    },
+    {
+      "label": "Repayment deficiencies b",
+      "spec": "repayment-deficiencies-nzdm-1.json"
+    },
+    {
+      "label": "Net write-offs b",
+      "spec": "net-write-offs-nzdm-1.json"
+    },
+    {
+      "label": "Other adjustments b",
+      "spec": "other-adjustments-nzdm-1.json"
+    },
+    {
+      "label": "Opening position b",
+      "spec": "opening-position-net-2.json"
+    },
+    {
+      "label": "Drawdowns b",
+      "spec": "drawdowns-nzdm-2.json"
+    },
+    {
+      "label": "Interest charged b",
+      "spec": "interest-charged-nzdm-2.json"
+    },
+    {
+      "label": "Scheduled repayments b",
+      "spec": "scheduled-repayments-nzdm-2.json"
+    },
+    {
+      "label": "Repayment of loan in full b",
+      "spec": "repayment-of-loan-in-full-nzdm-2.json"
+    },
+    {
+      "label": "Other excess repayments b",
+      "spec": "other-excess-repayments-nzdm-1.json"
+    },
+    {
+      "label": "Repayment deficiencies b",
+      "spec": "repayment-deficiencies-nzdm-2.json"
+    },
+    {
+      "label": "Net write-offs b",
+      "spec": "net-write-offs-nzdm-2.json"
+    },
+    {
+      "label": "Other adjustments b",
+      "spec": "other-adjustments-nzdm-2.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "hc35.png",
+  "image_alt": "Residential mortgages Reserve Bank of New Zealand (RBNZ): Opening position b"
+}

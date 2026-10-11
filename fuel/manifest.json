@@ -1,0 +1,20 @@
+{
+  "name": "fuel",
+  "title": "Fuel",
+  "source": "Public fuel-price series",
+  "note": "Tracks fuel prices over time, a practical indicator of transport costs for households, visitors and tourism operators.",
+  "updated": "2026-10-04",
+  "views": [
+    {
+      "label": "USD per Barrel",
+      "spec": "usd-per-barrel.json"
+    },
+    {
+      "label": "NZD per Barrel",
+      "spec": "nzd-per-barrel.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "fuel.png",
+  "image_alt": "Fuel Public fuel-price series: USD per Barrel"
+}

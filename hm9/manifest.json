@@ -1,0 +1,104 @@
+{
+  "name": "hm9",
+  "title": "Labour market",
+  "source": "RBNZ and Stats NZ series",
+  "note": "Brings together employment, participation, hours and wages to show how work and earnings are changing.",
+  "updated": "2026-10-04",
+  "views": [
+    {
+      "label": "Labour force participation rate\t - % s.a. b",
+      "spec": "labour-force-participation-rate-s-a-total.json"
+    },
+    {
+      "label": "Unemployment rate\t - % s.a. b",
+      "spec": "unemployment-rate-s-a-total.json"
+    },
+    {
+      "label": "Not in labour force - 000s s.a. b",
+      "spec": "not-in-labour-force-000s-s-a-000-s.json"
+    },
+    {
+      "label": "Working-age population - 000s s.a. b",
+      "spec": "working-age-population-000s-s-a-000-s.json"
+    },
+    {
+      "label": "Labour cost index (LCI) - Index b",
+      "spec": "labour-cost-index-lci-index-index.json"
+    },
+    {
+      "label": "Labour cost index (LCI) - y/y% b",
+      "spec": "labour-cost-index-lci-y-y.json"
+    },
+    {
+      "label": "Not in labour force - y/y% b",
+      "spec": "not-in-labour-force-y-y.json"
+    },
+    {
+      "label": "Working-age population - y/y% b",
+      "spec": "working-age-population-y-y-total.json"
+    },
+    {
+      "label": "Labour force - Employed (y/y%) b",
+      "spec": "labour-force-employed-y-y-total.json"
+    },
+    {
+      "label": "Labour force - Unemployed (y/y%) b",
+      "spec": "labour-force-unemployed-y-y-total.json"
+    },
+    {
+      "label": "Labour force - Total (y/y%) b",
+      "spec": "labour-force-total-y-y-total.json"
+    },
+    {
+      "label": "Labour force - Employed (000s s.a.) b",
+      "spec": "labour-force-employed-000s-s-a-000-s.json"
+    },
+    {
+      "label": "Labour force - Unemployed (000s s.a.) b",
+      "spec": "labour-force-unemployed-000s-s-a-000-s.json"
+    },
+    {
+      "label": "Labour force - Total (000s s.a.) b",
+      "spec": "labour-force-total-000s-s-a-000-s.json"
+    },
+    {
+      "label": "Private sector wages - $ b",
+      "spec": "private-sector-wages.json"
+    },
+    {
+      "label": "Private sector wages - q/q% b",
+      "spec": "private-sector-wages-q-q.json"
+    },
+    {
+      "label": "Private sector wages - y/y% b",
+      "spec": "private-sector-wages-y-y.json"
+    },
+    {
+      "label": "Public sector wages - $ b",
+      "spec": "public-sector-wages.json"
+    },
+    {
+      "label": "Public sector wages - q/q% b",
+      "spec": "public-sector-wages-q-q.json"
+    },
+    {
+      "label": "Public sector wages - y/y% b",
+      "spec": "public-sector-wages-y-y.json"
+    },
+    {
+      "label": "Average hourly earnings (ordinary time and overtime)\t - $ b",
+      "spec": "average-hourly-earnings-ordinary-time-and-overtime.json"
+    },
+    {
+      "label": "Average hourly earnings (ordinary time and overtime)\t - q/q% b",
+      "spec": "average-hourly-earnings-ordinary-time-and-overtime-q-q.json"
+    },
+    {
+      "label": "Average hourly earnings (ordinary time and overtime)\t - y/y% b",
+      "spec": "average-hourly-earnings-ordinary-time-and-overtime-y-y.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "hm9.png",
+  "image_alt": "Labour market RBNZ and Stats NZ series: Labour force participation rate - % s.a. b"
+}

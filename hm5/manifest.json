@@ -1,0 +1,24 @@
+{
+  "name": "hm5",
+  "title": "Economic growth",
+  "source": "RBNZ and Stats NZ series",
+  "note": "Compare real GDP growth, the current account as a share of GDP, and the household saving rate, all in percent.",
+  "updated": "2026-10-04",
+  "views": [
+    {
+      "label": "GDP growth",
+      "spec": "gdp-growth.json"
+    },
+    {
+      "label": "Current account",
+      "spec": "current-account.json"
+    },
+    {
+      "label": "Household saving",
+      "spec": "household-saving.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "hm5.png",
+  "image_alt": "Economic growth Real GDP: annual % change. Source: RBNZ and Stats NZ"
+}

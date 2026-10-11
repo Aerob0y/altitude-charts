@@ -1,0 +1,7 @@
+origin,destination,flights,seats,airline
+AKL,ZQN,3600,612000,Example Domestic
+SYD,ZQN,1400,252000,Example Tasman
+MEL,ZQN,1000,180000,Example Tasman
+BNE,ZQN,600,108000,Example Tasman
+OOL,ZQN,300,54000,Example Tasman
+CBR,ZQN,150,27000,Example Tasman
