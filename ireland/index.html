@@ -54,7 +54,9 @@
     .topic header, .topic footer, .controls { flex: 0 0 auto; min-width: 0; }
     .topic h1 { margin: 0 0 6px; font: 28px/1.1 Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
     #note { margin: 0; color: #48605e; font-size: 13px; line-height: 1.45; max-width: 900px; }
-    .controls { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 13px; }
+    #real-control { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+    #real-control[hidden] { display: none; }
     #picks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; min-width: 0; max-width: 100%; }
     .series-picker { position: relative; display: block; min-width: 0; max-width: 100%; }
     .series-button { display: block; max-width: 100%; width: 520px; padding: 8px 10px; border: 1px solid #c4d3cd; background: white; color: inherit; font: inherit; text-align: left; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -100,6 +102,7 @@
       <p><span id="intro">Economic, tourism and housing data from public sources, updated as new figures are released.</span> Pick a topic from the menus above or a card below.</p>
       <p class="doors" id="doors" hidden></p>
       <p class="doors"><a href="../route-map/">Aviation route map</a> (Beta) · Open your route table and download a map.</p>
+      <p class="doors"><a href="../route-map-projections/">Route map projections</a> (Trial) · The same tool with polar, globe and world views.</p>
       <p class="doors"><a href="../catchments/">Airport catchments</a> (Beta) · Who lives closer to which airport, by road.</p>
       <div id="groups"></div>
     </section>
@@ -109,6 +112,7 @@
         <span id="view-control"><label for="view">Chart view</label> <select id="view"></select></span>
         <span id="picks" hidden></span>
         <span id="range-control" hidden><label for="range" id="range-label">Axis range</label> <select id="range"></select></span>
+        <label id="real-control" hidden><input type="checkbox" id="real"> Today's dollars</label>
       </div>
       <section class="chart-area" aria-label="Interactive chart">
         <img id="preview" width="1200" height="600" alt="" hidden>
@@ -134,7 +138,9 @@
       const chart = $("chart"), preview = $("preview"), status = $("status"), viewSelect = $("view");
       let catalogue = [], manifest, folder, activeSpec, requestNumber = 0, fetchController, resizeFrame;
       let wasNarrow = innerWidth < 600;
-      let plotlyReady, pickReady;
+      let plotlyReady, pickReady, realReady, cpi;
+      const realBox = $("real");
+      let realOn = false;
 
       function loadPlotly() {
         plotlyReady ??= new Promise((resolve, reject) => {
@@ -318,6 +324,11 @@
         if (!Array.isArray(spec.data)) throw new Error("Invalid chart");
         const config = {...spec.config, responsive: true};
         if (innerWidth < 600) config.displayModeBar = false;
+        // real.js rescales dollar series when "Today's dollars" is ticked; other charts grey it out.
+        const adjustable = !!cpi && AltitudeReal.adjustable(spec);
+        realBox.disabled = !adjustable;
+        $("real-control").title = adjustable ? "Adjust dollar amounts for inflation (CPI)" : "Only dollar amounts can be adjusted";
+        if (adjustable && realOn) spec = AltitudeReal.apply(spec, cpi);
         const layout = frameLayout(spec);
         const limit = rangeLimit();
         if (limit) layout.yaxis = {...layout.yaxis, range: [-limit, limit], autorange: false};
@@ -402,13 +413,44 @@
         if (number !== requestNumber) return;
         const chosen = AltitudePick.setup($("picks"), manifest, requested, (picks, slugs) => {
           const query = isPickDefault(picks) ? "" : "?series=" + slugs.map(encodeURIComponent).join(",");
-          history.replaceState(null, "", "#" + name + query);
+          history.replaceState(null, "", withReal("#" + name + query));
           loadPicks(picks, ++requestNumber);
         });
         $("view-control").hidden = true;
         $("picks").hidden = false;
         $("controls").hidden = false;
         return loadPicks(chosen, number);
+      }
+
+      // A manifest with a real block ships cpi.json; the toggle stays in the link as real=1.
+      async function setupReal() {
+        if (!manifest.real) return;
+        try {
+          realReady ??= new Promise((resolve, reject) => {
+            const script = document.createElement("script");
+            script.src = assetUrl("real.js");
+            script.onload = resolve;
+            script.onerror = () => { realReady = undefined; reject(new Error("Chart helper is unavailable")); };
+            document.head.append(script);
+          });
+          await realReady;
+          cpi = await readJson(manifest.real.cpi, folder);
+        } catch (error) {
+          cpi = undefined;
+          return;
+        }
+        realBox.checked = realOn;
+        $("real-control").hidden = false;
+        $("controls").hidden = false;
+      }
+
+      // Adds or drops real=1 on a topic link.
+      function withReal(hash) {
+        const [path, query] = hash.split("?");
+        const params = new URLSearchParams(query || "");
+        if (realOn && cpi) params.set("real", "1"); else params.delete("real");
+        const text = params.toString();
+        return path + (text ? "?" + text : "");
       }
 
       function addDownload(label, path) {
@@ -420,7 +462,7 @@
         $("downloads").append(link);
       }
 
-      async function showTopic(name, view, series) {
+      async function showTopic(name, view, series, real) {
         const number = ++requestNumber;
         const entry = catalogue.find(item => item.name === name);
         if (!entry) return showHome();
@@ -429,6 +471,8 @@
         $("topic").hidden = false;
         markCurrent(name);
         activeSpec = null;
+        cpi = undefined;
+        realOn = real;
         if (window.Plotly) Plotly.purge(chart);
         folder = new URL(name + "/", root);
         $("title").textContent = entry.title || name;
@@ -440,6 +484,7 @@
         $("controls").hidden = true;
         $("view-control").hidden = false;
         $("picks").hidden = true;
+        $("real-control").hidden = true;
         $("range-control").hidden = true;
         preview.hidden = true;
         status.textContent = "Loading chart…";
@@ -460,6 +505,8 @@
             status.hidden = true;
             preview.onerror = () => { preview.hidden = true; if (!activeSpec) status.hidden = false; };
           }
+          await setupReal();
+          if (number !== requestNumber) return;
           setupRange();
           if (manifest.pick) return await setupPicks(name, series, number);
           manifest.views.forEach((item, index) => {
@@ -468,7 +515,8 @@
             option.textContent = item.label;
             viewSelect.append(option);
           });
-          $("controls").hidden = manifest.views.length < 2;
+          $("controls").hidden = manifest.views.length < 2 && !cpi;
+          $("view-control").hidden = manifest.views.length < 2;
           const selected = manifest.views.findIndex(item => slugOf(item) === view);
           viewSelect.value = String(selected < 0 ? 0 : selected);
           await loadView(Number(viewSelect.value), number);
@@ -489,15 +537,22 @@
         closeMenus();
         const [name, query] = decodeURIComponent(location.hash.slice(1)).split("?");
         const params = new URLSearchParams(query || "");
-        if (name) showTopic(name, params.get("view"), (params.get("series") || "").split(",").filter(Boolean)); else showHome();
+        if (name) showTopic(name, params.get("view"), (params.get("series") || "").split(",").filter(Boolean), params.get("real") === "1");
+        else showHome();
       }
 
       viewSelect.addEventListener("change", () => {
         const index = Number(viewSelect.value);
         const slug = slugOf(manifest.views[index]);
         const name = location.hash.slice(1).split("?")[0];
-        history.replaceState(null, "", "#" + name + (index ? "?view=" + encodeURIComponent(slug) : ""));
+        history.replaceState(null, "", withReal("#" + name + (index ? "?view=" + encodeURIComponent(slug) : "")));
         loadView(index, ++requestNumber);
+      });
+
+      realBox.addEventListener("change", () => {
+        realOn = realBox.checked;
+        history.replaceState(null, "", withReal(location.hash));
+        if (activeSpec) draw(activeSpec, chart.layout?.xaxis?.range).catch(showError);
       });
 
       addEventListener("resize", () => {

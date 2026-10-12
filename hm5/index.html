@@ -15,7 +15,9 @@
     header, footer, .controls { flex: 0 0 auto; min-width: 0; }
     h1 { margin: 0 0 6px; font: 28px/1.1 Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
     #note { margin: 0; color: #48605e; font-size: 13px; line-height: 1.45; }
-    .controls { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 13px; }
+    #real-control { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+    #real-control[hidden] { display: none; }
     #picks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; min-width: 0; max-width: 100%; }
     .series-picker { position: relative; display: block; min-width: 0; max-width: 100%; }
     .series-button { display: block; max-width: 100%; width: 520px; padding: 8px 10px; border: 1px solid #c4d3cd; background: white; color: inherit; font: inherit; text-align: left; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -49,10 +51,11 @@
     <div class="controls" id="controls" hidden>
       <span id="view-control"><label for="view">Chart view</label> <select id="view"></select></span>
       <span id="picks" hidden></span>
+      <label id="real-control" hidden><input type="checkbox" id="real"> Today's dollars</label>
       <span id="range-control" hidden><label for="range" id="range-label">Axis range</label> <select id="range"></select></span>
     </div>
     <section class="chart-area" aria-label="Interactive chart">
-      <img id="preview" width="1200" height="600" alt="" hidden>
+      <img id="preview" width="1200" height="600" src="hm5.png" alt="Economic growth" >
       <div id="chart"></div><div id="status" role="status" aria-live="polite">Loading chart…</div>
     </section>
     <footer>
@@ -88,6 +91,8 @@
       let fetchController;
       let resizeFrame;
       let wasNarrow = innerWidth < 600;
+      const realBox = document.getElementById("real");
+      let cpi, realOn = new URLSearchParams(location.search).get("real") === "1";
 
       function assetUrl(path) {
         if (typeof path !== "string" || !path) throw new Error("Missing chart asset");
@@ -146,6 +151,11 @@
         // The toolbar covers the chart title on phones.
         const config = {...spec.config, responsive: true};
         if (innerWidth < 600) config.displayModeBar = false;
+        // real.js rescales dollar series when "Today's dollars" is ticked; other charts grey it out.
+        const adjustable = !!cpi && AltitudeReal.adjustable(spec);
+        realBox.disabled = !adjustable;
+        realBox.parentElement.title = adjustable ? "Adjust dollar amounts for inflation (CPI)" : "Only dollar amounts can be adjusted";
+        if (adjustable && realOn) spec = AltitudeReal.apply(spec, cpi);
         const layout = frameLayout(spec);
         const limit = rangeLimit();
         if (limit) layout.yaxis = {...layout.yaxis, range: [-limit, limit], autorange: false};
@@ -254,6 +264,34 @@
         return loadPicks(chosen);
       }
 
+      // A manifest with a real block ships cpi.json; the toggle stays in the link as ?real=1.
+      async function setupReal() {
+        if (!manifest.real) return;
+        try {
+          await new Promise((resolve, reject) => {
+            const script = document.createElement("script");
+            script.src = assetUrl("real.js");
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.append(script);
+          });
+          cpi = await readJson(manifest.real.cpi);
+        } catch (error) {
+          cpi = undefined;
+          return;
+        }
+        realBox.checked = realOn;
+        realBox.addEventListener("change", () => {
+          realOn = realBox.checked;
+          const url = new URL(location.href);
+          if (realOn) url.searchParams.set("real", "1"); else url.searchParams.delete("real");
+          history.replaceState(null, "", url);
+          if (activeSpec) draw(activeSpec, chart.layout?.xaxis?.range).catch(showError);
+        });
+        document.getElementById("real-control").hidden = false;
+        document.getElementById("controls").hidden = false;
+      }
+
       function addDownload(label, path) {
         if (!path) return;
         const link = document.createElement("a");
@@ -280,6 +318,7 @@
             preview.hidden = false;
             preview.onerror = () => { preview.hidden = true; if (!activeSpec) status.hidden = false; };
           }
+          await setupReal();
           setupRange();
           if (manifest.pick) {
             return await setupPicks((new URLSearchParams(location.search).get("series") || "").split(",").filter(Boolean));
@@ -290,7 +329,8 @@
             option.textContent = view.label;
             viewSelect.append(option);
           });
-          document.getElementById("controls").hidden = manifest.views.length < 2;
+          document.getElementById("controls").hidden = manifest.views.length < 2 && !cpi;
+          document.getElementById("view-control").hidden = manifest.views.length < 2;
           const requested = new URLSearchParams(location.search).get("view");
           const selected = manifest.views.findIndex(view =>
             view.spec.replace(/\.json$/i, "").split("/").pop() === requested);

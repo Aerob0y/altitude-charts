@@ -1,0 +1,24 @@
+{
+  "name": "ie_airports",
+  "title": "Ireland: airport passengers",
+  "source": "Central Statistics Office Ireland (CSO) · TAQ01",
+  "note": "Passengers through Dublin, Cork, Shannon, Knock and Kerry airports each quarter. Compare the airports in passengers or against the same quarter of 2019, or see the annual % change.",
+  "updated": "2026-10-09",
+  "views": [
+    {
+      "label": "Passengers by airport",
+      "spec": "passengers-by-airport.json"
+    },
+    {
+      "label": "Compared with 2019",
+      "spec": "compared-with-2019.json"
+    },
+    {
+      "label": "Annual % change",
+      "spec": "annual-change.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "ie_airports.png",
+  "image_alt": "Irish airport passengers Passengers per quarter · Source: CSO"
+}

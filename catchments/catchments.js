@@ -11,7 +11,8 @@
   const SOURCE = { nz: "Stats NZ population; OpenRouteService drive times; Altitude catchments (Beta)",
     au: "ABS population; OpenRouteService drive times; Altitude catchments (Beta)" };
   const cache = {};
-  let data, shapes, map, areaLayer, airportLayer, rows = [], loadNumber = 0;
+  let data, shapes, map, areaLayer, airportLayer, catchmentLayer, rows = [], loadNumber = 0;
+  let outlineKey, outlineGeometry;
 
   const escape = text => String(text ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const people = n => Math.round(n).toLocaleString("en-NZ");
@@ -67,6 +68,7 @@
       return;
     }
     if (number !== loadNumber) return;
+    outlineKey = null;
     $("airport").replaceChildren(...data.airports.map(a => new Option(`${a.name} (${a.code})`, a.code)));
     const codes = data.airports.map(a => a.code);
     setAirport(codes.includes(airport) ? airport : (codes.includes(DEFAULT_AIRPORT[country]) ? DEFAULT_AIRPORT[country] : codes[0]));
@@ -146,11 +148,24 @@
       filter: f => byIndex.has(f.properties.i),
       style: f => {
         const r = byIndex.get(f.properties.i), fill = scale.colour(r);
-        return { fillColor: fill || "#ffffff", fillOpacity: fill ? 0.7 : 0, color: r.included ? "#E5AD3D" : "#888888",
-          weight: r.included ? 2 : 0.3, opacity: 1 };
+        return { fillColor: fill || "#ffffff", fillOpacity: fill ? 0.7 : 0, color: "#888888",
+          stroke: $("block-borders").checked, weight: 0.3, opacity: 1 };
       },
       onEachFeature: (f, layer) => layer.bindPopup(() => popup(byIndex.get(f.properties.i), result.airport))
     }).addTo(map);
+    catchmentLayer?.remove();
+    if ($("catchment-outline").checked) {
+      const included = new Set(rows.filter(r => r.included).map(r => r.i));
+      const key = [...included].join(",");
+      if (key !== outlineKey) {
+        outlineGeometry = CatchmentOutline.merge(data.outlines.features, included);
+        outlineKey = key;
+      }
+      catchmentLayer = L.geoJSON(outlineGeometry, {
+        style: { color: "#E5AD3D", weight: 2, fill: false, interactive: false },
+        interactive: false
+      }).addTo(map);
+    }
     airportLayer?.remove();
     airportLayer = L.layerGroup(data.airports.filter(a => a.code === result.airport || result.competitors.includes(a.code)).map(a =>
       L.circleMarker([a.lat, a.lon], { radius: a.code === result.airport ? 8 : 6, color: "#ffffff", weight: 2,
@@ -185,7 +200,8 @@
     const box = $("legend");
     const gradient = `linear-gradient(to right, ${scale.stops.join(", ")})`;
     box.innerHTML = `<span>${escape(scale.legend[0])}</span><span class="ramp" style="background:${gradient}"></span>` +
-      `<span>${escape(scale.legend[1])}</span><span class="outline"></span><span>In catchment</span>`;
+      `<span>${escape(scale.legend[1])}</span>` +
+      ($("catchment-outline").checked ? '<span class="outline"></span><span>Catchment boundary</span>' : "");
     box.title = style === "density" ? "Population density (log scale)" : "Minutes saved compared with the nearest competitor";
   }
 
@@ -224,7 +240,9 @@
   }
 
   function start() {
-    if (!window.L) { $("summary").textContent = "The map library could not be loaded. Please try again later."; return; }
+    if (!window.L || !window.polygonClipping || !window.CatchmentOutline) {
+      $("summary").textContent = "The map library could not be loaded. Please try again later."; return;
+    }
     if (matchMedia("(max-width: 799px)").matches) $("options").open = false;
     const params = new URLSearchParams(location.search);
     const country = ["nz", "au"].includes(params.get("country")) ? params.get("country") : "nz";
@@ -233,6 +251,7 @@
     $("airport").addEventListener("change", () => { setAirport($("airport").value); update(true); });
     for (const id of ["competitors", "regions"]) $(id).addEventListener("change", () => update(id === "regions"));
     $("style").addEventListener("change", () => update(false));
+    for (const id of ["block-borders", "catchment-outline"]) $(id).addEventListener("change", () => update(false));
     for (const id of ["threshold", "radius"]) $(id).addEventListener("change", () => update(id === "radius"));
     $("csv").addEventListener("click", downloadCsv);
     setCountry(country, params.get("airport"));

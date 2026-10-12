@@ -83,15 +83,46 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "hb1.png",
   "image_alt": "Exchange rates Reserve Bank of New Zealand (RBNZ): NZD/USD",
   "pick": {
-    "labels": ["Currency", "Second currency"],
+    "labels": [
+      "Currency",
+      "Second currency"
+    ],
     "title": "Exchange rates",
     "subtitle": "Reserve Bank of New Zealand (RBNZ)",
-    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
+    "palette": [
+      "#2A5CB8",
+      "#D9692E",
+      "#13A08C",
+      "#B04E92",
+      "#6B7280"
+    ],
     "margin_r": 30,
-    "default": [0],
-    "dims": ["NZD to $USD", "TWI", "NZD to £GBP", "NZD to $AUD", "NZD to ¥JPY", "NZD to €EUR", "NZD to $CAD", "NZD to ₩KRW", "NZD to ¥CNY", "NZD to RM", "NZD to $HK", "NZD to p (IDR)", "NZD to B (THB)", "NZD to $SGD", "NZD to $NT", "NZD to ₹INR", "NZD to ₱PHP", "NZD to ₫VND", "TWI (H)"]
+    "default": [
+      0
+    ],
+    "dims": [
+      "NZD to $USD",
+      "TWI",
+      "NZD to £GBP",
+      "NZD to $AUD",
+      "NZD to ¥JPY",
+      "NZD to €EUR",
+      "NZD to $CAD",
+      "NZD to ₩KRW",
+      "NZD to ¥CNY",
+      "NZD to RM",
+      "NZD to $HK",
+      "NZD to p (IDR)",
+      "NZD to B (THB)",
+      "NZD to $SGD",
+      "NZD to $NT",
+      "NZD to ₹INR",
+      "NZD to ₱PHP",
+      "NZD to ₫VND",
+      "TWI (H)"
+    ]
   }
 }

@@ -123,7 +123,7 @@
               return `${i ? "L" : "M"}${x.toFixed(1)},${y.toFixed(1)}`;
             }).join("") + "Z";
           }
-          geography.append(make("path", { d, fill: light ? "#152e40" : "#d6e2e9", stroke: light ? "#2c495d" : "#acbfcd", "stroke-width": .7, "fill-rule": "evenodd" }));
+          geography.append(make("path", { d, fill: $("country-colour").value, stroke: light ? "#2c495d" : "#acbfcd", "stroke-width": .7, "fill-rule": "evenodd" }));
         }
       }
       const max = metric === "equal" ? 1 : Math.max(...routes.map(r => r[metric]));

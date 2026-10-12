@@ -40,6 +40,10 @@ implied. `sample.csv` and `sample.xlsx` use invented annual figures.
 
 ## Map and export
 
+Choose route, country and background colours independently in Presentation.
+The country colour fills all land and is kept when changing the background.
+The preview and both downloads use the selected colours.
+
 Paths follow great circles, not actual flight tracks. The regional projection
 adjusts longitude scale for the view's central latitude. Automatic bounds fit
 the complete paths, including crossings of the date line. World and Australia/

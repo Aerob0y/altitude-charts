@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="catchments.css">
   <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script defer src="vendor/polygon-clipping.min.js"></script>
+  <script defer src="outline.js"></script>
   <script defer src="catchments.js"></script>
 </head>
 <body>
@@ -45,8 +47,13 @@
             <div><label for="threshold">Minutes saved to count</label><input id="threshold" type="number" min="0" max="240" step="5" value="0"></div>
             <div><label for="radius">Study radius (km)</label><input id="radius" type="number" min="1" max="400" step="10" value="400"></div>
           </div>
-          <p class="hint">Areas within the radius (straight line) of the airport are shown. Gold outlines mark areas where
+          <fieldset><legend>Map lines</legend><div class="ticks">
+            <label><input id="block-borders" type="checkbox" checked> Show block borders</label>
+            <label><input id="catchment-outline" type="checkbox" checked> Show catchment outline</label>
+          </div></fieldset>
+          <p class="hint">Areas within the radius (straight line) of the airport are shown. The gold outline surrounds the combined areas where
             the airport is at least the chosen number of minutes closer by road than every selected competitor.</p>
+          <p class="hint">The outline uses a 150 m display margin to close small gaps in the saved boundaries. Totals use the original areas.</p>
         </form>
       </details>
       <section class="result" aria-label="Catchment map">

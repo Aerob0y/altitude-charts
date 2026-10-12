@@ -15,6 +15,10 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
-  "image_alt": "Jet fuel price US Energy Information Administration (EIA): USD per Barrel"
+  "image": "fuel.png",
+  "image_alt": "Jet fuel price US Energy Information Administration (EIA): USD per Barrel",
+  "real": {
+    "cpi": "cpi.json",
+    "label": "June 2026 prices"
+  }
 }
