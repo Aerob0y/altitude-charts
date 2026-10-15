@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Altitude chart</title>
   <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../topics.css">
+  <script defer src="../topics.js"></script>
   <link rel="stylesheet" href="export_options.css">
   <link rel="stylesheet" href="phone_chart.css">
   <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; width: 100%; height: 100%; }
-    body { background: #fbfaf7; color: #142e2c; font-family: Arial, sans-serif; }
-    .page { height: 100%; min-height: 480px; padding: 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    body { display: flex; flex-direction: column; background: #fbfaf7; color: #142e2c; font-family: Arial, sans-serif; }
+    .page { flex: 1; min-height: 480px; padding: 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
     header, footer, .controls { flex: 0 0 auto; min-width: 0; }
     h1 { margin: 0 0 6px; font: 28px/1.1 Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
     #note { margin: 0; color: #48605e; font-size: 13px; line-height: 1.45; }
@@ -55,7 +57,7 @@
       <span id="range-control" hidden><label for="range" id="range-label">Axis range</label> <select id="range"></select></span>
     </div>
     <section class="chart-area" aria-label="Interactive chart">
-      <img id="preview" width="1200" height="600" src="hm8.png" alt="Overseas trade" >
+      <img id="preview" width="1200" height="600" alt="" hidden>
       <div id="chart"></div><div id="status" role="status" aria-live="polite">Loading chart…</div>
     </section>
     <footer>

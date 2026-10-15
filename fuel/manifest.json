@@ -15,7 +15,7 @@
     }
   ],
   "data": "data.csv",
-  "image": "fuel.png",
+  "image": null,
   "image_alt": "Jet fuel price US Energy Information Administration (EIA): USD per Barrel",
   "real": {
     "cpi": "cpi.json",

@@ -8,7 +8,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hb1/index.html",
-      "image": "hb1/hb1.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -20,7 +20,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hb2/index.html",
-      "image": "hb2/hb2.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -32,7 +32,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hc35/index.html",
-      "image": "hc35/hc35.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -44,7 +44,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm1/index.html",
-      "image": "hm1/hm1.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -56,7 +56,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm2/index.html",
-      "image": "hm2/hm2.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -68,7 +68,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm3/index.html",
-      "image": "hm3/hm3.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -80,7 +80,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm8/index.html",
-      "image": "hm8/hm8.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -92,7 +92,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm9/index.html",
-      "image": "hm9/hm9.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -104,7 +104,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm14/index.html",
-      "image": "hm14/hm14.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -116,7 +116,7 @@
       "target": "fuel",
       "updated": "2026-10-12",
       "page": "fuel/index.html",
-      "image": "fuel/fuel.png",
+      "image": null,
       "site": "nz",
       "menu": "Tourism & Migration"
     },
@@ -128,7 +128,7 @@
       "target": "cso",
       "updated": "2026-10-09",
       "page": "ndm01/index.html",
-      "image": "ndm01/ndm01.png",
+      "image": null,
       "site": "ireland",
       "menu": "Housing"
     },
@@ -140,7 +140,7 @@
       "target": "ect",
       "updated": "2026-10-04",
       "page": "ect/index.html",
-      "image": "ect/ect.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -152,7 +152,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm5/index.html",
-      "image": "hm5/hm5.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -164,7 +164,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "yield/index.html",
-      "image": "yield/yield.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -176,7 +176,7 @@
       "target": "adp",
       "updated": "2026-10-09",
       "page": "adp/index.html",
-      "image": "adp/adp.png",
+      "image": null,
       "site": "nz",
       "menu": "Tourism & Migration"
     },
@@ -188,7 +188,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hs32/index.html",
-      "image": "hs32/hs32.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -200,7 +200,7 @@
       "target": "bond",
       "updated": "2026-10-04",
       "page": "bond/index.html",
-      "image": "bond/bond.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -212,7 +212,7 @@
       "target": "rbnz",
       "updated": "2026-10-04",
       "page": "hm10/index.html",
-      "image": "hm10/hm10.png",
+      "image": null,
       "site": "nz",
       "menu": "Economic"
     },
@@ -224,7 +224,7 @@
       "target": "cso",
       "updated": "2026-10-09",
       "page": "ie_labour/index.html",
-      "image": "ie_labour/ie_labour.png",
+      "image": null,
       "site": "ireland",
       "menu": "Economic"
     },
@@ -236,7 +236,7 @@
       "target": "cso",
       "updated": "2026-10-09",
       "page": "ie_airports/index.html",
-      "image": "ie_airports/ie_airports.png",
+      "image": null,
       "site": "ireland",
       "menu": "Aviation"
     }
@@ -250,30 +250,11 @@
       "menus": [
         {
           "label": "Economic",
-          "topics": [
-            "hb1",
-            "hb2",
-            "yield",
-            "hc35",
-            "hm1",
-            "hm2",
-            "ect",
-            "hm3",
-            "hm5",
-            "hm8",
-            "hm9",
-            "hm10",
-            "hm14",
-            "hs32",
-            "bond"
-          ]
+          "topics": ["hb1", "hb2", "yield", "hc35", "hm1", "hm2", "ect", "hm3", "hm5", "hm8", "hm9", "hm10", "hm14", "hs32", "bond"]
         },
         {
           "label": "Tourism & Migration",
-          "topics": [
-            "adp",
-            "fuel"
-          ]
+          "topics": ["adp", "fuel"]
         }
       ]
     },
@@ -285,21 +266,15 @@
       "menus": [
         {
           "label": "Economic",
-          "topics": [
-            "ie_labour"
-          ]
+          "topics": ["ie_labour"]
         },
         {
           "label": "Housing",
-          "topics": [
-            "ndm01"
-          ]
+          "topics": ["ndm01"]
         },
         {
           "label": "Aviation",
-          "topics": [
-            "ie_airports"
-          ]
+          "topics": ["ie_airports"]
         }
       ]
     }
@@ -307,15 +282,9 @@
   "tools": [
     {
       "key": "route-map",
-      "title": "Aviation route map",
+      "title": "Aviation Route Map",
       "page": "route-map/index.html",
-      "beta": true
-    },
-    {
-      "key": "route-map-projections",
-      "title": "Route map projections (trial)",
-      "page": "route-map-projections/index.html",
-      "beta": true
+      "beta": false
     },
     {
       "key": "catchments",

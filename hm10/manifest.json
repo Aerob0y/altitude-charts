@@ -23,36 +23,19 @@
     }
   ],
   "data": null,
-  "image": "hm10.png",
+  "image": null,
   "image_alt": "CoreLogic CoreLogic via RBNZ: House sales and House price index (HPI)",
   "real": {
     "cpi": "cpi.json",
     "label": "June 2026 prices"
   },
   "pick": {
-    "labels": [
-      "Metric 1",
-      "Metric 2"
-    ],
+    "labels": ["Metric 1", "Metric 2"],
     "title": "CoreLogic",
     "subtitle": "CoreLogic series via RBNZ",
-    "palette": [
-      "#2A5CB8",
-      "#D9692E",
-      "#13A08C",
-      "#B04E92",
-      "#6B7280"
-    ],
+    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
     "margin_r": 30,
-    "default": [
-      0,
-      1
-    ],
-    "dims": [
-      "no",
-      "Index",
-      "NZDm",
-      "NZDm (r.)"
-    ]
+    "default": [0, 1],
+    "dims": ["no", "Index", "NZDm", "NZDm (r.)"]
   }
 }

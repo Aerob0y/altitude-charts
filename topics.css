@@ -1,0 +1,12 @@
+.site-nav { position: relative; z-index: 100; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 16px; background: #fff; border-bottom: 1px solid #cbd6d1; color: #142e2c; font-family: Arial, sans-serif; flex: 0 0 auto; }
+.site-nav .site-brand { color: #142e2c; font: 20px/1.2 Georgia, serif; text-decoration: none; }
+.site-topics { position: relative; }
+.site-topics summary { cursor: pointer; color: #164b45; font: 700 14px/1.5 Arial, sans-serif; padding: 4px 8px; }
+.site-topics-panel { position: absolute; right: 0; top: calc(100% + 12px); width: min(680px, calc(100vw - 32px)); max-height: calc(100dvh - 80px); overflow-y: auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; padding: 18px; background: #fff; border: 1px solid #cbd6d1; box-shadow: 0 12px 28px rgba(20,46,44,.12); }
+.site-topics-panel h2 { margin: 0 0 8px; padding: 5px 8px; background: #164b45; color: #fff; font: 700 12px/1.5 Arial, sans-serif; }
+.site-topics-panel ul { padding: 0; margin: 0; list-style: none; }
+.site-topics-panel a { display: block; padding: 7px 8px; color: #142e2c; font: 14px/1.4 Arial, sans-serif; text-decoration: none; overflow-wrap: anywhere; }
+.site-topics-panel a:hover, .site-topics-panel a:focus-visible { background: #d8e5df; }
+.site-topics-panel a[aria-current="page"] { color: #164b45; font-weight: 700; background: #edf3ef; }
+.site-nav :focus-visible { outline: 2px solid #164b45; outline-offset: 3px; }
+@media (max-width: 699px) { .site-topics-panel { grid-template-columns: 1fr; gap: 14px; } }

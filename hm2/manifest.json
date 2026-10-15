@@ -71,47 +71,19 @@
     }
   ],
   "data": "data.csv",
-  "image": "hm2.png",
+  "image": null,
   "image_alt": "Consumption RBNZ and Stats NZ series: Retail trade sales NZDm",
   "real": {
     "cpi": "cpi.json",
     "label": "June 2026 prices"
   },
   "pick": {
-    "labels": [
-      "Consumption",
-      "Compare with"
-    ],
+    "labels": ["Consumption", "Compare with"],
     "title": "Consumption",
     "subtitle": "RBNZ and Stats NZ series",
-    "palette": [
-      "#2A5CB8",
-      "#D9692E",
-      "#13A08C",
-      "#B04E92",
-      "#6B7280"
-    ],
+    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
     "margin_r": 30,
-    "default": [
-      0
-    ],
-    "dims": [
-      "NZDm",
-      "NZDm",
-      "%",
-      "%",
-      "NZDm",
-      "NZDm",
-      "%",
-      "%",
-      "NZDm",
-      "NZDm",
-      "%",
-      "%",
-      "NZDm",
-      "NZDm",
-      "%",
-      "%"
-    ]
+    "default": [0],
+    "dims": ["NZDm", "NZDm", "%", "%", "NZDm", "NZDm", "%", "%", "NZDm", "NZDm", "%", "%", "NZDm", "NZDm", "%", "%"]
   }
 }
