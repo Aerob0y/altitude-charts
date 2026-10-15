@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Altitude charts</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="../topics.css">
-  <script defer src="../topics.js"></script>
   <link rel="stylesheet" href="../export_options.css">
   <link rel="stylesheet" href="../phone_chart.css">
   <style>
@@ -16,6 +14,22 @@
     a { color: #164b45; text-underline-offset: 3px; }
     :focus-visible { outline: 2px solid #164b45; outline-offset: 3px; }
     [hidden] { display: none !important; }
+
+    /* Top bar: same menus as the dashboard */
+    .bar { flex: 0 0 auto; display: flex; align-items: stretch; gap: 4px; padding: 0 16px; background: white; border-bottom: 1px solid #cbd6d1; position: relative; z-index: 10; }
+    .brand { display: flex; align-items: center; margin-right: 18px; font: 20px/1 Georgia, "Times New Roman", serif; letter-spacing: -.02em; color: #142e2c; text-decoration: none; }
+    .menus { display: flex; align-items: stretch; gap: 2px; }
+    .menu { position: relative; display: flex; }
+    .menu > button, .home-link { display: flex; align-items: center; gap: 6px; padding: 14px 12px 12px; border: 0; border-bottom: 2px solid transparent; background: none; color: #142e2c; font: 14px Arial, sans-serif; cursor: pointer; text-decoration: none; }
+    .menu > button::after { content: ""; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; }
+    .menu > button:hover, .home-link:hover { background: #f4f0e8; }
+    .menu.current > button, .home-link.current { border-bottom-color: #164b45; color: #164b45; font-weight: 700; }
+    .list { position: absolute; top: 100%; left: 0; min-width: 240px; margin: 0; padding: 6px 0; list-style: none; background: white; border: 1px solid #cbd6d1; box-shadow: 0 12px 28px rgba(20,46,44,.12); }
+    .list a { display: block; padding: 8px 16px; color: #142e2c; text-decoration: none; font-size: 14px; }
+    .list a:hover, .list a:focus-visible { background: #d8e5df; }
+    .list a[aria-current="page"] { font-weight: 700; color: #164b45; }
+    .list .group { padding: 10px 16px 4px; color: #367069; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .topics-button { display: none; }
 
     main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 
@@ -61,6 +75,13 @@
     #downloads { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 4px; }
 
     @media (max-width: 699px) {
+      .bar { padding: 0 10px; justify-content: space-between; }
+      .menus, .home-link { display: none; }
+      .topics-button { display: flex; align-items: center; gap: 6px; padding: 12px 4px; border: 0; background: none; color: #164b45; font: 700 14px Arial, sans-serif; cursor: pointer; }
+      .bar.open .menus { display: block; position: absolute; top: 100%; left: 0; right: 0; max-height: calc(100vh - 60px); overflow-y: auto; background: white; border-bottom: 1px solid #cbd6d1; box-shadow: 0 12px 28px rgba(20,46,44,.12); }
+      .bar.open .menu { display: block; }
+      .bar.open .menu > button { display: none; }
+      .bar.open .list { display: block !important; position: static; border: 0; box-shadow: none; padding: 0 0 6px; }
       .topic { padding: 10px; gap: 8px; }
       .topic h1 { font-size: 23px; }
       #note { font-size: 12px; }
@@ -69,12 +90,20 @@
   </style>
 </head>
 <body>
+  <nav class="bar" id="bar" aria-label="Topics">
+    <a class="brand" href="#">Altitude</a>
+    <a class="home-link" id="home-link" href="#">Overview</a>
+    <div class="menus" id="menus"></div>
+    <button class="topics-button" id="topics-button" aria-expanded="false" aria-controls="menus">Topics ☰</button>
+  </nav>
   <main>
     <section class="home" id="home" hidden>
       <h1 id="heading">New Zealand and Ireland in charts</h1>
-      <p><span id="intro">Economic, tourism and housing data from public sources, updated as new figures are released.</span> Pick a topic from the Topics menu or a card below.</p>
+      <p><span id="intro">Economic, tourism and housing data from public sources, updated as new figures are released.</span> Pick a topic from the menus above or a card below.</p>
       <p class="doors" id="doors" hidden></p>
-      <p class="doors"><a href="../route-map/">Aviation Route Map</a> · Open your route table and download a map.</p>
+      <p class="doors"><a href="../wacc/">WACC calculator</a> (Beta) · Compare cost of capital scenarios.</p>
+      <p class="doors"><a href="../route-map/">Aviation route map</a> (Beta) · Open your route table and download a map.</p>
+      <p class="doors"><a href="../route-map-projections/">Route map projections</a> (Trial) · The same tool with polar, globe and world views.</p>
       <p class="doors"><a href="../catchments/">Airport catchments</a> (Beta) · Who lives closer to which airport, by road.</p>
       <div id="groups"></div>
     </section>
@@ -171,13 +200,47 @@
       }
 
       function closeMenus() {
-        const topics = document.querySelector(".site-topics");
-        if (topics) topics.open = false;
+        document.querySelectorAll(".menu .list").forEach(list => list.hidden = true);
+        document.querySelectorAll(".menu > button").forEach(button => button.setAttribute("aria-expanded", "false"));
+        $("bar").classList.remove("open");
+        $("topics-button").setAttribute("aria-expanded", "false");
       }
 
       function buildMenus() {
-        const groupsEl = $("groups");
+        const menus = $("menus"), groupsEl = $("groups");
         for (const group of grouped()) {
+          const menu = document.createElement("div");
+          menu.className = "menu";
+          menu.dataset.topics = group.entries.map(entry => entry.name).join(" ");
+          const button = document.createElement("button");
+          button.textContent = group.label;
+          button.setAttribute("aria-expanded", "false");
+          const list = document.createElement("ul");
+          list.className = "list";
+          list.hidden = true;
+          const heading = document.createElement("li");
+          heading.className = "group";
+          heading.textContent = group.label;
+          list.append(heading);
+          for (const entry of group.entries) {
+            const item = document.createElement("li");
+            const link = document.createElement("a");
+            link.href = "#" + entry.name;
+            link.textContent = entry.title || entry.name;
+            link.dataset.topic = entry.name;
+            item.append(link);
+            list.append(item);
+          }
+          button.addEventListener("click", event => {
+            event.stopPropagation();
+            const open = list.hidden;
+            closeMenus();
+            list.hidden = !open;
+            button.setAttribute("aria-expanded", String(open));
+          });
+          menu.append(button, list);
+          menus.append(menu);
+
           const title = document.createElement("h2");
           title.className = "group-title";
           title.textContent = group.label;
@@ -214,6 +277,23 @@
           }
           groupsEl.append(title, grid);
         }
+        document.addEventListener("click", closeMenus);
+        document.addEventListener("keydown", event => { if (event.key === "Escape") closeMenus(); });
+        $("topics-button").addEventListener("click", event => {
+          event.stopPropagation();
+          const open = !$("bar").classList.contains("open");
+          closeMenus();
+          $("bar").classList.toggle("open", open);
+          $("topics-button").setAttribute("aria-expanded", String(open));
+        });
+      }
+
+      function markCurrent(name) {
+        $("home-link").classList.toggle("current", !name);
+        document.querySelectorAll(".menu").forEach(menu => menu.classList.toggle("current", !!name && menu.dataset.topics.split(" ").includes(name)));
+        document.querySelectorAll(".list a").forEach(link => {
+          if (link.dataset.topic === name) link.setAttribute("aria-current", "page"); else link.removeAttribute("aria-current");
+        });
       }
 
       function frameLayout(spec) {
@@ -390,6 +470,7 @@
         loadPlotly();
         $("home").hidden = true;
         $("topic").hidden = false;
+        markCurrent(name);
         activeSpec = null;
         cpi = undefined;
         realOn = real;
@@ -449,6 +530,7 @@
         ++requestNumber;
         $("topic").hidden = true;
         $("home").hidden = false;
+        markCurrent(null);
         document.title = "Altitude charts";
       }
 
@@ -497,6 +579,7 @@
             MENUS = site.menus;
             $("heading").textContent = site.heading;
             $("intro").textContent = site.intro;
+            document.querySelector(".brand").textContent = "Altitude · " + site.label;
           } else MENUS = sites.flatMap(item => item.menus.map(menu => ({...menu, label: sites.length > 1 ? item.label + ": " + menu.label : menu.label})));
           const others = sites.filter(item => item.key !== SITE);
           if (SITE && others.length) {
