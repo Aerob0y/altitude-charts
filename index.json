@@ -114,7 +114,7 @@
       "source": "US Energy Information Administration (EIA)",
       "note": "Daily US Gulf Coast jet fuel spot price, a benchmark for airline fuel costs, in US dollars per barrel or New Zealand dollars per barrel at the RBNZ exchange rate.",
       "target": "fuel",
-      "updated": "2026-10-12",
+      "updated": "2026-10-20",
       "page": "fuel/index.html",
       "image": null,
       "site": "nz",
