@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Posts · CSV Consulting</title>
+<meta name="description" content="Economic updates and aviation posts by Michael Hawley.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./">CSV Consulting</a>
+    <nav class="nav" aria-label="Main">
+      <a href="work.html">Selected work</a>
+      <a href="insights.html">Insights</a>
+      <a href="posts.html" aria-current="page">Posts</a>
+      <a href="about.html">About</a>
+      <a class="btn small-btn" href="contact.html">Discuss a project</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap page-head">
+    <div class="stack">
+      <p class="eyebrow">Posts</p>
+      <h1>Economic updates and aviation notes.</h1>
+      <p class="lead">Short reads on the economy and the aviation industry, most built around a chart from the CSV library.</p>
+    </div>
+  </section>
+  <div class="wrap" style="padding-bottom: 72px">
+    <div class="filters">
+      <div class="chips" role="group" aria-label="Filter by topic">
+          <button class="chip" type="button" data-topic="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-topic="Aviation" aria-pressed="false">Aviation</button>
+          <button class="chip" type="button" data-topic="Economic updates" aria-pressed="false">Economic updates</button>
+      </div>
+      <div style="display: flex; gap: 10px; align-items: center">
+        <label for="year">Year</label>
+        <select id="year" class="chip"><option value="all">All years</option><option value="2025">2025</option><option value="2024">2024</option></select>
+      </div>
+    </div>
+    <ul class="post-list" id="post-list">
+          <li data-topic="Aviation" data-year="2025"><span class="d">23 Aug 2025</span><span><a href="https://csv.co.nz/posts/smallairports">NZ Airports: Small Airports Conference</a><span class="topic">Aviation</span></span></li>
+          <li data-topic="Economic updates" data-year="2025"><span class="d">18 Jul 2025</span><span><a href="https://csv.co.nz/posts/2025july-economic-update">2025 July Economic Update</a><span class="topic">Economic updates</span></span></li>
+          <li data-topic="Economic updates" data-year="2024"><span class="d">30 Aug 2024</span><span><a href="https://csv.co.nz/posts/2024augusteconomicupdate">2024 August Economic Snapshot</a><span class="topic">Economic updates</span></span></li>
+    </ul>
+    <p class="empty" id="empty" hidden>No posts match those filters.</p>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>CSV Consulting is a trading name of CSV Limited.</span>
+    <span>mike@csv.co.nz · Dublin and Queenstown</span>
+  </div>
+</footer>
+<script>
+(function () {
+  var topic = 'all', year = 'all';
+  var chips = document.querySelectorAll('.chip');
+  var rows = document.querySelectorAll('#post-list li');
+  var empty = document.getElementById('empty');
+  function apply() {
+    var shown = 0;
+    rows.forEach(function (r) {
+      var ok = (topic === 'all' || r.dataset.topic === topic) && (year === 'all' || r.dataset.year === year);
+      r.hidden = !ok; if (ok) shown++;
+    });
+    empty.hidden = shown > 0;
+  }
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      topic = c.dataset.topic;
+      chips.forEach(function (o) { o.setAttribute('aria-pressed', o === c ? 'true' : 'false'); });
+      apply();
+    });
+  });
+  document.getElementById('year').addEventListener('change', function (e) { year = e.target.value; apply(); });
+})();
+</script>
+</body>
+</html>
