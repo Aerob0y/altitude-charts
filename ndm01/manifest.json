@@ -23,7 +23,7 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "ndm01.png",
   "image_alt": "New dwelling completions Central Statistics Office Ireland (CSO) · NDM01: All house types, Single house, Scheme house, and Apartment",
   "pick": {
     "labels": ["Dwelling type 1", "Dwelling type 2", "Dwelling type 3", "Dwelling type 4"],

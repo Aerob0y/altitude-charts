@@ -3,7 +3,7 @@
   "title": "Interest rates",
   "source": "Reserve Bank of New Zealand (RBNZ)",
   "note": "Tracks wholesale and retail borrowing rates. Select up to five series to compare changes in borrowing conditions over time.",
-  "updated": "2026-10-15",
+  "updated": "2026-10-20",
   "views": [
     {
       "label": "Official Cash Rate (OCR)",
@@ -47,7 +47,7 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "hb2.png",
   "image_alt": "Interest rates Reserve Bank of New Zealand (RBNZ): Official Cash Rate (OCR), 1 year (swap), 2 year (swap), 5 year (swap), and 10 year (swap)",
   "pick": {
     "labels": ["Rate 1", "Rate 2", "Rate 3", "Rate 4", "Rate 5"],

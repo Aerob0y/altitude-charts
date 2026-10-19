@@ -3,7 +3,7 @@
   "title": "Residential mortgages",
   "source": "Reserve Bank of New Zealand (RBNZ)",
   "note": "Shows mortgage lending across lending groups and loan types, providing context on household borrowing conditions.",
-  "updated": "2026-10-15",
+  "updated": "2026-10-20",
   "views": [
     {
       "label": "All lending: Opening position",
@@ -115,7 +115,7 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "hc35.png",
   "image_alt": "Residential mortgages Reserve Bank of New Zealand (RBNZ): Opening position, Interest charged, and Scheduled repayments (All lending)",
   "real": {
     "cpi": "cpi.json",

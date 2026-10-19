@@ -3,7 +3,7 @@
   "title": "Consumption",
   "source": "RBNZ and Stats NZ series",
   "note": "Describes household spending on goods and services—an important signal of demand and confidence in the economy.",
-  "updated": "2026-10-15",
+  "updated": "2026-10-20",
   "views": [
     {
       "label": "Retail trade sales NZDm",
@@ -71,7 +71,7 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "hm2.png",
   "image_alt": "Consumption RBNZ and Stats NZ series: Retail trade sales NZDm",
   "real": {
     "cpi": "cpi.json",

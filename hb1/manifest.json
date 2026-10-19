@@ -3,7 +3,7 @@
   "title": "Exchange rates",
   "source": "Reserve Bank of New Zealand (RBNZ)",
   "note": "Shows how much foreign currency the New Zealand dollar buys. Use the selectors to compare currencies and the trade-weighted index.",
-  "updated": "2026-10-15",
+  "updated": "2026-10-20",
   "views": [
     {
       "label": "NZD/USD",
@@ -83,7 +83,7 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "hb1.png",
   "image_alt": "Exchange rates Reserve Bank of New Zealand (RBNZ): NZD/USD",
   "pick": {
     "labels": ["Currency", "Second currency"],

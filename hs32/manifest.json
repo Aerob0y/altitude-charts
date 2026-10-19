@@ -3,7 +3,7 @@
   "title": "Banks: loans by product",
   "source": "Reserve Bank of New Zealand (RBNZ)",
   "note": "Breaks registered-bank lending into products and borrower groups to show where credit is growing or contracting.",
-  "updated": "2026-10-15",
+  "updated": "2026-10-20",
   "views": [
     {
       "label": "Totals: Owner occupier property use, Residential investor property use, Personal consumer loans",
@@ -39,7 +39,7 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "hs32.png",
   "image_alt": "Banks: loans by product Totals: Owner occupier property use, Residential investor property use, Personal consumer loans. NZD millions. Source: RBNZ",
   "real": {
     "cpi": "cpi.json",

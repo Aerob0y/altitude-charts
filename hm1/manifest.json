@@ -3,7 +3,7 @@
   "title": "Inflation",
   "source": "RBNZ and Stats NZ series",
   "note": "Measures how prices change over time. Compare up to five headline or component price indexes using a common metric.",
-  "updated": "2026-10-15",
+  "updated": "2026-10-20",
   "views": [
     {
       "label": "Index: Consumers price index (CPI)",
@@ -183,7 +183,7 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "hm1.png",
   "image_alt": "Inflation RBNZ and Stats NZ series: Consumers price index (CPI), Food, Housing and household utilities, and Transportation (Annual % change)",
   "pick": {
     "labels": ["Price index 1", "Price index 2", "Price index 3", "Price index 4", "Price index 5"],

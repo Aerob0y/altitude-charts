@@ -3759,7 +3759,7 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "bond.png",
   "image_alt": "Rental market Geometric Mean Rent, NZD a week: New Zealand. Source: Tenancy Services bond data (MBIE)",
   "pick": {
     "labels": ["Location 1", "Location 2", "Location 3", "Location 4"],

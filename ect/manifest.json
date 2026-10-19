@@ -15,7 +15,7 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "ect.png",
   "image_alt": "Card spending Annual % change in monthly spending. Source: Stats NZ",
   "real": {
     "cpi": "cpi.json",

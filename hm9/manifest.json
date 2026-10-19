@@ -3,7 +3,7 @@
   "title": "Labour market",
   "source": "RBNZ and Stats NZ series",
   "note": "Brings together employment, participation, hours and wages to show how work and earnings are changing.",
-  "updated": "2026-10-15",
+  "updated": "2026-10-20",
   "views": [
     {
       "label": "Labour force participation rate - % s.a.",
@@ -99,7 +99,7 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "hm9.png",
   "image_alt": "Labour market RBNZ and Stats NZ series: Labour force participation rate - % s.a. and Labour cost index (LCI) - y/y%",
   "pick": {
     "labels": ["Metric 1", "Metric 2", "Metric 3", "Metric 4"],
