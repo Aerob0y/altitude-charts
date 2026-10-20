@@ -1,0 +1,16 @@
+{
+  "name": "donut_growth",
+  "title": "Auckland: where new people and homes went",
+  "source": "Stats NZ building consents and 2013/2023 Censuses",
+  "note": "Shares of net population growth and new homes consented over the matching Census window. Areas that lost people contribute negative growth. Census counts are rounded and methods changed between censuses.",
+  "updated": "2026-10-15",
+  "views": [
+    {
+      "label": "Auckland urban area",
+      "spec": "auckland-urban-area.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "donut_growth.png",
+  "image_alt": "Auckland: where new people and homes went Share of net population growth, 2013–2023, and homes consented, March 2013–February 2023"
+}

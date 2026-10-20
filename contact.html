@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Contact · CSV Consulting</title>
+<meta name="description" content="Contact Michael Hawley about an airport pricing, forecasting or capacity project.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/navigation.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="top">
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="CSV Consulting home"><img src="images/csv-logo-ink.png" alt="CSV" width="299" height="236"></a>
+    <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" hidden>
+      <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <nav class="nav" id="main-nav" aria-label="Main">
+        <a href="work.html">Selected work</a>
+        <a href="insights.html">Insights</a>
+        <a href="posts.html">Posts</a>
+        <a href="about.html">About</a>
+        <a class="btn-outline" href="contact.html" aria-current="page">Discuss a project</a>
+    </nav>
+  </div>
+</header>
+<section class="page-head">
+  <div class="wrap">
+    <div class="stack">
+      <p class="kicker">Contact</p>
+      <h1>Tell me about the decision you're facing.</h1>
+      <p class="lead">A few lines is enough: the decision and when it's due. I'll reply with how I'd approach it and what you'd receive.</p>
+      <div class="actions" style="margin-top: 8px"><a class="contact-email" id="email" href="mailto:mike@csv.co.nz">mike@csv.co.nz</a><button class="copy-btn" type="button" id="copy-email" data-copy="mike@csv.co.nz">Copy address</button></div>
+    </div>
+  </div>
+</section>
+</div>
+<main id="main">
+<section class="section">
+  <div class="wrap cols">
+    <div class="main" style="flex: 999 1 520px">
+      <dl class="details">
+        <div><dt>Email</dt><dd><a href="mailto:mike@csv.co.nz">mike@csv.co.nz</a></dd></div>
+        <div><dt>Phone, Ireland</dt><dd>+353 85 168 7860 <span class="small">(within Ireland, 085 168 7860)</span></dd></div>
+        <div><dt>Phone, New Zealand</dt><dd>+64 27 590 4045</dd></div>
+        <div><dt>Based in</dt><dd>Dublin, Ireland. Working with clients in Ireland, New Zealand and Australia.</dd></div>
+      </dl>
+    </div>
+    <div class="side" style="flex: 1 1 320px">
+      <h2 style="font-size: 24px">What helps in a first email</h2>
+      <ol class="steps" style="margin-top: 16px">
+        <li>The decision and who makes it, such as a board, an airline consultation or a regulator</li>
+        <li>When you need an answer</li>
+        <li>What you already have: models, forecasts, data</li>
+      </ol>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <img src="images/csv-logo-ink.png" alt="CSV" width="299" height="236">
+    <span>CSV Consulting is a trading name of CSV Limited.</span>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="work.html">Selected work</a><a href="insights.html">Insights</a><a href="posts.html">Posts</a><a href="about.html">About</a><a href="mailto:mike@csv.co.nz">mike@csv.co.nz</a>
+    </nav>
+    <span>Dublin, Ireland</span>
+  </div>
+</footer>
+<script>
+document.getElementById('copy-email').addEventListener('click', function (e) {
+  var b = e.currentTarget, t = b.getAttribute('data-copy');
+  var done = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy address'; }, 1800); };
+  function selectIt() { var r = document.createRange(); r.selectNodeContents(document.getElementById('email')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Press Ctrl+C to copy'; }
+  try { navigator.clipboard.writeText(t).then(done, selectIt); } catch (err) { selectIt(); }
+});
+</script>
+</body>
+</html>

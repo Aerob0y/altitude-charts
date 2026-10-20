@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Insights · CSV Consulting</title>
+<meta name="description" content="Interactive charts and maps of New Zealand and Irish economic, tourism and aviation data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/navigation.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="top">
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="CSV Consulting home"><img src="images/csv-logo-ink.png" alt="CSV" width="299" height="236"></a>
+    <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" hidden>
+      <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <nav class="nav" id="main-nav" aria-label="Main">
+        <a href="work.html">Selected work</a>
+        <a href="insights.html" aria-current="page">Insights</a>
+        <a href="posts.html">Posts</a>
+        <a href="about.html">About</a>
+        <a class="btn-outline" href="contact.html">Discuss a project</a>
+    </nav>
+  </div>
+</header>
+<section class="ins-hero">
+  <div class="wrap">
+    <div class="stack">
+      <p class="kicker">Insights · chart library</p>
+      <h1>Charts and maps you can explore.</h1>
+      <p class="lead">Interactive charts of New Zealand and Irish economic, tourism and aviation data, refreshed from official sources. Pick a series, zoom in, and download the data or the image.</p>
+      <div class="actions"><a class="btn" href="#browse">Browse the charts</a><a class="textlink" href="#topics">All topics</a></div>
+    </div>
+    <div class="feat" aria-roledescription="carousel" aria-label="Featured charts">
+      <p class="label">Featured</p>
+      <a class="feat-slide on" id="catchments" href="catchments/" aria-label="Featured 1 of 2: Airport catchments"><img src="images/chart-catchments.svg" alt="Map of New Zealand coloured by nearest major airport by road" width="1200" height="750"><span class="t">Airport catchments</span><span class="d">Who lives closer to which airport, by drive time. Pick an airport and its competitors to see the population each can reach.</span></a>
+      <a class="feat-slide" id="route-map" href="route-map/" aria-label="Featured 2 of 2: Airport connections"><img src="images/chart-route-map.svg" alt="Route map of seats into Queenstown" width="1200" height="750" loading="lazy"><span class="t">Airport connections</span><span class="d">Open a route table and get a clean route map, sized by seats or flights, to download as SVG or PNG.</span></a>
+      <div class="feat-nav">
+        <button type="button" data-step="-1" aria-label="Previous featured chart">&#8249;</button>
+        <button type="button" data-step="1" aria-label="Next featured chart">&#8250;</button>
+        <div class="feat-dots" aria-hidden="true"><span class="on"></span><span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<main id="main">
+<section class="section" id="browse" aria-labelledby="browse-h">
+  <div class="wrap">
+    <div class="filters">
+      <h2 id="browse-h">Find a chart</h2>
+      <div class="chips" role="group" aria-label="Filter by subject">
+        <button type="button" class="chip" data-cat="all" aria-pressed="true">All</button><button type="button" class="chip" data-cat="Economy" aria-pressed="false">Economy</button><button type="button" class="chip" data-cat="Housing" aria-pressed="false">Housing</button><button type="button" class="chip" data-cat="Tourism and aviation" aria-pressed="false">Tourism and aviation</button><button type="button" class="chip" data-cat="Aviation tools" aria-pressed="false">Aviation tools</button>
+      </div>
+      <label for="country" class="visually-hidden">Country</label>
+      <select id="country"><option value="all">All countries</option><option value="New Zealand">New Zealand</option><option value="Ireland">Ireland</option></select>
+      <label for="q" class="visually-hidden">Search charts</label>
+      <input id="q" type="search" placeholder="Search, e.g. rent" autocomplete="off">
+    </div>
+    <p class="small count" id="count" aria-live="polite"></p>
+    <ul class="chart-grid" id="chart-grid">
+      <li data-key="hb1" data-cat="Economy" data-country="New Zealand" data-text="exchange rates what the nz dollar buys in other currencies and the trade-weighted index."><a href="nz/#hb1"><span class="thumb"><img src="hb1/hb1.png" alt="Example of the exchange rates chart" width="1200" height="750" loading="lazy"></span><span class="cat">Economy</span><span class="t">Exchange rates</span><span class="d">What the NZ dollar buys in other currencies and the trade-weighted index.</span></a></li>
+      <li data-key="hb2" data-cat="Economy" data-country="New Zealand" data-text="interest rates wholesale and retail borrowing rates, including the official cash rate."><a href="nz/#hb2"><span class="thumb"><img src="hb2/hb2.png" alt="Example of the interest rates chart" width="1200" height="750" loading="lazy"></span><span class="cat">Economy</span><span class="t">Interest rates</span><span class="d">Wholesale and retail borrowing rates, including the official cash rate.</span></a></li>
+      <li data-key="yield" data-cat="Economy" data-country="New Zealand" data-text="yield curve bond and swap rates, and the spreads between them."><a href="nz/#yield"><span class="thumb"><img src="yield/yield.png" alt="Example of the yield curve chart" width="1200" height="750" loading="lazy"></span><span class="cat">Economy</span><span class="t">Yield curve</span><span class="d">Bond and swap rates, and the spreads between them.</span></a></li>
+      <li data-key="hm14" data-cat="Economy" data-country="New Zealand" data-text="survey of expectations what businesses expect for inflation, growth and interest rates."><a href="nz/#hm14"><span class="thumb"><img src="hm14/hm14.png" alt="Example of the survey of expectations chart" width="1200" height="750" loading="lazy"></span><span class="cat">Economy</span><span class="t">Survey of expectations</span><span class="d">What businesses expect for inflation, growth and interest rates.</span></a></li>
+      <li data-key="hm1" data-cat="Economy" data-country="New Zealand" data-text="inflation headline and component price indexes."><a href="nz/#hm1"><span class="thumb"><img src="hm1/hm1.png" alt="Example of the inflation chart" width="1200" height="750" loading="lazy"></span><span class="cat">Economy</span><span class="t">Inflation</span><span class="d">Headline and component price indexes.</span></a></li>
+      <li data-key="hm5" data-cat="Economy" data-country="New Zealand" data-text="economic growth real gdp growth, the current account and household saving."><a href="nz/#hm5"><span class="thumb"><img src="hm5/hm5.png" alt="Example of the economic growth chart" width="1200" height="750" loading="lazy"></span><span class="cat">Economy</span><span class="t">Economic growth</span><span class="d">Real GDP growth, the current account and household saving.</span></a></li>
+      <li data-key="hm2" data-cat="Economy" data-country="New Zealand" data-text="consumption household spending on goods and services."><a href="nz/#hm2"><span class="thumb"><img src="hm2/hm2.png" alt="Example of the consumption chart" width="1200" height="750" loading="lazy"></span><span class="cat">Economy</span><span class="t">Consumption</span><span class="d">Household spending on goods and services.</span></a></li>
+      <li data-key="ect" data-cat="Economy" data-country="New Zealand" data-text="card spending monthly electronic card spending by category."><a href="nz/#ect"><span class="thumb"><img src="ect/ect.png" alt="Example of the card spending chart" width="1200" height="750" loading="lazy"></span><span class="cat">Economy</span><span class="t">Card spending</span><span class="d">Monthly electronic card spending by category.</span></a></li>
+      <li data-key="hm3" data-cat="Economy" data-country="New Zealand" data-text="investment spending that builds future capacity, by type."><a href="nz/#hm3"><span class="thumb"><img src="hm3/hm3.png" alt="Example of the investment chart" width="1200" height="750" loading="lazy"></span><span class="cat">Economy</span><span class="t">Investment</span><span class="d">Spending that builds future capacity, by type.</span></a></li>
+      <li data-key="hm8" data-cat="Economy" data-country="New Zealand" data-text="overseas trade value and volume of exports and imports."><a href="nz/#hm8"><span class="thumb"><img src="hm8/hm8.png" alt="Example of the overseas trade chart" width="1200" height="750" loading="lazy"></span><span class="cat">Economy</span><span class="t">Overseas trade</span><span class="d">Value and volume of exports and imports.</span></a></li>
+      <li data-key="hm9" data-cat="Economy" data-country="New Zealand" data-text="labour market employment, participation, hours and wages."><a href="nz/#hm9"><span class="thumb"><img src="hm9/hm9.png" alt="Example of the labour market chart" width="1200" height="750" loading="lazy"></span><span class="cat">Economy</span><span class="t">Labour market</span><span class="d">Employment, participation, hours and wages.</span></a></li>
+      <li data-key="hc35" data-cat="Housing" data-country="New Zealand" data-text="residential mortgages mortgage lending by borrower group and loan type."><a href="nz/#hc35"><span class="thumb"><img src="hc35/hc35.png" alt="Example of the residential mortgages chart" width="1200" height="750" loading="lazy"></span><span class="cat">Housing</span><span class="t">Residential mortgages</span><span class="d">Mortgage lending by borrower group and loan type.</span></a></li>
+      <li data-key="hs32" data-cat="Housing" data-country="New Zealand" data-text="bank loans by product where bank credit is growing or shrinking."><a href="nz/#hs32"><span class="thumb"><img src="hs32/hs32.png" alt="Example of the bank loans by product chart" width="1200" height="750" loading="lazy"></span><span class="cat">Housing</span><span class="t">Bank loans by product</span><span class="d">Where bank credit is growing or shrinking.</span></a></li>
+      <li data-key="hm10" data-cat="Housing" data-country="New Zealand" data-text="house prices and sales corelogic property values and sales."><a href="nz/#hm10"><span class="thumb"><img src="hm10/hm10.png" alt="Example of the house prices and sales chart" width="1200" height="750" loading="lazy"></span><span class="cat">Housing</span><span class="t">House prices and sales</span><span class="d">CoreLogic property values and sales.</span></a></li>
+      <li data-key="bond" data-cat="Housing" data-country="New Zealand" data-text="rental market tenancy bonds and weekly rents by region."><a href="nz/#bond"><span class="thumb"><img src="bond/bond.png" alt="Example of the rental market chart" width="1200" height="750" loading="lazy"></span><span class="cat">Housing</span><span class="t">Rental market</span><span class="d">Tenancy bonds and weekly rents by region.</span></a></li>
+      <li data-key="adp" data-cat="Tourism and aviation" data-country="New Zealand" data-text="accommodation guest nights, occupancy and capacity by region."><a href="nz/#adp"><span class="thumb"><img src="adp/adp.png" alt="Example of the accommodation chart" width="1200" height="750" loading="lazy"></span><span class="cat">Tourism and aviation</span><span class="t">Accommodation</span><span class="d">Guest nights, occupancy and capacity by region.</span></a></li>
+      <li data-key="fuel" data-cat="Tourism and aviation" data-country="New Zealand" data-text="jet fuel price the us gulf coast jet fuel benchmark, in us or nz dollars."><a href="nz/#fuel"><span class="thumb"><img src="fuel/fuel.png" alt="Example of the jet fuel price chart" width="1200" height="750" loading="lazy"></span><span class="cat">Tourism and aviation</span><span class="t">Jet fuel price</span><span class="d">The US Gulf Coast jet fuel benchmark, in US or NZ dollars.</span></a></li>
+      <li data-key="ie_airports" data-cat="Tourism and aviation" data-country="Ireland" data-text="irish airport passengers passengers through dublin, cork, shannon, knock and kerry."><a href="ireland/#ie_airports"><span class="thumb"><img src="ie_airports/ie_airports.png" alt="Example of the irish airport passengers chart" width="1200" height="750" loading="lazy"></span><span class="cat">Tourism and aviation · Ireland</span><span class="t">Irish airport passengers</span><span class="d">Passengers through Dublin, Cork, Shannon, Knock and Kerry.</span></a></li>
+      <li data-key="ie_labour" data-cat="Economy" data-country="Ireland" data-text="irish unemployment the unemployment rate by age group and sex."><a href="ireland/#ie_labour"><span class="thumb"><img src="ie_labour/ie_labour.png" alt="Example of the irish unemployment chart" width="1200" height="750" loading="lazy"></span><span class="cat">Economy · Ireland</span><span class="t">Irish unemployment</span><span class="d">The unemployment rate by age group and sex.</span></a></li>
+      <li data-key="ndm01" data-cat="Housing" data-country="Ireland" data-text="irish new dwelling completions new homes completed each month, by type."><a href="ireland/#ndm01"><span class="thumb"><img src="ndm01/ndm01.png" alt="Example of the irish new dwelling completions chart" width="1200" height="750" loading="lazy"></span><span class="cat">Housing · Ireland</span><span class="t">Irish new dwelling completions</span><span class="d">New homes completed each month, by type.</span></a></li>
+      <li data-key="catchments" data-cat="Aviation tools" data-country="All" data-text="airport catchments who lives closer to which airport, by drive time, for new zealand and canberra."><a href="catchments/"><span class="thumb"><img src="images/chart-catchments.svg" alt="Example of the airport catchments" width="1200" height="750" loading="lazy"></span><span class="cat">Aviation tools</span><span class="t">Airport catchments</span><span class="d">Who lives closer to which airport, by drive time, for New Zealand and Canberra.</span></a></li>
+      <li data-key="route-map" data-cat="Aviation tools" data-country="All" data-text="airport connections open a route table and get a clean route map to download as svg or png."><a href="route-map/"><span class="thumb"><img src="images/chart-route-map.svg" alt="Example of the airport connections" width="1200" height="750" loading="lazy"></span><span class="cat">Aviation tools</span><span class="t">Airport connections</span><span class="d">Open a route table and get a clean route map to download as SVG or PNG.</span></a></li>
+      <li data-key="wacc" data-cat="Aviation tools" data-country="All" data-text="cost of capital calculator compare wacc scenarios, the return a regulated airport is allowed to earn."><a href="wacc/"><span class="thumb"><img src="images/pricing-building-blocks.svg" alt="Example of the cost of capital calculator" width="1200" height="700" loading="lazy"></span><span class="cat">Aviation tools</span><span class="t">Cost of capital calculator</span><span class="d">Compare WACC scenarios, the return a regulated airport is allowed to earn.</span></a></li>
+    </ul>
+    <p class="empty" id="none" hidden>No charts match. Try another subject or clear the search.</p>
+  </div>
+</section>
+
+<section class="section" id="topics" aria-labelledby="topics-h" style="background: var(--tan)">
+  <div class="wrap">
+    <h2 class="section-title" id="topics-h">All topics</h2>
+    <div class="topic-groups">
+      <div class="topic-group">
+        <h3><span class="small">New Zealand</span>Economy</h3>
+        <ul class="topic-list">
+          <li><a href="nz/#hb1">Exchange rates</a><span>What the NZ dollar buys in other currencies and the trade-weighted index.</span></li>
+          <li><a href="nz/#hb2">Interest rates</a><span>Wholesale and retail borrowing rates, including the official cash rate.</span></li>
+          <li><a href="nz/#yield">Yield curve</a><span>Bond and swap rates, and the spreads between them.</span></li>
+          <li><a href="nz/#hm14">Survey of expectations</a><span>What businesses expect for inflation, growth and interest rates.</span></li>
+          <li><a href="nz/#hm1">Inflation</a><span>Headline and component price indexes.</span></li>
+          <li><a href="nz/#hm5">Economic growth</a><span>Real GDP growth, the current account and household saving.</span></li>
+          <li><a href="nz/#hm2">Consumption</a><span>Household spending on goods and services.</span></li>
+          <li><a href="nz/#ect">Card spending</a><span>Monthly electronic card spending by category.</span></li>
+          <li><a href="nz/#hm3">Investment</a><span>Spending that builds future capacity, by type.</span></li>
+          <li><a href="nz/#hm8">Overseas trade</a><span>Value and volume of exports and imports.</span></li>
+          <li><a href="nz/#hm9">Labour market</a><span>Employment, participation, hours and wages.</span></li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h3><span class="small">New Zealand</span>Housing</h3>
+        <ul class="topic-list">
+          <li><a href="nz/#hc35">Residential mortgages</a><span>Mortgage lending by borrower group and loan type.</span></li>
+          <li><a href="nz/#hs32">Bank loans by product</a><span>Where bank credit is growing or shrinking.</span></li>
+          <li><a href="nz/#hm10">House prices and sales</a><span>CoreLogic property values and sales.</span></li>
+          <li><a href="nz/#bond">Rental market</a><span>Tenancy bonds and weekly rents by region.</span></li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h3><span class="small">New Zealand</span>Tourism and aviation</h3>
+        <ul class="topic-list">
+          <li><a href="nz/#adp">Accommodation</a><span>Guest nights, occupancy and capacity by region.</span></li>
+          <li><a href="nz/#fuel">Jet fuel price</a><span>The US Gulf Coast jet fuel benchmark, in US or NZ dollars.</span></li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h3><span class="small">Ireland</span>Economy</h3>
+        <ul class="topic-list">
+          <li><a href="ireland/#ie_labour">Irish unemployment</a><span>The unemployment rate by age group and sex.</span></li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h3><span class="small">Ireland</span>Housing</h3>
+        <ul class="topic-list">
+          <li><a href="ireland/#ndm01">Irish new dwelling completions</a><span>New homes completed each month, by type.</span></li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h3><span class="small">Ireland</span>Tourism and aviation</h3>
+        <ul class="topic-list">
+          <li><a href="ireland/#ie_airports">Irish airport passengers</a><span>Passengers through Dublin, Cork, Shannon, Knock and Kerry.</span></li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h3><span class="small">Tools</span>Aviation maps and tools</h3>
+        <ul class="topic-list">
+          <li><a href="catchments/">Airport catchments</a><span>Who lives closer to which airport, by drive time, for New Zealand and Canberra.</span></li>
+          <li><a href="route-map/">Airport connections</a><span>Open a route table and get a clean route map to download as SVG or PNG.</span></li>
+          <li><a href="wacc/">Cost of capital calculator</a><span>Compare WACC scenarios, the return a regulated airport is allowed to earn.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <img src="images/csv-logo-ink.png" alt="CSV" width="299" height="236">
+    <span>CSV Consulting is a trading name of CSV Limited.</span>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="work.html">Selected work</a><a href="insights.html">Insights</a><a href="posts.html">Posts</a><a href="about.html">About</a><a href="mailto:mike@csv.co.nz">mike@csv.co.nz</a>
+    </nav>
+    <span>Dublin, Ireland</span>
+  </div>
+</footer>
+<script>
+(function () {
+  var slides = document.querySelectorAll('.feat-slide'), dots = document.querySelectorAll('.feat-dots span'), i = 0, timer;
+  function show(n) { i = (n + slides.length) % slides.length; slides.forEach(function (s, k) { s.classList.toggle('on', k === i); }); dots.forEach(function (d, k) { d.classList.toggle('on', k === i); }); }
+  document.querySelectorAll('.feat-nav button').forEach(function (b) { b.addEventListener('click', function () { clearInterval(timer); show(i + Number(b.dataset.step)); }); });
+  if (location.hash === '#route-map') show(1);
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(function () { show(i + 1); }, 7000);
+})();
+(function () {
+  var cat = 'all', country = 'all', q = '';
+  var grid = document.getElementById('chart-grid');
+  function items() { return grid.querySelectorAll('li'); }
+  var chips = document.querySelectorAll('.filters button.chip');
+  var count = document.getElementById('count'), none = document.getElementById('none');
+  function apply() {
+    var shown = 0;
+    items().forEach(function (li) {
+      var ok = (cat === 'all' || li.dataset.cat === cat) &&
+               (country === 'all' || li.dataset.country === country || li.dataset.country === 'All') &&
+               (!q || li.dataset.text.indexOf(q) !== -1);
+      li.hidden = !ok; if (ok) shown++;
+    });
+    count.textContent = shown + (shown === 1 ? ' chart' : ' charts');
+    none.hidden = shown > 0;
+  }
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      cat = c.dataset.cat;
+      chips.forEach(function (o) { o.setAttribute('aria-pressed', o === c ? 'true' : 'false'); });
+      apply();
+    });
+  });
+  document.getElementById('country').addEventListener('change', function (ev) { country = ev.target.value; apply(); });
+  document.getElementById('q').addEventListener('input', function (ev) { q = ev.target.value.trim().toLowerCase(); apply(); });
+  apply();
+  // Charts published since this page was written come from the live catalogue.
+  var CAT = { Economic: 'Economy', Housing: 'Housing', Aviation: 'Tourism and aviation', 'Tourism & Migration': 'Tourism and aviation', 'Auckland housing': 'Housing' };
+  var COUNTRY = { nz: 'New Zealand', ireland: 'Ireland', miscellaneous: 'New Zealand' };
+  fetch('index.json').then(function (r) { if (!r.ok) throw Error(); return r.json(); }).then(function (index) {
+    var have = {};
+    items().forEach(function (li) { have[li.dataset.key] = true; });
+    function add(key, href, img, title, desc, cat, country) {
+      if (have[key]) return;
+      var li = document.createElement('li'), a = document.createElement('a'), thumb = document.createElement('span');
+      li.dataset.key = key; li.dataset.cat = cat; li.dataset.country = country; li.dataset.text = (title + ' ' + desc).toLowerCase();
+      a.href = href; thumb.className = 'thumb';
+      if (img) { var im = document.createElement('img'); im.src = img; im.alt = 'Example of the ' + title.toLowerCase() + ' chart'; im.loading = 'lazy'; im.width = 640; im.height = 320; thumb.append(im); }
+      var c = document.createElement('span'), t = document.createElement('span'), d = document.createElement('span');
+      c.className = 'cat'; c.textContent = cat + (country === 'Ireland' ? ' · Ireland' : '');
+      t.className = 't'; t.textContent = title; d.className = 'd'; d.textContent = desc;
+      a.append(thumb, c, t, d); li.append(a); grid.append(li);
+    }
+    (index.charts || []).forEach(function (ch) {
+      add(ch.name, ch.site + '/#' + ch.name, ch.image, ch.title, ch.note || '', CAT[ch.menu] || 'Economy', COUNTRY[ch.site] || 'All');
+    });
+    (index.tools || []).forEach(function (tool) {
+      if (tool.key !== 'route-map-projections') add(tool.key, tool.page.replace(/index\.html$/, ''), null, tool.title, '', 'Aviation tools', 'All');
+    });
+    apply();
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>

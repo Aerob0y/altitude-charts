@@ -8,8 +8,8 @@
     details.innerHTML = `<summary>Download image</summary>
       <form class="image-options">
         <label>Format <select name="format"><option value="png">PNG</option><option value="svg">SVG</option></select></label>
-        <label>Size <select name="size"><option value="1200,600">1200 × 600 (web)</option><option value="1920,1080" selected>1920 × 1080 (slides)</option><option value="2000,1200">2000 × 1200 (report)</option><option value="custom">Custom</option></select></label>
-        <span class="image-custom" hidden><label>Width <input name="width" type="number" min="100" max="8000" step="1" value="1920" required></label><label>Height <input name="height" type="number" min="100" max="8000" step="1" value="1080" required></label></span>
+        <label>Size <select name="size"><option value="1600,900" selected>1600 × 900 (slides and posts)</option><option value="1200,750">1200 × 750 (chart library)</option><option value="custom">Custom</option></select></label>
+        <span class="image-custom" hidden><label>Width <input name="width" type="number" min="100" max="8000" step="1" value="1600" required></label><label>Height <input name="height" type="number" min="100" max="8000" step="1" value="900" required></label></span>
         <label class="image-sharpness">Sharpness <select name="scale"><option value="1">1×</option><option value="2" selected>2×</option><option value="3">3×</option></select></label>
         <label class="image-clean"><input name="clean" type="checkbox" checked> Clean (hide chart buttons)</label>
         <button type="submit">Save image</button>
@@ -30,6 +30,12 @@
       const ready = Boolean(window.Plotly && chart.data && !chart.hasAttribute("aria-hidden"));
       form.hidden = !ready;
       fallbackBox.hidden = ready;
+      // Short phone charts can place the toggle beneath the fixed panel.
+      const top = details.querySelector("summary").getBoundingClientRect().top;
+      for (const panel of [form, fallbackBox]) {
+        panel.style.bottom = innerWidth < 600 ? `${Math.max(8, innerHeight - top + 8)}px` : "";
+        panel.style.maxHeight = innerWidth < 600 ? `${Math.max(120, top - 24)}px` : "";
+      }
     });
     field("size").addEventListener("change", () => {
       const custom = field("size").value === "custom";
@@ -61,6 +67,8 @@
         layout.width = width;
         layout.height = height;
         layout.autosize = false;
+        // Charts are transparent on the page; saved images are white.
+        layout.paper_bgcolor = layout.plot_bgcolor = "#FFFFFF";
         if (chart._altitudeExportTitle) layout.title = structuredClone(chart._altitudeExportTitle);
         if (chart._altitudeExportSelector && layout.xaxis) layout.xaxis.rangeselector = structuredClone(chart._altitudeExportSelector);
         layout.margin = {...layout.margin, t: Math.max(layout.margin?.t || 0, 110)};
@@ -72,7 +80,7 @@
           if (field("clean").checked && layout[key].rangeselector) layout[key].rangeselector.visible = false;
           if (field("clean").checked && layout[key].rangeslider) layout[key].rangeslider.visible = false;
         }
-        layout.annotations = [...(layout.annotations || []), {text: "Source: " + escapeHtml(manifest.source || "not recorded"), xref: "paper", yref: "paper", x: 0, y: -0.24, xanchor: "left", yanchor: "top", showarrow: false, font: {size: 12}}];
+        layout.annotations = [...(layout.annotations || []), {text: "Source: " + escapeHtml(manifest.source || "not recorded"), xref: "paper", yref: "paper", x: 0, y: -0.24, xanchor: "left", yanchor: "top", showarrow: false, font: {family: "Inter, Arial, sans-serif", size: 11, color: "#64676C"}}];
         const data = structuredClone(chart.data);
         await Plotly.newPlot(temporary, data, layout, {displayModeBar: false, staticPlot: true});
         const picks = [...new Set((chart._altitudeSeriesNames || data.filter(trace => trace.mode !== "text").map(trace => trace.name || "series")).map(slug))].join("-");

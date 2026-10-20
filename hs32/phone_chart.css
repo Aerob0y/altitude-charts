@@ -3,16 +3,16 @@
 @media (max-width: 599px) {
   body .topic, body .page { height: auto; min-height: 100%; }
   #note:not(.expanded) { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
-  .note-more { display: inline-block; padding: 2px 0; border: 0; background: none; color: #164b45; font: 12px Arial, sans-serif; text-decoration: underline; cursor: pointer; }
-  .chart-options > summary { display: block; padding: 9px; border: 1px solid #c4d3cd; background: white; font-size: 12px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .note-more { display: inline-block; padding: 2px 0; border: 0; background: none; color: #0E6B6B; font: 12px Inter, Arial, sans-serif; text-decoration: underline; cursor: pointer; }
+  .chart-options > summary { display: block; padding: 9px; border: 1px solid #DCD6CB; background: white; font-size: 12px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .chart-options > summary::before { content: "▾ "; }
   .chart-options[open] > summary::before { content: "▴ "; }
   .chart-options .controls { margin-top: 8px; flex-wrap: wrap; }
   .chart-options select { width: 100%; max-width: 100%; }
   .chart-options #picks { display: grid; grid-template-columns: 1fr; width: 100%; gap: 4px; }
-  .chart-subtitle { display: block; margin: 0; font-size: 12px; line-height: 1.45; color: #48605e; overflow-wrap: anywhere; }
+  .chart-subtitle { display: block; margin: 0; font-size: 12px; line-height: 1.45; color: #64676C; overflow-wrap: anywhere; }
   .chart-dates { display: flex; flex: 0 0 auto; gap: 5px; overflow-x: auto; padding: 2px 0 4px; }
-  .chart-dates button { flex: 0 0 auto; border: 0; padding: 5px 8px; background: #ebedec; color: #142e2c; font: 11px Arial, sans-serif; cursor: pointer; }
-  .chart-dates button[aria-pressed="true"] { background: #164b45; color: white; }
+  .chart-dates button { flex: 0 0 auto; border: 1px solid #C9C5BC; border-radius: 999px; padding: 4px 10px; background: transparent; color: #222326; font: 11px Inter, Arial, sans-serif; cursor: pointer; }
+  .chart-dates button[aria-pressed="true"] { background: #222326; border-color: #222326; color: #F6F0E6; }
   .topic .chart-area, .page .chart-area { flex: 0 0 auto; height: min(70vh, 520px); min-height: 320px; }
 }

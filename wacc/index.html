@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>WACC calculator · Altitude</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Inter+Tight:wght@600&display=swap">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../topics.css">
+  <script defer src="../topics.js"></script>
+  <link rel="stylesheet" href="wacc.css">
+  <script defer src="wacc.js"></script>
+  <script defer src="ui.js"></script>
+</head>
+<body>
+  <header class="bar"><a href="../">Altitude</a><span>Finance tools · Beta</span></header>
+  <main>
+    <header class="intro"><p class="eyebrow">COST OF CAPITAL · BETA</p><h1>What return does an investment need?</h1>
+      <p>Compare weighted average cost of capital (WACC) scenarios using the Commerce Commission's simplified method. Change any input; the results update as you type.</p></header>
+    <section aria-label="WACC scenarios">
+      <div class="actions"><button id="add" type="button">Add scenario</button><button id="reset" type="button">Reset</button><button id="download" type="button">Download CSV</button></div>
+      <p class="hint" id="limit"></p>
+      <noscript>Enable JavaScript to use this calculator.</noscript>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Scenario table; scroll sideways for more scenarios">
+        <table><caption>Inputs and post-tax results. Rates are percentages; betas have no units.</caption><thead id="head"></thead><tbody id="body"></tbody></table>
+      </div>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="method" aria-labelledby="method-title"><h2 id="method-title">How this is worked out</h2>
+      <p>The cost of equity uses the simplified Brennan–Lally capital asset pricing model, as used by the New Zealand Commerce Commission. Equity beta is the asset beta adjusted for debt, assuming a debt beta of zero. The cost of debt is reduced by the corporate tax rate. WACC weights the two by leverage (debt as a share of total value).</p>
+      <p>The Mid figures are illustrative, not a Commerce Commission determination or advice for any business.</p>
+      <ul class="formulas">
+        <li>Post-tax cost of debt = kd × (1 − tc)</li>
+        <li>Equity beta = asset_beta / (1 − leverage)</li>
+        <li>Post-tax cost of equity = rf × (1 − ti) + equity_beta × tamrp</li>
+        <li>WACC (post-tax) = (1 − leverage) × cost_of_equity + leverage × kd × (1 − tc)</li>
+      </ul>
+      <p class="hint">rf: risk-free rate; tamrp: tax-adjusted market risk premium; tc: corporate tax rate; ti: investor marginal tax rate; kd: pre-tax cost of debt. Formulas use rates as fractions. Debt issuance and swap costs are excluded. CSV percentages are numbers (5.15 means 5.15%); results are unrounded.</p>
+    </section>
+    <footer>Method: <a href="https://comcom.govt.nz/__data/assets/pdf_file/0021/60537/Input-methodologies-review-decisions-Topic-paper-4-Cost-of-capital-issues-20-December-2016.pdf">New Zealand Commerce Commission input methodologies</a> (simplified Brennan–Lally CAPM). Calculations run in your browser.</footer>
+  </main>
+</body>
+</html>

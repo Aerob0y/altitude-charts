@@ -3,7 +3,7 @@
   "title": "CoreLogic",
   "source": "CoreLogic series via RBNZ",
   "note": "Provides housing-market measures such as property values. Movements vary by place and do not represent every home.",
-  "updated": "2026-10-04",
+  "updated": "2026-10-20",
   "views": [
     {
       "label": "House sales",
@@ -23,7 +23,7 @@
     }
   ],
   "data": null,
-  "image": null,
+  "image": "hm10.png",
   "image_alt": "CoreLogic CoreLogic via RBNZ: House sales and House price index (HPI)",
   "real": {
     "cpi": "cpi.json",
@@ -33,8 +33,8 @@
     "labels": ["Metric 1", "Metric 2"],
     "title": "CoreLogic",
     "subtitle": "CoreLogic series via RBNZ",
-    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
-    "margin_r": 30,
+    "palette": ["#12243D", "#0E6B6B", "#C8781E", "#6C8EBF", "#7E8C3A", "#9B5C7E", "#8A8781"],
+    "margin_r": 24,
     "default": [0, 1],
     "dims": ["no", "Index", "NZDm", "NZDm (r.)"]
   }

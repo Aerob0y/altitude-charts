@@ -1,0 +1,16 @@
+{
+  "name": "donut_bands",
+  "title": "Auckland: residents and new homes",
+  "source": "Stats NZ building consents and 2023 Census",
+  "note": "Shares by 2 km distance band from Britomart. Consents since 2016; population is the 2023 Census count. Consents are permissions, not completions.",
+  "updated": "2026-10-15",
+  "views": [
+    {
+      "label": "Auckland urban area",
+      "spec": "auckland-urban-area.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "donut_bands.png",
+  "image_alt": "Auckland: residents and new homes by distance Share of 2023 residents and homes consented, January 2016 to August 2026"
+}

@@ -3,7 +3,7 @@
   "title": "Overseas trade",
   "source": "RBNZ and Stats NZ series",
   "note": "Tracks the value and volume of goods and services bought from and sold to other countries.",
-  "updated": "2026-10-04",
+  "updated": "2026-10-20",
   "views": [
     {
       "label": "Values ($m s.a.): Export",
@@ -95,14 +95,14 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "hm8.png",
   "image_alt": "Overseas trade RBNZ and Stats NZ series: Export and Import (Values ($m s.a.))",
   "pick": {
     "labels": ["Trade type 1", "Trade type 2"],
     "title": "Overseas trade",
     "subtitle": "RBNZ and Stats NZ series",
-    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
-    "margin_r": 30,
+    "palette": ["#12243D", "#0E6B6B", "#C8781E", "#6C8EBF", "#7E8C3A", "#9B5C7E", "#8A8781"],
+    "margin_r": 24,
     "default": [0, 1],
     "dims": ["$m", "$m", "$m", "$m", "%", "%", "%", "%", "Index", "Index", "%", "%", "%", "%", "Index", "Index", "%", "%", "%", "%", "Index", "Index"],
     "groups": ["Values ($m s.a.)", "Values ($m s.a.)", "Values ($m)", "Values ($m)", "Values (q/q% s.a.)", "Values (q/q% s.a.)", "Values (y/y%)", "Values (y/y%)", "Prices (Index)", "Prices (Index)", "Prices (q/q%)", "Prices (q/q%)", "Prices (y/y%)", "Prices (y/y%)", "Volumes (Index)", "Volumes (Index)", "Volumes (q/q% s.a.)", "Volumes (q/q% s.a.)", "Volumes (y/y%)", "Volumes (y/y%)", "Volumes (Index s.a.)", "Volumes (Index s.a.)"],

@@ -3,7 +3,7 @@
   "title": "Survey of expectations",
   "source": "Reserve Bank of New Zealand (RBNZ)",
   "note": "Summarises surveyed expectations for inflation and other economic measures. Expectations are opinions, not guaranteed forecasts.",
-  "updated": "2026-10-04",
+  "updated": "2026-10-20",
   "views": [
     {
       "label": "Perception of monetary conditions (net) - End of current quarter",
@@ -107,14 +107,14 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "hm14.png",
   "image_alt": "Survey of expectations Reserve Bank of New Zealand (RBNZ): Annual GDP growth - 1 year out, Annual CPI growth - 1 year out, and Perception of monetary conditions (net) - 1 year out",
   "pick": {
     "labels": ["Expectation 1", "Expectation 2", "Expectation 3", "Expectation 4"],
     "title": "Survey of expectations",
     "subtitle": "Reserve Bank of New Zealand (RBNZ)",
-    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
-    "margin_r": 30,
+    "palette": ["#12243D", "#0E6B6B", "#C8781E", "#6C8EBF", "#7E8C3A", "#9B5C7E", "#8A8781"],
+    "margin_r": 24,
     "default": [13, 3, 2],
     "dims": ["Total %", "Total %", "Total %", "%", "%", "%", "%", "%", "%", "%", "%", "%", "%", "%", "%", "%", "%", "Total %", "Total %", "NZD/USD", "NZD/USD", "NZD/AUD", "NZD/AUD", "%", "%"]
   }

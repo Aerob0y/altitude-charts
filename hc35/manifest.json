@@ -3,7 +3,7 @@
   "title": "Residential mortgages",
   "source": "Reserve Bank of New Zealand (RBNZ)",
   "note": "Shows mortgage lending across lending groups and loan types, providing context on household borrowing conditions.",
-  "updated": "2026-10-04",
+  "updated": "2026-10-20",
   "views": [
     {
       "label": "All lending: Opening position",
@@ -115,7 +115,7 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "hc35.png",
   "image_alt": "Residential mortgages Reserve Bank of New Zealand (RBNZ): Opening position, Interest charged, and Scheduled repayments (All lending)",
   "real": {
     "cpi": "cpi.json",
@@ -125,8 +125,8 @@
     "labels": ["Lending 1", "Lending 2", "Lending 3", "Lending 4"],
     "title": "Residential mortgages",
     "subtitle": "Reserve Bank of New Zealand (RBNZ)",
-    "palette": ["#2A5CB8", "#D9692E", "#13A08C", "#B04E92", "#6B7280"],
-    "margin_r": 30,
+    "palette": ["#12243D", "#0E6B6B", "#C8781E", "#6C8EBF", "#7E8C3A", "#9B5C7E", "#8A8781"],
+    "margin_r": 24,
     "default": [0, 2, 3],
     "dims": ["Net", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "Net", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "Net", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm", "NZDm"],
     "groups": ["Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", ">80% LVR", ">80% LVR", ">80% LVR", ">80% LVR", ">80% LVR", ">80% LVR", ">80% LVR", ">80% LVR", ">80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR", "<=80% LVR"],

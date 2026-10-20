@@ -1,0 +1,16 @@
+{
+  "name": "donut_rates",
+  "title": "Auckland: new homes per 100 residents",
+  "source": "Stats NZ building consents and 2023 Census",
+  "note": "Consents since 2016 by dwelling type and distance band. Rates exclude areas below 100 residents; totals retain them. Townhouses includes flats, units and other dwellings.",
+  "updated": "2026-10-15",
+  "views": [
+    {
+      "label": "Auckland urban area",
+      "spec": "auckland-urban-area.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "donut_rates.png",
+  "image_alt": "Auckland: new homes per 100 residents By dwelling type and distance. January 2016 to August 2026 ; 2023 Census baseline"
+}

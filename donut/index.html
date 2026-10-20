@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Where Auckland builds (Beta) · Altitude</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../topics.css">
+  <script defer src="../topics.js"></script>
+  <link rel="stylesheet" href="donut.css">
+  <script defer src="donut.js"></script>
+  <script defer src="ui.js"></script>
+</head>
+<body>
+  <header class="bar"><a class="brand" href="../">Altitude</a><span>Miscellaneous · Beta</span></header>
+  <main>
+    <header class="intro">
+      <p class="eyebrow">AUCKLAND HOUSING · BETA</p>
+      <h1>Is Auckland building like a donut?</h1>
+      <p>Each area has two bars: the people who live there, and the new homes consented there since the year you
+        pick. If new homes go mostly to the edges, the teal bars grow as you move out from the centre.</p>
+    </header>
+    <div class="workspace">
+      <form id="controls" aria-label="Map settings">
+        <fieldset>
+          <legend>Teal bars show</legend>
+          <label class="choice"><input type="radio" name="mode" value="homes" checked> New homes consented</label>
+          <label class="choice"><input type="radio" name="mode" value="growth"> Population growth, 2013 to 2023 Census</label>
+        </fieldset>
+        <fieldset id="since-box">
+          <legend><label for="since">New homes consented since <output id="since-value" for="since">2016</output></label></legend>
+          <input id="since" type="range" min="1991" max="2026" step="1" value="2016">
+          <p class="hint" id="since-hint"></p>
+        </fieldset>
+        <fieldset>
+          <legend>Bar height</legend>
+          <label class="choice"><input type="radio" name="measure" value="total" checked> Totals</label>
+          <label class="choice"><input type="radio" name="measure" value="hectare"> Per hectare of land</label>
+          <label class="choice"><input type="checkbox" id="urban"> Auckland urban area only</label>
+        </fieldset>
+        <div class="actions"><button id="reset" type="button">Reset view</button>
+          <a href="../miscellaneous/">See the charts</a></div>
+      </form>
+      <section class="result" aria-label="Map">
+        <p id="status" role="status">Loading the map…</p>
+        <div id="map-wrap">
+          <div id="map" aria-label="Tilted map of Auckland with two bars for each area"></div>
+          <div class="key" id="key" aria-live="polite"></div>
+        </div>
+        <p class="hint">Drag to move. Right-drag, or two fingers on a phone, to tilt and turn. Tap a bar for details.</p>
+        <div id="details" class="details" aria-live="polite" hidden></div>
+        <div id="summary" class="summary" aria-live="polite"></div>
+      </section>
+    </div>
+    <section class="notes">
+      <h2>How to read it</h2>
+      <p>Areas are Stats NZ statistical areas (SA2s), roughly suburbs. Distances are straight-line from Britomart.
+        The grey and teal bars use separate scales, shown in the key, so compare grey with grey and teal with teal.</p>
+      <p>New homes are dwellings consented, not completed. Stats NZ estimates most consented homes are built, about
+        nine months later. A consent counts one home whatever its size. Population growth from the Census shows where
+        people actually went. The latest year is part of a year.</p>
+      <p>Population is the 2023 Census usually resident count. For growth, the grey bar is the 2013 Census count.
+        Areas that lost people show an orange bar.</p>
+    </section>
+    <footer>
+      <p id="source">Source: Stats NZ building consents and Census usually resident population counts.</p>
+      <p>Map tiles © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.
+        Map drawn with <a href="https://deck.gl">deck.gl</a>.</p>
+    </footer>
+  </main>
+</body>
+</html>

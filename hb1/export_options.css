@@ -1,14 +1,14 @@
 .image-download { position: relative; }
-.image-download summary { cursor: pointer; color: #164b45; text-decoration: underline; text-underline-offset: 3px; }
-.image-options, .image-fallback { position: absolute; bottom: calc(100% + 8px); left: 0; z-index: 25; width: 300px; max-width: calc(100vw - 32px); padding: 14px; border: 1px solid #c4d3cd; background: white; box-shadow: 0 8px 20px rgba(20,46,44,.12); font-size: 13px; }
+.image-download summary { cursor: pointer; color: #0E6B6B; text-decoration: underline; text-underline-offset: 3px; }
+.image-options, .image-fallback { position: absolute; bottom: calc(100% + 8px); left: 0; z-index: 25; width: 300px; max-width: calc(100vw - 32px); padding: 14px; border: 1px solid #DCD6CB; background: white; box-shadow: 0 8px 20px rgba(34,35,38,.10); font-size: 13px; }
 .image-options { display: grid; gap: 12px; }
 .image-options label { display: grid; gap: 4px; }
-.image-options select, .image-options input[type="number"], .image-options button { width: 100%; min-width: 0; padding: 7px; border: 1px solid #c4d3cd; background: white; color: inherit; font: inherit; }
+.image-options select, .image-options input[type="number"], .image-options button { width: 100%; min-width: 0; padding: 7px; border: 1px solid #DCD6CB; background: white; color: inherit; font: inherit; }
 .image-options .image-clean { display: flex; align-items: center; gap: 6px; }
 .image-custom { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.image-options button { background: #164b45; color: white; cursor: pointer; }
+.image-options button { background: #222326; color: #F6F0E6; cursor: pointer; }
 .image-options button:disabled { opacity: .6; cursor: wait; }
-.image-message { color: #48605e; }
+.image-message { color: #64676C; }
 @media (max-width: 599px) {
   .image-options, .image-fallback { position: fixed; left: 12px; right: 12px; bottom: 80px; width: auto; max-width: none; max-height: calc(100vh - 100px); overflow-y: auto; }
 }

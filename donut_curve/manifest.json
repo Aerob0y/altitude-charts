@@ -1,0 +1,16 @@
+{
+  "name": "donut_curve",
+  "title": "Auckland: where homes were consented",
+  "source": "Stats NZ building consents and 2023 Census",
+  "note": "Cumulative shares ordered by distance. Below the diagonal means consents lie further out relative to 2023 residents. The period comparison is descriptive, not a policy-effect estimate.",
+  "updated": "2026-10-15",
+  "views": [
+    {
+      "label": "Period comparison",
+      "spec": "period-comparison.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "donut_curve.png",
+  "image_alt": "Auckland: where homes were consented Cumulative shares ordered by distance. 2017 period ends August 2026"
+}
