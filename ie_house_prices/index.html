@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Altitude chart</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="export_options.css">
+  <link rel="stylesheet" href="phone_chart.css">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; }
+    body { background: #fbfaf7; color: #142e2c; font-family: Arial, sans-serif; }
+    .page { height: 100%; min-height: 480px; padding: 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    header, footer, .controls { flex: 0 0 auto; min-width: 0; }
+    h1 { margin: 0 0 6px; font: 28px/1.1 Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
+    #note { margin: 0; color: #48605e; font-size: 13px; line-height: 1.45; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 13px; }
+    #real-control { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+    #real-control[hidden] { display: none; }
+    #picks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; min-width: 0; max-width: 100%; }
+    .series-picker { position: relative; display: block; min-width: 0; max-width: 100%; }
+    .series-button { display: block; max-width: 100%; width: 520px; padding: 8px 10px; border: 1px solid #c4d3cd; background: white; color: inherit; font: inherit; text-align: left; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .series-options { position: absolute; top: calc(100% + 4px); left: 0; z-index: 20; width: 100%; min-width: 240px; max-width: calc(100vw - 32px); max-height: min(360px, 55vh); overflow-y: auto; padding: 8px; border: 1px solid #c4d3cd; background: white; box-shadow: 0 8px 20px rgba(20,46,44,.12); }
+    .series-hint { display: block; padding: 4px 6px 8px; color: #48605e; font-size: 12px; line-height: 1.4; }
+    .series-option { display: flex; align-items: start; gap: 8px; padding: 7px 6px; line-height: 1.35; cursor: pointer; overflow-wrap: anywhere; }
+    .series-option:hover { background: #f4f0e8; }
+    .series-option input { flex: 0 0 auto; margin: 2px 0 0; accent-color: #164b45; }
+    .series-option.disabled { color: #737d7b; cursor: default; }
+    select { min-width: 0; max-width: 100%; padding: 7px; border: 1px solid #c4d3cd; background: white; color: inherit; font: inherit; }
+    .chart-area { flex: 1 1 auto; min-height: 220px; min-width: 0; position: relative; background: white; }
+    #chart { position: absolute; inset: 0; width: 100%; height: 100%; }
+    #preview { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: white; z-index: 1; }
+    #status { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: #48605e; background: white; z-index: 2; }
+    [hidden] { display: none !important; }
+    footer { border-top: 1px solid #cbd6d1; padding-top: 8px; font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
+    #downloads { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 4px; }
+    a { color: #164b45; text-underline-offset: 3px; }
+    :focus-visible { outline: 2px solid #164b45; outline-offset: 3px; }
+    @media (max-width: 599px) {
+      .page { padding: 10px; gap: 8px; }
+      h1 { font-size: 23px; }
+      #note { font-size: 12px; }
+      footer { font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header><h1 id="title">Altitude chart</h1><p id="note"></p></header>
+    <div class="controls" id="controls" hidden>
+      <span id="view-control"><label for="view">Chart view</label> <select id="view"></select></span>
+      <span id="picks" hidden></span>
+      <label id="real-control" hidden><input type="checkbox" id="real"> Today's dollars</label>
+      <span id="range-control" hidden><label for="range" id="range-label">Axis range</label> <select id="range"></select></span>
+    </div>
+    <section class="chart-area" aria-label="Interactive chart">
+      <img id="preview" width="1200" height="600" alt="" hidden>
+      <div id="chart"></div><div id="status" role="status" aria-live="polite">Loading chart…</div>
+    </section>
+    <footer>
+      <span id="source"></span><span id="updated"></span>
+      <nav id="downloads" aria-label="Chart downloads"></nav>
+    </footer>
+  </main>
+  <script src="export_options.js"></script>
+  <script src="phone_chart.js"></script>
+  <script src="zero_axes.js"></script>
+  <script>
+    (() => {
+      const chart = document.getElementById("chart");
+      const preview = document.getElementById("preview");
+      const plotlyReady = new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = "https://cdn.plot.ly/plotly-cartesian-2.27.0.min.js";
+        script.async = true;
+        script.onload = resolve;
+        script.onerror = () => reject(new Error("Chart library is unavailable"));
+        document.head.append(script);
+      });
+      // Observe failure immediately while the manifest is being fetched.
+      plotlyReady.catch(() => {});
+      const status = document.getElementById("status");
+      status.hidden = !preview.hidden;
+      preview.onerror = () => { preview.hidden = true; if (!activeSpec) status.hidden = false; };
+      const viewSelect = document.getElementById("view");
+      const folder = new URL("./", location.href);
+      let manifest;
+      let activeSpec;
+      let requestNumber = 0;
+      let fetchController;
+      let resizeFrame;
+      let wasNarrow = innerWidth < 600;
+      const realBox = document.getElementById("real");
+      let cpi, realOn = new URLSearchParams(location.search).get("real") === "1";
+
+      function assetUrl(path) {
+        if (typeof path !== "string" || !path) throw new Error("Missing chart asset");
+        const url = new URL(path, folder);
+        if (url.origin !== folder.origin || !url.pathname.startsWith(folder.pathname)) {
+          throw new Error("Chart assets must be in the chart folder");
+        }
+        return url.href;
+      }
+
+      async function readJson(path, signal) {
+        const response = await fetch(assetUrl(path), {signal});
+        if (!response.ok) throw new Error("Chart file is unavailable");
+        return response.json();
+      }
+
+      function formattedDate(value) {
+        if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return "not recorded";
+        const date = new Date(value + "T12:00:00Z");
+        if (!Number.isFinite(date.getTime()) || date.toISOString().slice(0, 10) !== value) return "not recorded";
+        // Keep the recorded NZ calendar date, regardless of the reader's timezone.
+        return new Intl.DateTimeFormat("en-NZ", {
+          day: "numeric", month: "short", year: "numeric", timeZone: "UTC"
+        }).format(date);
+      }
+
+      function frameLayout(spec) {
+        const layout = structuredClone(spec.layout || {});
+        delete layout.width;
+        delete layout.height;
+        layout.autosize = true;
+        if (innerWidth < 600) {
+          layout.legend = {...layout.legend, orientation: "h", x: 0, xanchor: "left", y: -0.25, yanchor: "top"};
+          const hasEndLabels = spec.data.some(trace => trace.mode === "text" && trace.showlegend === false);
+          layout.margin = {...layout.margin, l: 44, r: hasEndLabels ? Math.max(layout.margin?.r || 0, 12) : 12, b: Math.max(layout.margin?.b || 0, 90)};
+          for (const key of Object.keys(layout).filter(key => /^xaxis\d*$/.test(key))) {
+            const selector = layout[key]?.rangeselector;
+            if (selector) layout[key].rangeselector = {
+              ...selector, x: 0, xanchor: "left", font: {...selector.font, size: 10}
+            };
+          }
+        }
+        return layout;
+      }
+
+      function showError() {
+        status.textContent = "We couldn’t load this chart. Please try again later.";
+        status.hidden = false;
+        chart.setAttribute("aria-hidden", "true");
+      }
+
+      async function draw(spec, xRange) {
+        await plotlyReady;
+        if (!window.Plotly) throw new Error("Chart library is unavailable");
+        if (!Array.isArray(spec.data)) throw new Error("Invalid chart");
+        // The toolbar covers the chart title on phones.
+        const config = {...spec.config, responsive: true};
+        if (innerWidth < 600) config.displayModeBar = false;
+        // real.js rescales dollar series when "Today's dollars" is ticked; other charts grey it out.
+        const adjustable = !!cpi && AltitudeReal.adjustable(spec);
+        realBox.disabled = !adjustable;
+        realBox.parentElement.title = adjustable ? "Adjust dollar amounts for inflation (CPI)" : "Only dollar amounts can be adjusted";
+        if (adjustable && realOn) spec = AltitudeReal.apply(spec, cpi);
+        const layout = frameLayout(spec);
+        const limit = rangeLimit();
+        if (limit) layout.yaxis = {...layout.yaxis, range: [-limit, limit], autorange: false};
+        if (xRange) layout.xaxis = {...layout.xaxis, range: xRange, autorange: false};
+        const phone = AltitudePhone.prepare(chart, spec, layout);
+        await Plotly.react(chart, phone.data, phone.layout, config);
+        await AltitudeZeroAxes.attach(chart, Plotly);
+      }
+
+      // manifest.y_range (card spending) offers fixed ± y-axis ranges on some views.
+      const rangeSelect = document.getElementById("range");
+      let viewLabel = "";
+      const rangeViews = () => manifest?.y_range?.views || [];
+      const rangeLimit = () => rangeViews().includes(viewLabel) ? Number(rangeSelect.value) || 0 : 0;
+      function setupRange() {
+        const options = manifest.y_range?.options || [];
+        rangeSelect.replaceChildren(...[0, ...options].map(value => {
+          const option = document.createElement("option");
+          option.value = String(value);
+          option.textContent = value ? "±" + value + (manifest.y_range.unit || "") : "Auto";
+          return option;
+        }));
+        document.getElementById("range-label").textContent = manifest.y_range?.label || "Axis range";
+        document.getElementById("range-control").hidden = true;
+      }
+      function showRange(index) {
+        viewLabel = manifest.views[index]?.label || "";
+        document.getElementById("range-control").hidden = !rangeViews().includes(viewLabel);
+      }
+      rangeSelect.addEventListener("change", async () => {
+        if (!activeSpec) return;
+        // Keep the reader's date window when only the axis range changes.
+        const dates = chart.layout?.xaxis?.range;
+        try { await draw(activeSpec, dates); } catch (error) { showError(); }
+      });
+
+      async function loadSpec(getSpec, isDefault) {
+        const number = ++requestNumber;
+        fetchController?.abort();
+        fetchController = new AbortController();
+        status.textContent = "Loading chart…";
+        status.hidden = !preview.hidden && isDefault;
+        chart.setAttribute("aria-hidden", "true");
+        try {
+          const spec = await getSpec(fetchController.signal);
+          if (number !== requestNumber) return;
+          await draw(spec);
+          if (number !== requestNumber) return;
+          activeSpec = spec;
+          preview.hidden = true;
+          chart.removeAttribute("aria-hidden");
+          status.hidden = true;
+        } catch (error) {
+          if (number === requestNumber && error.name !== "AbortError") showError();
+        }
+      }
+
+      function loadView(index) {
+        showRange(index);
+        return loadSpec(signal => readJson(manifest.views[index].spec, signal), index === 0);
+      }
+
+      // pick.js combines single-series views for charts whose manifest has a pick block.
+      let pickReady;
+      function loadPick() {
+        pickReady ??= new Promise((resolve, reject) => {
+          const script = document.createElement("script");
+          script.src = assetUrl("pick.js");
+          script.onload = resolve;
+          script.onerror = () => reject(new Error("Chart helper is unavailable"));
+          document.head.append(script);
+        });
+        return pickReady;
+      }
+
+      const isPickDefault = chosen => String(chosen) === String(manifest.pick.default || [0]);
+
+      function loadPicks(chosen) {
+        return loadSpec(async signal => {
+          await loadPick();
+          const files = new Map();
+          const specs = await Promise.all(chosen.map(async i => {
+            const view = manifest.views[i];
+            if (!files.has(view.spec)) files.set(view.spec, readJson(view.spec, signal));
+            return AltitudePick.viewSpec(await files.get(view.spec), view);
+          }));
+          if (specs.length === 1) return specs[0];
+          await loadPick();
+          return AltitudePick.combine(specs, manifest.pick, chosen, manifest.views.map(view => view.label));
+        }, isPickDefault(chosen));
+      }
+
+      // pick.js builds the boxes (see AltitudePick.setup).
+      async function setupPicks(requested) {
+        await loadPick();
+        const chosen = AltitudePick.setup(document.getElementById("picks"), manifest, requested, (picks, slugs) => {
+          const url = new URL(location.href);
+          if (isPickDefault(picks)) url.searchParams.delete("series");
+          else url.searchParams.set("series", slugs.join(","));
+          history.replaceState(null, "", url);
+          loadPicks(picks);
+        });
+        document.getElementById("view-control").hidden = true;
+        document.getElementById("picks").hidden = false;
+        document.getElementById("controls").hidden = false;
+        return loadPicks(chosen);
+      }
+
+      // A manifest with a real block ships cpi.json; the toggle stays in the link as ?real=1.
+      async function setupReal() {
+        if (!manifest.real) return;
+        try {
+          await new Promise((resolve, reject) => {
+            const script = document.createElement("script");
+            script.src = assetUrl("real.js");
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.append(script);
+          });
+          cpi = await readJson(manifest.real.cpi);
+        } catch (error) {
+          cpi = undefined;
+          return;
+        }
+        realBox.checked = realOn;
+        realBox.addEventListener("change", () => {
+          realOn = realBox.checked;
+          const url = new URL(location.href);
+          if (realOn) url.searchParams.set("real", "1"); else url.searchParams.delete("real");
+          history.replaceState(null, "", url);
+          if (activeSpec) draw(activeSpec, chart.layout?.xaxis?.range).catch(showError);
+        });
+        document.getElementById("real-control").hidden = false;
+        document.getElementById("controls").hidden = false;
+      }
+
+      function addDownload(label, path) {
+        if (!path) return;
+        const link = document.createElement("a");
+        link.href = assetUrl(path);
+        link.download = "";
+        link.textContent = label;
+        document.getElementById("downloads").append(link);
+      }
+
+      async function start() {
+        try {
+          manifest = await readJson("manifest.json");
+          if (!Array.isArray(manifest.views) || !manifest.views.length) throw new Error("No chart views");
+          document.title = manifest.title || manifest.name || "Altitude chart";
+          document.getElementById("title").textContent = document.title;
+          document.getElementById("note").textContent = manifest.note || "";
+          document.getElementById("source").textContent = "Source: " + (manifest.source || "not recorded");
+          document.getElementById("updated").textContent = " · Data last updated: " + formattedDate(manifest.updated);
+          addDownload("Download data", manifest.data);
+          AltitudeExport.setup(document.getElementById("downloads"), chart, manifest, manifest.image ? assetUrl(manifest.image) : null);
+          if (manifest.image && !activeSpec) {
+            preview.src = assetUrl(manifest.image);
+            preview.alt = manifest.image_alt || manifest.title || "Chart preview";
+            preview.hidden = false;
+            preview.onerror = () => { preview.hidden = true; if (!activeSpec) status.hidden = false; };
+          }
+          await setupReal();
+          setupRange();
+          if (manifest.pick) {
+            return await setupPicks((new URLSearchParams(location.search).get("series") || "").split(",").filter(Boolean));
+          }
+          manifest.views.forEach((view, index) => {
+            const option = document.createElement("option");
+            option.value = String(index);
+            option.textContent = view.label;
+            viewSelect.append(option);
+          });
+          document.getElementById("controls").hidden = manifest.views.length < 2 && !cpi;
+          document.getElementById("view-control").hidden = manifest.views.length < 2;
+          const requested = new URLSearchParams(location.search).get("view");
+          const selected = manifest.views.findIndex(view =>
+            view.spec.replace(/\.json$/i, "").split("/").pop() === requested);
+          viewSelect.value = String(selected < 0 ? 0 : selected);
+          viewSelect.addEventListener("change", () => loadView(Number(viewSelect.value)));
+          await loadView(Number(viewSelect.value));
+        } catch (error) {
+          showError();
+        }
+      }
+
+      addEventListener("resize", () => {
+        cancelAnimationFrame(resizeFrame);
+        resizeFrame = requestAnimationFrame(async () => {
+          if (!activeSpec || !status.hidden) return;
+          try {
+            const narrow = innerWidth < 600;
+            if (narrow !== wasNarrow) {
+              wasNarrow = narrow;
+              await draw(activeSpec);
+            }
+            await Plotly.Plots.resize(chart);
+          } catch (error) {
+            showError();
+          }
+        });
+      });
+      start();
+    })();
+  </script>
+</body>
+</html>

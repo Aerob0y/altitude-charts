@@ -1,5 +1,4 @@
-/* Aviation route map with d3-geo for polar, globe and world views.
-   SVG is the preview and the export source, so the downloaded map matches it. */
+/* SVG is the preview and the export source, so the downloaded map matches it. */
 (() => {
   "use strict";
   const $ = id => document.getElementById(id), M = RouteMap;
@@ -26,8 +25,6 @@
     $("title").value = demo ? "Queenstown connections" : "Airport connections";
     $("extent").value = "auto";
     $("metric").value = "equal";
-    const codes = [...new Set(data.routes.flatMap(r => [r.origin, r.destination]))].sort();
-    $("centre").replaceChildren(new Option("Busiest airport", ""), ...codes.map(c => new Option(c, c)));
     render();
     message(demo ? "Example only: these figures do not describe a published airline schedule." : `Opened ${name}. Your file has stayed in this browser.`);
   }
@@ -45,75 +42,6 @@
       default: return M.fit_extent(points);
     }
   }
-  // The current map: a latitude-adjusted equirectangular projection, unchanged.
-  function flat_frame(arcs, reserve) {
-    const bounds = extent(arcs.flat()), centre = (bounds[0] + bounds[1]) / 2;
-    const aspect = Math.max(.25, Math.cos((bounds[2] + bounds[3]) / 2 * Math.PI / 180));
-    const scale = Math.min((W - 140) / ((bounds[1] - bounds[0]) * aspect), (H - reserve) / (bounds[3] - bounds[2]));
-    // Fill the preview with context land, rather than an inset clipped rectangle.
-    if ($("extent").value === "auto") {
-      const middle_lat = (bounds[2] + bounds[3]) / 2;
-      const span = Math.min(360, (W - 84) / (aspect * scale));
-      bounds[0] = centre - span / 2; bounds[1] = centre + span / 2;
-      bounds[2] = Math.max(-90, middle_lat - (H - reserve) / scale / 2);
-      bounds[3] = Math.min(90, middle_lat + (H - reserve) / scale / 2);
-    }
-    const plot_width = (bounds[1] - bounds[0]) * aspect * scale, plot_height = (bounds[3] - bounds[2]) * scale;
-    const left = (W - plot_width) / 2, top = 138 + (H - 240 - plot_height) / 2;
-    const project = ([lon, lat]) => [left + (lon - bounds[0]) * aspect * scale, top + (bounds[3] - lat) * scale];
-    const point = p => project([M.wrap(p[0], centre), p[1]]);
-    // Unwrap each land ring before projecting, then draw copies across the date line.
-    const land_paths = [];
-    for (const feature of land.features) {
-      const polygons = feature.geometry.type === "Polygon" ? [feature.geometry.coordinates] : feature.geometry.coordinates;
-      for (const polygon of polygons) for (const shift of [-360, 0, 360]) {
-        let d = "";
-        for (const ring of polygon) {
-          let previous = M.wrap(ring[0][0], centre);
-          d += ring.map((p, i) => {
-            const lon = i ? previous + M.wrap(p[0] - previous, 0) : previous;
-            previous = lon; const [x, y] = project([lon + shift, p[1]]);
-            return `${i ? "L" : "M"}${x.toFixed(1)},${y.toFixed(1)}`;
-          }).join("") + "Z";
-        }
-        land_paths.push(d);
-      }
-    }
-    // Separate paths at the projection seam rather than drawing across the map.
-    const route = i => {
-      let previous; return arcs[i].map(p => {
-        const xy = point(p), move = !previous || Math.abs(xy[0] - previous[0]) > 180 * aspect * scale;
-        previous = xy; return `${move ? "M" : "L"}${xy[0].toFixed(2)},${xy[1].toFixed(2)}`;
-      }).join("");
-    };
-    return { left, top, plot_width, plot_height, land: land_paths, route, point };
-  }
-  // The airport with the most connections centres the polar and globe views.
-  function busiest(routes) {
-    const counts = new Map();
-    for (const r of routes) for (const c of [r.origin, r.destination]) counts.set(c, (counts.get(c) || 0) + 1);
-    return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0][0];
-  }
-  // Polar, globe and world views. d3-geo clips land and paths at the horizon and the date line.
-  function round_frame(routes, centre, reserve) {
-    const mode = $("projection").value, sphere = { type: "Sphere" };
-    const lines = routes.map(r => [data.airports.get(r.origin), data.airports.get(r.destination)]);
-    // Polar stops just short of the far point, where land shapes can't be drawn reliably.
-    const projection = mode === "polar" ? d3.geoAzimuthalEquidistant().rotate([-centre[0], -centre[1]]).clipAngle(177)
-      : mode === "globe" ? d3.geoOrthographic().rotate([-centre[0], -centre[1]])
-      : d3.geoEqualEarth().rotate([-M.fit_extent(lines.flat()).slice(0, 2).reduce((a, b) => a + b) / 2, 0]);
-    const left = 70, top = 138, plot_width = W - 140, plot_height = H - reserve;
-    // A globe always shows its whole disc; a part-globe crops awkwardly.
-    const whole = mode === "globe" || $("extent").value === "world" || !lines.length;
-    projection.precision(.2).fitExtent([[left + 30, top + 20], [left + plot_width - 30, top + plot_height - 20]],
-      whole ? sphere : { type: "MultiLineString", coordinates: lines });
-    const path = d3.geoPath(projection), rotate = projection.rotate(), facing = [-rotate[0], -rotate[1]];
-    // Airports on the far side of the globe are hidden.
-    const point = p => mode === "globe" && d3.geoDistance(p, facing) > Math.PI / 2 - 1e-6 ? null : projection(p);
-    return { left, top, plot_width, plot_height, point,
-      sphere: path(sphere), grid: $("grid").value === "show" ? path(d3.geoGraticule10()) : "",
-      land: [path(land)].filter(Boolean), route: i => path({ type: "LineString", coordinates: lines[i] }) };
-  }
   function export_size() {
     const custom = $("export-size").value === "custom";
     $("export-custom").hidden = !custom;
@@ -124,14 +52,6 @@
     W = Math.max(1200, 750 * ratio); H = W / ratio;
   }
   function render() {
-    const mode = $("projection").value, round = mode !== "flat";
-    // Regional presets and lat/long bounds only make sense on the flat map.
-    for (const value of ["tasman", "custom"]) $("extent").querySelector(`[value=${value}]`).disabled = round;
-    if (round && ["tasman", "custom"].includes($("extent").value)) $("extent").value = "auto";
-    $("round-options").hidden = !round;
-    $("centre").disabled = mode === "world";
-    $("projection-hint").textContent = { polar: "Routes from the centre airport are straight lines at true distance. Shapes stretch towards the edge.",
-      globe: "Shows the half of the world facing the centre airport. Routes to the far side stop at the horizon.", world: "Whole-world view with areas in proportion." }[mode] || "";
     $("bounds").hidden = $("extent").value !== "custom";
     $("width-value").value = $("width").value;
     if (!data || !land) return;
@@ -158,9 +78,22 @@
       const metric = $("metric").value, routes = totals.filter(r => metric === "equal" || r[metric] > 0);
       const codes = [...new Set(routes.flatMap(r => [r.origin, r.destination]))];
       const arcs = routes.map(r => M.great_circle(data.airports.get(r.origin), data.airports.get(r.destination)));
-      const centre_code = $("centre").value || (routes.length ? busiest(routes) : codes[0]);
-      const frame = mode === "flat" ? flat_frame(arcs, reserve) : round_frame(routes, data.airports.get(centre_code), reserve);
-      const { left, top, plot_width, plot_height } = frame;
+      const bounds = extent(arcs.flat()), centre = (bounds[0] + bounds[1]) / 2;
+      // A latitude-adjusted equirectangular projection keeps regional maps balanced.
+      const aspect = Math.max(.25, Math.cos((bounds[2] + bounds[3]) / 2 * Math.PI / 180));
+      const scale = Math.min((W - 140) / ((bounds[1] - bounds[0]) * aspect), (H - reserve) / (bounds[3] - bounds[2]));
+      // Fill the preview with context land, rather than an inset clipped rectangle.
+      if ($("extent").value === "auto") {
+        const middle_lat = (bounds[2] + bounds[3]) / 2;
+        const span = Math.min(360, (W - 84) / (aspect * scale));
+        bounds[0] = centre - span / 2; bounds[1] = centre + span / 2;
+        bounds[2] = Math.max(-90, middle_lat - (H - reserve) / scale / 2);
+        bounds[3] = Math.min(90, middle_lat + (H - reserve) / scale / 2);
+      }
+      const plot_width = (bounds[1] - bounds[0]) * aspect * scale, plot_height = (bounds[3] - bounds[2]) * scale;
+      const left = (W - plot_width) / 2, top = 138 + (H - 240 - plot_height) / 2;
+      const project = ([lon, lat]) => [left + (lon - bounds[0]) * aspect * scale, top + (bounds[3] - lat) * scale];
+      const point = p => project([M.wrap(p[0], centre), p[1]]);
       const bg = $("background").value, colour = $("route-colour").value;
       const luminance = bg.slice(1).match(/../g).map(v => parseInt(v, 16)).reduce((sum, v, i) => sum + v * [.2126, .7152, .0722][i], 0);
       const light = luminance < 140, ink = light ? "#e6f3ff" : "#102b3c", muted = light ? "#9bb5c9" : "#405c6c";
@@ -177,14 +110,31 @@
         text(42, 85, 30, $("title").value || "Airport connections", ink, { "font-weight": 600 }),
         text(42, 112, 14, $("source").value || "Source: user-supplied route table", muted));
       const geography = make("g", { "clip-path": "url(#map-clip)" }); svg.append(geography);
-      if (frame.sphere) geography.append(make("path", { d: frame.sphere, fill: "none", stroke: muted, "stroke-opacity": .6, "stroke-width": 1.2 }));
-      if (frame.grid) geography.append(make("path", { d: frame.grid, fill: "none", stroke: muted, "stroke-opacity": .25, "stroke-width": .6 }));
-      for (const d of frame.land) geography.append(make("path", { d, fill: light ? "#152e40" : "#d6e2e9", stroke: light ? "#2c495d" : "#acbfcd", "stroke-width": .7, "fill-rule": "evenodd" }));
+      // Unwrap each land ring before projecting, then draw copies across the date line.
+      for (const feature of land.features) {
+        const polygons = feature.geometry.type === "Polygon" ? [feature.geometry.coordinates] : feature.geometry.coordinates;
+        for (const polygon of polygons) for (const shift of [-360, 0, 360]) {
+          let d = "";
+          for (const ring of polygon) {
+            let previous = M.wrap(ring[0][0], centre);
+            d += ring.map((p, i) => {
+              const lon = i ? previous + M.wrap(p[0] - previous, 0) : previous;
+              previous = lon; const [x, y] = project([lon + shift, p[1]]);
+              return `${i ? "L" : "M"}${x.toFixed(1)},${y.toFixed(1)}`;
+            }).join("") + "Z";
+          }
+          geography.append(make("path", { d, fill: $("country-colour").value, stroke: light ? "#2c495d" : "#acbfcd", "stroke-width": .7, "fill-rule": "evenodd" }));
+        }
+      }
       const max = metric === "equal" ? 1 : Math.max(...routes.map(r => r[metric]));
       const route_layer = make("g", { "clip-path": "url(#map-clip)", fill: "none", "stroke-linecap": "round" }); svg.append(route_layer);
       routes.forEach((route, i) => {
         const colour = route_colour(route);
-        const d = frame.route(i); if (!d) return;
+        // Separate paths at the projection seam rather than drawing across the map.
+        let previous; const d = arcs[i].map(p => {
+          const xy = point(p), move = !previous || Math.abs(xy[0] - previous[0]) > 180 * aspect * scale;
+          previous = xy; return `${move ? "M" : "L"}${xy[0].toFixed(2)},${xy[1].toFixed(2)}`;
+        }).join("");
         const width = Number($("width").value) * (metric === "equal" ? 1 : Math.max(.15, route[metric] / max) * 3);
         route_layer.append(make("path", { d, stroke: colour, "stroke-width": width + 4, opacity: .35, filter: "url(#route-glow)" }));
         const path = make("path", { d, stroke: colour, "stroke-width": width, opacity: .9 });
@@ -193,9 +143,7 @@
       const boxes = [];
       const markers = make("g", { "clip-path": "url(#map-clip)" }); svg.append(markers);
       for (const code of codes) {
-        const location = data.airports.get(code), xy = frame.point(location);
-        if (!xy) continue;
-        const [x, y] = xy;
+        const location = data.airports.get(code), [x, y] = point(location);
         if (x < left || x > left + plot_width || y < top || y > top + plot_height) continue;
         markers.append(make("circle", { cx: x, cy: y, r: 4.5, fill: ink, stroke: bg, "stroke-width": 1.5 }));
         if ($("labels").value === "none") continue;
@@ -285,7 +233,7 @@
   async function example() {
     const version = ++upload_version;
     try {
-      const response = await fetch("./sample.csv"); if (!response.ok) throw Error("Could not load the example.");
+      const response = await fetch("sample.csv"); if (!response.ok) throw Error("Could not load the example.");
       const next = M.normalise(M.parse_csv(await response.text()));
       if (version === upload_version) install(next, "Queenstown example", true);
     } catch (e) { message(e.message, true); }
@@ -293,9 +241,9 @@
   $("example").addEventListener("click", example);
   async function start() {
     try {
-      const response = await fetch("./land.geojson"); if (!response.ok) throw Error("Could not load geography. Reload the page.");
+      const response = await fetch("land.geojson"); if (!response.ok) throw Error("Could not load geography. Reload the page.");
       land = await response.json();
-      const lookup = await fetch("./airports.json"); if (!lookup.ok) throw Error("Could not load airport lookup. Reload the page.");
+      const lookup = await fetch("airports.json"); if (!lookup.ok) throw Error("Could not load airport lookup. Reload the page.");
       M.set_airports(await lookup.json());
       $("draw-routes").disabled = false;
       await example();

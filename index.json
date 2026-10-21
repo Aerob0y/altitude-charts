@@ -1,54 +1,6 @@
 {
   "charts": [
     {
-      "name": "donut_bands",
-      "title": "Auckland: residents and new homes",
-      "source": "Stats NZ building consents and 2023 Census",
-      "note": "Shares by 2 km distance band from Britomart. Consents since 2016; population is the 2023 Census count. Consents are permissions, not completions.",
-      "target": "consents_sa2",
-      "updated": "2026-10-15",
-      "page": "donut_bands/index.html",
-      "image": "donut_bands/donut_bands.png",
-      "site": "miscellaneous",
-      "menu": "Auckland housing"
-    },
-    {
-      "name": "donut_curve",
-      "title": "Auckland: where homes were consented",
-      "source": "Stats NZ building consents and 2023 Census",
-      "note": "Cumulative shares ordered by distance. Below the diagonal means consents lie further out relative to 2023 residents. The period comparison is descriptive, not a policy-effect estimate.",
-      "target": "consents_sa2",
-      "updated": "2026-10-15",
-      "page": "donut_curve/index.html",
-      "image": "donut_curve/donut_curve.png",
-      "site": "miscellaneous",
-      "menu": "Auckland housing"
-    },
-    {
-      "name": "donut_rates",
-      "title": "Auckland: new homes per 100 residents",
-      "source": "Stats NZ building consents and 2023 Census",
-      "note": "Consents since 2016 by dwelling type and distance band. Rates exclude areas below 100 residents; totals retain them. Townhouses includes flats, units and other dwellings.",
-      "target": "consents_sa2",
-      "updated": "2026-10-15",
-      "page": "donut_rates/index.html",
-      "image": "donut_rates/donut_rates.png",
-      "site": "miscellaneous",
-      "menu": "Auckland housing"
-    },
-    {
-      "name": "donut_growth",
-      "title": "Auckland: where new people and homes went",
-      "source": "Stats NZ building consents and 2013/2023 Censuses",
-      "note": "Shares of net population growth and new homes consented over the matching Census window. Areas that lost people contribute negative growth. Census counts are rounded and methods changed between censuses.",
-      "target": "consents_sa2",
-      "updated": "2026-10-15",
-      "page": "donut_growth/index.html",
-      "image": "donut_growth/donut_growth.png",
-      "site": "miscellaneous",
-      "menu": "Auckland housing"
-    },
-    {
       "name": "hb1",
       "title": "Exchange rates",
       "source": "Reserve Bank of New Zealand (RBNZ)",
@@ -277,6 +229,18 @@
       "menu": "Economic"
     },
     {
+      "name": "ie_house_prices",
+      "title": "Ireland: house prices",
+      "source": "CSO residential property price index",
+      "note": "Monthly residential property prices for Ireland, Dublin and outside Dublin. Compare annual change in percent or the index (2015 = 100), for all dwellings, houses or apartments.",
+      "target": "cso",
+      "updated": "2026-10-09",
+      "page": "ie_house_prices/index.html",
+      "image": null,
+      "site": "ireland",
+      "menu": "Housing"
+    },
+    {
       "name": "ie_airports",
       "title": "Ireland: airport passengers",
       "source": "Central Statistics Office Ireland (CSO) · TAQ01",
@@ -290,18 +254,6 @@
     }
   ],
   "sites": [
-    {
-      "key": "miscellaneous",
-      "label": "Miscellaneous",
-      "heading": "Miscellaneous",
-      "intro": "Maps and studies of where people live and where new homes go, using public data.",
-      "menus": [
-        {
-          "label": "Auckland housing",
-          "topics": ["donut_bands", "donut_curve", "donut_rates", "donut_growth"]
-        }
-      ]
-    },
     {
       "key": "nz",
       "label": "New Zealand",
@@ -330,7 +282,7 @@
         },
         {
           "label": "Housing",
-          "topics": ["ndm01"]
+          "topics": ["ndm01", "ie_house_prices"]
         },
         {
           "label": "Aviation",
@@ -342,28 +294,21 @@
   "tools": [
     {
       "key": "route-map",
-      "title": "Aviation Route Map",
+      "title": "Aviation route map",
       "page": "route-map/index.html",
-      "beta": false
+      "beta": true
+    },
+    {
+      "key": "route-map-projections",
+      "title": "Route map projections (trial)",
+      "page": "route-map-projections/index.html",
+      "beta": true
     },
     {
       "key": "catchments",
       "title": "Airport catchments",
       "page": "catchments/index.html",
       "beta": true
-    },
-    {
-      "key": "wacc",
-      "title": "WACC calculator",
-      "page": "wacc/index.html",
-      "beta": true
-    },
-    {
-      "key": "donut",
-      "title": "Where Auckland builds (3D map)",
-      "page": "donut/index.html",
-      "beta": true,
-      "section": "miscellaneous"
     }
   ]
 }

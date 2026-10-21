@@ -74,8 +74,7 @@
     const parts = title.split(/<br\s*\/?\s*>/i);
     subtitle.textContent = new DOMParser().parseFromString(parts.slice(1).join(" "), "text/html").body.textContent;
     layout.title = {text: ""};
-    const numericXAxis = ["linear", "category"].includes(layout.xaxis?.type);
-    layout.margin = {...layout.margin, t: 12, l: 45, r: layout.yaxis2 ? 45 : 18, b: numericXAxis ? 135 : 100};
+    layout.margin = {...layout.margin, t: 12, l: 45, r: layout.yaxis2 ? 45 : 18, b: 100};
     for (const key of Object.keys(layout).filter(key => /^[xy]axis\d*$/.test(key))) {
       layout[key].tickfont = {...layout[key].tickfont, size: 10};
       if (layout[key].title) {
@@ -84,12 +83,12 @@
       }
     }
     layout.showlegend = true;
-    layout.legend = {...layout.legend, orientation: "h", x: 0, xanchor: "left", y: numericXAxis ? -0.32 : -0.16, yanchor: "top", font: {...layout.legend?.font, size: 10}};
+    layout.legend = {...layout.legend, orientation: "h", x: 0, xanchor: "left", y: -0.16, yanchor: "top", font: {...layout.legend?.font, size: 10}};
     layout.hoverlabel = {...layout.hoverlabel, namelength: -1};
     const data = spec.data.filter(trace => trace.mode !== "text").map(trace => ({...structuredClone(trace),
       name: wrap(trace.name || ""), showlegend: true, hoverlabel: {...trace.hoverlabel, namelength: -1}}));
     dates.replaceChildren();
-    const rangeButtons = numericXAxis ? [] : spec.layout?.xaxis?.rangeselector?.buttons || [];
+    const rangeButtons = spec.layout?.xaxis?.rangeselector?.buttons || [];
     if (layout.xaxis?.rangeselector) layout.xaxis.rangeselector.visible = false;
     rangeButtons.forEach(setting => {
       const button = document.createElement("button");
