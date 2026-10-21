@@ -4,18 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <title>Aviation route map · Altitude</title>
+  <title>Aviation Route Map · Altitude</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="route-map.css">
-  <script defer src="vendor/xlsx.mini.min.js"></script>
-  <script defer src="map.js"></script>
+  <link rel="stylesheet" href="../topics.css">
+  <script defer src="../topics.js"></script>
+  <link rel="stylesheet" href="./route-map.css">
+  <script defer src="./vendor/xlsx.mini.min.js"></script>
+  <script defer src="vendor/d3-array.min.js"></script>
+  <script defer src="vendor/d3-geo.min.js"></script>
+  <script defer src="./map.js"></script>
   <script defer src="ui.js"></script>
 </head>
 <body>
-  <header class="bar"><a href="../">Altitude</a><span>Aviation tools · Beta</span></header>
+  <header class="bar"><a href="../">Altitude</a><span>Aviation tools</span></header>
   <main>
-    <header class="intro"><p class="eyebrow">AIRPORT CONNECTIVITY · BETA</p><h1>Your network, on a map.</h1>
-      <p>Turn a route table into a map for a report or presentation. Your files stay in this browser.</p></header>
+    <header class="intro"><p class="eyebrow">AIRPORT CONNECTIVITY</p><h1>Aviation Route Map</h1>
+      <p>Draw your routes in flat, polar, globe and world views. Your files stay in this browser.</p></header>
     <div class="workspace">
       <form id="controls" aria-label="Map settings">
         <fieldset><legend>01 / Route data</legend>
@@ -25,7 +29,7 @@
           <button id="draw-routes" type="button" disabled>Draw these routes</button>
           <label for="upload">Open CSV or Excel (.xlsx)</label><input id="upload" type="file" accept=".csv,.xlsx">
           <p class="hint">Up to 5 MB and 2,000 rows. Excel uses the first worksheet. Required columns: origin, destination.</p>
-          <div class="actions"><button id="example" type="button">Queenstown example</button><a href="sample.csv" download>Sample CSV</a><a href="sample.xlsx" download>Sample Excel</a></div>
+          <div class="actions"><button id="example" type="button">Queenstown example</button><a href="./sample.csv" download>Sample CSV</a><a href="./sample.xlsx" download>Sample Excel</a></div>
           <details><summary>Columns and airport codes</summary>
             <p>Optional: flights, seats, airline, colour (or color, as #rrggbb), origin_lat, origin_lon, destination_lat, destination_lon. Flights and seats must be non-negative numbers. Use the same period for every row.</p>
             <p>Coordinates use decimal degrees (longitude −180 to 180, latitude −90 to 90). Supply both for codes outside the lookup, or to override a location.</p>
@@ -42,8 +46,11 @@
             <div><label for="width">Line thickness <output id="width-value">2</output></label><input id="width" type="range" min="1" max="5" step="0.5" value="2"></div></div>
           <div class="pair colours"><div><label for="route-colour">Routes</label><input id="route-colour" type="color" value="#62cfff"></div>
             <div><label for="background">Background</label><input id="background" type="color" value="#081827"></div></div>
-          <div class="pair colours"><div><label for="country-colour">Countries</label><input id="country-colour" type="color" value="#152e40"></div></div>
           <label for="colour-by">Colour routes</label><select id="colour-by"><option value="route">Route or group colours</option><option value="airline">By airline</option><option value="single">One colour</option></select>
+          <label for="projection">Projection</label><select id="projection"><option value="flat">Flat</option><option value="polar" selected>Polar, centred on an airport</option><option value="globe">Globe</option><option value="world">World (Equal Earth)</option></select>
+          <div id="round-options"><div class="pair"><div><label for="centre">Centre on</label><select id="centre"><option value="">Busiest airport</option></select></div>
+            <div><label for="grid">Grid lines</label><select id="grid"><option value="show">Show</option><option value="none">Hide</option></select></div></div>
+            <p class="hint" id="projection-hint"></p></div>
           <label for="extent">Map extent</label><select id="extent"><option value="auto">Fit the routes</option><option value="tasman">Australia and New Zealand</option><option value="world">World</option><option value="custom">Custom bounds</option></select>
           <div id="bounds" hidden><p class="hint">For the date line, set east above 180 (e.g. 190).</p><div class="pair">
             <div><label for="west">West longitude</label><input id="west" type="number" min="-180" max="180" value="135" step="any"></div>
@@ -62,7 +69,7 @@
         <div class="export-bar"><span id="summary">Loading example…</span><div class="actions"><button id="svg-export" disabled>Download SVG</button><button id="png-export" disabled>Download PNG</button></div></div>
         <p id="status" role="status" aria-live="polite">Loading geography…</p>
         <div id="map"></div>
-        <p class="caption">Curved paths show great-circle connections, not actual flight tracks. Widths compare airport-pair totals. Zero-value routes are hidden when a metric is selected.</p>
+        <p class="caption">Paths show great-circle connections, not actual flight tracks. Widths compare airport-pair totals. Zero-value routes are hidden when a metric is selected.</p>
         <details><summary>Route totals</summary><div class="table-wrap"><table><thead><tr><th>Airport pair</th><th>Flights</th><th>Seats</th><th>Airlines</th><th>Colour</th></tr></thead><tbody id="route-totals"></tbody></table></div></details>
       </section>
     </div>

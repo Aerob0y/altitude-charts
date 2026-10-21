@@ -342,15 +342,9 @@
   "tools": [
     {
       "key": "route-map",
-      "title": "Aviation route map",
+      "title": "Aviation Route Map",
       "page": "route-map/index.html",
-      "beta": true
-    },
-    {
-      "key": "route-map-projections",
-      "title": "Route map projections (trial)",
-      "page": "route-map-projections/index.html",
-      "beta": true
+      "beta": false
     },
     {
       "key": "catchments",
