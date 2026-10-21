@@ -31,6 +31,6 @@
     }
   ],
   "data": "data.csv",
-  "image": null,
+  "image": "ie_house_prices.png",
   "image_alt": "Ireland: house prices All · Annual change (%) · Source: CSO residential property price index"
 }

@@ -5,83 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Altitude charts</title>
   <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Inter+Tight:wght@600&display=swap">
+  <link rel="stylesheet" href="../topics.css">
+  <script defer src="../topics.js"></script>
   <link rel="stylesheet" href="../export_options.css">
   <link rel="stylesheet" href="../phone_chart.css">
   <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; width: 100%; height: 100%; }
-    body { background: #fbfaf7; color: #142e2c; font-family: Arial, sans-serif; display: flex; flex-direction: column; }
-    a { color: #164b45; text-underline-offset: 3px; }
-    :focus-visible { outline: 2px solid #164b45; outline-offset: 3px; }
+    body { background: #FAFAF8; color: #3B3D41; font-family: Inter, Arial, sans-serif; display: flex; flex-direction: column; }
+    a { color: #0E6B6B; text-underline-offset: 3px; }
+    :focus-visible { outline: 2px solid #0E6B6B; outline-offset: 3px; }
     [hidden] { display: none !important; }
-
-    /* Top bar: same menus as the dashboard */
-    .bar { flex: 0 0 auto; display: flex; align-items: stretch; gap: 4px; padding: 0 16px; background: white; border-bottom: 1px solid #cbd6d1; position: relative; z-index: 10; }
-    .brand { display: flex; align-items: center; margin-right: 18px; font: 20px/1 Georgia, "Times New Roman", serif; letter-spacing: -.02em; color: #142e2c; text-decoration: none; }
-    .menus { display: flex; align-items: stretch; gap: 2px; }
-    .menu { position: relative; display: flex; }
-    .menu > button, .home-link { display: flex; align-items: center; gap: 6px; padding: 14px 12px 12px; border: 0; border-bottom: 2px solid transparent; background: none; color: #142e2c; font: 14px Arial, sans-serif; cursor: pointer; text-decoration: none; }
-    .menu > button::after { content: ""; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; }
-    .menu > button:hover, .home-link:hover { background: #f4f0e8; }
-    .menu.current > button, .home-link.current { border-bottom-color: #164b45; color: #164b45; font-weight: 700; }
-    .list { position: absolute; top: 100%; left: 0; min-width: 240px; margin: 0; padding: 6px 0; list-style: none; background: white; border: 1px solid #cbd6d1; box-shadow: 0 12px 28px rgba(20,46,44,.12); }
-    .list a { display: block; padding: 8px 16px; color: #142e2c; text-decoration: none; font-size: 14px; }
-    .list a:hover, .list a:focus-visible { background: #d8e5df; }
-    .list a[aria-current="page"] { font-weight: 700; color: #164b45; }
-    .list .group { padding: 10px 16px 4px; color: #367069; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-    .topics-button { display: none; }
 
     main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 
     /* Home: grid of cards, like the dashboard overview */
     .home { overflow-y: auto; padding: 28px clamp(16px, 5vw, 64px) 48px; }
-    .home h1 { margin: 0 0 8px; font: 34px/1.1 Georgia, "Times New Roman", serif; letter-spacing: -.03em; }
-    .home > p { margin: 0 0 8px; color: #48605e; line-height: 1.6; max-width: 720px; }
-    .group-title { margin: 32px 0 14px; padding-bottom: 10px; border-bottom: 1px solid #cbd6d1; font-size: 13px; letter-spacing: .13em; text-transform: uppercase; }
+    .home h1 { margin: 0 0 8px; color: #222326; font: 600 34px/1.1 "Inter Tight", Inter, Arial, sans-serif; letter-spacing: -.03em; }
+    .home > p { margin: 0 0 8px; color: #64676C; line-height: 1.6; max-width: 720px; }
+    .group-title { margin: 32px 0 14px; padding-bottom: 10px; border-bottom: 1px solid #DCD6CB; font-size: 13px; letter-spacing: .13em; text-transform: uppercase; }
     .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
-    .card { display: flex; flex-direction: column; background: white; border: 1px solid #d9dfdc; color: inherit; text-decoration: none; transition: box-shadow .15s, transform .15s; }
-    .card:hover { box-shadow: 0 12px 28px rgba(20,46,44,.1); transform: translateY(-2px); }
-    .card .thumb { aspect-ratio: 2 / 1; background: #f4f0e8; display: grid; place-items: center; color: #7d8f8b; font-size: 12px; overflow: hidden; }
+    .card { display: flex; flex-direction: column; background: white; border: 1px solid #DCD6CB; color: inherit; text-decoration: none; transition: box-shadow .15s, transform .15s; }
+    .card:hover { box-shadow: 0 12px 28px rgba(34,35,38,.08); transform: translateY(-2px); }
+    .card .thumb { aspect-ratio: 2 / 1; background: #F6F0E6; display: grid; place-items: center; color: #8A8781; font-size: 12px; overflow: hidden; }
     .card img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .card .text { padding: 12px 14px 14px; }
-    .card h3 { margin: 0 0 4px; font: 18px/1.2 Georgia, "Times New Roman", serif; }
-    .card p { margin: 0; color: #526663; font-size: 13px; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .card h3 { margin: 0 0 4px; color: #222326; font: 600 18px/1.2 "Inter Tight", Inter, Arial, sans-serif; }
+    .card p { margin: 0; color: #64676C; font-size: 13px; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .doors { margin: 0 0 8px; font-size: 14px; }
-    .card .meta { margin-top: 8px; color: #367069; font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+    .card .meta { margin-top: 8px; color: #0E6B6B; font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
 
     /* Topic page: same parts as the single-chart template */
     .topic { flex: 1 1 auto; min-height: 480px; padding: 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
     .topic header, .topic footer, .controls { flex: 0 0 auto; min-width: 0; }
-    .topic h1 { margin: 0 0 6px; font: 28px/1.1 Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
-    #note { margin: 0; color: #48605e; font-size: 13px; line-height: 1.45; max-width: 900px; }
+    .topic h1 { margin: 0 0 6px; color: #222326; font: 600 28px/1.1 "Inter Tight", Inter, Arial, sans-serif; letter-spacing: -.025em; }
+    #note { margin: 0; color: #64676C; font-size: 13px; line-height: 1.45; max-width: 900px; }
     .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 13px; }
     #real-control { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
     #real-control[hidden] { display: none; }
     #picks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; min-width: 0; max-width: 100%; }
     .series-picker { position: relative; display: block; min-width: 0; max-width: 100%; }
-    .series-button { display: block; max-width: 100%; width: 520px; padding: 8px 10px; border: 1px solid #c4d3cd; background: white; color: inherit; font: inherit; text-align: left; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .series-options { position: absolute; top: calc(100% + 4px); left: 0; z-index: 20; width: 100%; min-width: 240px; max-width: calc(100vw - 32px); max-height: min(360px, 55vh); overflow-y: auto; padding: 8px; border: 1px solid #c4d3cd; background: white; box-shadow: 0 8px 20px rgba(20,46,44,.12); }
-    .series-hint { display: block; padding: 4px 6px 8px; color: #48605e; font-size: 12px; line-height: 1.4; }
+    .series-button { display: block; max-width: 100%; width: 520px; padding: 8px 10px; border: 1px solid #DCD6CB; background: white; color: inherit; font: inherit; text-align: left; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .series-options { position: absolute; top: calc(100% + 4px); left: 0; z-index: 20; width: 100%; min-width: 240px; max-width: calc(100vw - 32px); max-height: min(360px, 55vh); overflow-y: auto; padding: 8px; border: 1px solid #DCD6CB; background: white; box-shadow: 0 8px 20px rgba(34,35,38,.10); }
+    .series-hint { display: block; padding: 4px 6px 8px; color: #64676C; font-size: 12px; line-height: 1.4; }
     .series-option { display: flex; align-items: start; gap: 8px; padding: 7px 6px; line-height: 1.35; cursor: pointer; overflow-wrap: anywhere; }
-    .series-option:hover { background: #f4f0e8; }
-    .series-option input { flex: 0 0 auto; margin: 2px 0 0; accent-color: #164b45; }
-    .series-option.disabled { color: #737d7b; cursor: default; }
-    select { min-width: 0; max-width: 100%; padding: 7px; border: 1px solid #c4d3cd; background: white; color: inherit; font: inherit; }
-    .chart-area { flex: 1 1 auto; min-height: 260px; min-width: 0; position: relative; background: white; }
+    .series-option:hover { background: #F6F0E6; }
+    .series-option input { flex: 0 0 auto; margin: 2px 0 0; accent-color: #0E6B6B; }
+    .series-option.disabled { color: #8A8781; cursor: default; }
+    select { min-width: 0; max-width: 100%; padding: 7px; border: 1px solid #DCD6CB; background: white; color: inherit; font: inherit; }
+    .chart-area { flex: 1 1 auto; min-height: 260px; min-width: 0; position: relative; background: transparent; }
     #chart { position: absolute; inset: 0; width: 100%; height: 100%; }
     #preview { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: white; z-index: 1; }
-    #status { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: #48605e; background: white; z-index: 2; }
-    .topic footer { border-top: 1px solid #cbd6d1; padding-top: 8px; font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
+    #status { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: #64676C; background: #FAFAF8; z-index: 2; }
+    .topic footer { border-top: 1px solid #DCD6CB; padding-top: 8px; font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
     #downloads { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 4px; }
 
     @media (max-width: 699px) {
-      .bar { padding: 0 10px; justify-content: space-between; }
-      .menus, .home-link { display: none; }
-      .topics-button { display: flex; align-items: center; gap: 6px; padding: 12px 4px; border: 0; background: none; color: #164b45; font: 700 14px Arial, sans-serif; cursor: pointer; }
-      .bar.open .menus { display: block; position: absolute; top: 100%; left: 0; right: 0; max-height: calc(100vh - 60px); overflow-y: auto; background: white; border-bottom: 1px solid #cbd6d1; box-shadow: 0 12px 28px rgba(20,46,44,.12); }
-      .bar.open .menu { display: block; }
-      .bar.open .menu > button { display: none; }
-      .bar.open .list { display: block !important; position: static; border: 0; box-shadow: none; padding: 0 0 6px; }
       .topic { padding: 10px; gap: 8px; }
       .topic h1 { font-size: 23px; }
       #note { font-size: 12px; }
@@ -90,20 +71,15 @@
   </style>
 </head>
 <body>
-  <nav class="bar" id="bar" aria-label="Topics">
-    <a class="brand" href="#">Altitude</a>
-    <a class="home-link" id="home-link" href="#">Overview</a>
-    <div class="menus" id="menus"></div>
-    <button class="topics-button" id="topics-button" aria-expanded="false" aria-controls="menus">Topics ☰</button>
-  </nav>
   <main>
     <section class="home" id="home" hidden>
       <h1 id="heading">New Zealand and Ireland in charts</h1>
-      <p><span id="intro">Economic, tourism and housing data from public sources, updated as new figures are released.</span> Pick a topic from the menus above or a card below.</p>
+      <p><span id="intro">Economic, tourism and housing data from public sources, updated as new figures are released.</span> Pick a topic from the Topics menu or a card below.</p>
       <p class="doors" id="doors" hidden></p>
-      <p class="doors"><a href="../route-map/">Aviation route map</a> (Beta) · Open your route table and download a map.</p>
-      <p class="doors"><a href="../route-map-projections/">Route map projections</a> (Trial) · The same tool with polar, globe and world views.</p>
-      <p class="doors"><a href="../catchments/">Airport catchments</a> (Beta) · Who lives closer to which airport, by road.</p>
+      <p class="doors" data-door="aviation"><a href="../wacc/">WACC calculator</a> (Beta) · Compare cost of capital scenarios.</p>
+      <p class="doors" data-door="aviation"><a href="../route-map/">Aviation Route Map</a> · Open your route table and download a map.</p>
+      <p class="doors" data-door="aviation"><a href="../catchments/">Airport catchments</a> (Beta) · Who lives closer to which airport, by road.</p>
+      <p class="doors" data-door="miscellaneous" hidden><a href="../donut/">Where Auckland builds</a> (Beta) · A 3D map of people and new homes in every Auckland area.</p>
       <div id="groups"></div>
     </section>
     <section class="topic" id="topic" hidden>
@@ -115,7 +91,7 @@
         <label id="real-control" hidden><input type="checkbox" id="real"> Today's dollars</label>
       </div>
       <section class="chart-area" aria-label="Interactive chart">
-        <img id="preview" width="1200" height="600" alt="" hidden>
+        <img id="preview" width="1200" height="750" alt="" hidden>
         <div id="chart"></div><div id="status" role="status" aria-live="polite">Loading chart…</div>
       </section>
       <footer>
@@ -132,6 +108,10 @@
       // Each front door (publish/nz/, publish/ireland/) is this page with data-site set.
       // Its menus come from site_menus in dev/publish_all.R, via index.json.
       const SITE = document.documentElement.dataset.site || "";
+      // The Miscellaneous front door links its own map rather than the aviation tools.
+      for (const door of document.querySelectorAll("[data-door]")) {
+        door.hidden = (door.dataset.door === "miscellaneous") !== (SITE === "miscellaneous");
+      }
       const root = new URL(SITE ? "../" : "./", location.href);
       let MENUS = [];
       const $ = id => document.getElementById(id);
@@ -199,47 +179,13 @@
       }
 
       function closeMenus() {
-        document.querySelectorAll(".menu .list").forEach(list => list.hidden = true);
-        document.querySelectorAll(".menu > button").forEach(button => button.setAttribute("aria-expanded", "false"));
-        $("bar").classList.remove("open");
-        $("topics-button").setAttribute("aria-expanded", "false");
+        const topics = document.querySelector(".site-topics");
+        if (topics) topics.open = false;
       }
 
       function buildMenus() {
-        const menus = $("menus"), groupsEl = $("groups");
+        const groupsEl = $("groups");
         for (const group of grouped()) {
-          const menu = document.createElement("div");
-          menu.className = "menu";
-          menu.dataset.topics = group.entries.map(entry => entry.name).join(" ");
-          const button = document.createElement("button");
-          button.textContent = group.label;
-          button.setAttribute("aria-expanded", "false");
-          const list = document.createElement("ul");
-          list.className = "list";
-          list.hidden = true;
-          const heading = document.createElement("li");
-          heading.className = "group";
-          heading.textContent = group.label;
-          list.append(heading);
-          for (const entry of group.entries) {
-            const item = document.createElement("li");
-            const link = document.createElement("a");
-            link.href = "#" + entry.name;
-            link.textContent = entry.title || entry.name;
-            link.dataset.topic = entry.name;
-            item.append(link);
-            list.append(item);
-          }
-          button.addEventListener("click", event => {
-            event.stopPropagation();
-            const open = list.hidden;
-            closeMenus();
-            list.hidden = !open;
-            button.setAttribute("aria-expanded", String(open));
-          });
-          menu.append(button, list);
-          menus.append(menu);
-
           const title = document.createElement("h2");
           title.className = "group-title";
           title.textContent = group.label;
@@ -276,23 +222,6 @@
           }
           groupsEl.append(title, grid);
         }
-        document.addEventListener("click", closeMenus);
-        document.addEventListener("keydown", event => { if (event.key === "Escape") closeMenus(); });
-        $("topics-button").addEventListener("click", event => {
-          event.stopPropagation();
-          const open = !$("bar").classList.contains("open");
-          closeMenus();
-          $("bar").classList.toggle("open", open);
-          $("topics-button").setAttribute("aria-expanded", String(open));
-        });
-      }
-
-      function markCurrent(name) {
-        $("home-link").classList.toggle("current", !name);
-        document.querySelectorAll(".menu").forEach(menu => menu.classList.toggle("current", !!name && menu.dataset.topics.split(" ").includes(name)));
-        document.querySelectorAll(".list a").forEach(link => {
-          if (link.dataset.topic === name) link.setAttribute("aria-current", "page"); else link.removeAttribute("aria-current");
-        });
       }
 
       function frameLayout(spec) {
@@ -469,7 +398,6 @@
         loadPlotly();
         $("home").hidden = true;
         $("topic").hidden = false;
-        markCurrent(name);
         activeSpec = null;
         cpi = undefined;
         realOn = real;
@@ -529,7 +457,6 @@
         ++requestNumber;
         $("topic").hidden = true;
         $("home").hidden = false;
-        markCurrent(null);
         document.title = "Altitude charts";
       }
 
@@ -578,7 +505,6 @@
             MENUS = site.menus;
             $("heading").textContent = site.heading;
             $("intro").textContent = site.intro;
-            document.querySelector(".brand").textContent = "Altitude · " + site.label;
           } else MENUS = sites.flatMap(item => item.menus.map(menu => ({...menu, label: sites.length > 1 ? item.label + ": " + menu.label : menu.label})));
           const others = sites.filter(item => item.key !== SITE);
           if (SITE && others.length) {

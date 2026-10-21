@@ -2,7 +2,7 @@
 // colours come from the palette in pick order; the first series' unit goes on the
 // left axis and any other unit on the right; with two axes each axis takes the
 // colour of its first line and is titled with its unit, the legend replaces the
-// end labels; with one axis it is black.
+// end labels; with one axis it is muted grey.
 (() => {
   function rgba(hex, alpha) {
     const n = parseInt(String(hex).replace("#", ""), 16);
@@ -19,12 +19,16 @@
     return items.slice(0, -1).join(", ") + ", and " + items[items.length - 1];
   }
 
-  function recolour(trace, colour) {
+  // Area fill tints from docs/STYLE.md (series_tints in standards.r).
+  const TINTS = {"#12243D": "#D5DBE4", "#0E6B6B": "#CFE3E1", "#6C8EBF": "#DCE5F1", "#C8781E": "#F3DFC7"};
+
+  function recolour(trace, colour, main) {
     if (trace.mode === "text") trace.textfont = {...trace.textfont, color: colour};
     else if (trace.type === "bar") trace.marker = {...trace.marker, color: colour};
     else {
       trace.line = {...trace.line, color: colour};
-      if (trace.fillcolor) trace.fillcolor = rgba(colour, 0.2);
+      if (trace.fillcolor) trace.fillcolor = TINTS[String(colour).toUpperCase()] || rgba(colour, 0.2);
+      else trace.line.width = main ? 2.5 : 2;
     }
   }
 
@@ -83,7 +87,7 @@
         const trace = structuredClone(source);
         trace.yaxis = axes[k];
         trace.legendgroup = "series_" + (k + 1);
-        recolour(trace, palette[k % palette.length]);
+        recolour(trace, palette[k % palette.length], k === 0);
         if (clash) {
           trace.name = labels[chosen[k]];
           if (trace.mode === "text") trace.text = trace.name;
@@ -101,13 +105,13 @@
 
     const layout = structuredClone(specs[0].layout || {});
     const second = axes.indexOf("y2");
-    layout.yaxis = {...layout.yaxis, color: twoAxes ? palette[0] : "black", zerolinecolor: "black"};
+    layout.yaxis = {...layout.yaxis, color: twoAxes ? palette[0] : "#64676C", zerolinecolor: "#222326"};
     if (twoAxes) {
       layout.yaxis.title = titleOf(layout.yaxis, dims[0]);
       const from = specs[second].layout.yaxis || {};
       layout.yaxis2 = {
         ...(layout.yaxis2 || {}), overlaying: "y", side: "right", anchor: "x", showgrid: false,
-        rangemode: "tozero", automargin: true, zerolinecolor: "black",
+        rangemode: "tozero", automargin: true, zerolinecolor: "#222326",
         tickformat: from.tickformat, tickprefix: from.tickprefix, color: palette[second % palette.length],
         title: titleOf(layout.yaxis2, dims[second])
       };
@@ -117,7 +121,7 @@
       delete layout.yaxis2;
       layout.margin = {...layout.margin, r: Math.max(...specs.map(spec => spec.layout?.margin?.r || 0))};
     }
-    layout.title = {...layout.title, text: `<b>${escapeHtml(pick.title)}</b><br><span style='font-size:0.8em; color:gray;'>` +
+    layout.title = {...layout.title, text: `<b>${escapeHtml(pick.title)}</b><br><span style='font-family:Inter, Arial, sans-serif; font-size:13px; font-weight:normal; color:#64676C;'>` +
       `${escapeHtml(pick.subtitles?.[chosen[0]] || pick.subtitle)}: ${escapeHtml(shortTitle(chosen.map(i => labels[i])))}` +
       `${pick.groups && !pick.subtitles ? escapeHtml(` (${pick.group_names?.[pick.groups[chosen[0]]] || pick.groups[chosen[0]]})`) : ""}</span>`};
     return {data: [...lines, ...endLabels], layout, config: specs[0].config};

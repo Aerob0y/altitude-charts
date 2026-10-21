@@ -1,35 +1,172 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Altitude charts</title>
-  <link rel="icon" href="data:,">
-  <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; background: #fbfaf7; color: #142e2c; font-family: Arial, sans-serif; }
-    main { width: 100%; max-width: 640px; }
-    h1 { margin: 0 0 8px; font: 34px/1.1 Georgia, "Times New Roman", serif; letter-spacing: -.03em; }
-    p { margin: 0 0 24px; color: #48605e; line-height: 1.6; }
-    .doors { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-    a { display: block; padding: 20px; background: white; border: 1px solid #d9dfdc; color: inherit; text-decoration: none; font: 22px/1.2 Georgia, "Times New Roman", serif; }
-    a:hover { box-shadow: 0 12px 28px rgba(20,46,44,.1); }
-    a span { display: block; margin-top: 6px; color: #367069; font: 13px Arial, sans-serif; }
-    .beta { display: inline-block; vertical-align: middle; padding: 1px 6px; border-radius: 3px; background: #EBBF7B; color: #142e2c; font: 700 11px Arial, sans-serif; font-style: normal; letter-spacing: .06em; text-transform: uppercase; }
-    :focus-visible { outline: 2px solid #164b45; outline-offset: 3px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>CSV Consulting · Aviation economics</title>
+<meta name="description" content="Airport pricing, demand forecasting and capacity analysis by Michael Hawley, for airports in Ireland, New Zealand and Australia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/navigation.js" defer></script>
 </head>
 <body>
-  <main>
-    <h1>Altitude charts</h1>
-    <p>Charts of public economic, housing, tourism and migration data. Choose a country.</p>
-    <nav class="doors" aria-label="Countries">
-      <a href="nz/">New Zealand<span>Exchange rates, inflation, housing, tourism and more</span></a>
-      <a href="ireland/">Ireland<span>New dwellings and more to come</span></a>
-      <a href="route-map/">Aviation route map <em class="beta">Beta</em><span>Open your route table; download SVG and PNG</span></a>
-      <a href="route-map-projections/">Route map projections <em class="beta">Trial</em><span>The route map with polar, globe and world views</span></a>
-      <a href="catchments/">Airport catchments <em class="beta">Beta</em><span>Who lives closer to which airport, for New Zealand and Canberra</span></a>
+<a class="skip" href="#main">Skip to content</a>
+<div class="top">
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="CSV Consulting home"><img src="images/csv-logo-ink.png" alt="CSV" width="299" height="236"></a>
+    <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" hidden>
+      <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <nav class="nav" id="main-nav" aria-label="Main">
+        <a href="work.html">Selected work</a>
+        <a href="insights.html">Insights</a>
+        <a href="posts.html">Posts</a>
+        <a href="about.html">About</a>
+        <a class="btn-outline" href="contact.html">Discuss a project</a>
     </nav>
-  </main>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <div class="stack">
+      <p class="kicker">Aviation economics · Ireland, New Zealand and Australia</p>
+      <h1>Clear analysis for airport pricing, demand and capacity decisions.</h1>
+      <p class="lead">I help airports and aviation organisations build usable models, test their options and explain decisions to airlines, boards and stakeholders.</p>
+      <div class="actions"><a class="btn" href="contact.html">Discuss a project</a><a class="textlink arrow" href="work.html">See selected work</a></div>
+    </div>
+    <figure class="hero-map">
+      <img src="images/nz-catchment-map.svg" alt="Map of New Zealand coloured by the major airport each area can drive to fastest" width="511" height="712">
+    </figure>
+  </div>
+</section>
+</div>
+<main id="main">
+<section class="proof" aria-label="Clients and employers">
+  <div class="wrap">
+    <div class="clients">
+      <p class="label">Clients and employers include</p>
+      <ul class="logos"><li><img src="images/logos/dunedin-airport.png" alt="Dunedin Airport" width="259" height="96" style="height:24px" loading="lazy"></li><li><img src="images/logos/queenstown-airport.png" alt="Queenstown Airport" width="164" height="96" style="height:30px" loading="lazy"></li><li><img src="images/logos/milford-sound.png" alt="Milford Sound Tourism" width="172" height="96" style="height:32px" loading="lazy"></li><li><img src="images/logos/auckland-airport.svg" alt="Auckland Airport" width="120" height="36" style="height:24px" loading="lazy"></li><li><img src="images/logos/midas-aviation.png" alt="Midas Aviation" width="141" height="96" style="height:32px" loading="lazy"></li></ul>
+    </div>
+    <p class="map-note"><strong>Map:</strong> each area coloured by the major airport it can drive to fastest. <a href="insights.html#catchments">Explore it</a></p>
+  </div>
+</section>
+
+<section class="band navy" aria-label="Insights">
+  <div class="wrap">
+    <div class="copy">
+      <p class="kicker">Insights</p>
+      <h2>A library of charts and maps, kept up to date.</h2>
+      <p>23 charts on New Zealand and Irish economy, tourism and aviation. Updated 2 October 2026.</p>
+      <a class="arrow" href="insights.html">Open the chart library</a>
+    </div>
+    <img src="images/chart-route-map.svg" alt="Route map of seats into Queenstown" width="1200" height="750" loading="lazy">
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap cols">
+    <div class="side">
+      <h2>What I do</h2>
+      <p>As a bounded project, or as contract support inside your team. Open any service to see an example.</p>
+    </div>
+    <div class="main rule-top">
+      <details class="acc-item" name="services" open>
+        <summary><span class="acc-num">00</span><span class="acc-title">How I work</span><span class="acc-icon" aria-hidden="true"></span></summary>
+        <div class="acc-body">
+          <div class="acc-text"><p>I work in two ways. The first is a bounded project: we agree the question, what you&#x27;ll receive and when, and I deliver it.</p><p>The second is contract support, where I work inside your team for a set period. That might mean reviewing models, writing decision papers, or setting up reporting that keeps running after I leave.</p><p>Either way, you get a usable handover: documented models, written-down assumptions, and a walk-through so your team can keep using the work.</p><a class="arrow" href="contact.html">Ask about contract support</a></div>
+          <figure class="acc-graphic">
+            <figcaption><span class="g-kicker">How I work</span><span class="g-title">How a project runs</span><span class="g-sub">From the first conversation to a usable handover</span></figcaption>
+            <img src="images/how-work-runs.svg" alt="Four steps: a scoping conversation, an agreed question and deliverables, analysis and review, and a usable handover" width="1200" height="260" loading="lazy">
+          </figure>
+        </div>
+      </details>
+      <details class="acc-item" name="services">
+        <summary><span class="acc-num">01</span><span class="acc-title">Passenger forecasting and planning</span><span class="acc-icon" aria-hidden="true"></span></summary>
+        <div class="acc-body">
+          <div class="acc-text"><p>I build long-term demand paths for master plans, pricing periods and investment timing.</p><p>Forecasts come as scenarios, not a single line, so you can see how much terminal and apron capacity to plan for and when the decision becomes urgent.</p><p>At Queenstown Airport I led the long-term passenger forecast that fed pricing and the master plan.</p><a class="arrow" href="work.html#queenstown">Queenstown Airport</a></div>
+          <figure class="acc-graphic">
+            <figcaption><span class="g-kicker">01 · Forecasting</span><span class="g-title">Growth forecast scenarios</span><span class="g-sub">Annual passengers, indexed (illustrative)</span></figcaption>
+            <img src="images/hero-chart-a.svg" alt="Three illustrative demand paths for a master plan, indexed" width="1160" height="560" loading="lazy">
+          </figure>
+        </div>
+      </details>
+      <details class="acc-item" name="services">
+        <summary><span class="acc-num">02</span><span class="acc-title">Airport pricing and financial modelling</span><span class="acc-icon" aria-hidden="true"></span></summary>
+        <div class="acc-body">
+          <div class="acc-text"><p>I build pricing models that meet Commerce Commission expectations and stand up in airline consultation.</p><p>The model sets out the asset base, cost of capital, operating costs and forecast passengers, so everyone can see how a price was reached and test the alternatives.</p><p>I&#x27;ve done this for Dunedin Airport, and managed regulated pricing and information disclosure at Queenstown Airport.</p><a class="arrow" href="work.html#dunedin">Dunedin Airport</a></div>
+          <figure class="acc-graphic">
+            <figcaption><span class="g-kicker">02 · Pricing</span><span class="g-title">Pricing methodology</span><span class="g-sub">How the asset base and free cash flows set the price</span></figcaption>
+            <img src="images/pricing-method.png" alt="Diagram of the pricing method: the asset base and free cash flows are discounted so the return covers the cost of capital" width="963" height="670" loading="lazy">
+          </figure>
+        </div>
+      </details>
+      <details class="acc-item" name="services">
+        <summary><span class="acc-num">03</span><span class="acc-title">Capacity and scheduling</span><span class="acc-icon" aria-hidden="true"></span></summary>
+        <div class="acc-body">
+          <div class="acc-text"><p>I set slot coordination, schedule rules and capacity limits that work on a busy day.</p><p>That starts with measuring demand hour by hour against what the runway, terminal or wharf can handle, then agreeing rules with the operators who use it.</p><p>I introduced Level 3 slot coordination at Queenstown Airport and designed the scheduling system for Milford Sound Port.</p><a class="arrow" href="work.html#milford">Milford Sound Port</a></div>
+          <figure class="acc-graphic">
+            <figcaption><span class="g-kicker">03 · Capacity</span><span class="g-title">Peak hour capacity</span><span class="g-sub">Aircraft movements per rolling hour against declared capacity (illustrative)</span></figcaption>
+            <img src="images/slide-capacity.svg" alt="Illustrative chart of aircraft movements per rolling hour against declared capacity" width="1140" height="450" loading="lazy">
+          </figure>
+        </div>
+      </details>
+      <details class="acc-item" name="services">
+        <summary><span class="acc-num">04</span><span class="acc-title">Route development</span><span class="acc-icon" aria-hidden="true"></span></summary>
+        <div class="acc-body">
+          <div class="acc-text"><p>I build business cases for new routes, along with regional analysis and airline incentive models.</p><p>The aim is to show an airline why the route makes sense, using catchment, visitor and fare data, and to show the airport what an incentive is worth.</p><p>This work started in network planning at Air New Zealand, and most of my current clients for it are under NDA.</p><a class="arrow" href="work.html#nda">Work under NDA</a></div>
+          <figure class="acc-graphic">
+            <figcaption><span class="g-kicker">04 · Routes</span><span class="g-title">Route network</span><span class="g-sub">Seats into Queenstown, example data</span></figcaption>
+            <img src="images/slide-route-map.svg" alt="Example route map of seats into Queenstown from Auckland and Australian airports" width="1200" height="750" loading="lazy">
+          </figure>
+        </div>
+      </details>
+      <details class="acc-item" name="services">
+        <summary><span class="acc-num">05</span><span class="acc-title">Dashboards and reporting</span><span class="acc-icon" aria-hidden="true"></span></summary>
+        <div class="acc-body">
+          <div class="acc-text"><p>I build Power BI dashboards and charts that your team can keep up to date and use.</p><p>Reports refresh from the source data, so you&#x27;re not rebuilding the same pack each month.</p><p>My public chart library is an example: New Zealand and Irish data, refreshed from official sources.</p><a class="arrow" href="insights.html">Chart library</a></div>
+          <figure class="acc-graphic">
+            <figcaption><span class="g-kicker">05 · Reporting</span><span class="g-title">Interest rates</span><span class="g-sub">Cash rate and swap rates, per cent a year. Source: Reserve Bank of New Zealand</span></figcaption>
+            <img src="images/slide-interest-rates.svg" alt="Chart of the official cash rate and 2-year and 10-year swap rates since 2016" width="1200" height="750" loading="lazy">
+          </figure>
+        </div>
+      </details>
+      <details class="acc-item" name="services">
+        <summary><span class="acc-num">06</span><span class="acc-title">Challenging analytics</span><span class="acc-icon" aria-hidden="true"></span></summary>
+        <div class="acc-body">
+          <div class="acc-text"><p>I take on messy data, mapping and modelling problems that need more than a spreadsheet.</p><p>I use R and Python where Excel runs out, for drive-time catchments, large booking or movement datasets, and automated data pipelines.</p><p>The airport catchment map is one example: drive times from every area of New Zealand to its nearest airports.</p><a class="arrow" href="insights.html#catchments">Airport catchments</a></div>
+          <figure class="acc-graphic">
+            <figcaption><span class="g-kicker">06 · Analytics</span><span class="g-title">Airport catchments</span><span class="g-sub">Nearest major airport by road, New Zealand</span></figcaption>
+            <img src="images/slide-catchments.svg" alt="Map of New Zealand coloured by nearest major airport by road" width="1200" height="750" loading="lazy">
+          </figure>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="split copy-left dark" aria-label="About Michael Hawley">
+  <div class="copy">
+    <p class="kicker">Michael Hawley</p>
+    <p class="big">Ten years on the airline and airport side, now working independently from Dublin.</p>
+    <p>My background spans Air New Zealand network planning, Auckland Airport commercial analysis and leading aeronautical work at Queenstown Airport. <a href="about.html">More about me</a></p>
+  </div>
+  <img src="images/portrait.jpg" alt="Michael Hawley at Queenstown Airport" width="900" height="858" loading="lazy">
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <img src="images/csv-logo-ink.png" alt="CSV" width="299" height="236">
+    <span>CSV Consulting is a trading name of CSV Limited.</span>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="work.html">Selected work</a><a href="insights.html">Insights</a><a href="posts.html">Posts</a><a href="about.html">About</a><a href="mailto:mike@csv.co.nz">mike@csv.co.nz</a>
+    </nav>
+    <span>Dublin, Ireland</span>
+  </div>
+</footer>
+
 </body>
 </html>

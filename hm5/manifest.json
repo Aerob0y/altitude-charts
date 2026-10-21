@@ -2,7 +2,7 @@
   "name": "hm5",
   "title": "Economic growth",
   "source": "RBNZ and Stats NZ series",
-  "note": "Compare real GDP growth, the current account as a share of GDP, and the household saving rate, all in percent.",
+  "note": "Compare real GDP growth, the current account as a share of GDP, the household saving rate, and annual changes in retail, wholesale and manufacturing sales, all in percent.",
   "updated": "2026-10-20",
   "views": [
     {
@@ -16,6 +16,18 @@
     {
       "label": "Household saving",
       "spec": "household-saving.json"
+    },
+    {
+      "label": "Retail sales",
+      "spec": "retail-sales.json"
+    },
+    {
+      "label": "Wholesale sales",
+      "spec": "wholesale-sales.json"
+    },
+    {
+      "label": "Manufacturing sales",
+      "spec": "manufacturing-sales.json"
     }
   ],
   "data": "data.csv",
@@ -28,6 +40,6 @@
     "palette": ["#12243D", "#0E6B6B", "#C8781E", "#6C8EBF", "#7E8C3A", "#9B5C7E", "#8A8781"],
     "margin_r": 24,
     "default": [0],
-    "dims": ["y/y%", "%", "Household saving rate (%)"]
+    "dims": ["y/y%", "%", "Household saving rate (%)", "y/y%", "y/y%", "y/y%"]
   }
 }
