@@ -3,7 +3,7 @@
   "title": "Yield curve",
   "source": "Reserve Bank of New Zealand (RBNZ)",
   "note": "Compare up to four bond and swap rates or spreads. A negative spread means the first rate is lower than the second. Spreads are in basis points; rates are in percent.",
-  "updated": "2026-10-20",
+  "updated": "2026-10-04",
   "views": [
     {
       "label": "Spreads: Swaps: 10-year minus 2-year",
