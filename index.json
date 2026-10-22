@@ -1,6 +1,42 @@
 {
   "charts": [
     {
+      "name": "donut_density",
+      "title": "Auckland: people per hectare",
+      "source": "Stats NZ 2013 and 2023 Census usually resident population counts",
+      "note": "Auckland urban area, grouped into 2 km bands by straight-line distance from Britomart to each area's centre point. Land excludes water. The teal top of each bar is the increase from 2013 to 2023.",
+      "target": "consents_sa2",
+      "updated": "2026-10-15",
+      "page": "donut_density/index.html",
+      "image": "donut_density/donut_density.png",
+      "site": "miscellaneous",
+      "menu": "Auckland's missing middle"
+    },
+    {
+      "name": "donut_share",
+      "title": "Auckland: where the people added went",
+      "source": "Stats NZ 2013 and 2023 Census usually resident population counts",
+      "note": "Each 2 km band's share of the urban area's 2013 residents, and of the net number of people added by 2023. Areas that lost people count against their band.",
+      "target": "consents_sa2",
+      "updated": "2026-10-15",
+      "page": "donut_share/index.html",
+      "image": "donut_share/donut_share.png",
+      "site": "miscellaneous",
+      "menu": "Auckland's missing middle"
+    },
+    {
+      "name": "donut_pace",
+      "title": "Auckland: growth a year by distance",
+      "source": "Stats NZ 2013 and 2023 Census usually resident population counts",
+      "note": "Average yearly growth in residents between the March 2013 and March 2023 Censuses, compared with the urban area as a whole. Bands far out start from few people, so their rates run high.",
+      "target": "consents_sa2",
+      "updated": "2026-10-15",
+      "page": "donut_pace/index.html",
+      "image": "donut_pace/donut_pace.png",
+      "site": "miscellaneous",
+      "menu": "Auckland's missing middle"
+    },
+    {
       "name": "donut_bands",
       "title": "Auckland: residents and new homes",
       "source": "Stats NZ building consents and 2023 Census",
@@ -10,7 +46,7 @@
       "page": "donut_bands/index.html",
       "image": "donut_bands/donut_bands.png",
       "site": "miscellaneous",
-      "menu": "Auckland housing"
+      "menu": "Auckland housing: more detail"
     },
     {
       "name": "donut_curve",
@@ -22,7 +58,19 @@
       "page": "donut_curve/index.html",
       "image": "donut_curve/donut_curve.png",
       "site": "miscellaneous",
-      "menu": "Auckland housing"
+      "menu": "Auckland housing: more detail"
+    },
+    {
+      "name": "donut_lorenz",
+      "title": "Auckland: how evenly growth was shared",
+      "source": "Stats NZ 2013 and 2023 Census usually resident population counts",
+      "note": "Auckland urban areas, ordered from Britomart outwards. The line adds up each area's share of 2013 residents and of population growth from 2013 to 2023. On the dashed line, growth would follow where people already lived. The further the line sits below it, the more growth went to outer areas. The Gini coefficient measures that gap: 0 is even, and higher means more growth further out. Areas that lost people pull the line down, so it can dip below zero.",
+      "target": "consents_sa2",
+      "updated": "2026-10-15",
+      "page": "donut_lorenz/index.html",
+      "image": "donut_lorenz/donut_lorenz.png",
+      "site": "miscellaneous",
+      "menu": "Auckland's missing middle"
     },
     {
       "name": "donut_rates",
@@ -34,7 +82,7 @@
       "page": "donut_rates/index.html",
       "image": "donut_rates/donut_rates.png",
       "site": "miscellaneous",
-      "menu": "Auckland housing"
+      "menu": "Auckland housing: more detail"
     },
     {
       "name": "donut_growth",
@@ -46,7 +94,7 @@
       "page": "donut_growth/index.html",
       "image": "donut_growth/donut_growth.png",
       "site": "miscellaneous",
-      "menu": "Auckland housing"
+      "menu": "Auckland housing: more detail"
     },
     {
       "name": "hb1",
@@ -153,6 +201,18 @@
       "updated": "2026-10-20",
       "page": "hm14/index.html",
       "image": "hm14/hm14.png",
+      "site": "nz",
+      "menu": "Economic"
+    },
+    {
+      "name": "oecd_cpi",
+      "title": "Inflation compared",
+      "source": "OECD",
+      "note": "Consumer prices, annual % change, quarterly. Compare published quarterly observations for New Zealand, Australia, Ireland, the UK, the US and the OECD total.",
+      "target": "oecd",
+      "updated": "2026-10-09",
+      "page": "oecd_cpi/index.html",
+      "image": "oecd_cpi/oecd_cpi.png",
       "site": "nz",
       "menu": "Economic"
     },
@@ -309,7 +369,11 @@
       "intro": "Maps and studies of where people live and where new homes go, using public data.",
       "menus": [
         {
-          "label": "Auckland housing",
+          "label": "Auckland's missing middle",
+          "topics": ["donut_density", "donut_share", "donut_pace", "donut_lorenz"]
+        },
+        {
+          "label": "Auckland housing: more detail",
           "topics": ["donut_bands", "donut_curve", "donut_rates", "donut_growth"]
         }
       ]
@@ -322,7 +386,7 @@
       "menus": [
         {
           "label": "Economic",
-          "topics": ["hb1", "hb2", "yield", "hc35", "hm1", "hm2", "ect", "hm3", "hm5", "hm8", "hm9", "hm10", "hm14", "hs32", "bond"]
+          "topics": ["hb1", "hb2", "yield", "hc35", "hm1", "hm2", "ect", "hm3", "hm5", "hm8", "hm9", "hm10", "hm14", "oecd_cpi", "hs32", "bond"]
         },
         {
           "label": "Tourism & Migration",

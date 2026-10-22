@@ -1,0 +1,16 @@
+{
+  "name": "donut_pace",
+  "title": "Auckland: growth a year by distance",
+  "source": "Stats NZ 2013 and 2023 Census usually resident population counts",
+  "note": "Average yearly growth in residents between the March 2013 and March 2023 Censuses, compared with the urban area as a whole. Bands far out start from few people, so their rates run high.",
+  "updated": "2026-10-15",
+  "views": [
+    {
+      "label": "Auckland urban area",
+      "spec": "auckland-urban-area.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "donut_pace.png",
+  "image_alt": "The inner suburbs grew slowest Average population growth a year, 2013 to 2023 Census, by distance from Britomart"
+}

@@ -45,7 +45,7 @@
     .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 13px; }
     #real-control { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
     #real-control[hidden] { display: none; }
-    #picks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; min-width: 0; max-width: 100%; }
+    .picks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; min-width: 0; max-width: 100%; }
     .series-picker { position: relative; display: block; min-width: 0; max-width: 100%; }
     .series-button { display: block; max-width: 100%; width: 520px; padding: 8px 10px; border: 1px solid #DCD6CB; background: white; color: inherit; font: inherit; text-align: left; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .series-options { position: absolute; top: calc(100% + 4px); left: 0; z-index: 20; width: 100%; min-width: 240px; max-width: calc(100vw - 32px); max-height: min(360px, 55vh); overflow-y: auto; padding: 8px; border: 1px solid #DCD6CB; background: white; box-shadow: 0 8px 20px rgba(34,35,38,.10); }
@@ -56,11 +56,35 @@
     .series-option.disabled { color: #8A8781; cursor: default; }
     select { min-width: 0; max-width: 100%; padding: 7px; border: 1px solid #DCD6CB; background: white; color: inherit; font: inherit; }
     .chart-area { flex: 1 1 auto; min-height: 260px; min-width: 0; position: relative; background: transparent; }
-    #chart { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .chart { position: absolute; inset: 0; width: 100%; height: 100%; }
     #preview { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: white; z-index: 1; }
-    #status { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: #64676C; background: #FAFAF8; z-index: 2; }
+    .status { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: #64676C; background: #FAFAF8; z-index: 2; }
+
+    /* Compare: a second chart panel, beside the first on wide screens and under it on narrow ones */
+    .panels { flex: 1 1 auto; min-height: 0; display: flex; gap: 16px; }
+    .panel { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+    .compare { display: flex; align-items: center; gap: 6px 12px; flex-wrap: wrap; }
+    .compare button { padding: 7px 12px; border: 1px solid #0E6B6B; background: white; color: #0E6B6B; font: inherit; font-weight: 600; cursor: pointer; }
+    .compare button:hover { background: #F6F0E6; }
+    .compare label { display: flex; align-items: center; gap: 4px; cursor: pointer; }
+    .compare input { accent-color: #0E6B6B; }
+    /* Side by side, the two charts' tops line up however many pick boxes each has. */
+    @media (min-width: 900px) {
+      .topic.comparing .panels { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr auto; gap: 10px 16px; }
+      .topic.comparing .panel { display: contents; }
+      .topic.comparing .controls, .topic.comparing .chart-options { align-self: start; }
+      .topic.comparing #b-panel .controls { grid-area: 1 / 2; }
+      .topic.comparing #b-panel .chart-area { grid-area: 2 / 2; }
+      .topic.comparing #b-panel .downloads { grid-area: 3 / 2; margin: 0; }
+    }
+    @media (max-width: 899px) {
+      .topic.comparing { overflow-y: auto; }
+      .topic.comparing .panels { flex: 0 0 auto; flex-direction: column; gap: 20px; }
+      .topic.comparing .chart-area { flex: 0 0 auto; height: max(320px, 60vh); }
+    }
     .topic footer { border-top: 1px solid #DCD6CB; padding-top: 8px; font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
-    #downloads { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 4px; }
+    #downloads, .downloads { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 4px; }
+    .panel .downloads { font-size: 11px; }
 
     @media (max-width: 699px) {
       .topic { padding: 10px; gap: 8px; }
@@ -84,16 +108,34 @@
     </section>
     <section class="topic" id="topic" hidden>
       <header><h1 id="title"></h1><p id="note"></p></header>
-      <div class="controls" id="controls" hidden>
-        <span id="view-control"><label for="view">Chart view</label> <select id="view"></select></span>
-        <span id="picks" hidden></span>
-        <span id="range-control" hidden><label for="range" id="range-label">Axis range</label> <select id="range"></select></span>
-        <label id="real-control" hidden><input type="checkbox" id="real"> Today's dollars</label>
+      <div class="panels">
+        <div class="panel" id="panel">
+          <div class="controls" id="controls" hidden>
+            <span id="view-control"><label for="view">Chart view</label> <select id="view"></select></span>
+            <span class="picks" id="picks" hidden></span>
+            <span id="range-control" hidden><label for="range" id="range-label">Axis range</label> <select id="range"></select></span>
+            <label id="real-control" hidden><input type="checkbox" id="real"> Today's dollars</label>
+            <span class="compare" id="compare-control" hidden>
+              <button type="button" id="compare" aria-expanded="false" aria-controls="b-panel">Compare ▸</button>
+              <label id="link-control" hidden><input type="checkbox" id="link-dates" checked> Link dates</label>
+            </span>
+          </div>
+          <section class="chart-area" aria-label="Interactive chart">
+            <img id="preview" width="1200" height="750" alt="" hidden>
+            <div class="chart" id="chart"></div><div class="status" id="status" role="status" aria-live="polite">Loading chart…</div>
+          </section>
+        </div>
+        <div class="panel" id="b-panel" hidden>
+          <div class="controls">
+            <span id="b-view-control"><label for="b-view">Chart view</label> <select id="b-view"></select></span>
+            <span class="picks" id="b-picks" hidden></span>
+          </div>
+          <section class="chart-area" aria-label="Second chart">
+            <div class="chart" id="b-chart"></div><div class="status" id="b-status" role="status" aria-live="polite">Loading chart…</div>
+          </section>
+          <nav class="downloads" id="b-downloads" aria-label="Second chart downloads"></nav>
+        </div>
       </div>
-      <section class="chart-area" aria-label="Interactive chart">
-        <img id="preview" width="1200" height="750" alt="" hidden>
-        <div id="chart"></div><div id="status" role="status" aria-live="polite">Loading chart…</div>
-      </section>
       <footer>
         <span id="source"></span><span id="updated"></span>
         <nav id="downloads" aria-label="Chart downloads"></nav>
@@ -115,9 +157,15 @@
       const root = new URL(SITE ? "../" : "./", location.href);
       let MENUS = [];
       const $ = id => document.getElementById(id);
-      const chart = $("chart"), preview = $("preview"), status = $("status"), viewSelect = $("view");
-      let catalogue = [], manifest, folder, activeSpec, requestNumber = 0, fetchController, resizeFrame;
-      let wasNarrow = innerWidth < 600;
+      // A panel is one chart with its own picks; the second (b-) panel is shown by Compare.
+      const panelOf = prefix => ({
+        el: $(prefix + "panel"), chart: $(prefix + "chart"), preview: $(prefix + "preview"), status: $(prefix + "status"),
+        view: $(prefix + "view"), viewControl: $(prefix + "view-control"), picks: $(prefix + "picks"),
+        spec: null, number: 0, narrow: false, chosen: [], viewIndex: 0
+      });
+      const first = panelOf(""), second = panelOf("b-"), panels = [first, second];
+      const preview = first.preview, viewSelect = first.view;
+      let catalogue = [], manifest, folder, topicName, requestNumber = 0, resizeFrame, syncing = false;
       let plotlyReady, pickReady, realReady, cpi;
       const realBox = $("real");
       let realOn = false;
@@ -148,6 +196,8 @@
       }
 
       const slugOf = item => item.spec.replace(/\.json$/i, "").split("/").pop();
+      // Pick links name views by id where views share a spec file (rents by location).
+      const pickSlugOf = item => item.id || slugOf(item);
 
       function assetUrl(path, base = root) {
         if (typeof path !== "string" || !path) throw new Error("Missing chart asset");
@@ -224,12 +274,12 @@
         }
       }
 
-      function frameLayout(spec) {
+      function frameLayout(spec, narrow) {
         const layout = structuredClone(spec.layout || {});
         delete layout.width;
         delete layout.height;
         layout.autosize = true;
-        if (innerWidth < 600) {
+        if (narrow) {
           layout.legend = {...layout.legend, orientation: "h", x: 0, xanchor: "left", y: -0.25, yanchor: "top"};
           const hasEndLabels = spec.data.some(trace => trace.mode === "text" && trace.showlegend === false);
           layout.margin = {...layout.margin, l: 44, r: hasEndLabels ? Math.max(layout.margin?.r || 0, 12) : 12, b: Math.max(layout.margin?.b || 0, 90)};
@@ -241,13 +291,47 @@
         return layout;
       }
 
-      function showError() {
-        status.textContent = "We couldn’t load this chart. Please try again later.";
-        status.hidden = false;
-        chart.setAttribute("aria-hidden", "true");
+      function showError(panel = first) {
+        panel.status.textContent = "We couldn’t load this chart. Please try again later.";
+        panel.status.hidden = false;
+        panel.chart.setAttribute("aria-hidden", "true");
       }
 
-      async function draw(spec, xRange) {
+      const comparing = () => !second.el.hidden;
+      // Side by side, each chart is narrower than the window, so it gets the phone layout when under 600px.
+      const isNarrow = panel => innerWidth < 600 || (comparing() && panel.chart.clientWidth > 0 && panel.chart.clientWidth < 600);
+      const linked = () => comparing() && $("link-dates").checked;
+      const otherOf = panel => panel === first ? second : first;
+
+      // Zooming or a range button on one chart moves the other, when Link dates is ticked.
+      function dateUpdate(event) {
+        const update = Object.fromEntries(Object.entries(event).filter(([key]) => /^xaxis\.(range(\[[01]\])?|autorange)$/.test(key)));
+        return Object.keys(update).length ? update : null;
+      }
+
+      async function relayoutQuietly(panel, update) {
+        syncing = true;
+        try { await Plotly.relayout(panel.chart, update); } finally { syncing = false; }
+      }
+
+      function onRelayout(event) {
+        const other = otherOf(this);
+        const update = dateUpdate(event);
+        if (syncing || !update || !linked() || !other.spec || !sameAxis(this, other)) return;
+        relayoutQuietly(other, update).catch(() => {});
+      }
+
+      const sameAxis = (a, b) => a.chart._fullLayout?.xaxis?.type === b.chart._fullLayout?.xaxis?.type;
+
+      // Gives `panel` the other chart's date window.
+      async function matchDates(panel) {
+        const other = otherOf(panel), axis = other.chart.layout?.xaxis;
+        if (!linked() || !panel.spec || !other.spec || !sameAxis(panel, other)) return;
+        if (!axis?.autorange && !Array.isArray(axis?.range)) return;
+        await relayoutQuietly(panel, axis.autorange ? {"xaxis.autorange": true} : {"xaxis.range": [...axis.range]});
+      }
+
+      async function draw(panel, spec, xRange) {
         await loadPlotly();
         if (!window.Plotly) throw new Error("Chart library is unavailable");
         if (!Array.isArray(spec.data)) throw new Error("Invalid chart");
@@ -255,74 +339,87 @@
         if (innerWidth < 600) config.displayModeBar = false;
         // real.js rescales dollar series when "Today's dollars" is ticked; other charts grey it out.
         const adjustable = !!cpi && AltitudeReal.adjustable(spec);
-        realBox.disabled = !adjustable;
-        $("real-control").title = adjustable ? "Adjust dollar amounts for inflation (CPI)" : "Only dollar amounts can be adjusted";
+        if (panel === first) {
+          realBox.disabled = !adjustable;
+          $("real-control").title = adjustable ? "Adjust dollar amounts for inflation (CPI)" : "Only dollar amounts can be adjusted";
+        }
         if (adjustable && realOn) spec = AltitudeReal.apply(spec, cpi);
-        const layout = frameLayout(spec);
-        const limit = rangeLimit();
+        panel.narrow = isNarrow(panel);
+        const layout = frameLayout(spec, panel.narrow);
+        const limit = panel === first ? rangeLimit() : 0;
         if (limit) layout.yaxis = {...layout.yaxis, range: [-limit, limit], autorange: false};
         if (xRange) layout.xaxis = {...layout.xaxis, range: xRange, autorange: false};
-        const phone = AltitudePhone.prepare(chart, spec, layout);
-        await Plotly.react(chart, phone.data, phone.layout, config);
-        await AltitudeZeroAxes.attach(chart, Plotly);
+        const phone = AltitudePhone.prepare(panel.chart, spec, layout, panel.phone);
+        await Plotly.react(panel.chart, phone.data, phone.layout, config);
+        await AltitudeZeroAxes.attach(panel.chart, Plotly);
+        panel.onRelayout ??= onRelayout.bind(panel);
+        panel.chart.removeListener("plotly_relayout", panel.onRelayout);
+        panel.chart.on("plotly_relayout", panel.onRelayout);
       }
 
-      // manifest.y_range (card spending) offers fixed ± y-axis ranges on some views.
-      const rangeSelect = document.getElementById("range");
+      // manifest.y_range (card spending) offers fixed ± y-axis ranges on some views of the first chart.
+      const rangeSelect = $("range");
       let viewLabel = "";
       const rangeViews = () => manifest?.y_range?.views || [];
       const rangeLimit = () => rangeViews().includes(viewLabel) ? Number(rangeSelect.value) || 0 : 0;
       function setupRange() {
         const options = manifest.y_range?.options || [];
-        rangeSelect.replaceChildren(...[0, ...options].map(value => {
-          const option = document.createElement("option");
-          option.value = String(value);
-          option.textContent = value ? "±" + value + (manifest.y_range.unit || "") : "Auto";
-          return option;
-        }));
-        document.getElementById("range-label").textContent = manifest.y_range?.label || "Axis range";
-        document.getElementById("range-control").hidden = true;
+        rangeSelect.replaceChildren(...[0, ...options].map(value =>
+          new Option(value ? "±" + value + (manifest.y_range.unit || "") : "Auto", String(value))));
+        $("range-label").textContent = manifest.y_range?.label || "Axis range";
+        $("range-control").hidden = true;
       }
       function showRange(index) {
         viewLabel = manifest.views[index]?.label || "";
-        document.getElementById("range-control").hidden = !rangeViews().includes(viewLabel);
+        $("range-control").hidden = !rangeViews().includes(viewLabel);
       }
       rangeSelect.addEventListener("change", async () => {
-        if (!activeSpec) return;
+        if (!first.spec) return;
         // Keep the reader's date window when only the axis range changes.
-        const dates = chart.layout?.xaxis?.range;
-        try { await draw(activeSpec, dates); } catch (error) { showError(); }
+        try { await draw(first, first.spec, first.chart.layout?.xaxis?.range); } catch (error) { showError(); }
       });
 
-      async function loadSpec(getSpec, number, isDefault) {
-        fetchController?.abort();
-        fetchController = new AbortController();
-        status.textContent = "Loading chart…";
-        status.hidden = !preview.hidden && isDefault;
-        chart.setAttribute("aria-hidden", "true");
+      async function loadSpec(panel, getSpec, isDefault) {
+        const number = ++panel.number;
+        panel.controller?.abort();
+        panel.controller = new AbortController();
+        panel.status.textContent = "Loading chart…";
+        panel.status.hidden = !!panel.preview && !panel.preview.hidden && isDefault;
+        panel.chart.setAttribute("aria-hidden", "true");
         try {
-          const spec = await getSpec(fetchController.signal);
-          if (number !== requestNumber) return;
-          await draw(spec);
-          if (number !== requestNumber) return;
-          activeSpec = spec;
-          preview.hidden = true;
-          chart.removeAttribute("aria-hidden");
-          status.hidden = true;
+          const spec = await getSpec(panel.controller.signal);
+          if (number !== panel.number) return;
+          await draw(panel, spec);
+          if (number !== panel.number) return;
+          panel.spec = spec;
+          if (panel.preview) panel.preview.hidden = true;
+          panel.chart.removeAttribute("aria-hidden");
+          panel.status.hidden = true;
+          await matchDates(panel);
         } catch (error) {
-          if (number === requestNumber && error.name !== "AbortError") showError();
+          if (number === panel.number && error.name !== "AbortError") showError(panel);
         }
       }
 
-      function loadView(index, number) {
-        showRange(index);
-        return loadSpec(signal => readJson(manifest.views[index].spec, folder, signal), number, index === 0);
+      function resetPanel(panel) {
+        panel.number++;
+        panel.controller?.abort();
+        panel.spec = null;
+        if (window.Plotly) Plotly.purge(panel.chart);
+      }
+
+      function loadView(panel, index) {
+        panel.viewIndex = index;
+        if (panel === first) showRange(index);
+        return loadSpec(panel, signal => readJson(manifest.views[index].spec, folder, signal), index === 0);
       }
 
       const isPickDefault = chosen => String(chosen) === String(manifest.pick.default || [0]);
+      const slugsOf = indices => indices.map(i => pickSlugOf(manifest.views[i])).join(",");
 
-      function loadPicks(chosen, number) {
-        return loadSpec(async signal => {
+      function loadPicks(panel, chosen) {
+        panel.chosen = chosen;
+        return loadSpec(panel, async signal => {
           await loadPick();
           const files = new Map();
           const specs = await Promise.all(chosen.map(async i => {
@@ -331,24 +428,103 @@
             return AltitudePick.viewSpec(await files.get(view.spec), view);
           }));
           if (specs.length === 1) return specs[0];
-          await loadPick();
           return AltitudePick.combine(specs, manifest.pick, chosen, manifest.views.map(item => item.label));
-        }, number, isPickDefault(chosen));
+        }, isPickDefault(chosen));
       }
 
-      // pick.js builds the boxes (see AltitudePick.setup).
-      async function setupPicks(name, requested, number) {
-        await loadPick();
-        if (number !== requestNumber) return;
-        const chosen = AltitudePick.setup($("picks"), manifest, requested, (picks, slugs) => {
-          const query = isPickDefault(picks) ? "" : "?series=" + slugs.map(encodeURIComponent).join(",");
-          history.replaceState(null, "", withReal("#" + name + query));
-          loadPicks(picks, ++requestNumber);
+      // The link keeps both charts: #topic?series=a,b&compare=c,d (or view= and compare= for views).
+      function writeUrl() {
+        const params = new URLSearchParams();
+        const state = panel => manifest.pick ? slugsOf(panel.chosen) : slugOf(manifest.views[panel.viewIndex]);
+        if (manifest.pick ? !isPickDefault(first.chosen) : first.viewIndex) params.set(manifest.pick ? "series" : "view", state(first));
+        if (comparing()) {
+          params.set("compare", state(second));
+          if (!$("link-dates").checked) params.set("link", "0");
+        }
+        const query = params.toString().replace(/%2C/gi, ",");
+        history.replaceState(null, "", withReal("#" + topicName + (query ? "?" + query : "")));
+      }
+
+      // pick.js builds the boxes (see AltitudePick.setup). The second panel's ids get a b- prefix.
+      function setupPicks(panel, requested) {
+        const chosen = AltitudePick.setup(panel.picks, manifest, requested, picks => {
+          loadPicks(panel, picks);
+          writeUrl();
         });
-        $("view-control").hidden = true;
-        $("picks").hidden = false;
-        $("controls").hidden = false;
-        return loadPicks(chosen, number);
+        if (panel === second) {
+          for (const node of panel.picks.querySelectorAll("[id]")) node.id = "b-" + node.id;
+          for (const node of panel.picks.querySelectorAll("label[for]")) node.htmlFor = "b-" + node.htmlFor;
+          for (const name of ["aria-controls", "aria-describedby", "aria-labelledby"]) {
+            for (const node of panel.picks.querySelectorAll(`[${name}]`)) node.setAttribute(name, "b-" + node.getAttribute(name));
+          }
+        }
+        panel.viewControl.hidden = true;
+        panel.picks.hidden = false;
+        return loadPicks(panel, chosen);
+      }
+
+      function setupViews(panel, index) {
+        panel.view.replaceChildren(...manifest.views.map((item, i) => new Option(item.label, String(i))));
+        panel.view.value = String(index);
+        panel.viewControl.hidden = manifest.views.length < 2;
+        panel.picks.hidden = true;
+        return loadView(panel, index);
+      }
+
+      // The second chart starts on a different pick: the first chart's other picks, or the next series.
+      function comparePicks() {
+        if (first.chosen.length > 1) return first.chosen.slice(1);
+        const groups = manifest.pick.groups, start = first.chosen[0] ?? 0;
+        const next = manifest.views.map((_, k) => (start + k + 1) % manifest.views.length)
+          .find(i => !groups || groups[i] === groups[start]);
+        return [next ?? start];
+      }
+
+      function refit() {
+        cancelAnimationFrame(resizeFrame);
+        resizeFrame = requestAnimationFrame(async () => {
+          if ($("topic").hidden) return;
+          for (const panel of panels) {
+            if (!panel.spec || !panel.status.hidden || panel.el.hidden) continue;
+            try {
+              if (isNarrow(panel) !== panel.narrow) { await draw(panel, panel.spec); await matchDates(panel); }
+              else await Plotly.Plots.resize(panel.chart);
+            } catch (error) { showError(panel); }
+          }
+        });
+      }
+
+      function setCompare(open, requested = [], link = true) {
+        resetPanel(second);
+        second.el.hidden = !open;
+        $("topic").classList.toggle("comparing", open);
+        $("compare").textContent = open ? "Close compare" : "Compare ▸";
+        $("compare").setAttribute("aria-expanded", String(open));
+        $("link-control").hidden = !open;
+        $("link-dates").checked = link;
+        $("b-downloads").replaceChildren();
+        // On phones the second chart has its own subtitle and date buttons (see phone_chart.js).
+        second.el.querySelectorAll(".chart-subtitle, .chart-dates").forEach(node => node.remove());
+        second.phone = undefined;
+        if (open) {
+          const subtitle = document.createElement("p"), dates = document.createElement("div");
+          subtitle.className = "chart-subtitle";
+          dates.className = "chart-dates";
+          dates.setAttribute("role", "group");
+          dates.setAttribute("aria-label", "Second chart date range");
+          second.el.querySelector(".chart-area").before(subtitle, dates);
+          second.phone = {subtitle, dates};
+          AltitudeExport.setup($("b-downloads"), second.chart, manifest, null);
+          $("b-downloads").querySelector("summary").textContent = "Download image of this chart";
+          second.status.textContent = "Loading chart…";
+          second.status.hidden = false;
+          if (manifest.pick) setupPicks(second, requested.length ? requested : comparePicks().map(i => pickSlugOf(manifest.views[i])));
+          else {
+            const index = manifest.views.findIndex(item => slugOf(item) === requested[0]);
+            setupViews(second, index < 0 ? (first.viewIndex + 1) % manifest.views.length : index);
+          }
+        }
+        refit();
       }
 
       // A manifest with a real block ships cpi.json; the toggle stays in the link as real=1.
@@ -378,7 +554,7 @@
         const [path, query] = hash.split("?");
         const params = new URLSearchParams(query || "");
         if (realOn && cpi) params.set("real", "1"); else params.delete("real");
-        const text = params.toString();
+        const text = params.toString().replace(/%2C/gi, ",");
         return path + (text ? "?" + text : "");
       }
 
@@ -391,17 +567,20 @@
         $("downloads").append(link);
       }
 
-      async function showTopic(name, view, series, real) {
+      async function showTopic(name, params) {
         const number = ++requestNumber;
         const entry = catalogue.find(item => item.name === name);
         if (!entry) return showHome();
         loadPlotly();
         $("home").hidden = true;
         $("topic").hidden = false;
-        activeSpec = null;
+        topicName = name;
+        manifest = null;
         cpi = undefined;
-        realOn = real;
-        if (window.Plotly) Plotly.purge(chart);
+        realOn = params.get("real") === "1";
+        panels.forEach(resetPanel);
+        second.el.hidden = true;
+        $("topic").classList.remove("comparing");
         folder = new URL(name + "/", root);
         $("title").textContent = entry.title || name;
         $("note").textContent = entry.note || "";
@@ -415,8 +594,8 @@
         $("real-control").hidden = true;
         $("range-control").hidden = true;
         preview.hidden = true;
-        status.textContent = "Loading chart…";
-        status.hidden = false;
+        first.status.textContent = "Loading chart…";
+        first.status.hidden = false;
         document.title = (entry.title || name) + " · Altitude charts";
         try {
           manifest = await readJson("manifest.json", folder);
@@ -425,29 +604,34 @@
           $("source").textContent = "Source: " + (manifest.source || "not recorded");
           $("updated").textContent = " · Data last updated: " + formattedDate(manifest.updated);
           addDownload("Download data", manifest.data);
-          AltitudeExport.setup($("downloads"), chart, manifest, manifest.image ? assetUrl(manifest.image) : null);
+          AltitudeExport.setup($("downloads"), first.chart, manifest, manifest.image ? assetUrl(manifest.image) : null);
           if (manifest.image) {
             preview.src = assetUrl(manifest.image, folder);
             preview.alt = manifest.image_alt || manifest.title || "Chart preview";
             preview.hidden = false;
-            status.hidden = true;
-            preview.onerror = () => { preview.hidden = true; if (!activeSpec) status.hidden = false; };
+            first.status.hidden = true;
+            preview.onerror = () => { preview.hidden = true; if (!first.spec) first.status.hidden = false; };
           }
           await setupReal();
           if (number !== requestNumber) return;
           setupRange();
-          if (manifest.pick) return await setupPicks(name, series, number);
-          manifest.views.forEach((item, index) => {
-            const option = document.createElement("option");
-            option.value = String(index);
-            option.textContent = item.label;
-            viewSelect.append(option);
-          });
-          $("controls").hidden = manifest.views.length < 2 && !cpi;
-          $("view-control").hidden = manifest.views.length < 2;
-          const selected = manifest.views.findIndex(item => slugOf(item) === view);
-          viewSelect.value = String(selected < 0 ? 0 : selected);
-          await loadView(Number(viewSelect.value), number);
+          const series = (params.get("series") || "").split(",").filter(Boolean);
+          const compare = (params.get("compare") || "").split(",").filter(Boolean);
+          let loading;
+          if (manifest.pick) {
+            await loadPick();
+            if (number !== requestNumber) return;
+            loading = setupPicks(first, series);
+          } else {
+            const selected = manifest.views.findIndex(item => slugOf(item) === params.get("view"));
+            loading = setupViews(first, selected < 0 ? 0 : selected);
+          }
+          // Compare needs something to compare: picks, or more than one view.
+          const canCompare = !!manifest.pick || manifest.views.length > 1;
+          $("compare-control").hidden = !canCompare;
+          $("controls").hidden = !canCompare && !cpi;
+          if (compare.length && canCompare) setCompare(true, compare, params.get("link") !== "0");
+          await loading;
         } catch (error) {
           if (number === requestNumber) showError();
         }
@@ -455,6 +639,7 @@
 
       function showHome() {
         ++requestNumber;
+        panels.forEach(resetPanel);
         $("topic").hidden = true;
         $("home").hidden = false;
         document.title = "Altitude charts";
@@ -463,37 +648,32 @@
       function route() {
         closeMenus();
         const [name, query] = decodeURIComponent(location.hash.slice(1)).split("?");
-        const params = new URLSearchParams(query || "");
-        if (name) showTopic(name, params.get("view"), (params.get("series") || "").split(",").filter(Boolean), params.get("real") === "1");
-        else showHome();
+        if (name) showTopic(name, new URLSearchParams(query || "")); else showHome();
       }
 
-      viewSelect.addEventListener("change", () => {
-        const index = Number(viewSelect.value);
-        const slug = slugOf(manifest.views[index]);
-        const name = location.hash.slice(1).split("?")[0];
-        history.replaceState(null, "", withReal("#" + name + (index ? "?view=" + encodeURIComponent(slug) : "")));
-        loadView(index, ++requestNumber);
+      for (const panel of panels) panel.view.addEventListener("change", () => {
+        loadView(panel, Number(panel.view.value));
+        writeUrl();
+      });
+      $("compare").addEventListener("click", () => {
+        setCompare(!comparing());
+        writeUrl();
+      });
+      $("link-dates").addEventListener("change", () => {
+        matchDates(second).catch(() => {});
+        writeUrl();
       });
 
+      // Today's dollars applies to both charts.
       realBox.addEventListener("change", () => {
         realOn = realBox.checked;
-        history.replaceState(null, "", withReal(location.hash));
-        if (activeSpec) draw(activeSpec, chart.layout?.xaxis?.range).catch(showError);
+        writeUrl();
+        for (const panel of panels) {
+          if (panel.spec && !panel.el.hidden) draw(panel, panel.spec, panel.chart.layout?.xaxis?.range).catch(() => showError(panel));
+        }
       });
 
-      addEventListener("resize", () => {
-        cancelAnimationFrame(resizeFrame);
-        resizeFrame = requestAnimationFrame(async () => {
-          if (!activeSpec || !status.hidden || $("topic").hidden) return;
-          try {
-            const narrow = innerWidth < 600;
-            if (narrow !== wasNarrow) { wasNarrow = narrow; await draw(activeSpec); }
-            await Plotly.Plots.resize(chart);
-          } catch (error) { showError(); }
-        });
-      });
-
+      addEventListener("resize", refit);
       addEventListener("hashchange", route);
       readJson("index.json")
         .then(index => {

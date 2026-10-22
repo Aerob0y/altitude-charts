@@ -1,0 +1,16 @@
+{
+  "name": "donut_density",
+  "title": "Auckland: people per hectare",
+  "source": "Stats NZ 2013 and 2023 Census usually resident population counts",
+  "note": "Auckland urban area, grouped into 2 km bands by straight-line distance from Britomart to each area's centre point. Land excludes water. The teal top of each bar is the increase from 2013 to 2023.",
+  "updated": "2026-10-15",
+  "views": [
+    {
+      "label": "Auckland urban area",
+      "spec": "auckland-urban-area.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "donut_density.png",
+  "image_alt": "Auckland is most crowded at its centre People per hectare of land, by distance from Britomart. 2013 Census, and the increase to 2023"
+}

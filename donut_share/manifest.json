@@ -1,0 +1,16 @@
+{
+  "name": "donut_share",
+  "title": "Auckland: where the people added went",
+  "source": "Stats NZ 2013 and 2023 Census usually resident population counts",
+  "note": "Each 2 km band's share of the urban area's 2013 residents, and of the net number of people added by 2023. Areas that lost people count against their band.",
+  "updated": "2026-10-15",
+  "views": [
+    {
+      "label": "Auckland urban area",
+      "spec": "auckland-urban-area.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "donut_share.png",
+  "image_alt": "The inner suburbs took few of the people added Each band's share of 2013 residents, and of the people added from 2013 to 2023"
+}

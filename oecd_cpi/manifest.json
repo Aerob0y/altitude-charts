@@ -1,0 +1,45 @@
+{
+  "name": "oecd_cpi",
+  "title": "Inflation compared",
+  "source": "OECD",
+  "note": "Consumer prices, annual % change, quarterly. Compare published quarterly observations for New Zealand, Australia, Ireland, the UK, the US and the OECD total.",
+  "updated": "2026-10-09",
+  "views": [
+    {
+      "label": "NZL",
+      "spec": "nzl.json"
+    },
+    {
+      "label": "AUS",
+      "spec": "aus.json"
+    },
+    {
+      "label": "IRL",
+      "spec": "irl.json"
+    },
+    {
+      "label": "GBR",
+      "spec": "gbr.json"
+    },
+    {
+      "label": "USA",
+      "spec": "usa.json"
+    },
+    {
+      "label": "OECD",
+      "spec": "oecd.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "oecd_cpi.png",
+  "image_alt": "Inflation compared Consumer prices, annual % change, quarterly · Source: OECD",
+  "pick": {
+    "labels": ["Country 1", "Country 2", "Country 3", "Country 4", "Country 5", "Country 6"],
+    "title": "Inflation compared",
+    "subtitle": "OECD",
+    "palette": ["#12243D", "#0E6B6B", "#C8781E", "#6C8EBF", "#7E8C3A", "#9B5C7E", "#8A8781"],
+    "margin_r": 24,
+    "default": [0, 1, 2, 5],
+    "dims": ["Annual % change", "Annual % change", "Annual % change", "Annual % change", "Annual % change", "Annual % change"]
+  }
+}

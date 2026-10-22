@@ -80,7 +80,8 @@
           if (field("clean").checked && layout[key].rangeselector) layout[key].rangeselector.visible = false;
           if (field("clean").checked && layout[key].rangeslider) layout[key].rangeslider.visible = false;
         }
-        layout.annotations = [...(layout.annotations || []), {text: "Source: " + escapeHtml(manifest.source || "not recorded"), xref: "paper", yref: "paper", x: 0, y: -0.24, xanchor: "left", yanchor: "top", showarrow: false, font: {family: "Inter, Arial, sans-serif", size: 11, color: "#64676C"}}];
+        // Pinned a fixed distance above the image's bottom edge, so it sits the same at every image size.
+        layout.annotations = [...(layout.annotations || []), {text: "Source: " + escapeHtml(manifest.source || "not recorded"), xref: "paper", yref: "paper", x: 0, y: 0, yshift: -(layout.margin.b - 28), xanchor: "left", yanchor: "top", showarrow: false, font: {family: "Inter, Arial, sans-serif", size: 11, color: "#64676C"}}];
         const data = structuredClone(chart.data);
         await Plotly.newPlot(temporary, data, layout, {displayModeBar: false, staticPlot: true});
         const picks = [...new Set((chart._altitudeSeriesNames || data.filter(trace => trace.mode !== "text").map(trace => trace.name || "series")).map(slug))].join("-");

@@ -35,6 +35,11 @@ button:hover { background: #222326; border-color: #222326; color: #FAFAF8; }
 #map { position: relative; height: min(72vh, 760px); min-height: 420px; background: #E9E7E2; overflow: hidden; }
 .key { position: absolute; left: 10px; top: 10px; z-index: 2; max-width: calc(100% - 20px); padding: 8px 10px; background: rgba(255,255,255,.92); border: 1px solid #DCD6CB; color: #222326; font-size: 12px; line-height: 1.6; pointer-events: none; }
 .key:empty { display: none; }
+.key .toggle { display: block; width: 100%; padding: 1px 6px 1px 0; border: 0; border-radius: 0; background: none; color: #222326; font-size: 12px; line-height: 1.6; text-align: left; pointer-events: auto; }
+.key .toggle:hover { background: none; color: #0E6B6B; }
+.key .toggle[aria-pressed="false"] { color: #9A9893; text-decoration: line-through; }
+.key .toggle[aria-pressed="false"] .swatch { opacity: .3; }
+.key .note { display: block; }
 .swatch { display: inline-block; width: 10px; height: 10px; margin-right: 6px; vertical-align: -1px; }
 .details, .summary { margin-top: 12px; padding: 14px 16px; background: #F6F0E6; }
 .details h3 { margin: 0 0 6px; font: 600 18px/1.2 "Inter Tight", Inter, Arial, sans-serif; color: #222326; }

@@ -1,0 +1,16 @@
+{
+  "name": "donut_lorenz",
+  "title": "Auckland: how evenly growth was shared",
+  "source": "Stats NZ 2013 and 2023 Census usually resident population counts",
+  "note": "Auckland urban areas, ordered from Britomart outwards. The line adds up each area's share of 2013 residents and of population growth from 2013 to 2023. On the dashed line, growth would follow where people already lived. The further the line sits below it, the more growth went to outer areas. The Gini coefficient measures that gap: 0 is even, and higher means more growth further out. Areas that lost people pull the line down, so it can dip below zero.",
+  "updated": "2026-10-15",
+  "views": [
+    {
+      "label": "Auckland urban area",
+      "spec": "auckland-urban-area.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "donut_lorenz.png",
+  "image_alt": "Auckland's growth went to its outer suburbs Cumulative shares from Britomart outwards, 2013 to 2023 Census. Gini coefficient 0.37"
+}

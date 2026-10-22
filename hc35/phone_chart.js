@@ -1,5 +1,6 @@
 (() => {
-  let options, summary, subtitle, dates, more;
+  let options, summary, more;
+  const shared = {};
   const narrow = () => innerWidth < 600;
   const wrap = text => {
     const words = String(text).split(/\s+/), lines = [];
@@ -35,9 +36,9 @@
       more.textContent = expanded ? "Less" : "More";
       more.setAttribute("aria-expanded", String(expanded));
     });
-    subtitle = document.createElement("p");
+    const subtitle = shared.subtitle = document.createElement("p");
     subtitle.className = "chart-subtitle";
-    dates = document.createElement("div");
+    const dates = shared.dates = document.createElement("div");
     dates.className = "chart-dates";
     dates.setAttribute("role", "group");
     dates.setAttribute("aria-label", "Date range");
@@ -63,13 +64,15 @@
     more.hidden = !narrow() || (!note.classList.contains("expanded") && note.scrollHeight <= note.clientHeight + 1);
   }
 
-  function prepare(chart, spec, layout) {
+  // `target` gives a second chart (Compare) its own subtitle and date buttons.
+  function prepare(chart, spec, layout, target) {
     setup();
     updateSummary();
     chart._altitudeExportTitle = structuredClone(spec.layout?.title);
     chart._altitudeExportSelector = structuredClone(spec.layout?.xaxis?.rangeselector);
     chart._altitudeSeriesNames = spec.data.filter(trace => trace.mode !== "text").map(trace => trace.name || "series");
     if (!narrow()) return {data: spec.data, layout};
+    const subtitle = target?.subtitle || shared.subtitle, dates = target?.dates || shared.dates;
     const title = typeof spec.layout?.title === "string" ? spec.layout.title : spec.layout?.title?.text || "";
     const parts = title.split(/<br\s*\/?\s*>/i);
     subtitle.textContent = new DOMParser().parseFromString(parts.slice(1).join(" "), "text/html").body.textContent;
