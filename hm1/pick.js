@@ -78,12 +78,17 @@
     const dims = chosen.map(i => pick.dims[i]);
     const axes = dims.map(dim => dim === dims[0] ? "y" : "y2");
     const twoAxes = axes.includes("y2");
-    const lines = [], endLabels = [];
+    const lines = [], endLabels = [], contextTraces = [];
     // Views can share a series name (e.g. a value and its % change); then name them by view.
-    const names = specs.map(spec => spec.data.find(trace => trace.mode !== "text")?.name);
+    const names = specs.map(spec => spec.data.find(trace => trace.mode !== "text" &&
+      trace.meta?.standard_plot_role !== "shade_hover")?.name);
     const clash = new Set(names).size < names.length;
     specs.forEach((spec, k) => {
       for (const source of spec.data) {
+        if (source.meta?.standard_plot_role === "shade_hover") {
+          if (k === 0) contextTraces.push(structuredClone(source));
+          continue;
+        }
         const trace = structuredClone(source);
         trace.yaxis = axes[k];
         trace.legendgroup = "series_" + (k + 1);
@@ -124,7 +129,7 @@
     layout.title = {...layout.title, text: `<b>${escapeHtml(pick.title)}</b><br><span style='font-family:Inter, Arial, sans-serif; font-size:13px; font-weight:normal; color:#64676C;'>` +
       `${escapeHtml(pick.subtitles?.[chosen[0]] || pick.subtitle)}: ${escapeHtml(shortTitle(chosen.map(i => labels[i])))}` +
       `${pick.groups && !pick.subtitles ? escapeHtml(` (${pick.group_names?.[pick.groups[chosen[0]]] || pick.groups[chosen[0]]})`) : ""}</span>`};
-    return {data: [...lines, ...endLabels], layout, config: specs[0].config};
+    return {data: [...lines, ...endLabels, ...contextTraces], layout, config: specs[0].config};
   }
 
   const setupListeners = new WeakMap();

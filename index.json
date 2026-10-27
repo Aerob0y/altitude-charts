@@ -10,7 +10,8 @@
       "page": "donut_density/index.html",
       "image": "donut_density/donut_density.png",
       "site": "miscellaneous",
-      "menu": "Auckland's missing middle"
+      "menu": "Auckland's missing middle",
+      "wip": false
     },
     {
       "name": "donut_share",
@@ -22,7 +23,8 @@
       "page": "donut_share/index.html",
       "image": "donut_share/donut_share.png",
       "site": "miscellaneous",
-      "menu": "Auckland's missing middle"
+      "menu": "Auckland's missing middle",
+      "wip": false
     },
     {
       "name": "donut_pace",
@@ -34,7 +36,8 @@
       "page": "donut_pace/index.html",
       "image": "donut_pace/donut_pace.png",
       "site": "miscellaneous",
-      "menu": "Auckland's missing middle"
+      "menu": "Auckland's missing middle",
+      "wip": false
     },
     {
       "name": "donut_bands",
@@ -46,7 +49,8 @@
       "page": "donut_bands/index.html",
       "image": "donut_bands/donut_bands.png",
       "site": "miscellaneous",
-      "menu": "Auckland housing: more detail"
+      "menu": "Auckland housing: more detail",
+      "wip": false
     },
     {
       "name": "donut_curve",
@@ -58,7 +62,8 @@
       "page": "donut_curve/index.html",
       "image": "donut_curve/donut_curve.png",
       "site": "miscellaneous",
-      "menu": "Auckland housing: more detail"
+      "menu": "Auckland housing: more detail",
+      "wip": false
     },
     {
       "name": "donut_lorenz",
@@ -70,7 +75,8 @@
       "page": "donut_lorenz/index.html",
       "image": "donut_lorenz/donut_lorenz.png",
       "site": "miscellaneous",
-      "menu": "Auckland's missing middle"
+      "menu": "Auckland's missing middle",
+      "wip": false
     },
     {
       "name": "donut_rates",
@@ -82,7 +88,8 @@
       "page": "donut_rates/index.html",
       "image": "donut_rates/donut_rates.png",
       "site": "miscellaneous",
-      "menu": "Auckland housing: more detail"
+      "menu": "Auckland housing: more detail",
+      "wip": false
     },
     {
       "name": "donut_growth",
@@ -94,7 +101,8 @@
       "page": "donut_growth/index.html",
       "image": "donut_growth/donut_growth.png",
       "site": "miscellaneous",
-      "menu": "Auckland housing: more detail"
+      "menu": "Auckland housing: more detail",
+      "wip": false
     },
     {
       "name": "hb1",
@@ -102,11 +110,12 @@
       "source": "Reserve Bank of New Zealand (RBNZ)",
       "note": "Shows how much foreign currency the New Zealand dollar buys. Use the selectors to compare currencies and the trade-weighted index.",
       "target": "rbnz",
-      "updated": "2026-10-04",
+      "updated": "2026-10-27",
       "page": "hb1/index.html",
       "image": "hb1/hb1.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "hb2",
@@ -114,11 +123,12 @@
       "source": "Reserve Bank of New Zealand (RBNZ)",
       "note": "Tracks wholesale and retail borrowing rates. Select up to five series to compare changes in borrowing conditions over time.",
       "target": "rbnz",
-      "updated": "2026-10-04",
+      "updated": "2026-10-27",
       "page": "hb2/index.html",
       "image": "hb2/hb2.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "hc35",
@@ -126,11 +136,12 @@
       "source": "Reserve Bank of New Zealand (RBNZ)",
       "note": "Shows mortgage lending across lending groups and loan types, providing context on household borrowing conditions.",
       "target": "rbnz",
-      "updated": "2026-10-04",
+      "updated": "2026-10-27",
       "page": "hc35/index.html",
       "image": "hc35/hc35.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "hm1",
@@ -138,11 +149,12 @@
       "source": "RBNZ and Stats NZ series",
       "note": "Measures how prices change over time. Compare up to five headline or component price indexes using a common metric.",
       "target": "rbnz",
-      "updated": "2026-10-04",
+      "updated": "2026-10-27",
       "page": "hm1/index.html",
       "image": "hm1/hm1.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "hm2",
@@ -150,11 +162,12 @@
       "source": "RBNZ and Stats NZ series",
       "note": "Describes household spending on goods and services—an important signal of demand and confidence in the economy.",
       "target": "rbnz",
-      "updated": "2026-10-04",
+      "updated": "2026-10-27",
       "page": "hm2/index.html",
       "image": "hm2/hm2.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "hm3",
@@ -162,11 +175,12 @@
       "source": "RBNZ and Stats NZ series · HM3",
       "note": "Covers spending that builds future capacity. This view compares broad investment types.",
       "target": "rbnz",
-      "updated": "2026-10-04",
+      "updated": "2026-10-27",
       "page": "hm3/index.html",
       "image": "hm3/hm3.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "hm8",
@@ -174,11 +188,12 @@
       "source": "RBNZ and Stats NZ series",
       "note": "Tracks the value and volume of goods and services bought from and sold to other countries.",
       "target": "rbnz",
-      "updated": "2026-10-04",
+      "updated": "2026-10-27",
       "page": "hm8/index.html",
       "image": "hm8/hm8.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "hm9",
@@ -186,11 +201,12 @@
       "source": "RBNZ and Stats NZ series",
       "note": "Brings together employment, participation, hours and wages to show how work and earnings are changing.",
       "target": "rbnz",
-      "updated": "2026-10-04",
+      "updated": "2026-10-27",
       "page": "hm9/index.html",
       "image": "hm9/hm9.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "hm14",
@@ -198,11 +214,12 @@
       "source": "Reserve Bank of New Zealand (RBNZ)",
       "note": "Summarises surveyed expectations for inflation and other economic measures. Expectations are opinions, not guaranteed forecasts.",
       "target": "rbnz",
-      "updated": "2026-10-04",
+      "updated": "2026-10-27",
       "page": "hm14/index.html",
       "image": "hm14/hm14.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "oecd_cpi",
@@ -214,7 +231,8 @@
       "page": "oecd_cpi/index.html",
       "image": "oecd_cpi/oecd_cpi.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "fuel",
@@ -226,7 +244,8 @@
       "page": "fuel/index.html",
       "image": "fuel/fuel.png",
       "site": "nz",
-      "menu": "Tourism & Migration"
+      "menu": "Tourism & Migration",
+      "wip": false
     },
     {
       "name": "ndm01",
@@ -238,7 +257,8 @@
       "page": "ndm01/index.html",
       "image": "ndm01/ndm01.png",
       "site": "ireland",
-      "menu": "Housing"
+      "menu": "Housing",
+      "wip": false
     },
     {
       "name": "ect",
@@ -250,7 +270,8 @@
       "page": "ect/index.html",
       "image": "ect/ect.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "hm5",
@@ -258,11 +279,12 @@
       "source": "RBNZ and Stats NZ series",
       "note": "Compare real GDP growth, the current account as a share of GDP, the household saving rate, and annual changes in retail, wholesale and manufacturing sales, all in percent.",
       "target": "rbnz",
-      "updated": "2026-10-04",
+      "updated": "2026-10-27",
       "page": "hm5/index.html",
       "image": "hm5/hm5.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "yield",
@@ -270,11 +292,12 @@
       "source": "Reserve Bank of New Zealand (RBNZ)",
       "note": "Compare up to four bond and swap rates or spreads. A negative spread means the first rate is lower than the second. Spreads are in basis points; rates are in percent.",
       "target": "rbnz",
-      "updated": "2026-10-04",
+      "updated": "2026-10-27",
       "page": "yield/index.html",
       "image": "yield/yield.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "adp",
@@ -286,7 +309,8 @@
       "page": "adp/index.html",
       "image": "adp/adp.png",
       "site": "nz",
-      "menu": "Tourism & Migration"
+      "menu": "Tourism & Migration",
+      "wip": false
     },
     {
       "name": "hs32",
@@ -294,11 +318,12 @@
       "source": "Reserve Bank of New Zealand (RBNZ)",
       "note": "Breaks registered-bank lending into products and borrower groups to show where credit is growing or contracting.",
       "target": "rbnz",
-      "updated": "2026-10-04",
+      "updated": "2026-10-27",
       "page": "hs32/index.html",
       "image": "hs32/hs32.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "bond",
@@ -310,7 +335,8 @@
       "page": "bond/index.html",
       "image": "bond/bond.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "hm10",
@@ -318,11 +344,12 @@
       "source": "CoreLogic series via RBNZ",
       "note": "Provides housing-market measures such as property values. Movements vary by place and do not represent every home.",
       "target": "rbnz",
-      "updated": "2026-10-04",
+      "updated": "2026-10-27",
       "page": "hm10/index.html",
       "image": "hm10/hm10.png",
       "site": "nz",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "ie_labour",
@@ -334,7 +361,8 @@
       "page": "ie_labour/index.html",
       "image": "ie_labour/ie_labour.png",
       "site": "ireland",
-      "menu": "Economic"
+      "menu": "Economic",
+      "wip": false
     },
     {
       "name": "ie_house_prices",
@@ -346,7 +374,8 @@
       "page": "ie_house_prices/index.html",
       "image": "ie_house_prices/ie_house_prices.png",
       "site": "ireland",
-      "menu": "Housing"
+      "menu": "Housing",
+      "wip": false
     },
     {
       "name": "ie_airports",
@@ -358,7 +387,8 @@
       "page": "ie_airports/index.html",
       "image": "ie_airports/ie_airports.png",
       "site": "ireland",
-      "menu": "Aviation"
+      "menu": "Aviation",
+      "wip": false
     }
   ],
   "sites": [

@@ -35,12 +35,13 @@
           <label for="country">Area covered</label>
           <select id="country">
             <option value="nz">New Zealand</option>
-            <option value="au">Australia: Canberra study area</option>
+            <option value="au">Australia</option>
+            <option value="ie">Ireland</option>
           </select>
           <label for="airport">Airport</label>
           <select id="airport"></select>
           <fieldset><legend>Competing airports</legend><div class="ticks" id="competitors"></div></fieldset>
-          <fieldset id="regions-box" hidden><legend>States shown</legend><div class="ticks" id="regions"></div></fieldset>
+          <fieldset id="regions-box" hidden><legend id="regions-label">States shown</legend><div class="ticks" id="regions"></div></fieldset>
           <label for="style">Colour areas by</label>
           <select id="style">
             <option value="density">Population density</option>
@@ -75,7 +76,7 @@
     </div>
     <footer>
       <p id="notice"></p>
-      <p>Sources: population from Stats NZ (New Zealand) and the ABS (Australia); drive times calculated with
+      <p>Sources: population from Stats NZ (New Zealand), the ABS (Australia) and the CSO Census 2022 (Ireland, grouped into Electoral Divisions); drive times calculated with
         OpenRouteService. Where a road time is missing, a straight-line estimate at 60 km/h is used and labelled;
         it does not allow for roads or ferries. Background map © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
     </footer>

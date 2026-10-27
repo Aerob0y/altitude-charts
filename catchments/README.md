@@ -1,6 +1,6 @@
 # Airport catchment map
 
-The static Beta map reads saved NZ and Canberra snapshots. No routing runs in
+The static Beta map reads the saved NZ and Australian snapshots. No routing runs in
 the browser. Population density and time-saving colours, popups and totals use
 the same statistical areas as before.
 

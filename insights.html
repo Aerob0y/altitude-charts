@@ -85,7 +85,7 @@
       <li data-key="ie_airports" data-cat="Tourism and aviation" data-country="Ireland" data-text="irish airport passengers passengers through dublin, cork, shannon, knock and kerry."><a href="ireland/#ie_airports"><span class="thumb"><img src="ie_airports/ie_airports.png" alt="Example of the irish airport passengers chart" width="1200" height="750" loading="lazy"></span><span class="cat">Tourism and aviation · Ireland</span><span class="t">Irish airport passengers</span><span class="d">Passengers through Dublin, Cork, Shannon, Knock and Kerry.</span></a></li>
       <li data-key="ie_labour" data-cat="Economy" data-country="Ireland" data-text="irish unemployment the unemployment rate by age group and sex."><a href="ireland/#ie_labour"><span class="thumb"><img src="ie_labour/ie_labour.png" alt="Example of the irish unemployment chart" width="1200" height="750" loading="lazy"></span><span class="cat">Economy · Ireland</span><span class="t">Irish unemployment</span><span class="d">The unemployment rate by age group and sex.</span></a></li>
       <li data-key="ndm01" data-cat="Housing" data-country="Ireland" data-text="irish new dwelling completions new homes completed each month, by type."><a href="ireland/#ndm01"><span class="thumb"><img src="ndm01/ndm01.png" alt="Example of the irish new dwelling completions chart" width="1200" height="750" loading="lazy"></span><span class="cat">Housing · Ireland</span><span class="t">Irish new dwelling completions</span><span class="d">New homes completed each month, by type.</span></a></li>
-      <li data-key="catchments" data-cat="Aviation tools" data-country="All" data-text="airport catchments who lives closer to which airport, by drive time, for new zealand and canberra."><a href="catchments/"><span class="thumb"><img src="images/chart-catchments.svg" alt="Example of the airport catchments" width="1200" height="750" loading="lazy"></span><span class="cat">Aviation tools</span><span class="t">Airport catchments</span><span class="d">Who lives closer to which airport, by drive time, for New Zealand and Canberra.</span></a></li>
+      <li data-key="catchments" data-cat="Aviation tools" data-country="All" data-text="airport catchments who lives closer to which airport, by drive time, for new zealand, australia and ireland."><a href="catchments/"><span class="thumb"><img src="images/chart-catchments.svg" alt="Example of the airport catchments" width="1200" height="750" loading="lazy"></span><span class="cat">Aviation tools</span><span class="t">Airport catchments</span><span class="d">Who lives closer to which airport, by drive time, for New Zealand, Australia and Ireland.</span></a></li>
       <li data-key="route-map" data-cat="Aviation tools" data-country="All" data-text="airport connections open a route table and get a clean route map to download as svg or png."><a href="route-map/"><span class="thumb"><img src="images/chart-route-map.svg" alt="Example of the airport connections" width="1200" height="750" loading="lazy"></span><span class="cat">Aviation tools</span><span class="t">Airport connections</span><span class="d">Open a route table and get a clean route map to download as SVG or PNG.</span></a></li>
       <li data-key="wacc" data-cat="Aviation tools" data-country="All" data-text="cost of capital calculator compare wacc scenarios, the return a regulated airport is allowed to earn."><a href="wacc/"><span class="thumb"><img src="images/pricing-building-blocks.svg" alt="Example of the cost of capital calculator" width="1200" height="700" loading="lazy"></span><span class="cat">Aviation tools</span><span class="t">Cost of capital calculator</span><span class="d">Compare WACC scenarios, the return a regulated airport is allowed to earn.</span></a></li>
     </ul>
@@ -150,7 +150,7 @@
       <div class="topic-group">
         <h3><span class="small">Tools</span>Aviation maps and tools</h3>
         <ul class="topic-list">
-          <li><a href="catchments/">Airport catchments</a><span>Who lives closer to which airport, by drive time, for New Zealand and Canberra.</span></li>
+          <li><a href="catchments/">Airport catchments</a><span>Who lives closer to which airport, by drive time, for New Zealand, Australia and Ireland.</span></li>
           <li><a href="route-map/">Airport connections</a><span>Open a route table and get a clean route map to download as SVG or PNG.</span></li>
           <li><a href="wacc/">Cost of capital calculator</a><span>Compare WACC scenarios, the return a regulated airport is allowed to earn.</span></li>
         </ul>
@@ -222,6 +222,7 @@
       a.append(thumb, c, t, d); li.append(a); grid.append(li);
     }
     (index.charts || []).forEach(function (ch) {
+      if (ch.wip) return;
       add(ch.name, ch.site + '/#' + ch.name, ch.image, ch.title, ch.note || '', CAT[ch.menu] || 'Economy', COUNTRY[ch.site] || 'All');
     });
     (index.tools || []).forEach(function (tool) {

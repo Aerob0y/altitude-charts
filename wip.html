@@ -46,9 +46,10 @@
   <div class="wrap">
     <div class="filters">
       <h2 id="browse-h">Find a chart</h2>
-      <p class="lead">Nothing is currently in progress. Add unfinished chart cards here as they are ready to share; when one is finished, move its card to <a href="insights.html">Insights</a>.</p>
+      <p class="lead">Unfinished charts, ready to share for review. Charts listed in <code>wip_topics</code> in <code>dev/publish_all.R</code> appear here; when one is finished, take it off that list and it moves to <a href="insights.html">Insights</a>.</p>
     </div>
     <p class="small count" id="count" aria-live="polite">0 charts</p>
+    <ul class="chart-grid" id="chart-grid"></ul>
     <p class="empty" id="none">No charts are currently in progress.</p>
   </div>
 </section>
@@ -79,5 +80,25 @@
     <span>Dublin, Ireland</span>
   </div>
 </footer>
+<script>
+(function () {
+  // Lists the charts flagged wip in the catalogue (wip_topics in dev/publish_all.R).
+  var grid = document.getElementById('chart-grid'), count = document.getElementById('count'), none = document.getElementById('none');
+  fetch('index.json').then(function (r) { if (!r.ok) throw Error(); return r.json(); }).then(function (index) {
+    var wip = (index.charts || []).filter(function (ch) { return ch.wip; });
+    wip.forEach(function (ch) {
+      var li = document.createElement('li'), a = document.createElement('a'), thumb = document.createElement('span');
+      a.href = ch.site + '/#' + ch.name; thumb.className = 'thumb';
+      if (ch.image) { var im = document.createElement('img'); im.src = ch.image; im.alt = ''; im.loading = 'lazy'; im.width = 640; im.height = 320; thumb.append(im); }
+      var c = document.createElement('span'), t = document.createElement('span'), d = document.createElement('span');
+      c.className = 'cat'; c.textContent = 'In progress';
+      t.className = 't'; t.textContent = ch.title || ch.name; d.className = 'd'; d.textContent = ch.note || '';
+      a.append(thumb, c, t, d); li.append(a); grid.append(li);
+    });
+    count.textContent = wip.length + (wip.length === 1 ? ' chart' : ' charts');
+    none.hidden = wip.length > 0;
+  }).catch(function () {});
+})();
+</script>
 </body>
 </html>

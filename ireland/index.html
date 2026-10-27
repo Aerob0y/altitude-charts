@@ -224,7 +224,8 @@
         const byName = Object.fromEntries(catalogue.map(entry => [entry.name, entry]));
         const groups = MENUS.map(menu => ({label: menu.label, entries: menu.topics.filter(name => known.has(name)).map(name => byName[name])}));
         const listed = new Set(MENUS.flatMap(menu => menu.topics));
-        groups.push({label: "More", entries: catalogue.filter(entry => !listed.has(entry.name))});
+        // WIP charts open by link but are listed only on the hidden WIP page.
+        groups.push({label: "More", entries: catalogue.filter(entry => !listed.has(entry.name) && !entry.wip)});
         return groups.filter(group => group.entries.length);
       }
 

@@ -4,12 +4,13 @@
 (() => {
   const $ = id => document.getElementById(id);
   const BANDS = [0, 45, 90, 150, 240, Infinity];
-  const DEFAULT_AIRPORT = { nz: "ZQN", au: "CBR" };
+  const DEFAULT_AIRPORT = { nz: "ZQN", au: "CBR", ie: "ORK" };
   const DENSITY = ["#ffffd9", "#edf8b1", "#c7e9b4", "#7fcdbb", "#41b6c4", "#1d91c0", "#225ea8", "#0c2c84"];
   const SAVING = ["#C789BB", "#FFFFFF", "#EBBF7B"];
   const SAVING_CAP = 180;
   const SOURCE = { nz: "Stats NZ population; OpenRouteService drive times; Altitude catchments (Beta)",
-    au: "ABS population; OpenRouteService drive times; Altitude catchments (Beta)" };
+    au: "ABS population; OpenRouteService drive times; Altitude catchments (Beta)",
+    ie: "CSO Census 2022 population; Tailte Éireann boundaries; OpenRouteService drive times; Altitude catchments (Beta)" };
   const cache = {};
   let data, shapes, map, areaLayer, airportLayer, catchmentLayer, rows = [], loadNumber = 0;
   let outlineKey, outlineGeometry;
@@ -74,6 +75,7 @@
     setAirport(codes.includes(airport) ? airport : (codes.includes(DEFAULT_AIRPORT[country]) ? DEFAULT_AIRPORT[country] : codes[0]));
     const regions = [...new Set(data.areas.region.filter(Boolean))].sort();
     $("regions-box").hidden = !regions.length;
+    $("regions-label").textContent = country === "ie" ? "Counties shown" : "States shown";
     ticks($("regions"), regions.map(r => ({ value: r, label: r })), regions);
     $("notice").textContent = data.notice;
     update(true);

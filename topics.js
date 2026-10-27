@@ -73,7 +73,7 @@
     if (!response.ok) throw Error("Topics unavailable");
     return response.json();
   }).then(index => {
-    const charts = index.charts || [];
+    const charts = (index.charts || []).filter(chart => !chart.wip);
     const groups = [
       {label: "Aviation", entries: [
         ...(index.tools || []).filter(tool => tool.key !== "route-map-projections" && tool.section !== "miscellaneous").map(tool => ({title: tool.title, path: tool.page})),
