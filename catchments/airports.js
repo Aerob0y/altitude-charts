@@ -25,7 +25,7 @@
     const note = document.createElement("p");
     note.textContent = airport.no_rival
       ? `No other major airport within two hours. ${people(airport.population_study)} people in the area shown.`
-      : `${people(airport.population_closer_30)} people closer by 30+ minutes, out of ${people(airport.population_study)} in the area shown.`;
+      : `${people(airport.population_closer)} people live closer to ${airport.code} than to any rival, out of ${people(airport.population_study)} in the area shown.`;
     const links = document.createElement("p");
     links.className = "links";
     links.append(link(airport.live, "Live map"), link("airports/" + airport.image, "Image (PNG)", true),

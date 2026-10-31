@@ -1,0 +1,9 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 250" role="img" aria-labelledby="title desc">
+  <title id="title">CSV logo</title>
+  <desc id="desc">The dot CSV wordmark inside an open circular arc.</desc>
+  <g fill="none" stroke-linecap="butt">
+    <path d="M 274 7 A 136 136 0 1 1 22 188" stroke="#F6F0E6" stroke-width="42"/>
+    <path d="M 22 188 A 136 136 0 0 1 48 153" stroke="#8FD3CF" stroke-width="42"/>
+  </g>
+  <text x="-4" y="124" fill="#F6F0E6" font-family="Arial Black, Arial, sans-serif" font-size="91" font-weight="900" letter-spacing="-5">.CSV</text>
+</svg>
