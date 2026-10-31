@@ -21,3 +21,11 @@ background tiles use the existing external URLs.
 Checks: `node dev/check_catchment_outline.cjs`, `Rscript dev/check_catchment_site.R`,
 `Rscript dev/check_all.R`, and `node dev/check_catchment_browser.cjs` against a
 built site served over HTTP (`CATCHMENT_BASE_URL`, default `http://127.0.0.1:5567`).
+
+## Airport maps (H4)
+
+`airports.html` lists one Canberra-style map per airport from `airports/index.json`,
+built by `Rscript dev/build_catchment_maps.R`. Each card links to the image, the
+area and band CSVs, and the live map opened at that airport. Live-map links keep
+`country`, `airport` and `style`, plus `rivals`, `threshold` and `radius` when
+changed, for example `index.html?country=ie&airport=DUB&style=advantage&rivals=ORK`.

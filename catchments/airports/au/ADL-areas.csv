@@ -1,0 +1,177 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"109021178","Wentworth - Buronga","New South Wales",6904,"ADL",288.5,"MEL",376.8,88.3,FALSE
+"215011388","Horsham","Victoria",16882,"ADL",317.2,"MEL",209.1,-108.1,FALSE
+"215011389","Horsham Surrounds","Victoria",3399,"ADL",322.7,"MEL",222,-100.6,FALSE
+"215011390","Nhill Region","Victoria",6698,"ADL",295,"MEL",300.2,5.2,FALSE
+"215011393","West Wimmera","Victoria",2656,"ADL",270.4,"MEL",287.1,16.6,FALSE
+"215011394","Yarriambiack","Victoria",6246,"ADL",331.9,"MEL",242.5,-89.3,FALSE
+"215021395","Irymple","Victoria",8079,"ADL",281.2,"MEL",361,79.8,FALSE
+"215021396","Merbein","Victoria",4971,"ADL",271.3,"MEL",380.2,108.9,FALSE
+"215021398","Mildura Surrounds","Victoria",3779,"ADL",402.5,"MEL",497.9,95.4,FALSE
+"215021399","Red Cliffs","Victoria",6055,"ADL",284.9,"MEL",349.3,64.4,FALSE
+"215021469","Mildura - North","Victoria",17718,"ADL",277.2,"MEL",369.6,92.3,FALSE
+"215021470","Mildura - South","Victoria",16707,"ADL",271.6,"MEL",366.5,94.9,FALSE
+"215031403","Robinvale","Victoria",3749,"ADL",329.3,"MEL",314,-15.2,FALSE
+"401011001","Adelaide","South Australia",22657,"ADL",15.6,"MEL",508,492.4,FALSE
+"401011002","North Adelaide","South Australia",7516,"ADL",18.3,"MEL",510.6,492.3,FALSE
+"401021003","Adelaide Hills","South Australia",7256,"ADL",67.6,"MEL",514.1,446.5,FALSE
+"401021004","Aldgate - Stirling","South Australia",19039,"ADL",41.4,"MEL",497,455.6,FALSE
+"401021005","Hahndorf - Echunga","South Australia",4698,"ADL",51.3,"MEL",491.8,440.6,FALSE
+"401021006","Lobethal - Woodside","South Australia",9996,"ADL",55.6,"MEL",491.4,435.8,FALSE
+"401021007","Mount Barker","South Australia",26939,"ADL",47.9,"MEL",483.3,435.4,FALSE
+"401021008","Mount Barker Surrounds","South Australia",7402,"ADL",70.1,"MEL",480.5,410.4,FALSE
+"401021009","Nairne","South Australia",5787,"ADL",51.7,"MEL",481.4,429.8,FALSE
+"401021010","Uraidla - Summertown","South Australia",6484,"ADL",39,"MEL",500.3,461.3,FALSE
+"401031011","Burnside - Wattle Park","South Australia",20275,"ADL",28.7,"MEL",504.6,475.9,FALSE
+"401031012","Beaumont - Glen Osmond","South Australia",10664,"ADL",31.4,"MEL",497.2,465.8,FALSE
+"401031013","Toorak Gardens","South Australia",17318,"ADL",24.3,"MEL",501.1,476.8,FALSE
+"401041014","Athelstone","South Australia",9995,"ADL",40.4,"MEL",514.9,474.4,FALSE
+"401041015","Paradise - Newton","South Australia",22979,"ADL",35.4,"MEL",515.9,480.5,FALSE
+"401041016","Rostrevor - Magill","South Australia",26237,"ADL",32.3,"MEL",510.9,478.6,FALSE
+"401051017","Norwood (SA)","South Australia",12253,"ADL",22.3,"MEL",504.9,482.7,FALSE
+"401051018","Payneham - Felixstow","South Australia",14111,"ADL",28.4,"MEL",512,483.5,FALSE
+"401051019","St Peters - Marden","South Australia",14481,"ADL",24.6,"MEL",509.3,484.6,FALSE
+"401061020","Nailsworth - Broadview","South Australia",6561,"ADL",26,"MEL",514.3,488.4,FALSE
+"401061021","Prospect","South Australia",16898,"ADL",22.4,"MEL",516.5,494.1,FALSE
+"401061022","Walkerville","South Australia",8673,"ADL",23.7,"MEL",510.8,487.1,FALSE
+"401071023","Goodwood - Millswood","South Australia",18506,"ADL",16.9,"MEL",505.6,488.7,FALSE
+"401071024","Unley - Parkside","South Australia",22225,"ADL",21.9,"MEL",500.3,478.4,FALSE
+"402011025","Gawler - North","South Australia",10364,"ADL",50.8,"MEL",542.2,491.4,FALSE
+"402011026","Gawler - South","South Australia",24176,"ADL",54,"MEL",531.9,477.8,FALSE
+"402011027","Lewiston - Two Wells","South Australia",8175,"ADL",46.2,"MEL",546.5,500.2,FALSE
+"402021028","Craigmore - Blakeview","South Australia",21288,"ADL",47.1,"MEL",537.7,490.6,FALSE
+"402021029","Davoren Park","South Australia",20448,"ADL",41.9,"MEL",542.1,500.2,FALSE
+"402021030","Elizabeth","South Australia",11567,"ADL",45.9,"MEL",542.9,497,FALSE
+"402021031","Elizabeth East","South Australia",14479,"ADL",50.6,"MEL",544.1,493.4,FALSE
+"402021032","Munno Para West - Angle Vale","South Australia",24343,"ADL",42.7,"MEL",542.9,500.2,FALSE
+"402021033","One Tree Hill","South Australia",2520,"ADL",57.1,"MEL",532.4,475.3,FALSE
+"402021034","Smithfield - Elizabeth North","South Australia",13041,"ADL",45.2,"MEL",541.3,496,FALSE
+"402021035","Virginia - Waterloo Corner","South Australia",8799,"ADL",36.8,"MEL",537.1,500.2,FALSE
+"402031036","Enfield - Blair Athol","South Australia",28231,"ADL",27,"MEL",523.3,496.3,FALSE
+"402031038","Windsor Gardens","South Australia",24000,"ADL",30.9,"MEL",518,487.1,FALSE
+"402031175","Northgate - Northfield","South Australia",19797,"ADL",33.1,"MEL",521.8,488.8,FALSE
+"402031176","Valley View - Gilles Plains","South Australia",10965,"ADL",35.8,"MEL",523.9,488.1,FALSE
+"402041040","Ingle Farm","South Australia",16270,"ADL",36,"MEL",528.2,492.1,FALSE
+"402041041","Para Hills","South Australia",15507,"ADL",36.8,"MEL",533.1,496.3,FALSE
+"402041042","Parafield","South Australia",18,"ADL",34.2,"MEL",534.4,500.2,FALSE
+"402041043","Parafield Gardens","South Australia",18589,"ADL",33,"MEL",533.2,500.2,FALSE
+"402041044","Paralowie","South Australia",18572,"ADL",31.9,"MEL",532.2,500.2,FALSE
+"402041046","Salisbury","South Australia",19146,"ADL",35.8,"MEL",536.1,500.2,FALSE
+"402041047","Salisbury East","South Australia",19226,"ADL",41.5,"MEL",537,495.5,FALSE
+"402041048","Salisbury North","South Australia",18931,"ADL",37,"MEL",537.2,500.2,FALSE
+"402041171","Mawson Lakes - Globe Derby Park","South Australia",15002,"ADL",29.3,"MEL",529.6,500.2,FALSE
+"402041172","Pooraka - Cavan","South Australia",8457,"ADL",28.9,"MEL",528,499.1,FALSE
+"402051049","Golden Grove","South Australia",10411,"ADL",53.5,"MEL",528.4,475,FALSE
+"402051050","Greenwith","South Australia",9356,"ADL",49.7,"MEL",534.5,484.8,FALSE
+"402051051","Highbury - Dernancourt","South Australia",11781,"ADL",47,"MEL",519.7,472.7,FALSE
+"402051052","Hope Valley - Modbury","South Australia",18423,"ADL",42.1,"MEL",523.7,481.6,FALSE
+"402051053","Modbury Heights","South Australia",19813,"ADL",42.8,"MEL",530.6,487.8,FALSE
+"402051054","Redwood Park","South Australia",16959,"ADL",49,"MEL",526.4,477.4,FALSE
+"402051055","St Agnes - Ridgehaven","South Australia",13531,"ADL",48,"MEL",523.2,475.3,FALSE
+"403011056","Brighton (SA)","South Australia",15899,"ADL",25.9,"MEL",521.3,495.3,FALSE
+"403011057","Glenelg (SA)","South Australia",21791,"ADL",17.2,"MEL",517.3,500.1,FALSE
+"403021058","Edwardstown","South Australia",15449,"ADL",18.7,"MEL",510.8,492.1,FALSE
+"403021059","Hallett Cove","South Australia",12873,"ADL",40.7,"MEL",528.7,488,FALSE
+"403021060","Marino - Seaview Downs","South Australia",10209,"ADL",31.7,"MEL",522.5,490.8,FALSE
+"403021061","Mitchell Park","South Australia",18165,"ADL",26.4,"MEL",516.5,490.1,FALSE
+"403021062","Morphettville","South Australia",17758,"ADL",18.8,"MEL",513.3,494.5,FALSE
+"403021063","Sheidow Park - Trott Park","South Australia",10468,"ADL",36.3,"MEL",521.7,485.4,FALSE
+"403021064","Warradale","South Australia",18058,"ADL",23.6,"MEL",518.7,495.1,FALSE
+"403031065","Belair","South Australia",4895,"ADL",31.7,"MEL",505.8,474,FALSE
+"403031066","Bellevue Heights","South Australia",8661,"ADL",29.8,"MEL",510,480.2,FALSE
+"403031067","Blackwood","South Australia",13858,"ADL",35.6,"MEL",503.8,468.2,FALSE
+"403031068","Colonel Light Gardens","South Australia",16212,"ADL",21.6,"MEL",507.9,486.3,FALSE
+"403031069","Mitcham (SA)","South Australia",17169,"ADL",25.9,"MEL",503,477.1,FALSE
+"403031070","Panorama","South Australia",9097,"ADL",25.5,"MEL",511.5,486,FALSE
+"403041071","Aberfoyle Park","South Australia",11778,"ADL",43.5,"MEL",514.8,471.2,FALSE
+"403041072","Aldinga","South Australia",17041,"ADL",55,"MEL",530.6,475.6,FALSE
+"403041073","Christie Downs","South Australia",9700,"ADL",44.3,"MEL",531.7,487.5,FALSE
+"403041074","Christies Beach","South Australia",11690,"ADL",45.8,"MEL",533.3,487.5,FALSE
+"403041075","Clarendon","South Australia",2899,"ADL",46.6,"MEL",512.1,465.6,FALSE
+"403041076","Coromandel Valley","South Australia",4655,"ADL",40,"MEL",510.1,470.1,FALSE
+"403041077","Flagstaff Hill","South Australia",11370,"ADL",37.9,"MEL",517.5,479.6,FALSE
+"403041078","Hackham - Onkaparinga Hills","South Australia",7376,"ADL",48.2,"MEL",524.3,476.1,FALSE
+"403041079","Hackham West - Huntfield Heights","South Australia",8128,"ADL",45.7,"MEL",530.7,485,FALSE
+"403041080","Happy Valley","South Australia",14526,"ADL",37.5,"MEL",513.7,476.2,FALSE
+"403041082","Lonsdale","South Australia",26,"ADL",42.4,"MEL",529.9,487.5,FALSE
+"403041083","McLaren Vale","South Australia",8779,"ADL",56.6,"MEL",521.6,465,FALSE
+"403041084","Morphett Vale - East","South Australia",14198,"ADL",41.1,"MEL",521.5,480.4,FALSE
+"403041085","Morphett Vale - West","South Australia",10622,"ADL",42.3,"MEL",526,483.8,FALSE
+"403041086","Reynella","South Australia",10848,"ADL",37,"MEL",521.8,484.8,FALSE
+"403041088","Willunga","South Australia",3784,"ADL",57.7,"MEL",527,469.3,FALSE
+"403041089","Woodcroft","South Australia",11743,"ADL",43.3,"MEL",520.3,477,FALSE
+"403041177","Seaford - Seaford Meadows","South Australia",15439,"ADL",49.8,"MEL",537,487.2,FALSE
+"403041178","Seaford Rise - Moana","South Australia",11600,"ADL",51.2,"MEL",529.7,478.5,FALSE
+"404011090","Beverley","South Australia",9852,"ADL",16.6,"MEL",522.7,506.1,FALSE
+"404011091","Flinders Park","South Australia",18112,"ADL",13,"MEL",521,508,FALSE
+"404011092","Henley Beach","South Australia",16888,"ADL",12.2,"MEL",524,511.8,FALSE
+"404011093","Hindmarsh - Brompton","South Australia",20466,"ADL",16.3,"MEL",515.7,499.4,FALSE
+"404011094","Royal Park - Hendon - Albert Park","South Australia",6898,"ADL",20.1,"MEL",526.4,506.4,FALSE
+"404011095","Seaton - Grange","South Australia",18429,"ADL",16.7,"MEL",526.2,509.4,FALSE
+"404011096","West Lakes","South Australia",15989,"ADL",22.3,"MEL",529.8,507.6,FALSE
+"404011097","Woodville - Cheltenham","South Australia",20577,"ADL",20.9,"MEL",524.5,503.6,FALSE
+"404021099","Largs Bay - Semaphore","South Australia",15765,"ADL",29.3,"MEL",531.9,502.5,FALSE
+"404021100","North Haven","South Australia",15635,"ADL",36.4,"MEL",537.2,500.8,FALSE
+"404021101","Port Adelaide","South Australia",12874,"ADL",27.1,"MEL",528.5,501.4,FALSE
+"404021102","The Parks","South Australia",21444,"ADL",21.1,"MEL",521.3,500.2,FALSE
+"404021103","Torrens Island","South Australia",5,"ADL",41.8,"MEL",542.1,500.3,FALSE
+"404031104","Adelaide Airport","South Australia",3,"ADL",0.1,"MEL",520.1,520,FALSE
+"404031105","Fulham","South Australia",3219,"ADL",9.8,"MEL",521.6,511.8,FALSE
+"404031106","Lockleys","South Australia",14336,"ADL",8,"MEL",517.5,509.5,FALSE
+"404031107","Plympton","South Australia",28617,"ADL",14.1,"MEL",513.9,499.8,FALSE
+"404031108","Richmond (SA)","South Australia",18520,"ADL",10.3,"MEL",512,501.7,FALSE
+"404031109","West Beach","South Australia",5487,"ADL",11.4,"MEL",523.2,511.8,FALSE
+"405011110","Barossa - Angaston","South Australia",6896,"ADL",86.8,"MEL",523.5,436.7,FALSE
+"405011111","Light","South Australia",10631,"ADL",68.9,"MEL",560.3,491.4,FALSE
+"405011112","Lyndoch","South Australia",6981,"ADL",61.7,"MEL",520.6,459,FALSE
+"405011113","Mallala","South Australia",3561,"ADL",56.7,"MEL",557,500.2,FALSE
+"405011114","Nuriootpa","South Australia",7893,"ADL",64.7,"MEL",535,470.3,FALSE
+"405011115","Tanunda","South Australia",4757,"ADL",67.3,"MEL",535.5,468.3,FALSE
+"405021116","Clare","South Australia",4185,"ADL",113.9,"MEL",607.4,493.5,FALSE
+"405021117","Gilbert Valley","South Australia",5198,"ADL",101.8,"MEL",591.9,490.2,FALSE
+"405021118","Goyder","South Australia",4152,"ADL",124.9,"MEL",561.9,437.1,FALSE
+"405021119","Wakefield - Barunga West","South Australia",9786,"ADL",103.5,"MEL",603.7,500.2,FALSE
+"405031120","Jamestown","South Australia",4724,"ADL",182.8,"MEL",638.7,455.9,FALSE
+"405031121","Peterborough - Mount Remarkable","South Australia",5410,"ADL",211.3,"MEL",658.9,447.6,FALSE
+"405031122","Port Pirie","South Australia",14195,"ADL",158.2,"MEL",655.3,497.1,FALSE
+"405031123","Port Pirie Surrounds","South Australia",3433,"ADL",149.2,"MEL",649.4,500.2,FALSE
+"405041124","Kadina","South Australia",5776,"ADL",116.4,"MEL",616.6,500.2,FALSE
+"405041125","Moonta","South Australia",5858,"ADL",123.4,"MEL",623.6,500.2,FALSE
+"405041126","Wallaroo","South Australia",4971,"ADL",127,"MEL",627.3,500.2,FALSE
+"405041127","Yorke Peninsula - North","South Australia",7755,"ADL",139.9,"MEL",640.1,500.2,FALSE
+"405041128","Yorke Peninsula - South","South Australia",4489,"ADL",193.9,"MEL",694.2,500.2,FALSE
+"406011130","Eyre Peninsula","South Australia",7232,"ADL",436.1,"MEL",933.2,497.1,FALSE
+"406011131","Kimba - Cleve - Franklin Harbour","South Australia",4362,"ADL",329.6,"MEL",826.7,497.1,FALSE
+"406011132","Le Hunte - Elliston","South Australia",2207,"ADL",372.2,"MEL",869.3,497.1,FALSE
+"406011133","Port Lincoln","South Australia",17064,"ADL",433,"MEL",930.2,497.1,FALSE
+"406011136","Whyalla","South Australia",21641,"ADL",260,"MEL",757.1,497.1,FALSE
+"406021140","Quorn - Lake Gilles","South Australia",2170,"ADL",338.7,"MEL",835.8,497.1,FALSE
+"406021142","Port Augusta","South Australia",14134,"ADL",204.2,"MEL",701.3,497.1,FALSE
+"407011144","Goolwa - Port Elliot","South Australia",13711,"ADL",81.7,"MEL",507.7,426,FALSE
+"407011145","Kangaroo Island","South Australia",5212,"ADL",232.1,"MEL",690.5,458.4,FALSE
+"407011146","Strathalbyn","South Australia",8670,"ADL",71.5,"MEL",488.1,416.6,FALSE
+"407011147","Strathalbyn Surrounds","South Australia",8615,"ADL",76.8,"MEL",490.8,414.1,FALSE
+"407011148","Victor Harbor","South Australia",17189,"ADL",86.2,"MEL",527.5,441.3,FALSE
+"407011149","Yankalilla","South Australia",6998,"ADL",83.9,"MEL",540.6,456.7,FALSE
+"407021150","Grant","South Australia",6505,"ADL",315.2,"MEL",316.4,1.1,FALSE
+"407021151","Kingston - Robe","South Australia",4041,"ADL",233.4,"MEL",392.7,159.3,FALSE
+"407021152","Millicent","South Australia",5410,"ADL",286.8,"MEL",336.2,49.4,FALSE
+"407021154","Naracoorte","South Australia",6455,"ADL",236.1,"MEL",318.3,82.2,FALSE
+"407021155","Naracoorte Surrounds","South Australia",2475,"ADL",250.8,"MEL",342.8,92,FALSE
+"407021156","Penola","South Australia",3192,"ADL",268.9,"MEL",308,39.1,FALSE
+"407021157","Tatiara","South Australia",7088,"ADL",181.4,"MEL",368.7,187.3,FALSE
+"407021158","Wattle Range","South Australia",3676,"ADL",293.7,"MEL",326,32.3,FALSE
+"407021173","Mount Gambier - East","South Australia",15591,"ADL",304.3,"MEL",298.9,-5.4,FALSE
+"407021174","Mount Gambier - West","South Australia",15284,"ADL",308.1,"MEL",309.8,1.8,FALSE
+"407031159","Barmera","South Australia",6662,"ADL",166.6,"MEL",471.3,304.7,FALSE
+"407031160","Berri","South Australia",4176,"ADL",173.6,"MEL",462.1,288.5,FALSE
+"407031161","Karoonda - Lameroo","South Australia",2944,"ADL",162,"MEL",427,264.9,FALSE
+"407031162","Loxton","South Australia",5715,"ADL",178.1,"MEL",445.3,267.2,FALSE
+"407031163","Loxton Surrounds","South Australia",1817,"ADL",182.5,"MEL",445.9,263.3,FALSE
+"407031164","Mannum","South Australia",7012,"ADL",106.5,"MEL",500.6,394.2,FALSE
+"407031165","Murray Bridge","South Australia",19938,"ADL",74.6,"MEL",457.7,383.1,FALSE
+"407031166","Murray Bridge Surrounds","South Australia",3993,"ADL",81.1,"MEL",465,383.9,FALSE
+"407031167","Renmark","South Australia",4733,"ADL",184.5,"MEL",452.4,267.9,FALSE
+"407031168","Renmark Surrounds","South Australia",5541,"ADL",195.2,"MEL",447.8,252.6,FALSE
+"407031169","The Coorong","South Australia",5638,"ADL",137.1,"MEL",409.7,272.6,FALSE
+"407031170","Waikerie","South Australia",6793,"ADL",162.6,"MEL",543.6,381,FALSE

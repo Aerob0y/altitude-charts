@@ -9,9 +9,9 @@
   brand.href = root.href;
   brand.setAttribute("aria-label", "CSV Consulting home");
   const logo = document.createElement("img");
-  logo.src = new URL("images/csv-logo-ink.png", root).href;
+  logo.src = new URL("images/csv-logo.svg", root).href;
   logo.alt = "CSV";
-  logo.width = 299; logo.height = 236;
+  logo.width = 320; logo.height = 250;
   brand.append(logo);
   const links = document.createElement("nav");
   links.className = "site-links";
@@ -74,9 +74,10 @@
     return response.json();
   }).then(index => {
     const charts = (index.charts || []).filter(chart => !chart.wip);
+    const tools = (index.tools || []).filter(tool => !tool.wip);
     const groups = [
       {label: "Aviation", entries: [
-        ...(index.tools || []).filter(tool => tool.key !== "route-map-projections" && tool.section !== "miscellaneous").map(tool => ({title: tool.title, path: tool.page})),
+        ...tools.filter(tool => tool.key !== "route-map-projections" && tool.section !== "miscellaneous").map(tool => ({title: tool.title, path: tool.page})),
         ...charts.filter(chart => chart.menu === "Aviation").map(chart => ({title: chart.title, path: chart.site + "/#" + chart.name}))
       ]},
       ...[{key: "nz", label: "New Zealand"}, {key: "ireland", label: "Ireland"}].map(site => ({
@@ -85,7 +86,7 @@
           .map(chart => ({title: chart.title, path: chart.site + "/#" + chart.name}))
       })),
       {label: "Miscellaneous", entries: [
-        ...(index.tools || []).filter(tool => tool.section === "miscellaneous").map(tool => ({title: tool.title, path: tool.page})),
+        ...tools.filter(tool => tool.section === "miscellaneous").map(tool => ({title: tool.title, path: tool.page})),
         ...charts.filter(chart => chart.site === "miscellaneous").map(chart => ({title: chart.title, path: "miscellaneous/#" + chart.name}))
       ]}
     ];

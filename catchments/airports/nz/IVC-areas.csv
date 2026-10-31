@@ -1,0 +1,248 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"338400","Netherby",,2420,"IVC",398.3,"CHC",69.9,-328.5,FALSE
+"338600","Ben McLeod",,150,"IVC",363.3,"CHC",137.7,-225.6,TRUE
+"338700","Arundel",,1490,"IVC",375,"CHC",115.6,-259.4,FALSE
+"338800","Levels Valley",,1110,"IVC",347.6,"CHC",134.2,-213.4,FALSE
+"339000","Rangitata",,1800,"IVC",362.6,"CHC",104.7,-257.9,FALSE
+"339100","Waitohi (Timaru District)",,1830,"IVC",361.4,"CHC",116.3,-245.1,FALSE
+"349100","Bucklands Crossing",,1580,"IVC",225.7,"DUD",83.2,-142.5,FALSE
+"349300","Momona",,2450,"IVC",149.8,"DUD",5.4,-144.4,FALSE
+"349400","Taieri",,1600,"IVC",162.3,"DUD",18.5,-143.8,FALSE
+"349600","Mount Cargill",,2110,"IVC",191.4,"DUD",48.8,-142.6,FALSE
+"349900","Mosgiel Central",,2670,"IVC",160.7,"DUD",18.2,-142.5,FALSE
+"350200","Saddle Hill-Chain Hills",,1280,"IVC",159.9,"DUD",17.4,-142.5,FALSE
+"352000","North East Valley Knox",,2620,"IVC",177.4,"DUD",34.9,-142.5,FALSE
+"358500","Hedgehope",,1190,"IVC",64.4,"ZQN",135.4,71,FALSE
+"311200","Haast",,270,"IVC",259.6,"ZQN",103,-156.6,TRUE
+"311300","Westland Glaciers-Bruce Bay",,1130,"IVC",336.5,"ZQN",182.2,-154.3,TRUE
+"362700","Aurora",,1400,"IVC",18.8,"DUD",141.6,122.9,FALSE
+"363100","Woodend-Greenhills",,620,"IVC",23.8,"DUD",149.6,125.9,FALSE
+"363300","Bluff",,1820,"IVC",33.2,"DUD",159.1,125.9,FALSE
+"338300","Ashburton East",,1880,"IVC",397.4,"CHC",70.9,-326.5,FALSE
+"336600","Ashburton Lakes",,100,"IVC",397.8,"CHC",116.8,-281.1,TRUE
+"337000","Ealing-Lowcliffe",,1750,"IVC",382.9,"CHC",99.9,-283,FALSE
+"337100","Eiffelton",,2740,"IVC",387.5,"CHC",83.5,-304,FALSE
+"337300","Winchmore-Wakanui",,1680,"IVC",409.5,"CHC",75.5,-334,FALSE
+"338200","Tinwald South",,2430,"IVC",390.2,"CHC",78.6,-311.6,FALSE
+"339600","Temuka East",,2410,"IVC",352.5,"CHC",119.2,-233.3,FALSE
+"339900","Fairview",,1690,"IVC",327.6,"CHC",151.5,-176,FALSE
+"340200","Marchwiel West",,1620,"IVC",336.2,"CHC",133.2,-203,FALSE
+"341000","Watlington",,2340,"IVC",330.6,"CHC",139.5,-191.1,FALSE
+"341100","Timaru Central",,440,"IVC",329.8,"CHC",138.3,-191.6,FALSE
+"341900","Opua (Mackenzie District)",,1460,"IVC",319,"CHC",162.2,-156.8,TRUE
+"342100","Hakataramea",,910,"IVC",266.2,"ZQN",148.2,-118,TRUE
+"342200","Maungati",,800,"IVC",361.7,"CHC",180.4,-181.4,FALSE
+"342300","Lyalldale",,730,"IVC",331.6,"CHC",159.7,-171.9,FALSE
+"342600","Morven-Glenavy-Ikawai",,1210,"IVC",304.1,"DUD",161.6,-142.5,FALSE
+"342700","Waimate West",,1370,"IVC",307,"DUD",164.5,-142.5,FALSE
+"343100","Aviemore",,980,"IVC",295.2,"ZQN",160.4,-134.8,FALSE
+"344000","Oamaru North Orana Park",,3060,"IVC",268.9,"DUD",126.4,-142.5,FALSE
+"344800","Lindis-Nevis Valleys",,3370,"IVC",193.6,"ZQN",55.6,-138,FALSE
+"345100","Manuherikia-Ida Valleys",,1320,"IVC",184.1,"ZQN",88.5,-95.5,FALSE
+"345200","Earnscleugh",,850,"IVC",174.6,"ZQN",89.2,-85.4,FALSE
+"345300","Dunstan-Galloway",,2150,"IVC",167.7,"ZQN",72.2,-95.5,FALSE
+"346400","Cardrona",,780,"IVC",218.9,"ZQN",80.9,-138,FALSE
+"348500","Lake Hayes",,440,"IVC",151.5,"ZQN",13.5,-138,FALSE
+"349000","Strath Taieri",,680,"IVC",187.3,"DUD",41.5,-145.8,FALSE
+"352200","Gardens (Dunedin City)",,3850,"IVC",175.6,"DUD",33.1,-142.5,FALSE
+"352700","Port Chalmers",,1440,"IVC",187.9,"DUD",45.4,-142.5,FALSE
+"353400","Dunedin Central",,2180,"IVC",170.1,"DUD",27.6,-142.5,FALSE
+"353900","Otago Peninsula",,890,"IVC",193.8,"DUD",51.3,-142.5,FALSE
+"354100","Calton Hill",,1530,"IVC",164.6,"DUD",22.1,-142.5,FALSE
+"354700","Bathgate Park",,2420,"IVC",169.3,"DUD",26.8,-142.5,FALSE
+"355100","Broad Bay-Portobello",,1210,"IVC",190.3,"DUD",47.8,-142.5,FALSE
+"355200","St Kilda South",,2930,"IVC",170.4,"DUD",27.9,-142.5,FALSE
+"355800","West Otago",,2420,"IVC",114.5,"DUD",92.2,-22.3,FALSE
+"355900","Tuapeka",,1210,"IVC",133.1,"DUD",57.9,-75.2,FALSE
+"356000","Clinton",,1350,"IVC",80.7,"DUD",69.1,-11.6,FALSE
+"356100","Clutha Valley",,1680,"IVC",115.9,"DUD",50.5,-65.4,FALSE
+"356200","Bruce",,2490,"IVC",133.9,"DUD",25.7,-108.1,FALSE
+"356300","Catlins",,1390,"IVC",83,"DUD",87,4,TRUE
+"358200","Lumsden-Balfour",,1450,"IVC",81.7,"ZQN",83.2,1.5,FALSE
+"358300","Oreti River",,2120,"IVC",55.2,"ZQN",102.4,47.2,FALSE
+"358400","Otautau",,2880,"IVC",38.1,"ZQN",123.7,85.6,FALSE
+"358600","Winton",,2470,"IVC",34.4,"ZQN",106.9,72.5,FALSE
+"358700","Waianiwa",,1190,"IVC",26.7,"ZQN",119.5,92.8,FALSE
+"358800","Riverton",,1710,"IVC",35.4,"ZQN",136.2,100.8,FALSE
+"359000","Grove Bush",,1230,"IVC",28.9,"DUD",129.5,100.6,FALSE
+"359100","Edendale-Woodlands",,2420,"IVC",39.4,"DUD",117.9,78.4,FALSE
+"359300","Stewart Island",,440,"IVC",71,"DUD",210.1,139.1,TRUE
+"359400","Awarua Plains",,1080,"IVC",39.3,"DUD",138.3,99,FALSE
+"359800","Gore North",,1790,"IVC",64,"DUD",99.2,35.2,FALSE
+"359900","Gore West",,2820,"IVC",63.1,"DUD",101.6,38.5,FALSE
+"360200","Gore Main",,1300,"IVC",61,"DUD",99.8,38.8,FALSE
+"360400","Mataura",,1720,"IVC",54.2,"DUD",96.8,42.6,FALSE
+"360500","West Plains-Makarewa",,1730,"IVC",18.9,"ZQN",145.4,126.5,FALSE
+"360800","Myross Bush",,1180,"IVC",17.3,"ZQN",131.5,114.3,FALSE
+"361500","Windsor",,3230,"IVC",15.9,"DUD",137.9,122,FALSE
+"361600","Richmond (Invercargill City)",,3650,"IVC",16.7,"DUD",137.7,121,FALSE
+"354600","Forbury",,1340,"IVC",168.1,"DUD",25.6,-142.5,FALSE
+"361200","Rosedale",,1910,"IVC",13.9,"ZQN",135.9,122,FALSE
+"361300","Avenal",,1310,"IVC",13.6,"ZQN",136.5,122.8,FALSE
+"361400","Hargest",,2130,"IVC",15.7,"ZQN",137.7,122,FALSE
+"361700","Glengarry",,2780,"IVC",18.8,"DUD",135.2,116.4,FALSE
+"361900","Turnbull Thompson Park",,1810,"IVC",19.4,"DUD",135.1,115.7,FALSE
+"362000","Crinan",,1880,"IVC",13.6,"DUD",141.7,128,FALSE
+"362100","Georgetown",,2180,"IVC",15.3,"DUD",138.7,123.4,FALSE
+"311900","Whataroa-Harihari",,690,"IVC",387.8,"CHC",171.3,-216.5,TRUE
+"362800","Moulson",,1330,"IVC",17.3,"DUD",140.8,123.5,FALSE
+"337800","Allenton East",,2180,"IVC",399.2,"CHC",68.6,-330.6,FALSE
+"362900","Kingswell",,2280,"IVC",17,"DUD",141.4,124.3,FALSE
+"337900","Tinwald North",,1380,"IVC",393.2,"CHC",76.1,-317.2,FALSE
+"337400","Allenton North",,2690,"IVC",401,"CHC",70.7,-330.3,FALSE
+"336800","Ashburton Forks",,2540,"IVC",395.9,"CHC",87.7,-308.2,FALSE
+"337500","Allenton South",,2250,"IVC",398.1,"CHC",71.9,-326.2,FALSE
+"337700","Ashburton North",,1090,"IVC",405.4,"CHC",69.5,-335.9,FALSE
+"338000","Ashburton Central",,150,"IVC",395.4,"CHC",71.3,-324,FALSE
+"338100","Ashburton West",,990,"IVC",397.1,"CHC",71.4,-325.7,FALSE
+"338500","Hampstead",,3130,"IVC",397.2,"CHC",71.9,-325.3,FALSE
+"339700","Gleniti North",,1600,"IVC",338.5,"CHC",132.9,-205.6,FALSE
+"338900","Geraldine",,2830,"IVC",363,"CHC",112.7,-250.3,FALSE
+"339200","Pleasant Point",,1480,"IVC",349.2,"CHC",128.7,-220.5,FALSE
+"339300","Temuka West",,2260,"IVC",350.7,"CHC",116.5,-234.2,FALSE
+"339400","Hadlow",,1550,"IVC",338.9,"CHC",130,-208.9,FALSE
+"339500","Levels",,1260,"IVC",345.1,"CHC",123,-222.1,FALSE
+"339800","Washdyke",,1080,"IVC",340.2,"CHC",129.2,-211,FALSE
+"340000","Gleniti South",,2590,"IVC",336,"CHC",134.3,-201.8,FALSE
+"340100","Glenwood",,1850,"IVC",333.5,"CHC",132.9,-200.7,FALSE
+"340300","Marchwiel East",,2050,"IVC",335.4,"CHC",132.6,-202.8,FALSE
+"340400","Highfield North",,2420,"IVC",335.5,"CHC",135.6,-199.9,FALSE
+"340500","Highfield South",,1310,"IVC",333,"CHC",135.9,-197.1,FALSE
+"340600","Waimataitai-Maori Hill",,2120,"IVC",334.4,"CHC",133,-201.5,FALSE
+"340700","Fraser Park",,2880,"IVC",331.3,"CHC",136.2,-195.1,FALSE
+"340800","Seaview",,2230,"IVC",331.3,"CHC",137.5,-193.9,FALSE
+"342500","Waimate North",,540,"IVC",308.9,"DUD",166.4,-142.5,FALSE
+"356600","Balclutha North",,1710,"IVC",109.7,"DUD",42.3,-67.4,FALSE
+"341200","Timaru East",,320,"IVC",330.8,"CHC",140.6,-190.1,FALSE
+"341300","Parkside",,2490,"IVC",328.5,"CHC",138.9,-189.7,FALSE
+"341400","Kensington (Timaru District)",,1540,"IVC",327.3,"CHC",140.3,-187,FALSE
+"341500","Mackenzie Lakes",,1400,"IVC",349.1,"CHC",213,-136.1,FALSE
+"341800","Twizel",,1670,"IVC",280.6,"ZQN",145.8,-134.8,FALSE
+"342000","Fairlie",,930,"IVC",352.7,"CHC",143.7,-209,FALSE
+"342400","Makikihi-Willowbridge",,1080,"IVC",309.9,"DUD",167.4,-142.5,FALSE
+"342800","Waimate East",,1690,"IVC",305.7,"DUD",163.2,-142.5,FALSE
+"343300","Danseys Pass",,1090,"IVC",307.2,"DUD",164.7,-142.5,FALSE
+"343400","Ngapara",,2000,"IVC",279.7,"DUD",137.2,-142.5,FALSE
+"343500","Lower Waitaki",,1560,"IVC",275.7,"DUD",133.2,-142.5,FALSE
+"343600","Waihemo",,1470,"IVC",236.1,"DUD",93.6,-142.5,FALSE
+"343700","Maheno",,2170,"IVC",247.8,"DUD",105.3,-142.5,FALSE
+"343800","Weston",,1200,"IVC",262.5,"DUD",120,-142.5,FALSE
+"344300","Holmes Hill",,1410,"IVC",262.7,"DUD",120.2,-142.5,FALSE
+"346800","Wanaka West",,2150,"IVC",197.9,"ZQN",59.9,-138,FALSE
+"343900","Oamaru North Milner Park",,2600,"IVC",271.8,"DUD",129.3,-142.5,FALSE
+"344100","Oamaru Gardens",,1270,"IVC",262,"DUD",119.5,-142.5,FALSE
+"344200","Glen Warren",,1810,"IVC",266.4,"DUD",123.9,-142.5,FALSE
+"344400","Oamaru Central",,300,"IVC",262.9,"DUD",120.4,-142.5,FALSE
+"344500","South Hill",,2320,"IVC",263.8,"DUD",121.3,-142.5,FALSE
+"344700","Palmerston",,1060,"IVC",216.7,"DUD",74.2,-142.5,FALSE
+"344900","Cromwell West",,4060,"IVC",183.8,"ZQN",45.8,-138,FALSE
+"345000","Cromwell East",,3210,"IVC",192,"ZQN",54,-138,FALSE
+"345400","Clyde",,1300,"IVC",170.7,"ZQN",67.1,-103.6,FALSE
+"345500","Alexandra North",,3150,"IVC",165.6,"ZQN",75.7,-89.9,FALSE
+"345600","Alexandra South",,2990,"IVC",166.5,"ZQN",73.3,-93.2,FALSE
+"345700","Maniototo",,1750,"IVC",250.3,"DUD",121,-129.3,FALSE
+"345800","Teviot Valley",,1920,"IVC",146,"DUD",106,-40,FALSE
+"345900","Outer Wanaka",,420,"IVC",240.8,"ZQN",82.5,-158.2,TRUE
+"346000","Glenorchy",,590,"IVC",217.2,"ZQN",79.2,-137.9,FALSE
+"346200","Outer Wakatipu",,1110,"IVC",199.9,"ZQN",61.9,-138,FALSE
+"352300","Kenmure",,2010,"IVC",166.4,"DUD",23.9,-142.5,FALSE
+"346600","Wanaka Waterfront",,2490,"IVC",199.9,"ZQN",61.9,-138,FALSE
+"346700","Wanaka North",,3810,"IVC",199.1,"ZQN",61.1,-138,FALSE
+"352400","Campus West",,1780,"IVC",174,"DUD",31.5,-142.5,FALSE
+"346900","Albert Town",,2490,"IVC",195.9,"ZQN",57.9,-138,FALSE
+"347000","Wanaka Central",,1630,"IVC",192.7,"ZQN",54.7,-138,FALSE
+"347100","Lake Hawea",,1880,"IVC",208,"ZQN",70,-138,FALSE
+"347200","Upper Clutha Valley",,1620,"IVC",207.9,"ZQN",69.9,-138,FALSE
+"347300","Kingston",,450,"IVC",137.8,"ZQN",27.5,-110.3,TRUE
+"347400","Arthurs Point",,1450,"IVC",156.7,"ZQN",18.8,-137.9,FALSE
+"347500","Wakatipu Basin",,1730,"IVC",152.3,"ZQN",14.3,-138,FALSE
+"347700","Warren Park",,1810,"IVC",152.1,"ZQN",14.2,-137.9,FALSE
+"348700","Shotover Country",,3180,"IVC",150.2,"ZQN",12.2,-138,FALSE
+"350300","East Taieri",,2350,"IVC",158.7,"DUD",16.2,-142.5,FALSE
+"347800","Sunshine Bay-Fernhill",,3290,"IVC",156.7,"ZQN",18.7,-137.9,FALSE
+"347900","Arrowtown",,3100,"IVC",159.5,"ZQN",21.5,-138,FALSE
+"348800","Lake Hayes Estate",,2480,"IVC",152.1,"ZQN",14.1,-138,FALSE
+"348000","Quail Rise",,940,"IVC",148.8,"ZQN",10.8,-138,FALSE
+"348100","Queenstown Central",,1190,"IVC",152.9,"ZQN",15,-137.9,FALSE
+"348200","Queenstown East",,1630,"IVC",149.2,"ZQN",11.3,-137.9,FALSE
+"348300","Frankton Arm",,2470,"IVC",147.2,"ZQN",9.3,-137.9,FALSE
+"348400","Frankton",,3780,"IVC",143.3,"ZQN",5.3,-138,FALSE
+"348600","Kelvin Heights",,1310,"IVC",142.5,"ZQN",10.2,-132.3,FALSE
+"355300","Musselburgh",,1520,"IVC",170.7,"DUD",28.2,-142.5,FALSE
+"348900","Jacks Point",,2220,"IVC",138.1,"ZQN",13.6,-124.5,FALSE
+"350100","Wingatui",,980,"IVC",164.1,"DUD",21.7,-142.5,FALSE
+"349200","Waikouaiti",,1240,"IVC",208.5,"DUD",66,-142.5,FALSE
+"349700","Bush Road",,2390,"IVC",160.6,"DUD",18.1,-142.5,FALSE
+"349800","Mosgiel East",,3010,"IVC",162.4,"DUD",19.9,-142.5,FALSE
+"350000","Seddon Park",,3040,"IVC",162.5,"DUD",20,-142.5,FALSE
+"350400","Halfway Bush",,1870,"IVC",172.7,"DUD",28.7,-144,FALSE
+"350500","Helensburgh",,1210,"IVC",174.2,"DUD",30.2,-144,FALSE
+"350600","Glenleith",,1320,"IVC",178.8,"DUD",34.8,-144,FALSE
+"354400","Kew (Dunedin City)",,1790,"IVC",168.5,"DUD",26,-142.5,FALSE
+"350700","Fairfield (Dunedin City)",,2600,"IVC",165,"DUD",22.5,-142.5,FALSE
+"350900","Brockville",,2460,"IVC",170.9,"DUD",28.5,-142.5,FALSE
+"351000","Wakari",,4210,"IVC",173.9,"DUD",31.4,-142.5,FALSE
+"351100","Abbotsford",,2950,"IVC",165.5,"DUD",23,-142.5,FALSE
+"351200","Brighton",,1550,"IVC",162.3,"DUD",19.8,-142.5,FALSE
+"351300","Pine Hill-Dalmore",,2400,"IVC",178.9,"DUD",36.4,-142.5,FALSE
+"351400","Kaikorai-Bradford",,1190,"IVC",166.5,"DUD",24,-142.5,FALSE
+"351500","Maori Hill",,2490,"IVC",172.7,"DUD",30.2,-142.5,FALSE
+"351600","Roslyn (Dunedin City)",,3160,"IVC",171.2,"DUD",28.7,-142.5,FALSE
+"351700","North East Valley Chingford",,1710,"IVC",178.8,"DUD",36.3,-142.5,FALSE
+"351800","Roseneath-Sawyers Bay",,1520,"IVC",184.4,"DUD",41.9,-142.5,FALSE
+"351900","Normanby",,1470,"IVC",180.2,"DUD",37.6,-142.5,FALSE
+"352100","Belleknowes",,2260,"IVC",169.8,"DUD",27.3,-142.5,FALSE
+"352500","Waldronville",,1380,"IVC",167,"DUD",24.5,-142.5,FALSE
+"354500","Corstorphine",,1980,"IVC",166.4,"DUD",23.9,-142.5,FALSE
+"352600","Green Island",,2400,"IVC",165.7,"DUD",23.2,-142.5,FALSE
+"352800","Royal Terrace",,1740,"IVC",172,"DUD",29.5,-142.5,FALSE
+"352900","Arthur Street",,1530,"IVC",170.2,"DUD",27.7,-142.5,FALSE
+"353000","Opoho",,1290,"IVC",184.7,"DUD",40.3,-144.3,FALSE
+"353100","Campus North",,2710,"IVC",174,"DUD",31.5,-142.5,FALSE
+"353200","Campus South",,2160,"IVC",173.2,"DUD",30.7,-142.5,FALSE
+"353300","Mornington",,2910,"IVC",168.5,"DUD",26,-142.5,FALSE
+"353500","Maryhill",,2370,"IVC",167.4,"DUD",24.9,-142.5,FALSE
+"353600","Ravensbourne-St Leonards",,1950,"IVC",183.3,"DUD",40.8,-142.5,FALSE
+"354300","Hillside-Portsmouth Drive",,110,"IVC",169,"DUD",26.5,-142.5,FALSE
+"353700","Harbourside",,50,"IVC",171.5,"DUD",29,-142.5,FALSE
+"353800","Fernhill",,1740,"IVC",169,"DUD",26.5,-142.5,FALSE
+"354000","Concord",,1550,"IVC",166.1,"DUD",23.6,-142.5,FALSE
+"354200","Caversham",,2400,"IVC",166.1,"DUD",23.6,-142.5,FALSE
+"354800","St Clair",,2430,"IVC",167.7,"DUD",25.2,-142.5,FALSE
+"354900","Waverley",,2750,"IVC",174.2,"DUD",31.8,-142.5,FALSE
+"355000","Macandrew Bay-Company Bay",,1600,"IVC",182.3,"DUD",39.8,-142.5,FALSE
+"363000","Clifton",,1550,"IVC",16.3,"DUD",143.9,127.7,FALSE
+"355400","Shiel Hill",,1810,"IVC",174.5,"DUD",32,-142.5,FALSE
+"355500","St Kilda North",,2510,"IVC",171.5,"DUD",29,-142.5,FALSE
+"355600","Andersons Bay",,2450,"IVC",174.2,"DUD",31.7,-142.5,FALSE
+"355700","Tainui",,2050,"IVC",172.7,"DUD",30.2,-142.5,FALSE
+"356700","Benhar-Stirling",,490,"IVC",112.5,"DUD",41.2,-71.3,FALSE
+"356800","Kaitangata-Matau",,1140,"IVC",121.6,"DUD",48.6,-73,FALSE
+"357000","Fiordland",,120,"IVC",150.3,"ZQN",112.4,-37.9,TRUE
+"357100","Inlets Fiordland",,10,"IVC",139.2,"ZQN",196.4,57.2,TRUE
+"357300","Mararoa",,840,"IVC",130.7,"ZQN",59.7,-71,TRUE
+"356400","Milton",,2230,"IVC",126.5,"DUD",24.6,-101.9,FALSE
+"356500","Balclutha South",,2620,"IVC",104,"DUD",46.5,-57.5,FALSE
+"357500","Te Anau",,3040,"IVC",124.7,"ZQN",118.1,-6.6,FALSE
+"357600","Whitestone",,640,"IVC",118.6,"ZQN",112,-6.6,FALSE
+"357700","Mossburn",,1350,"IVC",101.1,"ZQN",83.2,-17.9,FALSE
+"357900","Longwood Forest",,2060,"IVC",107.4,"ZQN",177.6,70.2,FALSE
+"358000","Ohai-Nightcaps",,1520,"IVC",70.1,"ZQN",103.2,33,FALSE
+"358100","Riversdale-Piano Flat",,1440,"IVC",108.2,"ZQN",116.8,8.6,FALSE
+"360300","Gore South",,660,"IVC",59.7,"DUD",102.5,42.8,FALSE
+"358900","Wallacetown",,1240,"IVC",23.3,"ZQN",129.4,106.1,FALSE
+"359500","Wyndham-Catlins",,2250,"IVC",73.1,"DUD",137.4,64.3,FALSE
+"359600","Waikaka",,1650,"IVC",80.8,"DUD",112.1,31.3,FALSE
+"359700","Waimumu-Kaiwera",,1360,"IVC",66.3,"DUD",104,37.6,FALSE
+"360000","East Gore",,1530,"IVC",64.1,"DUD",95.4,31.3,FALSE
+"360100","Gore Central",,190,"IVC",61.8,"DUD",98.4,36.6,FALSE
+"360600","Prestonville-Grasmere",,3880,"IVC",11.4,"ZQN",132.1,120.8,FALSE
+"360700","Donovan Park",,2590,"IVC",14.9,"ZQN",131.9,117,FALSE
+"361000","Invercargill Central",,1460,"IVC",11.9,"ZQN",139,127.1,FALSE
+"360900","Otatara",,3450,"IVC",10.8,"ZQN",140,129.2,FALSE
+"361100","Gladstone (Invercargill City)",,2470,"IVC",12.3,"ZQN",135.1,122.8,FALSE
+"362200","Kew (Invercargill City)",,2050,"IVC",14,"DUD",143.1,129.1,FALSE
+"362300","Kennington-Tisbury",,1520,"IVC",21.5,"DUD",134.6,113.1,FALSE
+"362400","Newfield",,2960,"IVC",19,"DUD",137.7,118.7,FALSE
+"362500","Strathern",,2290,"IVC",15.7,"DUD",140.4,124.7,FALSE
+"362600","Elizabeth Park",,1370,"IVC",18.9,"DUD",139.5,120.6,FALSE

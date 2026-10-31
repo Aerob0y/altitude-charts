@@ -1,0 +1,1436 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"190100","Waiau",,370,"PMR",320.8,"AKL",117,-203.8,FALSE
+"116400","Taupaki",,1800,"PMR",363.5,"AKL",37.1,-326.4,FALSE
+"146900","Oneroa East-Palm Beach",,1300,"PMR",436.8,"AKL",120,-316.8,FALSE
+"190200","Waihi Beach-Bowentown",,2980,"PMR",311.3,"AKL",116.8,-194.5,FALSE
+"190300","Tahawai",,2070,"PMR",313.4,"AKL",129.8,-183.7,FALSE
+"190500","Aongatete",,3740,"PMR",300.2,"AKL",139.1,-161.1,FALSE
+"190600","Katikati",,5810,"PMR",298.9,"AKL",123.8,-175.1,FALSE
+"157500","Chapel Downs",,3530,"PMR",335.2,"AKL",21.2,-314,FALSE
+"157600","Wiri West",,1360,"PMR",334.2,"AKL",17.4,-316.8,FALSE
+"190800","Matakana Island",,220,"PMR",384.5,"AKL",241.4,-143,FALSE
+"162300","Ardmore",,1500,"PMR",335.5,"AKL",31,-304.5,FALSE
+"162400","Glenbrook",,2630,"PMR",342.9,"AKL",49.1,-293.8,FALSE
+"162500","Hingaia",,3220,"PMR",325.8,"AKL",23,-302.8,FALSE
+"162700","Kawakawa Bay-Orere",,2120,"PMR",373.5,"AKL",32.3,-341.1,TRUE
+"165200","Hunua",,1510,"PMR",333.8,"AKL",43.3,-290.4,FALSE
+"190900","Pahoia",,3580,"PMR",300.2,"AKL",149,-151.2,FALSE
+"191200","Te Puna",,2520,"PMR",277.5,"AKL",151.5,-126,FALSE
+"191300","Minden",,2700,"PMR",268.2,"AKL",144.6,-123.6,FALSE
+"191400","Kaimai",,2340,"PMR",288.8,"AKL",165.2,-123.6,FALSE
+"191600","Kaitemako (Western Bay of Plenty District)",,2010,"PMR",280.8,"AKL",157.2,-123.6,FALSE
+"191700","Waiorohi",,3010,"PMR",275,"AKL",154.5,-120.5,FALSE
+"191800","Otawa",,2220,"PMR",306,"AKL",182.4,-123.6,FALSE
+"192000","Rangiuru",,3040,"PMR",296.5,"AKL",186.2,-110.4,FALSE
+"192300","Maketu",,1420,"PMR",294.6,"AKL",183.1,-111.5,FALSE
+"192500","Pongakawa",,3670,"PMR",300.6,"AKL",189.7,-110.9,FALSE
+"202000","Matata-Otakiri",,1790,"PMR",309.3,"AKL",204.7,-104.6,FALSE
+"202100","Onepu Spring",,1330,"PMR",305.5,"AKL",219.6,-85.9,FALSE
+"202500","Coastlands",,2200,"PMR",314.9,"AKL",212,-102.9,FALSE
+"203100","Wainui",,1650,"PMR",338.7,"AKL",235.8,-102.9,FALSE
+"203200","Ohope",,3330,"PMR",328.9,"AKL",226,-102.9,FALSE
+"203400","Galatea",,1510,"PMR",277.2,"AKL",235.7,-41.5,FALSE
+"203500","Waingarara-Waimana",,2590,"PMR",256.8,"AKL",243.6,-13.2,TRUE
+"204500","Otara-Tirohanga",,1310,"PMR",366.2,"AKL",273.9,-92.3,FALSE
+"204600","Oponae",,350,"PMR",350.8,"AKL",289.6,-61.2,FALSE
+"204700","East Cape",,1460,"PMR",437.6,"AKL",412.2,-25.4,FALSE
+"147400","Sylvia Park",,150,"PMR",338.5,"AKL",24.5,-314,FALSE
+"210300","Raceway Park",,2150,"PMR",122.8,"WLG",232.7,109.9,FALSE
+"233800","Owhanga",,780,"PMR",113.6,"WLG",190.9,77.3,FALSE
+"234000","Kere Kere",,1000,"PMR",38.6,"WLG",106.3,67.7,FALSE
+"238900","Paekakariki Hill",,370,"PMR",101.7,"WLG",47.1,-54.5,FALSE
+"239400","Pauatahanui",,1030,"PMR",112.6,"WLG",51.3,-61.3,FALSE
+"303200","Templemore",,2140,"PMR",537.5,"CHC",309.4,-228.1,FALSE
+"180400","Deanwell",,2310,"PMR",276,"AKL",93.1,-182.9,FALSE
+"187700","Marotiri",,2620,"PMR",188.1,"AKL",155,-33.1,FALSE
+"187800","Ohakuri",,2100,"PMR",195,"AKL",160.4,-34.5,FALSE
+"187900","Lake Taupo Bays",,1840,"PMR",151.7,"AKL",191.4,39.8,FALSE
+"188000","Mapara",,2350,"PMR",195.3,"AKL",175.6,-19.7,FALSE
+"188200","Wairakei-Broadlands",,1330,"PMR",190.8,"AKL",187,-3.8,FALSE
+"206100","Te Hapara South",,2400,"PMR",282.9,"AKL",349.8,66.8,FALSE
+"207300","Wainui-Okitu",,1940,"PMR",290.6,"AKL",362.1,71.4,FALSE
+"207400","Maungataniwha-Raupunga",,1330,"PMR",258.7,"WLG",368.6,109.9,FALSE
+"207600","Frasertown-Ruakituri",,930,"PMR",275.2,"WLG",385.1,109.9,FALSE
+"207900","Mahia",,1310,"PMR",253.7,"WLG",363.6,109.9,FALSE
+"208000","Puketitiri-Tutira",,2090,"PMR",167.4,"AKL",242.4,74.9,FALSE
+"208100","Sherenden-Crownthorpe",,1500,"PMR",161.7,"WLG",271.5,109.9,FALSE
+"208200","Maraekakaho",,1580,"PMR",123.5,"WLG",233.3,109.9,FALSE
+"208300","Puketapu-Eskdale",,3190,"PMR",133.9,"WLG",243.8,109.9,FALSE
+"208400","Omahu-Pakowhai",,1640,"PMR",128.1,"WLG",237.9,109.9,FALSE
+"208700","Poukawa",,1510,"PMR",109.9,"WLG",219.7,109.9,FALSE
+"209800","Mahora",,2760,"PMR",127.2,"WLG",237,109.9,FALSE
+"209900","Raureka",,3560,"PMR",122.8,"WLG",232.7,109.8,FALSE
+"256100","Douglas Park",,2170,"PMR",79.9,"WLG",97.6,17.6,FALSE
+"256500","Whareama",,1630,"PMR",102.8,"WLG",123.2,20.4,FALSE
+"256600","Homebush-Te Ore Ore",,1210,"PMR",88.4,"WLG",100.6,12.2,FALSE
+"256800","Mount Holdsworth",,2070,"PMR",66.7,"WLG",70.9,4.2,TRUE
+"257000","Kokotau",,1310,"PMR",89.7,"WLG",84.7,-4.9,FALSE
+"257100","Carterton South",,3240,"PMR",93.6,"WLG",82.4,-11.1,FALSE
+"257200","Gladstone (Carterton District)",,980,"PMR",147.6,"WLG",148.3,0.7,FALSE
+"257300","Tauherenikau",,1520,"PMR",130.9,"WLG",81.7,-49.3,FALSE
+"257400","Kahutara",,1110,"PMR",127.2,"WLG",85.4,-41.8,FALSE
+"301600","Moutere Hills",,3980,"PMR",557.6,"CHC",314.6,-243,FALSE
+"301800","Murchison-Nelson Lakes",,1420,"PMR",595.6,"CHC",266.2,-329.4,FALSE
+"302000","Islands Tasman District",,110,"PMR",550.7,"CHC",314.2,-236.5,FALSE
+"302100","Waimea West",,1200,"PMR",556.1,"CHC",309.1,-247,FALSE
+"302500","Wakefield Rural",,1410,"PMR",605.9,"CHC",356.7,-249.2,FALSE
+"302800","Richmond Central (Tasman District)",,2050,"PMR",536.7,"CHC",308.3,-228.4,FALSE
+"115300","Muriwai Valley-Bethells Beach",,1290,"PMR",388.5,"AKL",62.1,-326.4,FALSE
+"114300","Gulf Islands",,100,"PMR",399.6,"AKL",27.2,-372.4,TRUE
+"117100","Waitakere Ranges North",,1310,"PMR",375.8,"AKL",49.4,-326.4,FALSE
+"119200","Hobsonville",,1240,"PMR",359.4,"AKL",33,-326.4,FALSE
+"119300","Inlet Waitemata Harbour",,90,"PMR",365.8,"AKL",39.5,-326.4,FALSE
+"120200","Hobsonville Point",,9320,"PMR",400,"AKL",34.8,-365.2,TRUE
+"123000","Ranui North",,4200,"PMR",360.3,"AKL",34,-326.4,FALSE
+"124700","Henderson Valley",,1480,"PMR",369.8,"AKL",43.4,-326.4,FALSE
+"125000","Ranui South East",,3180,"PMR",362.4,"AKL",36,-326.4,FALSE
+"126000","Summerland South",,3320,"PMR",364,"AKL",37.6,-326.4,FALSE
+"126400","Te Atatu South-Edmonton",,3990,"PMR",355.6,"AKL",29.2,-326.4,FALSE
+"127200","Akoranga",,1230,"PMR",358.1,"AKL",38.1,-320,FALSE
+"127600","Waiatarua",,2240,"PMR",369.9,"AKL",43.5,-326.4,FALSE
+"127900","Henderson North East",,2810,"PMR",359,"AKL",32.6,-326.4,FALSE
+"128000","Waitakere Ranges South",,1170,"PMR",381.1,"AKL",22.4,-358.6,TRUE
+"128700","Rosebank Peninsula",,40,"PMR",350,"AKL",23.6,-326.4,FALSE
+"129000","Sunnyvale West-Parrs Park",,2750,"PMR",363.9,"AKL",37.6,-326.4,FALSE
+"129300","Belmont (Auckland)",,2800,"PMR",362.1,"AKL",42.1,-320,FALSE
+"129600","Glen Eden West",,4000,"PMR",365.1,"AKL",38.7,-326.4,FALSE
+"130000","Oratia",,2210,"PMR",366.1,"AKL",39.7,-326.4,FALSE
+"131600","Grey Lynn North",,2940,"PMR",351.3,"AKL",25.6,-325.7,FALSE
+"132700","Hobson Ridge North",,2180,"PMR",347.4,"AKL",27.4,-320,FALSE
+"133500","Grey Lynn East",,1670,"PMR",348.1,"AKL",25.5,-322.6,FALSE
+"133600","Morningside (Auckland)",,3790,"PMR",348.7,"AKL",22.3,-326.4,FALSE
+"134100","Queen Street South West",,1720,"PMR",346.6,"AKL",26.6,-320,FALSE
+"135100","Symonds Street North West",,2770,"PMR",346.7,"AKL",28.2,-318.5,FALSE
+"135200","Mount Albert South",,2400,"PMR",346.5,"AKL",20.2,-326.4,FALSE
+"135900","Symonds Street East",,2130,"PMR",345.4,"AKL",28,-317.4,FALSE
+"136200","Eden Park",,1560,"PMR",351.3,"AKL",25.5,-325.8,FALSE
+"136700","Titirangi South",,4120,"PMR",366.4,"AKL",40,-326.4,FALSE
+"136800","Owairaka East",,1970,"PMR",346,"AKL",19.6,-326.4,FALSE
+"137300","Green Bay North",,1910,"PMR",353.5,"AKL",27.1,-326.4,FALSE
+"137500","Laingholm",,2400,"PMR",370.7,"AKL",44.3,-326.4,FALSE
+"138900","Blockhouse Bay South",,4430,"PMR",350.1,"AKL",23.7,-326.4,FALSE
+"139300","Maungawhau",,2790,"PMR",347.9,"AKL",21.5,-326.4,FALSE
+"140200","Epsom Central-North",,3830,"PMR",345.8,"AKL",20.2,-325.5,FALSE
+"140700","Mount Roskill Central South",,2520,"PMR",342.1,"AKL",15.7,-326.4,FALSE
+"142100","Hillsborough West (Auckland)",,3630,"PMR",344,"AKL",17.6,-326.4,FALSE
+"143300","Ellerslie Central",,3360,"PMR",339.4,"AKL",24.1,-315.4,FALSE
+"143400","Royal Oak East (Auckland)",,3000,"PMR",343.3,"AKL",16.9,-326.4,FALSE
+"144600","Oneroa West",,1440,"PMR",436.6,"AKL",119.8,-316.8,FALSE
+"145700","Stonefields East",,1980,"PMR",347.4,"AKL",33.4,-314,FALSE
+"146100","Mangere Bridge Ambury",,3700,"PMR",348.8,"AKL",17.7,-331.1,FALSE
+"147500","Mangere Mountain View",,4270,"PMR",337.6,"AKL",12.6,-324.9,FALSE
+"147600","Surfdale",,2120,"PMR",427.9,"AKL",111.1,-316.8,FALSE
+"147900","Auckland Airport",,690,"PMR",346.5,"AKL",10.9,-335.6,FALSE
+"148000","Eastern Beach",,2080,"PMR",356.2,"AKL",39.3,-316.8,FALSE
+"148700","Ostend",,1950,"PMR",433.3,"AKL",116.4,-316.8,FALSE
+"149200","Sunnyhills East",,3560,"PMR",349.2,"AKL",32.4,-316.8,FALSE
+"149900","Awhitu",,3180,"PMR",363.4,"AKL",73.1,-290.2,FALSE
+"151000","Mangere South",,3910,"PMR",339.8,"AKL",10.1,-329.7,FALSE
+"151700","Waiheke East",,1090,"PMR",447.2,"AKL",130.4,-316.8,FALSE
+"152300","East Tamaki",,340,"PMR",340.4,"AKL",26.4,-314,FALSE
+"152600","Massey Road South",,1910,"PMR",335.1,"AKL",11.5,-323.6,FALSE
+"150600","Mellons Bay",,4100,"PMR",355.2,"AKL",41.1,-314,FALSE
+"150800","Sutton Park",,4140,"PMR",338.2,"AKL",14.6,-323.6,FALSE
+"156800","Rongomai West",,2590,"PMR",336.7,"AKL",22.7,-314,FALSE
+"157100","Turanga",,3360,"PMR",350.1,"AKL",36.1,-314,FALSE
+"152700","Middlemore",,40,"PMR",340,"AKL",18.3,-321.8,FALSE
+"153200","Aorere North",,1810,"PMR",336.2,"AKL",12.6,-323.6,FALSE
+"154100","Dingwall",,3860,"PMR",333.5,"AKL",19.5,-314,FALSE
+"155200","Redcastle",,2460,"PMR",341.2,"AKL",27.2,-314,FALSE
+"156400","Te Puru",,4310,"PMR",358.5,"AKL",44.5,-314,FALSE
+"156700","Puhinui South",,2820,"PMR",335.3,"AKL",16.6,-318.7,FALSE
+"158400","Wiri East",,5400,"PMR",333.6,"AKL",16.9,-316.8,FALSE
+"159800","Karaka Creek",,1720,"PMR",341.8,"AKL",41.7,-300.1,FALSE
+"160200","Weymouth North",,5480,"PMR",337.3,"AKL",24.6,-312.7,FALSE
+"160300","Hillpark South",,3760,"PMR",332.6,"AKL",18,-314.6,FALSE
+"160600","Leabank",,4990,"PMR",333.3,"AKL",23.2,-310.2,FALSE
+"160800","Manurewa East",,3460,"PMR",330.2,"AKL",22.4,-307.7,FALSE
+"161000","Randwick Park East",,2790,"PMR",331,"AKL",22,-309,FALSE
+"161400","Kingseat-Karaka",,3240,"PMR",337.1,"AKL",34.3,-302.8,FALSE
+"162800","Papakura West",,2010,"PMR",327.7,"AKL",27.1,-300.6,FALSE
+"163400","Karaka Lakes",,3210,"PMR",328.5,"AKL",26.6,-301.8,FALSE
+"163600","Papakura Massey Park",,3390,"PMR",327.8,"AKL",27.2,-300.6,FALSE
+"163700","Rosehill",,4690,"PMR",326.6,"AKL",26.5,-300.1,FALSE
+"164000","Opaheke",,3360,"PMR",326.4,"AKL",25.8,-300.6,FALSE
+"164300","Drury",,1770,"PMR",325,"AKL",28.5,-296.5,FALSE
+"164600","Drury Rural",,3060,"PMR",322.7,"AKL",29.6,-293.1,FALSE
+"164800","Waiuku East",,1920,"PMR",347.1,"AKL",59.1,-288.1,FALSE
+"165800","Rooseville Park",,2780,"PMR",321,"AKL",37.9,-283,FALSE
+"165900","Cloverlea (Auckland)",,2630,"PMR",328.3,"AKL",45.2,-283,FALSE
+"166200","Buckland",,1310,"PMR",321.3,"AKL",38.3,-283,FALSE
+"166700","Coromandel",,1950,"PMR",368.6,"AKL",134.1,-234.4,FALSE
+"166900","Mercury Bay North",,2060,"PMR",392.4,"AKL",158,-234.4,FALSE
+"167200","Thames Coast",,1870,"PMR",342.6,"AKL",108.1,-234.4,FALSE
+"167300","Cooks Beach-Ferry Landing",,590,"PMR",365.1,"AKL",130.6,-234.4,FALSE
+"167400","Mercury Bay South",,1410,"PMR",367.2,"AKL",132.7,-234.4,FALSE
+"167500","Kauaeranga",,670,"PMR",333.5,"AKL",99.1,-234.4,FALSE
+"167900","Hikuai",,290,"PMR",329.9,"AKL",95.5,-234.4,FALSE
+"168100","Tairua",,1690,"PMR",345.4,"AKL",111,-234.4,FALSE
+"168200","Pauanui",,1210,"PMR",341.4,"AKL",107,-234.4,FALSE
+"168300","Matatoki-Puriri",,1190,"PMR",310.3,"AKL",83.8,-226.5,FALSE
+"168400","Whangamata Rural",,510,"PMR",343.8,"AKL",109.4,-234.4,FALSE
+"168500","Whangamata",,4650,"PMR",340.8,"AKL",114.9,-225.9,FALSE
+"168600","Miranda-Pukorokoro",,970,"PMR",327.8,"AKL",61.5,-266.3,FALSE
+"169200","Paeroa",,4660,"PMR",297.7,"AKL",86.8,-210.9,FALSE
+"169300","Waihi Rural",,2600,"PMR",313.2,"AKL",105.1,-208.2,FALSE
+"169700","Aka Aka",,3670,"PMR",348,"AKL",64.7,-283.2,FALSE
+"169800","Mangatangi",,1290,"PMR",327.3,"AKL",53.9,-273.5,FALSE
+"169900","Tuakau Rural",,1780,"PMR",326.3,"AKL",44.2,-282.1,FALSE
+"170100","Onewhero",,1900,"PMR",341.5,"AKL",72.1,-269.4,FALSE
+"170200","Pokeno Rural",,1860,"PMR",314.9,"AKL",40.4,-274.5,FALSE
+"170400","Port Waikato-Waikaretu",,930,"PMR",357.3,"AKL",87.7,-269.6,FALSE
+"170500","Pokeno",,5270,"PMR",310.7,"AKL",35.4,-275.3,FALSE
+"170600","Pukekawa",,1880,"PMR",319,"AKL",53.2,-265.9,FALSE
+"171600","Raglan",,3960,"PMR",299.5,"AKL",105.7,-193.8,FALSE
+"171700","Whitikahu",,2310,"PMR",283.9,"AKL",77.3,-206.6,FALSE
+"172000","Ngaruawahia North",,2440,"PMR",281.6,"AKL",75.8,-205.9,FALSE
+"210000","Cornwall Park",,3300,"PMR",126.6,"WLG",236.5,109.9,FALSE
+"172300","Kainui-Gordonton",,2050,"PMR",282,"AKL",74.5,-207.5,FALSE
+"172600","Horotiu",,740,"PMR",277.8,"AKL",72.7,-205.1,FALSE
+"178100","Dinsdale South",,4230,"PMR",280.8,"AKL",86.3,-194.5,FALSE
+"172900","Rotokauri",,1220,"PMR",284.3,"AKL",80.9,-203.4,FALSE
+"173200","Tamahere North",,4680,"PMR",265.4,"AKL",88.8,-176.6,FALSE
+"173500","Tahuna-Mangateparu",,1650,"PMR",293.8,"AKL",80,-213.8,FALSE
+"173600","Mangaiti",,1400,"PMR",286.2,"AKL",93.8,-192.4,FALSE
+"173700","Tatuanui",,1480,"PMR",277,"AKL",93.3,-183.7,FALSE
+"177300","Chartwell",,2680,"PMR",274.1,"AKL",81.4,-192.7,FALSE
+"177700","Miropiko",,3310,"PMR",276.1,"AKL",84.2,-191.9,FALSE
+"178400","Enderley North",,2730,"PMR",273.5,"AKL",82.6,-190.9,FALSE
+"180600","Hillcrest West (Hamilton City)",,2980,"PMR",269,"AKL",85.2,-183.9,FALSE
+"180700","Hillcrest East (Hamilton City)",,3510,"PMR",268.2,"AKL",84.2,-184,FALSE
+"181000","Resthill",,2700,"PMR",272.5,"AKL",93.9,-178.7,FALSE
+"181100","Fitzroy",,3350,"PMR",273.4,"AKL",91,-182.4,FALSE
+"181400","Te Pahu",,1600,"PMR",274.8,"AKL",103.6,-171.2,FALSE
+"182000","Hautapu Rural",,770,"PMR",256.6,"AKL",91.4,-165.3,FALSE
+"182100","Pokuru",,1670,"PMR",256.2,"AKL",106,-150.2,FALSE
+"182400","Hautapu",,730,"PMR",258.5,"AKL",92.6,-165.9,FALSE
+"182600","Cambridge North",,2800,"PMR",256.7,"AKL",91.9,-164.7,FALSE
+"182800","Cambridge East",,2970,"PMR",255.9,"AKL",93.9,-162,FALSE
+"183100","Pukerimu",,1170,"PMR",255.8,"AKL",104.2,-151.6,FALSE
+"184100","Te Awamutu Central",,420,"PMR",252.1,"AKL",103.7,-148.4,FALSE
+"188800","Taupo Central East",,2620,"PMR",183.5,"AKL",179.2,-4.3,FALSE
+"189500","Kaimanawa",,220,"PMR",147.3,"AKL",249.2,101.9,TRUE
+"184400","Sherwin Park",,2220,"PMR",251.7,"AKL",106.5,-145.1,FALSE
+"184600","Rotoorangi",,1880,"PMR",246.2,"AKL",110.4,-135.8,FALSE
+"184700","Tokanui",,460,"PMR",251.9,"AKL",116.5,-135.4,FALSE
+"184800","Kihikihi Central",,2830,"PMR",246.7,"AKL",110.7,-135.9,FALSE
+"185300","Honikiwi",,1700,"PMR",264.9,"AKL",126.4,-138.5,FALSE
+"185400","Te Kawa",,1300,"PMR",261.4,"AKL",128.2,-133.2,FALSE
+"185600","Maihiihi",,1890,"PMR",256.7,"AKL",140.5,-116.2,FALSE
+"185700","Puniu",,1620,"PMR",232.2,"AKL",152.2,-80.1,FALSE
+"185800","Tirau",,2630,"PMR",241.7,"AKL",123,-118.7,FALSE
+"185900","Putararu Rural",,2660,"PMR",226.9,"AKL",130.1,-96.9,FALSE
+"186100","Kinleith",,1600,"PMR",217.6,"AKL",137.8,-79.8,FALSE
+"186200","Paraonui",,1930,"PMR",216.2,"AKL",133.1,-83.1,FALSE
+"186400","Matarawa",,2290,"PMR",215.6,"AKL",134.9,-80.6,FALSE
+"187000","Herangi",,1080,"PMR",220.8,"AKL",158.3,-62.6,TRUE
+"187100","Hangatiki",,1340,"PMR",252.3,"AKL",148.4,-103.9,FALSE
+"187200","Aria",,1310,"PMR",238.1,"AKL",171.9,-66.2,FALSE
+"187500","Waipa Valley",,1260,"PMR",228.4,"AKL",173.6,-54.8,FALSE
+"187600","Tiroa",,50,"PMR",226.9,"AKL",177.1,-49.8,FALSE
+"193100","Bellevue",,4060,"PMR",278.5,"AKL",154.9,-123.6,FALSE
+"193600","Brookfield East",,3060,"PMR",279,"AKL",155.4,-123.6,FALSE
+"194600","Gate Pa",,4480,"PMR",275.8,"AKL",152.2,-123.6,FALSE
+"210100","Tomoana",,340,"PMR",129,"WLG",238.9,109.9,FALSE
+"194900","Arataki North",,3280,"PMR",281.6,"AKL",158,-123.6,FALSE
+"195800","Te Maunga North",,3530,"PMR",280.8,"AKL",157.2,-123.6,FALSE
+"196200","Te Maunga South",,5360,"PMR",281.8,"AKL",158.2,-123.6,FALSE
+"197500","Motiti",,3640,"PMR",292.4,"AKL",169.9,-122.5,FALSE
+"197700","Tui Ridge",,1810,"PMR",265.6,"AKL",164.9,-100.7,FALSE
+"196400","Ohauiti",,3960,"PMR",275.8,"AKL",152.2,-123.6,FALSE
+"196600","Welcome Bay West",,3020,"PMR",277,"AKL",153.4,-123.6,FALSE
+"196800","Pacific View",,3340,"PMR",282.3,"AKL",158.7,-123.6,FALSE
+"197300","Doncaster",,3570,"PMR",286.6,"AKL",163,-123.6,FALSE
+"201800","Golden Springs",,1890,"PMR",206,"AKL",189.9,-16.1,FALSE
+"201900","Manawahe",,1180,"PMR",314.7,"AKL",209.8,-104.9,FALSE
+"197800","Arahiwi",,140,"PMR",261.5,"AKL",146.5,-115,FALSE
+"197900","Ngongotaha Valley",,1730,"PMR",248.6,"AKL",155,-93.6,FALSE
+"198700","Rotoiti-Rotoehu",,2140,"PMR",303.3,"AKL",221.9,-81.3,FALSE
+"199100","Pukehangi North",,2890,"PMR",240.2,"AKL",154.2,-86,FALSE
+"199500","Mangakakahi West",,2260,"PMR",241.2,"AKL",153.1,-88.1,FALSE
+"200300","Victoria",,2320,"PMR",236.5,"AKL",155.8,-80.7,FALSE
+"200400","Waiohewa",,1120,"PMR",256,"AKL",179.5,-76.5,FALSE
+"200800","Glenholme South",,2090,"PMR",234.3,"AKL",157.1,-77.2,FALSE
+"201600","Ngakuru",,1920,"PMR",234.2,"AKL",173.8,-60.4,FALSE
+"201700","Kaingaroa-Whakarewarewa",,1960,"PMR",243.3,"AKL",201.8,-41.5,FALSE
+"210600","Tomoana Crossing",,2750,"PMR",127.5,"WLG",237.3,109.8,FALSE
+"210800","Queens Square",,2220,"PMR",124.9,"WLG",234.8,109.9,FALSE
+"212200","Kahuranaki",,1650,"PMR",152.7,"WLG",262.4,109.8,FALSE
+"212300","Bay View",,2410,"PMR",140.2,"WLG",249.9,109.8,FALSE
+"214100","Onekawa Central",,1640,"PMR",132.7,"WLG",242.6,109.9,FALSE
+"215500","Mangaonuku",,1080,"PMR",90.8,"WLG",200.7,109.9,FALSE
+"215600","Makaretu",,2810,"PMR",77.5,"WLG",187.4,109.9,FALSE
+"215700","Waipawa",,2370,"PMR",94.3,"WLG",204.2,109.9,FALSE
+"215900","Mangarara",,2840,"PMR",115.9,"WLG",225.8,109.9,FALSE
+"216000","Waipukurau East",,2010,"PMR",88.3,"WLG",198.1,109.9,FALSE
+"216100","Taurekaitai",,2140,"PMR",116.7,"WLG",226.6,109.9,FALSE
+"216400","Omata",,1030,"PMR",189.8,"AKL",272.3,82.5,FALSE
+"216600","Moturoa",,1980,"PMR",193.4,"AKL",265.4,72,FALSE
+"216700","Kaitake",,2280,"PMR",178.4,"WLG",283.3,104.8,FALSE
+"218200","Ferndale",,840,"PMR",191.1,"AKL",267.9,76.8,FALSE
+"219000","Lepperton-Brixton",,1960,"PMR",183.9,"AKL",248.2,64.3,FALSE
+"219100","Mangorei",,2230,"PMR",190.9,"AKL",271.8,80.9,FALSE
+"219200","Mount Messenger",,910,"PMR",214.1,"AKL",214.7,0.6,FALSE
+"220100","Stratford North",,2050,"PMR",155.2,"WLG",260,104.8,FALSE
+"220200","Whangamomona",,140,"PMR",232.1,"AKL",284.1,51.9,FALSE
+"220500","Cape Egmont",,2250,"PMR",166.4,"WLG",271.3,104.8,FALSE
+"220600","Taungatara",,1450,"PMR",157.5,"WLG",262.3,104.8,FALSE
+"221100","Okaiawa",,1290,"PMR",139.7,"WLG",244.5,104.8,FALSE
+"221400","Normanby-Tawhiti",,1930,"PMR",133.3,"WLG",238.1,104.8,FALSE
+"222400","Ngapuke",,1290,"PMR",178.5,"AKL",222,43.5,FALSE
+"222800","National Park",,1090,"PMR",136.9,"AKL",237.8,100.9,TRUE
+"222900","Tangiwai",,1340,"PMR",152.4,"WLG",268,115.5,FALSE
+"223300","Upper Whanganui",,1220,"PMR",126.5,"WLG",231.4,104.9,FALSE
+"223400","Mowhanau",,1420,"PMR",77.9,"WLG",182.8,104.8,FALSE
+"223500","Brunswick-Papaiti",,1570,"PMR",67.1,"WLG",172,104.8,FALSE
+"224400","Springvale West",,1700,"PMR",60.3,"WLG",165.2,104.8,FALSE
+"225400","Cornmarket",,1430,"PMR",59,"WLG",163.9,104.8,FALSE
+"225600","Kaitoke-Fordell",,1950,"PMR",53.3,"WLG",158.2,104.8,FALSE
+"225900","Bastia-Durie Hill",,2280,"PMR",59.3,"WLG",164.2,104.8,FALSE
+"226100","Mokai Patea",,1840,"PMR",95.2,"WLG",225.3,130.2,TRUE
+"226200","Ngamatea",,30,"PMR",116.9,"WLG",247.4,130.5,TRUE
+"226300","Turakina",,1370,"PMR",45.5,"WLG",150.4,104.8,FALSE
+"226400","Otairi",,1340,"PMR",58.5,"WLG",165.4,106.9,FALSE
+"226600","Marton Rural",,1090,"PMR",36.7,"WLG",141.6,104.8,FALSE
+"226800","Parewanui",,910,"PMR",41.2,"WLG",146,104.8,FALSE
+"227100","Kiwitea",,1740,"PMR",61.4,"WLG",179.5,118.1,FALSE
+"227400","Oroua Downs",,1430,"PMR",32.2,"WLG",116.6,84.3,FALSE
+"227500","Awahuri",,2300,"PMR",13.3,"WLG",126,112.7,FALSE
+"227600","Pohangina-Apiti",,1370,"PMR",55.1,"WLG",173.6,118.4,FALSE
+"227800","Taikorea",,1410,"PMR",27.4,"WLG",115.3,87.9,FALSE
+"228200","Warwick",,1550,"PMR",15.7,"WLG",131.5,115.8,FALSE
+"228600","Kauwhata",,2140,"PMR",13.8,"WLG",122.9,109.1,FALSE
+"228700","Taonui",,1850,"PMR",20.2,"WLG",138.3,118.1,FALSE
+"230100","Takaro South",,2510,"PMR",8.5,"WLG",120.9,112.4,FALSE
+"232000","Ruahine",,1650,"PMR",12.7,"WLG",120.6,107.9,FALSE
+"232500","Pihauatua",,1330,"PMR",26.3,"WLG",119.8,93.5,FALSE
+"232600","Aokautere Rural",,790,"PMR",27.2,"WLG",127.9,100.7,FALSE
+"232800","Norsewood",,1770,"PMR",61.8,"WLG",171.7,109.9,FALSE
+"232900","Papatawa",,1410,"PMR",47.5,"WLG",157.4,109.9,FALSE
+"233000","Mangatainoka",,1900,"PMR",47.7,"WLG",146.3,98.6,FALSE
+"233200","Dannevirke West",,2250,"PMR",49,"WLG",158.8,109.9,FALSE
+"233400","Waitahora",,690,"PMR",68.6,"WLG",178.5,109.9,FALSE
+"233500","Kaitawa",,680,"PMR",76.4,"WLG",184.5,108,FALSE
+"233700","Nireaha-Eketahuna",,1680,"PMR",90.1,"WLG",161.4,71.4,FALSE
+"234300","Foxton South",,1910,"PMR",32,"WLG",100.4,68.4,FALSE
+"234500","Waikawa (Horowhenua District)",,870,"PMR",59,"WLG",86.8,27.8,FALSE
+"234600","Miranui",,1970,"PMR",37.4,"WLG",109.1,71.8,FALSE
+"234700","Donnelly Park",,1320,"PMR",47.9,"WLG",85.7,37.8,FALSE
+"235800","Taitoko",,2110,"PMR",47.6,"WLG",88.2,40.6,FALSE
+"235900","Waiopehu",,1580,"PMR",43.1,"WLG",84.6,41.5,FALSE
+"236000","Makahika",,1060,"PMR",61.2,"WLG",100.6,39.5,FALSE
+"236100","Kimberley",,510,"PMR",50.9,"WLG",80.1,29.2,TRUE
+"236400","Forest Lakes (Kapiti Coast District)",,690,"PMR",66.3,"WLG",61.4,-4.9,FALSE
+"236700","Waitohu",,1140,"PMR",69.4,"WLG",68.6,-0.8,FALSE
+"237900","Maungakotukutuku",,1400,"PMR",111.2,"WLG",77.3,-33.9,FALSE
+"238300","Raumati Beach East",,2450,"PMR",83.6,"WLG",48.7,-34.9,FALSE
+"238500","Raumati South",,4000,"PMR",88.3,"WLG",50.2,-38,FALSE
+"240000","Papakowhai",,2320,"PMR",104.2,"WLG",32,-72.2,FALSE
+"241000","Cannons Creek East",,4130,"PMR",99,"WLG",32.8,-66.2,FALSE
+"241200","Akatarawa",,710,"PMR",111.6,"WLG",54.7,-56.8,FALSE
+"241300","Riverstone Terraces",,1960,"PMR",114.9,"WLG",39.9,-74.9,FALSE
+"242500","Wallaceville",,2540,"PMR",114.7,"WLG",39.8,-74.9,FALSE
+"303100","Wilkes Park",,2390,"PMR",539.8,"CHC",307.6,-232.3,FALSE
+"242600","Maoribank",,3600,"PMR",125.5,"WLG",51.5,-74,FALSE
+"242800","Pinehaven",,2080,"PMR",112.3,"WLG",37.3,-74.9,FALSE
+"243100","Belmont Park",,350,"PMR",113.9,"WLG",32.5,-81.4,FALSE
+"245100","Epuni West",,3570,"PMR",111.5,"WLG",28.2,-83.4,FALSE
+"245500","Waterloo West",,2500,"PMR",115.1,"WLG",31,-84.1,FALSE
+"245700","Gracefield",,160,"PMR",120.2,"WLG",30.6,-89.6,FALSE
+"246000","Waiwhetu",,4870,"PMR",117.4,"WLG",31.7,-85.7,FALSE
+"246800","Pencarrow",,690,"PMR",139.3,"WLG",52.8,-86.5,FALSE
+"246900","Wainuiomata West",,3900,"PMR",123.7,"WLG",37.2,-86.5,FALSE
+"247500","Makara-Ohariu",,1040,"PMR",129.7,"WLG",33.6,-96.2,FALSE
+"248300","Churton Park South",,3480,"PMR",106.4,"WLG",25.5,-81,FALSE
+"249400","Karori Park",,4720,"PMR",122,"WLG",24.1,-97.9,FALSE
+"250500","Onslow",,1850,"PMR",111.6,"WLG",22.7,-88.9,FALSE
+"250600","Karori East",,3560,"PMR",118.3,"WLG",20.7,-97.6,FALSE
+"252300","Oriental Bay",,1460,"PMR",118.8,"WLG",12.3,-106.6,FALSE
+"252800","Kingston-Mornington-Vogeltown",,3190,"PMR",119,"WLG",12.4,-106.6,FALSE
+"254400","Miramar Central",,2000,"PMR",124.9,"WLG",6.7,-118.2,FALSE
+"254600","Karaka Bay-Worser Bay",,1530,"PMR",128.4,"WLG",10.1,-118.2,FALSE
+"254900","Miramar South",,3480,"PMR",124.8,"WLG",6.6,-118.2,FALSE
+"255300","Kopuaranga",,1090,"PMR",66.7,"WLG",106.7,39.9,FALSE
+"255400","Upper Plain",,1370,"PMR",82.6,"WLG",99.7,17.2,FALSE
+"255500","Opaki",,1330,"PMR",75,"WLG",102.6,27.6,FALSE
+"255600","Ngaumutawa",,1740,"PMR",79.4,"WLG",97.3,17.9,FALSE
+"256000","Kuripuni",,1820,"PMR",80.1,"WLG",96.3,16.2,FALSE
+"257500","Featherston",,2720,"PMR",111.7,"WLG",63.5,-48.3,FALSE
+"257800","Aorangi Forest",,1660,"PMR",164.2,"WLG",131.1,-33.1,FALSE
+"300300","Golden Bay/Mohua",,2600,"PMR",680,"CHC",421,-259,FALSE
+"300600","Pohara-Abel Tasman",,1630,"PMR",236.4,"WLG",163.9,-72.5,TRUE
+"300700","Takaka Hills",,1300,"PMR",590,"CHC",331,-259,FALSE
+"300800","Kaiteriteri-Riwaka",,1970,"PMR",585.4,"CHC",326.4,-259,FALSE
+"300900","Upper Moutere",,2120,"PMR",562.4,"CHC",300,-262.4,FALSE
+"301000","Lower Moutere",,1910,"PMR",567.9,"CHC",312,-255.9,FALSE
+"301100","Motueka North",,2640,"PMR",570.6,"CHC",316.7,-253.9,FALSE
+"301200","Motueka West",,2840,"PMR",567.1,"CHC",310.5,-256.7,FALSE
+"301500","Golden Downs",,2030,"PMR",528.6,"CHC",264.7,-263.9,FALSE
+"304100","Tahunanui",,2900,"PMR",530,"CHC",318.5,-211.5,FALSE
+"304200","Britannia",,1910,"PMR",524.2,"CHC",321.8,-202.4,FALSE
+"305300","Rutherford",,2650,"PMR",525.5,"CHC",320.8,-204.7,FALSE
+"306100","Daelyn",,1360,"PMR",538.8,"CHC",312.1,-226.6,FALSE
+"306200","The Brook",,2100,"PMR",532.2,"CHC",329.3,-202.9,FALSE
+"306300","Marlborough Sounds West",,2200,"PMR",491.3,"CHC",316.8,-174.5,FALSE
+"306400","Marlborough Sounds Coastal Marine",,20,"PMR",182.1,"WLG",102.4,-79.8,TRUE
+"306500","Marlborough Sounds East",,2060,"PMR",508.6,"CHC",363.2,-145.3,FALSE
+"306600","Upper Wairau",,2180,"PMR",583.5,"CHC",400.5,-183,FALSE
+"306900","Tuamarina",,1360,"PMR",429.6,"CHC",260.9,-168.7,FALSE
+"307000","Awatere",,1720,"PMR",264.1,"WLG",139.9,-124.2,TRUE
+"307200","Lower Wairau",,1280,"PMR",436.9,"CHC",254.3,-182.6,FALSE
+"307300","Woodbourne",,2810,"PMR",441.5,"CHC",253.3,-188.2,FALSE
+"307500","Springlands",,3420,"PMR",437.3,"CHC",251.7,-185.6,FALSE
+"307700","Mayfield",,1800,"PMR",434.3,"CHC",249.2,-185.1,FALSE
+"308200","Redwoodtown West",,2730,"PMR",440.5,"CHC",248.5,-192,FALSE
+"308800","Kaikoura Ranges",,1840,"PMR",271.4,"WLG",142,-129.4,TRUE
+"308900","Kaikoura",,2310,"PMR",540.5,"CHC",147.9,-392.6,FALSE
+"309000","Karamea",,770,"PMR",295.6,"WLG",206.8,-88.8,TRUE
+"178600","Temple View",,1280,"PMR",278.3,"AKL",92.6,-185.7,FALSE
+"125600","Hillcrest North (Auckland)",,3490,"PMR",358.6,"AKL",38.6,-320,FALSE
+"120600","Massey Central",,3650,"PMR",357.3,"AKL",30.9,-326.4,FALSE
+"133800","Hobson Ridge South",,1890,"PMR",345,"AKL",25,-320,FALSE
+"112000","Inlets other Auckland",,10,"PMR",352.8,"AKL",38.7,-314,FALSE
+"134900","New Lynn Seabrook",,2990,"PMR",355.6,"AKL",29.2,-326.4,FALSE
+"148800","Half Moon Bay North East",,2190,"PMR",353.8,"AKL",37,-316.8,FALSE
+"148900","Mangere West",,4790,"PMR",339.7,"AKL",11.2,-328.5,FALSE
+"149000","Pakuranga West",,4480,"PMR",345.7,"AKL",28.8,-316.8,FALSE
+"141500","Epsom East",,2350,"PMR",346,"AKL",19.7,-326.4,FALSE
+"141600","Remuera Waiata",,2750,"PMR",341.8,"AKL",25.9,-315.9,FALSE
+"141700","Epsom South",,2210,"PMR",343.3,"AKL",16.9,-326.4,FALSE
+"163500","Papakura Kelvin",,5150,"PMR",330,"AKL",29.4,-300.6,FALSE
+"199000","Western Heights (Rotorua District)",,2580,"PMR",241.6,"AKL",150.4,-91.2,FALSE
+"120900","Massey Royal Road West",,3210,"PMR",356.9,"AKL",30.6,-326.4,FALSE
+"302900","Ben Cooper Park",,2520,"PMR",538.4,"CHC",306.1,-232.4,FALSE
+"119600","Westgate South",,2610,"PMR",356.8,"AKL",30.5,-326.4,FALSE
+"159100","Homai East",,4340,"PMR",335.7,"AKL",20.1,-315.6,FALSE
+"118000","Waitakere",,1980,"PMR",367.3,"AKL",40.9,-326.4,FALSE
+"136000","Eden Terrace",,3910,"PMR",345.6,"AKL",25.1,-320.4,FALSE
+"118800","Westgate Central",,40,"PMR",357.6,"AKL",31.3,-326.4,FALSE
+"159200","Homai West",,5810,"PMR",334.5,"AKL",19.5,-315,FALSE
+"119800","West Harbour West",,4540,"PMR",355.4,"AKL",29,-326.4,FALSE
+"137600","Sandringham West",,2170,"PMR",346.4,"AKL",20,-326.4,FALSE
+"137700","Mount Eden North East",,1190,"PMR",344.7,"AKL",25.6,-319.1,FALSE
+"120100","Birdwood West",,870,"PMR",361.6,"AKL",35.2,-326.4,FALSE
+"120700","West Harbour Luckens Point",,2610,"PMR",358,"AKL",31.6,-326.4,FALSE
+"120300","West Harbour Clearwater Cove",,4360,"PMR",359.6,"AKL",33.2,-326.4,FALSE
+"121100","Swanson Rural",,2420,"PMR",371.6,"AKL",45.2,-326.5,FALSE
+"121600","Royal Heights North",,4030,"PMR",355.7,"AKL",29.3,-326.4,FALSE
+"121700","Massey West",,1850,"PMR",358.5,"AKL",32.1,-326.4,FALSE
+"121800","Beach Haven West",,3360,"PMR",367.5,"AKL",47.5,-320,FALSE
+"122000","Swanson",,3080,"PMR",365.4,"AKL",38.9,-326.5,FALSE
+"122300","Royal Heights South",,4010,"PMR",355.5,"AKL",29.1,-326.4,FALSE
+"138800","Wesley South",,70,"PMR",344.1,"AKL",17.7,-326.4,FALSE
+"122400","Beach Haven East",,3950,"PMR",368.8,"AKL",48.8,-320,FALSE
+"122500","Massey East",,3830,"PMR",356.5,"AKL",30.1,-326.4,FALSE
+"122800","Birkdale North",,4230,"PMR",364.9,"AKL",45,-320,FALSE
+"122900","Massey South",,4920,"PMR",359.5,"AKL",33.1,-326.4,FALSE
+"149700","Bucklands Beach South",,4300,"PMR",352.9,"AKL",37.6,-315.3,FALSE
+"123200","Te Atatu Peninsula North West",,3620,"PMR",356.1,"AKL",29.7,-326.4,FALSE
+"123800","Ranui Domain",,3720,"PMR",360,"AKL",33.6,-326.4,FALSE
+"124200","Ranui South West",,2980,"PMR",363.7,"AKL",37.4,-326.4,FALSE
+"124300","Henderson Larnoch",,4410,"PMR",357,"AKL",30.7,-326.4,FALSE
+"123900","Beach Haven South",,3000,"PMR",365.3,"AKL",45.4,-320,FALSE
+"125700","Henderson Lincoln South",,2770,"PMR",358.4,"AKL",32,-326.4,FALSE
+"124100","Piha",,960,"PMR",383.6,"AKL",57.2,-326.4,FALSE
+"124400","Birkdale South",,4710,"PMR",363.7,"AKL",43.8,-320,FALSE
+"124500","Te Atatu Peninsula Central",,3760,"PMR",355.5,"AKL",29.2,-326.4,FALSE
+"125200","Birkenhead West",,4880,"PMR",361.9,"AKL",41.9,-320,FALSE
+"125800","Hillcrest West (Auckland)",,3320,"PMR",361,"AKL",41.1,-320,FALSE
+"124800","Te Atatu Peninsula West",,4050,"PMR",352.6,"AKL",26.2,-326.4,FALSE
+"124900","Henderson Lincoln West",,3570,"PMR",355.5,"AKL",29.1,-326.4,FALSE
+"125100","Henderson Lincoln East",,160,"PMR",354.4,"AKL",28.1,-326.4,FALSE
+"125300","Te Atatu Peninsula East",,2980,"PMR",354.4,"AKL",28,-326.4,FALSE
+"126100","Summerland North",,2740,"PMR",362.3,"AKL",35.9,-326.4,FALSE
+"126200","Hillcrest East (Auckland)",,3950,"PMR",359.6,"AKL",39.6,-320,FALSE
+"134000","Cheltenham",,1870,"PMR",367.6,"AKL",47.6,-320,FALSE
+"126300","Chatswood",,3380,"PMR",362,"AKL",42.1,-320,FALSE
+"126500","Birkenhead North",,2790,"PMR",358.4,"AKL",38.5,-320,FALSE
+"126600","Takapuna West",,4840,"PMR",357.3,"AKL",37.3,-320,FALSE
+"126700","Henderson North",,4290,"PMR",360.8,"AKL",34.4,-326.4,FALSE
+"126800","Takapuna Central",,2420,"PMR",359.5,"AKL",39.5,-320,FALSE
+"134200","Mount Albert Central",,3640,"PMR",348.9,"AKL",22.5,-326.4,FALSE
+"126900","Western Heights (Auckland)",,4720,"PMR",363.2,"AKL",36.8,-326.4,FALSE
+"127000","Te Atatu South-Central",,4560,"PMR",352.4,"AKL",26,-326.4,FALSE
+"127100","Northcote Central (Auckland)",,2870,"PMR",358.4,"AKL",38.4,-320,FALSE
+"127300","Northcote South (Auckland)",,2620,"PMR",357.4,"AKL",37.4,-320,FALSE
+"127400","Birkenhead South",,2990,"PMR",358.4,"AKL",38.5,-320,FALSE
+"134300","Karangahape",,2190,"PMR",347.1,"AKL",27,-320,FALSE
+"127500","Henderson Central",,1340,"PMR",363,"AKL",36.6,-326.4,FALSE
+"128500","Te Atatu South-McLeod South",,4000,"PMR",358.4,"AKL",32,-326.4,FALSE
+"127700","Te Atatu South-McLeod North",,3750,"PMR",358.3,"AKL",31.9,-326.4,FALSE
+"127800","Henderson Valley Park",,2110,"PMR",364.1,"AKL",37.8,-326.4,FALSE
+"152000","Howick Central",,3560,"PMR",352.1,"AKL",38.1,-314,FALSE
+"128100","Northcote Tuff Crater",,2190,"PMR",354.9,"AKL",34.9,-320,FALSE
+"128600","Takapuna South",,1370,"PMR",360.4,"AKL",40.4,-320,FALSE
+"139000","Mount Eden East",,2770,"PMR",346.3,"AKL",21.4,-324.8,FALSE
+"128200","Northcote Point (Auckland)",,3130,"PMR",356.4,"AKL",36.4,-320,FALSE
+"128300","McLaren Park",,4610,"PMR",363.9,"AKL",37.5,-326.4,FALSE
+"128400","Henderson East",,3070,"PMR",360.2,"AKL",33.9,-326.4,FALSE
+"128800","Hauraki",,3980,"PMR",360.4,"AKL",40.4,-320,FALSE
+"128900","Glendene North",,5000,"PMR",360.4,"AKL",34,-326.4,FALSE
+"134400","Kingsland",,3130,"PMR",348.2,"AKL",26.4,-321.9,FALSE
+"129100","Sunnyvale East",,5250,"PMR",361.5,"AKL",35.2,-326.4,FALSE
+"129400","Bayswater",,2660,"PMR",365.3,"AKL",45.3,-320,FALSE
+"129200","Point Chevalier West",,3950,"PMR",353.2,"AKL",26.8,-326.4,FALSE
+"131500","Glen Eden Central",,3860,"PMR",359.7,"AKL",33.3,-326.4,FALSE
+"129500","Glendene South",,2990,"PMR",360.6,"AKL",34.2,-326.4,FALSE
+"130500","Kelston North",,2890,"PMR",357.8,"AKL",31.4,-326.4,FALSE
+"129700","Herne Bay",,2910,"PMR",353.7,"AKL",30.2,-323.5,FALSE
+"129800","Westmere North",,2250,"PMR",352.4,"AKL",26.6,-325.7,FALSE
+"129900","Point Chevalier East",,4480,"PMR",351.9,"AKL",25.5,-326.4,FALSE
+"130100","Glen Eden Rosier",,3640,"PMR",364.9,"AKL",38.5,-326.4,FALSE
+"130200","Saint Marys Bay",,2060,"PMR",353.8,"AKL",33.7,-320,FALSE
+"130300","Westmere South-Western Springs",,2900,"PMR",351.9,"AKL",25.7,-326.1,FALSE
+"130400","Ponsonby West",,2160,"PMR",354.5,"AKL",30.6,-323.9,FALSE
+"131000","Kelston South",,2700,"PMR",358.1,"AKL",31.7,-326.4,FALSE
+"130600","Avondale Rosebank",,4540,"PMR",352.8,"AKL",26.4,-326.4,FALSE
+"131400","Stanley Point",,1880,"PMR",371.2,"AKL",51.3,-320,FALSE
+"130700","Narrow Neck",,4460,"PMR",365.2,"AKL",45.2,-320,FALSE
+"130800","Glen Eden North",,2750,"PMR",359.3,"AKL",32.9,-326.4,FALSE
+"130900","Glen Eden Woodglen",,4440,"PMR",363.2,"AKL",36.8,-326.4,FALSE
+"131100","Waterview",,3330,"PMR",352.3,"AKL",25.9,-326.4,FALSE
+"131200","Ponsonby East",,3210,"PMR",353,"AKL",29.4,-323.5,FALSE
+"131300","Wynyard-Viaduct",,1180,"PMR",350.7,"AKL",30.7,-320,FALSE
+"131700","Avondale West (Auckland)",,4130,"PMR",351.5,"AKL",25.1,-326.4,FALSE
+"131800","Freemans Bay",,4270,"PMR",348.2,"AKL",28.2,-320,FALSE
+"132600","New Lynn North West",,3450,"PMR",355.2,"AKL",28.9,-326.4,FALSE
+"132800","Grey Lynn Central",,3050,"PMR",349.4,"AKL",25.8,-323.6,FALSE
+"132900","Fruitvale",,3090,"PMR",356.7,"AKL",30.3,-326.4,FALSE
+"131900","Mount Albert West",,2660,"PMR",350,"AKL",23.6,-326.4,FALSE
+"133000","Devonport",,3130,"PMR",368.4,"AKL",48.5,-320,FALSE
+"134500","Anzac Avenue",,2580,"PMR",347.2,"AKL",28.4,-318.8,FALSE
+"132000","Avondale North (Auckland)",,4880,"PMR",350.7,"AKL",24.3,-326.4,FALSE
+"132100","Grey Lynn West",,3030,"PMR",350.3,"AKL",24.6,-325.7,FALSE
+"132200","Mount Albert North",,3940,"PMR",350.6,"AKL",24.2,-326.4,FALSE
+"133700","Shortland Street",,1670,"PMR",347.9,"AKL",29,-319,FALSE
+"132300","New Lynn North",,3510,"PMR",355.4,"AKL",29.1,-326.4,FALSE
+"132400","Victoria Park",,2910,"PMR",347.6,"AKL",27.6,-320,FALSE
+"132500","Konini",,3630,"PMR",363.6,"AKL",37.2,-326.4,FALSE
+"133100","Avondale Central (Auckland)",,3250,"PMR",348.5,"AKL",22.2,-326.4,FALSE
+"133200","Queen Street",,1990,"PMR",348.5,"AKL",28.5,-320,FALSE
+"133300","Quay Street-Customs Street",,2410,"PMR",349.7,"AKL",30.5,-319.1,FALSE
+"133400","Hobson Ridge Central",,3490,"PMR",346.4,"AKL",26.3,-320,FALSE
+"133900","New Lynn Central",,570,"PMR",352.4,"AKL",26.1,-326.4,FALSE
+"134800","Auckland-University",,120,"PMR",346.3,"AKL",27.6,-318.6,FALSE
+"134600","Waima-Woodlands Park",,2720,"PMR",364,"AKL",37.6,-326.4,FALSE
+"134700","Kaurilands",,3240,"PMR",361.2,"AKL",34.8,-326.4,FALSE
+"135000","Avondale South (Auckland)",,4640,"PMR",349.3,"AKL",23,-326.4,FALSE
+"135300","Symonds Street West",,2850,"PMR",345,"AKL",27.1,-317.9,FALSE
+"135400","West Lynn",,3260,"PMR",355.1,"AKL",28.8,-326.4,FALSE
+"139100","Wesley East",,2100,"PMR",344.6,"AKL",18.2,-326.4,FALSE
+"135500","Owairaka West",,3370,"PMR",346.3,"AKL",19.9,-326.4,FALSE
+"135600","New Lynn Central South",,2990,"PMR",352.6,"AKL",26.3,-326.4,FALSE
+"135700","The Strand",,1240,"PMR",345.4,"AKL",26.6,-318.8,FALSE
+"135800","St Lukes",,2180,"PMR",349.1,"AKL",22.7,-326.4,FALSE
+"140400","Mount Roskill Central North",,3480,"PMR",342.5,"AKL",16.1,-326.4,FALSE
+"136100","Grafton",,1520,"PMR",346.6,"AKL",28.3,-318.3,FALSE
+"136300","Sandringham North",,3840,"PMR",349.7,"AKL",23.3,-326.4,FALSE
+"136400","Parnell West",,3820,"PMR",347.9,"AKL",29.3,-318.6,FALSE
+"136500","New Lynn South",,4890,"PMR",352.5,"AKL",26.2,-326.4,FALSE
+"141200","Three Kings East",,1370,"PMR",343.9,"AKL",17.6,-326.4,FALSE
+"136600","New Windsor North",,3460,"PMR",346.9,"AKL",20.5,-326.4,FALSE
+"136900","Eden Valley",,2270,"PMR",349.3,"AKL",27.5,-321.8,FALSE
+"137000","Sandringham Central",,2360,"PMR",347.9,"AKL",21.5,-326.4,FALSE
+"137100","Glenavon",,3040,"PMR",347.6,"AKL",21.2,-326.4,FALSE
+"137200","Blockhouse Bay North",,4100,"PMR",349,"AKL",22.6,-326.4,FALSE
+"137400","Parnell East",,3040,"PMR",347.4,"AKL",30.8,-316.6,FALSE
+"137800","Mount Eden North",,3340,"PMR",346.3,"AKL",24.6,-321.7,FALSE
+"137900","Wesley West",,3450,"PMR",344.1,"AKL",17.8,-326.4,FALSE
+"138000","Green Bay South",,3050,"PMR",355.2,"AKL",28.9,-326.4,FALSE
+"138100","Balmoral",,3060,"PMR",349.1,"AKL",22.7,-326.4,FALSE
+"138200","Sandringham East",,3280,"PMR",346.2,"AKL",19.9,-326.4,FALSE
+"138300","New Windsor South",,4710,"PMR",344.3,"AKL",18,-326.4,FALSE
+"138400","Mount Eden West",,3090,"PMR",348.2,"AKL",23.4,-324.8,FALSE
+"138500","Newmarket",,3640,"PMR",343.9,"AKL",25.9,-318,FALSE
+"138600","Blockhouse Bay North East",,2290,"PMR",346.9,"AKL",20.5,-326.4,FALSE
+"138700","Epsom North",,3370,"PMR",344,"AKL",23.6,-320.3,FALSE
+"139200","Orakei West",,2810,"PMR",348.3,"AKL",32.4,-315.9,FALSE
+"139400","Remuera West",,2730,"PMR",343.5,"AKL",27.8,-315.7,FALSE
+"139500","Blockhouse Bay East",,2660,"PMR",347.7,"AKL",21.3,-326.4,FALSE
+"139600","Lynfield North",,3580,"PMR",348.8,"AKL",22.4,-326.4,FALSE
+"139700","Mount Roskill North",,4010,"PMR",344.4,"AKL",18,-326.4,FALSE
+"139800","Mount Roskill White Swan",,4750,"PMR",345.4,"AKL",19,-326.4,FALSE
+"139900","Mount Eden South",,3780,"PMR",346.2,"AKL",19.8,-326.4,FALSE
+"141300","Mount Roskill South",,3190,"PMR",345.5,"AKL",19.1,-326.4,FALSE
+"152100","Massey Road North",,3600,"PMR",338.3,"AKL",14.7,-323.6,FALSE
+"140000","Remuera Waitaramoa",,3850,"PMR",344,"AKL",25.9,-318.1,FALSE
+"140100","Orakei East",,2820,"PMR",349.5,"AKL",33.6,-315.9,FALSE
+"140300","Mount St John",,3440,"PMR",343.6,"AKL",23.6,-320,FALSE
+"215000","Marewa East",,3580,"PMR",136.4,"WLG",246.2,109.9,FALSE
+"140500","Remuera North",,3470,"PMR",344.9,"AKL",28.3,-316.5,FALSE
+"140600","Three Kings West",,2280,"PMR",344.5,"AKL",18.1,-326.4,FALSE
+"140800","Epsom Central-South",,3780,"PMR",344.6,"AKL",18.2,-326.4,FALSE
+"155900","Papatoetoe South West",,4210,"PMR",333.4,"AKL",13.2,-320.1,FALSE
+"140900","Lynfield South",,4590,"PMR",348.2,"AKL",21.9,-326.4,FALSE
+"141000","Remuera South",,3910,"PMR",341.3,"AKL",25.2,-316.1,FALSE
+"141100","Mission Bay",,4400,"PMR",351.1,"AKL",35.2,-315.9,FALSE
+"141800","Kohimarama",,4240,"PMR",352.7,"AKL",36.9,-315.9,FALSE
+"141900","Meadowbank West",,2780,"PMR",346.8,"AKL",31.5,-315.4,FALSE
+"142000","Hillsborough North (Auckland)",,3870,"PMR",341.5,"AKL",15.1,-326.4,FALSE
+"157700","Clover Park North",,5000,"PMR",332.9,"AKL",18.9,-314,FALSE
+"142200","Greenlane North",,4320,"PMR",340.9,"AKL",21.4,-319.5,FALSE
+"142300","Waikowhai North",,3440,"PMR",345.5,"AKL",19.1,-326.4,FALSE
+"142400","Remuera East",,2660,"PMR",345.2,"AKL",29.6,-315.7,FALSE
+"142800","One Tree Hill",,4700,"PMR",347.4,"AKL",21,-326.4,FALSE
+"142500","Waikowhai South",,2040,"PMR",348,"AKL",21.6,-326.4,FALSE
+"142600","Royal Oak West (Auckland)",,2620,"PMR",342.8,"AKL",16.4,-326.4,FALSE
+"142700","Saint Heliers West",,3470,"PMR",352.7,"AKL",37.3,-315.4,FALSE
+"142900","Hillsborough East (Auckland)",,2440,"PMR",341.1,"AKL",14.7,-326.4,FALSE
+"143000","Saint Heliers North",,3880,"PMR",354.8,"AKL",39.4,-315.4,FALSE
+"143100","Remuera Abbotts Park",,3710,"PMR",342.8,"AKL",26.9,-315.9,FALSE
+"143200","Meadowbank East",,2570,"PMR",348.8,"AKL",33.4,-315.4,FALSE
+"143800","Greenlane South",,4160,"PMR",341.9,"AKL",20.3,-321.6,FALSE
+"143500","Saint Heliers South",,3960,"PMR",351.4,"AKL",36,-315.4,FALSE
+"143600","Hillsborough South (Auckland)",,2720,"PMR",342,"AKL",15.6,-326.4,FALSE
+"143700","Saint Johns West",,3020,"PMR",348.3,"AKL",32.9,-315.4,FALSE
+"143900","Remuera Waiatarua",,2360,"PMR",344.2,"AKL",28.8,-315.4,FALSE
+"144000","Glendowie North",,4290,"PMR",355.7,"AKL",40.3,-315.4,FALSE
+"144100","Onehunga West",,3930,"PMR",340.8,"AKL",14.4,-326.4,FALSE
+"157800","Mission Heights North",,3580,"PMR",340.6,"AKL",26.5,-314,FALSE
+"144200","Ellerslie West",,180,"PMR",340.7,"AKL",21,-319.7,FALSE
+"144300","Onehunga North",,3930,"PMR",343.1,"AKL",16.7,-326.4,FALSE
+"144400","Ellerslie East",,3140,"PMR",341.8,"AKL",26.3,-315.5,FALSE
+"144500","Saint Johns East",,2940,"PMR",348.9,"AKL",33.5,-315.4,FALSE
+"144700","Glen Innes West",,4830,"PMR",349.8,"AKL",35.7,-314.1,FALSE
+"144800","Ellerslie South",,2580,"PMR",338.6,"AKL",23,-315.5,FALSE
+"144900","Stonefields West",,2130,"PMR",347.9,"AKL",33.5,-314.4,FALSE
+"145000","Onehunga Central",,3400,"PMR",341.4,"AKL",15.1,-326.4,FALSE
+"145100","Glendowie South",,4570,"PMR",351.9,"AKL",37.8,-314.1,FALSE
+"145200","Oranga",,3160,"PMR",342.4,"AKL",18.4,-324,FALSE
+"145300","Mount Wellington North West",,3260,"PMR",342.3,"AKL",26.8,-315.5,FALSE
+"145400","Panmure Glen Innes Industrial",,370,"PMR",349.1,"AKL",35,-314,FALSE
+"145500","Onehunga-Te Papapa Industrial",,1200,"PMR",343,"AKL",16.7,-326.4,FALSE
+"145600","Te Papapa",,3350,"PMR",342.5,"AKL",16.2,-326.4,FALSE
+"145800","Glen Innes East-Wai O Taiki Bay",,4180,"PMR",351.2,"AKL",37.1,-314.1,FALSE
+"145900","Penrose",,940,"PMR",342.6,"AKL",20.5,-322.1,FALSE
+"146000","Mount Wellington North East",,2110,"PMR",343.6,"AKL",29.5,-314,FALSE
+"146200","Mount Wellington Ferndale",,4450,"PMR",342.1,"AKL",26.6,-315.5,FALSE
+"146300","Point England",,5100,"PMR",348,"AKL",33.9,-314.1,FALSE
+"146400","Bucklands Beach North",,2930,"PMR",358.3,"AKL",41.4,-316.8,FALSE
+"146500","Mount Wellington East",,2930,"PMR",341.5,"AKL",27.5,-314,FALSE
+"146600","Mount Wellington West",,3160,"PMR",339.6,"AKL",25.6,-314.1,FALSE
+"146700","Panmure West",,280,"PMR",342.1,"AKL",28,-314,FALSE
+"146800","Mangere Bridge",,3290,"PMR",339.9,"AKL",15.4,-324.5,FALSE
+"147000","Tamaki",,4620,"PMR",345.2,"AKL",31.2,-314.1,FALSE
+"147100","Panmure East",,3630,"PMR",344.7,"AKL",30.6,-314.1,FALSE
+"147200","Mount Wellington Central",,5170,"PMR",338.7,"AKL",24.7,-314,FALSE
+"147700","Mount Wellington Industrial",,30,"PMR",337.2,"AKL",23.2,-314,FALSE
+"148600","Favona West",,3610,"PMR",337.7,"AKL",14.3,-323.4,FALSE
+"147800","Half Moon Bay West",,2810,"PMR",353.2,"AKL",36.4,-316.8,FALSE
+"148400","Farm Cove",,2580,"PMR",350.6,"AKL",33.7,-316.8,FALSE
+"148100","Sunnyhills West-Pakuranga North",,3450,"PMR",348.6,"AKL",31.8,-316.8,FALSE
+"148500","Mangere North",,2910,"PMR",337.5,"AKL",13.1,-324.5,FALSE
+"148200","Favona North",,3030,"PMR",338.3,"AKL",14.9,-323.4,FALSE
+"148300","Bucklands Beach Central",,1910,"PMR",354.6,"AKL",37.8,-316.8,FALSE
+"149100","Mount Wellington South West",,2690,"PMR",339.3,"AKL",23.3,-316.1,FALSE
+"149300","Half Moon Bay South East",,3180,"PMR",351.4,"AKL",34.5,-316.8,FALSE
+"149400","Favona East",,4150,"PMR",338.8,"AKL",15.2,-323.6,FALSE
+"149800","Pakuranga Central",,3620,"PMR",348.4,"AKL",31.6,-316.8,FALSE
+"157900","Clover Park South",,4570,"PMR",331.9,"AKL",17.8,-314,FALSE
+"149500","Mount Wellington South East",,3060,"PMR",342.2,"AKL",26.3,-315.9,FALSE
+"149600","Otahuhu Industrial",,90,"PMR",340.9,"AKL",18.9,-321.9,FALSE
+"150000","Harania North",,4130,"PMR",337.8,"AKL",14.2,-323.6,FALSE
+"150100","Otahuhu Central",,1730,"PMR",337.9,"AKL",19.8,-318.1,FALSE
+"150200","Mangere Central",,3990,"PMR",338,"AKL",11.8,-326.2,FALSE
+"150300","Otahuhu North",,4470,"PMR",336.5,"AKL",22.5,-314,FALSE
+"150400","Howick West",,4130,"PMR",353.3,"AKL",38.4,-314.9,FALSE
+"150500","Pakuranga Heights North West",,2860,"PMR",347.4,"AKL",31,-316.4,FALSE
+"151300","Highland Park (Auckland)",,4590,"PMR",349.4,"AKL",35.4,-314,FALSE
+"158000","Donegal Park",,3900,"PMR",334.8,"AKL",20.8,-314,FALSE
+"150700","Pakuranga Heights East",,3170,"PMR",349.9,"AKL",33.5,-316.5,FALSE
+"152200","Botany Downs West",,2840,"PMR",350.1,"AKL",36,-314,FALSE
+"150900","Otahuhu East",,2670,"PMR",334.7,"AKL",20.7,-314,FALSE
+"151100","Onetangi",,1340,"PMR",435.7,"AKL",118.9,-316.8,FALSE
+"151200","Harania South",,3810,"PMR",336.1,"AKL",12.5,-323.6,FALSE
+"151400","Otahuhu South West",,4200,"PMR",339.2,"AKL",17.5,-321.7,FALSE
+"151900","Otahuhu South",,4010,"PMR",337.5,"AKL",20.2,-317.2,FALSE
+"158100","Ormiston South",,7280,"PMR",337.1,"AKL",23,-314,FALSE
+"151500","Pakuranga Heights South West",,3620,"PMR",345.6,"AKL",31.6,-314.1,FALSE
+"151600","Mangere Mascot",,3990,"PMR",336.7,"AKL",12.4,-324.3,FALSE
+"151800","Massey Road West",,4070,"PMR",336.3,"AKL",12.7,-323.6,FALSE
+"152400","Howick East",,3770,"PMR",351.5,"AKL",37.4,-314,FALSE
+"152500","Burswood",,1790,"PMR",344.7,"AKL",30.6,-314,FALSE
+"152800","Mangere South East",,4090,"PMR",338.1,"AKL",13.4,-324.8,FALSE
+"152900","Botany Downs East",,2350,"PMR",349.7,"AKL",35.7,-314,FALSE
+"153000","Grange",,2640,"PMR",335.7,"AKL",21.7,-314,FALSE
+"153600","Aorere Central",,2260,"PMR",336.5,"AKL",12.9,-323.6,FALSE
+"153100","Golflands",,2500,"PMR",344.9,"AKL",30.9,-314,FALSE
+"153300","Mangere East",,4490,"PMR",337.6,"AKL",14,-323.6,FALSE
+"153700","Northpark North",,2930,"PMR",346.5,"AKL",32.5,-314,FALSE
+"158200","Mission Heights South",,3410,"PMR",339,"AKL",25,-314,FALSE
+"153400","Cockle Bay",,4250,"PMR",351.8,"AKL",37.7,-314,FALSE
+"153500","Otara West",,3550,"PMR",334.6,"AKL",20.5,-314,FALSE
+"153800","Somerville",,4500,"PMR",348.5,"AKL",34.5,-314,FALSE
+"153900","Northpark South",,2200,"PMR",346.6,"AKL",32.5,-314,FALSE
+"154000","Papatoetoe North",,5550,"PMR",336.5,"AKL",18,-318.5,FALSE
+"154200","Aorere South",,5340,"PMR",335.9,"AKL",14,-321.9,FALSE
+"154600","Botany Central",,10,"PMR",343.1,"AKL",29,-314,FALSE
+"154700","Botany North",,2590,"PMR",345.6,"AKL",31.6,-314,FALSE
+"154300","Shelly Park",,2880,"PMR",351.4,"AKL",37.3,-314,FALSE
+"154400","Otara Central",,2880,"PMR",334.8,"AKL",20.8,-314,FALSE
+"154500","Huntington Park",,1860,"PMR",342.4,"AKL",28.3,-314,FALSE
+"154800","Papatoetoe West",,5420,"PMR",336.8,"AKL",16.7,-320.1,FALSE
+"154900","Papatoetoe Central",,5820,"PMR",336.2,"AKL",18.2,-318,FALSE
+"155000","Sunkist Bay",,3400,"PMR",358.5,"AKL",44.5,-314,FALSE
+"155800","Ferguson",,4630,"PMR",334.9,"AKL",20.9,-314,FALSE
+"155100","Otara East",,4270,"PMR",337.9,"AKL",23.9,-314,FALSE
+"155300","Botany East",,1940,"PMR",343.9,"AKL",29.8,-314,FALSE
+"155400","Botany South",,2930,"PMR",341.9,"AKL",27.9,-314,FALSE
+"155500","Manukau Central",,1040,"PMR",335.9,"AKL",9.4,-326.5,FALSE
+"155600","Papatoetoe East",,4960,"PMR",335.1,"AKL",20.4,-314.7,FALSE
+"155700","Otara South",,4050,"PMR",334.9,"AKL",20.9,-314,FALSE
+"156000","Botany Junction",,200,"PMR",338.4,"AKL",24.4,-314,FALSE
+"156100","Dannemora North",,2470,"PMR",340.5,"AKL",26.4,-314,FALSE
+"156200","Papatoetoe South",,4570,"PMR",335.6,"AKL",19.2,-316.4,FALSE
+"156300","East Tamaki Heights",,2930,"PMR",343.4,"AKL",29.4,-314,FALSE
+"156500","Puhinui North",,4270,"PMR",335.5,"AKL",18.2,-317.3,FALSE
+"156600","Dannemora South",,2780,"PMR",339.3,"AKL",25.3,-314,FALSE
+"156900","Baverstock",,4240,"PMR",340.6,"AKL",26.6,-314,FALSE
+"157000","Puhinui East",,2950,"PMR",334.5,"AKL",19.6,-314.9,FALSE
+"157200","Rongomai East",,2380,"PMR",335.5,"AKL",21.4,-314,FALSE
+"157300","Ormiston North",,2740,"PMR",338.8,"AKL",24.7,-314,FALSE
+"158300","Hilltop (Auckland)",,4040,"PMR",334.6,"AKL",20.6,-314,FALSE
+"158500","Goodwood Heights",,4810,"PMR",331.1,"AKL",17.1,-314,FALSE
+"158600","Ormiston East",,3750,"PMR",339,"AKL",24.9,-314,FALSE
+"160400","Alfriston",,4190,"PMR",336.2,"AKL",24,-312.2,FALSE
+"157400","Maraetai",,2610,"PMR",360.5,"AKL",47.8,-312.7,FALSE
+"158700","Clendon Park North",,3620,"PMR",339,"AKL",21,-318,FALSE
+"158800","Burbank",,4390,"PMR",336.5,"AKL",19.5,-316.9,FALSE
+"158900","Tuscany Heights",,1720,"PMR",340.1,"AKL",26,-314,FALSE
+"159000","Totara Heights",,3190,"PMR",333.4,"AKL",19.4,-314,FALSE
+"159300","The Gardens (Auckland)",,4250,"PMR",336.9,"AKL",22.4,-314.6,FALSE
+"159400","Clarks Beach",,1650,"PMR",344.1,"AKL",45,-299.1,FALSE
+"159500","Clendon Park West",,3530,"PMR",339.2,"AKL",23.7,-315.5,FALSE
+"159600","Hillpark North",,2680,"PMR",335.2,"AKL",18.7,-316.5,FALSE
+"159700","Clendon Park East",,2480,"PMR",336.8,"AKL",21.8,-315,FALSE
+"159900","Rowandale West",,3860,"PMR",336.7,"AKL",21.8,-314.9,FALSE
+"160000","Rowandale East",,4330,"PMR",334.9,"AKL",21.5,-313.4,FALSE
+"160100","Manurewa Central",,4150,"PMR",332,"AKL",19.7,-312.3,FALSE
+"160500","Weymouth East",,4350,"PMR",335.1,"AKL",24.5,-310.7,FALSE
+"161200","Wattle Downs North",,2730,"PMR",331.5,"AKL",23.8,-307.7,FALSE
+"161300","Randwick Park West",,3980,"PMR",332.1,"AKL",23.1,-309,FALSE
+"160700","Weymouth South",,3930,"PMR",339.1,"AKL",26.5,-312.5,FALSE
+"160900","Manurewa South",,4630,"PMR",330.7,"AKL",23,-307.7,FALSE
+"162100","Takanini South",,7620,"PMR",333.6,"AKL",29.7,-303.9,FALSE
+"161100","Wattle Downs West",,4120,"PMR",335.6,"AKL",27.9,-307.7,FALSE
+"161500","Wattle Downs East",,2380,"PMR",333.6,"AKL",25.8,-307.7,FALSE
+"161600","Takanini North",,2920,"PMR",329.9,"AKL",23.8,-306.2,FALSE
+"161700","Takanini Industrial",,50,"PMR",327.4,"AKL",21.2,-306.2,FALSE
+"163100","Pahurehure",,3660,"PMR",324.4,"AKL",23.8,-300.6,FALSE
+"161800","Conifer Grove West",,3080,"PMR",330.4,"AKL",22.7,-307.7,FALSE
+"161900","Conifer Grove East",,2510,"PMR",327.6,"AKL",21.5,-306.1,FALSE
+"162000","Takanini West",,3450,"PMR",328.9,"AKL",22.5,-306.4,FALSE
+"162200","Takanini Central",,1270,"PMR",329.5,"AKL",25.5,-304,FALSE
+"162600","Takanini South East",,3730,"PMR",332.7,"AKL",28.4,-304.3,FALSE
+"163200","Papakura Central",,3910,"PMR",325.6,"AKL",25.1,-300.6,FALSE
+"162900","Clevedon",,1660,"PMR",342.8,"AKL",37.3,-305.4,FALSE
+"163000","Papakura North",,5150,"PMR",329.1,"AKL",28.4,-300.7,FALSE
+"163300","Papakura North East",,4300,"PMR",331.7,"AKL",30.2,-301.5,FALSE
+"163900","Papakura East",,3640,"PMR",336.7,"AKL",33,-303.7,FALSE
+"164100","Papakura Industrial",,330,"PMR",329.8,"AKL",29.3,-300.6,FALSE
+"164200","Red Hill",,3390,"PMR",332,"AKL",31.4,-300.6,FALSE
+"164700","Waiuku Central",,1410,"PMR",349.7,"AKL",59.5,-290.2,FALSE
+"164400","Tamakae",,2620,"PMR",350.1,"AKL",59.8,-290.2,FALSE
+"164900","Kendallvale",,1120,"PMR",346.2,"AKL",58.1,-288.1,FALSE
+"215100","Onekawa South",,3370,"PMR",133.7,"WLG",243.6,109.9,FALSE
+"164500","Hamilton Estate",,2660,"PMR",346.8,"AKL",56.5,-290.2,FALSE
+"216200","Port Taranaki",,10,"PMR",196.4,"AKL",268.6,72.2,FALSE
+"165000","Puni",,1860,"PMR",333.8,"AKL",48.2,-285.6,FALSE
+"165300","Pukekohe North West",,5080,"PMR",327.2,"AKL",41,-286.2,FALSE
+"165100","Ramarama",,2640,"PMR",324.8,"AKL",34.1,-290.7,FALSE
+"165400","Anselmi Ridge",,2750,"PMR",324.2,"AKL",41.2,-283,FALSE
+"165500","Pukekohe West",,6680,"PMR",326.5,"AKL",43.5,-283,FALSE
+"165600","Cape Hill",,1670,"PMR",324.3,"AKL",40.5,-283.8,FALSE
+"165700","Rosa Birch Park",,2180,"PMR",325.9,"AKL",42.8,-283,FALSE
+"166000","Pukekohe Central",,430,"PMR",326.7,"AKL",43.6,-283,FALSE
+"166100","Pukekohe Hospital",,1770,"PMR",327.4,"AKL",44.3,-283,FALSE
+"166300","Bombay Hills",,2170,"PMR",318.3,"AKL",37,-281.4,FALSE
+"166400","Ararimu",,2300,"PMR",331.4,"AKL",45.8,-285.6,FALSE
+"166600","Islands Thames-Coromandel District",,10,"PMR",364.4,"AKL",102.8,-261.7,TRUE
+"167000","Whitianga North",,1840,"PMR",377.7,"AKL",143.3,-234.4,FALSE
+"176800","Crawshaw",,3560,"PMR",284.3,"AKL",79.8,-204.4,FALSE
+"167100","Whitianga South",,4730,"PMR",373.2,"AKL",138.8,-234.4,FALSE
+"169400","Waihi North",,1860,"PMR",316.8,"AKL",108.6,-208.2,FALSE
+"167600","Thames North",,2060,"PMR",324.9,"AKL",90.5,-234.4,FALSE
+"170300","Tuakau South",,2300,"PMR",320.2,"AKL",44.2,-276,FALSE
+"170700","Maramarua",,2160,"PMR",322.1,"AKL",63.8,-258.4,FALSE
+"170900","Te Akau",,2230,"PMR",321.7,"AKL",88.4,-233.3,FALSE
+"167700","Thames Central",,1120,"PMR",322.4,"AKL",87.9,-234.4,FALSE
+"167800","Thames South",,3560,"PMR",323,"AKL",88.6,-234.4,FALSE
+"168000","Totora-Kopu",,960,"PMR",315.7,"AKL",81.2,-234.4,FALSE
+"168700","Hauraki Plains North",,1320,"PMR",306.9,"AKL",63.1,-243.8,FALSE
+"168800","Hauraki Plains East",,1510,"PMR",311.9,"AKL",76.9,-235,FALSE
+"168900","Ngatea",,1630,"PMR",309,"AKL",69,-240,FALSE
+"169000","Hauraki Plains South",,1760,"PMR",307.1,"AKL",80,-227.1,FALSE
+"169100","Paeroa Rural",,2060,"PMR",304,"AKL",81.9,-222.1,FALSE
+"171100","Te Kauwhata",,1880,"PMR",298.7,"AKL",55.3,-243.4,FALSE
+"171200","Huntly Rural",,2510,"PMR",297,"AKL",69.6,-227.4,FALSE
+"171300","Waerenga",,1010,"PMR",301,"AKL",63.3,-237.7,FALSE
+"169500","Waihi East",,1530,"PMR",318.2,"AKL",111.2,-207,FALSE
+"172100","Ngaruawahia Central",,3590,"PMR",287.4,"AKL",80.2,-207.2,FALSE
+"169600","Waihi South",,2540,"PMR",316.4,"AKL",108.2,-208.2,FALSE
+"170000","Tuakau North",,3790,"PMR",322.8,"AKL",43.1,-279.6,FALSE
+"177400","Forest Lake (Hamilton City)",,2690,"PMR",280,"AKL",84,-196,FALSE
+"171400","Huntly West",,3560,"PMR",291,"AKL",66.2,-224.8,FALSE
+"171500","Huntly East",,5590,"PMR",296.3,"AKL",71.5,-224.8,FALSE
+"171900","Taupiri-Lake Kainui",,2250,"PMR",288.3,"AKL",80.9,-207.4,FALSE
+"178500","Fairview Downs",,3580,"PMR",273.2,"AKL",82.3,-190.9,FALSE
+"172200","Ngaruawahia South",,2210,"PMR",288.9,"AKL",81.8,-207.2,FALSE
+"172400","Te Kowhai",,2380,"PMR",287.6,"AKL",82.5,-205.1,FALSE
+"179000","Kirikiriroa",,730,"PMR",277.4,"AKL",86.2,-191.3,FALSE
+"172500","Whatawhata West",,650,"PMR",283.7,"AKL",93.5,-190.2,FALSE
+"176700","St James",,2140,"PMR",274.2,"AKL",81.7,-192.6,FALSE
+"172700","Horsham Downs",,820,"PMR",273.6,"AKL",75.1,-198.4,FALSE
+"173100","Eureka-Tauwhare",,2460,"PMR",268.8,"AKL",85.4,-183.3,FALSE
+"172800","Whatawhata East",,3320,"PMR",276.1,"AKL",85.7,-190.4,FALSE
+"176000","Pukete East",,2500,"PMR",280.5,"AKL",80,-200.5,FALSE
+"173000","Hamilton Park",,1840,"PMR",274,"AKL",89.8,-184.2,FALSE
+"176100","Te Manatu",,4240,"PMR",275.2,"AKL",79.4,-195.8,FALSE
+"173300","Pukemoremore",,2670,"PMR",265,"AKL",89.8,-175.2,FALSE
+"173400","Tamahere South",,2290,"PMR",264.4,"AKL",86.5,-177.9,FALSE
+"173800","Tahuroa",,2000,"PMR",278.8,"AKL",95.5,-183.3,FALSE
+"173900","Morrinsville East",,5450,"PMR",281.8,"AKL",96.9,-184.9,FALSE
+"174000","Morrinsville West",,3180,"PMR",281,"AKL",95.8,-185.2,FALSE
+"174100","Te Aroha East",,2650,"PMR",281.4,"AKL",99.1,-182.3,FALSE
+"174200","Te Aroha West",,2130,"PMR",278.8,"AKL",96.4,-182.4,FALSE
+"174300","Waihou-Manawaru",,1250,"PMR",269.2,"AKL",107.7,-161.5,FALSE
+"174400","Waitoa-Ngarua",,1260,"PMR",283.2,"AKL",109.4,-173.8,FALSE
+"174500","Richmond Downs-Wardville",,1360,"PMR",262.3,"AKL",117.6,-144.7,FALSE
+"174600","Waharoa-Peria",,1680,"PMR",259.9,"AKL",114.7,-145.2,FALSE
+"174700","Okauia",,1110,"PMR",258.3,"AKL",119.3,-139,FALSE
+"174800","Hinuera",,1280,"PMR",244.3,"AKL",109.2,-135.1,FALSE
+"174900","Matamata North",,3460,"PMR",253.3,"AKL",115,-138.3,FALSE
+"175000","Matamata South",,5350,"PMR",252.1,"AKL",114.4,-137.7,FALSE
+"175100","Te Poi",,890,"PMR",246.7,"AKL",120.3,-126.5,FALSE
+"175200","Te Rapa North",,200,"PMR",281.2,"AKL",76.1,-205.1,FALSE
+"175300","Flagstaff North",,4710,"PMR",276.3,"AKL",76.8,-199.5,FALSE
+"175400","Rotokauri-Waiwhakareke",,890,"PMR",286.8,"AKL",81.7,-205.1,FALSE
+"176600","Queenwood (Hamilton City)",,2560,"PMR",275.4,"AKL",80.4,-195,FALSE
+"175500","Flagstaff South",,3730,"PMR",277.3,"AKL",77.8,-199.5,FALSE
+"175600","Rototuna North",,2350,"PMR",277.4,"AKL",77.9,-199.5,FALSE
+"175700","Pukete West",,2410,"PMR",281.5,"AKL",79.4,-202,FALSE
+"175800","Flagstaff East",,4040,"PMR",276.7,"AKL",77.2,-199.5,FALSE
+"175900","Rototuna Central",,5100,"PMR",276.2,"AKL",76.7,-199.5,FALSE
+"176200","Rototuna South",,4680,"PMR",275.5,"AKL",78.8,-196.7,FALSE
+"176300","Te Rapa South",,200,"PMR",283.8,"AKL",79.4,-204.3,FALSE
+"176400","Saint Andrews West",,3000,"PMR",282.5,"AKL",83.3,-199.2,FALSE
+"176500","Saint Andrews East",,2550,"PMR",281.6,"AKL",83.8,-197.8,FALSE
+"176900","Huntington",,2690,"PMR",272.1,"AKL",80.9,-191.2,FALSE
+"177000","Western Heights (Hamilton City)",,3200,"PMR",284.6,"AKL",83.5,-201.1,FALSE
+"177100","Nawton West",,3860,"PMR",285.1,"AKL",82.6,-202.5,FALSE
+"177200","Nawton East",,4540,"PMR",282.9,"AKL",81.2,-201.7,FALSE
+"177500","Chedworth",,1930,"PMR",273,"AKL",82,-190.9,FALSE
+"177600","Beerescourt",,2420,"PMR",279.1,"AKL",84.6,-194.4,FALSE
+"177800","Porritt",,2900,"PMR",272.2,"AKL",81.3,-190.9,FALSE
+"177900","Dinsdale North",,4650,"PMR",282.6,"AKL",83.6,-199,FALSE
+"178000","Maeroa",,4100,"PMR",279.1,"AKL",83.8,-195.3,FALSE
+"178200","Fairfield (Hamilton City)",,4790,"PMR",275.5,"AKL",84.6,-190.9,FALSE
+"178300","Whitiora",,2980,"PMR",277.3,"AKL",85.8,-191.5,FALSE
+"178700","Swarbrick",,2810,"PMR",280.8,"AKL",84.5,-196.4,FALSE
+"178800","Kahikatea",,3820,"PMR",281.5,"AKL",86.2,-195.3,FALSE
+"178900","Frankton Junction",,860,"PMR",279.5,"AKL",85.3,-194.3,FALSE
+"179100","Enderley South",,3000,"PMR",272.8,"AKL",83.1,-189.8,FALSE
+"179200","Ruakura",,2370,"PMR",268.6,"AKL",82.5,-186.1,FALSE
+"230500","Papaioea North",,2710,"PMR",6.3,"WLG",124.1,117.8,FALSE
+"183800","Leamington Central",,2590,"PMR",255.9,"AKL",99.6,-156.2,FALSE
+"179300","Claudelands",,3240,"PMR",273.8,"AKL",86.6,-187.2,FALSE
+"179400","Hamilton Central",,900,"PMR",275.2,"AKL",87.6,-187.6,FALSE
+"179500","Hamilton Lake",,3840,"PMR",279,"AKL",87.7,-191.3,FALSE
+"179600","Peachgrove",,3840,"PMR",271.1,"AKL",85,-186.1,FALSE
+"186600","Strathmore (South Waikato District)",,2570,"PMR",214.9,"AKL",135.2,-79.8,FALSE
+"179700","Hamilton East Village",,3600,"PMR",272.4,"AKL",87.2,-185.2,FALSE
+"179800","Hamilton West",,1860,"PMR",277.3,"AKL",89.5,-187.7,FALSE
+"179900","Greensboro",,4750,"PMR",269.8,"AKL",83.7,-186.1,FALSE
+"180000","Hamilton East Cook",,2250,"PMR",271.3,"AKL",86,-185.2,FALSE
+"180100","Melville North",,3280,"PMR",275.9,"AKL",89.7,-186.1,FALSE
+"180200","Hamilton East",,4190,"PMR",271.2,"AKL",87.4,-183.8,FALSE
+"180300","Melville South",,2760,"PMR",276.3,"AKL",91.8,-184.5,FALSE
+"180500","Bader",,2870,"PMR",274.6,"AKL",91.4,-183.2,FALSE
+"180800","Silverdale (Hamilton City)",,2350,"PMR",268.6,"AKL",83,-185.7,FALSE
+"180900","Glenview",,2610,"PMR",273.4,"AKL",93.4,-180,FALSE
+"231200","West End",,3090,"PMR",11.7,"WLG",120.2,108.6,FALSE
+"181200","Riverlea",,2890,"PMR",266.8,"AKL",87.9,-178.9,FALSE
+"182700","Cambridge West",,2810,"PMR",258,"AKL",93.8,-164.2,FALSE
+"183900","Leamington East",,2100,"PMR",255.5,"AKL",98.8,-156.7,FALSE
+"231300","Awapuni South",,3480,"PMR",13.6,"WLG",119.1,105.5,FALSE
+"181300","Peacockes",,400,"PMR",273.8,"AKL",93.1,-180.8,FALSE
+"181500","Ngahinapouri",,1900,"PMR",272.3,"AKL",99.8,-172.5,FALSE
+"181700","Lake Ngaroto",,1320,"PMR",263.5,"AKL",97.4,-166.1,FALSE
+"181800","Kaipaki",,1840,"PMR",263.5,"AKL",92.3,-171.2,FALSE
+"182900","Cambridge Park-River Garden",,1580,"PMR",255.3,"AKL",97.5,-157.8,FALSE
+"184000","Te Awamutu Stadium",,1860,"PMR",251,"AKL",104.5,-146.5,FALSE
+"181900","Pirongia",,1360,"PMR",262.8,"AKL",104.9,-157.9,FALSE
+"182200","Te Rahu",,1320,"PMR",260.8,"AKL",95.3,-165.5,FALSE
+"182300","Fencourt",,800,"PMR",261.7,"AKL",96.4,-165.2,FALSE
+"199200","Pukehangi South",,2620,"PMR",239.5,"AKL",156.3,-83.2,FALSE
+"183000","Oaklands-St Kilda",,1890,"PMR",259.5,"AKL",98.4,-161.1,FALSE
+"194100","Te Reti",,2020,"PMR",273.3,"AKL",149.7,-123.6,FALSE
+"182500","Karapiro",,2660,"PMR",256.9,"AKL",105.7,-151.2,FALSE
+"185200","Pirongia Forest",,1030,"PMR",272.8,"AKL",134,-138.7,FALSE
+"183200","Cambridge Central",,940,"PMR",253.6,"AKL",94.8,-158.8,FALSE
+"189100","Hilltop (Taupo District)",,2800,"PMR",181.5,"AKL",180.4,-1.1,FALSE
+"183600","Goodfellow Park",,1890,"PMR",253.4,"AKL",102.7,-150.7,FALSE
+"183700","Leamington South",,1860,"PMR",255.2,"AKL",99.7,-155.5,FALSE
+"183300","Te Awamutu North",,1260,"PMR",254.2,"AKL",101,-153.2,FALSE
+"183400","Te Awamutu West",,1400,"PMR",255.2,"AKL",106.2,-149,FALSE
+"183500","Leamington West",,1620,"PMR",255.4,"AKL",97.1,-158.3,FALSE
+"202900","Allandale",,2730,"PMR",318.7,"AKL",215.9,-102.9,FALSE
+"184200","Pekerau",,2770,"PMR",250.3,"AKL",104,-146.3,FALSE
+"184300","Fraser Street",,1490,"PMR",249.7,"AKL",105.5,-144.2,FALSE
+"188700","Tauhara",,1950,"PMR",186.5,"AKL",180.7,-5.8,FALSE
+"184500","St Leger",,550,"PMR",253.3,"AKL",112.8,-140.5,FALSE
+"184900","Maungatautari",,940,"PMR",253.8,"AKL",106.6,-147.2,FALSE
+"185000","Rotongata",,890,"PMR",248.4,"AKL",129.7,-118.7,FALSE
+"185500","Otorohanga",,3280,"PMR",244.3,"AKL",125.3,-119,FALSE
+"186300","Parkdale",,910,"PMR",219.8,"AKL",134.4,-85.4,FALSE
+"186000","Putararu",,4730,"PMR",229.3,"AKL",122.7,-106.6,FALSE
+"186500","Stanley Park",,2410,"PMR",215.7,"AKL",134.7,-81,FALSE
+"188900","Mountview",,2840,"PMR",181.7,"AKL",178.8,-2.9,FALSE
+"186700","Tokoroa Central",,1140,"PMR",216.3,"AKL",136.7,-79.6,FALSE
+"186800","Moananui",,3260,"PMR",215,"AKL",135.2,-79.8,FALSE
+"206000","Elgin",,2820,"PMR",283.4,"AKL",350.5,67.1,FALSE
+"187300","Te Kuiti West",,2630,"PMR",228,"AKL",141.7,-86.3,FALSE
+"187400","Te Kuiti East",,2050,"PMR",229.5,"AKL",145.2,-84.3,FALSE
+"189000","Bird Area",,2380,"PMR",181.6,"AKL",180.7,-1,FALSE
+"188300","Acacia Bay",,1860,"PMR",194.9,"AKL",180.8,-14.1,FALSE
+"214000","Greenmeadows Central",,1550,"PMR",131.6,"WLG",241.5,109.9,FALSE
+"188400","Brentwood (Taupo District)",,2240,"PMR",190.6,"AKL",180,-10.7,FALSE
+"231400","Milverton",,2100,"PMR",10.5,"WLG",121.9,111.4,FALSE
+"188500","Nukuhau-Rangatira Park",,2820,"PMR",189.4,"AKL",177.7,-11.7,FALSE
+"188600","Taupo Central West",,420,"PMR",184.8,"AKL",178.5,-6.3,FALSE
+"206200","Mangapapa East",,1320,"PMR",288.2,"AKL",352.8,64.5,FALSE
+"189200","Waipahihi",,2370,"PMR",179.8,"AKL",180.3,0.5,FALSE
+"194200","Bethlehem South",,1180,"PMR",266.9,"AKL",143.3,-123.6,FALSE
+"189300","Richmond Heights",,2510,"PMR",178.2,"AKL",182.1,3.9,FALSE
+"191900","Te Puke West",,4470,"PMR",292.1,"AKL",169.3,-122.8,FALSE
+"194300","Omanu Beach",,3210,"PMR",282.4,"AKL",158.8,-123.6,FALSE
+"225200","Gonville West",,1850,"PMR",60,"WLG",164.9,104.8,FALSE
+"189400","Wharewaka",,1540,"PMR",179,"AKL",186.7,7.7,FALSE
+"192100","Te Puke East",,5970,"PMR",289,"AKL",168.9,-120,FALSE
+"206300","Mangapapa South",,2100,"PMR",285.6,"AKL",351.6,66,FALSE
+"189600","Waitahanui",,860,"PMR",192.4,"AKL",193.2,0.8,FALSE
+"189700","Turangi",,3780,"PMR",135.2,"AKL",209.7,74.5,FALSE
+"189800","Rangataiki",,140,"PMR",262.4,"AKL",263.2,0.8,FALSE
+"189900","Taharua",,70,"PMR",247.3,"AKL",248.1,0.8,FALSE
+"190400","Athenree",,950,"PMR",311.4,"AKL",116.8,-194.5,FALSE
+"193500","Bethlehem Central",,4750,"PMR",271.1,"AKL",147.5,-123.6,FALSE
+"191000","Omokoroa",,4310,"PMR",291.4,"AKL",148.4,-143,FALSE
+"191100","Omokoroa Rural",,1830,"PMR",285.1,"AKL",146.3,-138.8,FALSE
+"192400","Pukehina Beach",,910,"PMR",301.3,"AKL",190,-111.3,FALSE
+"192600","Matua North",,3000,"PMR",283.1,"AKL",159.5,-123.6,FALSE
+"192800","Mount Maunganui North",,3710,"PMR",283.8,"AKL",160.2,-123.6,FALSE
+"193700","Mount Maunganui South",,3160,"PMR",284,"AKL",160.4,-123.6,FALSE
+"192900","Matua South",,2730,"PMR",283.1,"AKL",159.5,-123.6,FALSE
+"193000","Bethlehem North",,3970,"PMR",275.1,"AKL",151.5,-123.6,FALSE
+"193200","Otumoetai North",,4540,"PMR",278.1,"AKL",154.5,-123.6,FALSE
+"193300","Otumoetai South",,4020,"PMR",278.9,"AKL",155.3,-123.6,FALSE
+"193400","Brookfield West",,3250,"PMR",276.6,"AKL",153,-123.6,FALSE
+"193800","Tauranga Central",,3270,"PMR",274.5,"AKL",150.9,-123.6,FALSE
+"193900","Mount Maunganui Central",,400,"PMR",281.8,"AKL",158.2,-123.6,FALSE
+"194000","Judea",,3000,"PMR",275.4,"AKL",151.8,-123.6,FALSE
+"233100","Woodville",,1640,"PMR",26.5,"WLG",136.4,109.9,FALSE
+"194400","Tauranga Hospital",,2290,"PMR",269.7,"AKL",146.2,-123.6,FALSE
+"195300","Yatton Park",,2950,"PMR",272.8,"AKL",149.2,-123.6,FALSE
+"234900","Kawiu South",,2620,"PMR",45.1,"WLG",84.5,39.3,FALSE
+"195600","Pyes Pa South",,1830,"PMR",269.5,"AKL",145.9,-123.6,FALSE
+"194500","Tauriko",,440,"PMR",267.4,"AKL",143.8,-123.6,FALSE
+"194700","Greerton South",,750,"PMR",271.7,"AKL",148.1,-123.6,FALSE
+"235000","Makomako",,1570,"PMR",47.2,"WLG",83.6,36.3,FALSE
+"194800","Tauranga South",,5270,"PMR",276.5,"AKL",152.9,-123.6,FALSE
+"195400","Pyes Pa North",,5240,"PMR",269.7,"AKL",146.1,-123.6,FALSE
+"195500","Arataki South",,3320,"PMR",280.1,"AKL",156.6,-123.6,FALSE
+"195000","Matapihi",,800,"PMR",287.7,"AKL",164.1,-123.6,FALSE
+"235100","Kawiu North",,1940,"PMR",42.9,"WLG",87,44.2,FALSE
+"195100","Pyes Pa West",,6600,"PMR",270.4,"AKL",146.9,-123.6,FALSE
+"195200","Greerton North",,3820,"PMR",270.3,"AKL",146.7,-123.6,FALSE
+"235200","Levin Central",,1160,"PMR",45.2,"WLG",84.7,39.5,FALSE
+"195700","Poike",,1050,"PMR",270.7,"AKL",147.1,-123.6,FALSE
+"196900","Welcome Bay South",,4060,"PMR",279.8,"AKL",156.2,-123.6,FALSE
+"198900","Fairy Springs",,1960,"PMR",242,"AKL",149.4,-92.6,FALSE
+"223600","Castlecliff West",,1750,"PMR",66,"WLG",170.8,104.7,FALSE
+"195900","Maungatapu",,3070,"PMR",273.8,"AKL",150.3,-123.6,FALSE
+"197000","Palm Beach North",,3470,"PMR",285,"AKL",161.5,-123.6,FALSE
+"196000","Hairini",,3550,"PMR",272.2,"AKL",148.6,-123.6,FALSE
+"197100","Palm Beach South-Gravatt",,3990,"PMR",285.4,"AKL",161.8,-123.6,FALSE
+"206400","Te Hapara East",,2130,"PMR",283.9,"AKL",351.7,67.8,FALSE
+"196100","Pyes Pa East",,720,"PMR",270,"AKL",146.4,-123.6,FALSE
+"197200","Papamoa Beach North",,3000,"PMR",287.2,"AKL",163.6,-123.6,FALSE
+"206500","Centennial Crescent",,1710,"PMR",283.1,"AKL",353.1,70.1,FALSE
+"196300","Kaitemako (Tauranga City)",,1650,"PMR",276.4,"AKL",152.8,-123.6,FALSE
+"200600","Springfield South",,2050,"PMR",236.1,"AKL",159.6,-76.4,FALSE
+"196500","Baypark-Kairua",,870,"PMR",284.9,"AKL",161.3,-123.6,FALSE
+"196700","Welcome Bay East",,2770,"PMR",281.2,"AKL",157.6,-123.6,FALSE
+"197400","Papamoa Beach South",,3040,"PMR",288.9,"AKL",165.3,-123.6,FALSE
+"198100","Ngongotaha East",,1970,"PMR",254.7,"AKL",154.1,-100.7,FALSE
+"197600","Wairakei",,8960,"PMR",300.1,"AKL",176.5,-123.6,FALSE
+"198500","Selwyn Heights",,1200,"PMR",243.3,"AKL",149.9,-93.5,FALSE
+"198000","Hamurana",,1100,"PMR",257.6,"AKL",156.9,-100.7,FALSE
+"198600","Pleasant Heights",,2210,"PMR",242.1,"AKL",151.9,-90.3,FALSE
+"198200","Ngongotaha West",,1700,"PMR",249.3,"AKL",148.7,-100.7,FALSE
+"198800","Kawaha",,2010,"PMR",244.2,"AKL",149.7,-94.5,FALSE
+"198400","Ngongotaha South",,1470,"PMR",248.5,"AKL",150.1,-98.4,FALSE
+"199300","Mangakakahi Central",,130,"PMR",240,"AKL",150.3,-89.7,FALSE
+"199400","Koutu",,2240,"PMR",242,"AKL",151.9,-90.1,FALSE
+"199600","Sunnybrook",,2210,"PMR",237.2,"AKL",155.4,-81.8,FALSE
+"199700","Fordlands",,2720,"PMR",237.8,"AKL",154,-83.8,FALSE
+"200200","Hillcrest (Rotorua District)",,2060,"PMR",235.3,"AKL",156,-79.4,FALSE
+"200500","Glenholme North",,2890,"PMR",235.3,"AKL",156.2,-79.1,FALSE
+"199800","Kuirau",,1170,"PMR",239,"AKL",153.6,-85.4,FALSE
+"199900","Utuhina",,1580,"PMR",237,"AKL",154.6,-82.3,FALSE
+"201300","Tihiotonga-Whakarewarewa",,880,"PMR",232.5,"AKL",160.4,-72,FALSE
+"200100","Rotorua Central",,600,"PMR",237.3,"AKL",155.4,-82,FALSE
+"201400","Owhata East",,3180,"PMR",241.1,"AKL",165,-76.1,FALSE
+"200700","Springfield North",,1840,"PMR",232.9,"AKL",157.8,-75.1,FALSE
+"200900","Owhata West",,3410,"PMR",243.7,"AKL",167.7,-76.1,FALSE
+"201500","Lynmore",,3460,"PMR",240.8,"AKL",164.7,-76.1,FALSE
+"209100","Flaxmere Park",,2850,"PMR",121.4,"WLG",231.2,109.8,FALSE
+"201000","Holdens Bay-Rotokawa",,1320,"PMR",247.6,"AKL",171.5,-76.1,FALSE
+"201100","Ngapuna",,400,"PMR",237,"AKL",160.9,-76.1,FALSE
+"201200","Fenton Park",,1850,"PMR",234.8,"AKL",158.3,-76.5,FALSE
+"209200","Flaxmere South",,3140,"PMR",120,"WLG",229.9,109.8,FALSE
+"202200","Edgecumbe",,1810,"PMR",301.2,"AKL",202.6,-98.6,FALSE
+"202300","Thornton-Awakeri",,2530,"PMR",303,"AKL",209.2,-93.8,FALSE
+"202400","Te Teko Lakes",,1900,"PMR",292.1,"AKL",209.9,-82.2,FALSE
+"202800","Trident",,3530,"PMR",316.4,"AKL",213.5,-102.9,FALSE
+"202600","Whakatane West",,3540,"PMR",318.5,"AKL",215.6,-102.9,FALSE
+"202700","Whakatane Central",,3510,"PMR",317.2,"AKL",214.3,-102.9,FALSE
+"203000","Mokorua Bush",,1390,"PMR",320.6,"AKL",217.7,-102.9,FALSE
+"203600","Murupara",,1980,"PMR",253.9,"AKL",212.4,-41.5,FALSE
+"203700","Monika Reserve",,3490,"PMR",296,"AKL",214.7,-81.3,FALSE
+"303000","Richmond South (Tasman District)",,970,"PMR",542.2,"CHC",306,-236.2,FALSE
+"203800","Kawerau Industrial",,30,"PMR",295.5,"AKL",212.4,-83.1,FALSE
+"203900","Tarawera Park",,4390,"PMR",294.2,"AKL",212.9,-81.3,FALSE
+"204100","Waiotahi",,1800,"PMR",348.7,"AKL",256.5,-92.1,FALSE
+"204200","Cape Runaway",,1780,"PMR",335.4,"AKL",282,-53.4,TRUE
+"204300","Woodlands",,1100,"PMR",344.8,"AKL",252.7,-92.1,FALSE
+"204400","Opotiki",,4290,"PMR",344.6,"AKL",252.4,-92.1,FALSE
+"204800","Waipaoa",,2130,"PMR",290.2,"AKL",296.4,6.2,TRUE
+"204900","Ruatoria-Raukumara",,1370,"PMR",416.1,"AKL",443.5,27.4,FALSE
+"205000","Tokomaru",,1030,"PMR",399.3,"AKL",470.8,71.4,FALSE
+"205100","Hangaroa",,1690,"PMR",301,"AKL",386.5,85.5,FALSE
+"205200","Wharekaka",,2060,"PMR",358.6,"AKL",430.1,71.4,FALSE
+"205300","Te Arai",,1210,"PMR",274.6,"AKL",350.9,76.4,FALSE
+"205400","Hexton",,3360,"PMR",285.4,"AKL",345.9,60.4,FALSE
+"205500","Lytton",,1470,"PMR",286,"AKL",350,64,FALSE
+"210700","Akina Park",,2610,"PMR",123.4,"WLG",233.3,109.9,FALSE
+"205600","Makaraka-Awapuni",,1050,"PMR",285.8,"AKL",352.6,66.8,FALSE
+"205700","Riverdale",,1400,"PMR",284,"AKL",349.7,65.7,FALSE
+"205800","Te Hapara North",,2120,"PMR",283.3,"AKL",350.1,66.8,FALSE
+"205900","Mangapapa North",,1550,"PMR",285.3,"AKL",349.9,64.5,FALSE
+"206600","Whataupoko East",,1950,"PMR",287,"AKL",355.9,68.9,FALSE
+"206700","Whataupoko West",,2200,"PMR",284.6,"AKL",353.5,68.9,FALSE
+"206800","Gisborne Central",,350,"PMR",282.1,"AKL",353.5,71.4,FALSE
+"210900","Mayfair",,3240,"PMR",126.8,"WLG",236.6,109.9,FALSE
+"206900","Kaiti North",,2290,"PMR",286.5,"AKL",358,71.4,FALSE
+"207000","Kaiti South",,3410,"PMR",287.3,"AKL",358.7,71.4,FALSE
+"207100","Outer Kaiti",,2840,"PMR",288.5,"AKL",359.9,71.4,FALSE
+"207200","Tamarau",,2610,"PMR",287.8,"AKL",359.3,71.4,FALSE
+"207700","Whakaki",,750,"PMR",228.1,"WLG",337.9,109.9,FALSE
+"211000","Parkhaven",,3250,"PMR",123.6,"WLG",233.5,109.9,FALSE
+"207800","Wairoa",,4980,"PMR",212.7,"WLG",322.5,109.9,FALSE
+"208500","Bridge Pa",,1330,"PMR",119.5,"WLG",229.3,109.9,FALSE
+"208600","Twyford",,930,"PMR",122.3,"WLG",232.2,109.9,FALSE
+"208800","Flaxmere West",,3160,"PMR",121.6,"WLG",231.5,109.9,FALSE
+"208900","Omahu Strip",,190,"PMR",122.2,"WLG",232.1,109.9,FALSE
+"209000","Lochain Park",,3350,"PMR",121.4,"WLG",231.3,109.9,FALSE
+"209300","Irongate",,420,"PMR",121.7,"WLG",231.6,109.9,FALSE
+"209400","Frimley",,3640,"PMR",124.2,"WLG",234.1,109.9,FALSE
+"209500","Camberley",,2440,"PMR",123.4,"WLG",233.2,109.8,FALSE
+"211100","Parkvale",,2380,"PMR",125.2,"WLG",235.1,109.9,FALSE
+"211900","Hereworth",,3050,"PMR",127.6,"WLG",237.4,109.8,FALSE
+"303300","Easby Park",,2970,"PMR",538.9,"CHC",307.7,-231.2,FALSE
+"209600","Clive",,2480,"PMR",134.8,"WLG",244.7,109.9,FALSE
+"209700","St Leonards",,2950,"PMR",125,"WLG",234.8,109.8,FALSE
+"211500","Karanema-St Hill",,1830,"PMR",127.6,"WLG",237.3,109.7,FALSE
+"210200","Longlands-Pukahu",,2150,"PMR",119.8,"WLG",229.7,109.9,FALSE
+"211600","Havelock North-Central",,490,"PMR",125.8,"WLG",235.7,109.9,FALSE
+"211700","Brookvale",,2670,"PMR",132,"WLG",241.7,109.7,FALSE
+"210400","Karamu",,1480,"PMR",129.2,"WLG",238.9,109.8,FALSE
+"210500","Hastings Central",,510,"PMR",124.4,"WLG",234.2,109.8,FALSE
+"211200","Mangateretere",,1310,"PMR",139.8,"WLG",249.6,109.7,FALSE
+"211800","Iona",,2700,"PMR",124.7,"WLG",234.5,109.8,FALSE
+"224300","Titoki",,3290,"PMR",60.8,"WLG",165.6,104.8,FALSE
+"211300","Haumoana-Te Awanga",,2150,"PMR",140.6,"WLG",250.3,109.7,FALSE
+"211400","Lucknow",,1640,"PMR",123.9,"WLG",233.8,109.9,FALSE
+"224500","Springvale East",,1700,"PMR",60.6,"WLG",165.4,104.8,FALSE
+"212000","Te Mata Hills",,1090,"PMR",130,"WLG",239.9,109.8,FALSE
+"212100","Havelock Hills",,1630,"PMR",125.7,"WLG",235.6,109.8,FALSE
+"244700","Petone East",,4200,"PMR",115.1,"WLG",25.6,-89.5,FALSE
+"212400","Poraiti Hills",,860,"PMR",132.7,"WLG",242.6,109.9,FALSE
+"213100","Greenmeadows West",,2150,"PMR",134.2,"WLG",244.1,109.9,FALSE
+"212500","Poraiti Flat",,1520,"PMR",134.1,"WLG",244,109.9,FALSE
+"213200","Taradale South",,2820,"PMR",131.2,"WLG",241.1,109.9,FALSE
+"212600","Westshore",,1270,"PMR",135.8,"WLG",245.7,109.9,FALSE
+"213700","Taradale Central",,2630,"PMR",131.2,"WLG",241.1,109.9,FALSE
+"213800","Tamatea East",,1830,"PMR",133.1,"WLG",243,109.9,FALSE
+"213900","Marewa West",,1810,"PMR",134.4,"WLG",244.2,109.9,FALSE
+"212800","Onekawa West",,320,"PMR",133.6,"WLG",243.5,109.9,FALSE
+"212900","Ahuriri",,1220,"PMR",137.2,"WLG",247,109.9,FALSE
+"213000","Taradale West",,1940,"PMR",132.6,"WLG",242.6,109.9,FALSE
+"214200","Pirimai West",,1720,"PMR",131.6,"WLG",241.5,109.9,FALSE
+"213300","Bluff Hill",,2760,"PMR",140.3,"WLG",250.2,109.9,FALSE
+"213400","Hospital Hill",,3080,"PMR",137.1,"WLG",246.9,109.9,FALSE
+"213500","Tamatea West",,2080,"PMR",133.6,"WLG",243.4,109.9,FALSE
+"213600","Tamatea North",,1770,"PMR",134.3,"WLG",244.2,109.9,FALSE
+"214300","Napier Central",,480,"PMR",137.4,"WLG",247.2,109.8,FALSE
+"214400","Greenmeadows South",,2170,"PMR",131.7,"WLG",241.5,109.9,FALSE
+"214500","Nelson Park",,2310,"PMR",136.5,"WLG",246.3,109.8,FALSE
+"214600","Bledisloe Park",,2450,"PMR",130.2,"WLG",240,109.9,FALSE
+"214700","Pirimai East",,2350,"PMR",131.6,"WLG",241.5,109.9,FALSE
+"214800","Onekawa East",,1700,"PMR",133.4,"WLG",243.2,109.9,FALSE
+"214900","Tareha Reserve",,3350,"PMR",129.5,"WLG",239.5,109.9,FALSE
+"215200","McLean Park",,2700,"PMR",135.4,"WLG",245.3,109.9,FALSE
+"215300","Maraenui",,3760,"PMR",134.9,"WLG",244.8,109.9,FALSE
+"216500","Oakura",,1740,"PMR",186,"AKL",277.7,91.7,FALSE
+"215400","Meeanee-Awatoto",,3420,"PMR",131,"WLG",240.8,109.9,FALSE
+"215800","Waipukurau West",,2720,"PMR",88.9,"WLG",198.8,109.9,FALSE
+"216300","Spotswood",,3930,"PMR",195,"AKL",269.5,74.4,FALSE
+"225100","Whanganui East-Williams Domain",,2350,"PMR",61.2,"WLG",166.1,104.8,FALSE
+"216800","Blagdon-Lynmouth",,2730,"PMR",195.4,"AKL",267.8,72.4,FALSE
+"216900","Kawaroa",,2490,"PMR",190.3,"AKL",262.8,72.4,FALSE
+"217000","New Plymouth Central",,1250,"PMR",189.8,"AKL",261.8,72,FALSE
+"217100","Marfell",,1960,"PMR",193.7,"AKL",268.4,74.7,FALSE
+"217200","Whalers Gate",,2530,"PMR",193.5,"AKL",271.7,78.2,FALSE
+"217300","Strandon",,2750,"PMR",188.8,"AKL",256.7,67.9,FALSE
+"225300","Gonville North",,2760,"PMR",58.4,"WLG",163.3,104.8,FALSE
+"217400","Westown",,4720,"PMR",191.9,"AKL",266.9,75,FALSE
+"217500","Bell Block West",,4770,"PMR",189,"AKL",254.3,65.4,FALSE
+"218900","Waitara East",,3090,"PMR",189.2,"AKL",243,53.8,FALSE
+"217600","Bell Block East",,3330,"PMR",198.6,"AKL",261.9,63.4,FALSE
+"218500","Waitara West",,4220,"PMR",187.1,"AKL",245,57.9,FALSE
+"219300","Mangaoraka",,1990,"PMR",177.5,"AKL",263.7,86.2,FALSE
+"217700","Waiwhakaiho-Bell Block South",,120,"PMR",184.9,"AKL",250.8,65.8,FALSE
+"219400","Tikorangi",,2170,"PMR",201.9,"AKL",243.9,42,FALSE
+"219500","Everett Park",,2350,"PMR",169.3,"AKL",261.6,92.3,FALSE
+"223100","Ohakune",,1450,"PMR",114,"WLG",229.6,115.5,FALSE
+"217800","Lower Vogeltown",,3110,"PMR",188.2,"AKL",263.7,75.5,FALSE
+"217900","Hurdon",,2520,"PMR",194.6,"AKL",271.6,77,FALSE
+"220900","Manaia-Kapuni",,1610,"PMR",141.1,"WLG",245.9,104.8,FALSE
+"223200","Waiouru",,770,"PMR",94.7,"WLG",210.3,115.5,FALSE
+"218000","Frankleigh Park",,3160,"PMR",190,"AKL",266.8,76.8,FALSE
+"218100","Merrilands",,3080,"PMR",186.9,"AKL",259.6,72.7,FALSE
+"218700","Highlands Park (New Plymouth District)",,3440,"PMR",184.3,"AKL",263,78.7,FALSE
+"218300","Welbourn",,3450,"PMR",183,"AKL",261.9,78.9,FALSE
+"221700","King Edward Park",,1650,"PMR",129,"WLG",233.9,104.8,FALSE
+"221800","Ramanui",,2170,"PMR",128.2,"WLG",233,104.8,FALSE
+"221900","Hawera Central",,2770,"PMR",126.6,"WLG",231.5,104.8,FALSE
+"222000","Mangawhio",,780,"PMR",109.9,"WLG",190.8,80.9,TRUE
+"222100","Manutahi-Waitotora",,2120,"PMR",102.5,"WLG",207.3,104.8,FALSE
+"218400","Fitzroy-Glen Avon",,3790,"PMR",188.2,"AKL",259.4,71.2,FALSE
+"218600","Upper Vogeltown",,2990,"PMR",189.4,"AKL",266.2,76.8,FALSE
+"218800","Paraite",,840,"PMR",189.5,"AKL",255.3,65.8,FALSE
+"219600","Inglewood",,3870,"PMR",172.6,"AKL",259.3,86.7,FALSE
+"219700","Tarata",,620,"PMR",195,"AKL",282.8,87.8,FALSE
+"219800","Pembroke",,1760,"PMR",169.7,"WLG",274.5,104.8,FALSE
+"219900","Douglas",,730,"PMR",191.6,"AKL",282.7,91.2,FALSE
+"220000","Toko",,1470,"PMR",159.7,"WLG",264.6,104.8,FALSE
+"220300","Stratford Central",,2210,"PMR",155.2,"WLG",260.1,104.8,FALSE
+"220400","Stratford South",,1910,"PMR",152.3,"WLG",257.1,104.8,FALSE
+"220700","Opunake",,1440,"PMR",158.6,"WLG",263.4,104.8,FALSE
+"220800","Kaponga-Mangatoki",,1380,"PMR",155.7,"WLG",260.6,104.8,FALSE
+"221000","Eltham",,2050,"PMR",143.6,"WLG",248.4,104.8,FALSE
+"221200","Te Roti-Moeroa",,810,"PMR",187.4,"WLG",292.2,104.8,FALSE
+"221300","Egmont Showgrounds",,1980,"PMR",133.3,"WLG",238.1,104.8,FALSE
+"221500","Ohangai",,600,"PMR",142.1,"WLG",247,104.8,FALSE
+"221600","Turuturu",,2070,"PMR",130.9,"WLG",235.7,104.8,FALSE
+"222200","Patea",,1230,"PMR",107.4,"WLG",212.2,104.8,FALSE
+"222300","Otangiwai-Ohura",,1030,"PMR",215.2,"AKL",217.3,2.1,FALSE
+"224100","St Johns Hill East",,1190,"PMR",62.6,"WLG",167.5,104.8,FALSE
+"224200","St Johns Hill West",,2310,"PMR",61.8,"WLG",166.6,104.8,FALSE
+"222500","Taumarunui North",,1710,"PMR",172.6,"AKL",200.7,28.1,FALSE
+"222600","Taumarunui Central",,1540,"PMR",168.7,"AKL",200.7,32.1,FALSE
+"222700","Taumarunui East",,1560,"PMR",163.6,"AKL",207.1,43.5,FALSE
+"223000","Raetihi",,1060,"PMR",120.6,"WLG",225.4,104.8,FALSE
+"245200","Avalon East",,2600,"PMR",111.2,"WLG",29.9,-81.3,FALSE
+"223700","Otamatea (Whanganui District)",,1840,"PMR",65.1,"WLG",169.9,104.8,FALSE
+"223800","Castlecliff East",,2080,"PMR",63.1,"WLG",167.9,104.8,FALSE
+"223900","Springvale North",,360,"PMR",61.6,"WLG",166.4,104.8,FALSE
+"224000","Lower Aramoho",,2120,"PMR",63.7,"WLG",168.5,104.8,FALSE
+"224600","Upper Aramoho",,2280,"PMR",65.5,"WLG",170.3,104.8,FALSE
+"224700","Balgownie",,120,"PMR",61.2,"WLG",166.1,104.8,FALSE
+"224800","Laird Park",,2370,"PMR",61,"WLG",165.9,104.8,FALSE
+"224900","Wembley Park",,1800,"PMR",62.3,"WLG",167.1,104.8,FALSE
+"225000","College Estate",,1390,"PMR",59,"WLG",163.9,104.8,FALSE
+"225500","Whanganui East-Riverlands",,2300,"PMR",58.3,"WLG",163.2,104.8,FALSE
+"225700","Whanganui Central",,670,"PMR",58.1,"WLG",162.9,104.8,FALSE
+"225800","Gonville South",,2110,"PMR",57.9,"WLG",162.8,104.8,FALSE
+"226700","Marton North",,3230,"PMR",38.8,"WLG",143.6,104.8,FALSE
+"226000","Putiki",,720,"PMR",54.7,"WLG",159.5,104.8,FALSE
+"226900","Marton South",,2390,"PMR",37.1,"WLG",142,104.8,FALSE
+"228500","Kimbolton South",,2310,"PMR",14.5,"WLG",132.4,117.8,FALSE
+"229000","Milson North",,2600,"PMR",1.9,"WLG",124.5,122.6,FALSE
+"226500","Taihape",,1800,"PMR",72.5,"WLG",188.1,115.5,FALSE
+"227000","Bulls",,2250,"PMR",23.6,"WLG",128.5,104.8,FALSE
+"227200","Tokorangi",,2400,"PMR",35.9,"WLG",153,117.1,FALSE
+"228300","Kimbolton West",,2720,"PMR",15.6,"WLG",133.4,117.8,FALSE
+"228400","Feilding Central",,1090,"PMR",13.3,"WLG",129.6,116.3,FALSE
+"227300","Ohakea-Sanson",,1620,"PMR",29.7,"WLG",129.2,99.5,FALSE
+"227700","Mount Taylor",,670,"PMR",19.5,"WLG",135.5,116,FALSE
+"227900","Makino",,3410,"PMR",17.2,"WLG",134.3,117.1,FALSE
+"228000","Sandon",,2380,"PMR",17.4,"WLG",132.4,115,FALSE
+"228100","Kimbolton North",,3830,"PMR",18.8,"WLG",136.6,117.8,FALSE
+"228800","Newbury",,2010,"PMR",4.8,"WLG",120.2,115.4,FALSE
+"228900","Palmerston North Airport",,340,"PMR",4,"WLG",124.8,120.8,FALSE
+"229100","Cloverlea (Palmerston North City)",,1950,"PMR",5.8,"WLG",121.8,116,FALSE
+"229200","Tremaine",,560,"PMR",6.8,"WLG",128.6,121.8,FALSE
+"229300","Milson South",,3170,"PMR",3.5,"WLG",125.3,121.8,FALSE
+"229500","Westbrook",,3170,"PMR",8.4,"WLG",119.6,111.2,FALSE
+"229600","Takaro North",,3440,"PMR",7.2,"WLG",122,114.8,FALSE
+"229400","Whakarongo",,1820,"PMR",11.9,"WLG",132.5,120.6,FALSE
+"230400","Kelvin Grove North",,2390,"PMR",8.9,"WLG",129.6,120.7,FALSE
+"229700","Pioneer West",,280,"PMR",11.8,"WLG",115.2,103.4,FALSE
+"229800","Palmerston North Hospital",,2700,"PMR",5.5,"WLG",124.4,118.9,FALSE
+"229900","Highbury East",,3130,"PMR",8.2,"WLG",119.1,110.9,FALSE
+"230000","Park West",,1960,"PMR",10.1,"WLG",117.3,107.3,FALSE
+"230200","Roslyn (Palmerston North City)",,2590,"PMR",6.7,"WLG",128.3,121.7,FALSE
+"230300","Kelvin Grove West",,2750,"PMR",6.9,"WLG",128.2,121.3,FALSE
+"230600","Palmerston North Central",,1240,"PMR",7.9,"WLG",121.2,113.3,FALSE
+"230700","Awapuni North",,3710,"PMR",11.5,"WLG",117.7,106.2,FALSE
+"230800","Terrace End",,3710,"PMR",6.2,"WLG",126.8,120.6,FALSE
+"230900","Maraetarata",,1510,"PMR",14.8,"WLG",119.7,105,FALSE
+"231000","Papaioea South",,2080,"PMR",7.8,"WLG",124.1,116.3,FALSE
+"231100","Royal Oak (Palmerston North City)",,2570,"PMR",9.8,"WLG",130.5,120.7,FALSE
+"231500","Ruamahanga",,2870,"PMR",8.7,"WLG",127.4,118.7,FALSE
+"231600","Esplanade",,2310,"PMR",11.6,"WLG",121.2,109.6,FALSE
+"231700","Hokowhitu Central",,2480,"PMR",10.2,"WLG",121.6,111.4,FALSE
+"231800","Hokowhitu East",,3280,"PMR",9.2,"WLG",124.3,115.1,FALSE
+"232400","Aokautere",,820,"PMR",19.8,"WLG",118.4,98.6,FALSE
+"231900","Turitea",,480,"PMR",18,"WLG",114.1,96.1,FALSE
+"232700","Poutoa",,3800,"PMR",19.7,"WLG",118.1,98.3,FALSE
+"232100","Linton Camp",,1910,"PMR",26,"WLG",116.3,90.3,FALSE
+"232200","Ashhurst",,3260,"PMR",17.1,"WLG",133.5,116.4,FALSE
+"232300","Hokowhitu South",,2090,"PMR",11,"WLG",122.7,111.7,FALSE
+"233300","Dannevirke East",,3460,"PMR",46.8,"WLG",156.7,109.9,FALSE
+"238100","Waikanae East",,2570,"PMR",82,"WLG",60.9,-21.1,FALSE
+"233600","Pahiatua",,2820,"PMR",38.6,"WLG",139.1,100.5,FALSE
+"234100","Foxton Beach",,2190,"PMR",39,"WLG",106.7,67.7,FALSE
+"234200","Foxton North",,1470,"PMR",33,"WLG",101.2,68.2,FALSE
+"237000","Paraparaumu Beach North",,4240,"PMR",83.3,"WLG",52.8,-30.4,FALSE
+"234400","Waitarere",,2520,"PMR",43.6,"WLG",92.8,49.2,FALSE
+"234800","Ohau-Manakau",,2970,"PMR",55.6,"WLG",75.8,20.3,FALSE
+"235300","Tararua",,1450,"PMR",43.5,"WLG",85.7,42.2,FALSE
+"235400","Shannon",,1520,"PMR",31.2,"WLG",94.5,63.4,FALSE
+"235500","Queenwood (Horowhenua District)",,2230,"PMR",44.8,"WLG",87.5,42.8,FALSE
+"235600","Playford Park",,1970,"PMR",45.2,"WLG",85.9,40.7,FALSE
+"235700","Fairfield (Horowhenua District)",,1570,"PMR",43.2,"WLG",88.1,45,FALSE
+"237100","Paraparaumu Beach West",,2510,"PMR",81.7,"WLG",51.3,-30.4,FALSE
+"236300","Otaki Beach",,1990,"PMR",71.9,"WLG",68.3,-3.6,FALSE
+"236800","Waikanae Beach",,3520,"PMR",76.6,"WLG",52.7,-23.9,FALSE
+"236500","Otaki",,3920,"PMR",67.4,"WLG",63.9,-3.6,FALSE
+"236600","Te Horo",,1530,"PMR",74.4,"WLG",65.6,-8.8,FALSE
+"236900","Peka Peka",,740,"PMR",72.5,"WLG",60.2,-12.3,FALSE
+"237200","Waikanae Park",,2290,"PMR",81.5,"WLG",56.9,-24.6,FALSE
+"237300","Paraparaumu Beach East",,2740,"PMR",82.4,"WLG",52,-30.4,FALSE
+"237600","Waikanae West",,4950,"PMR",78.6,"WLG",59.9,-18.7,FALSE
+"238400","Paraparaumu East",,2410,"PMR",82.6,"WLG",50.8,-31.8,FALSE
+"246100","Waterloo East",,3240,"PMR",115.1,"WLG",31.4,-83.7,FALSE
+"237400","Otaihanga",,870,"PMR",85.5,"WLG",55.9,-29.6,FALSE
+"237500","Paraparaumu North",,3730,"PMR",84.1,"WLG",53.1,-31,FALSE
+"237700","Otaki Forks",,840,"PMR",80.9,"WLG",69.8,-11.1,FALSE
+"237800","Paraparaumu Central",,4350,"PMR",88.2,"WLG",47,-41.2,FALSE
+"238000","Raumati Beach West",,3050,"PMR",86,"WLG",51.2,-34.9,FALSE
+"238600","Paekakariki",,1830,"PMR",90.2,"WLG",50.7,-39.5,FALSE
+"240200","Postgate",,2970,"PMR",99.4,"WLG",34.8,-64.7,FALSE
+"238800","Pukerua Bay",,2150,"PMR",97.8,"WLG",43.9,-53.9,FALSE
+"240300","Ascot Park",,3050,"PMR",99.9,"WLG",34,-65.9,FALSE
+"239000","Plimmerton",,2170,"PMR",106.2,"WLG",41,-65.2,FALSE
+"240900","Ranui Heights",,1420,"PMR",100.7,"WLG",26.9,-73.8,FALSE
+"239100","Titahi Bay North",,2840,"PMR",110.1,"WLG",37.8,-72.2,FALSE
+"241100","Cannons Creek South",,1710,"PMR",101.7,"WLG",32.9,-68.8,FALSE
+"239200","Titahi Bay South",,3980,"PMR",111.1,"WLG",38.8,-72.2,FALSE
+"241400","Heretaunga",,2610,"PMR",111.5,"WLG",36.6,-74.9,FALSE
+"239300","Elsdon-Takapuwahia",,2530,"PMR",107.4,"WLG",35.1,-72.2,FALSE
+"241800","Silverstream (Upper Hutt City)",,3680,"PMR",108.6,"WLG",33.6,-74.9,FALSE
+"241900","Elderslea",,3620,"PMR",113.1,"WLG",38.2,-74.9,FALSE
+"239500","Onepoto",,2080,"PMR",110.5,"WLG",38.3,-72.2,FALSE
+"239600","Camborne",,2070,"PMR",103.3,"WLG",36.9,-66.4,FALSE
+"242000","Trentham North",,3410,"PMR",112,"WLG",37.1,-74.9,FALSE
+"239800","Paremata",,2580,"PMR",102.8,"WLG",34.6,-68.2,FALSE
+"242100","Totara Park",,2990,"PMR",115.8,"WLG",40.8,-74.9,FALSE
+"239900","Porirua Central",,980,"PMR",102.7,"WLG",31.5,-71.2,FALSE
+"240100","Aotea",,3990,"PMR",102.7,"WLG",31.8,-70.9,FALSE
+"242200","Trentham South",,3160,"PMR",113.9,"WLG",39,-74.9,FALSE
+"240400","Whitby",,3290,"PMR",99.4,"WLG",36.1,-63.3,FALSE
+"240500","Porirua East",,2470,"PMR",104.5,"WLG",31.5,-73,FALSE
+"242300","Mangaroa",,2240,"PMR",128.2,"WLG",53.3,-74.9,FALSE
+"242400","Ebdentown",,2670,"PMR",114.6,"WLG",39.6,-74.9,FALSE
+"240600","Endeavour",,5570,"PMR",97.4,"WLG",34.2,-63.2,FALSE
+"240700","Cannons Creek North",,3730,"PMR",101.7,"WLG",32.5,-69.3,FALSE
+"240800","Waitangirua",,4670,"PMR",97.7,"WLG",34.3,-63.4,FALSE
+"241500","Birchville-Brown Owl",,3830,"PMR",114.9,"WLG",49.3,-65.6,FALSE
+"241600","Poets Block",,2670,"PMR",111.6,"WLG",36.7,-74.9,FALSE
+"241700","Brentwood (Upper Hutt City)",,2560,"PMR",112.5,"WLG",37.6,-74.9,FALSE
+"242700","Te Marua",,1060,"PMR",120,"WLG",46.8,-73.2,FALSE
+"242900","Clouston Park",,2410,"PMR",115.1,"WLG",40.1,-74.9,FALSE
+"243000","Upper Hutt Central",,680,"PMR",117.1,"WLG",42.1,-74.9,FALSE
+"243200","Maungaraki",,4160,"PMR",113.3,"WLG",26,-87.4,FALSE
+"243300","Korokoro",,1590,"PMR",115.6,"WLG",27.1,-88.5,FALSE
+"243800","Tirohanga",,1330,"PMR",109.7,"WLG",25.3,-84.4,FALSE
+"243400","Kelson",,3030,"PMR",112.9,"WLG",31.6,-81.4,FALSE
+"243500","Normandale",,2170,"PMR",110.5,"WLG",26,-84.5,FALSE
+"243600","Belmont (Lower Hutt City)",,2970,"PMR",110,"WLG",27.7,-82.3,FALSE
+"243700","Petone Central",,1140,"PMR",113.4,"WLG",22.2,-91.3,FALSE
+"243900","Manor Park",,460,"PMR",107.6,"WLG",33.3,-74.3,FALSE
+"244000","Alicetown-Melling",,2930,"PMR",113.1,"WLG",24.9,-88.2,FALSE
+"244100","Taita North",,3400,"PMR",113.7,"WLG",32.9,-80.8,FALSE
+"303400","Fairose",,1900,"PMR",541,"CHC",306.7,-234.4,FALSE
+"244200","Boulcott",,2760,"PMR",111.7,"WLG",29.9,-81.9,FALSE
+"244300","Hutt Central North",,1060,"PMR",111.4,"WLG",26.7,-84.7,FALSE
+"244400","Avalon West",,2840,"PMR",109.7,"WLG",28.4,-81.3,FALSE
+"244500","Stokes Valley Central",,2290,"PMR",115.7,"WLG",40.7,-74.9,FALSE
+"244600","Taita South",,3300,"PMR",112.6,"WLG",31.3,-81.3,FALSE
+"244800","Hutt Central South",,3370,"PMR",113,"WLG",28.3,-84.7,FALSE
+"244900","Stokes Valley North",,3630,"PMR",112.4,"WLG",37.4,-74.9,FALSE
+"245000","Petone Esplanade",,2870,"PMR",117.1,"WLG",26.3,-90.8,FALSE
+"303500","Aniseed Valley",,550,"PMR",581.4,"CHC",356.1,-225.3,FALSE
+"303600","Nelson Rural",,2060,"PMR",512.3,"CHC",338.4,-173.9,FALSE
+"303700","Inlets Nelson City",,70,"PMR",541,"CHC",319.7,-221.3,FALSE
+"245300","Woburn",,1840,"PMR",114.7,"WLG",28.4,-86.3,FALSE
+"245400","Naenae Central",,3920,"PMR",113.3,"WLG",32,-81.3,FALSE
+"245600","Epuni East",,3210,"PMR",112.5,"WLG",31.2,-81.3,FALSE
+"245800","Moera",,1810,"PMR",116.7,"WLG",29.7,-87,FALSE
+"245900","Delaney",,2720,"PMR",117.1,"WLG",42.2,-74.9,FALSE
+"246200","Naenae North",,2770,"PMR",115.3,"WLG",34,-81.3,FALSE
+"246300","Manuka",,1870,"PMR",116,"WLG",41.1,-74.9,FALSE
+"246400","Naenae South",,2940,"PMR",114.3,"WLG",32.9,-81.3,FALSE
+"247000","Glendale",,4510,"PMR",128.9,"WLG",42.4,-86.5,FALSE
+"247100","Wainuiomata Central",,2020,"PMR",123.3,"WLG",36.7,-86.5,FALSE
+"246600","Arakura",,3170,"PMR",128.7,"WLG",42.2,-86.5,FALSE
+"247400","Homedale West",,2800,"PMR",127.6,"WLG",41.1,-86.5,FALSE
+"246700","Eastern Bays",,2130,"PMR",125.2,"WLG",35.5,-89.7,FALSE
+"247200","Eastbourne",,2810,"PMR",131.5,"WLG",41.8,-89.7,FALSE
+"247300","Homedale East",,3260,"PMR",128.3,"WLG",41.8,-86.5,FALSE
+"247600","Tawa North",,3270,"PMR",105.1,"WLG",31.1,-74,FALSE
+"247700","Linden",,3360,"PMR",103.6,"WLG",30.5,-73,FALSE
+"247800","Tawa South",,3470,"PMR",105.1,"WLG",28.9,-76.1,FALSE
+"247900","Tawa Central",,2740,"PMR",105.4,"WLG",29.2,-76.1,FALSE
+"248500","Grenada Village",,1790,"PMR",105,"WLG",24.3,-80.6,FALSE
+"303800","Marybank",,1070,"PMR",516,"CHC",331,-185,FALSE
+"248000","Grenada North",,2400,"PMR",103.6,"WLG",25.8,-77.8,FALSE
+"248100","Churton Park North",,4330,"PMR",108.3,"WLG",29.6,-78.7,FALSE
+"248600","Johnsonville North",,3370,"PMR",105.9,"WLG",24.1,-81.8,FALSE
+"248200","Takapu-Horokiwi",,300,"PMR",125.3,"WLG",34.7,-90.5,FALSE
+"248400","Johnsonville West",,3420,"PMR",107.6,"WLG",24.3,-83.4,FALSE
+"248700","Paparangi",,2940,"PMR",108,"WLG",24.9,-83,FALSE
+"248800","Ngaio North",,2570,"PMR",115.5,"WLG",26,-89.5,FALSE
+"248900","Johnsonville Central",,3040,"PMR",105.8,"WLG",21.7,-84.2,FALSE
+"249000","Broadmeadows",,1720,"PMR",109.6,"WLG",26.2,-83.4,FALSE
+"249100","Crofton Downs",,1710,"PMR",118.7,"WLG",24.2,-94.5,FALSE
+"249200","Johnsonville South",,1760,"PMR",107.4,"WLG",22.8,-84.6,FALSE
+"249300","Khandallah Reserve",,2020,"PMR",110.9,"WLG",26.5,-84.4,FALSE
+"249500","Newlands North",,3950,"PMR",108.4,"WLG",21.8,-86.6,FALSE
+"249600","Ngaio South",,3170,"PMR",115.3,"WLG",24.4,-90.9,FALSE
+"249700","Newlands South",,4230,"PMR",110.3,"WLG",25.6,-84.7,FALSE
+"249800","Woodridge",,1840,"PMR",111.3,"WLG",25.7,-85.6,FALSE
+"249900","Karori North",,2620,"PMR",119.6,"WLG",21.8,-97.9,FALSE
+"250000","Khandallah North",,2740,"PMR",110.7,"WLG",27.1,-83.5,FALSE
+"250100","Wilton",,2220,"PMR",117.7,"WLG",21.5,-96.2,FALSE
+"250200","Khandallah South",,2010,"PMR",112.4,"WLG",25.1,-87.4,FALSE
+"250800","Northland (Wellington City)",,3670,"PMR",116.3,"WLG",19.5,-96.8,FALSE
+"250300","Wadestown",,3770,"PMR",115.1,"WLG",18.4,-96.8,FALSE
+"250400","Karori South",,4590,"PMR",124.1,"WLG",26.2,-97.9,FALSE
+"251600","Dixon Street",,5350,"PMR",113.7,"WLG",12.7,-101,FALSE
+"250700","Pipitea-Kaiwharawhara",,1030,"PMR",110.5,"WLG",19.4,-91.1,FALSE
+"251700","Vivian West",,4010,"PMR",114.2,"WLG",11.3,-102.9,FALSE
+"250900","Thorndon",,4310,"PMR",112.2,"WLG",15.3,-96.9,FALSE
+"251000","Wellington Botanic Gardens",,1210,"PMR",114.8,"WLG",17.1,-97.6,FALSE
+"251100","Kelburn",,2240,"PMR",116.6,"WLG",17.1,-99.5,FALSE
+"251800","Courtenay",,2000,"PMR",115.7,"WLG",11.7,-104.1,FALSE
+"251200","Aro Valley",,4050,"PMR",115.8,"WLG",15.1,-100.7,FALSE
+"251300","Wellington University",,1610,"PMR",114.2,"WLG",14.7,-99.5,FALSE
+"251400","Wellington Central",,3440,"PMR",113.6,"WLG",15.8,-97.9,FALSE
+"251500","Brooklyn North",,2300,"PMR",119.3,"WLG",16.7,-102.6,FALSE
+"251900","Brooklyn East",,2800,"PMR",115.8,"WLG",13.1,-102.7,FALSE
+"252000","Mount Cook West",,4600,"PMR",115.6,"WLG",11.1,-104.6,FALSE
+"252100","Vivian East",,2790,"PMR",116.4,"WLG",10.2,-106.2,FALSE
+"252200","Brooklyn South",,1840,"PMR",121.8,"WLG",19.1,-102.7,FALSE
+"252400","Mount Cook East",,2990,"PMR",116.5,"WLG",10.7,-105.8,FALSE
+"252500","Mount Victoria",,4770,"PMR",117.2,"WLG",10.1,-107.1,FALSE
+"252600","Roseneath",,1790,"PMR",119.5,"WLG",9.2,-110.3,FALSE
+"253100","Hataitai North",,4100,"PMR",120.4,"WLG",7.5,-113,FALSE
+"307100","Renwick",,2620,"PMR",440.2,"CHC",260.4,-179.8,FALSE
+"252700","Owhiro Bay",,2040,"PMR",120.5,"WLG",13.4,-107.1,FALSE
+"252900","Newtown North",,2220,"PMR",119,"WLG",10.7,-108.3,FALSE
+"253000","Newtown West",,3700,"PMR",117.3,"WLG",8.7,-108.6,FALSE
+"253200","Evans Bay",,1170,"PMR",121.5,"WLG",6.2,-115.3,FALSE
+"253300","Berhampore",,3970,"PMR",119.8,"WLG",9.6,-110.1,FALSE
+"253400","Hataitai South",,1450,"PMR",118.8,"WLG",5.7,-113.1,FALSE
+"253500","Maupuia",,1580,"PMR",129.2,"WLG",11,-118.2,FALSE
+"253600","Newtown South",,3920,"PMR",120.3,"WLG",7.9,-112.5,FALSE
+"253700","Kilbirnie Central",,2700,"PMR",121.2,"WLG",3.8,-117.4,FALSE
+"253800","Island Bay West",,3420,"PMR",124.6,"WLG",11,-113.6,FALSE
+"253900","Melrose",,1330,"PMR",122.2,"WLG",4.3,-117.9,FALSE
+"254000","Island Bay East",,3650,"PMR",124.2,"WLG",12.4,-111.8,FALSE
+"254100","Miramar North",,1340,"PMR",126.5,"WLG",8.2,-118.2,FALSE
+"254200","Kilbirnie East",,2190,"PMR",122.4,"WLG",3.1,-119.3,FALSE
+"254300","Lyall Bay",,2710,"PMR",123.1,"WLG",2.7,-120.3,FALSE
+"254500","Southgate",,1150,"PMR",124.1,"WLG",11.5,-112.6,FALSE
+"255800","Lansdowne West",,1970,"PMR",77.6,"WLG",103.2,25.6,FALSE
+"254700","Houghton Bay",,1690,"PMR",126.3,"WLG",7.9,-118.3,FALSE
+"254800","Miramar East",,2970,"PMR",126.2,"WLG",7.9,-118.2,FALSE
+"255000","Rongotai",,50,"PMR",127.6,"WLG",3.5,-124.1,FALSE
+"255100","Strathmore (Wellington City)",,3830,"PMR",128.8,"WLG",10.6,-118.2,FALSE
+"255200","Seatoun",,2320,"PMR",129.9,"WLG",9.8,-120.1,FALSE
+"255700","Solway North",,2810,"PMR",81.8,"WLG",96.1,14.3,FALSE
+"257700","Greytown",,2850,"PMR",99.3,"WLG",73.9,-25.3,FALSE
+"255900","Masterton Central",,790,"PMR",78.8,"WLG",99.3,20.5,FALSE
+"256200","Solway South",,4560,"PMR",83.3,"WLG",95.6,12.3,FALSE
+"257900","Martinborough",,2020,"PMR",109.7,"WLG",76.6,-33.1,FALSE
+"256300","Lansdowne East",,2920,"PMR",78.7,"WLG",102.5,23.9,FALSE
+"256400","Cameron and Soldiers Park",,2430,"PMR",80.9,"WLG",99.1,18.2,FALSE
+"256700","McJorrow Park",,1850,"PMR",81.8,"WLG",100.1,18.3,FALSE
+"256900","Carterton North",,2790,"PMR",90.3,"WLG",85,-5.3,FALSE
+"302600","Brightwater",,2380,"PMR",547.6,"CHC",298.5,-249.1,FALSE
+"300500","Takaka",,1460,"PMR",613,"CHC",354,-259,FALSE
+"302300","Wakefield",,2690,"PMR",542.9,"CHC",287.2,-255.7,FALSE
+"309400","Westport South",,2460,"PMR",629.5,"CHC",245,-384.5,FALSE
+"309500","Buller Coalfields",,920,"PMR",349.7,"CHC",202.7,-146.9,TRUE
+"301300","Motueka East",,3190,"PMR",566.3,"CHC",312.4,-253.9,FALSE
+"302400","Richmond West (Tasman District)",,2420,"PMR",538.4,"CHC",307,-231.4,FALSE
+"309600","Charleston (Buller District)",,540,"PMR",662.4,"CHC",246.6,-415.8,FALSE
+"309700","Inangahua",,890,"PMR",622,"CHC",188.3,-433.7,FALSE
+"302200","Appleby",,830,"PMR",542.2,"CHC",304.4,-237.8,FALSE
+"302700","Hope",,980,"PMR",543,"CHC",299.8,-243.2,FALSE
+"303900","Port Nelson",,50,"PMR",522.5,"CHC",322.4,-200.1,FALSE
+"304500","Washington",,3100,"PMR",527.4,"CHC",320.4,-207.1,FALSE
+"309800","Reefton",,920,"PMR",616.2,"CHC",194.9,-421.3,FALSE
+"304000","Nelson Airport",,100,"PMR",533.7,"CHC",316.1,-217.6,FALSE
+"304300","Atawhai",,2900,"PMR",519.2,"CHC",328.9,-190.3,FALSE
+"305600","Grampians",,2630,"PMR",530.1,"CHC",318.9,-211.2,FALSE
+"304400","Broadgreen-Monaco",,2450,"PMR",534.4,"CHC",313.8,-220.6,FALSE
+"304600","Tahuna Hills",,3080,"PMR",530.2,"CHC",317.6,-212.6,FALSE
+"304700","Nelson Central-Trafalgar",,730,"PMR",523,"CHC",323.3,-199.7,FALSE
+"304800","The Wood",,3040,"PMR",522.2,"CHC",324.5,-197.6,FALSE
+"304900","Toi Toi",,1810,"PMR",528.5,"CHC",324.1,-204.4,FALSE
+"305000","Nayland",,2070,"PMR",532.9,"CHC",314.2,-218.6,FALSE
+"305100","Aldinga",,3300,"PMR",535,"CHC",311.5,-223.5,FALSE
+"305200","Victory",,1670,"PMR",526.6,"CHC",319.1,-207.5,FALSE
+"305400","Maitlands",,2250,"PMR",532.9,"CHC",315.6,-217.3,FALSE
+"305500","Maitai",,1400,"PMR",524,"CHC",324.3,-199.7,FALSE
+"305700","Saxton",,70,"PMR",539.6,"CHC",314,-225.6,FALSE
+"305800","Suffolk",,2800,"PMR",536.9,"CHC",312.6,-224.4,FALSE
+"305900","Omaio",,3840,"PMR",537.6,"CHC",319.6,-218,FALSE
+"306000","Enner Glynn",,3030,"PMR",533.9,"CHC",318.5,-215.4,FALSE
+"306700","Waikawa (Marlborough District)",,1620,"PMR",419.3,"CHC",277.4,-141.8,FALSE
+"306800","Waitohi (Marlborough District)",,3200,"PMR",411.8,"CHC",270.3,-141.5,FALSE
+"307400","Spring Creek-Grovetown",,1230,"PMR",431.6,"CHC",252,-179.6,FALSE
+"307600","Yelverton",,2820,"PMR",439.2,"CHC",250.7,-188.5,FALSE
+"307800","Whitney West",,2900,"PMR",440.1,"CHC",249.5,-190.5,FALSE
+"307900","Blenheim Central",,1260,"PMR",434.7,"CHC",246.8,-187.8,FALSE
+"308000","Riversdale-Islington",,2520,"PMR",434.7,"CHC",249.7,-185,FALSE
+"308100","Whitney East",,2670,"PMR",437.1,"CHC",246.3,-190.8,FALSE
+"312100","Hanmer Range",,290,"PMR",686,"CHC",176.3,-509.6,FALSE
+"312200","Amuri",,2390,"PMR",595.1,"CHC",111.9,-483.2,FALSE
+"308300","Witherlea West",,3020,"PMR",443.1,"CHC",250.7,-192.5,FALSE
+"308400","Redwoodtown East",,2930,"PMR",438.6,"CHC",246,-192.5,FALSE
+"308500","Riverlands",,540,"PMR",439.5,"CHC",243.4,-196,FALSE
+"308600","Witherlea East",,3040,"PMR",440.1,"CHC",247.6,-192.5,FALSE
+"309200","Westport North",,1880,"PMR",635.8,"CHC",251.3,-384.5,FALSE
+"309300","Westport Rural",,1290,"PMR",639,"CHC",254.5,-384.5,FALSE
+"312300","Hanmer Springs",,1200,"PMR",622,"CHC",108.6,-513.4,FALSE
+"312400","Upper Hurunui",,1560,"PMR",638,"CHC",83.1,-555,FALSE
+"312500","Parnassus",,1360,"PMR",589.5,"CHC",98.5,-491,FALSE
+"312700","Omihi",,1310,"PMR",373,"CHC",62.4,-310.6,TRUE
+"312800","Balcairn",,2520,"PMR",645.5,"CHC",48,-597.5,FALSE
+"312900","Amberley",,2380,"PMR",639.6,"CHC",44,-595.6,FALSE
+"181600","Lake Cameron",,1740,"PMR",266.8,"AKL",89.4,-177.4,FALSE

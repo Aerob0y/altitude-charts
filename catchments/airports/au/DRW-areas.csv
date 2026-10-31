@@ -1,0 +1,50 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"701011001","Darwin Airport","Northern Territory",20,"DRW",1.4,"CNS",1701.5,1700.2,FALSE
+"701011002","Darwin City","Northern Territory",8597,"DRW",17,"CNS",1697.1,1680.1,FALSE
+"701011004","Fannie Bay - The Gardens","Northern Territory",4037,"DRW",14.3,"CNS",1697,1682.6,FALSE
+"701011005","Larrakeyah","Northern Territory",4731,"DRW",20.6,"CNS",1702.3,1681.7,FALSE
+"701011006","Ludmilla - The Narrows","Northern Territory",2766,"DRW",9.3,"CNS",1698.8,1689.4,FALSE
+"701011007","Parap","Northern Territory",3175,"DRW",12.2,"CNS",1695.4,1683.2,FALSE
+"701011008","Stuart Park","Northern Territory",4674,"DRW",15.6,"CNS",1695.7,1680.1,FALSE
+"701011009","Woolner - Bayview - Winnellie","Northern Territory",3021,"DRW",12.9,"CNS",1691.8,1678.9,FALSE
+"701021010","Alawa","Northern Territory",2267,"DRW",7,"CNS",1700.9,1694,FALSE
+"701021011","Anula","Northern Territory",2583,"DRW",7,"CNS",1698.9,1691.9,FALSE
+"701021012","Berrimah","Northern Territory",2871,"DRW",15.8,"CNS",1689.6,1673.8,FALSE
+"701021013","Brinkin - Nakara","Northern Territory",3522,"DRW",9.8,"CNS",1701.8,1692,FALSE
+"701021015","Charles Darwin","Northern Territory",3,"DRW",20.1,"CNS",1693.5,1673.5,FALSE
+"701021016","Coconut Grove","Northern Territory",3100,"DRW",7.8,"CNS",1699.6,1691.8,FALSE
+"701021017","East Arm","Northern Territory",23,"DRW",21.1,"CNS",1692.6,1671.5,FALSE
+"701021018","Jingili","Northern Territory",1990,"DRW",6.4,"CNS",1700.4,1694,FALSE
+"701021019","Karama","Northern Territory",5050,"DRW",9.4,"CNS",1694.2,1684.8,FALSE
+"701021020","Leanyer","Northern Territory",5119,"DRW",9.9,"CNS",1698.5,1688.6,FALSE
+"701021021","Lyons (NT)","Northern Territory",7442,"DRW",11.6,"CNS",1701.6,1690,FALSE
+"701021022","Malak - Marrara","Northern Territory",4729,"DRW",6.3,"CNS",1696.8,1690.5,FALSE
+"701021023","Millner","Northern Territory",2718,"DRW",7.1,"CNS",1701.3,1694.3,FALSE
+"701021024","Moil","Northern Territory",2164,"DRW",7.5,"CNS",1700,1692.6,FALSE
+"701021025","Nightcliff","Northern Territory",4343,"DRW",11.5,"CNS",1704,1692.5,FALSE
+"701021026","Rapid Creek","Northern Territory",3564,"DRW",9,"CNS",1703,1694,FALSE
+"701021027","Tiwi","Northern Territory",2641,"DRW",12.1,"CNS",1702.9,1690.8,FALSE
+"701021028","Wagaman","Northern Territory",2118,"DRW",7.7,"CNS",1700.3,1692.6,FALSE
+"701021029","Wanguri","Northern Territory",1940,"DRW",9.2,"CNS",1699.2,1690,FALSE
+"701021030","Wulagi","Northern Territory",2738,"DRW",8.3,"CNS",1698.2,1689.9,FALSE
+"701031031","Howard Springs","Northern Territory",6308,"DRW",29.3,"CNS",1682.3,1652.9,FALSE
+"701031032","Humpty Doo","Northern Territory",9513,"DRW",43.2,"CNS",1680.9,1637.7,FALSE
+"701031033","Koolpinyah","Northern Territory",14,"DRW",60,"CNS",1712.9,1652.9,FALSE
+"701031034","Virginia","Northern Territory",3759,"DRW",30.3,"CNS",1679.9,1649.6,FALSE
+"701031035","Weddell","Northern Territory",4738,"DRW",51.5,"CNS",1672.6,1621.1,FALSE
+"701041036","Bakewell","Northern Territory",3417,"DRW",27.2,"CNS",1682.4,1655.2,FALSE
+"701041037","Driver","Northern Territory",2989,"DRW",23.8,"CNS",1685.1,1661.3,FALSE
+"701041038","Durack - Marlow Lagoon","Northern Territory",5073,"DRW",22.5,"CNS",1685.7,1663.2,FALSE
+"701041039","Gray","Northern Territory",3479,"DRW",25.5,"CNS",1684.7,1659.2,FALSE
+"701041040","Moulden","Northern Territory",3268,"DRW",26,"CNS",1685.2,1659.2,FALSE
+"701041041","Palmerston - North","Northern Territory",4949,"DRW",23.6,"CNS",1682.4,1658.8,FALSE
+"701041042","Palmerston - South","Northern Territory",9070,"DRW",30.4,"CNS",1690.3,1660,FALSE
+"701041043","Rosebery - Bellamack","Northern Territory",7223,"DRW",28.8,"CNS",1683.2,1654.4,FALSE
+"701041044","Woodroffe","Northern Territory",3538,"DRW",26.6,"CNS",1685.4,1658.8,FALSE
+"702031057","Alligator","Northern Territory",4892,"DRW",118.9,"CNS",1756.6,1637.7,FALSE
+"702031058","Daly","Northern Territory",2221,"DRW",316.7,"CNS",1803.6,1487,FALSE
+"702031059","Thamarrurr","Northern Territory",2459,"DRW",513.2,"CNS",2000.1,1487,FALSE
+"702031060","Tiwi Islands","Northern Territory",2767,"DRW",93.7,"CNS",1714.4,1620.7,TRUE
+"702031061","West Arnhem","Northern Territory",6377,"DRW",288.6,"CNS",1435.1,1146.5,TRUE
+"702051065","Elsey","Northern Territory",2695,"DRW",372.7,"CNS",1622.2,1249.5,FALSE
+"702051067","Katherine","Northern Territory",11269,"DRW",207.9,"CNS",1525.7,1317.8,FALSE

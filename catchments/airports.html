@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Airport catchment maps (Beta) · Altitude</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Inter+Tight:wght@600&display=swap">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../topics.css">
+  <script defer src="../topics.js"></script>
+  <link rel="stylesheet" href="catchments.css">
+  <script defer src="airports.js"></script>
+</head>
+<body>
+  <header class="bar"><a class="brand" href="../">Altitude</a><span>Mapping tools</span></header>
+  <main>
+    <header class="intro">
+      <p class="eyebrow">AIRPORT CATCHMENT MAPS <span class="beta">Beta</span></p>
+      <h1>Where each airport is the closest by road</h1>
+      <p>One map for each of 43 airports in New Zealand, Australia and Ireland. Each area is coloured by how many minutes
+        closer it is to the airport by road than to the nearest other major airport. Where no major airport is within
+        two hours, the map shows drive time instead.</p>
+      <p>Teal areas are closer to the airport; ochre areas are closer to a rival. Open the live map to change rivals and
+        settings, or download the image and the data behind it.</p>
+    </header>
+    <nav class="country-tabs" id="countries" aria-label="Country"></nav>
+    <p class="summary" id="status" role="status" aria-live="polite">Loading airports…</p>
+    <div id="groups"></div>
+    <footer>
+      <p>Population: Stats NZ (New Zealand), the ABS (Australia) and the CSO Census 2022 (Ireland, Electoral Divisions,
+        with boundaries from Tailte Éireann). Drive times calculated with OpenRouteService. Where a road time is missing,
+        a straight-line estimate at 60 km/h is used. "People closer by 30+ minutes" counts everyone living in areas at
+        least 30 minutes closer to the airport by road than to any other major airport; the live map starts at
+        0 minutes, so its catchment total is larger until you raise "Minutes saved to count". Northern Ireland is not
+        included, so Irish maps near the border overstate the Republic's airports.</p>
+    </footer>
+  </main>
+</body>
+</html>

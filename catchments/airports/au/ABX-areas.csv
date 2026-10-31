@@ -1,0 +1,736 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"101021007","Braidwood","New South Wales",4494,"ABX",273.2,"CBR",78.4,-194.9,FALSE
+"101021008","Karabar","New South Wales",8409,"ABX",244.1,"CBR",20.9,-223.2,FALSE
+"101021009","Queanbeyan","New South Wales",11251,"ABX",240.2,"CBR",15.2,-225,FALSE
+"101021010","Queanbeyan - East","New South Wales",5111,"ABX",241.6,"CBR",19.7,-221.9,FALSE
+"101021012","Queanbeyan West - Jerrabomberra","New South Wales",12735,"ABX",247.8,"CBR",23.6,-224.3,FALSE
+"101021610","Googong","New South Wales",9323,"ABX",253.7,"CBR",31.8,-221.9,FALSE
+"101021611","Queanbeyan Surrounds","New South Wales",18181,"ABX",256.5,"CBR",34.6,-221.9,FALSE
+"101031013","Bombala","New South Wales",2474,"ABX",330.8,"CBR",182.5,-148.3,FALSE
+"101031014","Cooma","New South Wales",6598,"ABX",242.9,"CBR",97,-145.9,FALSE
+"101031015","Cooma Surrounds","New South Wales",3577,"ABX",272.9,"CBR",109.3,-163.5,FALSE
+"101031016","Jindabyne - Berridale","New South Wales",8703,"ABX",278.8,"CBR",151.3,-127.5,FALSE
+"101041017","Batemans Bay","New South Wales",8679,"ABX",321.7,"CBR",126.8,-194.9,FALSE
+"101041018","Batemans Bay - South","New South Wales",9170,"ABX",331.1,"CBR",136.2,-194.9,FALSE
+"101041019","Bega - Tathra","New South Wales",9070,"ABX",331.4,"CBR",183.1,-148.3,FALSE
+"101041020","Bega-Eden Hinterland","New South Wales",9955,"ABX",335,"CBR",186.7,-148.3,FALSE
+"101041021","Broulee - Tomakin","New South Wales",3951,"ABX",335.1,"CBR",140.2,-194.9,FALSE
+"101041022","Deua - Wadbilliga","New South Wales",41,"ABX",377.2,"CBR",222.3,-154.9,FALSE
+"101041023","Eden","New South Wales",3453,"ABX",362.4,"CBR",214.1,-148.3,FALSE
+"101041024","Eurobodalla Hinterland","New South Wales",3788,"ABX",346.9,"CBR",152,-194.9,FALSE
+"101041025","Merimbula - Tura Beach","New South Wales",11719,"ABX",340.7,"CBR",192.4,-148.3,FALSE
+"101041026","Moruya - Tuross Head","New South Wales",8670,"ABX",346.5,"CBR",151.6,-194.9,FALSE
+"101041027","Narooma - Bermagui","New South Wales",10087,"ABX",357,"CBR",193.9,-163.1,FALSE
+"101051539","Goulburn","New South Wales",25647,"ABX",224.7,"CBR",69.7,-155,FALSE
+"101051540","Goulburn Surrounds","New South Wales",14411,"ABX",247.3,"CBR",110,-137.3,FALSE
+"101061541","Yass","New South Wales",6812,"ABX",170.5,"CBR",72.3,-98.3,FALSE
+"101061542","Yass Surrounds","New South Wales",13346,"ABX",181.1,"CBR",72.3,-108.9,FALSE
+"101061543","Young","New South Wales",10918,"ABX",187.4,"CBR",147.2,-40.2,FALSE
+"101061544","Young Surrounds","New South Wales",7803,"ABX",193.4,"CBR",109.6,-83.8,FALSE
+"103011059","Bathurst - East","New South Wales",13565,"ABX",327,"SYD",198,-129,FALSE
+"103011060","Bathurst Surrounds","New South Wales",7094,"ABX",344.4,"SYD",190.5,-153.9,FALSE
+"103011061","Oberon","New South Wales",4864,"ABX",312.9,"CBR",163.9,-148.9,FALSE
+"103011612","Bathurst - South","New South Wales",10483,"ABX",322.8,"CBR",197.6,-125.1,FALSE
+"103011613","Bathurst - West","New South Wales",14965,"ABX",320.8,"SYD",208.2,-112.5,FALSE
+"103021062","Condobolin","New South Wales",6345,"ABX",316.1,"CBR",332.4,16.2,FALSE
+"103021063","Cowra","New South Wales",9130,"ABX",243.6,"CBR",164.4,-79.1,FALSE
+"103021064","Cowra Surrounds","New South Wales",5778,"ABX",254.5,"CBR",175.6,-78.9,FALSE
+"103021065","Forbes","New South Wales",10019,"ABX",268.1,"CBR",225.5,-42.6,FALSE
+"103021066","Grenfell","New South Wales",3549,"ABX",233.9,"CBR",199,-34.9,FALSE
+"103021067","Parkes (NSW)","New South Wales",10998,"ABX",293.8,"CBR",240,-53.9,FALSE
+"103021068","Parkes Surrounds","New South Wales",3079,"ABX",324.4,"CBR",268.9,-55.5,FALSE
+"103021069","West Wyalong","New South Wales",5420,"ABX",219.1,"CBR",249.3,30.2,FALSE
+"103041076","Blayney","New South Wales",7855,"ABX",285,"CBR",196.5,-88.4,FALSE
+"103041077","Orange","New South Wales",19154,"ABX",307.5,"CBR",212.5,-95,FALSE
+"103041078","Orange - North","New South Wales",24059,"ABX",318.3,"CBR",218.7,-99.7,FALSE
+"103041079","Orange Surrounds","New South Wales",12138,"ABX",314.2,"CBR",235.1,-79.1,FALSE
+"107011131","Dapto - Avondale","New South Wales",24842,"ABX",327.9,"SYD",87.8,-240.1,FALSE
+"107011132","Horsley - Kembla Grange","New South Wales",14750,"ABX",327,"SYD",84.1,-242.9,FALSE
+"107011133","Port Kembla Industrial","New South Wales",7,"ABX",325.7,"SYD",82.8,-242.9,FALSE
+"107011134","Unanderra - Mount Kembla","New South Wales",15414,"ABX",328.2,"SYD",85.4,-242.9,FALSE
+"107011545","Berkeley - Lake Heights - Cringila","New South Wales",14288,"ABX",324.5,"SYD",81.6,-242.9,FALSE
+"107011546","Port Kembla - Warrawong","New South Wales",9681,"ABX",328.3,"SYD",85.4,-242.9,FALSE
+"107011547","Windang - Primbee","New South Wales",4224,"ABX",332,"SYD",90,-242,FALSE
+"107021135","Illawarra Catchment Reserve","New South Wales",5,"ABX",297,"SYD",60,-237,FALSE
+"107031136","Albion Park - Macquarie Pass","New South Wales",23649,"ABX",307.2,"SYD",94.5,-212.7,FALSE
+"107031137","Albion Park Rail","New South Wales",6883,"ABX",321.3,"SYD",88.3,-232.9,FALSE
+"107031138","Kiama","New South Wales",9038,"ABX",323.7,"SYD",103.1,-220.6,FALSE
+"107031139","Kiama Downs - Minnamurra","New South Wales",5923,"ABX",326.9,"SYD",98.7,-228.2,FALSE
+"107031140","Kiama Hinterland - Gerringong","New South Wales",8121,"ABX",336,"SYD",119.8,-216.2,FALSE
+"107031141","Shellharbour - Flinders","New South Wales",20964,"ABX",322.9,"SYD",94.1,-228.8,FALSE
+"107031142","Shellharbour - Oak Flats","New South Wales",11007,"ABX",325.1,"SYD",96.4,-228.8,FALSE
+"107031143","Warilla","New South Wales",20725,"ABX",325.2,"SYD",96.3,-228.9,FALSE
+"107041146","Figtree - Keiraville","New South Wales",23776,"ABX",317.9,"SYD",77.6,-240.3,FALSE
+"107041549","Wollongong - West","New South Wales",17595,"ABX",318.1,"SYD",75.5,-242.5,FALSE
+"109011172","Albury - East","New South Wales",20822,"ABX",4.6,"MEL",204.2,199.7,FALSE
+"109011173","Albury - North","New South Wales",10754,"ABX",17,"MEL",210.4,193.4,FALSE
+"109011174","Albury - South","New South Wales",10310,"ABX",16.1,"MEL",205.6,189.5,FALSE
+"109011175","Albury Surrounds","New South Wales",13394,"ABX",40.6,"CBR",214.3,173.7,FALSE
+"109011176","Lavington","New South Wales",15832,"ABX",13.2,"MEL",206.2,193,FALSE
+"109021177","Hay","New South Wales",2926,"ABX",302.1,"MEL",368.3,66.1,FALSE
+"109031180","Corowa","New South Wales",5618,"ABX",51,"MEL",191.8,140.8,FALSE
+"109031181","Corowa Surrounds","New South Wales",7654,"ABX",75,"MEL",215.8,140.8,FALSE
+"109031182","Deniliquin","New South Wales",7072,"ABX",155.4,"MEL",218.6,63.1,FALSE
+"109031183","Deniliquin Surrounds","New South Wales",7020,"ABX",181,"MEL",247.1,66.1,FALSE
+"109031184","Moama","New South Wales",8036,"ABX",168.6,"MEL",172.7,4.1,FALSE
+"109031185","Tocumwal - Finley - Jerilderie","New South Wales",10011,"ABX",120.3,"MEL",224.9,104.6,FALSE
+"113011256","Griffith (NSW)","New South Wales",20774,"ABX",209.8,"CBR",288.3,78.5,FALSE
+"113011257","Griffith Surrounds","New South Wales",13139,"ABX",252.8,"CBR",336.7,83.9,FALSE
+"113011258","Leeton","New South Wales",10336,"ABX",172.1,"CBR",278.4,106.3,FALSE
+"113011259","Narrandera","New South Wales",5926,"ABX",156.2,"CBR",259.5,103.3,FALSE
+"113021260","Tumbarumba","New South Wales",3590,"ABX",109.2,"CBR",250.8,141.6,FALSE
+"113021261","Tumut","New South Wales",6609,"ABX",133.8,"CBR",155.6,21.8,FALSE
+"113021262","Tumut Surrounds","New South Wales",4797,"ABX",205.4,"CBR",219.6,14.2,FALSE
+"113031263","Cootamundra","New South Wales",7727,"ABX",159.8,"CBR",150.1,-9.7,FALSE
+"113031264","Gundagai","New South Wales",3715,"ABX",134.7,"CBR",136.7,2,FALSE
+"113031265","Junee","New South Wales",6350,"ABX",134.8,"CBR",173.4,38.5,FALSE
+"113031266","Temora","New South Wales",6576,"ABX",172.3,"CBR",194.6,22.3,FALSE
+"113031267","Wagga Wagga - East","New South Wales",17035,"ABX",98.2,"CBR",185.2,87,FALSE
+"113031268","Wagga Wagga - North","New South Wales",6227,"ABX",107.7,"CBR",193.1,85.4,FALSE
+"113031269","Wagga Wagga - South","New South Wales",23259,"ABX",91.5,"CBR",191.9,100.4,FALSE
+"113031270","Wagga Wagga - West","New South Wales",11596,"ABX",89,"CBR",193.2,104.2,FALSE
+"113031271","Wagga Wagga Surrounds","New South Wales",18748,"ABX",108.7,"CBR",209,100.2,FALSE
+"114011272","Berry - Kangaroo Valley","New South Wales",9523,"ABX",308.9,"SYD",127.2,-181.7,FALSE
+"114011273","Callala Bay - Currarong","New South Wales",3588,"ABX",348,"SYD",154.1,-193.9,FALSE
+"114011274","Culburra Beach","New South Wales",5039,"ABX",340,"SYD",146,-193.9,FALSE
+"114011275","Ettrema - Sassafras - Budawang","New South Wales",62,"ABX",318.5,"CBR",134.1,-184.4,FALSE
+"114011276","Huskisson - Vincentia","New South Wales",5048,"ABX",349.2,"SYD",162.1,-187.1,FALSE
+"114011277","North Nowra - Bomaderry","New South Wales",16548,"ABX",320.5,"SYD",133.3,-187.2,FALSE
+"114011278","Nowra","New South Wales",23716,"ABX",331.8,"SYD",137.9,-193.9,FALSE
+"114011279","St Georges Basin - Erowal Bay","New South Wales",15444,"ABX",345.9,"CBR",161.6,-184.4,FALSE
+"114011280","Sussex Inlet - Berrara","New South Wales",4962,"ABX",353.1,"CBR",168.8,-184.4,FALSE
+"114011281","Tomerong - Wandandian - Woollamia","New South Wales",3860,"ABX",347.8,"CBR",163.4,-184.4,FALSE
+"114011282","Ulladulla","New South Wales",17567,"ABX",360.5,"CBR",165.6,-194.9,FALSE
+"114011283","Ulladulla Surrounds","New South Wales",6047,"ABX",370.6,"CBR",175.7,-194.9,FALSE
+"114021284","Bowral","New South Wales",13404,"ABX",275.8,"SYD",81.5,-194.4,FALSE
+"114021285","Hill Top - Colo Vale","New South Wales",6602,"ABX",283.7,"SYD",75.7,-207.9,FALSE
+"114021286","Mittagong","New South Wales",11381,"ABX",282.5,"SYD",76.2,-206.3,FALSE
+"114021287","Moss Vale - Berrima","New South Wales",11142,"ABX",267.4,"SYD",87,-180.4,FALSE
+"114021288","Robertson - Fitzroy Falls","New South Wales",3899,"ABX",282.7,"SYD",99,-183.7,FALSE
+"114021289","Southern Highlands","New South Wales",7453,"ABX",278.9,"SYD",104.4,-174.4,FALSE
+"123031445","Bargo","New South Wales",6278,"ABX",287,"SYD",63.6,-223.5,FALSE
+"123031447","Picton - Tahmoor - Buxton","New South Wales",22603,"ABX",299,"SYD",69.1,-229.9,FALSE
+"123031448","The Oaks - Oakdale","New South Wales",10429,"ABX",321.5,"SYD",69.9,-251.6,FALSE
+"124021456","Blue Mountains - South","New South Wales",7,"ABX",416.7,"SYD",232.3,-184.5,FALSE
+"201011001","Alfredton","Victoria",20825,"ABX",283.6,"MEL",92.9,-190.7,FALSE
+"201011002","Ballarat","Victoria",11668,"ABX",273.9,"MEL",83.2,-190.7,FALSE
+"201011005","Buninyong","Victoria",7384,"ABX",279.5,"MEL",88.7,-190.7,FALSE
+"201011006","Delacombe","Victoria",15255,"ABX",284.3,"MEL",93.5,-190.7,FALSE
+"201011007","Smythes Creek","Victoria",4250,"ABX",288.4,"MEL",97.6,-190.7,FALSE
+"201011008","Wendouree - Miners Rest","Victoria",15548,"ABX",272.4,"MEL",81.6,-190.7,FALSE
+"201011481","Ballarat East - Warrenheip","Victoria",9771,"ABX",264.5,"MEL",73.8,-190.7,FALSE
+"201011482","Ballarat North - Invermay","Victoria",15204,"ABX",274.3,"MEL",83.6,-190.7,FALSE
+"201011483","Canadian - Mount Clear","Victoria",12518,"ABX",275.9,"MEL",85.1,-190.7,FALSE
+"201011484","Sebastopol - Redan","Victoria",12766,"ABX",279.2,"MEL",88.4,-190.7,FALSE
+"201021009","Bacchus Marsh Surrounds","Victoria",6770,"ABX",256.3,"MEL",65.6,-190.7,FALSE
+"201021010","Creswick - Clunes","Victoria",8038,"ABX",282.9,"MEL",97,-186,FALSE
+"201021011","Daylesford","Victoria",10342,"ABX",244.9,"MEL",84.8,-160.1,FALSE
+"201021012","Gordon (Vic.)","Victoria",6557,"ABX",268.6,"MEL",77.9,-190.7,FALSE
+"201031013","Avoca","Victoria",3609,"ABX",318.1,"MEL",136.8,-181.3,FALSE
+"201031014","Beaufort","Victoria",4816,"ABX",298.7,"MEL",107.9,-190.7,FALSE
+"201031015","Golden Plains - North","Victoria",5021,"ABX",311.4,"MEL",120.7,-190.7,FALSE
+"201031016","Maryborough (Vic.)","Victoria",8229,"ABX",280.5,"MEL",127,-153.5,FALSE
+"201031017","Maryborough Surrounds","Victoria",5714,"ABX",275.9,"MEL",134.8,-141.1,FALSE
+"202011018","Bendigo","Victoria",14457,"ABX",216.4,"MEL",106.5,-109.8,FALSE
+"202011019","California Gully - Eaglehawk","Victoria",13523,"ABX",218.7,"MEL",111.1,-107.5,FALSE
+"202011020","East Bendigo - Kennington","Victoria",13941,"ABX",207.9,"MEL",108.8,-99.1,FALSE
+"202011021","Flora Hill - Spring Gully","Victoria",9534,"ABX",215.5,"MEL",103.5,-112,FALSE
+"202011022","Kangaroo Flat - Golden Square","Victoria",21369,"ABX",224.3,"MEL",92.2,-132.1,FALSE
+"202011023","Maiden Gully","Victoria",5869,"ABX",224,"MEL",100.9,-123.1,FALSE
+"202011024","Strathfieldsaye","Victoria",11705,"ABX",205.1,"MEL",112.3,-92.8,FALSE
+"202011025","White Hills - Ascot","Victoria",16095,"ABX",208.3,"MEL",119.6,-88.7,FALSE
+"202021026","Bendigo Surrounds - South","Victoria",9094,"ABX",235.3,"MEL",95.1,-140.1,FALSE
+"202021027","Castlemaine","Victoria",11640,"ABX",233.6,"MEL",80.8,-152.8,FALSE
+"202021028","Castlemaine Surrounds","Victoria",9675,"ABX",215.4,"MEL",80.9,-134.5,FALSE
+"202021029","Heathcote","Victoria",5382,"ABX",183.7,"MEL",95.4,-88.4,FALSE
+"202021030","Kyneton","Victoria",10665,"ABX",214,"MEL",55.5,-158.5,FALSE
+"202021031","Woodend","Victoria",8084,"ABX",207.1,"MEL",47.1,-160,FALSE
+"202031032","Bendigo Surrounds - North","Victoria",5505,"ABX",211.8,"MEL",133.1,-78.7,FALSE
+"202031033","Loddon","Victoria",7231,"ABX",249,"MEL",149.8,-99.2,FALSE
+"203011034","Bannockburn","Victoria",8395,"ABX",270,"MEL",79.2,-190.7,FALSE
+"203011035","Golden Plains - South","Victoria",8954,"ABX",291.5,"MEL",100.7,-190.7,FALSE
+"203011036","Winchelsea","Victoria",7079,"ABX",274.9,"MEL",84.2,-190.7,FALSE
+"203021037","Belmont","Victoria",15227,"ABX",264.4,"MEL",73.7,-190.7,FALSE
+"203021039","Geelong","Victoria",13719,"ABX",266,"MEL",75.3,-190.7,FALSE
+"203021040","Geelong West - Hamlyn Heights","Victoria",22415,"ABX",256.8,"MEL",66.1,-190.7,FALSE
+"203021042","Highton","Victoria",25794,"ABX",257,"MEL",66.3,-190.7,FALSE
+"203021043","Lara","Victoria",23952,"ABX",253.3,"MEL",62.5,-190.7,FALSE
+"203021044","Leopold","Victoria",13869,"ABX",278.7,"MEL",88,-190.7,FALSE
+"203021045","Newcomb - Moolap","Victoria",15187,"ABX",271.2,"MEL",80.5,-190.7,FALSE
+"203021046","Newtown (Vic.)","Victoria",10393,"ABX",259.2,"MEL",68.5,-190.7,FALSE
+"203021047","North Geelong - Bell Park","Victoria",15724,"ABX",252.8,"MEL",62.1,-190.7,FALSE
+"203021485","Charlemont","Victoria",15110,"ABX",268.7,"MEL",78,-190.7,FALSE
+"203021486","Corio - Lovely Banks","Victoria",18486,"ABX",253.9,"MEL",63.2,-190.7,FALSE
+"203021487","Grovedale - Mount Duneed","Victoria",28585,"ABX",261.3,"MEL",70.5,-190.7,FALSE
+"203021488","Norlane","Victoria",8833,"ABX",249.5,"MEL",58.8,-190.7,FALSE
+"203031048","Clifton Springs","Victoria",17912,"ABX",287.4,"MEL",96.6,-190.7,FALSE
+"203031049","Lorne - Anglesea","Victoria",6307,"ABX",304.6,"MEL",113.8,-190.7,FALSE
+"203031051","Portarlington","Victoria",10874,"ABX",299.9,"MEL",109.1,-190.7,FALSE
+"203031052","Point Lonsdale - Queenscliff","Victoria",6053,"ABX",294.5,"MEL",103.8,-190.7,FALSE
+"203031053","Torquay","Victoria",26581,"ABX",273.7,"MEL",82.9,-190.7,FALSE
+"203031489","Barwon Heads - Armstrong Creek","Victoria",15749,"ABX",274,"MEL",83.3,-190.7,FALSE
+"203031490","Ocean Grove","Victoria",20792,"ABX",285.8,"MEL",95.1,-190.7,FALSE
+"204011054","Alexandra","Victoria",6849,"ABX",166.8,"MEL",122.8,-44,FALSE
+"204011055","Euroa","Victoria",6880,"ABX",111.3,"MEL",108.8,-2.5,FALSE
+"204011056","Kilmore - Broadford","Victoria",16694,"ABX",158.5,"MEL",56.3,-102.2,FALSE
+"204011057","Mansfield (Vic.)","Victoria",11324,"ABX",184.7,"MEL",208.4,23.7,FALSE
+"204011058","Nagambie","Victoria",4936,"ABX",135.4,"MEL",88.9,-46.4,FALSE
+"204011059","Seymour","Victoria",6911,"ABX",146.2,"MEL",74.9,-71.3,FALSE
+"204011060","Seymour Surrounds","Victoria",4488,"ABX",175.5,"MEL",84.3,-91.2,FALSE
+"204011061","Upper Yarra Valley","Victoria",236,"ABX",257.4,"MEL",171.1,-86.3,FALSE
+"204011062","Yea","Victoria",4368,"ABX",163.5,"MEL",84.5,-78.9,FALSE
+"204021063","Benalla","Victoria",10861,"ABX",81.9,"MEL",136.4,54.5,FALSE
+"204021064","Benalla Surrounds","Victoria",3809,"ABX",86,"MEL",145.2,59.2,FALSE
+"204021065","Rutherglen","Victoria",4120,"ABX",45,"MEL",180,135,FALSE
+"204021066","Wangaratta","Victoria",20019,"ABX",58.9,"MEL",155.3,96.4,FALSE
+"204021067","Wangaratta Surrounds","Victoria",10070,"ABX",90.9,"MEL",177.3,86.4,FALSE
+"204031068","Beechworth","Victoria",4962,"ABX",54,"MEL",184.9,130.8,FALSE
+"204031069","Bright - Mount Beauty","Victoria",8976,"ABX",119.8,"MEL",240.9,121.1,FALSE
+"204031070","Chiltern - Indigo Valley","Victoria",3257,"ABX",25.8,"MEL",182.8,157,FALSE
+"204031071","Myrtleford","Victoria",4635,"ABX",72.9,"MEL",205.9,133,FALSE
+"204031072","Towong","Victoria",6155,"ABX",121.3,"MEL",315.5,194.2,FALSE
+"204031073","West Wodonga","Victoria",15495,"ABX",47.4,"MEL",213.6,166.1,FALSE
+"204031075","Yackandandah","Victoria",5498,"ABX",40,"MEL",225.4,185.5,FALSE
+"204031491","Baranduda - Leneva","Victoria",14578,"ABX",21.5,"MEL",207.1,185.6,FALSE
+"204031492","Wodonga","Victoria",14644,"ABX",12,"MEL",192.6,180.6,FALSE
+"205011076","Drouin","Victoria",22118,"ABX",282.3,"MEL",101,-181.3,FALSE
+"205011077","Mount Baw Baw Region","Victoria",6750,"ABX",290.4,"MEL",152.5,-137.9,FALSE
+"205011078","Trafalgar (Vic.)","Victoria",8618,"ABX",298.5,"MEL",120.3,-178.2,FALSE
+"205011079","Warragul","Victoria",25392,"ABX",294.4,"MEL",112.4,-182.1,FALSE
+"205021081","Bairnsdale","Victoria",15917,"ABX",232.3,"MEL",242.7,10.4,FALSE
+"205021082","Bruthen - Omeo","Victoria",8651,"ABX",213.1,"MEL",374.8,161.7,FALSE
+"205021084","Lakes Entrance","Victoria",11331,"ABX",234,"MEL",261.2,27.2,FALSE
+"205021085","Orbost","Victoria",6727,"ABX",338.2,"CBR",254.5,-83.7,FALSE
+"205021086","Paynesville","Victoria",7190,"ABX",258.8,"MEL",237.9,-20.9,FALSE
+"205031087","Foster","Victoria",9631,"ABX",353.4,"MEL",166,-187.3,FALSE
+"205031088","French Island","Victoria",133,"ABX",288.5,"MEL",88.1,-200.5,TRUE
+"205031089","Korumburra","Victoria",10007,"ABX",307.1,"MEL",119.8,-187.3,FALSE
+"205031090","Leongatha","Victoria",11699,"ABX",327.8,"MEL",140.5,-187.3,FALSE
+"205031091","Phillip Island","Victoria",14795,"ABX",333,"MEL",145.7,-187.3,FALSE
+"205031092","Wilsons Promontory","Victoria",15,"ABX",375.7,"MEL",188.4,-187.3,FALSE
+"205031093","Wonthaggi - Inverloch","Victoria",29333,"ABX",318.3,"MEL",131,-187.3,FALSE
+"205041094","Churchill","Victoria",12325,"ABX",334.2,"MEL",156,-178.2,FALSE
+"205041095","Moe - Newborough","Victoria",17640,"ABX",310.4,"MEL",132.3,-178.2,FALSE
+"205041096","Morwell","Victoria",14487,"ABX",325.3,"MEL",147.1,-178.2,FALSE
+"205041098","Yallourn North - Glengarry","Victoria",4972,"ABX",324.4,"MEL",164.8,-159.6,FALSE
+"205041493","Traralgon - East","Victoria",12362,"ABX",324.4,"MEL",159.2,-165.2,FALSE
+"205041494","Traralgon - West","Victoria",17236,"ABX",322.7,"MEL",144.6,-178.2,FALSE
+"205051099","Alps - West","Victoria",23,"ABX",419,"MEL",335.8,-83.2,FALSE
+"205051100","Longford - Loch Sport","Victoria",4993,"ABX",313.9,"MEL",205.2,-108.7,FALSE
+"205051101","Maffra","Victoria",15549,"ABX",315.7,"MEL",211.4,-104.3,FALSE
+"205051102","Rosedale","Victoria",5020,"ABX",309.6,"MEL",172.5,-137.1,FALSE
+"205051103","Sale","Victoria",15232,"ABX",298.4,"MEL",189.3,-109,FALSE
+"205051104","Yarram","Victoria",5587,"ABX",352.7,"MEL",196.2,-156.5,FALSE
+"206011106","Brunswick East","Victoria",14693,"ABX",208.8,"MEL",25.6,-183.2,FALSE
+"206011107","Brunswick West","Victoria",15988,"ABX",207.1,"MEL",20.2,-186.8,FALSE
+"206011109","Pascoe Vale South","Victoria",10907,"ABX",204.6,"MEL",15.9,-188.6,FALSE
+"206011495","Brunswick - North","Victoria",15255,"ABX",207,"MEL",22.1,-184.9,FALSE
+"206011496","Brunswick - South","Victoria",15366,"ABX",210.1,"MEL",22.5,-187.6,FALSE
+"206011497","Coburg - East","Victoria",14457,"ABX",202.4,"MEL",20.8,-181.7,FALSE
+"206011498","Coburg - West","Victoria",14989,"ABX",203.7,"MEL",17.9,-185.8,FALSE
+"206021110","Alphington - Fairfield","Victoria",9749,"ABX",213.1,"MEL",34.4,-178.7,FALSE
+"206021112","Thornbury","Victoria",20234,"ABX",210.4,"MEL",30.7,-179.7,FALSE
+"206021499","Northcote - East","Victoria",15969,"ABX",213,"MEL",32.2,-180.8,FALSE
+"206021500","Northcote - West","Victoria",11026,"ABX",209.2,"MEL",28.4,-180.8,FALSE
+"206031113","Ascot Vale","Victoria",16398,"ABX",211.9,"MEL",19.5,-192.4,FALSE
+"206031115","Flemington","Victoria",9935,"ABX",214.5,"MEL",22.1,-192.4,FALSE
+"206031116","Moonee Ponds","Victoria",17965,"ABX",210.2,"MEL",17.7,-192.4,FALSE
+"206031501","Essendon (West) - Aberfeldie","Victoria",17119,"ABX",205.5,"MEL",13.1,-192.4,FALSE
+"206031502","Essendon - East","Victoria",13196,"ABX",207.2,"MEL",14.7,-192.4,FALSE
+"206041117","Carlton","Victoria",25267,"ABX",215.7,"MEL",27.7,-188,FALSE
+"206041118","Docklands","Victoria",19139,"ABX",220.4,"MEL",27.9,-192.4,FALSE
+"206041119","East Melbourne","Victoria",5245,"ABX",220.5,"MEL",31.3,-189.1,FALSE
+"206041120","Flemington Racecourse","Victoria",78,"ABX",215.3,"MEL",22.8,-192.4,FALSE
+"206041121","Kensington (Vic.)","Victoria",12423,"ABX",216.8,"MEL",24.4,-192.4,FALSE
+"206041124","Parkville","Victoria",8280,"ABX",214,"MEL",21.5,-192.4,FALSE
+"206041125","South Yarra - West","Victoria",6894,"ABX",225.6,"MEL",35.1,-190.5,FALSE
+"206041503","Melbourne CBD - East","Victoria",14266,"ABX",217.7,"MEL",28,-189.7,FALSE
+"206041504","Melbourne CBD - North","Victoria",24296,"ABX",218.2,"MEL",26.1,-192,FALSE
+"206041505","Melbourne CBD - West","Victoria",22163,"ABX",220.4,"MEL",28.6,-191.8,FALSE
+"206041506","North Melbourne","Victoria",19286,"ABX",215.8,"MEL",23.4,-192.4,FALSE
+"206041508","Southbank (West) - South Wharf","Victoria",8122,"ABX",221.8,"MEL",29.3,-192.4,FALSE
+"206041509","Southbank - East","Victoria",19552,"ABX",230.8,"MEL",40.1,-190.7,FALSE
+"206041510","West Melbourne - Residential","Victoria",9699,"ABX",218.1,"MEL",25.6,-192.4,FALSE
+"206051128","Albert Park","Victoria",17253,"ABX",227.8,"MEL",35.3,-192.4,FALSE
+"206051129","Elwood","Victoria",16056,"ABX",237.5,"MEL",45.1,-192.4,FALSE
+"206051130","Port Melbourne","Victoria",16927,"ABX",225.5,"MEL",33.1,-192.4,FALSE
+"206051134","St Kilda East","Victoria",17380,"ABX",234.9,"MEL",42.9,-192,FALSE
+"206051511","Port Melbourne Industrial","Victoria",3148,"ABX",221.7,"MEL",29.2,-192.4,FALSE
+"206051512","South Melbourne","Victoria",13132,"ABX",224.1,"MEL",31.7,-192.4,FALSE
+"206051513","St Kilda - Central","Victoria",14012,"ABX",232,"MEL",40,-192,FALSE
+"206051514","St Kilda - West","Victoria",16298,"ABX",232.2,"MEL",39.8,-192.4,FALSE
+"206061135","Armadale","Victoria",10032,"ABX",233.3,"MEL",42.6,-190.7,FALSE
+"206061136","Prahran - Windsor","Victoria",21112,"ABX",230.5,"MEL",39.4,-191.1,FALSE
+"206061138","Toorak","Victoria",13610,"ABX",229.9,"MEL",39.3,-190.7,FALSE
+"206061515","South Yarra - North","Victoria",13779,"ABX",226.8,"MEL",37.5,-189.2,FALSE
+"206061516","South Yarra - South","Victoria",10440,"ABX",229.2,"MEL",39.3,-189.9,FALSE
+"206071139","Abbotsford","Victoria",10316,"ABX",220.5,"MEL",34.5,-186,FALSE
+"206071140","Carlton North - Princes Hill","Victoria",8828,"ABX",211.9,"MEL",25.7,-186.2,FALSE
+"206071141","Collingwood","Victoria",11383,"ABX",218.5,"MEL",32.4,-186.1,FALSE
+"206071142","Fitzroy","Victoria",12135,"ABX",216.5,"MEL",30.3,-186.2,FALSE
+"206071143","Fitzroy North","Victoria",13749,"ABX",211.7,"MEL",27.8,-183.9,FALSE
+"206071145","Clifton Hill - Alphington","Victoria",11419,"ABX",217.2,"MEL",34.4,-182.8,FALSE
+"206071517","Richmond (South) - Cremorne","Victoria",19225,"ABX",225.6,"MEL",36.4,-189.1,FALSE
+"206071518","Richmond - North","Victoria",15303,"ABX",223.8,"MEL",36.1,-187.8,FALSE
+"207011146","Ashburton (Vic.)","Victoria",8471,"ABX",236.6,"MEL",47.4,-189.2,FALSE
+"207011147","Balwyn","Victoria",16868,"ABX",224.4,"MEL",44.3,-180,FALSE
+"207011148","Balwyn North","Victoria",22454,"ABX",222.7,"MEL",44.2,-178.5,FALSE
+"207011149","Camberwell","Victoria",22052,"ABX",230.5,"MEL",46.9,-183.6,FALSE
+"207011150","Glen Iris - East","Victoria",17650,"ABX",234.1,"MEL",47.1,-187,FALSE
+"207011152","Hawthorn East","Victoria",17541,"ABX",230.1,"MEL",43.4,-186.7,FALSE
+"207011154","Kew East","Victoria",6759,"ABX",220.5,"MEL",37.2,-183.3,FALSE
+"207011155","Surrey Hills (West) - Canterbury","Victoria",16229,"ABX",228.4,"MEL",48.4,-180,FALSE
+"207011519","Hawthorn - North","Victoria",10910,"ABX",225.7,"MEL",40.4,-185.3,FALSE
+"207011520","Hawthorn - South","Victoria",13562,"ABX",229.2,"MEL",41.6,-187.6,FALSE
+"207011521","Kew - South","Victoria",12306,"ABX",224.9,"MEL",41.6,-183.3,FALSE
+"207011522","Kew - West","Victoria",13799,"ABX",220.4,"MEL",37.1,-183.3,FALSE
+"207021156","Bulleen","Victoria",11810,"ABX",217.4,"MEL",38.8,-178.5,FALSE
+"207021157","Doncaster","Victoria",28353,"ABX",224.6,"MEL",46,-178.5,FALSE
+"207021159","Templestowe","Victoria",17442,"ABX",219.8,"MEL",41.3,-178.5,FALSE
+"207021160","Templestowe Lower","Victoria",14695,"ABX",221.2,"MEL",42.6,-178.5,FALSE
+"207021424","Doncaster East - North","Victoria",16642,"ABX",225.3,"MEL",46.7,-178.5,FALSE
+"207021425","Doncaster East - South","Victoria",16983,"ABX",228.2,"MEL",49.7,-178.5,FALSE
+"207031161","Blackburn","Victoria",23732,"ABX",230.2,"MEL",51.7,-178.5,FALSE
+"207031162","Blackburn South","Victoria",11072,"ABX",234.5,"MEL",55.9,-178.5,FALSE
+"207031163","Box Hill","Victoria",27206,"ABX",230.4,"MEL",51.9,-178.5,FALSE
+"207031164","Box Hill North","Victoria",19760,"ABX",225.6,"MEL",47,-178.5,FALSE
+"207031165","Burwood (Vic.)","Victoria",15480,"ABX",235.7,"MEL",53.1,-182.6,FALSE
+"207031166","Burwood East","Victoria",12460,"ABX",236.9,"MEL",57,-179.8,FALSE
+"207031167","Surrey Hills (East) - Mont Albert","Victoria",10776,"ABX",229.8,"MEL",50.9,-178.9,FALSE
+"208011168","Beaumaris","Victoria",14486,"ABX",257.6,"MEL",66.7,-190.8,FALSE
+"208011169","Brighton (Vic.)","Victoria",24340,"ABX",243.1,"MEL",51.1,-192,FALSE
+"208011170","Brighton East","Victoria",17486,"ABX",244.1,"MEL",53.5,-190.7,FALSE
+"208011171","Highett (West) - Cheltenham","Victoria",13257,"ABX",252.9,"MEL",62.3,-190.7,FALSE
+"208011172","Hampton","Victoria",19524,"ABX",249.7,"MEL",58.5,-191.2,FALSE
+"208011173","Sandringham - Black Rock","Victoria",18071,"ABX",252.5,"MEL",61.9,-190.7,FALSE
+"208021174","Bentleigh - McKinnon","Victoria",26966,"ABX",245.8,"MEL",55.1,-190.7,FALSE
+"208021176","Carnegie","Victoria",21266,"ABX",241.7,"MEL",51.1,-190.7,FALSE
+"208021177","Caulfield - North","Victoria",24635,"ABX",236.9,"MEL",46.3,-190.6,FALSE
+"208021178","Caulfield - South","Victoria",19226,"ABX",240.1,"MEL",49.4,-190.7,FALSE
+"208021179","Elsternwick","Victoria",12827,"ABX",240.2,"MEL",48.2,-192,FALSE
+"208021180","Hughesdale","Victoria",8132,"ABX",243.3,"MEL",52.6,-190.7,FALSE
+"208021181","Murrumbeena","Victoria",10126,"ABX",245.6,"MEL",55,-190.7,FALSE
+"208021182","Ormond - Glen Huntly","Victoria",15157,"ABX",241.6,"MEL",51,-190.7,FALSE
+"208021426","Bentleigh East - North","Victoria",17873,"ABX",246.7,"MEL",56.1,-190.7,FALSE
+"208021427","Bentleigh East - South","Victoria",14949,"ABX",249.1,"MEL",58.5,-190.7,FALSE
+"208031183","Aspendale Gardens - Waterways","Victoria",9063,"ABX",258,"MEL",70.7,-187.3,FALSE
+"208031184","Braeside","Victoria",28,"ABX",259.4,"MEL",69.6,-189.8,FALSE
+"208031185","Carrum - Patterson Lakes","Victoria",12478,"ABX",256.6,"MEL",69.3,-187.3,FALSE
+"208031186","Chelsea - Bonbeach","Victoria",16058,"ABX",263.4,"MEL",76.1,-187.3,FALSE
+"208031187","Chelsea Heights","Victoria",5445,"ABX",259,"MEL",71.7,-187.3,FALSE
+"208031188","Highett (East) - Cheltenham","Victoria",26320,"ABX",256.3,"MEL",65.6,-190.7,FALSE
+"208031189","Edithvale - Aspendale","Victoria",14365,"ABX",264.4,"MEL",77.1,-187.3,FALSE
+"208031190","Mentone","Victoria",14155,"ABX",261.5,"MEL",70.8,-190.7,FALSE
+"208031191","Moorabbin - Heatherton","Victoria",9826,"ABX",256.5,"MEL",65.8,-190.7,FALSE
+"208031192","Moorabbin Airport","Victoria",26,"ABX",260.7,"MEL",70.1,-190.7,FALSE
+"208031193","Mordialloc - Parkdale","Victoria",22437,"ABX",260.6,"MEL",71.2,-189.4,FALSE
+"208041194","Malvern - Glen Iris","Victoria",21820,"ABX",233.6,"MEL",42.9,-190.7,FALSE
+"208041195","Malvern East","Victoria",23996,"ABX",240.3,"MEL",49.6,-190.7,FALSE
+"209011196","Bundoora - East","Victoria",10339,"ABX",201.6,"MEL",23,-178.5,FALSE
+"209011197","Greensborough","Victoria",21386,"ABX",203,"MEL",24.5,-178.5,FALSE
+"209011198","Heidelberg - Rosanna","Victoria",16925,"ABX",209.8,"MEL",31.3,-178.5,FALSE
+"209011199","Heidelberg West","Victoria",17224,"ABX",208.4,"MEL",30,-178.4,FALSE
+"209011200","Ivanhoe","Victoria",13188,"ABX",214.3,"MEL",35.9,-178.4,FALSE
+"209011201","Ivanhoe East - Eaglemont","Victoria",8169,"ABX",215.9,"MEL",37.3,-178.5,FALSE
+"209011202","Montmorency - Briar Hill","Victoria",17042,"ABX",210.5,"MEL",32,-178.5,FALSE
+"209011203","Viewbank - Yallambie","Victoria",18993,"ABX",210,"MEL",31.5,-178.5,FALSE
+"209011204","Watsonia","Victoria",9504,"ABX",202,"MEL",23.5,-178.5,FALSE
+"209021205","Kingsbury","Victoria",12932,"ABX",203.7,"MEL",25.2,-178.5,FALSE
+"209021428","Preston - East","Victoria",23403,"ABX",206.2,"MEL",27.8,-178.4,FALSE
+"209021429","Preston - West","Victoria",13610,"ABX",204.5,"MEL",23.1,-181.4,FALSE
+"209021523","Reservoir - North East","Victoria",16329,"ABX",199.8,"MEL",21.3,-178.5,FALSE
+"209021524","Reservoir - North West","Victoria",9751,"ABX",196.6,"MEL",18.3,-178.4,FALSE
+"209021525","Reservoir - South East","Victoria",14143,"ABX",202.8,"MEL",24.5,-178.4,FALSE
+"209021526","Reservoir - South West","Victoria",15350,"ABX",200.1,"MEL",21.7,-178.4,FALSE
+"209031209","Eltham","Victoria",23669,"ABX",214.3,"MEL",36.3,-178,FALSE
+"209031210","Hurstbridge","Victoria",3521,"ABX",200.8,"MEL",40.3,-160.5,FALSE
+"209031211","Kinglake","Victoria",4419,"ABX",187.5,"MEL",76.7,-110.8,FALSE
+"209031212","Panton Hill - St Andrews","Victoria",5130,"ABX",204,"MEL",46.5,-157.5,FALSE
+"209031213","Plenty - Yarrambat","Victoria",9579,"ABX",199.5,"MEL",28.5,-171,FALSE
+"209031214","Research - North Warrandyte","Victoria",7039,"ABX",209.8,"MEL",41,-168.7,FALSE
+"209031215","Wattle Glen - Diamond Creek","Victoria",14859,"ABX",204,"MEL",35.7,-168.3,FALSE
+"209041216","Bundoora - North","Victoria",8014,"ABX",197.4,"MEL",18.8,-178.5,FALSE
+"209041217","Bundoora - West","Victoria",6806,"ABX",198.8,"MEL",20.2,-178.5,FALSE
+"209041220","Mill Park - North","Victoria",17610,"ABX",202.4,"MEL",23.9,-178.5,FALSE
+"209041221","Mill Park - South","Victoria",11494,"ABX",200.7,"MEL",23.9,-176.8,FALSE
+"209041223","Thomastown","Victoria",20595,"ABX",195.1,"MEL",16.7,-178.4,FALSE
+"209041224","Wallan","Victoria",30342,"ABX",171.6,"MEL",49.6,-122.1,FALSE
+"209041225","Whittlesea","Victoria",18174,"ABX",179.8,"MEL",49.4,-130.4,FALSE
+"209041431","Epping - East","Victoria",13555,"ABX",192.1,"MEL",26.2,-165.9,FALSE
+"209041432","Epping - South","Victoria",8322,"ABX",188.9,"MEL",20.7,-168.3,FALSE
+"209041433","Epping (Vic.) - West","Victoria",12895,"ABX",190.2,"MEL",22.1,-168,FALSE
+"209041435","South Morang - North","Victoria",13259,"ABX",194.1,"MEL",33.7,-160.4,FALSE
+"209041436","South Morang - South","Victoria",13054,"ABX",197.8,"MEL",28.2,-169.6,FALSE
+"209041437","Wollert","Victoria",36658,"ABX",185.3,"MEL",28.7,-156.6,FALSE
+"209041527","Doreen - North","Victoria",17283,"ABX",189.7,"MEL",40.9,-148.8,FALSE
+"209041528","Doreen - South","Victoria",11947,"ABX",193.6,"MEL",37.5,-156.1,FALSE
+"209041529","Lalor - East","Victoria",10253,"ABX",197,"MEL",19.4,-177.7,FALSE
+"209041530","Lalor - West","Victoria",13925,"ABX",194,"MEL",21.3,-172.7,FALSE
+"209041531","Mernda - North","Victoria",12061,"ABX",187.3,"MEL",36.4,-150.9,FALSE
+"209041532","Mernda - South","Victoria",13854,"ABX",189.5,"MEL",35.7,-153.8,FALSE
+"210011226","Airport West","Victoria",8783,"ABX",203.3,"MEL",11.1,-192.2,FALSE
+"210011227","Essendon Airport","Victoria",14,"ABX",202.2,"MEL",9.8,-192.4,FALSE
+"210011228","Keilor","Victoria",8732,"ABX",202.2,"MEL",11.2,-191,FALSE
+"210011230","Niddrie - Essendon West","Victoria",8048,"ABX",205.8,"MEL",13.4,-192.4,FALSE
+"210011231","Strathmore","Victoria",10536,"ABX",205.8,"MEL",16.6,-189.2,FALSE
+"210011533","Avondale Heights","Victoria",12861,"ABX",208.6,"MEL",17.9,-190.7,FALSE
+"210011534","Keilor East","Victoria",15645,"ABX",203.4,"MEL",12.7,-190.7,FALSE
+"210021232","Gisborne","Victoria",15959,"ABX",220.4,"MEL",43.2,-177.3,FALSE
+"210021233","Macedon","Victoria",3615,"ABX",214.9,"MEL",44.1,-170.7,FALSE
+"210021234","Riddells Creek","Victoria",4589,"ABX",208.2,"MEL",45.5,-162.7,FALSE
+"210021235","Romsey","Victoria",11567,"ABX",189.2,"MEL",39.1,-150.1,FALSE
+"210031236","Coburg North","Victoria",8932,"ABX",199.2,"MEL",17.5,-181.7,FALSE
+"210031237","Fawkner","Victoria",15096,"ABX",196.5,"MEL",14.9,-181.7,FALSE
+"210031439","Gowanbrae","Victoria",3215,"ABX",203.3,"MEL",14.1,-189.2,FALSE
+"210031440","Hadfield","Victoria",6650,"ABX",198.3,"MEL",15.7,-182.6,FALSE
+"210031535","Glenroy - East","Victoria",15762,"ABX",200.4,"MEL",13.4,-187.1,FALSE
+"210031536","Glenroy - West","Victoria",9563,"ABX",204.1,"MEL",11.2,-192.9,FALSE
+"210031537","Oak Park","Victoria",8559,"ABX",205.3,"MEL",14,-191.3,FALSE
+"210031538","Pascoe Vale","Victoria",18674,"ABX",202,"MEL",16.7,-185.3,FALSE
+"210041240","Sunbury","Victoria",15364,"ABX",202.7,"MEL",26.8,-175.9,FALSE
+"210041539","Diggers Rest","Victoria",7434,"ABX",218.5,"MEL",28.6,-189.9,FALSE
+"210041540","Sunbury - South","Victoria",17683,"ABX",211.9,"MEL",22.9,-189,FALSE
+"210041541","Sunbury - West","Victoria",11497,"ABX",218,"MEL",33,-184.9,FALSE
+"210051242","Broadmeadows","Victoria",14972,"ABX",199.2,"MEL",12.4,-186.7,FALSE
+"210051243","Campbellfield - Coolaroo","Victoria",16386,"ABX",192.8,"MEL",16.5,-176.3,FALSE
+"210051245","Gladstone Park - Westmeadows","Victoria",18285,"ABX",201.1,"MEL",7.1,-194,FALSE
+"210051246","Greenvale - Bulla","Victoria",26757,"ABX",193.4,"MEL",10.2,-183.2,FALSE
+"210051247","Meadow Heights","Victoria",14841,"ABX",195.7,"MEL",17.8,-177.9,FALSE
+"210051248","Melbourne Airport","Victoria",130,"ABX",206.9,"MEL",10,-197,FALSE
+"210051250","Tullamarine","Victoria",6727,"ABX",203,"MEL",8.6,-194.4,FALSE
+"210051441","Craigieburn - Central","Victoria",8172,"ABX",185.6,"MEL",24.2,-161.4,FALSE
+"210051442","Craigieburn - North","Victoria",12846,"ABX",184.8,"MEL",23.9,-160.8,FALSE
+"210051443","Craigieburn - South","Victoria",24431,"ABX",188.4,"MEL",23.7,-164.7,FALSE
+"210051445","Mickleham - Yuroke","Victoria",39389,"ABX",184.9,"MEL",21.5,-163.3,FALSE
+"210051542","Craigieburn - North West","Victoria",11293,"ABX",187.2,"MEL",22.6,-164.7,FALSE
+"210051543","Craigieburn - West","Victoria",14970,"ABX",188,"MEL",20.2,-167.8,FALSE
+"210051544","Roxburgh Park (South) - Somerton","Victoria",9699,"ABX",193.5,"MEL",19.4,-174.1,FALSE
+"210051545","Roxburgh Park - North","Victoria",15440,"ABX",188.9,"MEL",20.4,-168.4,FALSE
+"211011251","Bayswater","Victoria",13388,"ABX",239.2,"MEL",63,-176.2,FALSE
+"211011254","Knoxfield - Scoresby","Victoria",17232,"ABX",242.3,"MEL",61.1,-181.2,FALSE
+"211011255","Lysterfield","Victoria",6622,"ABX",252.9,"MEL",68.2,-184.7,FALSE
+"211011256","Rowville - Central","Victoria",15771,"ABX",246.7,"MEL",63.5,-183.2,FALSE
+"211011257","Rowville - North","Victoria",7827,"ABX",249.6,"MEL",67.5,-182,FALSE
+"211011258","Rowville - South","Victoria",10578,"ABX",246.1,"MEL",61.4,-184.7,FALSE
+"211011259","Wantirna","Victoria",14634,"ABX",237.8,"MEL",59.3,-178.5,FALSE
+"211011260","Wantirna South","Victoria",18475,"ABX",238.8,"MEL",60.2,-178.5,FALSE
+"211011446","Boronia","Victoria",24763,"ABX",238.8,"MEL",66.7,-172.1,FALSE
+"211011447","Ferntree Gully - North","Victoria",14538,"ABX",243.1,"MEL",68.6,-174.4,FALSE
+"211011448","Ferntree Gully (South) - Upper Ferntree Gully","Victoria",15630,"ABX",249.9,"MEL",70.4,-179.5,FALSE
+"211011449","The Basin","Victoria",4336,"ABX",238.4,"MEL",70.9,-167.5,FALSE
+"211021261","Donvale - Park Orchards","Victoria",16894,"ABX",229.2,"MEL",58.2,-171,FALSE
+"211021262","Warrandyte - Wonga Park","Victoria",10229,"ABX",217.5,"MEL",46.7,-170.8,FALSE
+"211031263","Bayswater North","Victoria",12097,"ABX",235.2,"MEL",66.9,-168.3,FALSE
+"211031265","Croydon Hills - Warranwood","Victoria",18457,"ABX",231.1,"MEL",60.9,-170.2,FALSE
+"211031266","Ringwood","Victoria",19779,"ABX",232,"MEL",54.8,-177.2,FALSE
+"211031267","Ringwood East","Victoria",22164,"ABX",235.6,"MEL",59.9,-175.7,FALSE
+"211031268","Ringwood North","Victoria",9839,"ABX",228.6,"MEL",57.8,-170.8,FALSE
+"211031450","Croydon - East","Victoria",17345,"ABX",229.2,"MEL",64.7,-164.5,FALSE
+"211031451","Croydon - West","Victoria",14940,"ABX",229.1,"MEL",61.7,-167.4,FALSE
+"211031452","Croydon South","Victoria",5147,"ABX",233.2,"MEL",63.5,-169.6,FALSE
+"211041269","Forest Hill","Victoria",11256,"ABX",236.9,"MEL",58.4,-178.5,FALSE
+"211041270","Mitcham (Vic.)","Victoria",17496,"ABX",234.9,"MEL",56.4,-178.5,FALSE
+"211041271","Nunawading","Victoria",13247,"ABX",230.9,"MEL",52.4,-178.5,FALSE
+"211041272","Vermont","Victoria",11435,"ABX",235.9,"MEL",57.4,-178.5,FALSE
+"211041273","Vermont South","Victoria",12250,"ABX",239,"MEL",60.4,-178.5,FALSE
+"211051274","Belgrave - Selby","Victoria",9964,"ABX",256.6,"MEL",72.6,-184,FALSE
+"211051275","Chirnside Park","Victoria",12603,"ABX",218.8,"MEL",61,-157.8,FALSE
+"211051276","Healesville - Yarra Glen","Victoria",14116,"ABX",205,"MEL",72.8,-132.3,FALSE
+"211051277","Kilsyth","Victoria",10692,"ABX",232.1,"MEL",68.7,-163.4,FALSE
+"211051278","Lilydale - Coldstream","Victoria",20905,"ABX",215.7,"MEL",67.8,-147.9,FALSE
+"211051279","Monbulk - Silvan","Victoria",5840,"ABX",240,"MEL",90.9,-149.1,FALSE
+"211051280","Montrose","Victoria",6904,"ABX",231.6,"MEL",73.1,-158.5,FALSE
+"211051281","Mooroolbark","Victoria",24395,"ABX",222.9,"MEL",66.7,-156.2,FALSE
+"211051282","Mount Dandenong - Olinda","Victoria",9587,"ABX",245,"MEL",80.7,-164.3,FALSE
+"211051283","Mount Evelyn","Victoria",10043,"ABX",226.3,"MEL",74,-152.3,FALSE
+"211051284","Upwey - Tecoma","Victoria",9867,"ABX",251.2,"MEL",76.4,-174.8,FALSE
+"211051285","Wandin - Seville","Victoria",7996,"ABX",225.6,"MEL",77.7,-147.9,FALSE
+"211051286","Yarra Valley","Victoria",17087,"ABX",237.4,"MEL",99.5,-137.9,FALSE
+"212011289","Emerald - Cockatoo","Victoria",19043,"ABX",254.6,"MEL",99.3,-155.4,FALSE
+"212011546","Beaconsfield - Officer","Victoria",29524,"ABX",263.3,"MEL",76,-187.3,FALSE
+"212011547","Bunyip - Garfield","Victoria",10366,"ABX",268.7,"MEL",87.4,-181.3,FALSE
+"212011548","Koo Wee Rup","Victoria",12598,"ABX",279.1,"MEL",92.6,-186.5,FALSE
+"212011549","Pakenham - North East","Victoria",16593,"ABX",258.3,"MEL",83.7,-174.6,FALSE
+"212011550","Pakenham - North West","Victoria",10502,"ABX",265.3,"MEL",79,-186.3,FALSE
+"212011551","Pakenham - South East","Victoria",6778,"ABX",267.6,"MEL",80.3,-187.3,FALSE
+"212011552","Pakenham - South West","Victoria",28194,"ABX",261.2,"MEL",73.9,-187.3,FALSE
+"212021293","Berwick - North","Victoria",23637,"ABX",256.6,"MEL",69.3,-187.3,FALSE
+"212021295","Doveton","Victoria",12893,"ABX",247.5,"MEL",60.1,-187.3,FALSE
+"212021297","Hallam","Victoria",12009,"ABX",250.2,"MEL",62.9,-187.3,FALSE
+"212021299","Narre Warren North","Victoria",8237,"ABX",255.9,"MEL",68.6,-187.3,FALSE
+"212021453","Endeavour Hills - North","Victoria",12175,"ABX",248.5,"MEL",62.5,-186,FALSE
+"212021454","Endeavour Hills - South","Victoria",13539,"ABX",250.3,"MEL",63,-187.3,FALSE
+"212021455","Narre Warren - North East","Victoria",13618,"ABX",255.7,"MEL",68.4,-187.3,FALSE
+"212021456","Narre Warren - South West","Victoria",15484,"ABX",253,"MEL",65.7,-187.3,FALSE
+"212021553","Berwick - South East","Victoria",20765,"ABX",257.9,"MEL",70.6,-187.3,FALSE
+"212021554","Berwick - South West","Victoria",13243,"ABX",256.6,"MEL",69.3,-187.3,FALSE
+"212031300","Cranbourne","Victoria",22708,"ABX",262,"MEL",74.7,-187.3,FALSE
+"212031303","Cranbourne South","Victoria",27368,"ABX",268.8,"MEL",81.5,-187.3,FALSE
+"212031304","Cranbourne West","Victoria",25490,"ABX",257.5,"MEL",70.2,-187.3,FALSE
+"212031306","Lynbrook - Lyndhurst","Victoria",19545,"ABX",255.7,"MEL",68.4,-187.3,FALSE
+"212031308","Pearcedale - Tooradin","Victoria",8272,"ABX",271.6,"MEL",84.3,-187.3,FALSE
+"212031457","Narre Warren South - East","Victoria",13022,"ABX",257.7,"MEL",70.3,-187.3,FALSE
+"212031458","Narre Warren South - West","Victoria",17083,"ABX",256.8,"MEL",69.5,-187.3,FALSE
+"212031555","Clyde North - North","Victoria",13667,"ABX",261,"MEL",73.7,-187.3,FALSE
+"212031556","Clyde North - South","Victoria",28328,"ABX",266,"MEL",78.6,-187.3,FALSE
+"212031557","Cranbourne East - North","Victoria",25111,"ABX",266.4,"MEL",79.1,-187.3,FALSE
+"212031558","Cranbourne East - South","Victoria",15590,"ABX",265.2,"MEL",77.9,-187.3,FALSE
+"212031559","Cranbourne North - East","Victoria",13691,"ABX",262,"MEL",74.7,-187.3,FALSE
+"212031560","Cranbourne North - West","Victoria",12313,"ABX",259,"MEL",71.7,-187.3,FALSE
+"212031561","Hampton Park - East","Victoria",13393,"ABX",254.8,"MEL",67.5,-187.3,FALSE
+"212031562","Hampton Park - West","Victoria",13748,"ABX",251.6,"MEL",64.3,-187.3,FALSE
+"212041309","Clarinda - Oakleigh South","Victoria",11741,"ABX",251,"MEL",60.4,-190.7,FALSE
+"212041310","Clayton South","Victoria",15349,"ABX",251.3,"MEL",60.6,-190.7,FALSE
+"212041312","Dandenong North","Victoria",23391,"ABX",242.3,"MEL",55,-187.3,FALSE
+"212041313","Dingley Village","Victoria",10770,"ABX",258.4,"MEL",67.8,-190.7,FALSE
+"212041316","Noble Park North","Victoria",7593,"ABX",246.8,"MEL",58.3,-188.6,FALSE
+"212041317","Springvale","Victoria",24468,"ABX",249.9,"MEL",61.3,-188.6,FALSE
+"212041318","Springvale South","Victoria",13274,"ABX",251.9,"MEL",64.6,-187.3,FALSE
+"212041459","Noble Park - East","Victoria",13935,"ABX",247.5,"MEL",60.2,-187.3,FALSE
+"212041460","Noble Park - West","Victoria",20473,"ABX",249.8,"MEL",62.5,-187.3,FALSE
+"212041563","Dandenong - North","Victoria",23327,"ABX",248.4,"MEL",61.1,-187.3,FALSE
+"212041564","Dandenong - South","Victoria",10039,"ABX",252.9,"MEL",65.6,-187.3,FALSE
+"212041565","Keysborough - North","Victoria",15067,"ABX",248.4,"MEL",61.1,-187.3,FALSE
+"212041566","Keysborough - South","Victoria",17117,"ABX",251.8,"MEL",64.5,-187.3,FALSE
+"212051319","Ashwood - Chadstone","Victoria",21139,"ABX",240,"MEL",51.4,-188.6,FALSE
+"212051321","Glen Waverley - East","Victoria",22820,"ABX",241.5,"MEL",58.3,-183.2,FALSE
+"212051322","Glen Waverley - West","Victoria",23417,"ABX",244.7,"MEL",57.2,-187.4,FALSE
+"212051323","Mount Waverley - North","Victoria",17492,"ABX",236.9,"MEL",55.3,-181.7,FALSE
+"212051324","Mount Waverley - South","Victoria",20659,"ABX",241.2,"MEL",50.5,-190.7,FALSE
+"212051325","Mulgrave","Victoria",21072,"ABX",246.3,"MEL",55.6,-190.7,FALSE
+"212051326","Oakleigh - Huntingdale","Victoria",25427,"ABX",244.4,"MEL",53.7,-190.7,FALSE
+"212051327","Wheelers Hill","Victoria",21281,"ABX",243.1,"MEL",55.7,-187.4,FALSE
+"212051567","Clayton (North) - Notting Hill","Victoria",14911,"ABX",244.4,"MEL",53.8,-190.7,FALSE
+"212051568","Clayton - Central","Victoria",15483,"ABX",247.4,"MEL",56.8,-190.7,FALSE
+"213011328","Ardeer - Albion","Victoria",7955,"ABX",206.8,"MEL",16.1,-190.7,FALSE
+"213011329","Cairnlea","Victoria",10035,"ABX",209.4,"MEL",18.6,-190.7,FALSE
+"213011331","Delahey","Victoria",7859,"ABX",213.5,"MEL",22.8,-190.7,FALSE
+"213011332","Keilor Downs","Victoria",13080,"ABX",207.4,"MEL",16.7,-190.7,FALSE
+"213011333","Kings Park (Vic.)","Victoria",13956,"ABX",210.1,"MEL",19.4,-190.7,FALSE
+"213011334","St Albans - North","Victoria",21020,"ABX",208.2,"MEL",17.5,-190.7,FALSE
+"213011335","St Albans - South","Victoria",17705,"ABX",206,"MEL",15.2,-190.7,FALSE
+"213011336","Sunshine","Victoria",10151,"ABX",211.9,"MEL",21.2,-190.7,FALSE
+"213011337","Sunshine North","Victoria",12751,"ABX",205.9,"MEL",15.2,-190.7,FALSE
+"213011338","Sunshine West","Victoria",18693,"ABX",212.7,"MEL",21.9,-190.7,FALSE
+"213011339","Sydenham","Victoria",12025,"ABX",211.9,"MEL",21.2,-190.7,FALSE
+"213011340","Taylors Lakes","Victoria",16896,"ABX",208.1,"MEL",17.3,-190.7,FALSE
+"213011569","Deer Park","Victoria",18368,"ABX",208.5,"MEL",17.8,-190.7,FALSE
+"213011570","Derrimut","Victoria",8958,"ABX",211.5,"MEL",20.8,-190.7,FALSE
+"213021341","Altona","Victoria",14428,"ABX",221.4,"MEL",30.7,-190.7,FALSE
+"213021342","Altona Meadows","Victoria",18783,"ABX",222,"MEL",31.3,-190.7,FALSE
+"213021343","Altona North","Victoria",16493,"ABX",218.4,"MEL",27.7,-190.7,FALSE
+"213021344","Newport","Victoria",20328,"ABX",220.6,"MEL",29.8,-190.7,FALSE
+"213021345","Seabrook","Victoria",4932,"ABX",221.9,"MEL",31.1,-190.7,FALSE
+"213021346","Williamstown","Victoria",17102,"ABX",225.5,"MEL",34.8,-190.7,FALSE
+"213031347","Braybrook","Victoria",20916,"ABX",212.5,"MEL",21.7,-190.7,FALSE
+"213031348","Footscray","Victoria",20882,"ABX",218.5,"MEL",26,-192.4,FALSE
+"213031349","Maribyrnong","Victoria",13960,"ABX",213.6,"MEL",21.2,-192.4,FALSE
+"213031350","Seddon - Kingsville","Victoria",9748,"ABX",220.1,"MEL",27.7,-192.4,FALSE
+"213031351","West Footscray - Tottenham","Victoria",13007,"ABX",216.5,"MEL",25.8,-190.7,FALSE
+"213031352","Yarraville","Victoria",16159,"ABX",218.9,"MEL",28.2,-190.7,FALSE
+"213041353","Bacchus Marsh","Victoria",27182,"ABX",242.7,"MEL",52,-190.7,FALSE
+"213041358","Melton West","Victoria",22710,"ABX",231.3,"MEL",40.6,-190.7,FALSE
+"213041359","Rockbank - Mount Cottrell","Victoria",35856,"ABX",221.2,"MEL",30.5,-190.7,FALSE
+"213041360","Taylors Hill","Victoria",19874,"ABX",216.5,"MEL",25.8,-190.7,FALSE
+"213041461","Burnside","Victoria",6635,"ABX",213.2,"MEL",22.5,-190.7,FALSE
+"213041462","Burnside Heights","Victoria",6443,"ABX",217.6,"MEL",26.8,-190.7,FALSE
+"213041463","Caroline Springs","Victoria",20934,"ABX",217.3,"MEL",26.6,-190.7,FALSE
+"213041571","Brookfield","Victoria",10665,"ABX",229.5,"MEL",38.7,-190.7,FALSE
+"213041572","Cobblebank - Strathtulloh","Victoria",12885,"ABX",227.8,"MEL",37.1,-190.7,FALSE
+"213041573","Eynesbury - Exford","Victoria",4309,"ABX",229.8,"MEL",39,-190.7,FALSE
+"213041574","Fraser Rise - Plumpton","Victoria",24739,"ABX",220.5,"MEL",29.8,-190.7,FALSE
+"213041575","Hillside","Victoria",16173,"ABX",214.6,"MEL",23.9,-190.7,FALSE
+"213041576","Kurunjang - Toolern Vale","Victoria",12082,"ABX",225.8,"MEL",36.7,-189.1,FALSE
+"213041577","Melton","Victoria",8007,"ABX",222.6,"MEL",31.9,-190.7,FALSE
+"213041578","Melton South - Weir Views","Victoria",22821,"ABX",231,"MEL",40.3,-190.7,FALSE
+"213051361","Hoppers Crossing - North","Victoria",18359,"ABX",225,"MEL",34.3,-190.7,FALSE
+"213051362","Hoppers Crossing - South","Victoria",18906,"ABX",224.1,"MEL",33.4,-190.7,FALSE
+"213051363","Laverton","Victoria",12816,"ABX",212.6,"MEL",21.8,-190.7,FALSE
+"213051368","Werribee - South","Victoria",17936,"ABX",227.6,"MEL",36.9,-190.7,FALSE
+"213051464","Point Cook - East","Victoria",21797,"ABX",230.5,"MEL",39.7,-190.7,FALSE
+"213051466","Point Cook - South","Victoria",20835,"ABX",226.8,"MEL",36.1,-190.7,FALSE
+"213051467","Werribee - East","Victoria",19205,"ABX",228.4,"MEL",37.6,-190.7,FALSE
+"213051468","Werribee - West","Victoria",32943,"ABX",234.1,"MEL",43.4,-190.7,FALSE
+"213051579","Manor Lakes - Quandong","Victoria",13667,"ABX",239.6,"MEL",48.9,-190.7,FALSE
+"213051580","Point Cook - North East","Victoria",14746,"ABX",221.4,"MEL",30.7,-190.7,FALSE
+"213051581","Point Cook - North West","Victoria",10151,"ABX",222.5,"MEL",31.8,-190.7,FALSE
+"213051582","Tarneit (West) - Mount Cottrell","Victoria",19169,"ABX",230.3,"MEL",39.5,-190.7,FALSE
+"213051583","Tarneit - Central","Victoria",29246,"ABX",225.3,"MEL",34.6,-190.7,FALSE
+"213051584","Tarneit - North","Victoria",15880,"ABX",219.9,"MEL",29.2,-190.7,FALSE
+"213051585","Tarneit - South","Victoria",11864,"ABX",230,"MEL",39.2,-190.7,FALSE
+"213051586","Truganina - North","Victoria",15384,"ABX",214.8,"MEL",24.1,-190.7,FALSE
+"213051587","Truganina - South East","Victoria",10846,"ABX",218.1,"MEL",27.3,-190.7,FALSE
+"213051588","Truganina - South West","Victoria",20395,"ABX",220.3,"MEL",29.5,-190.7,FALSE
+"213051589","Wyndham Vale - North","Victoria",14515,"ABX",239.2,"MEL",48.5,-190.7,FALSE
+"213051590","Wyndham Vale - South","Victoria",14135,"ABX",234.7,"MEL",44,-190.7,FALSE
+"214011370","Carrum Downs","Victoria",23464,"ABX",257.8,"MEL",70.5,-187.3,FALSE
+"214011371","Frankston","Victoria",25043,"ABX",261,"MEL",73.7,-187.3,FALSE
+"214011372","Frankston North","Victoria",19794,"ABX",260.3,"MEL",73,-187.3,FALSE
+"214011373","Frankston South","Victoria",19374,"ABX",268,"MEL",80.7,-187.3,FALSE
+"214011374","Langwarrin","Victoria",25788,"ABX",265,"MEL",77.7,-187.3,FALSE
+"214011375","Seaford (Vic.)","Victoria",18305,"ABX",257.4,"MEL",70.1,-187.3,FALSE
+"214011376","Skye - Sandhurst","Victoria",13601,"ABX",257,"MEL",69.7,-187.3,FALSE
+"214021377","Dromana","Victoria",13925,"ABX",281.9,"MEL",94.6,-187.3,FALSE
+"214021378","Flinders","Victoria",6064,"ABX",287.6,"MEL",100.3,-187.3,FALSE
+"214021379","Hastings - Somers","Victoria",23795,"ABX",282.2,"MEL",94.9,-187.3,FALSE
+"214021381","Mount Eliza","Victoria",19110,"ABX",272.9,"MEL",85.6,-187.3,FALSE
+"214021382","Mount Martha","Victoria",20161,"ABX",276.4,"MEL",89.1,-187.3,FALSE
+"214021383","Point Nepean","Victoria",20574,"ABX",297.8,"MEL",110.5,-187.3,FALSE
+"214021384","Rosebud - McCrae","Victoria",23508,"ABX",284.7,"MEL",97.4,-187.3,FALSE
+"214021385","Somerville","Victoria",19098,"ABX",270.4,"MEL",83.1,-187.3,FALSE
+"214021591","Mornington - East","Victoria",15082,"ABX",273.1,"MEL",85.8,-187.3,FALSE
+"214021592","Mornington - West","Victoria",10900,"ABX",276.4,"MEL",89.1,-187.3,FALSE
+"215011386","Ararat","Victoria",8399,"ABX",330,"MEL",139.3,-190.7,FALSE
+"215011391","St Arnaud","Victoria",3394,"ABX",302.7,"MEL",179.2,-123.5,FALSE
+"215011392","Stawell","Victoria",8438,"ABX",343,"MEL",170.8,-172.2,FALSE
+"215031400","Buloke","Victoria",5891,"ABX",311.3,"MEL",219,-92.3,FALSE
+"215031401","Gannawarra","Victoria",6522,"ABX",276.5,"MEL",219.5,-57.1,FALSE
+"215031402","Kerang","Victoria",3784,"ABX",249.7,"MEL",194.6,-55.1,FALSE
+"215031404","Swan Hill","Victoria",10747,"ABX",283.1,"MEL",238.4,-44.8,FALSE
+"215031405","Swan Hill Surrounds","Victoria",6467,"ABX",330,"MEL",290.6,-39.4,FALSE
+"216011406","Echuca","Victoria",15357,"ABX",178.6,"MEL",158.4,-20.2,FALSE
+"216011407","Kyabram","Victoria",10838,"ABX",169.9,"MEL",156.2,-13.8,FALSE
+"216011408","Lockington - Gunbower","Victoria",3950,"ABX",203.3,"MEL",158.9,-44.4,FALSE
+"216011409","Rochester","Victoria",3691,"ABX",186.3,"MEL",138.6,-47.7,FALSE
+"216011410","Rushworth","Victoria",4210,"ABX",165.9,"MEL",126,-39.9,FALSE
+"216021411","Cobram","Victoria",6626,"ABX",101.8,"MEL",172.6,70.8,FALSE
+"216021412","Moira","Victoria",2841,"ABX",86.9,"MEL",173.4,86.4,FALSE
+"216021413","Numurkah","Victoria",12446,"ABX",132,"MEL",167.2,35.3,FALSE
+"216021414","Yarrawonga","Victoria",8953,"ABX",76.4,"MEL",174.2,97.8,FALSE
+"216031415","Mooroopna","Victoria",8391,"ABX",132.6,"MEL",124,-8.6,FALSE
+"216031416","Shepparton - North","Victoria",20312,"ABX",126.9,"MEL",128.5,1.6,FALSE
+"216031418","Shepparton Surrounds - East","Victoria",4055,"ABX",111.7,"MEL",140.2,28.5,FALSE
+"216031419","Shepparton Surrounds - West","Victoria",10346,"ABX",143.7,"MEL",126.1,-17.6,FALSE
+"216031593","Kialla","Victoria",10295,"ABX",125.1,"MEL",114.2,-10.9,FALSE
+"216031594","Shepparton - South East","Victoria",16334,"ABX",115.3,"MEL",121.1,5.8,FALSE
+"217031472","Colac","Victoria",12558,"ABX",313.6,"MEL",122.9,-190.7,FALSE
+"217031473","Colac Surrounds","Victoria",5670,"ABX",303.7,"MEL",113,-190.7,FALSE
+"217031474","Corangamite - North","Victoria",5201,"ABX",320.9,"MEL",130.2,-190.7,FALSE
+"801011001","Aranda","Australian Capital Territory",2643,"ABX",219.1,"CBR",21.3,-197.8,FALSE
+"801011002","Belconnen","Australian Capital Territory",9592,"ABX",219,"CBR",26.6,-192.4,FALSE
+"801011003","Bruce","Australian Capital Territory",8119,"ABX",219,"CBR",24.6,-194.4,FALSE
+"801011004","Charnwood","Australian Capital Territory",3078,"ABX",213.2,"CBR",39.2,-174,FALSE
+"801011005","Cook","Australian Capital Territory",2962,"ABX",221.7,"CBR",22.4,-199.2,FALSE
+"801011006","Dunlop","Australian Capital Territory",7282,"ABX",216.4,"CBR",39.5,-176.9,FALSE
+"801011007","Evatt","Australian Capital Territory",5549,"ABX",211.5,"CBR",32.3,-179.2,FALSE
+"801011008","Florey","Australian Capital Territory",4768,"ABX",217.5,"CBR",31.5,-186,FALSE
+"801011009","Flynn (ACT)","Australian Capital Territory",3710,"ABX",215,"CBR",35.5,-179.5,FALSE
+"801011010","Fraser","Australian Capital Territory",2139,"ABX",209.6,"CBR",38,-171.7,FALSE
+"801011011","Giralang","Australian Capital Territory",3456,"ABX",210.7,"CBR",31.8,-178.9,FALSE
+"801011012","Gooromon","Australian Capital Territory",4,"ABX",204.6,"CBR",32.9,-171.7,FALSE
+"801011013","Hawker","Australian Capital Territory",3007,"ABX",221.4,"CBR",27.2,-194.2,FALSE
+"801011014","Higgins","Australian Capital Territory",3363,"ABX",219.2,"CBR",30.2,-188.9,FALSE
+"801011015","Holt","Australian Capital Territory",6047,"ABX",221.3,"CBR",33.2,-188.2,FALSE
+"801011016","Kaleen","Australian Capital Territory",7776,"ABX",217,"CBR",27.1,-189.9,FALSE
+"801011017","Latham","Australian Capital Territory",3763,"ABX",218,"CBR",34.8,-183.2,FALSE
+"801011018","Lawson","Australian Capital Territory",2913,"ABX",217.5,"CBR",27.7,-189.8,FALSE
+"801011019","Macgregor (ACT)","Australian Capital Territory",6975,"ABX",219.3,"CBR",37.4,-181.9,FALSE
+"801011020","Macquarie","Australian Capital Territory",3231,"ABX",220.4,"CBR",24.5,-195.9,FALSE
+"801011021","McKellar","Australian Capital Territory",2619,"ABX",211.8,"CBR",31.8,-180.1,FALSE
+"801011022","Melba","Australian Capital Territory",3424,"ABX",214.4,"CBR",35.2,-179.2,FALSE
+"801011023","Page","Australian Capital Territory",2991,"ABX",219.8,"CBR",27.6,-192.2,FALSE
+"801011024","Scullin","Australian Capital Territory",3052,"ABX",218.9,"CBR",30,-188.9,FALSE
+"801011025","Spence","Australian Capital Territory",2535,"ABX",208.2,"CBR",35.8,-172.5,FALSE
+"801011026","Weetangera","Australian Capital Territory",2848,"ABX",221.1,"CBR",24.8,-196.3,FALSE
+"801011111","Molonglo Corridor","Australian Capital Territory",16,"ABX",221.6,"CBR",25.6,-196,FALSE
+"801011142","Macnamara","Australian Capital Territory",40,"ABX",228.7,"CBR",38.4,-190.3,FALSE
+"801011143","Strathnairn","Australian Capital Territory",2208,"ABX",226.4,"CBR",36.1,-190.3,FALSE
+"801011144","West Belconnen","Australian Capital Territory",22,"ABX",224.7,"CBR",38.6,-186.1,FALSE
+"801031031","Hume","Australian Capital Territory",394,"ABX",239.6,"CBR",15.3,-224.3,FALSE
+"801031032","Kowen","Australian Capital Territory",23,"ABX",244.4,"CBR",38.6,-205.8,FALSE
+"801031113","Canberra East","Australian Capital Territory",1226,"ABX",235.8,"CBR",11.5,-224.3,FALSE
+"801031114","Canberra Airport","Australian Capital Territory",128,"ABX",235.4,"CBR",9.2,-226.3,FALSE
+"801031115","Majura","Australian Capital Territory",263,"ABX",230.5,"CBR",9.3,-221.1,FALSE
+"801041034","Amaroo","Australian Capital Territory",5985,"ABX",218.9,"CBR",26.2,-192.7,FALSE
+"801041035","Bonner","Australian Capital Territory",7448,"ABX",220.5,"CBR",26.9,-193.6,FALSE
+"801041036","Casey","Australian Capital Territory",6731,"ABX",210,"CBR",34.4,-175.6,FALSE
+"801041037","Crace","Australian Capital Territory",4821,"ABX",210.2,"CBR",30.2,-179.9,FALSE
+"801041038","Forde","Australian Capital Territory",4457,"ABX",221.4,"CBR",24.4,-197,FALSE
+"801041039","Franklin","Australian Capital Territory",7520,"ABX",219.6,"CBR",22.8,-196.8,FALSE
+"801041040","Gungahlin","Australian Capital Territory",9555,"ABX",217.4,"CBR",22.8,-194.6,FALSE
+"801041043","Hall","Australian Capital Territory",291,"ABX",203.1,"CBR",35.5,-167.5,FALSE
+"801041044","Harrison","Australian Capital Territory",8023,"ABX",222.9,"CBR",19.8,-203.1,FALSE
+"801041045","Mitchell","Australian Capital Territory",8,"ABX",217.4,"CBR",25.3,-192.1,FALSE
+"801041046","Ngunnawal","Australian Capital Territory",11188,"ABX",211.8,"CBR",31.8,-179.9,FALSE
+"801041047","Nicholls","Australian Capital Territory",6507,"ABX",208.7,"CBR",31.2,-177.5,FALSE
+"801041048","Palmerston","Australian Capital Territory",5537,"ABX",214.2,"CBR",29.1,-185,FALSE
+"801041118","Jacka","Australian Capital Territory",733,"ABX",219.1,"CBR",30.8,-188.3,FALSE
+"801041119","Kenny","Australian Capital Territory",18,"ABX",220.4,"CBR",20,-200.5,FALSE
+"801041120","Moncrieff","Australian Capital Territory",6031,"ABX",216.1,"CBR",28.9,-187.2,FALSE
+"801041121","Taylor","Australian Capital Territory",5512,"ABX",215.2,"CBR",31.8,-183.5,FALSE
+"801041122","Throsby","Australian Capital Territory",3765,"ABX",223,"CBR",19.1,-203.9,FALSE
+"801051049","Acton","Australian Capital Territory",3616,"ABX",224.1,"CBR",17.8,-206.2,FALSE
+"801051050","Ainslie","Australian Capital Territory",5469,"ABX",225.5,"CBR",18.9,-206.5,FALSE
+"801051051","Braddon","Australian Capital Territory",7488,"ABX",223.6,"CBR",16.3,-207.3,FALSE
+"801051053","Civic","Australian Capital Territory",5361,"ABX",227,"CBR",14.9,-212,FALSE
+"801051054","Dickson","Australian Capital Territory",4179,"ABX",221.9,"CBR",18.9,-202.9,FALSE
+"801051055","Downer","Australian Capital Territory",4556,"ABX",219.7,"CBR",21.7,-198,FALSE
+"801051056","Hackett","Australian Capital Territory",3345,"ABX",222.5,"CBR",22.5,-200,FALSE
+"801051057","Lyneham","Australian Capital Territory",6013,"ABX",217.5,"CBR",22.8,-194.6,FALSE
+"801051058","O'Connor (ACT)","Australian Capital Territory",5921,"ABX",219.9,"CBR",21.5,-198.4,FALSE
+"801051060","Turner","Australian Capital Territory",4888,"ABX",223.1,"CBR",19.4,-203.6,FALSE
+"801051061","Watson","Australian Capital Territory",7377,"ABX",221.7,"CBR",21.7,-200,FALSE
+"801051124","Campbell","Australian Capital Territory",5365,"ABX",227.6,"CBR",13.3,-214.3,FALSE
+"801051125","Duntroon","Australian Capital Territory",2367,"ABX",228.9,"CBR",10.5,-218.4,FALSE
+"801051126","Parkes (ACT) - North","Australian Capital Territory",332,"ABX",225.2,"CBR",12.2,-213,FALSE
+"801051127","Reid","Australian Capital Territory",2013,"ABX",227,"CBR",13.3,-213.6,FALSE
+"801061062","Deakin","Australian Capital Territory",3247,"ABX",229.4,"CBR",21.3,-208.1,FALSE
+"801061063","Forrest","Australian Capital Territory",1944,"ABX",231.6,"CBR",16.9,-214.7,FALSE
+"801061064","Griffith (ACT)","Australian Capital Territory",5826,"ABX",233.4,"CBR",15.6,-217.8,FALSE
+"801061067","Narrabundah","Australian Capital Territory",7014,"ABX",236.4,"CBR",14.5,-221.9,FALSE
+"801061068","Parkes (ACT) - South","Australian Capital Territory",4,"ABX",227.1,"CBR",12.4,-214.7,FALSE
+"801061069","Red Hill (ACT)","Australian Capital Territory",3619,"ABX",233.2,"CBR",17.5,-215.8,FALSE
+"801061070","Yarralumla","Australian Capital Territory",3154,"ABX",232.8,"CBR",24.2,-208.6,FALSE
+"801061129","Barton","Australian Capital Territory",2144,"ABX",228.6,"CBR",13.6,-215,FALSE
+"801061130","Fyshwick","Australian Capital Territory",59,"ABX",234.6,"CBR",10.3,-224.3,FALSE
+"801061131","Kingston (ACT)","Australian Capital Territory",7472,"ABX",231.2,"CBR",15.9,-215.3,FALSE
+"801071071","Banks","Australian Capital Territory",5038,"ABX",250.5,"CBR",36.5,-214,FALSE
+"801071072","Bonython","Australian Capital Territory",3740,"ABX",240.7,"CBR",30.8,-209.8,FALSE
+"801071073","Calwell","Australian Capital Territory",5520,"ABX",246.1,"CBR",28.5,-217.7,FALSE
+"801071074","Chisholm","Australian Capital Territory",5277,"ABX",244.1,"CBR",27.1,-217,FALSE
+"801071075","Conder","Australian Capital Territory",4914,"ABX",247.4,"CBR",33.4,-214,FALSE
+"801071076","Fadden","Australian Capital Territory",3014,"ABX",238.9,"CBR",25.9,-213,FALSE
+"801071077","Gilmore","Australian Capital Territory",2722,"ABX",245.8,"CBR",25.5,-220.3,FALSE
+"801071078","Gordon (ACT)","Australian Capital Territory",7783,"ABX",249.4,"CBR",36.7,-212.7,FALSE
+"801071079","Gowrie (ACT)","Australian Capital Territory",3100,"ABX",239.7,"CBR",26,-213.7,FALSE
+"801071080","Greenway","Australian Capital Territory",5565,"ABX",237.4,"CBR",35,-202.4,FALSE
+"801071081","Isabella Plains","Australian Capital Territory",4324,"ABX",241.3,"CBR",29.1,-212.2,FALSE
+"801071082","Kambah","Australian Capital Territory",15878,"ABX",230.4,"CBR",28.5,-201.9,FALSE
+"801071083","Macarthur","Australian Capital Territory",1387,"ABX",243.2,"CBR",23.4,-219.8,FALSE
+"801071084","Monash","Australian Capital Territory",5657,"ABX",238.4,"CBR",29.3,-209.1,FALSE
+"801071086","Oxley (ACT)","Australian Capital Territory",1713,"ABX",235.8,"CBR",33.4,-202.4,FALSE
+"801071087","Richardson","Australian Capital Territory",3060,"ABX",243,"CBR",26.6,-216.5,FALSE
+"801071088","Theodore","Australian Capital Territory",3726,"ABX",247.7,"CBR",28,-219.7,FALSE
+"801071089","Tuggeranong","Australian Capital Territory",40,"ABX",250.3,"CBR",36.4,-214,FALSE
+"801071090","Wanniassa","Australian Capital Territory",7731,"ABX",235.1,"CBR",29.8,-205.3,FALSE
+"801071132","Tuggeranong - West","Australian Capital Territory",10,"ABX",231.8,"CBR",29.9,-201.9,FALSE
+"801081091","Chapman","Australian Capital Territory",2881,"ABX",232.4,"CBR",30.5,-201.9,FALSE
+"801081092","Duffy","Australian Capital Territory",3514,"ABX",229.9,"CBR",28,-201.9,FALSE
+"801081093","Fisher","Australian Capital Territory",3334,"ABX",228.4,"CBR",26.5,-201.9,FALSE
+"801081094","Holder","Australian Capital Territory",2895,"ABX",228.3,"CBR",26.4,-201.9,FALSE
+"801081095","Rivett","Australian Capital Territory",3431,"ABX",230.9,"CBR",29,-201.9,FALSE
+"801081096","Stirling","Australian Capital Territory",2167,"ABX",228.4,"CBR",26.5,-201.9,FALSE
+"801081097","Waramanga","Australian Capital Territory",2749,"ABX",226.5,"CBR",24.6,-201.9,FALSE
+"801081098","Weston","Australian Capital Territory",4027,"ABX",226.4,"CBR",24.5,-201.9,FALSE
+"801081133","Scrivener","Australian Capital Territory",72,"ABX",226.3,"CBR",24.4,-201.9,FALSE
+"801091099","Chifley","Australian Capital Territory",2785,"ABX",228.9,"CBR",24.7,-204.1,FALSE
+"801091100","Curtin","Australian Capital Territory",5585,"ABX",230,"CBR",25.6,-204.5,FALSE
+"801091101","Farrer","Australian Capital Territory",3816,"ABX",235.4,"CBR",25,-210.4,FALSE
+"801091102","Garran","Australian Capital Territory",3732,"ABX",234.5,"CBR",20.3,-214.2,FALSE
+"801091103","Hughes","Australian Capital Territory",3149,"ABX",232,"CBR",21.9,-210.1,FALSE
+"801091104","Isaacs","Australian Capital Territory",2402,"ABX",236.6,"CBR",23.3,-213.3,FALSE
+"801091105","Lyons (ACT)","Australian Capital Territory",3310,"ABX",228.5,"CBR",26.1,-202.4,FALSE
+"801091106","Mawson","Australian Capital Territory",3526,"ABX",232.9,"CBR",21.6,-211.3,FALSE
+"801091107","O'Malley","Australian Capital Territory",977,"ABX",235.4,"CBR",20,-215.4,FALSE
+"801091108","Pearce","Australian Capital Territory",2713,"ABX",230.3,"CBR",25.2,-205.1,FALSE
+"801091109","Phillip","Australian Capital Territory",7135,"ABX",232.4,"CBR",21.7,-210.7,FALSE
+"801091110","Torrens","Australian Capital Territory",2470,"ABX",231.8,"CBR",25.1,-206.7,FALSE
+"801101134","Arboretum","Australian Capital Territory",10,"ABX",220.3,"CBR",18.4,-201.9,FALSE
+"801101135","Coombs","Australian Capital Territory",6159,"ABX",228.8,"CBR",26.9,-201.9,FALSE
+"801101136","Denman Prospect","Australian Capital Territory",5503,"ABX",233.3,"CBR",31.8,-201.5,FALSE
+"801101139","Wright","Australian Capital Territory",4757,"ABX",229.7,"CBR",27.8,-201.9,FALSE
+"801101145","Molonglo - East","Australian Capital Territory",3,"ABX",226.8,"CBR",25.3,-201.5,FALSE
+"801101146","Whitlam","Australian Capital Territory",1632,"ABX",227.2,"CBR",25.7,-201.5,FALSE
+"801111140","ACT - South West","Australian Capital Territory",561,"ABX",247.8,"CBR",45.9,-201.9,FALSE
+"801111141","Namadgi","Australian Capital Territory",67,"ABX",332.2,"CBR",122.4,-209.8,FALSE
+"901031003","Jervis Bay","Other Territories",305,"ABX",358.8,"SYD",171.7,-187.1,FALSE

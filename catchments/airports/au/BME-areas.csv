@@ -1,0 +1,4 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"510011262","Broome","Western Australia",16506,"BME",5.9,"DRW",1124.8,1119,FALSE
+"510011263","Derby - West Kimberley","Western Australia",8675,"BME",329.9,"DRW",1227.6,897.8,FALSE
+"510011266","Roebuck","Western Australia",2675,"BME",201.6,"PER",1180.2,978.6,FALSE

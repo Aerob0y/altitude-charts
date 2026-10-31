@@ -1,0 +1,453 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"104011080","Grafton","New South Wales",19905,"OOL",148,"BNE",220.5,72.5,FALSE
+"104011081","Grafton Surrounds","New South Wales",18099,"OOL",170.3,"BNE",242.8,72.5,FALSE
+"104011082","Maclean - Yamba - Iluka","New South Wales",18562,"OOL",116.1,"BNE",188.6,72.5,FALSE
+"104021083","Bellingen","New South Wales",6200,"OOL",238.8,"BNE",311.3,72.5,FALSE
+"104021084","Coffs Harbour - North","New South Wales",18960,"OOL",184.7,"BNE",257.1,72.5,FALSE
+"104021085","Coffs Harbour - South","New South Wales",11466,"OOL",189,"BNE",261.5,72.5,FALSE
+"104021086","Coramba - Nana Glen - Bucca","New South Wales",4124,"OOL",190.3,"BNE",262.8,72.5,FALSE
+"104021087","Dorrigo","New South Wales",3250,"OOL",247.6,"BNE",320.1,72.5,FALSE
+"104021088","Korora - Emerald Beach","New South Wales",11008,"OOL",170,"BNE",242.5,72.5,FALSE
+"104021089","Sawtell - Boambee","New South Wales",20581,"OOL",199.5,"BNE",272,72.5,FALSE
+"104021090","Urunga","New South Wales",4947,"OOL",208,"BNE",280.4,72.5,FALSE
+"104021091","Woolgoolga - Arrawarra","New South Wales",15229,"OOL",165.8,"BNE",238.2,72.5,FALSE
+"108021155","Kempsey","New South Wales",16272,"OOL",260.1,"SYD",301.4,41.4,FALSE
+"108021156","Kempsey Surrounds","New South Wales",9671,"OOL",296.6,"SYD",343,46.4,FALSE
+"108021157","Macksville - Scotts Head","New South Wales",5383,"OOL",227,"BNE",299.5,72.5,FALSE
+"108021158","Nambucca Heads","New South Wales",7304,"OOL",220.6,"BNE",293,72.5,FALSE
+"108021159","Nambucca Heads Surrounds","New South Wales",8550,"OOL",253,"BNE",325.5,72.5,FALSE
+"108021160","South West Rocks","New South Wales",6021,"OOL",255.8,"SYD",317.1,61.3,FALSE
+"108041162","Laurieton - Bonny Hills","New South Wales",19995,"OOL",300.3,"SYD",259.5,-40.8,FALSE
+"108041164","Port Macquarie - West","New South Wales",23991,"OOL",293.1,"SYD",278.5,-14.6,FALSE
+"108041165","Port Macquarie Surrounds","New South Wales",5331,"OOL",312.8,"SYD",302.3,-10.6,FALSE
+"108041166","Wauchope","New South Wales",13754,"OOL",290.7,"SYD",274.9,-15.9,FALSE
+"108041619","Port Macquarie - East","New South Wales",11908,"OOL",296.5,"SYD",281.9,-14.6,FALSE
+"108041620","Port Macquarie - South","New South Wales",17470,"OOL",299.7,"SYD",285.1,-14.6,FALSE
+"110011186","Armidale","New South Wales",24436,"OOL",301.5,"BNE",364,62.4,FALSE
+"110011187","Armidale Surrounds - North","New South Wales",4692,"OOL",301.8,"BNE",374.3,72.5,FALSE
+"110011188","Armidale Surrounds - South","New South Wales",6033,"OOL",351.6,"SYD",386.6,35,FALSE
+"110011189","Walcha","New South Wales",3131,"OOL",377.3,"SYD",352,-25.3,FALSE
+"110021190","Glen Innes","New South Wales",9069,"OOL",236.2,"BNE",277.2,41,FALSE
+"110021191","Inverell","New South Wales",12374,"OOL",306.6,"BNE",342.2,35.6,FALSE
+"110021192","Inverell Surrounds - East","New South Wales",5244,"OOL",321.8,"BNE",331.4,9.6,FALSE
+"110021193","Inverell Surrounds - West","New South Wales",5791,"OOL",363.8,"BNE",385.5,21.8,FALSE
+"110021194","Tenterfield","New South Wales",7188,"OOL",218.2,"BNE",262.7,44.5,FALSE
+"110031195","Moree","New South Wales",8020,"OOL",384.2,"BNE",355.9,-28.3,FALSE
+"110031196","Moree Surrounds","New South Wales",5271,"OOL",390.7,"BNE",362.4,-28.3,FALSE
+"110041205","Tamworth Surrounds","New South Wales",20158,"OOL",399.6,"SYD",351.8,-47.8,FALSE
+"112011236","Ballina","New South Wales",18813,"OOL",63,"BNE",135.5,72.5,FALSE
+"112011237","Ballina Surrounds","New South Wales",19370,"OOL",72.8,"BNE",145.3,72.5,FALSE
+"112011238","Bangalow","New South Wales",7627,"OOL",51.2,"BNE",123.6,72.5,FALSE
+"112011239","Brunswick Heads - Ocean Shores","New South Wales",9765,"OOL",39.5,"BNE",112,72.5,FALSE
+"112011240","Byron Bay","New South Wales",11482,"OOL",61.8,"BNE",134.3,72.5,FALSE
+"112011241","Evans Head","New South Wales",6062,"OOL",85.4,"BNE",157.9,72.5,FALSE
+"112011242","Lennox Head - Skennars Head","New South Wales",10282,"OOL",60.1,"BNE",132.6,72.5,FALSE
+"112011243","Mullumbimby","New South Wales",9662,"OOL",51.4,"BNE",123.9,72.5,FALSE
+"112021244","Casino","New South Wales",12282,"OOL",110.3,"BNE",182.8,72.5,FALSE
+"112021245","Casino Surrounds","New South Wales",7634,"OOL",144.8,"BNE",205.6,60.8,FALSE
+"112021246","Goonellabah","New South Wales",14177,"OOL",82.9,"BNE",155.4,72.5,FALSE
+"112021247","Kyogle","New South Wales",7785,"OOL",110.8,"BNE",158.3,47.5,FALSE
+"112021248","Lismore","New South Wales",13679,"OOL",83.8,"BNE",156.2,72.5,FALSE
+"112021249","Lismore Surrounds","New South Wales",16160,"OOL",87.5,"BNE",160,72.5,FALSE
+"112031250","Kingscliff - Fingal Head","New South Wales",15489,"OOL",13.1,"BNE",85.6,72.5,FALSE
+"112031251","Murwillumbah","New South Wales",9510,"OOL",32.5,"BNE",105,72.5,FALSE
+"112031252","Murwillumbah Surrounds","New South Wales",10835,"OOL",44.7,"BNE",117.1,72.5,FALSE
+"112031253","Pottsville","New South Wales",14746,"OOL",29.3,"BNE",101.8,72.5,FALSE
+"112031254","Tweed Heads","New South Wales",21576,"OOL",22.2,"BNE",95.1,72.9,FALSE
+"112031550","Banora Point","New South Wales",16796,"OOL",12.1,"BNE",84.6,72.5,FALSE
+"112031551","Terranora - North Tumbulgum","New South Wales",3455,"OOL",20.7,"BNE",93.2,72.5,FALSE
+"112031552","Tweed Heads South","New South Wales",8637,"OOL",14.6,"BNE",87.1,72.5,FALSE
+"301011001","Alexandra Hills","Queensland",17361,"OOL",75.3,"BNE",36.6,-38.7,FALSE
+"301011002","Belmont - Gumdale","Queensland",7965,"OOL",70,"BNE",24.5,-45.4,FALSE
+"301011003","Birkdale","Queensland",16024,"OOL",81.7,"BNE",36.7,-45,FALSE
+"301011004","Capalaba","Queensland",19277,"OOL",76.8,"BNE",32.3,-44.5,FALSE
+"301011005","Thorneside","Queensland",4020,"OOL",79.1,"BNE",32.8,-46.3,FALSE
+"301011006","Wellington Point","Queensland",12391,"OOL",86.1,"BNE",42.1,-44.1,FALSE
+"301021007","Cleveland","Queensland",16952,"OOL",78.3,"BNE",42.2,-36,FALSE
+"301021008","Ormiston","Queensland",7042,"OOL",84.1,"BNE",42.8,-41.3,FALSE
+"301021009","Redland Bay","Queensland",20283,"OOL",71.4,"BNE",53.4,-18,FALSE
+"301021011","Sheldon - Mount Cotton","Queensland",8742,"OOL",68.6,"BNE",42.3,-26.3,FALSE
+"301021012","Thornlands","Queensland",21863,"OOL",75.8,"BNE",41.8,-34,FALSE
+"301021013","Victoria Point","Queensland",16134,"OOL",73.3,"BNE",47.2,-26.1,FALSE
+"301021550","North Stradbroke Island","Queensland",2276,"OOL",257.5,"BNE",221.2,-36.3,FALSE
+"301021551","Southern Moreton Bay Islands","Queensland",10466,"OOL",135.4,"BNE",112.5,-22.9,FALSE
+"301031014","Brisbane Port - Lytton","Queensland",10,"OOL",81.5,"BNE",27.5,-54,FALSE
+"301031015","Manly - Lota","Queensland",8319,"OOL",81.9,"BNE",32.9,-49.1,FALSE
+"301031016","Manly West","Queensland",12380,"OOL",77.9,"BNE",27.9,-50,FALSE
+"301031017","Murarrie","Queensland",5204,"OOL",72.3,"BNE",14.5,-57.8,FALSE
+"301031018","Tingalpa","Queensland",9404,"OOL",69.8,"BNE",19,-50.8,FALSE
+"301031019","Wakerley","Queensland",9865,"OOL",72.9,"BNE",26.7,-46.3,FALSE
+"301031020","Wynnum","Queensland",15505,"OOL",79.3,"BNE",25.3,-54,FALSE
+"301031021","Wynnum West - Hemmant","Queensland",17027,"OOL",75.6,"BNE",21.7,-53.9,FALSE
+"302011022","Bald Hills","Queensland",8412,"OOL",93,"BNE",25.9,-67.1,FALSE
+"302011023","Bridgeman Downs","Queensland",11888,"OOL",97.3,"BNE",30.3,-67.1,FALSE
+"302011024","Carseldine","Queensland",10472,"OOL",91.9,"BNE",24.9,-67.1,FALSE
+"302011025","Everton Park","Queensland",11303,"OOL",91,"BNE",25.2,-65.8,FALSE
+"302011026","McDowall","Queensland",8886,"OOL",93.6,"BNE",27.7,-65.9,FALSE
+"302021027","Aspley","Queensland",13789,"OOL",92.3,"BNE",27,-65.3,FALSE
+"302021028","Chermside","Queensland",12811,"OOL",88.5,"BNE",22.9,-65.6,FALSE
+"302021029","Chermside West","Queensland",7050,"OOL",90.7,"BNE",24.8,-65.9,FALSE
+"302021030","Geebung","Queensland",4655,"OOL",86.3,"BNE",21.9,-64.4,FALSE
+"302021031","Kedron - Gordon Park","Queensland",15654,"OOL",82.9,"BNE",17.1,-65.9,FALSE
+"302021032","Stafford","Queensland",7421,"OOL",86.4,"BNE",20.5,-65.9,FALSE
+"302021033","Stafford Heights","Queensland",7356,"OOL",87.9,"BNE",22,-65.9,FALSE
+"302021034","Wavell Heights","Queensland",11227,"OOL",84.6,"BNE",18.6,-65.9,FALSE
+"302031035","Boondall","Queensland",10430,"OOL",81.7,"BNE",14.6,-67.1,FALSE
+"302031036","Brisbane Airport","Queensland",131,"OOL",82.6,"BNE",2.9,-79.7,FALSE
+"302031037","Eagle Farm - Pinkenba","Queensland",2746,"OOL",73.2,"BNE",15.5,-57.6,FALSE
+"302031038","Northgate - Virginia","Queensland",7591,"OOL",81.8,"BNE",17.4,-64.3,FALSE
+"302031039","Nudgee - Banyo","Queensland",11757,"OOL",81.4,"BNE",14.3,-67.1,FALSE
+"302031040","Nundah","Queensland",14812,"OOL",81.7,"BNE",15.3,-66.4,FALSE
+"302041041","Bracken Ridge","Queensland",18847,"OOL",89.8,"BNE",22.7,-67.1,FALSE
+"302041042","Brighton (Qld)","Queensland",10213,"OOL",90.9,"BNE",23.8,-67.1,FALSE
+"302041043","Deagon","Queensland",4034,"OOL",85.2,"BNE",18.2,-67.1,FALSE
+"302041044","Sandgate - Shorncliffe","Queensland",6975,"OOL",87.4,"BNE",20.4,-67.1,FALSE
+"302041045","Taigum - Fitzgibbon","Queensland",15445,"OOL",88.3,"BNE",21.3,-67.1,FALSE
+"302041046","Zillmere","Queensland",10132,"OOL",88.5,"BNE",21.5,-67.1,FALSE
+"303011047","Camp Hill","Queensland",13067,"OOL",73.6,"BNE",27.3,-46.3,FALSE
+"303011048","Cannon Hill","Queensland",7746,"OOL",73.3,"BNE",19.2,-54.2,FALSE
+"303011049","Carina","Queensland",12897,"OOL",73.8,"BNE",21,-52.8,FALSE
+"303011050","Carina Heights","Queensland",7500,"OOL",72.5,"BNE",26.3,-46.3,FALSE
+"303011051","Carindale","Queensland",17402,"OOL",70.3,"BNE",22.7,-47.6,FALSE
+"303021052","Annerley","Queensland",13137,"OOL",70.4,"BNE",38.5,-31.9,FALSE
+"303021053","Coorparoo","Queensland",19140,"OOL",71.4,"BNE",30,-41.4,FALSE
+"303021054","Fairfield - Dutton Park","Queensland",5526,"OOL",70,"BNE",37.3,-32.7,FALSE
+"303021055","Greenslopes","Queensland",11607,"OOL",67.1,"BNE",33.9,-33.3,FALSE
+"303021056","Holland Park","Queensland",9279,"OOL",69.8,"BNE",30.7,-39,FALSE
+"303021057","Holland Park West","Queensland",6779,"OOL",67.6,"BNE",33.8,-33.8,FALSE
+"303021058","Woolloongabba","Queensland",10367,"OOL",70.1,"BNE",33.3,-36.8,FALSE
+"303021059","Yeronga","Queensland",10950,"OOL",76.4,"BNE",43.4,-33,FALSE
+"303031060","Eight Mile Plains","Queensland",16789,"OOL",63.8,"BNE",29,-34.8,FALSE
+"303031061","Macgregor (Qld)","Queensland",6684,"OOL",66.9,"BNE",33.2,-33.7,FALSE
+"303031062","Mansfield (Qld)","Queensland",9369,"OOL",67.1,"BNE",26.7,-40.4,FALSE
+"303031063","Mount Gravatt","Queensland",17149,"OOL",68.7,"BNE",30.2,-38.5,FALSE
+"303031064","Rochedale - Burbank","Queensland",13761,"OOL",66.8,"BNE",30.8,-35.9,FALSE
+"303031065","Upper Mount Gravatt","Queensland",12276,"OOL",64.1,"BNE",29.3,-34.8,FALSE
+"303031066","Wishart","Queensland",11870,"OOL",65.8,"BNE",26.4,-39.4,FALSE
+"303041067","Coopers Plains","Queensland",6428,"OOL",71.8,"BNE",37.1,-34.8,FALSE
+"303041068","Moorooka","Queensland",11885,"OOL",74.2,"BNE",39.6,-34.6,FALSE
+"303041069","Robertson","Queensland",5745,"OOL",68.3,"BNE",33.6,-34.8,FALSE
+"303041070","Salisbury - Nathan","Queensland",8341,"OOL",71.7,"BNE",38.4,-33.4,FALSE
+"303041071","Tarragindi","Queensland",11785,"OOL",70.1,"BNE",36.4,-33.7,FALSE
+"303051072","Algester","Queensland",10205,"OOL",69.1,"BNE",37.8,-31.3,FALSE
+"303051073","Calamvale - Stretton","Queensland",25416,"OOL",59.7,"BNE",38.4,-21.3,FALSE
+"303051074","Pallara - Willawong","Queensland",16586,"OOL",70.2,"BNE",41.9,-28.3,FALSE
+"303051075","Parkinson - Drewvale","Queensland",17108,"OOL",64.7,"BNE",35.8,-28.8,FALSE
+"303051076","Rocklea - Acacia Ridge","Queensland",10061,"OOL",77.6,"BNE",44.2,-33.4,FALSE
+"303061077","Kuraby","Queensland",9507,"OOL",63.9,"BNE",30.2,-33.7,FALSE
+"303061078","Runcorn","Queensland",15762,"OOL",66.1,"BNE",30.4,-35.8,FALSE
+"303061079","Sunnybank","Queensland",10570,"OOL",68.6,"BNE",33.8,-34.8,FALSE
+"303061080","Sunnybank Hills","Queensland",19742,"OOL",69.5,"BNE",33.7,-35.8,FALSE
+"304011081","Jindalee - Mount Ommaney","Queensland",7925,"OOL",76.7,"BNE",42.9,-33.8,FALSE
+"304011082","Middle Park - Jamboree Heights","Queensland",7411,"OOL",75.1,"BNE",43,-32.1,FALSE
+"304011083","Riverhills","Queensland",4267,"OOL",79.4,"BNE",47.2,-32.1,FALSE
+"304011084","Seventeen Mile Rocks - Sinnamon Park","Queensland",9886,"OOL",76,"BNE",43.4,-32.6,FALSE
+"304011085","Westlake","Queensland",4502,"OOL",78.7,"BNE",46.4,-32.2,FALSE
+"304021086","Bellbowrie - Moggill","Queensland",11211,"OOL",99.4,"BNE",57.9,-41.5,FALSE
+"304021087","Brookfield - Kenmore Hills","Queensland",7202,"OOL",94.5,"BNE",51.5,-42.9,FALSE
+"304021088","Chapel Hill","Queensland",11166,"OOL",82,"BNE",38.7,-43.3,FALSE
+"304021089","Fig Tree Pocket","Queensland",4632,"OOL",79.8,"BNE",39.3,-40.5,FALSE
+"304021090","Kenmore","Queensland",10170,"OOL",82.5,"BNE",42,-40.5,FALSE
+"304021091","Pinjarra Hills - Pullenvale","Queensland",5885,"OOL",96.1,"BNE",54.6,-41.5,FALSE
+"304031092","Chelmer - Graceville","Queensland",8015,"OOL",85.2,"BNE",42.3,-42.9,FALSE
+"304031093","Corinda","Queensland",5686,"OOL",80.3,"BNE",48.1,-32.2,FALSE
+"304031094","Indooroopilly","Queensland",15496,"OOL",86.3,"BNE",43.6,-42.6,FALSE
+"304031095","Sherwood","Queensland",7050,"OOL",83.4,"BNE",44.5,-38.8,FALSE
+"304031096","St Lucia","Queensland",15447,"OOL",84.8,"BNE",42.1,-42.6,FALSE
+"304031097","Taringa","Queensland",10156,"OOL",82,"BNE",39.4,-42.6,FALSE
+"304041098","Enoggera","Queensland",9945,"OOL",90.3,"BNE",30.5,-59.8,FALSE
+"304041099","Enoggera Reservoir","Queensland",33,"OOL",103.4,"BNE",51.7,-51.7,FALSE
+"304041100","Keperra","Queensland",7561,"OOL",93.6,"BNE",33.8,-59.8,FALSE
+"304041101","Mitchelton","Queensland",9734,"OOL",90.3,"BNE",30.5,-59.8,FALSE
+"304041103","The Gap","Queensland",18230,"OOL",90.6,"BNE",38.9,-51.7,FALSE
+"304041104","Upper Kedron - Ferny Grove","Queensland",12833,"OOL",101.3,"BNE",41.5,-59.8,FALSE
+"305011105","Brisbane City","Queensland",17502,"OOL",71.3,"BNE",29.8,-41.5,FALSE
+"305011106","Fortitude Valley","Queensland",11889,"OOL",74.4,"BNE",25.5,-48.9,FALSE
+"305011107","Highgate Hill","Queensland",7335,"OOL",74.4,"BNE",36.8,-37.6,FALSE
+"305011108","Kangaroo Point","Queensland",12206,"OOL",70.6,"BNE",29.3,-41.3,FALSE
+"305011109","New Farm","Queensland",13880,"OOL",75.4,"BNE",28.2,-47.2,FALSE
+"305011110","South Brisbane","Queensland",17517,"OOL",71.2,"BNE",33.4,-37.8,FALSE
+"305011111","Spring Hill","Queensland",9361,"OOL",73.9,"BNE",27.9,-46,FALSE
+"305011112","West End","Queensland",17928,"OOL",74.7,"BNE",36.1,-38.6,FALSE
+"305021113","Balmoral","Queensland",4885,"OOL",79.5,"BNE",22.7,-56.8,FALSE
+"305021114","Bulimba","Queensland",7925,"OOL",80.7,"BNE",23.1,-57.6,FALSE
+"305021115","East Brisbane","Queensland",6833,"OOL",71.6,"BNE",29.1,-42.4,FALSE
+"305021116","Hawthorne","Queensland",5702,"OOL",77.6,"BNE",24.4,-53.2,FALSE
+"305021117","Morningside - Seven Hills","Queensland",16055,"OOL",76.3,"BNE",22.1,-54.2,FALSE
+"305021118","Norman Park","Queensland",7414,"OOL",75.7,"BNE",26.4,-49.2,FALSE
+"305031119","Albion","Queensland",5026,"OOL",82.4,"BNE",20,-62.4,FALSE
+"305031120","Alderley","Queensland",7270,"OOL",83.1,"BNE",26,-57,FALSE
+"305031121","Ascot","Queensland",6454,"OOL",78.6,"BNE",17.4,-61.3,FALSE
+"305031122","Clayfield","Queensland",11773,"OOL",81,"BNE",15,-66,FALSE
+"305031123","Grange","Queensland",4942,"OOL",84.5,"BNE",21.8,-62.7,FALSE
+"305031124","Hamilton (Qld)","Queensland",7408,"OOL",79.5,"BNE",18.4,-61,FALSE
+"305031125","Hendra","Queensland",5204,"OOL",78.3,"BNE",13.8,-64.5,FALSE
+"305031126","Kelvin Grove - Herston","Queensland",12531,"OOL",78.3,"BNE",29.2,-49,FALSE
+"305031127","Newmarket","Queensland",5493,"OOL",80.5,"BNE",24.8,-55.7,FALSE
+"305031128","Newstead - Bowen Hills","Queensland",21474,"OOL",76.4,"BNE",24,-52.4,FALSE
+"305031129","Wilston","Queensland",4168,"OOL",81.5,"BNE",22.6,-58.9,FALSE
+"305031130","Windsor","Queensland",8951,"OOL",78.5,"BNE",26,-52.5,FALSE
+"305031131","Wooloowin - Lutwyche","Queensland",12298,"OOL",84.4,"BNE",18.2,-66.2,FALSE
+"305041132","Ashgrove","Queensland",14911,"OOL",82.6,"BNE",30.9,-51.7,FALSE
+"305041133","Auchenflower","Queensland",6222,"OOL",78.3,"BNE",34,-44.4,FALSE
+"305041134","Bardon","Queensland",11168,"OOL",82.4,"BNE",34.4,-48,FALSE
+"305041135","Paddington - Milton","Queensland",13364,"OOL",77.4,"BNE",31.2,-46.2,FALSE
+"305041136","Red Hill (Qld)","Queensland",6757,"OOL",77.6,"BNE",29.9,-47.7,FALSE
+"305041137","Toowong","Queensland",13725,"OOL",81.7,"BNE",38.3,-43.3,FALSE
+"307011172","Chinchilla","Queensland",9159,"OOL",334.3,"BNE",306,-28.3,FALSE
+"307011173","Goondiwindi","Queensland",6251,"OOL",322.6,"BNE",294.3,-28.3,FALSE
+"307011174","Inglewood - Waggamba","Queensland",4179,"OOL",269.7,"BNE",241.4,-28.3,FALSE
+"307011175","Miles - Wandoan","Queensland",4394,"OOL",316.3,"BNE",288,-28.3,FALSE
+"307011178","Tara","Queensland",4030,"OOL",286,"BNE",257.7,-28.3,FALSE
+"307021179","Crows Nest - Rosalie","Queensland",9824,"OOL",197.8,"BNE",169.6,-28.3,FALSE
+"307021180","Jondaryan","Queensland",7826,"OOL",188.8,"BNE",160.5,-28.3,FALSE
+"307021181","Millmerran","Queensland",3351,"OOL",236.1,"BNE",207.8,-28.3,FALSE
+"307021182","Pittsworth","Queensland",5951,"OOL",178.9,"BNE",150.6,-28.3,FALSE
+"307021183","Wambo","Queensland",17853,"OOL",227.8,"BNE",199.6,-28.3,FALSE
+"307031184","Clifton - Greenmount","Queensland",5433,"OOL",180.6,"BNE",152.3,-28.3,FALSE
+"307031185","Southern Downs - East","Queensland",4630,"OOL",185.1,"BNE",156.8,-28.3,FALSE
+"307031186","Southern Downs - West","Queensland",5347,"OOL",205.5,"BNE",177.2,-28.3,FALSE
+"307031187","Stanthorpe","Queensland",5480,"OOL",213.9,"BNE",195.8,-18.1,FALSE
+"307031188","Stanthorpe Surrounds","Queensland",6544,"OOL",247.5,"BNE",228,-19.5,FALSE
+"307031189","Warwick","Queensland",16197,"OOL",181.3,"BNE",153,-28.3,FALSE
+"309011224","Broadbeach Waters","Queensland",9109,"OOL",31.2,"BNE",74.5,43.3,FALSE
+"309011225","Burleigh Heads","Queensland",10055,"OOL",17.6,"BNE",79.3,61.7,FALSE
+"309011226","Burleigh Waters","Queensland",15180,"OOL",20.4,"BNE",76.3,55.9,FALSE
+"309011227","Mermaid Beach - Broadbeach","Queensland",16126,"OOL",28.2,"BNE",79.5,51.3,FALSE
+"309011228","Mermaid Waters","Queensland",14564,"OOL",26.5,"BNE",77.4,50.9,FALSE
+"309011229","Miami","Queensland",8531,"OOL",23.8,"BNE",80.5,56.7,FALSE
+"309021230","Coolangatta","Queensland",7204,"OOL",5.7,"BNE",83.1,77.4,FALSE
+"309021231","Currumbin - Tugun","Queensland",13477,"OOL",7.1,"BNE",80.1,73,FALSE
+"309021232","Currumbin Waters","Queensland",10220,"OOL",12.3,"BNE",79.3,67,FALSE
+"309021233","Elanora","Queensland",13343,"OOL",14.7,"BNE",77,62.3,FALSE
+"309021234","Palm Beach","Queensland",18678,"OOL",11.6,"BNE",74.8,63.3,FALSE
+"309031235","Arundel","Queensland",12056,"OOL",35.6,"BNE",64.5,29,FALSE
+"309031236","Biggera Waters","Queensland",11016,"OOL",45.8,"BNE",70.9,25.1,FALSE
+"309031237","Coombabah","Queensland",10815,"OOL",43,"BNE",68.1,25.1,FALSE
+"309031238","Labrador","Queensland",19745,"OOL",40.4,"BNE",66.5,26.1,FALSE
+"309031239","Paradise Point - Hollywell","Queensland",10736,"OOL",45.7,"BNE",65.9,20.2,FALSE
+"309031240","Runaway Bay","Queensland",9755,"OOL",42.5,"BNE",67.6,25.1,FALSE
+"309041241","Guanaba - Springbrook","Queensland",4687,"OOL",44.7,"BNE",80.3,35.5,FALSE
+"309041242","Tamborine - Canungra","Queensland",16855,"OOL",62.6,"BNE",92.1,29.5,FALSE
+"309051243","Currumbin Valley - Tallebudgera","Queensland",8112,"OOL",27.7,"BNE",85.5,57.8,FALSE
+"309051244","Mudgeeraba - Bonogin","Queensland",20770,"OOL",29.3,"BNE",77.5,48.2,FALSE
+"309051245","Reedy Creek - Andrews","Queensland",9610,"OOL",22.7,"BNE",73.3,50.7,FALSE
+"309061246","Carrara","Queensland",14340,"OOL",25.9,"BNE",64.5,38.6,FALSE
+"309061247","Highland Park","Queensland",8797,"OOL",25.7,"BNE",62.9,37.2,FALSE
+"309061248","Nerang - Mount Nathan","Queensland",22560,"OOL",31.3,"BNE",65.1,33.8,FALSE
+"309061249","Pacific Pines - Gaven","Queensland",19143,"OOL",35.3,"BNE",60.7,25.4,FALSE
+"309061250","Worongary - Tallai","Queensland",9211,"OOL",30.6,"BNE",73,42.3,FALSE
+"309071251","Coomera","Queensland",24313,"OOL",39.8,"BNE",54.9,15.1,FALSE
+"309071252","Helensvale","Queensland",21073,"OOL",37.3,"BNE",60.6,23.3,FALSE
+"309071253","Hope Island","Queensland",18253,"OOL",45.7,"BNE",64.2,18.5,FALSE
+"309071254","Jacobs Well - Alberton","Queensland",5608,"OOL",51.2,"BNE",51.2,0,FALSE
+"309071256","Oxenford - Maudsland","Queensland",19732,"OOL",45.6,"BNE",66.2,20.6,FALSE
+"309071552","Ormeau (East) - Stapylton","Queensland",12022,"OOL",46.7,"BNE",45.3,-1.4,FALSE
+"309071553","Ormeau (West) - Yatala","Queensland",13037,"OOL",52.8,"BNE",47.3,-5.4,FALSE
+"309071554","Pimpama - North","Queensland",13841,"OOL",44.5,"BNE",53.9,9.4,FALSE
+"309071555","Pimpama - South","Queensland",12833,"OOL",41.8,"BNE",51.9,10.1,FALSE
+"309071556","Upper Coomera (South) - Wongawallan","Queensland",12438,"OOL",54.7,"BNE",73.5,18.8,FALSE
+"309071557","Upper Coomera - North","Queensland",21884,"OOL",40.6,"BNE",52.9,12.4,FALSE
+"309071558","Willow Vale - Pimpama (West)","Queensland",8721,"OOL",48.9,"BNE",56.1,7.2,FALSE
+"309081259","Clear Island Waters","Queensland",4570,"OOL",36.9,"BNE",77.9,41,FALSE
+"309081260","Merrimac","Queensland",7423,"OOL",24.4,"BNE",67.9,43.6,FALSE
+"309081262","Varsity Lakes","Queensland",18207,"OOL",23.2,"BNE",77.1,53.9,FALSE
+"309081559","Robina - East","Queensland",18355,"OOL",24.4,"BNE",74.3,49.9,FALSE
+"309081560","Robina - West","Queensland",9678,"OOL",21.4,"BNE",69.7,48.3,FALSE
+"309091263","Ashmore","Queensland",12809,"OOL",32.2,"BNE",65.3,33.1,FALSE
+"309091264","Molendinar","Queensland",6707,"OOL",31.8,"BNE",61.5,29.7,FALSE
+"309091265","Parkwood","Queensland",9135,"OOL",35.8,"BNE",65.6,29.8,FALSE
+"309091540","Southport - North","Queensland",20260,"OOL",36.7,"BNE",64.9,28.2,FALSE
+"309091541","Southport - South","Queensland",20247,"OOL",37.9,"BNE",70.6,32.7,FALSE
+"309101267","Benowa","Queensland",10728,"OOL",43.6,"BNE",78.6,35.1,FALSE
+"309101268","Bundall","Queensland",5048,"OOL",36,"BNE",71.1,35.1,FALSE
+"309101269","Main Beach","Queensland",4418,"OOL",44.7,"BNE",74.7,30,FALSE
+"309101561","Surfers Paradise - North","Queensland",14640,"OOL",40,"BNE",74.1,34,FALSE
+"309101562","Surfers Paradise - South","Queensland",17410,"OOL",37.3,"BNE",74.8,37.4,FALSE
+"310011271","Darra - Sumner","Queensland",5141,"OOL",75.7,"BNE",45.9,-29.8,FALSE
+"310011272","Durack","Queensland",8813,"OOL",73.8,"BNE",45.5,-28.3,FALSE
+"310011274","Inala - Richlands","Queensland",21884,"OOL",73.4,"BNE",45.1,-28.3,FALSE
+"310011275","Oxley (Qld)","Queensland",9434,"OOL",77.7,"BNE",49.4,-28.3,FALSE
+"310011276","Wacol","Queensland",6975,"OOL",73,"BNE",44.8,-28.3,FALSE
+"310011563","Doolandella","Queensland",9953,"OOL",68.9,"BNE",40.6,-28.3,FALSE
+"310011564","Forest Lake - Ellen Grove","Queensland",24080,"OOL",73.6,"BNE",45.4,-28.3,FALSE
+"310021277","Boonah","Queensland",13450,"OOL",125.4,"BNE",105.5,-19.9,FALSE
+"310021278","Esk","Queensland",5236,"OOL",144.6,"BNE",116.4,-28.3,FALSE
+"310021280","Lockyer Valley - East","Queensland",24138,"OOL",128.9,"BNE",100.6,-28.3,FALSE
+"310021281","Lowood","Queensland",15478,"OOL",115.5,"BNE",87.2,-28.3,FALSE
+"310021282","Rosewood","Queensland",16825,"OOL",103.2,"BNE",74.9,-28.3,FALSE
+"310031283","Brassall","Queensland",13196,"OOL",90,"BNE",61.7,-28.3,FALSE
+"310031284","Bundamba","Queensland",10405,"OOL",82.3,"BNE",54,-28.3,FALSE
+"310031285","Churchill - Yamanto","Queensland",7182,"OOL",88.5,"BNE",60.2,-28.3,FALSE
+"310031286","Ipswich - Central","Queensland",6923,"OOL",89.7,"BNE",61.4,-28.3,FALSE
+"310031287","Ipswich - East","Queensland",19056,"OOL",87.8,"BNE",59.5,-28.3,FALSE
+"310031288","Ipswich - North","Queensland",4680,"OOL",91.1,"BNE",62.8,-28.3,FALSE
+"310031289","Karalee - Barellan Point","Queensland",7320,"OOL",89.2,"BNE",61,-28.3,FALSE
+"310031290","Karana Downs","Queensland",6261,"OOL",91.5,"BNE",63.2,-28.3,FALSE
+"310031291","Leichhardt - One Mile","Queensland",8911,"OOL",96.8,"BNE",68.5,-28.3,FALSE
+"310031292","North Ipswich - Tivoli","Queensland",6671,"OOL",89.5,"BNE",61.2,-28.3,FALSE
+"310031293","Raceview","Queensland",16382,"OOL",84.6,"BNE",56.4,-28.3,FALSE
+"310031294","Ripley","Queensland",23459,"OOL",85.1,"BNE",56.8,-28.3,FALSE
+"310031295","Riverview","Queensland",3168,"OOL",78.9,"BNE",50.6,-28.3,FALSE
+"310041297","Camira - Gailes","Queensland",9794,"OOL",76.1,"BNE",47.8,-28.3,FALSE
+"310041298","Carole Park","Queensland",7,"OOL",71.2,"BNE",42.9,-28.3,FALSE
+"310041299","Collingwood Park - Redbank","Queensland",14921,"OOL",77.7,"BNE",49.5,-28.3,FALSE
+"310041300","Goodna","Queensland",11381,"OOL",73.6,"BNE",45.3,-28.3,FALSE
+"310041301","New Chum","Queensland",3,"OOL",82.8,"BNE",54.5,-28.3,FALSE
+"310041302","Redbank Plains","Queensland",29057,"OOL",84.2,"BNE",55.9,-28.3,FALSE
+"310041303","Springfield","Queensland",8537,"OOL",78.9,"BNE",50.6,-28.3,FALSE
+"310041304","Springfield Lakes","Queensland",29522,"OOL",77.6,"BNE",49.3,-28.3,FALSE
+"310041565","Augustine Heights - Brookwater","Queensland",10178,"OOL",77.8,"BNE",49.5,-28.3,FALSE
+"310041566","Bellbird Park","Queensland",10949,"OOL",79.1,"BNE",50.8,-28.3,FALSE
+"311011305","Beaudesert","Queensland",16642,"OOL",92.6,"BNE",92.2,-0.4,FALSE
+"311021306","Beenleigh","Queensland",9004,"OOL",50.3,"BNE",39.2,-11.1,FALSE
+"311021307","Eagleby","Queensland",14488,"OOL",49.7,"BNE",40.4,-9.3,FALSE
+"311021308","Edens Landing - Holmview","Queensland",11432,"OOL",54.4,"BNE",43.6,-10.8,FALSE
+"311021309","Mount Warren Park","Queensland",5964,"OOL",50.5,"BNE",41.3,-9.2,FALSE
+"311021310","Wolffdene - Bahrs Scrub","Queensland",12765,"OOL",60.4,"BNE",50.8,-9.5,FALSE
+"311031311","Boronia Heights - Park Ridge","Queensland",27073,"OOL",70.6,"BNE",42,-28.6,FALSE
+"311031312","Browns Plains","Queensland",9517,"OOL",63.4,"BNE",36.7,-26.6,FALSE
+"311031313","Chambers Flat - Logan Reserve","Queensland",16875,"OOL",67.7,"BNE",49,-18.8,FALSE
+"311031314","Crestmead","Queensland",12895,"OOL",65.2,"BNE",42.8,-22.3,FALSE
+"311031316","Hillcrest","Queensland",10043,"OOL",69.8,"BNE",41.6,-28.3,FALSE
+"311031317","Marsden","Queensland",17494,"OOL",63.6,"BNE",41,-22.6,FALSE
+"311031318","Munruben - Park Ridge South","Queensland",4565,"OOL",77.6,"BNE",49,-28.6,FALSE
+"311031319","Regents Park - Heritage Park","Queensland",17206,"OOL",67.2,"BNE",40.6,-26.6,FALSE
+"311041322","Logan Village","Queensland",9963,"OOL",70.7,"BNE",57.8,-12.8,FALSE
+"311041567","Flagstone (East) - Riverbend","Queensland",7190,"OOL",86.1,"BNE",57.9,-28.2,FALSE
+"311041568","Flagstone (West) - New Beith","Queensland",13360,"OOL",111.2,"BNE",82.6,-28.6,FALSE
+"311041569","Greenbank - North Maclean","Queensland",12691,"OOL",80,"BNE",51.3,-28.6,FALSE
+"311041570","Jimboomba - Glenlogan","Queensland",21545,"OOL",82,"BNE",70.3,-11.7,FALSE
+"311041571","Yarrabilba","Queensland",15803,"OOL",70.9,"BNE",64.3,-6.6,FALSE
+"311051323","Bethania - Waterford","Queensland",13108,"OOL",58.7,"BNE",43.2,-15.5,FALSE
+"311051324","Cornubia - Carbrook","Queensland",9471,"OOL",58.4,"BNE",43.5,-14.9,FALSE
+"311051325","Loganholme - Tanah Merah","Queensland",12700,"OOL",53.2,"BNE",36.7,-16.5,FALSE
+"311051326","Loganlea","Queensland",12948,"OOL",56,"BNE",36.7,-19.4,FALSE
+"311051327","Shailer Park","Queensland",12717,"OOL",54.1,"BNE",36.3,-17.8,FALSE
+"311051328","Waterford West","Queensland",8569,"OOL",60.9,"BNE",41.6,-19.3,FALSE
+"311061329","Daisy Hill","Queensland",7458,"OOL",60.1,"BNE",38.3,-21.8,FALSE
+"311061330","Kingston (Qld)","Queensland",11172,"OOL",57.7,"BNE",40.3,-17.4,FALSE
+"311061331","Logan Central","Queensland",6653,"OOL",61.6,"BNE",37.1,-24.5,FALSE
+"311061332","Rochedale South - Priestdale","Queensland",16053,"OOL",64.5,"BNE",34.9,-29.6,FALSE
+"311061333","Slacks Creek","Queensland",10811,"OOL",57.2,"BNE",31.6,-25.6,FALSE
+"311061334","Springwood","Queensland",10328,"OOL",59.3,"BNE",35.3,-24,FALSE
+"311061335","Underwood","Queensland",7527,"OOL",60,"BNE",29.9,-30,FALSE
+"311061336","Woodridge","Queensland",14127,"OOL",62.2,"BNE",34.3,-27.9,FALSE
+"313011362","Beachmere - Sandstone Point","Queensland",17733,"OOL",121.1,"BNE",54.1,-67.1,FALSE
+"313011363","Bribie Island","Queensland",22215,"OOL",141.4,"BNE",74.4,-67.1,FALSE
+"313021364","Burpengary - East","Queensland",9216,"OOL",103.5,"BNE",36.4,-67.1,FALSE
+"313021366","Caboolture - South","Queensland",27798,"OOL",112.1,"BNE",45,-67.1,FALSE
+"313021367","Elimbah","Queensland",4645,"OOL",110.5,"BNE",43.5,-67.1,FALSE
+"313021368","Morayfield - East","Queensland",13813,"OOL",104.6,"BNE",37.6,-67.1,FALSE
+"313021369","Wamuran","Queensland",4522,"OOL",117,"BNE",49.9,-67.1,FALSE
+"313021572","Caboolture - East","Queensland",19929,"OOL",110.2,"BNE",43.1,-67.1,FALSE
+"313021573","Caboolture - West","Queensland",14884,"OOL",115,"BNE",48,-67.1,FALSE
+"313031370","Kilcoy","Queensland",6216,"OOL",190.7,"BNE",123.7,-67.1,FALSE
+"313031371","Woodford - D'Aguilar","Queensland",10806,"OOL",135.2,"BNE",68.2,-67.1,FALSE
+"313041372","Burpengary","Queensland",19133,"OOL",105.8,"BNE",38.7,-67.1,FALSE
+"313041373","Deception Bay","Queensland",25304,"OOL",100.7,"BNE",33.7,-67.1,FALSE
+"313041374","Morayfield","Queensland",7826,"OOL",111,"BNE",44,-67.1,FALSE
+"313041375","Narangba","Queensland",23657,"OOL",107.1,"BNE",40.1,-67.1,FALSE
+"313041376","Upper Caboolture","Queensland",3597,"OOL",120.6,"BNE",53.6,-67.1,FALSE
+"313051377","Clontarf","Queensland",8876,"OOL",96.5,"BNE",29.4,-67.1,FALSE
+"313051378","Margate - Woody Point","Queensland",12649,"OOL",98.4,"BNE",31.3,-67.1,FALSE
+"313051379","Redcliffe","Queensland",11134,"OOL",103.2,"BNE",36.1,-67.1,FALSE
+"313051380","Rothwell - Kippa-Ring","Queensland",17562,"OOL",102,"BNE",34.9,-67.1,FALSE
+"313051574","Moreton Island","Queensland",339,"OOL",108.7,"BNE",34,-74.7,TRUE
+"313051575","Scarborough - Newport","Queensland",18187,"OOL",106.2,"BNE",39.1,-67.1,FALSE
+"314011382","Albany Creek","Queensland",17369,"OOL",103.3,"BNE",37.4,-65.9,FALSE
+"314011383","Cashmere","Queensland",21462,"OOL",115.3,"BNE",48.3,-67.1,FALSE
+"314011384","Dayboro","Queensland",10103,"OOL",127.1,"BNE",60.1,-67.1,FALSE
+"314011385","Eatons Hill","Queensland",7984,"OOL",114,"BNE",46.9,-67.1,FALSE
+"314011386","The Hills District","Queensland",26166,"OOL",101.3,"BNE",37.3,-64,FALSE
+"314011387","Samford Valley","Queensland",13239,"OOL",121.7,"BNE",58.6,-63,FALSE
+"314021389","Murrumba Downs - Griffin","Queensland",27130,"OOL",94.2,"BNE",27.1,-67.1,FALSE
+"314021576","Dakabin","Queensland",6194,"OOL",101,"BNE",34,-67.1,FALSE
+"314021577","Kallangur","Queensland",23466,"OOL",96,"BNE",29,-67.1,FALSE
+"314021578","Mango Hill","Queensland",17874,"OOL",99.4,"BNE",32.3,-67.1,FALSE
+"314021579","North Lakes","Queensland",24527,"OOL",99,"BNE",32,-67.1,FALSE
+"314031391","Bray Park","Queensland",10810,"OOL",107.4,"BNE",40.4,-67.1,FALSE
+"314031392","Lawnton","Queensland",8120,"OOL",105.2,"BNE",38.1,-67.1,FALSE
+"314031393","Petrie","Queensland",9202,"OOL",102.8,"BNE",35.8,-67.1,FALSE
+"314031394","Strathpine - Brendale","Queensland",15313,"OOL",100,"BNE",32.9,-67.1,FALSE
+"316011413","Buderim - North","Queensland",20127,"OOL",136.6,"BNE",69.6,-67.1,FALSE
+"316011414","Buderim - South","Queensland",18362,"OOL",134,"BNE",66.9,-67.1,FALSE
+"316011415","Mountain Creek","Queensland",12397,"OOL",134.3,"BNE",67.3,-67.1,FALSE
+"316011416","Sippy Downs","Queensland",12683,"OOL",134,"BNE",67,-67.1,FALSE
+"316021417","Aroona - Currimundi","Queensland",10328,"OOL",136,"BNE",68.9,-67.1,FALSE
+"316021418","Buddina - Minyama","Queensland",7410,"OOL",138.6,"BNE",71.6,-67.1,FALSE
+"316021419","Caloundra - Kings Beach","Queensland",7094,"OOL",137.1,"BNE",70,-67.1,FALSE
+"316021421","Golden Beach - Pelican Waters","Queensland",14293,"OOL",142.2,"BNE",75.1,-67.1,FALSE
+"316021422","Moffat Beach - Battery Hill","Queensland",8303,"OOL",138.9,"BNE",71.8,-67.1,FALSE
+"316021423","Parrearra - Warana","Queensland",11379,"OOL",138.7,"BNE",71.6,-67.1,FALSE
+"316021424","Wurtulla - Birtinya","Queensland",11624,"OOL",138,"BNE",71,-67.1,FALSE
+"316021580","Caloundra West - Baringa","Queensland",23872,"OOL",127.7,"BNE",60.7,-67.1,FALSE
+"316021581","Meridan Plains - Little Mountain (North)","Queensland",15068,"OOL",129.3,"BNE",62.2,-67.1,FALSE
+"316031425","Coolum Beach","Queensland",17064,"OOL",152.2,"BNE",85.1,-67.1,FALSE
+"316031426","Marcoola - Mudjimba","Queensland",12672,"OOL",143.6,"BNE",76.6,-67.1,FALSE
+"316031427","Maroochydore - Kuluin","Queensland",25797,"OOL",141.9,"BNE",74.9,-67.1,FALSE
+"316031428","Mooloolaba - Alexandra Headland","Queensland",13101,"OOL",139.2,"BNE",72.2,-67.1,FALSE
+"316051434","Noosa Heads","Queensland",5319,"OOL",172.4,"BNE",105.3,-67.1,FALSE
+"316051435","Noosaville","Queensland",9634,"OOL",164.1,"BNE",97.1,-67.1,FALSE
+"316051437","Sunshine Beach","Queensland",7524,"OOL",172.2,"BNE",105.1,-67.1,FALSE
+"316051438","Tewantin","Queensland",10660,"OOL",165,"BNE",97.9,-67.1,FALSE
+"316051543","Peregian Beach - Marcus Beach","Queensland",4374,"OOL",161.8,"BNE",94.8,-67.1,FALSE
+"316051544","Peregian Springs","Queensland",11924,"OOL",157.5,"BNE",90.5,-67.1,FALSE
+"316061439","Beerwah","Queensland",9938,"OOL",127.8,"BNE",60.8,-67.1,FALSE
+"316061440","Caloundra Hinterland","Queensland",9352,"OOL",164.2,"BNE",97.2,-67.1,FALSE
+"316061441","Glass House Mountains","Queensland",7309,"OOL",115.9,"BNE",48.9,-67.1,FALSE
+"316061442","Landsborough","Queensland",21628,"OOL",140.4,"BNE",73.3,-67.1,FALSE
+"316061443","Maroochy Hinterland","Queensland",7415,"OOL",178.6,"BNE",111.5,-67.1,FALSE
+"316061444","Palmwoods","Queensland",13537,"OOL",145.2,"BNE",78.1,-67.1,FALSE
+"316071545","Bli Bli","Queensland",11935,"OOL",147.4,"BNE",80.3,-67.1,FALSE
+"316071546","Diddillibah - Rosemount","Queensland",4731,"OOL",142.3,"BNE",75.3,-67.1,FALSE
+"316071547","Eumundi - Yandina","Queensland",13729,"OOL",154.4,"BNE",87.3,-67.1,FALSE
+"316071548","Nambour","Queensland",24674,"OOL",145.1,"BNE",78,-67.1,FALSE
+"316081549","Noosa Hinterland","Queensland",26251,"OOL",170.6,"BNE",103.5,-67.1,FALSE
+"317011445","Cambooya - Wyreema","Queensland",8905,"OOL",169.3,"BNE",141,-28.3,FALSE
+"317011446","Darling Heights","Queensland",16382,"OOL",159.2,"BNE",131,-28.3,FALSE
+"317011447","Drayton - Harristown","Queensland",11514,"OOL",158.8,"BNE",130.5,-28.3,FALSE
+"317011448","Gatton","Queensland",8897,"OOL",131,"BNE",102.7,-28.3,FALSE
+"317011449","Gowrie (Qld)","Queensland",8154,"OOL",167.1,"BNE",138.8,-28.3,FALSE
+"317011450","Highfields","Queensland",16630,"OOL",170.3,"BNE",142,-28.3,FALSE
+"317011451","Lockyer Valley - West","Queensland",13029,"OOL",148.9,"BNE",120.6,-28.3,FALSE
+"317011452","Middle Ridge","Queensland",8113,"OOL",154.9,"BNE",126.6,-28.3,FALSE
+"317011453","Newtown (Qld)","Queensland",10761,"OOL",156.9,"BNE",128.6,-28.3,FALSE
+"317011454","North Toowoomba - Harlaxton","Queensland",6596,"OOL",153.9,"BNE",125.6,-28.3,FALSE
+"317011455","Rangeville","Queensland",8887,"OOL",152.5,"BNE",124.2,-28.3,FALSE
+"317011456","Toowoomba - Central","Queensland",14434,"OOL",152.8,"BNE",124.5,-28.3,FALSE
+"317011457","Toowoomba - East","Queensland",10831,"OOL",152.1,"BNE",123.8,-28.3,FALSE
+"317011458","Toowoomba - West","Queensland",17905,"OOL",160.6,"BNE",132.4,-28.3,FALSE
+"317011459","Wilsonton","Queensland",14669,"OOL",150.9,"BNE",122.6,-28.3,FALSE
+"319011492","Ashfield - Kepnock","Queensland",5891,"OOL",311.2,"BNE",244.1,-67.1,FALSE
+"319011493","Bargara - Burnett Heads","Queensland",21697,"OOL",317.5,"BNE",250.4,-67.1,FALSE
+"319011494","Branyan - Kensington","Queensland",5969,"OOL",303.8,"BNE",236.8,-67.1,FALSE
+"319011495","Bundaberg","Queensland",6611,"OOL",309.7,"BNE",242.6,-67.1,FALSE
+"319011496","Bundaberg East - Kalkie","Queensland",5981,"OOL",316.8,"BNE",249.8,-67.1,FALSE
+"319011497","Bundaberg North - Gooburrum","Queensland",7935,"OOL",319.9,"BNE",252.8,-67.1,FALSE
+"319011499","Bundaberg Surrounds - South","Queensland",12134,"OOL",277.4,"BNE",210.4,-67.1,FALSE
+"319011500","Millbank - Avoca","Queensland",7848,"OOL",309,"BNE",241.9,-67.1,FALSE
+"319011501","Svensson Heights - Norville","Queensland",6028,"OOL",308.8,"BNE",241.8,-67.1,FALSE
+"319011502","Walkervale - Avenell Heights","Queensland",11323,"OOL",307.6,"BNE",240.5,-67.1,FALSE
+"319021503","Gayndah - Mundubbera","Queensland",6721,"OOL",329.9,"BNE",262.9,-67.1,FALSE
+"319021504","Gin Gin","Queensland",5851,"OOL",327.2,"BNE",260.1,-67.1,FALSE
+"319021505","Kingaroy","Queensland",11059,"OOL",233.7,"BNE",180.3,-53.4,FALSE
+"319021506","Kingaroy Surrounds - North","Queensland",10038,"OOL",298.3,"BNE",231.3,-67.1,FALSE
+"319021507","Kingaroy Surrounds - South","Queensland",4469,"OOL",260.8,"BNE",207.4,-53.4,FALSE
+"319021509","Nanango","Queensland",10843,"OOL",212.5,"BNE",159,-53.4,FALSE
+"319031511","Cooloola","Queensland",7148,"OOL",218,"BNE",151,-67.1,FALSE
+"319031512","Gympie - North","Queensland",15512,"OOL",180.9,"BNE",113.8,-67.1,FALSE
+"319031513","Gympie - South","Queensland",9079,"OOL",181.9,"BNE",114.8,-67.1,FALSE
+"319031514","Gympie Surrounds","Queensland",22707,"OOL",194.1,"BNE",127.1,-67.1,FALSE
+"319031515","Kilkivan","Queensland",3959,"OOL",227,"BNE",160,-67.1,FALSE
+"319041516","Booral - River Heads","Queensland",7887,"OOL",266.1,"BNE",199,-67.1,FALSE
+"319041517","Craignish - Dundowran Beach","Queensland",6235,"OOL",266.6,"BNE",199.6,-67.1,FALSE
+"319041518","Pialba - Eli Waters","Queensland",17754,"OOL",266.3,"BNE",199.2,-67.1,FALSE
+"319041519","Point Vernon","Queensland",5985,"OOL",271.8,"BNE",204.7,-67.1,FALSE
+"319041520","Torquay - Scarness - Kawungan","Queensland",16715,"OOL",269.5,"BNE",202.4,-67.1,FALSE
+"319041521","Urangan - Wondunna","Queensland",16623,"OOL",272.5,"BNE",205.5,-67.1,FALSE
+"319051522","Burrum - Fraser","Queensland",11970,"OOL",258.4,"BNE",191.4,-67.1,FALSE
+"319051523","Granville","Queensland",3227,"OOL",248.4,"BNE",181.3,-67.1,FALSE
+"319051524","Maryborough (Qld)","Queensland",19255,"OOL",242.2,"BNE",175.2,-67.1,FALSE
+"319051525","Maryborough Surrounds - South","Queensland",11170,"OOL",254.1,"BNE",187.1,-67.1,FALSE
+"319051526","Tinana","Queensland",6176,"OOL",232.9,"BNE",165.9,-67.1,FALSE

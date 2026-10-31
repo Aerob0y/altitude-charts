@@ -1,0 +1,235 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"501011001","Augusta","Western Australia",8090,"PER",208.4,"ADL",1799.8,1591.4,FALSE
+"501011003","Busselton Surrounds","Western Australia",14066,"PER",169.5,"ADL",1779,1609.5,FALSE
+"501011004","Margaret River","Western Australia",12077,"PER",188.6,"ADL",1805.5,1617,FALSE
+"501011293","Busselton - East","Western Australia",10199,"PER",150.9,"ADL",1781.1,1630.2,FALSE
+"501011294","Busselton - West","Western Australia",21758,"PER",159.5,"ADL",1789.7,1630.2,FALSE
+"501021005","Australind - Leschenault","Western Australia",21751,"PER",110.6,"ADL",1756.2,1645.6,FALSE
+"501021007","Capel","Western Australia",6027,"PER",145.7,"ADL",1760,1614.3,FALSE
+"501021008","College Grove - Carey Park","Western Australia",7602,"PER",124.9,"ADL",1758.1,1633.2,FALSE
+"501021009","Collie","Western Australia",9561,"PER",156.7,"ADL",1732.3,1575.6,FALSE
+"501021010","Dardanup","Western Australia",3734,"PER",134.9,"ADL",1744.9,1610,FALSE
+"501021011","Davenport","Western Australia",11,"PER",120.5,"ADL",1752.8,1632.3,FALSE
+"501021012","Eaton - Pelican Point","Western Australia",13513,"PER",119.3,"ADL",1756,1636.7,FALSE
+"501021014","Harvey","Western Australia",10457,"PER",111.3,"ADL",1753.7,1642.4,FALSE
+"501021015","East Bunbury - Glen Iris","Western Australia",7991,"PER",119.8,"ADL",1755.7,1635.9,FALSE
+"501021016","Waroona","Western Australia",4665,"PER",84.6,"ADL",1761.3,1676.7,FALSE
+"501021251","Dalyellup","Western Australia",11081,"PER",129.3,"ADL",1761.6,1632.3,FALSE
+"501021252","Gelorup - Stratham","Western Australia",3224,"PER",129.6,"ADL",1761.9,1632.3,FALSE
+"501021253","South Bunbury - Bunbury","Western Australia",13623,"PER",125.8,"ADL",1759.5,1633.7,FALSE
+"501021254","Withers - Usher","Western Australia",5536,"PER",128.4,"ADL",1760.7,1632.3,FALSE
+"501031017","Bridgetown - Boyup Brook","Western Australia",7931,"PER",198.3,"ADL",1689.1,1490.8,FALSE
+"501031018","Donnybrook - Balingup","Western Australia",6698,"PER",171.3,"ADL",1733.9,1562.6,FALSE
+"501031019","Manjimup","Western Australia",5661,"PER",215.1,"ADL",1737.2,1522.1,FALSE
+"501031020","Pemberton","Western Australia",5706,"PER",225.3,"ADL",1747.4,1522.1,FALSE
+"502011021","Dawesville - Bouvard","Western Australia",10844,"PER",94.4,"ADL",1771.1,1676.7,FALSE
+"502011022","Falcon - Wannanup","Western Australia",11288,"PER",76.6,"ADL",1753.3,1676.7,FALSE
+"502011023","Greenfields","Western Australia",11011,"PER",59.9,"ADL",1736.7,1676.7,FALSE
+"502011024","Halls Head - Erskine","Western Australia",22657,"PER",68.1,"ADL",1744.9,1676.7,FALSE
+"502011025","Mandurah","Western Australia",11777,"PER",61.1,"ADL",1737.9,1676.7,FALSE
+"502011026","Mandurah - East","Western Australia",7984,"PER",64.7,"ADL",1741.4,1676.7,FALSE
+"502011027","Mandurah - North","Western Australia",26873,"PER",65.5,"ADL",1742.2,1676.7,FALSE
+"502011028","Mandurah - South","Western Australia",12932,"PER",66.1,"ADL",1742.8,1676.7,FALSE
+"502011029","Pinjarra","Western Australia",12136,"PER",69.6,"ADL",1746.4,1676.7,FALSE
+"503011030","City Beach","Western Australia",7443,"PER",37,"ADL",1711.9,1674.9,FALSE
+"503011031","Claremont (WA)","Western Australia",10961,"PER",38.3,"ADL",1718.2,1680,FALSE
+"503011032","Cottesloe","Western Australia",8958,"PER",45,"ADL",1724.2,1679.2,FALSE
+"503011033","Floreat","Western Australia",9505,"PER",34.2,"ADL",1711.9,1677.8,FALSE
+"503011034","Mosman Park - Peppermint Grove","Western Australia",12310,"PER",47.6,"ADL",1725.7,1678.1,FALSE
+"503011035","Nedlands - Dalkeith - Crawley","Western Australia",22236,"PER",36.8,"ADL",1717,1680.2,FALSE
+"503011036","Swanbourne - Mount Claremont","Western Australia",10651,"PER",39.6,"ADL",1719.6,1680,FALSE
+"503021037","Kings Park (WA)","Western Australia",50,"PER",32.9,"ADL",1713.1,1680.2,FALSE
+"503021038","Mount Hawthorn - Leederville","Western Australia",13402,"PER",27.6,"ADL",1703.8,1676.3,FALSE
+"503021039","Mount Lawley - Inglewood","Western Australia",19150,"PER",20.3,"ADL",1700.1,1679.8,FALSE
+"503021040","North Perth","Western Australia",10997,"PER",24.4,"ADL",1700.8,1676.3,FALSE
+"503021042","Subiaco - Shenton Park","Western Australia",20645,"PER",32.2,"ADL",1711.5,1679.2,FALSE
+"503021043","Wembley - West Leederville - Glendalough","Western Australia",21965,"PER",29.1,"ADL",1707.4,1678.3,FALSE
+"503021295","East Perth","Western Australia",14495,"PER",22.2,"ADL",1703.2,1681,FALSE
+"503021296","Perth (North) - Highgate","Western Australia",13732,"PER",22.9,"ADL",1703.1,1680.2,FALSE
+"503021297","Perth (West) - Northbridge","Western Australia",15890,"PER",26.1,"ADL",1706.3,1680.2,FALSE
+"504011044","Bassendean - Eden Hill - Ashfield","Western Australia",17413,"PER",14.7,"ADL",1690.4,1675.7,FALSE
+"504011045","Bayswater - Embleton - Bedford","Western Australia",27178,"PER",14.8,"ADL",1695,1680.2,FALSE
+"504011046","Maylands","Western Australia",15435,"PER",17.6,"ADL",1697.8,1680.2,FALSE
+"504011047","Morley","Western Australia",25432,"PER",14.2,"ADL",1690.3,1676.1,FALSE
+"504011048","Noranda","Western Australia",8567,"PER",18.2,"ADL",1689.5,1671.3,FALSE
+"504021049","Chidlow","Western Australia",5661,"PER",59.4,"ADL",1641.7,1582.2,FALSE
+"504021050","Glen Forrest - Darlington","Western Australia",7828,"PER",30.1,"ADL",1666.4,1636.3,FALSE
+"504021051","Helena Valley - Koongamia","Western Australia",6662,"PER",22,"ADL",1674.2,1652.2,FALSE
+"504021052","Malmalling - Reservoir","Western Australia",11,"PER",68.5,"ADL",1670.2,1601.7,FALSE
+"504021053","Mundaring","Western Australia",14517,"PER",44.5,"ADL",1655.5,1611,FALSE
+"504021054","Swan View - Greenmount - Midvale","Western Australia",14691,"PER",21.9,"ADL",1675.2,1653.2,FALSE
+"504031055","Avon Valley National Park","Western Australia",7,"PER",106.7,"ADL",1702.5,1595.8,FALSE
+"504031056","Ballajura","Western Australia",19879,"PER",20.9,"ADL",1693,1672.1,FALSE
+"504031057","Beechboro","Western Australia",26928,"PER",22.9,"ADL",1686.7,1663.8,FALSE
+"504031058","Bullsbrook","Western Australia",7112,"PER",37,"ADL",1694.5,1657.5,FALSE
+"504031060","Gidgegannup","Western Australia",3235,"PER",42.2,"ADL",1662.5,1620.4,FALSE
+"504031061","Hazelmere - Guildford","Western Australia",7590,"PER",24.8,"ADL",1686.4,1661.6,FALSE
+"504031062","Lockridge - Kiara","Western Australia",14768,"PER",21.3,"ADL",1683.1,1661.8,FALSE
+"504031063","Malaga","Western Australia",23,"PER",17.9,"ADL",1689.2,1671.3,FALSE
+"504031065","Middle Swan - Herne Hill","Western Australia",6580,"PER",25.7,"ADL",1674.1,1648.5,FALSE
+"504031066","Midland - Guildford","Western Australia",12249,"PER",22.5,"ADL",1679.9,1657.4,FALSE
+"504031067","Stratton - Jane Brook","Western Australia",7819,"PER",32.9,"ADL",1670.9,1637.9,FALSE
+"504031068","The Vines","Western Australia",16074,"PER",36.2,"ADL",1680.4,1644.2,FALSE
+"504031298","Aveley","Western Australia",19348,"PER",28.2,"ADL",1688.3,1660,FALSE
+"504031299","Brabham - Henley Brook","Western Australia",17755,"PER",26.5,"ADL",1686.3,1659.8,FALSE
+"504031300","Ellenbrook","Western Australia",21882,"PER",25.2,"ADL",1692.1,1666.9,FALSE
+"505011070","Craigie - Beldon","Western Australia",11907,"PER",34.4,"ADL",1705.7,1671.3,FALSE
+"505011071","Currambine - Kinross","Western Australia",15022,"PER",38.9,"ADL",1710.2,1671.3,FALSE
+"505011072","Duncraig","Western Australia",17630,"PER",29.8,"ADL",1701.1,1671.3,FALSE
+"505011073","Greenwood - Warwick","Western Australia",15038,"PER",29.6,"ADL",1700.9,1671.3,FALSE
+"505011074","Heathridge - Connolly","Western Australia",11852,"PER",34.5,"ADL",1705.8,1671.3,FALSE
+"505011075","Hillarys","Western Australia",12127,"PER",36.3,"ADL",1707.6,1671.3,FALSE
+"505011076","Iluka - Burns Beach","Western Australia",11228,"PER",40.3,"ADL",1711.6,1671.3,FALSE
+"505011077","Joondalup - Edgewater","Western Australia",15713,"PER",37,"ADL",1708.3,1671.3,FALSE
+"505011078","Kingsley","Western Australia",13888,"PER",33.5,"ADL",1704.8,1671.3,FALSE
+"505011079","Mullaloo - Kallaroo","Western Australia",12947,"PER",36.9,"ADL",1708.2,1671.3,FALSE
+"505011080","Ocean Reef","Western Australia",8985,"PER",37.3,"ADL",1708.6,1671.3,FALSE
+"505011081","Padbury","Western Australia",9714,"PER",34,"ADL",1705.3,1671.3,FALSE
+"505011082","Sorrento - Marmion","Western Australia",11187,"PER",34.1,"ADL",1705.4,1671.3,FALSE
+"505011083","Woodvale","Western Australia",10293,"PER",33.5,"ADL",1704.8,1671.3,FALSE
+"505021084","Balcatta - Hamersley","Western Australia",18025,"PER",26.3,"ADL",1697.6,1671.3,FALSE
+"505021085","Balga - Mirrabooka","Western Australia",23741,"PER",21.9,"ADL",1693.2,1671.3,FALSE
+"505021088","Innaloo - Doubleview","Western Australia",20721,"PER",32.3,"ADL",1703.6,1671.3,FALSE
+"505021089","Karrinyup - Gwelup - Carine","Western Australia",24578,"PER",31.8,"ADL",1703.1,1671.3,FALSE
+"505021090","Nollamara - Westminster","Western Australia",23030,"PER",23.6,"ADL",1694.9,1671.3,FALSE
+"505021091","Osborne Park Industrial","Western Australia",290,"PER",30,"ADL",1703,1673,FALSE
+"505021092","Scarborough","Western Australia",20490,"PER",35.1,"ADL",1706.4,1671.3,FALSE
+"505021093","Stirling - Osborne Park","Western Australia",16322,"PER",29.8,"ADL",1701.4,1671.6,FALSE
+"505021094","Trigg - North Beach - Watermans Bay","Western Australia",8951,"PER",32.6,"ADL",1703.9,1671.3,FALSE
+"505021095","Tuart Hill - Joondanna","Western Australia",14673,"PER",26.8,"ADL",1699.2,1672.4,FALSE
+"505021096","Wembley Downs - Churchlands - Woodlands","Western Australia",16742,"PER",34.9,"ADL",1707.1,1672.2,FALSE
+"505021097","Yokine - Coolbinia - Menora","Western Australia",18844,"PER",24.6,"ADL",1698.8,1674.2,FALSE
+"505021301","Dianella - North","Western Australia",12840,"PER",21.6,"ADL",1692.9,1671.3,FALSE
+"505021302","Dianella - South","Western Australia",15055,"PER",20.4,"ADL",1695.8,1675.4,FALSE
+"505031098","Alexander Heights - Koondoola","Western Australia",12443,"PER",23.4,"ADL",1694.7,1671.3,FALSE
+"505031099","Butler - Merriwa - Ridgewood","Western Australia",26000,"PER",44.1,"ADL",1715.4,1671.3,FALSE
+"505031100","Carramar","Western Australia",22088,"PER",43,"ADL",1705.8,1662.8,FALSE
+"505031101","Clarkson","Western Australia",15921,"PER",41.4,"ADL",1712.7,1671.3,FALSE
+"505031102","Girrawheen","Western Australia",10268,"PER",24.7,"ADL",1696,1671.3,FALSE
+"505031104","Marangaroo","Western Australia",10923,"PER",27.3,"ADL",1698.6,1671.3,FALSE
+"505031105","Mindarie - Quinns Rocks - Jindalee","Western Australia",24757,"PER",45.4,"ADL",1716.7,1671.3,FALSE
+"505031106","Neerabup National Park","Western Australia",4,"PER",39.9,"ADL",1711.2,1671.3,FALSE
+"505031107","Tapping - Ashby - Sinagra","Western Australia",15154,"PER",38.3,"ADL",1710.4,1672.1,FALSE
+"505031255","Alkimos - Eglinton","Western Australia",22493,"PER",48.8,"ADL",1720.1,1671.3,FALSE
+"505031256","Carabooda - Pinjar","Western Australia",784,"PER",63.8,"ADL",1722.7,1658.9,FALSE
+"505031257","Two Rocks","Western Australia",5214,"PER",65.7,"ADL",1717.9,1652.3,FALSE
+"505031258","Yanchep","Western Australia",14322,"PER",55.7,"ADL",1716.9,1661.2,FALSE
+"505031303","Hocking - Pearsall","Western Australia",14858,"PER",30.5,"ADL",1702.6,1672.1,FALSE
+"505031304","Landsdale","Western Australia",17852,"PER",24.8,"ADL",1696.9,1672.1,FALSE
+"505031305","Madeley - Darch","Western Australia",15551,"PER",30.3,"ADL",1702.4,1672.1,FALSE
+"505031306","Wanneroo - Sinagra","Western Australia",16627,"PER",38,"ADL",1710.1,1672.1,FALSE
+"506011110","Armadale - Wungong - Brookdale","Western Australia",28839,"PER",34.7,"ADL",1711.9,1677.2,FALSE
+"506011111","Ashendon - Lesley","Western Australia",3,"PER",55.9,"ADL",1697.7,1641.8,FALSE
+"506011112","Camillo - Champion Lakes","Western Australia",6978,"PER",26.3,"ADL",1703.5,1677.2,FALSE
+"506011114","Kelmscott","Western Australia",11381,"PER",27,"ADL",1700.9,1673.9,FALSE
+"506011115","Mount Nasura - Mount Richon - Bedfordale","Western Australia",9050,"PER",40.4,"ADL",1708,1667.6,FALSE
+"506011116","Roleystone","Western Australia",7831,"PER",34.8,"ADL",1696.8,1662,FALSE
+"506011117","Seville Grove","Western Australia",12981,"PER",28.6,"ADL",1705.8,1677.2,FALSE
+"506011307","Harrisdale","Western Australia",14125,"PER",30.6,"ADL",1707.4,1676.7,FALSE
+"506011308","Piara Waters - Forrestdale","Western Australia",21815,"PER",33.1,"ADL",1710.4,1677.2,FALSE
+"506021118","Belmont - Ascot - Redcliffe","Western Australia",16787,"PER",12.4,"ADL",1691.6,1679.2,FALSE
+"506021119","East Victoria Park - Carlisle","Western Australia",19989,"PER",16.5,"ADL",1699.1,1682.6,FALSE
+"506021121","Perth Airport","Western Australia",23,"PER",2.6,"ADL",1691.7,1689.1,FALSE
+"506021123","Victoria Park - Lathlain - Burswood","Western Australia",18736,"PER",20.4,"ADL",1701.3,1680.9,FALSE
+"506021309","Cloverdale","Western Australia",10126,"PER",11.3,"ADL",1695.5,1684.3,FALSE
+"506021310","Kewdale","Western Australia",8443,"PER",12.6,"ADL",1696.9,1684.3,FALSE
+"506021311","Rivervale","Western Australia",12842,"PER",15.3,"ADL",1696.6,1681.4,FALSE
+"506031124","Bentley - Wilson - St James","Western Australia",24479,"PER",15.8,"ADL",1698.6,1682.8,FALSE
+"506031125","Canning Vale - West","Western Australia",10715,"PER",26.9,"ADL",1703.7,1676.7,FALSE
+"506031126","Canning Vale Commercial","Western Australia",5,"PER",20.2,"ADL",1696.9,1676.7,FALSE
+"506031127","Cannington - Queens Park","Western Australia",24673,"PER",18.2,"ADL",1698.2,1680.1,FALSE
+"506031128","Parkwood - Ferndale - Lynwood","Western Australia",15304,"PER",18.9,"ADL",1695.6,1676.7,FALSE
+"506031129","Riverton - Shelley - Rossmoyne","Western Australia",16102,"PER",22.2,"ADL",1699.8,1677.7,FALSE
+"506031130","Welshpool","Western Australia",15,"PER",10.2,"ADL",1691.4,1681.2,FALSE
+"506031131","Willetton","Western Australia",21691,"PER",22.1,"ADL",1698.8,1676.7,FALSE
+"506041132","Beckenham - Kenwick - Langford","Western Australia",23337,"PER",14.8,"ADL",1691.5,1676.7,FALSE
+"506041133","Canning Vale - East","Western Australia",27381,"PER",24.9,"ADL",1701.6,1676.7,FALSE
+"506041134","Gosnells","Western Australia",23945,"PER",24.9,"ADL",1702.1,1677.2,FALSE
+"506041135","Huntingdale - Southern River","Western Australia",26277,"PER",28.8,"ADL",1705.5,1676.7,FALSE
+"506041136","Maddington - Orange Grove - Martin","Western Australia",17572,"PER",17.4,"ADL",1694.6,1677.2,FALSE
+"506041137","Thornlie","Western Australia",25963,"PER",20.8,"ADL",1697.6,1676.7,FALSE
+"506051138","Forrestfield - Wattle Grove","Western Australia",22766,"PER",14.4,"ADL",1688.9,1674.4,FALSE
+"506051139","High Wycombe","Western Australia",13368,"PER",16.8,"ADL",1685.2,1668.4,FALSE
+"506051140","Kalamunda - Maida Vale - Gooseberry Hill","Western Australia",16453,"PER",18.7,"ADL",1681.3,1662.7,FALSE
+"506051141","Lesmurdie - Bickley - Carmel","Western Australia",12420,"PER",27.8,"ADL",1679.2,1651.4,FALSE
+"506061142","Byford","Western Australia",27064,"PER",39.5,"ADL",1716.8,1677.2,FALSE
+"506061143","Mundijong","Western Australia",8298,"PER",50.6,"ADL",1727.8,1677.2,FALSE
+"506061144","Serpentine - Jarrahdale","Western Australia",5195,"PER",71.8,"ADL",1747.5,1675.7,FALSE
+"506071145","Como","Western Australia",16221,"PER",24.5,"ADL",1707.2,1682.8,FALSE
+"506071146","Manning - Waterford","Western Australia",13108,"PER",24.4,"ADL",1707.2,1682.8,FALSE
+"506071147","South Perth - Kensington","Western Australia",19447,"PER",24.4,"ADL",1705.9,1681.5,FALSE
+"507011148","Banjup","Western Australia",26778,"PER",31.4,"ADL",1708.1,1676.7,FALSE
+"507011150","Bibra Industrial","Western Australia",21,"PER",31.3,"ADL",1708,1676.7,FALSE
+"507011152","Coogee","Western Australia",11074,"PER",40.8,"ADL",1717.5,1676.7,FALSE
+"507011153","Coolbellup","Western Australia",9639,"PER",30.9,"ADL",1707.6,1676.7,FALSE
+"507011154","Hamilton Hill","Western Australia",13081,"PER",35.1,"ADL",1711.8,1676.7,FALSE
+"507011155","Henderson","Western Australia",9,"PER",39.8,"ADL",1716.6,1676.7,FALSE
+"507011158","North Coogee","Western Australia",4965,"PER",40.1,"ADL",1716.9,1676.7,FALSE
+"507011159","South Lake - Cockburn Central","Western Australia",13071,"PER",28.2,"ADL",1704.9,1676.7,FALSE
+"507011160","Spearwood","Western Australia",12932,"PER",36.8,"ADL",1713.5,1676.7,FALSE
+"507011161","Success - Hammond Park","Western Australia",21561,"PER",31.2,"ADL",1707.9,1676.7,FALSE
+"507011163","Yangebup","Western Australia",8395,"PER",31.2,"ADL",1707.9,1676.7,FALSE
+"507011259","Beeliar - Wattleup","Western Australia",12870,"PER",33.9,"ADL",1710.6,1676.7,FALSE
+"507011260","Jandakot","Western Australia",2693,"PER",23.8,"ADL",1700.5,1676.7,FALSE
+"507021164","East Fremantle","Western Australia",8426,"PER",42.3,"ADL",1719.2,1676.9,FALSE
+"507021165","Fremantle","Western Australia",20429,"PER",44.8,"ADL",1721.7,1676.9,FALSE
+"507021166","Fremantle - South","Western Australia",17250,"PER",36.8,"ADL",1713.5,1676.7,FALSE
+"507021167","O'Connor (WA)","Western Australia",7,"PER",34.8,"ADL",1711.6,1676.7,FALSE
+"507031169","Wellard (West) - Bertram","Western Australia",23219,"PER",37.2,"ADL",1713.9,1676.7,FALSE
+"507031170","Calista","Western Australia",7882,"PER",46.7,"ADL",1723.5,1676.7,FALSE
+"507031172","Hope Valley - Postans","Western Australia",80,"PER",40.6,"ADL",1717.4,1676.7,FALSE
+"507031173","Kwinana Industrial","Western Australia",25,"PER",44.7,"ADL",1721.4,1676.7,FALSE
+"507031174","Parmelia - Orelia","Western Australia",12669,"PER",40.3,"ADL",1717.1,1676.7,FALSE
+"507031261","Casuarina - Wandi","Western Australia",13547,"PER",35.9,"ADL",1712.6,1676.7,FALSE
+"507041175","Applecross - Ardross","Western Australia",13261,"PER",30.4,"ADL",1710.3,1679.8,FALSE
+"507041176","Bateman","Western Australia",4183,"PER",27.9,"ADL",1704.7,1676.7,FALSE
+"507041177","Bicton - Palmyra","Western Australia",16510,"PER",39.4,"ADL",1716.2,1676.9,FALSE
+"507041178","Booragoon","Western Australia",17792,"PER",30.8,"ADL",1707.7,1676.9,FALSE
+"507041179","Bull Creek","Western Australia",8712,"PER",24.7,"ADL",1701.4,1676.7,FALSE
+"507041180","Leeming","Western Australia",11692,"PER",22,"ADL",1698.8,1676.7,FALSE
+"507041181","Melville","Western Australia",19369,"PER",35.4,"ADL",1712.3,1676.9,FALSE
+"507041182","Murdoch - Kardinya","Western Australia",14419,"PER",29.4,"ADL",1706.2,1676.7,FALSE
+"507041183","Willagee","Western Australia",6253,"PER",34.3,"ADL",1711.1,1676.7,FALSE
+"507041184","Winthrop","Western Australia",6641,"PER",30.2,"ADL",1707,1676.7,FALSE
+"507051186","Cooloongup","Western Australia",9132,"PER",52.3,"ADL",1729,1676.7,FALSE
+"507051187","Port Kennedy","Western Australia",14778,"PER",56.9,"ADL",1733.7,1676.7,FALSE
+"507051188","Rockingham","Western Australia",18827,"PER",47.7,"ADL",1724.5,1676.7,FALSE
+"507051189","Rockingham Lakes","Western Australia",3,"PER",48.5,"ADL",1725.2,1676.7,FALSE
+"507051190","Safety Bay - Shoalwater","Western Australia",13307,"PER",55.5,"ADL",1732.2,1676.7,FALSE
+"507051191","Singleton - Golden Bay - Secret Harbour","Western Australia",26403,"PER",55.1,"ADL",1731.9,1676.7,FALSE
+"507051192","Waikiki","Western Australia",13674,"PER",51.1,"ADL",1727.8,1676.7,FALSE
+"507051193","Warnbro","Western Australia",11897,"PER",53.2,"ADL",1729.9,1676.7,FALSE
+"507051312","Baldivis - North","Western Australia",17460,"PER",42,"ADL",1718.8,1676.7,FALSE
+"507051313","Baldivis - South","Western Australia",31709,"PER",46.9,"ADL",1723.6,1676.7,FALSE
+"507051314","Karnup","Western Australia",2744,"PER",50.2,"ADL",1726.9,1676.7,FALSE
+"509011225","Albany","Western Australia",16077,"PER",283,"ADL",1631.2,1348.1,FALSE
+"509011226","Albany Surrounds","Western Australia",4021,"PER",326.1,"ADL",1619.7,1293.6,FALSE
+"509011227","Bayonet Head - Lower King","Western Australia",5767,"PER",285.8,"ADL",1623.4,1337.7,FALSE
+"509011228","Denmark","Western Australia",6858,"PER",330.9,"ADL",1700.5,1369.6,FALSE
+"509011229","Gnowangerup","Western Australia",3078,"PER",291.7,"ADL",1549.7,1258,FALSE
+"509011230","Katanning","Western Australia",4840,"PER",189.3,"ADL",1637.1,1447.8,FALSE
+"509011231","Kojonup","Western Australia",4269,"PER",208.5,"ADL",1636,1427.5,FALSE
+"509011232","Little Grove - Elleker","Western Australia",3995,"PER",293.5,"ADL",1641.7,1348.2,FALSE
+"509011233","McKail - Willyung","Western Australia",12448,"PER",277.7,"ADL",1623.8,1346.1,FALSE
+"509011234","Plantagenet","Western Australia",5793,"PER",266.5,"ADL",1658.1,1391.6,FALSE
+"509021236","Chittering","Western Australia",7039,"PER",60.6,"ADL",1671.5,1610.9,FALSE
+"509021237","Cunderdin","Western Australia",3796,"PER",148.8,"ADL",1570.8,1422,FALSE
+"509021238","Dowerin","Western Australia",3974,"PER",158.3,"ADL",1634.2,1475.9,FALSE
+"509021239","Gingin - Dandaragan","Western Australia",10674,"PER",101,"ADL",1724.9,1623.9,FALSE
+"509021240","Merredin","Western Australia",5291,"PER",215.4,"ADL",1532.1,1316.7,FALSE
+"509021241","Moora","Western Australia",4701,"PER",140.1,"ADL",1709.4,1569.2,FALSE
+"509021242","Mukinbudin","Western Australia",3086,"PER",267.3,"ADL",1503.6,1236.3,FALSE
+"509021243","Northam","Western Australia",12758,"PER",104.2,"ADL",1630.3,1526.1,FALSE
+"509021244","Toodyay","Western Australia",5251,"PER",88.3,"ADL",1647.9,1559.6,FALSE
+"509021245","York - Beverley","Western Australia",5492,"PER",95.2,"ADL",1632.8,1537.5,FALSE
+"509031246","Brookton","Western Australia",3690,"PER",123.4,"ADL",1673,1549.6,FALSE
+"509031247","Kulin","Western Australia",4452,"PER",246.4,"ADL",1572.9,1326.5,FALSE
+"509031248","Murray","Western Australia",2586,"PER",137.7,"ADL",1738.3,1600.6,FALSE
+"509031249","Narrogin","Western Australia",4562,"PER",138.8,"ADL",1651.8,1513,FALSE
+"509031250","Wagin","Western Australia",5119,"PER",145.5,"ADL",1666.5,1521,FALSE
+"511041285","Geraldton","Western Australia",12410,"PER",269.1,"ADL",1856.2,1587.1,FALSE
+"511041286","Geraldton - East","Western Australia",8599,"PER",261.9,"ADL",1849,1587.1,FALSE
+"511041287","Geraldton - North","Western Australia",9890,"PER",283.4,"ADL",1870.5,1587.1,FALSE
+"511041288","Geraldton - South","Western Australia",11205,"PER",259.1,"ADL",1852.2,1593.2,FALSE
+"511041289","Irwin","Western Australia",3899,"PER",243.5,"ADL",1845.5,1602,FALSE
+"511041291","Morawa","Western Australia",4149,"PER",213.4,"ADL",1747.3,1533.9,FALSE

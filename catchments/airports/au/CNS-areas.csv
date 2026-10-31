@@ -1,0 +1,69 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"306011138","Brinsmead","Queensland",5702,"CNS",18,"BNE",1222.4,1204.4,FALSE
+"306011139","Clifton Beach - Kewarra Beach","Queensland",12760,"CNS",32.8,"BNE",1246.7,1213.9,FALSE
+"306011140","Freshwater - Stratford","Queensland",3856,"CNS",10,"BNE",1224.2,1214.2,FALSE
+"306011141","Redlynch","Queensland",14877,"CNS",27.8,"BNE",1232.7,1204.9,FALSE
+"306011142","Trinity Beach - Smithfield","Queensland",19862,"CNS",24.2,"BNE",1238.1,1213.9,FALSE
+"306011143","Yorkeys Knob - Machans Beach","Queensland",6319,"CNS",19.7,"BNE",1234,1214.2,FALSE
+"306021144","Bentley Park","Queensland",9214,"CNS",29.9,"BNE",1205.7,1175.7,FALSE
+"306021145","Cairns City","Queensland",13599,"CNS",9.6,"BNE",1217.3,1207.7,FALSE
+"306021146","Earlville - Bayview Heights","Queensland",8723,"CNS",24.9,"BNE",1214,1189.2,FALSE
+"306021147","Edmonton","Queensland",12342,"CNS",31.3,"BNE",1203.1,1171.8,FALSE
+"306021148","Gordonvale - Trinity","Queensland",11413,"CNS",36.7,"BNE",1195.4,1158.7,FALSE
+"306021149","Kanimbla - Mooroobool","Queensland",10375,"CNS",18.1,"BNE",1219.3,1201.2,FALSE
+"306021150","Lamb Range","Queensland",6,"CNS",39.4,"BNE",1209.9,1170.6,FALSE
+"306021151","Manoora","Queensland",6323,"CNS",12.9,"BNE",1217.3,1204.4,FALSE
+"306021152","Manunda","Queensland",5321,"CNS",12.5,"BNE",1217.3,1204.8,FALSE
+"306021153","Mount Sheridan","Queensland",9042,"CNS",25.5,"BNE",1205.7,1180.2,FALSE
+"306021154","Westcourt - Bungalow","Queensland",6811,"CNS",15.4,"BNE",1211.5,1196.2,FALSE
+"306021155","White Rock","Queensland",5198,"CNS",24.7,"BNE",1210.4,1185.7,FALSE
+"306021156","Whitfield - Edge Hill","Queensland",8573,"CNS",10.8,"BNE",1221.3,1210.5,FALSE
+"306021157","Woree","Queensland",5252,"CNS",20.8,"BNE",1210.9,1190.1,FALSE
+"306031158","Babinda","Queensland",4765,"CNS",72.3,"BNE",1175.1,1102.8,FALSE
+"306031159","Innisfail","Queensland",9516,"CNS",85.8,"BNE",1146.1,1060.2,FALSE
+"306031160","Johnstone","Queensland",8281,"CNS",114.5,"BNE",1129.7,1015.2,FALSE
+"306031161","Tully","Queensland",11867,"CNS",150.2,"BNE",1092.5,942.3,FALSE
+"306031162","Wooroonooran","Queensland",3,"CNS",108.5,"BNE",1225.7,1117.2,FALSE
+"306031163","Yarrabah","Queensland",2669,"CNS",73.7,"BNE",1232.3,1158.7,FALSE
+"306041164","Daintree","Queensland",7011,"CNS",116.2,"BNE",1330,1213.9,FALSE
+"306041165","Port Douglas","Queensland",6041,"CNS",120.2,"BNE",1316.4,1196.2,FALSE
+"306051166","Atherton","Queensland",12472,"CNS",85.3,"BNE",1223.6,1138.3,FALSE
+"306051167","Herberton","Queensland",5730,"CNS",152.4,"BNE",1232.6,1080.1,FALSE
+"306051168","Kuranda","Queensland",5033,"CNS",49.5,"BNE",1263.4,1213.9,FALSE
+"306051169","Malanda - Yungaburra","Queensland",9700,"CNS",93.7,"BNE",1197.1,1103.4,FALSE
+"306051170","Mareeba","Queensland",12752,"CNS",72.4,"BNE",1254.5,1182,FALSE
+"315011397","Croydon - Etheridge","Queensland",1000,"CNS",424.1,"BNE",1413.1,989,FALSE
+"315011400","Tablelands","Queensland",6420,"CNS",209.1,"BNE",1376.7,1167.6,FALSE
+"318011460","Ayr","Queensland",9234,"CNS",342.2,"BNE",887.8,545.6,FALSE
+"318011461","Burdekin","Queensland",7980,"CNS",386.9,"BNE",920.4,533.5,FALSE
+"318011462","Charters Towers","Queensland",8172,"CNS",363.6,"BNE",941.6,577.9,FALSE
+"318011463","Dalrymple","Queensland",3916,"CNS",427.1,"BNE",993.1,566,FALSE
+"318011464","Ingham","Queensland",4471,"CNS",199,"BNE",1030.6,831.6,FALSE
+"318011465","Ingham Surrounds","Queensland",6723,"CNS",233.8,"BNE",1065.4,831.6,FALSE
+"318011466","Palm Island","Queensland",2335,"CNS",798.8,"BNE",1637.3,838.5,FALSE
+"318021467","Aitkenvale","Queensland",4848,"CNS",279.4,"BNE",954.9,675.5,FALSE
+"318021468","Annandale (Qld)","Queensland",10353,"CNS",279.4,"BNE",950.5,671.1,FALSE
+"318021469","Belgian Gardens - Pallarenda","Queensland",3190,"CNS",286.8,"BNE",962.5,675.8,FALSE
+"318021470","Bohle Plains","Queensland",10466,"CNS",273.1,"BNE",961.7,688.7,FALSE
+"318021471","Condon - Rasmussen","Queensland",11457,"CNS",288.3,"BNE",967.9,679.6,FALSE
+"318021472","Cranbrook","Queensland",6096,"CNS",279.1,"BNE",956.4,677.3,FALSE
+"318021474","Douglas","Queensland",8318,"CNS",306.9,"BNE",968.1,661.2,FALSE
+"318021475","Garbutt - West End","Queensland",6605,"CNS",281.3,"BNE",962.1,680.8,FALSE
+"318021476","Gulliver - Currajong - Vincent","Queensland",7872,"CNS",279.3,"BNE",957,677.7,FALSE
+"318021477","Heatley","Queensland",4023,"CNS",279.5,"BNE",957.2,677.7,FALSE
+"318021478","Hermit Park - Rosslea","Queensland",5752,"CNS",283.7,"BNE",953.1,669.4,FALSE
+"318021479","Hyde Park - Pimlico","Queensland",4743,"CNS",280.2,"BNE",954.4,674.2,FALSE
+"318021480","Kelso","Queensland",11180,"CNS",297.4,"BNE",977,679.6,FALSE
+"318021481","Kirwan - East","Queensland",7924,"CNS",278.3,"BNE",959.9,681.6,FALSE
+"318021482","Kirwan - West","Queensland",15115,"CNS",277.2,"BNE",961.1,683.9,FALSE
+"318021483","Magnetic Island","Queensland",2658,"CNS",321.4,"BNE",986.7,665.4,FALSE
+"318021484","Mount Louisa","Queensland",10932,"CNS",278.4,"BNE",966.2,687.8,FALSE
+"318021485","Mundingburra","Queensland",3551,"CNS",282.9,"BNE",953.8,670.9,FALSE
+"318021486","Northern Beaches","Queensland",7196,"CNS",274.6,"BNE",1005.9,731.4,FALSE
+"318021487","Oonoonba","Queensland",7544,"CNS",282.7,"BNE",948.9,666.3,FALSE
+"318021488","South Townsville - Railway Estate","Queensland",5618,"CNS",284,"BNE",951.4,667.3,FALSE
+"318021489","Townsville - South","Queensland",5861,"CNS",297.8,"BNE",945.6,647.8,FALSE
+"318021490","Townsville City - North Ward","Queensland",9589,"CNS",285.2,"BNE",956.7,671.5,FALSE
+"318021491","Wulguru - Roseneath","Queensland",6403,"CNS",285.8,"BNE",944.4,658.5,FALSE
+"318021582","Burdell - Mount Low","Queensland",22202,"CNS",267.4,"BNE",967.1,699.8,FALSE
+"318021583","Deeragun - Jensen","Queensland",6770,"CNS",264.7,"BNE",967,702.3,FALSE

@@ -1,0 +1,10 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"702011045","Charles","Northern Territory",4882,"ASP",21.7,"DRW",841.8,820,FALSE
+"702011046","East Side","Northern Territory",6544,"ASP",21.8,"DRW",844.2,822.4,FALSE
+"702011047","Flynn (NT)","Northern Territory",5355,"ASP",25.6,"DRW",851.4,825.8,FALSE
+"702011048","Larapinta","Northern Territory",5878,"ASP",28,"DRW",853.8,825.8,FALSE
+"702011049","Mount Johns","Northern Territory",5069,"ASP",22.7,"DRW",851.4,828.7,FALSE
+"702011050","Petermann - Simpson","Northern Territory",2337,"ASP",193.1,"ADL",827.9,634.8,FALSE
+"702011051","Ross","Northern Territory",3147,"ASP",22.7,"DRW",865.5,842.8,FALSE
+"702011052","Sandover - Plenty","Northern Territory",4728,"ASP",198.4,"DRW",941.9,743.5,FALSE
+"702011054","Yuendumu - Anmatjere","Northern Territory",2095,"ASP",133.3,"DRW",760.2,626.9,FALSE

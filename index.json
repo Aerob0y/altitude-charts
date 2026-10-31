@@ -365,6 +365,19 @@
       "wip": false
     },
     {
+      "name": "ie_rents",
+      "title": "Ireland: rents",
+      "source": "Residential Tenancies Board, via CSO · RIQ02",
+      "note": "Average monthly rent in euros, observed quarterly, by local area, bedrooms and property type. Annual change compares with the same quarter a year earlier. No Ireland-wide average is supplied.",
+      "target": "cso",
+      "updated": "2026-10-09",
+      "page": "ie_rents/index.html",
+      "image": "ie_rents/ie_rents.png",
+      "site": "ireland",
+      "menu": "Housing",
+      "wip": true
+    },
+    {
       "name": "ie_house_prices",
       "title": "Ireland: house prices",
       "source": "CSO residential property price index",
@@ -376,6 +389,19 @@
       "site": "ireland",
       "menu": "Housing",
       "wip": false
+    },
+    {
+      "name": "ie_rates",
+      "title": "Ireland: rates and prices",
+      "source": "European Central Bank",
+      "note": "Compare ECB deposit rates, Irish government bond and new mortgage rates in percent; Irish and euro area annual inflation with a 2% reference line; mortgage rates; or foreign currency units per euro. Deposit and exchange rates are daily; the other series are monthly.",
+      "target": "ecb",
+      "updated": "2026-10-09",
+      "page": "ie_rates/index.html",
+      "image": "ie_rates/ie_rates.png",
+      "site": "ireland",
+      "menu": "Economic",
+      "wip": true
     },
     {
       "name": "ie_airports",
@@ -457,6 +483,15 @@
       "title": "Airport catchments",
       "page": "catchments/index.html",
       "beta": true
+    },
+    {
+      "key": "catchment-maps",
+      "title": "Airport catchment maps",
+      "page": "catchments/airports.html",
+      "beta": true,
+      "wip": true,
+      "image": "catchments/airports/au/CBR-thumb.jpg",
+      "note": "Where each of 43 airports is the closest by road, with an image and data for each."
     },
     {
       "key": "wacc",

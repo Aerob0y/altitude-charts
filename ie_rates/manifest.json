@@ -1,0 +1,28 @@
+{
+  "name": "ie_rates",
+  "title": "Ireland: rates and prices",
+  "source": "European Central Bank",
+  "note": "Compare ECB deposit rates, Irish government bond and new mortgage rates in percent; Irish and euro area annual inflation with a 2% reference line; mortgage rates; or foreign currency units per euro. Deposit and exchange rates are daily; the other series are monthly.",
+  "updated": "2026-10-09",
+  "views": [
+    {
+      "label": "Interest rates",
+      "spec": "interest-rates.json"
+    },
+    {
+      "label": "Inflation",
+      "spec": "inflation.json"
+    },
+    {
+      "label": "Mortgage rates",
+      "spec": "mortgage-rates.json"
+    },
+    {
+      "label": "Euro exchange rates",
+      "spec": "euro-exchange-rates.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "ie_rates.png",
+  "image_alt": "Ireland: interest rates Percent · Source: European Central Bank"
+}

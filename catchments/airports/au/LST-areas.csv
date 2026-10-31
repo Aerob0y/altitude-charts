@@ -1,0 +1,122 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"205011076","Drouin","Victoria",22118,"LST",969.5,"MEL",101,-868.4,FALSE
+"205011078","Trafalgar (Vic.)","Victoria",8618,"LST",988.7,"MEL",120.3,-868.4,FALSE
+"205011079","Warragul","Victoria",25392,"LST",980.8,"MEL",112.4,-868.4,FALSE
+"205021086","Paynesville","Victoria",7190,"LST",1106.3,"MEL",237.9,-868.4,FALSE
+"205031087","Foster","Victoria",9631,"LST",1034.5,"MEL",166,-868.4,FALSE
+"205031088","French Island","Victoria",133,"LST",384.3,"MEL",88.1,-296.3,TRUE
+"205031089","Korumburra","Victoria",10007,"LST",988.2,"MEL",119.8,-868.4,FALSE
+"205031090","Leongatha","Victoria",11699,"LST",1008.9,"MEL",140.5,-868.4,FALSE
+"205031091","Phillip Island","Victoria",14795,"LST",1014.1,"MEL",145.7,-868.4,FALSE
+"205031092","Wilsons Promontory","Victoria",15,"LST",1056.8,"MEL",188.4,-868.4,FALSE
+"205031093","Wonthaggi - Inverloch","Victoria",29333,"LST",999.4,"MEL",131,-868.4,FALSE
+"205041094","Churchill","Victoria",12325,"LST",1024.4,"MEL",156,-868.4,FALSE
+"205041095","Moe - Newborough","Victoria",17640,"LST",1000.7,"MEL",132.3,-868.4,FALSE
+"205041096","Morwell","Victoria",14487,"LST",1015.5,"MEL",147.1,-868.4,FALSE
+"205041098","Yallourn North - Glengarry","Victoria",4972,"LST",1033.2,"MEL",164.8,-868.4,FALSE
+"205041493","Traralgon - East","Victoria",12362,"LST",1027.6,"MEL",159.2,-868.4,FALSE
+"205041494","Traralgon - West","Victoria",17236,"LST",1013,"MEL",144.6,-868.4,FALSE
+"205051100","Longford - Loch Sport","Victoria",4993,"LST",1073.6,"MEL",205.2,-868.4,FALSE
+"205051102","Rosedale","Victoria",5020,"LST",1040.9,"MEL",172.5,-868.4,FALSE
+"205051103","Sale","Victoria",15232,"LST",1057.7,"MEL",189.3,-868.4,FALSE
+"205051104","Yarram","Victoria",5587,"LST",1064.6,"MEL",196.2,-868.4,FALSE
+"212011548","Koo Wee Rup","Victoria",12598,"LST",961,"MEL",92.6,-868.4,FALSE
+"214021378","Flinders","Victoria",6064,"LST",968.8,"MEL",100.3,-868.4,FALSE
+"214021379","Hastings - Somers","Victoria",23795,"LST",963.3,"MEL",94.9,-868.4,FALSE
+"601011001","Bridgewater - Gagebrook","Tasmania",8732,"LST",116.3,"HBA",40.4,-75.9,FALSE
+"601011002","Brighton - Pontville","Tasmania",7008,"LST",107.9,"HBA",25.6,-82.4,FALSE
+"601011003","Old Beach - Otago","Tasmania",5286,"LST",116.9,"HBA",31.2,-85.7,FALSE
+"601021004","Bellerive - Rosny","Tasmania",6561,"LST",130.3,"HBA",16.6,-113.8,FALSE
+"601021005","Cambridge","Tasmania",8883,"LST",124.5,"HBA",11.3,-113.2,FALSE
+"601021006","Geilston Bay - Risdon","Tasmania",3642,"LST",125.8,"HBA",21,-104.7,FALSE
+"601021007","Howrah - Tranmere","Tasmania",12105,"LST",135.2,"HBA",21.5,-113.8,FALSE
+"601021008","Lindisfarne - Rose Bay","Tasmania",7804,"LST",127.7,"HBA",13.9,-113.8,FALSE
+"601021009","Mornington - Warrane","Tasmania",5034,"LST",130.8,"HBA",17,-113.8,FALSE
+"601021010","Risdon Vale","Tasmania",3799,"LST",119,"HBA",23.2,-95.8,FALSE
+"601021011","Rokeby","Tasmania",9227,"LST",134.9,"HBA",20,-114.9,FALSE
+"601021012","South Arm","Tasmania",4679,"LST",140.7,"HBA",24.5,-116.2,FALSE
+"601031013","Austins Ferry - Granton","Tasmania",4675,"LST",144.3,"HBA",66.2,-78.1,FALSE
+"601031014","Berriedale - Chigwell","Tasmania",5916,"LST",130,"HBA",42.8,-87.1,FALSE
+"601031015","Claremont (Tas.)","Tasmania",8592,"LST",122.2,"HBA",40.6,-81.6,FALSE
+"601031016","Derwent Park - Lutana","Tasmania",4570,"LST",123,"HBA",23.1,-99.9,FALSE
+"601031017","Glenorchy","Tasmania",12209,"LST",127.1,"HBA",31.8,-95.4,FALSE
+"601031018","Montrose - Rosetta","Tasmania",4990,"LST",122.3,"HBA",30.9,-91.4,FALSE
+"601031019","Moonah","Tasmania",5554,"LST",126.2,"HBA",21.6,-104.6,FALSE
+"601031020","New Norfolk","Tasmania",7713,"LST",123.5,"HBA",47.6,-75.9,FALSE
+"601031021","West Moonah","Tasmania",4227,"LST",127.8,"HBA",26.6,-101.2,FALSE
+"601041022","Kingston - Huntingfield","Tasmania",14371,"LST",151,"HBA",37.7,-113.3,FALSE
+"601041023","Kingston Beach - Blackmans Bay","Tasmania",11344,"LST",154.3,"HBA",41,-113.3,FALSE
+"601041024","Margate - Snug","Tasmania",8751,"LST",161.8,"HBA",48.5,-113.3,FALSE
+"601041026","Taroona - Bonnet Hill","Tasmania",3615,"LST",148.5,"HBA",35.2,-113.3,FALSE
+"601051027","Hobart","Tasmania",9325,"LST",131.7,"HBA",19,-112.7,FALSE
+"601051028","Lenah Valley - Mount Stuart","Tasmania",9146,"LST",134,"HBA",30.8,-103.3,FALSE
+"601051029","Mount Nelson - Dynnyrne","Tasmania",5259,"LST",142.5,"HBA",29.2,-113.3,FALSE
+"601051030","New Town","Tasmania",6476,"LST",128.2,"HBA",21.2,-107,FALSE
+"601051031","Sandy Bay","Tasmania",12587,"LST",141,"HBA",27.6,-113.3,FALSE
+"601051032","South Hobart - Fern Tree","Tasmania",6752,"LST",144.1,"HBA",30.8,-113.3,FALSE
+"601051033","West Hobart","Tasmania",6415,"LST",135.8,"HBA",24.1,-111.7,FALSE
+"601061034","Dodges Ferry - Lewisham","Tasmania",9122,"LST",127.8,"HBA",25.9,-101.9,FALSE
+"601061035","Sorell - Richmond","Tasmania",10881,"LST",115.3,"HBA",22.3,-93,FALSE
+"602011036","Invermay","Tasmania",3460,"LST",17.8,"HBA",140.2,122.4,FALSE
+"602011037","Kings Meadows - Punchbowl","Tasmania",4994,"LST",11.7,"HBA",134.1,122.4,FALSE
+"602011038","Launceston","Tasmania",5365,"LST",14.6,"HBA",137,122.4,FALSE
+"602011039","Legana","Tasmania",5118,"LST",26.5,"HBA",148.9,122.4,FALSE
+"602011040","Mowbray","Tasmania",4136,"LST",22,"HBA",144.5,122.4,FALSE
+"602011041","Newnham - Mayfield","Tasmania",10070,"LST",22.1,"HBA",144.5,122.4,FALSE
+"602011042","Newstead","Tasmania",5476,"LST",16.4,"HBA",138.8,122.4,FALSE
+"602011043","Norwood (Tas.)","Tasmania",3844,"LST",13.4,"HBA",135.8,122.4,FALSE
+"602011044","Prospect Vale - Blackstone","Tasmania",6949,"LST",22.7,"HBA",145.1,122.4,FALSE
+"602011045","Ravenswood","Tasmania",3950,"LST",23.1,"HBA",145.5,122.4,FALSE
+"602011046","Riverside","Tasmania",7535,"LST",25.7,"HBA",148.1,122.4,FALSE
+"602011047","South Launceston","Tasmania",4784,"LST",12.1,"HBA",134.5,122.4,FALSE
+"602011048","Summerhill - Prospect","Tasmania",4989,"LST",13.7,"HBA",136.1,122.4,FALSE
+"602011049","Trevallyn","Tasmania",4874,"LST",24,"HBA",146.4,122.4,FALSE
+"602011050","Waverley - St Leonards","Tasmania",4107,"LST",18.4,"HBA",140.8,122.4,FALSE
+"602011051","West Launceston","Tasmania",4220,"LST",16.8,"HBA",139.3,122.4,FALSE
+"602011052","Youngtown - Relbia","Tasmania",5294,"LST",17.8,"HBA",141.4,123.6,FALSE
+"602021053","Beauty Point - Beaconsfield","Tasmania",4216,"LST",52,"HBA",174.4,122.4,FALSE
+"602021054","Deloraine","Tasmania",6372,"LST",102.7,"HBA",218.1,115.5,FALSE
+"602021055","Grindelwald - Lanena","Tasmania",6416,"LST",50.3,"HBA",172.7,122.4,FALSE
+"602021056","Hadspen - Carrick","Tasmania",3828,"LST",19.9,"HBA",135.3,115.5,FALSE
+"602021057","Westbury","Tasmania",4740,"LST",33.6,"HBA",149.1,115.5,FALSE
+"602031058","Dilston - Lilydale","Tasmania",4589,"LST",34.6,"HBA",157,122.4,FALSE
+"602031059","George Town","Tasmania",7465,"LST",52.9,"HBA",175.3,122.4,FALSE
+"602031060","Longford","Tasmania",4684,"LST",17,"HBA",132.4,115.5,FALSE
+"602031061","Northern Midlands","Tasmania",3883,"LST",36.9,"HBA",114.4,77.4,FALSE
+"602031062","Perth - Evandale","Tasmania",5816,"LST",7.2,"HBA",127.4,120.2,FALSE
+"602031064","St Helens - Scamander","Tasmania",7219,"LST",114.1,"HBA",183.8,69.7,FALSE
+"602031099","Flinders and Cape Barren Islands","Tasmania",924,"LST",1643.3,"HBA",1765.7,122.4,FALSE
+"602031100","Scottsdale - Bridport","Tasmania",7076,"LST",97.8,"HBA",220.2,122.4,FALSE
+"603011065","Central Highlands","Tasmania",2494,"LST",141,"HBA",151,9.9,FALSE
+"603011066","Derwent Valley","Tasmania",3464,"LST",188.2,"HBA",111.1,-77.2,FALSE
+"603011067","Southern Midlands","Tasmania",6998,"LST",87.4,"HBA",64.4,-22.9,FALSE
+"603011068","Wilderness - East","Tasmania",7,"LST",207.3,"HBA",135.9,-71.4,FALSE
+"603021069","Bruny Island - Kettering","Tasmania",3633,"LST",176.9,"HBA",63.6,-113.3,FALSE
+"603021070","Cygnet","Tasmania",5216,"LST",179.7,"HBA",66.4,-113.3,FALSE
+"603021071","Geeveston - Dover","Tasmania",4408,"LST",225,"HBA",111.7,-113.3,FALSE
+"603021072","Huonville - Franklin","Tasmania",10266,"LST",184.4,"HBA",71,-113.3,FALSE
+"603031073","Forestier - Tasman","Tasmania",2738,"LST",182.4,"HBA",80.5,-101.9,FALSE
+"603031074","Triabunna - Bicheno","Tasmania",5303,"LST",102.9,"HBA",77.9,-25,FALSE
+"604011075","Acton - Upper Burnie","Tasmania",3371,"LST",110.2,"HBA",225.6,115.5,FALSE
+"604011076","Burnie - Ulverstone Surrounds","Tasmania",5426,"LST",119.5,"HBA",234.9,115.5,FALSE
+"604011077","Burnie - Wivenhoe","Tasmania",3675,"LST",104.4,"HBA",219.9,115.5,FALSE
+"604011078","Parklands - Camdale","Tasmania",7034,"LST",114,"HBA",229.5,115.5,FALSE
+"604011079","Penguin - Sulphur Creek","Tasmania",5573,"LST",92.9,"HBA",208.4,115.5,FALSE
+"604011080","Romaine - Havenview","Tasmania",3627,"LST",109.8,"HBA",225.2,115.5,FALSE
+"604011081","Somerset","Tasmania",4169,"LST",120.8,"HBA",236.2,115.5,FALSE
+"604011082","Ulverstone","Tasmania",7156,"LST",88.2,"HBA",203.6,115.5,FALSE
+"604011083","West Ulverstone","Tasmania",4615,"LST",88.9,"HBA",204.4,115.5,FALSE
+"604011084","Wynyard","Tasmania",6767,"LST",135.8,"HBA",251.3,115.5,FALSE
+"604021085","Devonport","Tasmania",14775,"LST",75.6,"HBA",191.1,115.5,FALSE
+"604021086","East Devonport","Tasmania",5308,"LST",73.8,"HBA",189.3,115.5,FALSE
+"604021087","Latrobe","Tasmania",5786,"LST",61.9,"HBA",177.4,115.5,FALSE
+"604021088","Miandetta - Don","Tasmania",3794,"LST",77.3,"HBA",192.8,115.5,FALSE
+"604021089","Port Sorell","Tasmania",6896,"LST",76.9,"HBA",195.8,118.9,FALSE
+"604021090","Quoiba - Spreyton","Tasmania",3275,"LST",78.3,"HBA",193.7,115.5,FALSE
+"604021091","Sheffield - Railton","Tasmania",6911,"LST",74.4,"HBA",189.9,115.5,FALSE
+"604021092","Turners Beach - Forth","Tasmania",3700,"LST",86.7,"HBA",202.1,115.5,FALSE
+"604031093","King Island","Tasmania",1647,"LST",333.3,"MEL",252.6,-80.7,TRUE
+"604031094","North West","Tasmania",4400,"LST",216.6,"HBA",332,115.5,FALSE
+"604031095","Smithton","Tasmania",3886,"LST",176.1,"HBA",291.6,115.5,FALSE
+"604031096","Waratah","Tasmania",3980,"LST",275.4,"HBA",390.9,115.5,FALSE
+"604031097","West Coast (Tas.)","Tasmania",4320,"LST",158.6,"HBA",239.5,80.9,FALSE

@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="css/site.css">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <script src="js/navigation.js" defer></script>
 </head>
 <body>
@@ -17,7 +18,7 @@
 <div class="top">
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="./" aria-label="CSV Consulting home"><img src="images/csv-logo-ink.png" alt="CSV" width="299" height="236"></a>
+    <a class="brand" href="./" aria-label="CSV Consulting home"><img src="images/csv-logo.svg" alt="CSV" width="320" height="250"></a>
     <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" hidden>
       <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
@@ -72,7 +73,7 @@
 </main>
 <footer class="site-foot">
   <div class="wrap">
-    <img src="images/csv-logo-ink.png" alt="CSV" width="299" height="236">
+    <img src="images/csv-logo.svg" alt="CSV" width="320" height="250">
     <span>CSV Consulting is a trading name of CSV Limited.</span>
     <nav class="foot-links" aria-label="Footer">
       <a href="work.html">Selected work</a><a href="insights.html">Insights</a><a href="posts.html">Posts</a><a href="about.html">About</a><a href="mailto:mike@csv.co.nz">mike@csv.co.nz</a>
@@ -86,9 +87,13 @@
   var grid = document.getElementById('chart-grid'), count = document.getElementById('count'), none = document.getElementById('none');
   fetch('index.json').then(function (r) { if (!r.ok) throw Error(); return r.json(); }).then(function (index) {
     var wip = (index.charts || []).filter(function (ch) { return ch.wip; });
+    // Tools flagged wip in the tools list in dev/publish_all.R appear here too.
+    (index.tools || []).forEach(function (tool) {
+      if (tool.wip) wip.push({ link: tool.page.replace(/index\.html$/, ''), image: tool.image, title: tool.title, note: tool.note });
+    });
     wip.forEach(function (ch) {
       var li = document.createElement('li'), a = document.createElement('a'), thumb = document.createElement('span');
-      a.href = ch.site + '/#' + ch.name; thumb.className = 'thumb';
+      a.href = ch.link || ch.site + '/#' + ch.name; thumb.className = 'thumb';
       if (ch.image) { var im = document.createElement('img'); im.src = ch.image; im.alt = ''; im.loading = 'lazy'; im.width = 640; im.height = 320; thumb.append(im); }
       var c = document.createElement('span'), t = document.createElement('span'), d = document.createElement('span');
       c.className = 'cat'; c.textContent = 'In progress';

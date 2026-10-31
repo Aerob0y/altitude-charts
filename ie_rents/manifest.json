@@ -1,0 +1,20 @@
+{
+  "name": "ie_rents",
+  "title": "Ireland: rents",
+  "source": "Residential Tenancies Board, via CSO · RIQ02",
+  "note": "Average monthly rent in euros, observed quarterly, by local area, bedrooms and property type. Annual change compares with the same quarter a year earlier. No Ireland-wide average is supplied.",
+  "updated": "2026-10-09",
+  "views": [
+    {
+      "label": "Average monthly rent",
+      "spec": "average-monthly-rent.json"
+    },
+    {
+      "label": "Annual % change",
+      "spec": "annual-change.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "ie_rents.png",
+  "image_alt": "Ireland: average monthly rent Quarterly, euros per month · All bedrooms · All property types · Source: Residential Tenancies Board, via CSO"
+}

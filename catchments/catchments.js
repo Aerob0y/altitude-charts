@@ -6,14 +6,16 @@
   const BANDS = [0, 45, 90, 150, 240, Infinity];
   const DEFAULT_AIRPORT = { nz: "ZQN", au: "CBR", ie: "ORK" };
   const DENSITY = ["#ffffd9", "#edf8b1", "#c7e9b4", "#7fcdbb", "#41b6c4", "#1d91c0", "#225ea8", "#0c2c84"];
-  const SAVING = ["#C789BB", "#FFFFFF", "#EBBF7B"];
-  const SAVING_CAP = 180;
+  // STYLE.md diverging scale: ochre where a rival is closer, teal where this airport is.
+  // Capped at 120 minutes to match the access bands on the airport map images.
+  const SAVING = ["#C8781E", "#E4B984", "#EFEDE8", "#7FB5B0", "#0E6B6B"];
+  const SAVING_CAP = 120;
   const SOURCE = { nz: "Stats NZ population; OpenRouteService drive times; Altitude catchments (Beta)",
     au: "ABS population; OpenRouteService drive times; Altitude catchments (Beta)",
     ie: "CSO Census 2022 population; Tailte Éireann boundaries; OpenRouteService drive times; Altitude catchments (Beta)" };
   const cache = {};
   let data, shapes, map, areaLayer, airportLayer, catchmentLayer, rows = [], loadNumber = 0;
-  let outlineKey, outlineGeometry;
+  let outlineKey, outlineGeometry, linked = null;
 
   const escape = text => String(text ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const people = n => Math.round(n).toLocaleString("en-NZ");
@@ -70,6 +72,8 @@
     }
     if (number !== loadNumber) return;
     outlineKey = null;
+    const shared = linked;
+    linked = null;
     $("airport").replaceChildren(...data.airports.map(a => new Option(`${a.name} (${a.code})`, a.code)));
     const codes = data.airports.map(a => a.code);
     setAirport(codes.includes(airport) ? airport : (codes.includes(DEFAULT_AIRPORT[country]) ? DEFAULT_AIRPORT[country] : codes[0]));
@@ -77,8 +81,34 @@
     $("regions-box").hidden = !regions.length;
     $("regions-label").textContent = country === "ie" ? "Counties shown" : "States shown";
     ticks($("regions"), regions.map(r => ({ value: r, label: r })), regions);
+    if (shared) applyLink(shared);
     $("notice").textContent = data.notice;
     update(true);
+  }
+
+  // Shareable links: country, airport and view always; rivals, threshold and radius when changed.
+  function linkParams(result, style) {
+    const params = new URLSearchParams({ country: $("country").value, airport: result.airport, style });
+    const majors = data.airports.filter(a => a.major && a.code !== result.airport).map(a => a.code).sort();
+    const rivals = [...result.competitors].sort();
+    if (rivals.join(",") !== majors.join(",")) params.set("rivals", rivals.join(","));
+    if (result.threshold) params.set("threshold", result.threshold);
+    if (result.radius !== 400) params.set("radius", result.radius);
+    return params;
+  }
+
+  // Applies a link's rivals, threshold and radius once the country's airports are listed.
+  function applyLink(params) {
+    if (params.has("rivals")) {
+      const wanted = new Set(params.get("rivals").split(",").map(c => c.trim().toUpperCase()));
+      for (const input of $("competitors").querySelectorAll("input")) input.checked = wanted.has(input.value);
+    }
+    const number = (key, lo, hi) => {
+      const value = Number(params.get(key));
+      if (params.has(key) && isFinite(value) && value >= lo && value <= hi) $(key).value = value;
+    };
+    number("threshold", 0, 240);
+    number("radius", 1, 400);
   }
 
   // Road minutes where routed; otherwise straight-line km at 60 km/h, i.e. one minute per km.
@@ -180,8 +210,7 @@
     legend(scale, style);
     bands(result);
     $("csv").disabled = !rows.length;
-    const params = new URLSearchParams({ country: $("country").value, airport: result.airport });
-    history.replaceState(null, "", `?${params}`);
+    history.replaceState(null, "", `?${linkParams(result, style)}`);
   }
 
   function summary(result) {
@@ -247,8 +276,10 @@
     }
     if (matchMedia("(max-width: 799px)").matches) $("options").open = false;
     const params = new URLSearchParams(location.search);
-    const country = ["nz", "au"].includes(params.get("country")) ? params.get("country") : "nz";
+    const country = ["nz", "au", "ie"].includes(params.get("country")) ? params.get("country") : "nz";
     $("country").value = country;
+    if (["density", "advantage"].includes(params.get("style"))) $("style").value = params.get("style");
+    linked = params;
     $("country").addEventListener("change", () => setCountry($("country").value));
     $("airport").addEventListener("change", () => { setAirport($("airport").value); update(true); });
     for (const id of ["competitors", "regions"]) $(id).addEventListener("change", () => update(id === "regions"));

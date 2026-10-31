@@ -7,10 +7,23 @@
 <title>Page not found · CSV Consulting</title>
 <!-- GitHub Pages serves this page for any missing address, so links must start from the site root. -->
 <script>document.write('<base href="' + (location.pathname.indexOf('/altitude-charts/') === 0 ? '/altitude-charts/' : '/') + '">');</script>
+<script>
+// Old Squarespace and WordPress addresses that have no page of their own: send them to the closest new page.
+(function () {
+  var root = location.pathname.indexOf('/altitude-charts/') === 0 ? '/altitude-charts/' : '/';
+  var path = decodeURIComponent(location.pathname.slice(root.length)).replace(/\/+$/, '').toLowerCase();
+  var pages = { about: 'about.html', contact: 'contact.html', insights: 'insights.html', posts: 'posts.html',
+    services: './', 'services-1': './', home: './', 'home-1': './', dashboard: 'insights.html',
+    unpublished: './', test: './', cart: './' };
+  var target = pages[path] || (/^posts\/(category|tag)\//.test(path) ? 'posts.html' : null);
+  if (target) location.replace(root + target.replace('./', ''));
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="css/site.css">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <script src="js/navigation.js" defer></script>
 </head>
 <body>
@@ -18,7 +31,7 @@
 <div class="top">
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="./" aria-label="CSV Consulting home"><img src="images/csv-logo-ink.png" alt="CSV" width="299" height="236"></a>
+    <a class="brand" href="./" aria-label="CSV Consulting home"><img src="images/csv-logo.svg" alt="CSV" width="320" height="250"></a>
     <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" hidden>
       <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
@@ -44,7 +57,7 @@
 </main>
 <footer class="site-foot">
   <div class="wrap">
-    <img src="images/csv-logo-ink.png" alt="CSV" width="299" height="236">
+    <img src="images/csv-logo.svg" alt="CSV" width="320" height="250">
     <span>CSV Consulting is a trading name of CSV Limited.</span>
     <nav class="foot-links" aria-label="Footer">
       <a href="work.html">Selected work</a><a href="insights.html">Insights</a><a href="posts.html">Posts</a><a href="about.html">About</a><a href="mailto:mike@csv.co.nz">mike@csv.co.nz</a>

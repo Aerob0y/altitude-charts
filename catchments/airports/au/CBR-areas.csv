@@ -1,0 +1,721 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"101021007","Braidwood","New South Wales",4494,"CBR",78.4,"SYD",192.3,113.9,FALSE
+"101021008","Karabar","New South Wales",8409,"CBR",20.9,"SYD",191,170.1,FALSE
+"101021009","Queanbeyan","New South Wales",11251,"CBR",15.2,"SYD",187.1,171.8,FALSE
+"101021010","Queanbeyan - East","New South Wales",5111,"CBR",19.7,"SYD",188.5,168.7,FALSE
+"101021012","Queanbeyan West - Jerrabomberra","New South Wales",12735,"CBR",23.6,"SYD",194.9,171.4,FALSE
+"101021610","Googong","New South Wales",9323,"CBR",31.8,"SYD",200.5,168.7,FALSE
+"101021611","Queanbeyan Surrounds","New South Wales",18181,"CBR",34.6,"SYD",203.3,168.7,FALSE
+"101031013","Bombala","New South Wales",2474,"CBR",182.5,"SYD",353.8,171.4,FALSE
+"101031014","Cooma","New South Wales",6598,"CBR",97,"SYD",268.4,171.4,FALSE
+"101031015","Cooma Surrounds","New South Wales",3577,"CBR",109.3,"SYD",280.7,171.4,FALSE
+"101031016","Jindabyne - Berridale","New South Wales",8703,"CBR",151.3,"SYD",322.7,171.4,FALSE
+"101041017","Batemans Bay","New South Wales",8679,"CBR",126.8,"SYD",231.3,104.5,FALSE
+"101041018","Batemans Bay - South","New South Wales",9170,"CBR",136.2,"SYD",250.1,113.8,FALSE
+"101041019","Bega - Tathra","New South Wales",9070,"CBR",183.1,"SYD",354.4,171.4,FALSE
+"101041020","Bega-Eden Hinterland","New South Wales",9955,"CBR",186.7,"SYD",358.1,171.4,FALSE
+"101041021","Broulee - Tomakin","New South Wales",3951,"CBR",140.2,"SYD",254.1,113.8,FALSE
+"101041022","Deua - Wadbilliga","New South Wales",41,"CBR",222.3,"SYD",358.6,136.3,FALSE
+"101041023","Eden","New South Wales",3453,"CBR",214.1,"SYD",385.5,171.4,FALSE
+"101041024","Eurobodalla Hinterland","New South Wales",3788,"CBR",152,"SYD",265.8,113.8,FALSE
+"101041025","Merimbula - Tura Beach","New South Wales",11719,"CBR",192.4,"SYD",363.7,171.4,FALSE
+"101041026","Moruya - Tuross Head","New South Wales",8670,"CBR",151.6,"SYD",265.5,113.8,FALSE
+"101041027","Narooma - Bermagui","New South Wales",10087,"CBR",193.9,"SYD",307.8,113.8,FALSE
+"101051539","Goulburn","New South Wales",25647,"CBR",69.7,"SYD",122.1,52.5,FALSE
+"101051540","Goulburn Surrounds","New South Wales",14411,"CBR",110,"SYD",165.9,56,FALSE
+"101061541","Yass","New South Wales",6812,"CBR",72.3,"SYD",176,103.8,FALSE
+"101061542","Yass Surrounds","New South Wales",13346,"CBR",72.3,"SYD",176,103.8,FALSE
+"101061543","Young","New South Wales",10918,"CBR",147.2,"SYD",247.5,100.3,FALSE
+"101061544","Young Surrounds","New South Wales",7803,"CBR",109.6,"SYD",209.9,100.3,FALSE
+"102011028","Avoca Beach - Copacabana","New South Wales",7578,"CBR",258,"SYD",110.9,-147.1,FALSE
+"102011029","Box Head - MacMasters Beach","New South Wales",11289,"CBR",255.7,"SYD",108.6,-147.1,FALSE
+"102011030","Calga - Kulnura","New South Wales",4678,"CBR",293,"SYD",145.9,-147.1,FALSE
+"102011031","Erina - Green Point","New South Wales",14644,"CBR",247.1,"SYD",100,-147.1,FALSE
+"102011032","Gosford - Springfield","New South Wales",23282,"CBR",241.3,"SYD",94.2,-147.1,FALSE
+"102011033","Kariong","New South Wales",6388,"CBR",227.7,"SYD",80.6,-147.1,FALSE
+"102011034","Kincumber - Picketts Valley","New South Wales",7634,"CBR",252.5,"SYD",105.5,-147.1,FALSE
+"102011035","Narara","New South Wales",7425,"CBR",240,"SYD",93,-147.1,FALSE
+"102011036","Niagara Park - Lisarow","New South Wales",8264,"CBR",239.2,"SYD",92.2,-147.1,FALSE
+"102011037","Point Clare - Koolewong","New South Wales",6697,"CBR",239.4,"SYD",92.3,-147.1,FALSE
+"102011038","Saratoga - Davistown","New South Wales",7432,"CBR",249.3,"SYD",102.2,-147.1,FALSE
+"102011039","Terrigal - North Avoca","New South Wales",15631,"CBR",252.3,"SYD",105.2,-147.1,FALSE
+"102011040","Umina - Booker Bay - Patonga","New South Wales",25057,"CBR",249.7,"SYD",102.6,-147.1,FALSE
+"102011041","Wamberal - Forresters Beach","New South Wales",10897,"CBR",254.6,"SYD",107.6,-147.1,FALSE
+"102011042","Woy Woy - Blackwall","New South Wales",14566,"CBR",237.9,"SYD",90.9,-147.1,FALSE
+"102011043","Wyoming","New South Wales",11329,"CBR",240.3,"SYD",93.2,-147.1,FALSE
+"102021044","Bateau Bay - Killarney Vale","New South Wales",23090,"CBR",251.4,"SYD",104.3,-147.1,FALSE
+"102021045","Blue Haven - San Remo","New South Wales",11723,"CBR",248.5,"SYD",101.5,-147.1,FALSE
+"102021046","Budgewoi - Buff Point - Halekulani","New South Wales",10066,"CBR",253.6,"SYD",106.6,-147.1,FALSE
+"102021047","Chittaway Bay - Tumbi Umbi","New South Wales",16559,"CBR",247,"SYD",100,-147.1,FALSE
+"102021048","Gorokan - Kanwal - Charmhaven","New South Wales",22880,"CBR",252.1,"SYD",105,-147.1,FALSE
+"102021049","Jilliby - Yarramalong","New South Wales",3627,"CBR",264,"SYD",117,-147.1,FALSE
+"102021050","Lake Munmorah - Mannering Park","New South Wales",11084,"CBR",255.9,"SYD",108.8,-147.1,FALSE
+"102021051","Ourimbah - Fountaindale","New South Wales",4934,"CBR",264.7,"SYD",117.7,-147.1,FALSE
+"102021052","Summerland Point - Gwandalan","New South Wales",7094,"CBR",264.6,"SYD",117.6,-147.1,FALSE
+"102021053","The Entrance","New South Wales",16336,"CBR",255.3,"SYD",108.3,-147.1,FALSE
+"102021054","Toukley - Norah Head","New South Wales",9908,"CBR",261.2,"SYD",114.1,-147.1,FALSE
+"102021055","Tuggerah - Kangy Angy","New South Wales",5360,"CBR",240.1,"SYD",93.1,-147.1,FALSE
+"102021056","Warnervale - Wadalba","New South Wales",23023,"CBR",245,"SYD",98,-147.1,FALSE
+"102021057","Wyong","New South Wales",9341,"CBR",244,"SYD",96.9,-147.1,FALSE
+"103011059","Bathurst - East","New South Wales",13565,"CBR",206.9,"SYD",198,-8.8,FALSE
+"103011060","Bathurst Surrounds","New South Wales",7094,"CBR",213.6,"SYD",190.5,-23.1,FALSE
+"103011061","Oberon","New South Wales",4864,"CBR",163.9,"SYD",214.7,50.7,FALSE
+"103011612","Bathurst - South","New South Wales",10483,"CBR",197.6,"SYD",208.4,10.7,FALSE
+"103011613","Bathurst - West","New South Wales",14965,"CBR",210.1,"SYD",208.2,-1.9,FALSE
+"103021062","Condobolin","New South Wales",6345,"CBR",332.4,"SYD",432.6,100.3,FALSE
+"103021063","Cowra","New South Wales",9130,"CBR",164.4,"SYD",264.7,100.3,FALSE
+"103021064","Cowra Surrounds","New South Wales",5778,"CBR",175.6,"SYD",273.7,98.1,FALSE
+"103021065","Forbes","New South Wales",10019,"CBR",225.5,"SYD",325.8,100.3,FALSE
+"103021066","Grenfell","New South Wales",3549,"CBR",199,"SYD",299.3,100.3,FALSE
+"103021067","Parkes (NSW)","New South Wales",10998,"CBR",240,"SYD",334,94,FALSE
+"103021068","Parkes Surrounds","New South Wales",3079,"CBR",268.9,"SYD",363,94,FALSE
+"103021069","West Wyalong","New South Wales",5420,"CBR",249.3,"SYD",349.6,100.3,FALSE
+"103031070","Lithgow","New South Wales",12124,"CBR",223.9,"SYD",162.7,-61.2,FALSE
+"103031071","Lithgow Surrounds","New South Wales",8544,"CBR",223.3,"SYD",177.4,-45.8,FALSE
+"103031072","Mudgee","New South Wales",12965,"CBR",294.1,"SYD",247,-47.1,FALSE
+"103031073","Mudgee Surrounds - East","New South Wales",3369,"CBR",300.3,"SYD",253.1,-47.1,FALSE
+"103031074","Mudgee Surrounds - West","New South Wales",11482,"CBR",337.1,"SYD",290,-47.1,FALSE
+"103041076","Blayney","New South Wales",7855,"CBR",196.5,"SYD",254.4,57.9,FALSE
+"103041077","Orange","New South Wales",19154,"CBR",212.5,"SYD",246.8,34.4,FALSE
+"103041078","Orange - North","New South Wales",24059,"CBR",218.7,"SYD",252.1,33.4,FALSE
+"103041079","Orange Surrounds","New South Wales",12138,"CBR",235.1,"SYD",281.9,46.8,FALSE
+"105031100","Dubbo - East","New South Wales",10736,"CBR",312.1,"SYD",350.4,38.3,FALSE
+"105031101","Dubbo - South","New South Wales",20712,"CBR",315.9,"SYD",354.2,38.3,FALSE
+"105031102","Dubbo - West","New South Wales",11004,"CBR",314.7,"SYD",358,43.3,FALSE
+"105031103","Dubbo Surrounds","New South Wales",6189,"CBR",321.5,"SYD",363,41.5,FALSE
+"105031105","Narromine","New South Wales",6499,"CBR",332.5,"SYD",399.3,66.8,FALSE
+"105031106","Wellington","New South Wales",9159,"CBR",289.6,"SYD",336.1,46.5,FALSE
+"106011107","Branxton - Greta - Pokolbin","New South Wales",16413,"CBR",297.7,"SYD",150.7,-147.1,FALSE
+"106011108","Cessnock","New South Wales",24745,"CBR",282.4,"SYD",135.3,-147.1,FALSE
+"106011109","Cessnock Surrounds","New South Wales",9974,"CBR",278.9,"SYD",131.9,-147.1,FALSE
+"106011110","Dungog","New South Wales",10102,"CBR",350.2,"SYD",203.2,-147.1,FALSE
+"106011111","Kurri Kurri - Abermain","New South Wales",23407,"CBR",278.7,"SYD",131.7,-147.1,FALSE
+"106011112","Singleton","New South Wales",17396,"CBR",310.3,"SYD",163.2,-147.1,FALSE
+"106011113","Singleton Surrounds","New South Wales",5523,"CBR",321.5,"SYD",174.5,-147.1,FALSE
+"106021114","Maitland","New South Wales",9805,"CBR",284.9,"SYD",137.8,-147.1,FALSE
+"106021116","Maitland - North","New South Wales",9195,"CBR",300,"SYD",152.9,-147.1,FALSE
+"106021614","East Maitland - Metford","New South Wales",18334,"CBR",284.7,"SYD",137.7,-147.1,FALSE
+"106021615","Rutherford (North) - Aberglasslyn","New South Wales",19954,"CBR",312.6,"SYD",165.6,-147.1,FALSE
+"106021616","Rutherford (South) - Telarah","New South Wales",9366,"CBR",294.6,"SYD",147.5,-147.1,FALSE
+"106021617","Tenambit - East Maitland","New South Wales",10532,"CBR",289.5,"SYD",142.4,-147.1,FALSE
+"106021618","Thornton - Millers Forest","New South Wales",19925,"CBR",287.8,"SYD",140.8,-147.1,FALSE
+"106031119","Anna Bay","New South Wales",6868,"CBR",309.8,"SYD",162.7,-147.1,FALSE
+"106031120","Lemon Tree Passage - Tanilba Bay","New South Wales",7065,"CBR",311.2,"SYD",164.2,-147.1,FALSE
+"106031121","Nelson Bay Peninsula","New South Wales",22156,"CBR",324.4,"SYD",177.3,-147.1,FALSE
+"106031122","Raymond Terrace","New South Wales",15345,"CBR",286.9,"SYD",139.8,-147.1,FALSE
+"106031123","Seaham - Woodville","New South Wales",5899,"CBR",298,"SYD",150.9,-147.1,FALSE
+"106031125","Williamtown - Medowie - Karuah","New South Wales",17178,"CBR",305.7,"SYD",158.6,-147.1,FALSE
+"106041126","Muswellbrook","New South Wales",12595,"CBR",341.6,"SYD",194.6,-147.1,FALSE
+"106041127","Muswellbrook Surrounds","New South Wales",4264,"CBR",371,"SYD",238.4,-132.6,FALSE
+"106041128","Scone","New South Wales",5998,"CBR",372.4,"SYD",225.3,-147.1,FALSE
+"106041129","Scone Surrounds","New South Wales",8425,"CBR",395.4,"SYD",252.5,-143,FALSE
+"107011131","Dapto - Avondale","New South Wales",24842,"CBR",172.9,"SYD",87.8,-85.1,FALSE
+"107011132","Horsley - Kembla Grange","New South Wales",14750,"CBR",171.9,"SYD",84.1,-87.9,FALSE
+"107011133","Port Kembla Industrial","New South Wales",7,"CBR",170.7,"SYD",82.8,-87.9,FALSE
+"107011134","Unanderra - Mount Kembla","New South Wales",15414,"CBR",173.2,"SYD",85.4,-87.9,FALSE
+"107011545","Berkeley - Lake Heights - Cringila","New South Wales",14288,"CBR",169.5,"SYD",81.6,-87.9,FALSE
+"107011546","Port Kembla - Warrawong","New South Wales",9681,"CBR",173.3,"SYD",85.4,-87.9,FALSE
+"107011547","Windang - Primbee","New South Wales",4224,"CBR",176.9,"SYD",90,-87,FALSE
+"107021135","Illawarra Catchment Reserve","New South Wales",5,"CBR",142,"SYD",60,-82,FALSE
+"107031136","Albion Park - Macquarie Pass","New South Wales",23649,"CBR",152.2,"SYD",94.5,-57.7,FALSE
+"107031137","Albion Park Rail","New South Wales",6883,"CBR",166.2,"SYD",88.3,-77.9,FALSE
+"107031138","Kiama","New South Wales",9038,"CBR",168.7,"SYD",103.1,-65.6,FALSE
+"107031139","Kiama Downs - Minnamurra","New South Wales",5923,"CBR",171.9,"SYD",98.7,-73.2,FALSE
+"107031140","Kiama Hinterland - Gerringong","New South Wales",8121,"CBR",181,"SYD",119.8,-61.2,FALSE
+"107031141","Shellharbour - Flinders","New South Wales",20964,"CBR",167.8,"SYD",94.1,-73.8,FALSE
+"107031142","Shellharbour - Oak Flats","New South Wales",11007,"CBR",170.1,"SYD",96.4,-73.8,FALSE
+"107031143","Warilla","New South Wales",20725,"CBR",170.2,"SYD",96.3,-73.9,FALSE
+"107041144","Balgownie - Fairy Meadow","New South Wales",22303,"CBR",162.9,"SYD",75,-87.9,FALSE
+"107041145","Corrimal - Tarrawanna - Bellambi","New South Wales",16704,"CBR",166.6,"SYD",74,-92.5,FALSE
+"107041146","Figtree - Keiraville","New South Wales",23776,"CBR",162.8,"SYD",77.6,-85.3,FALSE
+"107041147","Helensburgh","New South Wales",9174,"CBR",174.2,"SYD",50.7,-123.5,FALSE
+"107041148","Thirroul - Austinmer - Coalcliff","New South Wales",12148,"CBR",177.4,"SYD",72.4,-104.9,FALSE
+"107041150","Woonona - Bulli - Russell Vale","New South Wales",20974,"CBR",169.6,"SYD",69.8,-99.8,FALSE
+"107041548","Wollongong - East","New South Wales",18274,"CBR",164.9,"SYD",77.1,-87.9,FALSE
+"107041549","Wollongong - West","New South Wales",17595,"CBR",163,"SYD",75.5,-87.5,FALSE
+"109011172","Albury - East","New South Wales",20822,"CBR",235.5,"MEL",204.2,-31.3,FALSE
+"109011173","Albury - North","New South Wales",10754,"CBR",241.1,"MEL",210.4,-30.6,FALSE
+"109011174","Albury - South","New South Wales",10310,"CBR",242.5,"MEL",205.6,-36.9,FALSE
+"109011175","Albury Surrounds","New South Wales",13394,"CBR",214.3,"MEL",233.4,19.2,FALSE
+"109011176","Lavington","New South Wales",15832,"CBR",233.6,"MEL",206.2,-27.4,FALSE
+"109031180","Corowa","New South Wales",5618,"CBR",277,"MEL",191.8,-85.3,FALSE
+"109031181","Corowa Surrounds","New South Wales",7654,"CBR",286.9,"MEL",215.8,-71.2,FALSE
+"109031182","Deniliquin","New South Wales",7072,"CBR",368.1,"MEL",218.6,-149.5,FALSE
+"109031185","Tocumwal - Finley - Jerilderie","New South Wales",10011,"CBR",316.4,"MEL",224.9,-91.6,FALSE
+"111011206","Belmont - Bennetts Green","New South Wales",17863,"CBR",286.5,"SYD",139.5,-147.1,FALSE
+"111011207","Belmont South - Blacksmiths","New South Wales",5777,"CBR",276.4,"SYD",129.3,-147.1,FALSE
+"111011208","Charlestown - Dudley","New South Wales",26087,"CBR",290.2,"SYD",143.2,-147.1,FALSE
+"111011209","Glendale - Cardiff - Hillsborough","New South Wales",25569,"CBR",283.1,"SYD",136,-147.1,FALSE
+"111011210","Mount Hutton - Windale","New South Wales",9686,"CBR",288.8,"SYD",141.8,-147.1,FALSE
+"111011211","Redhead","New South Wales",3947,"CBR",294.3,"SYD",147.2,-147.1,FALSE
+"111011212","Swansea - Caves Beach","New South Wales",13147,"CBR",271.9,"SYD",124.8,-147.1,FALSE
+"111011213","Valentine - Eleebana","New South Wales",12537,"CBR",288.5,"SYD",141.4,-147.1,FALSE
+"111011214","Warners Bay - Boolaroo","New South Wales",15675,"CBR",281,"SYD",134,-147.1,FALSE
+"111021215","Bolton Point - Teralba","New South Wales",10625,"CBR",271.2,"SYD",124.2,-147.1,FALSE
+"111021216","Bonnells Bay - Silverwater","New South Wales",10266,"CBR",260.7,"SYD",113.7,-147.1,FALSE
+"111021217","Edgeworth - Cameron Park","New South Wales",18516,"CBR",272.2,"SYD",125.1,-147.1,FALSE
+"111021218","Morisset - Cooranbong","New South Wales",21067,"CBR",257.2,"SYD",110.2,-147.1,FALSE
+"111021219","Toronto - Awaba","New South Wales",14088,"CBR",268.8,"SYD",121.7,-147.1,FALSE
+"111021220","Wangi Wangi - Rathmines","New South Wales",9710,"CBR",266,"SYD",118.9,-147.1,FALSE
+"111021221","West Wallsend - Barnsley - Killingworth","New South Wales",7583,"CBR",266,"SYD",118.9,-147.1,FALSE
+"111031222","Adamstown - Kotara","New South Wales",17554,"CBR",287.5,"SYD",140.4,-147.1,FALSE
+"111031223","Beresfield - Hexham","New South Wales",8732,"CBR",276.9,"SYD",129.9,-147.1,FALSE
+"111031224","Hamilton - Broadmeadow","New South Wales",13196,"CBR",288.9,"SYD",141.8,-147.1,FALSE
+"111031225","Lambton - New Lambton","New South Wales",17852,"CBR",282.6,"SYD",135.5,-147.1,FALSE
+"111031226","Maryland - Fletcher - Minmi","New South Wales",17672,"CBR",273.4,"SYD",126.4,-147.1,FALSE
+"111031227","Mayfield - Warabrook","New South Wales",16026,"CBR",285.7,"SYD",138.6,-147.1,FALSE
+"111031228","Merewether - The Junction","New South Wales",14975,"CBR",292.3,"SYD",145.2,-147.1,FALSE
+"111031229","Newcastle - Cooks Hill","New South Wales",14632,"CBR",297.1,"SYD",150,-147.1,FALSE
+"111031230","Newcastle Port - Kooragang","New South Wales",28,"CBR",295.2,"SYD",148.2,-147.1,FALSE
+"111031231","Shortland - Jesmond","New South Wales",14339,"CBR",281.4,"SYD",134.4,-147.1,FALSE
+"111031232","Stockton - Fullerton Cove","New South Wales",9709,"CBR",304.8,"SYD",157.8,-147.1,FALSE
+"111031233","Wallsend - Elermore Vale","New South Wales",21955,"CBR",273.9,"SYD",126.9,-147.1,FALSE
+"111031234","Waratah - North Lambton","New South Wales",13151,"CBR",283.1,"SYD",136,-147.1,FALSE
+"111031235","Wickham - Carrington - Tighes Hill","New South Wales",10395,"CBR",291.8,"SYD",144.7,-147.1,FALSE
+"113011256","Griffith (NSW)","New South Wales",20774,"CBR",288.3,"MEL",327.8,39.5,FALSE
+"113011257","Griffith Surrounds","New South Wales",13139,"CBR",336.7,"MEL",370.8,34.1,FALSE
+"113011258","Leeton","New South Wales",10336,"CBR",278.4,"MEL",326.2,47.8,FALSE
+"113011259","Narrandera","New South Wales",5926,"CBR",259.5,"MEL",310.4,50.9,FALSE
+"113021260","Tumbarumba","New South Wales",3590,"CBR",250.8,"MEL",303.4,52.6,FALSE
+"113021261","Tumut","New South Wales",6609,"CBR",155.6,"SYD",255.9,100.3,FALSE
+"113021262","Tumut Surrounds","New South Wales",4797,"CBR",219.6,"SYD",327.5,107.9,FALSE
+"113031263","Cootamundra","New South Wales",7727,"CBR",150.1,"SYD",250.4,100.3,FALSE
+"113031264","Gundagai","New South Wales",3715,"CBR",136.7,"SYD",236.9,100.3,FALSE
+"113031265","Junee","New South Wales",6350,"CBR",173.4,"SYD",273.6,100.3,FALSE
+"113031266","Temora","New South Wales",6576,"CBR",194.6,"SYD",294.9,100.3,FALSE
+"113031267","Wagga Wagga - East","New South Wales",17035,"CBR",185.2,"SYD",285.5,100.3,FALSE
+"113031268","Wagga Wagga - North","New South Wales",6227,"CBR",193.1,"SYD",293.4,100.3,FALSE
+"113031269","Wagga Wagga - South","New South Wales",23259,"CBR",191.9,"MEL",284.4,92.5,FALSE
+"113031270","Wagga Wagga - West","New South Wales",11596,"CBR",193.2,"MEL",281.9,88.7,FALSE
+"113031271","Wagga Wagga Surrounds","New South Wales",18748,"CBR",209,"MEL",301.6,92.6,FALSE
+"114011272","Berry - Kangaroo Valley","New South Wales",9523,"CBR",153.9,"SYD",127.2,-26.7,FALSE
+"114011273","Callala Bay - Currarong","New South Wales",3588,"CBR",170.7,"SYD",154.1,-16.6,FALSE
+"114011274","Culburra Beach","New South Wales",5039,"CBR",173,"SYD",146,-26.9,FALSE
+"114011275","Ettrema - Sassafras - Budawang","New South Wales",62,"CBR",134.1,"SYD",170.9,36.8,FALSE
+"114011276","Huskisson - Vincentia","New South Wales",5048,"CBR",164.8,"SYD",162.1,-2.7,FALSE
+"114011277","North Nowra - Bomaderry","New South Wales",16548,"CBR",165.5,"SYD",133.3,-32.2,FALSE
+"114011278","Nowra","New South Wales",23716,"CBR",156.9,"SYD",137.9,-19,FALSE
+"114011279","St Georges Basin - Erowal Bay","New South Wales",15444,"CBR",161.6,"SYD",163.5,2,FALSE
+"114011280","Sussex Inlet - Berrara","New South Wales",4962,"CBR",168.8,"SYD",170.7,2,FALSE
+"114011281","Tomerong - Wandandian - Woollamia","New South Wales",3860,"CBR",163.4,"SYD",171.4,8,FALSE
+"114011282","Ulladulla","New South Wales",17567,"CBR",165.6,"SYD",188.7,23.1,FALSE
+"114011283","Ulladulla Surrounds","New South Wales",6047,"CBR",175.7,"SYD",194.4,18.7,FALSE
+"114021284","Bowral","New South Wales",13404,"CBR",120.8,"SYD",81.5,-39.4,FALSE
+"114021285","Hill Top - Colo Vale","New South Wales",6602,"CBR",128.6,"SYD",75.7,-52.9,FALSE
+"114021286","Mittagong","New South Wales",11381,"CBR",127.5,"SYD",76.2,-51.3,FALSE
+"114021287","Moss Vale - Berrima","New South Wales",11142,"CBR",112.4,"SYD",87,-25.4,FALSE
+"114021288","Robertson - Fitzroy Falls","New South Wales",3899,"CBR",127.7,"SYD",99,-28.7,FALSE
+"114021289","Southern Highlands","New South Wales",7453,"CBR",123.9,"SYD",104.4,-19.4,FALSE
+"115011290","Baulkham Hills - East","New South Wales",25268,"CBR",186.3,"SYD",40.9,-145.4,FALSE
+"115011291","Baulkham Hills (West) - Bella Vista","New South Wales",23336,"CBR",184.8,"SYD",45.6,-139.2,FALSE
+"115011294","Glenhaven","New South Wales",6375,"CBR",194.6,"SYD",53.4,-141.2,FALSE
+"115011296","West Pennant Hills","New South Wales",12534,"CBR",194.6,"SYD",43.4,-151.1,FALSE
+"115011553","Castle Hill - Central","New South Wales",8845,"CBR",190,"SYD",45.2,-144.8,FALSE
+"115011554","Castle Hill - East","New South Wales",5305,"CBR",197.9,"SYD",49.6,-148.2,FALSE
+"115011555","Castle Hill - North","New South Wales",12973,"CBR",191.5,"SYD",49.5,-142,FALSE
+"115011556","Castle Hill - South","New South Wales",10965,"CBR",191.3,"SYD",45.9,-145.4,FALSE
+"115011557","Castle Hill - West","New South Wales",5209,"CBR",189.5,"SYD",51.1,-138.4,FALSE
+"115011558","Cherrybrook","New South Wales",19063,"CBR",196.8,"SYD",48.4,-148.5,FALSE
+"115011621","Kellyville - East","New South Wales",17584,"CBR",189.7,"SYD",53.5,-136.2,FALSE
+"115011622","Kellyville - West","New South Wales",14291,"CBR",186.6,"SYD",51.2,-135.3,FALSE
+"115021297","Dural - Kenthurst - Wisemans Ferry","New South Wales",23005,"CBR",235.3,"SYD",90.1,-145.1,FALSE
+"115021298","Galston - Laughtondale","New South Wales",5472,"CBR",244.8,"SYD",99.7,-145.1,FALSE
+"115031299","Bilpin - Colo - St Albans","New South Wales",2781,"CBR",331.2,"SYD",200.2,-131,FALSE
+"115031300","Kurrajong Heights - Ebenezer","New South Wales",22515,"CBR",215.9,"SYD",84.9,-131,FALSE
+"115041301","Pitt Town - McGraths Hill","New South Wales",12591,"CBR",209.8,"SYD",78.8,-131,FALSE
+"115041623","Box Hill - Nelson","New South Wales",26348,"CBR",194.6,"SYD",63.7,-131,FALSE
+"115041624","North Kellyville","New South Wales",22370,"CBR",193.4,"SYD",58.2,-135.3,FALSE
+"115041625","Rouse Hill - Beaumont Hills","New South Wales",18837,"CBR",190.9,"SYD",55.7,-135.3,FALSE
+"116011303","Blacktown (East) - Kings Park","New South Wales",18408,"CBR",181,"SYD",41.8,-139.2,FALSE
+"116011304","Blacktown (North) - Marayong","New South Wales",21468,"CBR",180,"SYD",43.8,-136.1,FALSE
+"116011306","Doonside - Woodcroft","New South Wales",23958,"CBR",178.4,"SYD",41.2,-137.1,FALSE
+"116011307","Lalor Park - Kings Langley","New South Wales",25958,"CBR",183.3,"SYD",42,-141.3,FALSE
+"116011560","Blacktown - South","New South Wales",12845,"CBR",177,"SYD",37.3,-139.7,FALSE
+"116011561","Blacktown - West","New South Wales",17931,"CBR",177.2,"SYD",38.3,-139,FALSE
+"116011626","Seven Hills - Prospect","New South Wales",15220,"CBR",177,"SYD",37.5,-139.5,FALSE
+"116011627","Toongabbie - West","New South Wales",12391,"CBR",178.6,"SYD",36.8,-141.9,FALSE
+"116021309","Glenwood","New South Wales",15984,"CBR",181,"SYD",47.3,-133.7,FALSE
+"116021562","Acacia Gardens","New South Wales",3735,"CBR",178.7,"SYD",45.8,-132.8,FALSE
+"116021563","Quakers Hill","New South Wales",26132,"CBR",183,"SYD",50.2,-132.8,FALSE
+"116021628","Kellyville Ridge - The Ponds","New South Wales",21774,"CBR",185.4,"SYD",52.5,-132.8,FALSE
+"116021629","Marsden Park - Shanes Park","New South Wales",30461,"CBR",186.7,"SYD",55.7,-131,FALSE
+"116021630","Riverstone","New South Wales",20068,"CBR",186.3,"SYD",55.3,-131,FALSE
+"116021631","Schofields (West) - Colebee","New South Wales",14743,"CBR",181.2,"SYD",50.2,-131,FALSE
+"116021632","Schofields - East","New South Wales",38569,"CBR",185.9,"SYD",54.9,-131,FALSE
+"116021633","Stanhope Gardens - Parklea","New South Wales",13262,"CBR",183.3,"SYD",50.1,-133.2,FALSE
+"116031313","Bidwill - Hebersham - Emerton","New South Wales",18979,"CBR",178,"SYD",47,-131,FALSE
+"116031314","Glendenning - Dean Park","New South Wales",8317,"CBR",175.5,"SYD",44.5,-131,FALSE
+"116031315","Hassall Grove - Plumpton","New South Wales",21657,"CBR",177.2,"SYD",46.3,-131,FALSE
+"116031316","Lethbridge Park - Tregear","New South Wales",22894,"CBR",181.5,"SYD",50.5,-131,FALSE
+"116031317","Mount Druitt - Whalan","New South Wales",24378,"CBR",177.3,"SYD",45,-132.3,FALSE
+"116031318","Prospect Reservoir","New South Wales",16,"CBR",171.1,"SYD",41.6,-129.5,FALSE
+"116031319","Rooty Hill - Minchinbury","New South Wales",23226,"CBR",174.4,"SYD",40,-134.4,FALSE
+"117011320","Banksmeadow","New South Wales",643,"CBR",187.3,"SYD",13.4,-173.9,FALSE
+"117011321","Botany","New South Wales",13941,"CBR",183.1,"SYD",9.2,-173.9,FALSE
+"117011323","Pagewood - Hillsdale - Daceyville","New South Wales",16683,"CBR",188.3,"SYD",11.5,-176.8,FALSE
+"117011324","Port Botany Industrial","New South Wales",9,"CBR",187.5,"SYD",15.5,-172,FALSE
+"117011325","Sydney Airport","New South Wales",23,"CBR",181.6,"SYD",9.6,-171.9,FALSE
+"117011634","Eastlakes","New South Wales",8871,"CBR",183.8,"SYD",8.9,-174.9,FALSE
+"117011635","Mascot","New South Wales",22859,"CBR",182.4,"SYD",7.2,-175.2,FALSE
+"117021327","Petersham - Stanmore","New South Wales",21224,"CBR",185.6,"SYD",17.5,-168.1,FALSE
+"117021328","Sydenham - Tempe - St Peters","New South Wales",8976,"CBR",180.2,"SYD",11.4,-168.8,FALSE
+"117021636","Marrickville - North","New South Wales",13274,"CBR",183.9,"SYD",15.1,-168.8,FALSE
+"117021637","Marrickville - South","New South Wales",14583,"CBR",181,"SYD",12.2,-168.8,FALSE
+"117031329","Darlinghurst","New South Wales",11458,"CBR",189.2,"SYD",18.2,-171,FALSE
+"117031330","Erskineville - Alexandria","New South Wales",21529,"CBR",180.3,"SYD",12.7,-167.6,FALSE
+"117031331","Glebe - Forest Lodge","New South Wales",21805,"CBR",187.8,"SYD",21.4,-166.4,FALSE
+"117031333","Potts Point - Woolloomooloo","New South Wales",19879,"CBR",192.1,"SYD",19.9,-172.2,FALSE
+"117031336","Surry Hills","New South Wales",17184,"CBR",188.3,"SYD",18.7,-169.6,FALSE
+"117031638","Camperdown - Darlington","New South Wales",9776,"CBR",186,"SYD",19.1,-166.9,FALSE
+"117031639","Chippendale","New South Wales",9505,"CBR",186,"SYD",17.5,-168.4,FALSE
+"117031640","Newtown (NSW)","New South Wales",15576,"CBR",182.8,"SYD",15.9,-166.9,FALSE
+"117031641","Pyrmont","New South Wales",13933,"CBR",189.3,"SYD",22.9,-166.4,FALSE
+"117031642","Redfern","New South Wales",15731,"CBR",184.1,"SYD",15.7,-168.4,FALSE
+"117031643","Rosebery - Beaconsfield","New South Wales",13993,"CBR",182.9,"SYD",10.8,-172.1,FALSE
+"117031644","Sydney (North) - Millers Point","New South Wales",9305,"CBR",190.5,"SYD",18.2,-172.3,FALSE
+"117031645","Sydney (South) - Haymarket","New South Wales",24758,"CBR",189.8,"SYD",19.8,-170,FALSE
+"117031646","Ultimo","New South Wales",10534,"CBR",188.4,"SYD",20,-168.4,FALSE
+"117031647","Waterloo","New South Wales",18631,"CBR",183.2,"SYD",14.5,-168.7,FALSE
+"117031648","Zetland","New South Wales",14991,"CBR",184.1,"SYD",13.2,-170.9,FALSE
+"118011339","Bondi - Tamarama - Bronte","New South Wales",20044,"CBR",196.1,"SYD",25,-171.1,FALSE
+"118011340","Bondi Beach - North Bondi","New South Wales",22633,"CBR",198.8,"SYD",27.7,-171.1,FALSE
+"118011341","Bondi Junction - Waverly","New South Wales",19148,"CBR",193.3,"SYD",22.1,-171.1,FALSE
+"118011344","Dover Heights","New South Wales",11520,"CBR",201.6,"SYD",30.5,-171.1,FALSE
+"118011345","Paddington - Moore Park","New South Wales",15694,"CBR",188.6,"SYD",17.5,-171.1,FALSE
+"118011346","Rose Bay - Vaucluse - Watsons Bay","New South Wales",11846,"CBR",202.8,"SYD",30.5,-172.3,FALSE
+"118011347","Woollahra","New South Wales",7779,"CBR",192.7,"SYD",21.7,-171,FALSE
+"118011649","Bellevue Hill","New South Wales",15094,"CBR",197.5,"SYD",25.2,-172.3,FALSE
+"118011650","Double Bay - Darling Point","New South Wales",10216,"CBR",193.4,"SYD",21.1,-172.3,FALSE
+"118021564","Kensington (NSW)","New South Wales",14584,"CBR",186.8,"SYD",13.9,-172.9,FALSE
+"118021565","Kingsford","New South Wales",17013,"CBR",187.7,"SYD",14.8,-172.9,FALSE
+"118021566","Maroubra - North","New South Wales",10488,"CBR",190.8,"SYD",16.1,-174.7,FALSE
+"118021567","Maroubra - South","New South Wales",11637,"CBR",192,"SYD",17.3,-174.8,FALSE
+"118021568","Maroubra - West","New South Wales",10948,"CBR",190.7,"SYD",13.8,-176.8,FALSE
+"118021569","Randwick - North","New South Wales",16678,"CBR",190.4,"SYD",19.1,-171.2,FALSE
+"118021570","Randwick - South","New South Wales",13672,"CBR",190.3,"SYD",17.4,-172.9,FALSE
+"118021651","Coogee - Clovelly","New South Wales",20337,"CBR",192.9,"SYD",20,-172.9,FALSE
+"118021652","Malabar - La Perouse","New South Wales",11097,"CBR",192.3,"SYD",19.7,-172.5,FALSE
+"118021653","Matraville - Chifley","New South Wales",14280,"CBR",189.3,"SYD",16.9,-172.5,FALSE
+"118021654","South Coogee","New South Wales",5741,"CBR",191.9,"SYD",18.2,-173.7,FALSE
+"119011354","Bass Hill - Georges Hall","New South Wales",24701,"CBR",175.3,"SYD",29.2,-146.2,FALSE
+"119011355","Chullora","New South Wales",1524,"CBR",177.3,"SYD",27.1,-150.2,FALSE
+"119011356","Condell Park","New South Wales",13581,"CBR",168.9,"SYD",23.4,-145.5,FALSE
+"119011358","Padstow","New South Wales",17692,"CBR",169.6,"SYD",21.9,-147.7,FALSE
+"119011360","Revesby","New South Wales",18775,"CBR",167.1,"SYD",20.9,-146.1,FALSE
+"119011361","Yagoona - Birrong","New South Wales",23744,"CBR",174.2,"SYD",27.1,-147.1,FALSE
+"119011571","Bankstown - North","New South Wales",18671,"CBR",171.8,"SYD",23.5,-148.3,FALSE
+"119011572","Bankstown - South","New South Wales",19222,"CBR",168.3,"SYD",20.9,-147.4,FALSE
+"119011655","Greenacre - North","New South Wales",15405,"CBR",177.4,"SYD",24.1,-153.3,FALSE
+"119011656","Greenacre - South","New South Wales",13794,"CBR",174.7,"SYD",22.5,-152.2,FALSE
+"119011657","Panania (North) - Milperra","New South Wales",11918,"CBR",163,"SYD",20.8,-142.2,FALSE
+"119011658","Panania (South) - Picnic Point","New South Wales",16608,"CBR",170,"SYD",24.9,-145.1,FALSE
+"119021362","Belmore - Belfield","New South Wales",21206,"CBR",175.9,"SYD",16.2,-159.6,FALSE
+"119021366","Punchbowl","New South Wales",22463,"CBR",170.2,"SYD",18,-152.1,FALSE
+"119021367","Roselands","New South Wales",15308,"CBR",170.1,"SYD",15.3,-154.8,FALSE
+"119021573","Lakemba","New South Wales",17756,"CBR",174.6,"SYD",18.1,-156.6,FALSE
+"119021574","Wiley Park","New South Wales",10697,"CBR",172.7,"SYD",17.9,-154.8,FALSE
+"119021659","Campsie - North","New South Wales",12771,"CBR",178.1,"SYD",18.6,-159.5,FALSE
+"119021660","Campsie - South","New South Wales",9592,"CBR",175.9,"SYD",16.5,-159.4,FALSE
+"119021661","Canterbury - South","New South Wales",13386,"CBR",176.2,"SYD",16.9,-159.3,FALSE
+"119021662","Earlwood","New South Wales",18194,"CBR",177.2,"SYD",17.1,-160.1,FALSE
+"119021663","Kingsgrove - North","New South Wales",6545,"CBR",173.2,"SYD",10.8,-162.4,FALSE
+"119031370","Narwee - Beverly Hills","New South Wales",14022,"CBR",169.6,"SYD",15.3,-154.3,FALSE
+"119031371","Oatley - Hurstville Grove","New South Wales",12985,"CBR",177.3,"SYD",23,-154.3,FALSE
+"119031372","Peakhurst - Lugarno","New South Wales",21067,"CBR",174.4,"SYD",23.3,-151.2,FALSE
+"119031373","Riverwood","New South Wales",12414,"CBR",167.7,"SYD",16.6,-151.2,FALSE
+"119031374","South Hurstville - Blakehurst","New South Wales",27385,"CBR",178.7,"SYD",16.5,-162.2,FALSE
+"119031664","Hurstville - Central","New South Wales",14602,"CBR",176,"SYD",17.8,-158.2,FALSE
+"119031665","Hurstville - North","New South Wales",12816,"CBR",173.5,"SYD",16.2,-157.2,FALSE
+"119031666","Mortdale - Oatley","New South Wales",15297,"CBR",174,"SYD",20.9,-153.1,FALSE
+"119031667","Penshurst","New South Wales",10142,"CBR",173.3,"SYD",19,-154.3,FALSE
+"119041377","Kingsgrove (South) - Bardwell Park","New South Wales",13471,"CBR",174.8,"SYD",14,-160.8,FALSE
+"119041378","Kogarah","New South Wales",15387,"CBR",182.4,"SYD",11.8,-170.5,FALSE
+"119041379","Kogarah Bay - Carlton - Allawah","New South Wales",17669,"CBR",180.4,"SYD",14.2,-166.2,FALSE
+"119041380","Monterey - Brighton-le-Sands - Kyeemagh","New South Wales",13655,"CBR",180.5,"SYD",8.3,-172.2,FALSE
+"119041381","Rockdale - Banksia","New South Wales",23103,"CBR",180,"SYD",9.7,-170.3,FALSE
+"119041382","Sans Souci - Ramsgate","New South Wales",17080,"CBR",185.2,"SYD",14.3,-170.8,FALSE
+"119041668","Arncliffe - Bardwell Valley","New South Wales",18213,"CBR",179.4,"SYD",11,-168.4,FALSE
+"119041669","Bexley - North","New South Wales",10184,"CBR",175.7,"SYD",14.9,-160.8,FALSE
+"119041670","Bexley - South","New South Wales",16527,"CBR",178.8,"SYD",14.9,-163.9,FALSE
+"119041671","Wolli Creek","New South Wales",12585,"CBR",178.5,"SYD",9.7,-168.8,FALSE
+"120011383","Concord - Mortlake - Cabarita","New South Wales",24026,"CBR",191.2,"SYD",24.8,-166.4,FALSE
+"120011385","Drummoyne - Rodd Point","New South Wales",19158,"CBR",186,"SYD",19.6,-166.4,FALSE
+"120011386","Five Dock - Abbotsford","New South Wales",21449,"CBR",188,"SYD",21.6,-166.4,FALSE
+"120011672","Concord West - North Strathfield","New South Wales",13453,"CBR",189.3,"SYD",22.9,-166.4,FALSE
+"120011673","Rhodes","New South Wales",13094,"CBR",191.2,"SYD",26.6,-164.6,FALSE
+"120021387","Balmain","New South Wales",16124,"CBR",187.6,"SYD",21.2,-166.4,FALSE
+"120021389","Lilyfield - Rozelle","New South Wales",14218,"CBR",184.8,"SYD",18.4,-166.4,FALSE
+"120021674","Annandale (NSW)","New South Wales",10004,"CBR",184.2,"SYD",17.8,-166.4,FALSE
+"120021675","Leichhardt","New South Wales",18357,"CBR",184.8,"SYD",18.4,-166.4,FALSE
+"120031392","Canterbury (North) - Ashbury","New South Wales",12633,"CBR",180,"SYD",19.1,-160.9,FALSE
+"120031393","Croydon Park - Enfield","New South Wales",18270,"CBR",181.8,"SYD",22,-159.8,FALSE
+"120031394","Dulwich Hill - Lewisham","New South Wales",18826,"CBR",183.9,"SYD",17.1,-166.8,FALSE
+"120031395","Haberfield - Summer Hill","New South Wales",14061,"CBR",186.5,"SYD",20.1,-166.4,FALSE
+"120031396","Homebush","New South Wales",23511,"CBR",186,"SYD",25.5,-160.4,FALSE
+"120031576","Strathfield South","New South Wales",3727,"CBR",180.8,"SYD",21.4,-159.3,FALSE
+"120031676","Ashfield - North","New South Wales",12626,"CBR",184.5,"SYD",18.1,-166.4,FALSE
+"120031677","Ashfield - South","New South Wales",13056,"CBR",183.7,"SYD",20.1,-163.5,FALSE
+"120031678","Burwood (NSW)","New South Wales",18684,"CBR",184.9,"SYD",23.4,-161.5,FALSE
+"120031679","Croydon","New South Wales",11360,"CBR",186.9,"SYD",20.5,-166.4,FALSE
+"120031680","Strathfield - East","New South Wales",18724,"CBR",183.4,"SYD",23.7,-159.7,FALSE
+"120031681","Strathfield - West","New South Wales",8936,"CBR",183.1,"SYD",25.7,-157.3,FALSE
+"121011399","Chatswood (West) - Lane Cove North","New South Wales",23620,"CBR",200.3,"SYD",33.9,-166.4,FALSE
+"121011401","St Leonards - Naremburn","New South Wales",13802,"CBR",200.1,"SYD",28.5,-171.7,FALSE
+"121011682","Artarmon","New South Wales",9907,"CBR",200.8,"SYD",30.7,-170.1,FALSE
+"121011683","Castle Cove - Northbridge","New South Wales",13592,"CBR",206.7,"SYD",34.9,-171.8,FALSE
+"121011684","Chatswood - East","New South Wales",21644,"CBR",203.3,"SYD",33.5,-169.9,FALSE
+"121011685","Greenwich - Riverview","New South Wales",13212,"CBR",200.2,"SYD",29.6,-170.6,FALSE
+"121011686","Lane Cove","New South Wales",16705,"CBR",194.7,"SYD",28.3,-166.4,FALSE
+"121011687","Willoughby","New South Wales",13771,"CBR",202,"SYD",30.4,-171.7,FALSE
+"121021403","Asquith - Mount Colah","New South Wales",23527,"CBR",208,"SYD",60.9,-147.1,FALSE
+"121021404","Berowra - Brooklyn - Cowan","New South Wales",11761,"CBR",215.7,"SYD",68.6,-147.1,FALSE
+"121021406","Normanhurst - Thornleigh - Westleigh","New South Wales",19875,"CBR",201.4,"SYD",50.9,-150.5,FALSE
+"121021577","Hornsby - East","New South Wales",12798,"CBR",200.2,"SYD",53.1,-147.1,FALSE
+"121021578","Hornsby - West","New South Wales",10830,"CBR",204.2,"SYD",57.1,-147.1,FALSE
+"121021579","Wahroonga (West) - Waitara","New South Wales",12544,"CBR",197.5,"SYD",50.5,-147.1,FALSE
+"121031407","Gordon - Killara","New South Wales",23799,"CBR",203.9,"SYD",41.3,-162.5,FALSE
+"121031408","Lindfield - Roseville","New South Wales",25620,"CBR",203.7,"SYD",37.8,-165.8,FALSE
+"121031409","Pymble","New South Wales",18052,"CBR",201,"SYD",43.8,-157.2,FALSE
+"121031410","St Ives","New South Wales",22932,"CBR",209.4,"SYD",50.8,-158.5,FALSE
+"121031411","Turramurra","New South Wales",20593,"CBR",204.8,"SYD",52.5,-152.3,FALSE
+"121031412","Wahroonga (East) - Warrawee","New South Wales",18232,"CBR",201.5,"SYD",52.5,-148.9,FALSE
+"121041413","Cremorne - Cammeray","New South Wales",19870,"CBR",198.1,"SYD",25.8,-172.3,FALSE
+"121041414","Crows Nest - Waverton","New South Wales",19092,"CBR",200.6,"SYD",29.2,-171.5,FALSE
+"121041416","Neutral Bay - Kirribilli","New South Wales",18384,"CBR",198.3,"SYD",26,-172.3,FALSE
+"121041417","North Sydney - Lavender Bay","New South Wales",13776,"CBR",197.8,"SYD",26.5,-171.3,FALSE
+"121041688","Mosman - North","New South Wales",14409,"CBR",202.7,"SYD",30.4,-172.3,FALSE
+"121041689","Mosman - South","New South Wales",14965,"CBR",203.3,"SYD",31,-172.3,FALSE
+"122011418","Balgowlah - Clontarf - Seaforth","New South Wales",20936,"CBR",209.1,"SYD",36.8,-172.3,FALSE
+"122011419","Manly - Fairlight","New South Wales",24569,"CBR",217.7,"SYD",45.4,-172.3,FALSE
+"122021420","Avalon - Palm Beach","New South Wales",13161,"CBR",247.7,"SYD",84.3,-163.4,FALSE
+"122021421","Bayview - Elanora Heights","New South Wales",11426,"CBR",226.3,"SYD",66.2,-160,FALSE
+"122021422","Newport - Bilgola","New South Wales",13928,"CBR",237.3,"SYD",73.9,-163.4,FALSE
+"122021690","Mona Vale - Warriewood (North)","New South Wales",15134,"CBR",228,"SYD",67.2,-160.7,FALSE
+"122021691","North Narrabeen - Warriewood (South)","New South Wales",11191,"CBR",230.8,"SYD",63.8,-167,FALSE
+"122031424","Beacon Hill - Narraweena","New South Wales",14642,"CBR",221.2,"SYD",49.1,-172.1,FALSE
+"122031425","Cromer","New South Wales",8400,"CBR",226.4,"SYD",54.7,-171.7,FALSE
+"122031427","Forestville - Killarney Heights","New South Wales",13533,"CBR",213.5,"SYD",41.9,-171.7,FALSE
+"122031429","Freshwater - Brookvale","New South Wales",23383,"CBR",219.3,"SYD",47,-172.3,FALSE
+"122031430","Manly Vale - Allambie Heights","New South Wales",17944,"CBR",217.2,"SYD",44.9,-172.3,FALSE
+"122031432","Terrey Hills - Duffys Forest","New South Wales",3593,"CBR",221,"SYD",61,-160,FALSE
+"122031692","Belrose","New South Wales",8738,"CBR",218.3,"SYD",50.9,-167.4,FALSE
+"122031693","Collaroy - Collaroy Plateau","New South Wales",14229,"CBR",228.4,"SYD",56.1,-172.3,FALSE
+"122031694","Dee Why (South) - North Curl Curl","New South Wales",9455,"CBR",221.5,"SYD",49.2,-172.3,FALSE
+"122031695","Dee Why - North","New South Wales",19332,"CBR",222.7,"SYD",50.4,-172.3,FALSE
+"122031696","Frenchs Forest - Oxford Falls","New South Wales",17765,"CBR",217.5,"SYD",45.8,-171.7,FALSE
+"122031697","Narrabeen - Wheeler Heights","New South Wales",11297,"CBR",230.9,"SYD",58.6,-172.3,FALSE
+"123011433","Camden - Ellis Lane","New South Wales",13365,"CBR",157.3,"SYD",52.3,-105,FALSE
+"123011698","Currans Hill","New South Wales",7564,"CBR",150.9,"SYD",40.8,-110.1,FALSE
+"123011699","Elderslie - Narellan","New South Wales",14984,"CBR",157.9,"SYD",47.8,-110.1,FALSE
+"123011700","Harrington Park","New South Wales",11387,"CBR",157.5,"SYD",47.4,-110.1,FALSE
+"123011701","Mount Annan","New South Wales",19565,"CBR",151.9,"SYD",41.8,-110.1,FALSE
+"123011702","Spring Farm","New South Wales",11767,"CBR",159,"SYD",48.9,-110.1,FALSE
+"123021436","Bradbury - Wedderburn","New South Wales",21000,"CBR",168.5,"SYD",60.6,-107.9,FALSE
+"123021437","Campbelltown - Woodbine","New South Wales",25009,"CBR",151.3,"SYD",39.4,-111.8,FALSE
+"123021438","Claymore - Eagle Vale - Raby","New South Wales",20468,"CBR",158.4,"SYD",36.7,-121.7,FALSE
+"123021439","Holsworthy Military Area","New South Wales",3,"CBR",168.3,"SYD",49.1,-119.2,FALSE
+"123021441","Leumeah - Minto Heights","New South Wales",17328,"CBR",159.7,"SYD",39.9,-119.8,FALSE
+"123021443","Minto - St Andrews","New South Wales",22005,"CBR",159,"SYD",40.4,-118.6,FALSE
+"123021444","Rosemeadow - Glen Alpine","New South Wales",22758,"CBR",159.2,"SYD",51.3,-107.9,FALSE
+"123021703","Denham Court - Bardia","New South Wales",21375,"CBR",154.8,"SYD",36.1,-118.7,FALSE
+"123021704","Glenfield","New South Wales",10758,"CBR",160.2,"SYD",32.7,-127.5,FALSE
+"123021705","Ingleburn","New South Wales",17248,"CBR",154.2,"SYD",36.4,-117.8,FALSE
+"123021706","Macquarie Fields","New South Wales",14551,"CBR",161.8,"SYD",36.8,-125,FALSE
+"123031445","Bargo","New South Wales",6278,"CBR",132,"SYD",63.6,-68.5,FALSE
+"123031446","Douglas Park - Appin","New South Wales",13313,"CBR",142.8,"SYD",55.5,-87.4,FALSE
+"123031447","Picton - Tahmoor - Buxton","New South Wales",22603,"CBR",144,"SYD",69.1,-74.9,FALSE
+"123031448","The Oaks - Oakdale","New South Wales",10429,"CBR",166.5,"SYD",69.9,-96.6,FALSE
+"124011449","Blackheath - Megalong Valley","New South Wales",5872,"CBR",265.2,"SYD",131.3,-133.9,FALSE
+"124011450","Blaxland - Warrimoo - Lapstone","New South Wales",19277,"CBR",192.3,"SYD",58.4,-133.9,FALSE
+"124011451","Blue Mountains - North","New South Wales",9,"CBR",263.7,"SYD",129.8,-133.9,FALSE
+"124011452","Katoomba - Leura","New South Wales",13569,"CBR",248.5,"SYD",114.6,-133.9,FALSE
+"124011453","Lawson - Hazelbrook - Linden","New South Wales",11536,"CBR",221.1,"SYD",87.2,-133.9,FALSE
+"124011454","Springwood - Winmalee","New South Wales",22366,"CBR",206.3,"SYD",72.4,-133.9,FALSE
+"124011455","Wentworth Falls","New South Wales",6503,"CBR",232.3,"SYD",98.4,-133.9,FALSE
+"124021456","Blue Mountains - South","New South Wales",7,"CBR",261.7,"SYD",232.3,-29.4,FALSE
+"124031457","Cambridge Park","New South Wales",16414,"CBR",187.1,"SYD",53.2,-133.9,FALSE
+"124031459","Emu Plains - Leonay","New South Wales",13936,"CBR",188.2,"SYD",54.3,-133.9,FALSE
+"124031460","Glenmore Park - Regentville","New South Wales",21415,"CBR",186.4,"SYD",52.5,-133.9,FALSE
+"124031461","Jamisontown - South Penrith","New South Wales",17749,"CBR",183.1,"SYD",49.1,-133.9,FALSE
+"124031462","Kingswood - Werrington","New South Wales",28330,"CBR",182.8,"SYD",48.9,-133.9,FALSE
+"124031463","Mulgoa - Luddenham - Orchard Hills","New South Wales",13282,"CBR",175.8,"SYD",47.8,-128,FALSE
+"124031464","Penrith","New South Wales",20292,"CBR",189.4,"SYD",55.4,-133.9,FALSE
+"124031465","Warragamba - Silverdale","New South Wales",7544,"CBR",174.1,"SYD",60.8,-113.2,FALSE
+"124031707","Cranebrook - Castlereagh","New South Wales",17444,"CBR",203.5,"SYD",69.6,-133.9,FALSE
+"124031708","Jordan Springs - Llandilo","New South Wales",15589,"CBR",188.8,"SYD",57.8,-131,FALSE
+"124041466","Richmond - Clarendon","New South Wales",16743,"CBR",198.6,"SYD",67.6,-131,FALSE
+"124041467","Windsor - Bligh Park","New South Wales",15477,"CBR",193.8,"SYD",62.8,-131,FALSE
+"124041468","Yarramundi - Londonderry","New South Wales",7636,"CBR",195.6,"SYD",64.6,-131,FALSE
+"124051469","Erskine Park","New South Wales",6450,"CBR",177.3,"SYD",43.4,-133.9,FALSE
+"124051470","St Clair","New South Wales",20529,"CBR",177.9,"SYD",44,-133.9,FALSE
+"124051580","Colyton - Oxley Park","New South Wales",13923,"CBR",176.4,"SYD",42.5,-133.9,FALSE
+"124051581","St Marys - North St Marys","New South Wales",18757,"CBR",181,"SYD",47.1,-133.9,FALSE
+"125011475","Rookwood Cemetery","New South Wales",5,"CBR",184.4,"SYD",29.4,-155,FALSE
+"125011582","Auburn - Central","New South Wales",21706,"CBR",183.8,"SYD",29.6,-154.2,FALSE
+"125011583","Auburn - North","New South Wales",12331,"CBR",184.1,"SYD",24.5,-159.5,FALSE
+"125011584","Auburn - South","New South Wales",9372,"CBR",181,"SYD",31.8,-149.2,FALSE
+"125011585","Berala","New South Wales",8895,"CBR",180.9,"SYD",31.2,-149.6,FALSE
+"125011586","Lidcombe","New South Wales",24516,"CBR",182.8,"SYD",26.7,-156.1,FALSE
+"125011587","Regents Park","New South Wales",5359,"CBR",177.4,"SYD",30.2,-147.1,FALSE
+"125011709","Silverwater - Newington","New South Wales",9305,"CBR",183.7,"SYD",23.2,-160.5,FALSE
+"125011710","Wentworth Point - Sydney Olympic Park","New South Wales",24852,"CBR",188.5,"SYD",25.6,-162.8,FALSE
+"125021477","Ermington - Rydalmere","New South Wales",26956,"CBR",189.1,"SYD",28.6,-160.5,FALSE
+"125021478","Oatlands - Dundas Valley","New South Wales",19493,"CBR",190.8,"SYD",33.8,-157,FALSE
+"125021711","Carlingford - East","New South Wales",11981,"CBR",192.5,"SYD",36,-156.5,FALSE
+"125021712","Carlingford - West","New South Wales",20946,"CBR",191.5,"SYD",37,-154.5,FALSE
+"125031479","Chester Hill - Sefton","New South Wales",21806,"CBR",178.6,"SYD",31.4,-147.1,FALSE
+"125031480","Fairfield - East","New South Wales",16405,"CBR",179,"SYD",36.6,-142.4,FALSE
+"125031481","Granville - Clyde","New South Wales",25304,"CBR",183,"SYD",31.4,-151.7,FALSE
+"125031483","Guildford - South Granville","New South Wales",24112,"CBR",181.9,"SYD",34.2,-147.7,FALSE
+"125031484","Guildford West - Merrylands West","New South Wales",25002,"CBR",182,"SYD",33.9,-148.1,FALSE
+"125031486","Smithfield Industrial","New South Wales",13,"CBR",178.1,"SYD",37,-141.1,FALSE
+"125031487","Yennora Industrial","New South Wales",13,"CBR",184.8,"SYD",38.4,-146.4,FALSE
+"125031713","Greystanes - South","New South Wales",16934,"CBR",181.1,"SYD",34.5,-146.5,FALSE
+"125031714","Merrylands - Holroyd","New South Wales",27002,"CBR",182.7,"SYD",29.9,-152.9,FALSE
+"125031715","Pemulwuy - Greystanes (North)","New South Wales",11324,"CBR",175.9,"SYD",35.9,-140,FALSE
+"125031716","South Wentworthville","New South Wales",7691,"CBR",178.5,"SYD",31.2,-147.4,FALSE
+"125041489","North Parramatta","New South Wales",23781,"CBR",187.1,"SYD",34,-153.1,FALSE
+"125041490","North Rocks","New South Wales",8764,"CBR",189.8,"SYD",37.8,-151.9,FALSE
+"125041491","Northmead","New South Wales",21799,"CBR",184.9,"SYD",33.4,-151.6,FALSE
+"125041493","Toongabbie - Constitution Hill","New South Wales",23933,"CBR",182.4,"SYD",34.6,-147.7,FALSE
+"125041494","Winston Hills","New South Wales",11218,"CBR",186.8,"SYD",37.8,-149,FALSE
+"125041588","Pendle Hill - Girraween","New South Wales",14465,"CBR",179.9,"SYD",32.9,-147,FALSE
+"125041589","Wentworthville - Westmead","New South Wales",23845,"CBR",179.8,"SYD",28.6,-151.1,FALSE
+"125041717","Parramatta - North","New South Wales",14904,"CBR",186.3,"SYD",34.9,-151.4,FALSE
+"125041718","Parramatta - South","New South Wales",11279,"CBR",181.7,"SYD",28.9,-152.8,FALSE
+"125041719","Rosehill - Harris Park","New South Wales",10229,"CBR",187.4,"SYD",30.1,-157.3,FALSE
+"126011496","Pennant Hills - Cheltenham","New South Wales",22248,"CBR",197.6,"SYD",47.1,-150.5,FALSE
+"126011720","Epping (East) - North Epping","New South Wales",15733,"CBR",199.5,"SYD",39.1,-160.4,FALSE
+"126011721","Epping (NSW) - West","New South Wales",19790,"CBR",193.9,"SYD",35.9,-158,FALSE
+"126021498","Gladesville - Huntleys Point","New South Wales",16256,"CBR",193.6,"SYD",27.1,-166.4,FALSE
+"126021499","Hunters Hill - Woolwich","New South Wales",10034,"CBR",191.1,"SYD",24.7,-166.4,FALSE
+"126021500","Macquarie Park - Marsfield","New South Wales",28886,"CBR",193.5,"SYD",39.9,-153.7,FALSE
+"126021501","North Ryde - East Ryde","New South Wales",16577,"CBR",196.1,"SYD",32,-164.1,FALSE
+"126021503","West Ryde - Meadowbank","New South Wales",22183,"CBR",192.8,"SYD",32.3,-160.5,FALSE
+"126021590","Putney","New South Wales",4198,"CBR",196.9,"SYD",30.5,-166.4,FALSE
+"126021722","Denistone","New South Wales",7196,"CBR",196.5,"SYD",36,-160.5,FALSE
+"126021723","Eastwood","New South Wales",20278,"CBR",196.2,"SYD",35.7,-160.5,FALSE
+"126021724","Ryde - North","New South Wales",21909,"CBR",199.2,"SYD",33,-166.2,FALSE
+"126021725","Ryde - South","New South Wales",13318,"CBR",198.1,"SYD",31.7,-166.4,FALSE
+"127011504","Ashcroft - Busby - Miller","New South Wales",18381,"CBR",164.4,"SYD",33.9,-130.5,FALSE
+"127011505","Austral - Greendale","New South Wales",22535,"CBR",172.7,"SYD",47.4,-125.3,FALSE
+"127011592","Badgerys Creek","New South Wales",23,"CBR",176.3,"SYD",48.3,-128,FALSE
+"127011593","Cecil Hills","New South Wales",6831,"CBR",164.2,"SYD",36.2,-128,FALSE
+"127011594","Green Valley","New South Wales",12813,"CBR",162.4,"SYD",34.4,-128,FALSE
+"127011595","Hinchinbrook","New South Wales",13050,"CBR",163.8,"SYD",35.8,-128,FALSE
+"127011596","Hoxton Park - Carnes Hill - Horningsea Park","New South Wales",14106,"CBR",162.7,"SYD",34.5,-128.1,FALSE
+"127011597","West Hoxton - Middleton Grange","New South Wales",18072,"CBR",162,"SYD",34,-128,FALSE
+"127011726","Cobbitty - Bringelly","New South Wales",6281,"CBR",167.3,"SYD",57.2,-110.1,FALSE
+"127011727","Gledswood Hills - Gregory Hills","New South Wales",20313,"CBR",158.7,"SYD",42.2,-116.4,FALSE
+"127011728","Leppington - Catherine Field","New South Wales",21103,"CBR",168.6,"SYD",45.7,-122.9,FALSE
+"127011729","Oran Park","New South Wales",25695,"CBR",164.2,"SYD",51.2,-113.1,FALSE
+"127021509","Bonnyrigg Heights - Bonnyrigg","New South Wales",17332,"CBR",166.2,"SYD",36.9,-129.3,FALSE
+"127021510","Bossley Park - Abbotsbury","New South Wales",19638,"CBR",169,"SYD",41,-128,FALSE
+"127021511","Cabramatta - Lansvale","New South Wales",24260,"CBR",170.5,"SYD",34.6,-135.9,FALSE
+"127021512","Cabramatta West - Mount Pritchard","New South Wales",18491,"CBR",169.6,"SYD",34.5,-135.2,FALSE
+"127021513","Canley Vale - Canley Heights","New South Wales",22512,"CBR",172.3,"SYD",36.4,-135.9,FALSE
+"127021514","Edensor Park","New South Wales",10213,"CBR",167.2,"SYD",39.2,-128,FALSE
+"127021515","Fairfield","New South Wales",19302,"CBR",178.3,"SYD",38.6,-139.7,FALSE
+"127021516","Fairfield - West","New South Wales",22247,"CBR",174.8,"SYD",38.9,-135.9,FALSE
+"127021517","Greenfield Park - Prairiewood","New South Wales",8772,"CBR",170.1,"SYD",40.5,-129.5,FALSE
+"127021518","Horsley Park - Kemps Creek","New South Wales",4146,"CBR",170.4,"SYD",42.3,-128,FALSE
+"127021519","Smithfield - Wetherill Park","New South Wales",20410,"CBR",174.4,"SYD",40.7,-133.8,FALSE
+"127021520","St Johns Park - Wakeley","New South Wales",11224,"CBR",171.7,"SYD",40.3,-131.4,FALSE
+"127021521","Wetherill Park Industrial","New South Wales",39,"CBR",173.3,"SYD",43.2,-130.1,FALSE
+"127031522","Casula","New South Wales",17039,"CBR",158.1,"SYD",27.9,-130.2,FALSE
+"127031523","Chipping Norton - Moorebank","New South Wales",22246,"CBR",166,"SYD",29,-137,FALSE
+"127031524","Holsworthy - Wattle Grove","New South Wales",21386,"CBR",165.3,"SYD",28.1,-137.1,FALSE
+"127031599","Lurnea - Cartwright","New South Wales",13737,"CBR",163.2,"SYD",27.3,-135.9,FALSE
+"127031601","Warwick Farm","New South Wales",6453,"CBR",168.7,"SYD",32.8,-135.9,FALSE
+"127031730","Edmondson Park","New South Wales",18038,"CBR",159.6,"SYD",30.7,-128.9,FALSE
+"127031731","Liverpool - East","New South Wales",20573,"CBR",162.5,"SYD",26.6,-135.9,FALSE
+"127031732","Liverpool - West","New South Wales",14906,"CBR",164.9,"SYD",29,-135.9,FALSE
+"127031733","Prestons","New South Wales",15534,"CBR",160.3,"SYD",31.1,-129.2,FALSE
+"128011529","Gymea - Grays Point","New South Wales",18888,"CBR",193.3,"SYD",28.5,-164.8,FALSE
+"128011530","Miranda - Yowie Bay","New South Wales",22804,"CBR",191.1,"SYD",24.8,-166.3,FALSE
+"128011531","Sylvania - Taren Point","New South Wales",16620,"CBR",185.7,"SYD",22.3,-163.4,FALSE
+"128011602","Caringbah","New South Wales",14011,"CBR",191.5,"SYD",21.4,-170.1,FALSE
+"128011603","Caringbah South","New South Wales",13833,"CBR",193.6,"SYD",24,-169.6,FALSE
+"128011604","Cronulla - Kurnell - Bundeena","New South Wales",25614,"CBR",201.9,"SYD",31.8,-170.1,FALSE
+"128011605","Lilli Pilli - Port Hacking - Dolans Bay","New South Wales",3437,"CBR",195.8,"SYD",26.2,-169.6,FALSE
+"128011606","Woolooware - Burraneer","New South Wales",9989,"CBR",196.5,"SYD",26.8,-169.7,FALSE
+"128021533","Heathcote - Waterfall","New South Wales",6720,"CBR",178.5,"SYD",43.4,-135.1,FALSE
+"128021534","Illawong - Alfords Point","New South Wales",10621,"CBR",176,"SYD",27.2,-148.8,FALSE
+"128021535","Menai - Lucas Heights - Woronora","New South Wales",20917,"CBR",178,"SYD",29.2,-148.8,FALSE
+"128021536","Oyster Bay - Como - Jannali","New South Wales",22878,"CBR",189.6,"SYD",31.5,-158.1,FALSE
+"128021537","Royal National Park","New South Wales",45,"CBR",194.1,"SYD",64.9,-129.3,FALSE
+"128021538","Sutherland - Kirrawee","New South Wales",24903,"CBR",188,"SYD",30,-158,FALSE
+"128021607","Engadine","New South Wales",17844,"CBR",186.3,"SYD",38.4,-147.8,FALSE
+"128021608","Loftus - Yarrawarrah","New South Wales",7464,"CBR",190.7,"SYD",36.4,-154.3,FALSE
+"128021609","Woronora Heights","New South Wales",3586,"CBR",191.7,"SYD",43.9,-147.8,FALSE
+"204011054","Alexandra","Victoria",6849,"CBR",392.8,"MEL",122.8,-270,FALSE
+"204011055","Euroa","Victoria",6880,"CBR",337.4,"MEL",108.8,-228.6,FALSE
+"204011057","Mansfield (Vic.)","Victoria",11324,"CBR",410.8,"MEL",208.4,-202.4,FALSE
+"204011058","Nagambie","Victoria",4936,"CBR",361.4,"MEL",88.9,-272.5,FALSE
+"204011061","Upper Yarra Valley","Victoria",236,"CBR",483.5,"MEL",171.1,-312.3,FALSE
+"204021063","Benalla","Victoria",10861,"CBR",307.9,"MEL",136.4,-171.5,FALSE
+"204021064","Benalla Surrounds","Victoria",3809,"CBR",312,"MEL",145.2,-166.9,FALSE
+"204021065","Rutherglen","Victoria",4120,"CBR",271,"MEL",180,-91,FALSE
+"204021066","Wangaratta","Victoria",20019,"CBR",284.9,"MEL",155.3,-129.7,FALSE
+"204021067","Wangaratta Surrounds","Victoria",10070,"CBR",316.9,"MEL",177.3,-139.6,FALSE
+"204031068","Beechworth","Victoria",4962,"CBR",280.1,"MEL",184.9,-95.2,FALSE
+"204031069","Bright - Mount Beauty","Victoria",8976,"CBR",345.8,"MEL",240.9,-104.9,FALSE
+"204031070","Chiltern - Indigo Valley","Victoria",3257,"CBR",251.8,"MEL",182.8,-69,FALSE
+"204031071","Myrtleford","Victoria",4635,"CBR",298.9,"MEL",205.9,-93,FALSE
+"204031072","Towong","Victoria",6155,"CBR",324.3,"MEL",315.5,-8.8,FALSE
+"204031073","West Wodonga","Victoria",15495,"CBR",273.5,"MEL",213.6,-59.9,FALSE
+"204031075","Yackandandah","Victoria",5498,"CBR",266,"MEL",225.4,-40.6,FALSE
+"204031491","Baranduda - Leneva","Victoria",14578,"CBR",247.6,"MEL",207.1,-40.4,FALSE
+"204031492","Wodonga","Victoria",14644,"CBR",238,"MEL",192.6,-45.4,FALSE
+"205011077","Mount Baw Baw Region","Victoria",6750,"CBR",483.8,"MEL",152.5,-331.3,FALSE
+"205021081","Bairnsdale","Victoria",15917,"CBR",327.4,"MEL",242.7,-84.6,FALSE
+"205021082","Bruthen - Omeo","Victoria",8651,"CBR",422.2,"MEL",374.8,-47.4,FALSE
+"205021084","Lakes Entrance","Victoria",11331,"CBR",315.9,"MEL",261.2,-54.7,FALSE
+"205021085","Orbost","Victoria",6727,"CBR",254.5,"MEL",386.5,131.9,FALSE
+"205021086","Paynesville","Victoria",7190,"CBR",353.9,"MEL",237.9,-115.9,FALSE
+"205041098","Yallourn North - Glengarry","Victoria",4972,"CBR",419.4,"MEL",164.8,-254.6,FALSE
+"205041493","Traralgon - East","Victoria",12362,"CBR",419.4,"MEL",159.2,-260.2,FALSE
+"205051099","Alps - West","Victoria",23,"CBR",533.1,"MEL",335.8,-197.3,FALSE
+"205051100","Longford - Loch Sport","Victoria",4993,"CBR",408.9,"MEL",205.2,-203.7,FALSE
+"205051101","Maffra","Victoria",15549,"CBR",410.8,"MEL",211.4,-199.4,FALSE
+"205051102","Rosedale","Victoria",5020,"CBR",404.6,"MEL",172.5,-232.1,FALSE
+"205051103","Sale","Victoria",15232,"CBR",393.4,"MEL",189.3,-204.1,FALSE
+"216011407","Kyabram","Victoria",10838,"CBR",395.9,"MEL",156.2,-239.8,FALSE
+"216021411","Cobram","Victoria",6626,"CBR",327.8,"MEL",172.6,-155.2,FALSE
+"216021412","Moira","Victoria",2841,"CBR",313,"MEL",173.4,-139.6,FALSE
+"216021413","Numurkah","Victoria",12446,"CBR",358,"MEL",167.2,-190.8,FALSE
+"216021414","Yarrawonga","Victoria",8953,"CBR",302.4,"MEL",174.2,-128.2,FALSE
+"216031415","Mooroopna","Victoria",8391,"CBR",358.7,"MEL",124,-234.6,FALSE
+"216031416","Shepparton - North","Victoria",20312,"CBR",353,"MEL",128.5,-224.4,FALSE
+"216031418","Shepparton Surrounds - East","Victoria",4055,"CBR",337.7,"MEL",140.2,-197.5,FALSE
+"216031419","Shepparton Surrounds - West","Victoria",10346,"CBR",369.8,"MEL",126.1,-243.7,FALSE
+"216031593","Kialla","Victoria",10295,"CBR",351.2,"MEL",114.2,-237,FALSE
+"216031594","Shepparton - South East","Victoria",16334,"CBR",341.3,"MEL",121.1,-220.2,FALSE
+"801011001","Aranda","Australian Capital Territory",2643,"CBR",21.3,"SYD",184.8,163.5,FALSE
+"801011002","Belconnen","Australian Capital Territory",9592,"CBR",26.6,"SYD",188.7,162.1,FALSE
+"801011003","Bruce","Australian Capital Territory",8119,"CBR",24.6,"SYD",185.3,160.6,FALSE
+"801011004","Charnwood","Australian Capital Territory",3078,"CBR",39.2,"SYD",195.3,156.1,FALSE
+"801011005","Cook","Australian Capital Territory",2962,"CBR",22.4,"SYD",187.3,164.9,FALSE
+"801011006","Dunlop","Australian Capital Territory",7282,"CBR",39.5,"SYD",198.5,159.1,FALSE
+"801011007","Evatt","Australian Capital Territory",5549,"CBR",32.3,"SYD",188.9,156.6,FALSE
+"801011008","Florey","Australian Capital Territory",4768,"CBR",31.5,"SYD",193.8,162.4,FALSE
+"801011009","Flynn (ACT)","Australian Capital Territory",3710,"CBR",35.5,"SYD",194.4,158.9,FALSE
+"801011010","Fraser","Australian Capital Territory",2139,"CBR",38,"SYD",191.8,153.8,FALSE
+"801011011","Giralang","Australian Capital Territory",3456,"CBR",31.8,"SYD",185.6,153.8,FALSE
+"801011012","Gooromon","Australian Capital Territory",4,"CBR",32.9,"SYD",186.7,153.8,FALSE
+"801011013","Hawker","Australian Capital Territory",3007,"CBR",27.2,"SYD",191.3,164.2,FALSE
+"801011014","Higgins","Australian Capital Territory",3363,"CBR",30.2,"SYD",193.1,162.9,FALSE
+"801011015","Holt","Australian Capital Territory",6047,"CBR",33.2,"SYD",197.2,164,FALSE
+"801011016","Kaleen","Australian Capital Territory",7776,"CBR",27.1,"SYD",182.2,155.1,FALSE
+"801011017","Latham","Australian Capital Territory",3763,"CBR",34.8,"SYD",195.5,160.7,FALSE
+"801011018","Lawson","Australian Capital Territory",2913,"CBR",27.7,"SYD",185.9,158.2,FALSE
+"801011019","Macgregor (ACT)","Australian Capital Territory",6975,"CBR",37.4,"SYD",200.4,163,FALSE
+"801011020","Macquarie","Australian Capital Territory",3231,"CBR",24.5,"SYD",187.3,162.7,FALSE
+"801011021","McKellar","Australian Capital Territory",2619,"CBR",31.8,"SYD",188.8,157,FALSE
+"801011022","Melba","Australian Capital Territory",3424,"CBR",35.2,"SYD",192.6,157.5,FALSE
+"801011023","Page","Australian Capital Territory",2991,"CBR",27.6,"SYD",189.9,162.4,FALSE
+"801011024","Scullin","Australian Capital Territory",3052,"CBR",30,"SYD",192.3,162.4,FALSE
+"801011025","Spence","Australian Capital Territory",2535,"CBR",35.8,"SYD",189.6,153.8,FALSE
+"801011026","Weetangera","Australian Capital Territory",2848,"CBR",24.8,"SYD",190,165.2,FALSE
+"801011111","Molonglo Corridor","Australian Capital Territory",16,"CBR",25.6,"SYD",193,167.4,FALSE
+"801011142","Macnamara","Australian Capital Territory",40,"CBR",38.4,"SYD",202.4,164,FALSE
+"801011143","Strathnairn","Australian Capital Territory",2208,"CBR",36.1,"SYD",200.1,164,FALSE
+"801011144","West Belconnen","Australian Capital Territory",22,"CBR",38.6,"SYD",202.6,164,FALSE
+"801031031","Hume","Australian Capital Territory",394,"CBR",15.3,"SYD",186.7,171.4,FALSE
+"801031032","Kowen","Australian Capital Territory",23,"CBR",38.6,"SYD",188.7,150.1,FALSE
+"801031113","Canberra East","Australian Capital Territory",1226,"CBR",11.5,"SYD",182.9,171.4,FALSE
+"801031114","Canberra Airport","Australian Capital Territory",128,"CBR",9.2,"SYD",181.7,172.5,FALSE
+"801031115","Majura","Australian Capital Territory",263,"CBR",9.3,"SYD",176.7,167.4,FALSE
+"801041034","Amaroo","Australian Capital Territory",5985,"CBR",26.2,"SYD",179.2,153,FALSE
+"801041035","Bonner","Australian Capital Territory",7448,"CBR",26.9,"SYD",179.8,152.9,FALSE
+"801041036","Casey","Australian Capital Territory",6731,"CBR",34.4,"SYD",187.3,153,FALSE
+"801041037","Crace","Australian Capital Territory",4821,"CBR",30.2,"SYD",183.7,153.5,FALSE
+"801041038","Forde","Australian Capital Territory",4457,"CBR",24.4,"SYD",177.3,153,FALSE
+"801041039","Franklin","Australian Capital Territory",7520,"CBR",22.8,"SYD",175.8,153,FALSE
+"801041040","Gungahlin","Australian Capital Territory",9555,"CBR",22.8,"SYD",175.8,153,FALSE
+"801041043","Hall","Australian Capital Territory",291,"CBR",35.5,"SYD",189.4,153.8,FALSE
+"801041044","Harrison","Australian Capital Territory",8023,"CBR",19.8,"SYD",172.8,153,FALSE
+"801041045","Mitchell","Australian Capital Territory",8,"CBR",25.3,"SYD",178.3,153,FALSE
+"801041046","Ngunnawal","Australian Capital Territory",11188,"CBR",31.8,"SYD",184.8,153,FALSE
+"801041047","Nicholls","Australian Capital Territory",6507,"CBR",31.2,"SYD",184.1,153,FALSE
+"801041048","Palmerston","Australian Capital Territory",5537,"CBR",29.1,"SYD",182.1,153,FALSE
+"801041118","Jacka","Australian Capital Territory",733,"CBR",30.8,"SYD",183.6,152.8,FALSE
+"801041119","Kenny","Australian Capital Territory",18,"CBR",20,"SYD",172.9,153,FALSE
+"801041120","Moncrieff","Australian Capital Territory",6031,"CBR",28.9,"SYD",181.9,153,FALSE
+"801041121","Taylor","Australian Capital Territory",5512,"CBR",31.8,"SYD",184.7,153,FALSE
+"801041122","Throsby","Australian Capital Territory",3765,"CBR",19.1,"SYD",172.1,153,FALSE
+"801051049","Acton","Australian Capital Territory",3616,"CBR",17.8,"SYD",187,169.2,FALSE
+"801051050","Ainslie","Australian Capital Territory",5469,"CBR",18.9,"SYD",181.3,162.4,FALSE
+"801051051","Braddon","Australian Capital Territory",7488,"CBR",16.3,"SYD",181,164.7,FALSE
+"801051053","Civic","Australian Capital Territory",5361,"CBR",14.9,"SYD",186.9,172,FALSE
+"801051054","Dickson","Australian Capital Territory",4179,"CBR",18.9,"SYD",178.2,159.3,FALSE
+"801051055","Downer","Australian Capital Territory",4556,"CBR",21.7,"SYD",175.1,153.5,FALSE
+"801051056","Hackett","Australian Capital Territory",3345,"CBR",22.5,"SYD",174.4,151.9,FALSE
+"801051057","Lyneham","Australian Capital Territory",6013,"CBR",22.8,"SYD",178.2,155.3,FALSE
+"801051058","O'Connor (ACT)","Australian Capital Territory",5921,"CBR",21.5,"SYD",181,159.5,FALSE
+"801051060","Turner","Australian Capital Territory",4888,"CBR",19.4,"SYD",181.8,162.4,FALSE
+"801051061","Watson","Australian Capital Territory",7377,"CBR",21.7,"SYD",173.6,151.9,FALSE
+"801051124","Campbell","Australian Capital Territory",5365,"CBR",13.3,"SYD",184.4,171.2,FALSE
+"801051125","Duntroon","Australian Capital Territory",2367,"CBR",10.5,"SYD",182.2,171.7,FALSE
+"801051126","Parkes (ACT) - North","Australian Capital Territory",332,"CBR",12.2,"SYD",186.7,174.6,FALSE
+"801051127","Reid","Australian Capital Territory",2013,"CBR",13.3,"SYD",184.8,171.5,FALSE
+"801061062","Deakin","Australian Capital Territory",3247,"CBR",21.3,"SYD",194,172.7,FALSE
+"801061063","Forrest","Australian Capital Territory",1944,"CBR",16.9,"SYD",190.6,173.7,FALSE
+"801061064","Griffith (ACT)","Australian Capital Territory",5826,"CBR",15.6,"SYD",187,171.4,FALSE
+"801061067","Narrabundah","Australian Capital Territory",7014,"CBR",14.5,"SYD",185.8,171.4,FALSE
+"801061068","Parkes (ACT) - South","Australian Capital Territory",4,"CBR",12.4,"SYD",188.6,176.2,FALSE
+"801061069","Red Hill (ACT)","Australian Capital Territory",3619,"CBR",17.5,"SYD",188.8,171.4,FALSE
+"801061070","Yarralumla","Australian Capital Territory",3154,"CBR",24.2,"SYD",197.5,173.4,FALSE
+"801061129","Barton","Australian Capital Territory",2144,"CBR",13.6,"SYD",189.8,176.2,FALSE
+"801061130","Fyshwick","Australian Capital Territory",59,"CBR",10.3,"SYD",181.6,171.4,FALSE
+"801061131","Kingston (ACT)","Australian Capital Territory",7472,"CBR",15.9,"SYD",188.6,172.7,FALSE
+"801071071","Banks","Australian Capital Territory",5038,"CBR",36.5,"SYD",207.9,171.4,FALSE
+"801071072","Bonython","Australian Capital Territory",3740,"CBR",30.8,"SYD",202.2,171.4,FALSE
+"801071073","Calwell","Australian Capital Territory",5520,"CBR",28.5,"SYD",199.8,171.4,FALSE
+"801071074","Chisholm","Australian Capital Territory",5277,"CBR",27.1,"SYD",198.4,171.4,FALSE
+"801071075","Conder","Australian Capital Territory",4914,"CBR",33.4,"SYD",204.7,171.4,FALSE
+"801071076","Fadden","Australian Capital Territory",3014,"CBR",25.9,"SYD",197.2,171.4,FALSE
+"801071077","Gilmore","Australian Capital Territory",2722,"CBR",25.5,"SYD",196.8,171.4,FALSE
+"801071078","Gordon (ACT)","Australian Capital Territory",7783,"CBR",36.7,"SYD",208.1,171.4,FALSE
+"801071079","Gowrie (ACT)","Australian Capital Territory",3100,"CBR",26,"SYD",197.4,171.4,FALSE
+"801071080","Greenway","Australian Capital Territory",5565,"CBR",35,"SYD",203.1,168.1,FALSE
+"801071081","Isabella Plains","Australian Capital Territory",4324,"CBR",29.1,"SYD",200.5,171.4,FALSE
+"801071082","Kambah","Australian Capital Territory",15878,"CBR",28.5,"SYD",196.1,167.6,FALSE
+"801071083","Macarthur","Australian Capital Territory",1387,"CBR",23.4,"SYD",194.7,171.4,FALSE
+"801071084","Monash","Australian Capital Territory",5657,"CBR",29.3,"SYD",200.6,171.4,FALSE
+"801071086","Oxley (ACT)","Australian Capital Territory",1713,"CBR",33.4,"SYD",201.5,168.1,FALSE
+"801071087","Richardson","Australian Capital Territory",3060,"CBR",26.6,"SYD",197.9,171.4,FALSE
+"801071088","Theodore","Australian Capital Territory",3726,"CBR",28,"SYD",199.3,171.4,FALSE
+"801071089","Tuggeranong","Australian Capital Territory",40,"CBR",36.4,"SYD",207.7,171.4,FALSE
+"801071090","Wanniassa","Australian Capital Territory",7731,"CBR",29.8,"SYD",200.8,171,FALSE
+"801071132","Tuggeranong - West","Australian Capital Territory",10,"CBR",29.9,"SYD",197.4,167.6,FALSE
+"801081091","Chapman","Australian Capital Territory",2881,"CBR",30.5,"SYD",198.1,167.6,FALSE
+"801081092","Duffy","Australian Capital Territory",3514,"CBR",28,"SYD",195.5,167.6,FALSE
+"801081093","Fisher","Australian Capital Territory",3334,"CBR",26.5,"SYD",194.1,167.6,FALSE
+"801081094","Holder","Australian Capital Territory",2895,"CBR",26.4,"SYD",194,167.6,FALSE
+"801081095","Rivett","Australian Capital Territory",3431,"CBR",29,"SYD",196.6,167.6,FALSE
+"801081096","Stirling","Australian Capital Territory",2167,"CBR",26.5,"SYD",194.1,167.6,FALSE
+"801081097","Waramanga","Australian Capital Territory",2749,"CBR",24.6,"SYD",192.2,167.6,FALSE
+"801081098","Weston","Australian Capital Territory",4027,"CBR",24.5,"SYD",192.1,167.6,FALSE
+"801081133","Scrivener","Australian Capital Territory",72,"CBR",24.4,"SYD",192,167.6,FALSE
+"801091099","Chifley","Australian Capital Territory",2785,"CBR",24.7,"SYD",194.6,169.8,FALSE
+"801091100","Curtin","Australian Capital Territory",5585,"CBR",25.6,"SYD",195.7,170.1,FALSE
+"801091101","Farrer","Australian Capital Territory",3816,"CBR",25,"SYD",196.4,171.4,FALSE
+"801091102","Garran","Australian Capital Territory",3732,"CBR",20.3,"SYD",191.7,171.4,FALSE
+"801091103","Hughes","Australian Capital Territory",3149,"CBR",21.9,"SYD",193.3,171.4,FALSE
+"801091104","Isaacs","Australian Capital Territory",2402,"CBR",23.3,"SYD",194.7,171.4,FALSE
+"801091105","Lyons (ACT)","Australian Capital Territory",3310,"CBR",26.1,"SYD",194.2,168.1,FALSE
+"801091106","Mawson","Australian Capital Territory",3526,"CBR",21.6,"SYD",192.9,171.4,FALSE
+"801091107","O'Malley","Australian Capital Territory",977,"CBR",20,"SYD",191.4,171.4,FALSE
+"801091108","Pearce","Australian Capital Territory",2713,"CBR",25.2,"SYD",196,170.8,FALSE
+"801091109","Phillip","Australian Capital Territory",7135,"CBR",21.7,"SYD",193,171.4,FALSE
+"801091110","Torrens","Australian Capital Territory",2470,"CBR",25.1,"SYD",196.4,171.4,FALSE
+"801101134","Arboretum","Australian Capital Territory",10,"CBR",18.4,"SYD",186,167.6,FALSE
+"801101135","Coombs","Australian Capital Territory",6159,"CBR",26.9,"SYD",194.5,167.6,FALSE
+"801101136","Denman Prospect","Australian Capital Territory",5503,"CBR",31.8,"SYD",199.2,167.4,FALSE
+"801101139","Wright","Australian Capital Territory",4757,"CBR",27.8,"SYD",195.4,167.6,FALSE
+"801101145","Molonglo - East","Australian Capital Territory",3,"CBR",25.3,"SYD",192.7,167.4,FALSE
+"801101146","Whitlam","Australian Capital Territory",1632,"CBR",25.7,"SYD",193.1,167.4,FALSE
+"801111140","ACT - South West","Australian Capital Territory",561,"CBR",45.9,"SYD",213.5,167.6,FALSE
+"801111141","Namadgi","Australian Capital Territory",67,"CBR",122.4,"SYD",293.7,171.4,FALSE
+"901031003","Jervis Bay","Other Territories",305,"CBR",174.4,"SYD",171.7,-2.7,FALSE

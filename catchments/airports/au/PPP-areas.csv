@@ -1,0 +1,77 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"306031161","Tully","Queensland",11867,"PPP",349.6,"CNS",150.2,-199.5,FALSE
+"308011192","Emerald","Queensland",15238,"PPP",339.5,"BNE",612.5,273,FALSE
+"308031205","Berserker","Queensland",7293,"PPP",312.4,"BNE",440.9,128.5,FALSE
+"308031207","Emu Park","Queensland",6314,"PPP",339.1,"BNE",481.9,142.8,FALSE
+"308031208","Frenchville - Mount Archer","Queensland",9246,"PPP",336.2,"BNE",472.1,135.9,FALSE
+"308031209","Glenlee - Rockyview","Queensland",6002,"PPP",295.8,"BNE",457.8,162,FALSE
+"308031210","Gracemere","Queensland",13305,"PPP",334.6,"BNE",446.6,112,FALSE
+"308031211","Lakes Creek","Queensland",5037,"PPP",318.8,"BNE",449.3,130.5,FALSE
+"308031213","Norman Gardens","Queensland",11288,"PPP",307.3,"BNE",452.2,144.9,FALSE
+"308031214","Park Avenue","Queensland",5538,"PPP",310.3,"BNE",442.6,132.3,FALSE
+"308031215","Parkhurst - Kawana","Queensland",8181,"PPP",306.8,"BNE",448.2,141.4,FALSE
+"308031216","Rockhampton - West","Queensland",6148,"PPP",327.8,"BNE",439.8,112,FALSE
+"308031217","Rockhampton City","Queensland",3345,"PPP",325.5,"BNE",447.7,122.3,FALSE
+"308031218","Rockhampton Surrounds - East","Queensland",3754,"PPP",349.1,"BNE",482.1,133,FALSE
+"308031219","Rockhampton Surrounds - North","Queensland",5054,"PPP",228,"BNE",523.3,295.3,FALSE
+"308031220","Rockhampton Surrounds - West","Queensland",3226,"PPP",359,"BNE",484.5,125.5,FALSE
+"308031221","Shoalwater Bay","Queensland",22,"PPP",339.2,"BNE",512.8,173.5,FALSE
+"308031222","The Range - Allenstown","Queensland",8125,"PPP",316.9,"BNE",435,118.1,FALSE
+"308031223","Yeppoon","Queensland",22522,"PPP",336.7,"BNE",485.2,148.5,FALSE
+"312011337","Bowen","Queensland",11266,"PPP",63.9,"CNS",427.9,363.9,FALSE
+"312011338","Broadsound - Nebo","Queensland",9190,"PPP",254.1,"BNE",582.4,328.3,FALSE
+"312011339","Clermont","Queensland",4068,"PPP",366,"CNS",618.5,252.5,FALSE
+"312011340","Collinsville","Queensland",4008,"PPP",190.2,"CNS",545.5,355.3,FALSE
+"312011341","Moranbah","Queensland",9928,"PPP",251.9,"CNS",725.8,473.9,FALSE
+"312021342","Andergrove - Beaconsfield","Queensland",17169,"PPP",90.5,"CNS",564.4,473.9,FALSE
+"312021343","East Mackay","Queensland",3820,"PPP",92.8,"CNS",566.7,473.9,FALSE
+"312021344","Eimeo - Rural View","Queensland",14911,"PPP",90.2,"CNS",564.1,473.9,FALSE
+"312021345","Eungella Hinterland","Queensland",9,"PPP",140.2,"CNS",614.1,473.9,FALSE
+"312021346","Mackay","Queensland",4154,"PPP",88,"CNS",561.9,473.9,FALSE
+"312021347","Mackay Harbour","Queensland",676,"PPP",93.8,"CNS",567.7,473.9,FALSE
+"312021348","Mount Pleasant - Glenella","Queensland",12060,"PPP",80.9,"CNS",554.8,473.9,FALSE
+"312021349","North Mackay","Queensland",6418,"PPP",87.5,"CNS",561.4,473.9,FALSE
+"312021350","Ooralea - Bakers Creek","Queensland",6600,"PPP",91.3,"CNS",565.2,473.9,FALSE
+"312021351","Pioneer Valley","Queensland",9449,"PPP",84.3,"CNS",558.2,473.9,FALSE
+"312021352","Sarina","Queensland",12500,"PPP",142.4,"CNS",616.3,473.9,FALSE
+"312021353","Seaforth - Calen","Queensland",8785,"PPP",44.2,"CNS",518.1,473.9,FALSE
+"312021354","Shoal Point - Bucasia","Queensland",6590,"PPP",97.1,"CNS",571,473.9,FALSE
+"312021355","Slade Point","Queensland",3669,"PPP",93.5,"CNS",567.3,473.9,FALSE
+"312021356","South Mackay","Queensland",7251,"PPP",90.5,"CNS",564.4,473.9,FALSE
+"312021357","Walkerston - Eton","Queensland",8749,"PPP",98.5,"CNS",572.4,473.9,FALSE
+"312021358","West Mackay","Queensland",6443,"PPP",88.1,"CNS",562,473.9,FALSE
+"312031359","Airlie - Whitsundays","Queensland",16597,"PPP",25,"CNS",473.3,448.2,FALSE
+"312031361","Proserpine","Queensland",9503,"PPP",35.9,"CNS",495,459.1,FALSE
+"318011460","Ayr","Queensland",9234,"PPP",144.9,"CNS",342.2,197.3,FALSE
+"318011461","Burdekin","Queensland",7980,"PPP",177.6,"CNS",386.9,209.4,FALSE
+"318011462","Charters Towers","Queensland",8172,"PPP",253.7,"CNS",363.6,110,FALSE
+"318011463","Dalrymple","Queensland",3916,"PPP",317.2,"CNS",427.1,110,FALSE
+"318011464","Ingham","Queensland",4471,"PPP",287.7,"CNS",199,-88.7,FALSE
+"318011465","Ingham Surrounds","Queensland",6723,"PPP",322.5,"CNS",233.8,-88.7,FALSE
+"318011466","Palm Island","Queensland",2335,"PPP",894.4,"CNS",798.8,-95.7,FALSE
+"318021467","Aitkenvale","Queensland",4848,"PPP",212,"CNS",279.4,67.4,FALSE
+"318021468","Annandale (Qld)","Queensland",10353,"PPP",207.6,"CNS",279.4,71.7,FALSE
+"318021469","Belgian Gardens - Pallarenda","Queensland",3190,"PPP",219.7,"CNS",286.8,67.1,FALSE
+"318021470","Bohle Plains","Queensland",10466,"PPP",218.9,"CNS",273.1,54.2,FALSE
+"318021471","Condon - Rasmussen","Queensland",11457,"PPP",225.1,"CNS",288.3,63.3,FALSE
+"318021472","Cranbrook","Queensland",6096,"PPP",213.5,"CNS",279.1,65.5,FALSE
+"318021474","Douglas","Queensland",8318,"PPP",225.2,"CNS",306.9,81.7,FALSE
+"318021475","Garbutt - West End","Queensland",6605,"PPP",219.3,"CNS",281.3,62.1,FALSE
+"318021476","Gulliver - Currajong - Vincent","Queensland",7872,"PPP",214.1,"CNS",279.3,65.2,FALSE
+"318021477","Heatley","Queensland",4023,"PPP",214.3,"CNS",279.5,65.2,FALSE
+"318021478","Hermit Park - Rosslea","Queensland",5752,"PPP",210.2,"CNS",283.7,73.5,FALSE
+"318021479","Hyde Park - Pimlico","Queensland",4743,"PPP",211.5,"CNS",280.2,68.7,FALSE
+"318021480","Kelso","Queensland",11180,"PPP",234.2,"CNS",297.4,63.3,FALSE
+"318021481","Kirwan - East","Queensland",7924,"PPP",217,"CNS",278.3,61.2,FALSE
+"318021482","Kirwan - West","Queensland",15115,"PPP",218.2,"CNS",277.2,58.9,FALSE
+"318021483","Magnetic Island","Queensland",2658,"PPP",243.9,"CNS",321.4,77.5,FALSE
+"318021484","Mount Louisa","Queensland",10932,"PPP",223.3,"CNS",278.4,55.1,FALSE
+"318021485","Mundingburra","Queensland",3551,"PPP",210.9,"CNS",282.9,71.9,FALSE
+"318021486","Northern Beaches","Queensland",7196,"PPP",263.1,"CNS",274.6,11.5,FALSE
+"318021487","Oonoonba","Queensland",7544,"PPP",206.1,"CNS",282.7,76.6,FALSE
+"318021488","South Townsville - Railway Estate","Queensland",5618,"PPP",208.5,"CNS",284,75.5,FALSE
+"318021489","Townsville - South","Queensland",5861,"PPP",202.7,"CNS",297.8,95,FALSE
+"318021490","Townsville City - North Ward","Queensland",9589,"PPP",213.9,"CNS",285.2,71.4,FALSE
+"318021491","Wulguru - Roseneath","Queensland",6403,"PPP",201.5,"CNS",285.8,84.3,FALSE
+"318021582","Burdell - Mount Low","Queensland",22202,"PPP",224.2,"CNS",267.4,43.1,FALSE
+"318021583","Deeragun - Jensen","Queensland",6770,"PPP",224.1,"CNS",264.7,40.6,FALSE

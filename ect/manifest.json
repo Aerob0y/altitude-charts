@@ -19,7 +19,7 @@
   "image_alt": "Card spending Annual % change in monthly spending. Source: Stats NZ",
   "real": {
     "cpi": "cpi.json",
-    "label": "June 2026 prices"
+    "label": "September 2026 prices"
   },
   "y_range": {
     "label": "Axis range",

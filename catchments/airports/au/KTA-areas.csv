@@ -1,0 +1,6 @@
+﻿"area_code","area_name","region","population","airport","airport_minutes","rival_airport","rival_minutes","minutes_closer","uses_straight_line_estimate"
+"510021269","Port Hedland","Western Australia",4318,"KTA",173.2,"PER",1004.1,830.9,FALSE
+"510021270","South Hedland","Western Australia",12982,"KTA",164.9,"PER",995.8,830.9,FALSE
+"510031271","Ashburton (WA)","Western Australia",8335,"KTA",148.3,"PER",1016.4,868,FALSE
+"510031272","Karratha","Western Australia",19659,"KTA",16.2,"PER",948.2,932,FALSE
+"510031273","Roebourne","Western Australia",5770,"KTA",105.4,"PER",1012.8,907.4,FALSE
