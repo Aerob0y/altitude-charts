@@ -26,11 +26,16 @@
     note.textContent = airport.no_rival
       ? `No other major airport within two hours. ${people(airport.population_study)} people in the area shown.`
       : `${people(airport.population_closer)} people live closer to ${airport.code} than to any rival, out of ${people(airport.population_study)} in the area shown.`;
+    // Cut-off maps exist only for airports with a rival, and only once the maps are rebuilt.
+    const extra = [30, 60].map(minutes => (airport.cutoffs || []).find(c => c.minutes === minutes)).filter(Boolean);
+    const cutoffs = document.createElement("p");
+    if (extra.length) cutoffs.textContent = extra.map(c => `At least ${c.minutes} min closer: ${people(c.population_closer)}.`).join(" ");
     const links = document.createElement("p");
     links.className = "links";
     links.append(link(airport.live, "Live map"), link("airports/" + airport.image, "Image (PNG)", true),
       link("airports/" + airport.areas_csv, "Area data (CSV)", true), link("airports/" + airport.bands_csv, "Bands (CSV)", true));
-    li.append(figure, title, note, links);
+    for (const c of extra) links.append(link("airports/" + c.image, `Map at ${c.minutes} min`, true), link(c.live, `Live map at ${c.minutes} min`));
+    li.append(figure, title, note, ...(extra.length ? [cutoffs] : []), links);
     return li;
   }
 
