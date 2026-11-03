@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "airports": [
     {
       "code": "ADL",
@@ -10,8 +10,8 @@
       "no_rival": false,
       "population_study": 1989393,
       "population_closer": 1943526,
-      "population_closer_30": 1912383,
-      "population_closer_60": 1900105,
+      "population_closer_30": 1943526,
+      "population_closer_60": 1943526,
       "cutoffs": [
         {
           "minutes": 0,
@@ -22,14 +22,14 @@
         {
           "minutes": 30,
           "image": "au/ADL-30.png",
-          "population_closer": 1912383,
-          "live": "index.html?country=au&airport=ADL&style=advantage&threshold=30"
+          "population_closer": 1943526,
+          "live": "index.html?country=au&airport=ADL&style=advantage&threshold=30&rivals=SYD,MEL,BNE,PER,OOL,CNS,CBR,HBA,DRW,TSV,NTL,MCY,LST,AVV,BNK,MKY,ROK,PPP,CFS,ABX,ASP,KTA,BME"
         },
         {
           "minutes": 60,
           "image": "au/ADL-60.png",
-          "population_closer": 1900105,
-          "live": "index.html?country=au&airport=ADL&style=advantage&threshold=60"
+          "population_closer": 1943526,
+          "live": "index.html?country=au&airport=ADL&style=advantage&threshold=60&rivals=SYD,MEL,BNE,PER,OOL,CNS,CBR,HBA,DRW,TSV,NTL,MCY,LST,AVV,BNK,MKY,ROK,PPP,CFS,ABX,ASP,KTA,BME"
         }
       ],
       "image": "au/ADL.png",
@@ -47,8 +47,8 @@
       "no_rival": false,
       "population_study": 5152741,
       "population_closer": 3949475,
-      "population_closer_30": 2672234,
-      "population_closer_60": 1592470,
+      "population_closer_30": 3254480,
+      "population_closer_60": 3822370,
       "cutoffs": [
         {
           "minutes": 0,
@@ -59,14 +59,14 @@
         {
           "minutes": 30,
           "image": "au/BNE-30.png",
-          "population_closer": 2672234,
-          "live": "index.html?country=au&airport=BNE&style=advantage&threshold=30"
+          "population_closer": 3254480,
+          "live": "index.html?country=au&airport=BNE&style=advantage&threshold=30&rivals=SYD,MEL,PER,ADL,OOL,CNS,CBR,HBA,DRW,TSV,NTL,MCY,LST,AVV,BNK,MKY,ROK,PPP,CFS,ABX,ASP,KTA,BME"
         },
         {
           "minutes": 60,
           "image": "au/BNE-60.png",
-          "population_closer": 1592470,
-          "live": "index.html?country=au&airport=BNE&style=advantage&threshold=60"
+          "population_closer": 3822370,
+          "live": "index.html?country=au&airport=BNE&style=advantage&threshold=60&rivals=SYD,MEL,PER,ADL,OOL,CNS,CBR,HBA,DRW,TSV,NTL,MCY,LST,AVV,BNK,MKY,ROK,PPP,CFS,ABX,ASP,KTA,BME"
         }
       ],
       "image": "au/BNE.png",
@@ -84,8 +84,8 @@
       "no_rival": false,
       "population_study": 8523325,
       "population_closer": 1164643,
-      "population_closer_30": 1092886,
-      "population_closer_60": 873131,
+      "population_closer_30": 1008849,
+      "population_closer_60": 1020619,
       "cutoffs": [
         {
           "minutes": 0,
@@ -96,14 +96,14 @@
         {
           "minutes": 30,
           "image": "au/CBR-30.png",
-          "population_closer": 1092886,
-          "live": "index.html?country=au&airport=CBR&style=advantage&threshold=30"
+          "population_closer": 1008849,
+          "live": "index.html?country=au&airport=CBR&style=advantage&threshold=30&rivals=SYD,MEL,BNE,PER,ADL,OOL,CNS,HBA,DRW,TSV,NTL,MCY,LST,AVV,BNK,MKY,ROK,PPP,CFS,ABX,ASP,KTA,BME"
         },
         {
           "minutes": 60,
           "image": "au/CBR-60.png",
-          "population_closer": 873131,
-          "live": "index.html?country=au&airport=CBR&style=advantage&threshold=60"
+          "population_closer": 1020619,
+          "live": "index.html?country=au&airport=CBR&style=advantage&threshold=60&rivals=SYD,MEL,BNE,PER,ADL,OOL,CNS,HBA,DRW,TSV,NTL,MCY,LST,AVV,BNK,MKY,ROK,PPP,CFS,ABX,ASP,KTA,BME"
         }
       ],
       "image": "au/CBR.png",
@@ -196,8 +196,8 @@
       "no_rival": false,
       "population_study": 7372339,
       "population_closer": 7120836,
-      "population_closer_30": 7079509,
-      "population_closer_60": 6960959,
+      "population_closer_30": 6393446,
+      "population_closer_60": 6886263,
       "cutoffs": [
         {
           "minutes": 0,
@@ -208,14 +208,14 @@
         {
           "minutes": 30,
           "image": "au/MEL-30.png",
-          "population_closer": 7079509,
-          "live": "index.html?country=au&airport=MEL&style=advantage&threshold=30"
+          "population_closer": 6393446,
+          "live": "index.html?country=au&airport=MEL&style=advantage&threshold=30&rivals=SYD,BNE,PER,ADL,OOL,CNS,CBR,HBA,DRW,TSV,NTL,MCY,LST,AVV,BNK,MKY,ROK,PPP,CFS,ABX,ASP,KTA,BME"
         },
         {
           "minutes": 60,
           "image": "au/MEL-60.png",
-          "population_closer": 6960959,
-          "live": "index.html?country=au&airport=MEL&style=advantage&threshold=60"
+          "population_closer": 6886263,
+          "live": "index.html?country=au&airport=MEL&style=advantage&threshold=60&rivals=SYD,BNE,PER,ADL,OOL,CNS,CBR,HBA,DRW,TSV,NTL,MCY,LST,AVV,BNK,MKY,ROK,PPP,CFS,ABX,ASP,KTA,BME"
         }
       ],
       "image": "au/MEL.png",
@@ -233,8 +233,8 @@
       "no_rival": false,
       "population_study": 5272285,
       "population_closer": 1229209,
-      "population_closer_30": 908837,
-      "population_closer_60": 539733,
+      "population_closer_30": 818909,
+      "population_closer_60": 974600,
       "cutoffs": [
         {
           "minutes": 0,
@@ -245,14 +245,14 @@
         {
           "minutes": 30,
           "image": "au/OOL-30.png",
-          "population_closer": 908837,
-          "live": "index.html?country=au&airport=OOL&style=advantage&threshold=30"
+          "population_closer": 818909,
+          "live": "index.html?country=au&airport=OOL&style=advantage&threshold=30&rivals=SYD,MEL,BNE,PER,ADL,CNS,CBR,HBA,DRW,TSV,NTL,MCY,LST,AVV,BNK,MKY,ROK,PPP,CFS,ABX,ASP,KTA,BME"
         },
         {
           "minutes": 60,
           "image": "au/OOL-60.png",
-          "population_closer": 539733,
-          "live": "index.html?country=au&airport=OOL&style=advantage&threshold=60"
+          "population_closer": 974600,
+          "live": "index.html?country=au&airport=OOL&style=advantage&threshold=60&rivals=SYD,MEL,BNE,PER,ADL,CNS,CBR,HBA,DRW,TSV,NTL,MCY,LST,AVV,BNK,MKY,ROK,PPP,CFS,ABX,ASP,KTA,BME"
         }
       ],
       "image": "au/OOL.png",
@@ -295,8 +295,8 @@
       "no_rival": false,
       "population_study": 8360413,
       "population_closer": 7185274,
-      "population_closer_30": 7004345,
-      "population_closer_60": 6831461,
+      "population_closer_30": 6060426,
+      "population_closer_60": 6214027,
       "cutoffs": [
         {
           "minutes": 0,
@@ -307,14 +307,14 @@
         {
           "minutes": 30,
           "image": "au/SYD-30.png",
-          "population_closer": 7004345,
-          "live": "index.html?country=au&airport=SYD&style=advantage&threshold=30"
+          "population_closer": 6060426,
+          "live": "index.html?country=au&airport=SYD&style=advantage&threshold=30&rivals=MEL,BNE,PER,ADL,OOL,CNS,CBR,HBA,DRW,TSV,NTL,MCY,LST,AVV,BNK,MKY,ROK,PPP,CFS,ABX,ASP,KTA,BME"
         },
         {
           "minutes": 60,
           "image": "au/SYD-60.png",
-          "population_closer": 6831461,
-          "live": "index.html?country=au&airport=SYD&style=advantage&threshold=60"
+          "population_closer": 6214027,
+          "live": "index.html?country=au&airport=SYD&style=advantage&threshold=60&rivals=MEL,BNE,PER,ADL,OOL,CNS,CBR,HBA,DRW,TSV,NTL,MCY,LST,AVV,BNK,MKY,ROK,PPP,CFS,ABX,ASP,KTA,BME"
         }
       ],
       "image": "au/SYD.png",
@@ -345,13 +345,13 @@
           "minutes": 30,
           "image": "au/ABX-30.png",
           "population_closer": 420409,
-          "live": "index.html?country=au&airport=ABX&style=advantage&threshold=30"
+          "live": "index.html?country=au&airport=ABX&style=advantage&threshold=30&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         },
         {
           "minutes": 60,
           "image": "au/ABX-60.png",
           "population_closer": 381523,
-          "live": "index.html?country=au&airport=ABX&style=advantage&threshold=60"
+          "live": "index.html?country=au&airport=ABX&style=advantage&threshold=60&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         }
       ],
       "image": "au/ABX.png",
@@ -407,13 +407,13 @@
           "minutes": 30,
           "image": "au/AVV-30.png",
           "population_closer": 466625,
-          "live": "index.html?country=au&airport=AVV&style=advantage&threshold=30"
+          "live": "index.html?country=au&airport=AVV&style=advantage&threshold=30&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         },
         {
           "minutes": 60,
           "image": "au/AVV-60.png",
           "population_closer": 924,
-          "live": "index.html?country=au&airport=AVV&style=advantage&threshold=60"
+          "live": "index.html?country=au&airport=AVV&style=advantage&threshold=60&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         }
       ],
       "image": "au/AVV.png",
@@ -469,13 +469,13 @@
           "minutes": 30,
           "image": "au/BNK-30.png",
           "population_closer": 415631,
-          "live": "index.html?country=au&airport=BNK&style=advantage&threshold=30"
+          "live": "index.html?country=au&airport=BNK&style=advantage&threshold=30&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         },
         {
           "minutes": 60,
           "image": "au/BNK-60.png",
           "population_closer": 0,
-          "live": "index.html?country=au&airport=BNK&style=advantage&threshold=60"
+          "live": "index.html?country=au&airport=BNK&style=advantage&threshold=60&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         }
       ],
       "image": "au/BNK.png",
@@ -506,13 +506,13 @@
           "minutes": 30,
           "image": "au/CFS-30.png",
           "population_closer": 525896,
-          "live": "index.html?country=au&airport=CFS&style=advantage&threshold=30"
+          "live": "index.html?country=au&airport=CFS&style=advantage&threshold=30&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         },
         {
           "minutes": 60,
           "image": "au/CFS-60.png",
           "population_closer": 488078,
-          "live": "index.html?country=au&airport=CFS&style=advantage&threshold=60"
+          "live": "index.html?country=au&airport=CFS&style=advantage&threshold=60&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         }
       ],
       "image": "au/CFS.png",
@@ -568,13 +568,13 @@
           "minutes": 30,
           "image": "au/LST-30.png",
           "population_closer": 274837,
-          "live": "index.html?country=au&airport=LST&style=advantage&threshold=30"
+          "live": "index.html?country=au&airport=LST&style=advantage&threshold=30&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         },
         {
           "minutes": 60,
           "image": "au/LST-60.png",
           "population_closer": 274837,
-          "live": "index.html?country=au&airport=LST&style=advantage&threshold=60"
+          "live": "index.html?country=au&airport=LST&style=advantage&threshold=60&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         }
       ],
       "image": "au/LST.png",
@@ -605,13 +605,13 @@
           "minutes": 30,
           "image": "au/MCY-30.png",
           "population_closer": 762898,
-          "live": "index.html?country=au&airport=MCY&style=advantage&threshold=30"
+          "live": "index.html?country=au&airport=MCY&style=advantage&threshold=30&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         },
         {
           "minutes": 60,
           "image": "au/MCY-60.png",
           "population_closer": 104968,
-          "live": "index.html?country=au&airport=MCY&style=advantage&threshold=60"
+          "live": "index.html?country=au&airport=MCY&style=advantage&threshold=60&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         }
       ],
       "image": "au/MCY.png",
@@ -642,13 +642,13 @@
           "minutes": 30,
           "image": "au/MKY-30.png",
           "population_closer": 426923,
-          "live": "index.html?country=au&airport=MKY&style=advantage&threshold=30"
+          "live": "index.html?country=au&airport=MKY&style=advantage&threshold=30&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         },
         {
           "minutes": 60,
           "image": "au/MKY-60.png",
           "population_closer": 371090,
-          "live": "index.html?country=au&airport=MKY&style=advantage&threshold=60"
+          "live": "index.html?country=au&airport=MKY&style=advantage&threshold=60&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         }
       ],
       "image": "au/MKY.png",
@@ -679,13 +679,13 @@
           "minutes": 30,
           "image": "au/NTL-30.png",
           "population_closer": 1207348,
-          "live": "index.html?country=au&airport=NTL&style=advantage&threshold=30"
+          "live": "index.html?country=au&airport=NTL&style=advantage&threshold=30&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         },
         {
           "minutes": 60,
           "image": "au/NTL-60.png",
           "population_closer": 1029311,
-          "live": "index.html?country=au&airport=NTL&style=advantage&threshold=60"
+          "live": "index.html?country=au&airport=NTL&style=advantage&threshold=60&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         }
       ],
       "image": "au/NTL.png",
@@ -716,13 +716,13 @@
           "minutes": 30,
           "image": "au/PPP-30.png",
           "population_closer": 561823,
-          "live": "index.html?country=au&airport=PPP&style=advantage&threshold=30"
+          "live": "index.html?country=au&airport=PPP&style=advantage&threshold=30&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         },
         {
           "minutes": 60,
           "image": "au/PPP-60.png",
           "population_closer": 496338,
-          "live": "index.html?country=au&airport=PPP&style=advantage&threshold=60"
+          "live": "index.html?country=au&airport=PPP&style=advantage&threshold=60&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         }
       ],
       "image": "au/PPP.png",
@@ -753,13 +753,13 @@
           "minutes": 30,
           "image": "au/ROK-30.png",
           "population_closer": 457026,
-          "live": "index.html?country=au&airport=ROK&style=advantage&threshold=30"
+          "live": "index.html?country=au&airport=ROK&style=advantage&threshold=30&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         },
         {
           "minutes": 60,
           "image": "au/ROK-60.png",
           "population_closer": 436629,
-          "live": "index.html?country=au&airport=ROK&style=advantage&threshold=60"
+          "live": "index.html?country=au&airport=ROK&style=advantage&threshold=60&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         }
       ],
       "image": "au/ROK.png",
@@ -790,13 +790,13 @@
           "minutes": 30,
           "image": "au/TSV-30.png",
           "population_closer": 433720,
-          "live": "index.html?country=au&airport=TSV&style=advantage&threshold=30"
+          "live": "index.html?country=au&airport=TSV&style=advantage&threshold=30&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         },
         {
           "minutes": 60,
           "image": "au/TSV-60.png",
           "population_closer": 433720,
-          "live": "index.html?country=au&airport=TSV&style=advantage&threshold=60"
+          "live": "index.html?country=au&airport=TSV&style=advantage&threshold=60&rivals=ADL,BNE,CBR,CNS,DRW,HBA,MEL,OOL,PER,SYD"
         }
       ],
       "image": "au/TSV.png",
@@ -814,8 +814,8 @@
       "no_rival": false,
       "population_study": 5149139,
       "population_closer": 3166157,
-      "population_closer_30": 2894526,
-      "population_closer_60": 2515628,
+      "population_closer_30": 3048937,
+      "population_closer_60": 3106438,
       "cutoffs": [
         {
           "minutes": 0,
@@ -826,14 +826,14 @@
         {
           "minutes": 30,
           "image": "ie/DUB-30.png",
-          "population_closer": 2894526,
-          "live": "index.html?country=ie&airport=DUB&style=advantage&threshold=30"
+          "population_closer": 3048937,
+          "live": "index.html?country=ie&airport=DUB&style=advantage&threshold=30&rivals=ORK,SNN,NOC,KIR"
         },
         {
           "minutes": 60,
           "image": "ie/DUB-60.png",
-          "population_closer": 2515628,
-          "live": "index.html?country=ie&airport=DUB&style=advantage&threshold=60"
+          "population_closer": 3106438,
+          "live": "index.html?country=ie&airport=DUB&style=advantage&threshold=60&rivals=ORK,SNN,NOC,KIR"
         }
       ],
       "image": "ie/DUB.png",
@@ -851,8 +851,8 @@
       "no_rival": false,
       "population_study": 5149139,
       "population_closer": 948809,
-      "population_closer_30": 638158,
-      "population_closer_60": 532447,
+      "population_closer_30": 833916,
+      "population_closer_60": 873355,
       "cutoffs": [
         {
           "minutes": 0,
@@ -863,14 +863,14 @@
         {
           "minutes": 30,
           "image": "ie/ORK-30.png",
-          "population_closer": 638158,
-          "live": "index.html?country=ie&airport=ORK&style=advantage&threshold=30"
+          "population_closer": 833916,
+          "live": "index.html?country=ie&airport=ORK&style=advantage&threshold=30&rivals=DUB,SNN,NOC,KIR"
         },
         {
           "minutes": 60,
           "image": "ie/ORK-60.png",
-          "population_closer": 532447,
-          "live": "index.html?country=ie&airport=ORK&style=advantage&threshold=60"
+          "population_closer": 873355,
+          "live": "index.html?country=ie&airport=ORK&style=advantage&threshold=60&rivals=DUB,SNN,NOC,KIR"
         }
       ],
       "image": "ie/ORK.png",
@@ -888,8 +888,8 @@
       "no_rival": false,
       "population_study": 5149139,
       "population_closer": 1034173,
-      "population_closer_30": 809106,
-      "population_closer_60": 602768,
+      "population_closer_30": 737563,
+      "population_closer_60": 811290,
       "cutoffs": [
         {
           "minutes": 0,
@@ -900,14 +900,14 @@
         {
           "minutes": 30,
           "image": "ie/SNN-30.png",
-          "population_closer": 809106,
-          "live": "index.html?country=ie&airport=SNN&style=advantage&threshold=30"
+          "population_closer": 737563,
+          "live": "index.html?country=ie&airport=SNN&style=advantage&threshold=30&rivals=DUB,ORK,NOC,KIR"
         },
         {
           "minutes": 60,
           "image": "ie/SNN-60.png",
-          "population_closer": 602768,
-          "live": "index.html?country=ie&airport=SNN&style=advantage&threshold=60"
+          "population_closer": 811290,
+          "live": "index.html?country=ie&airport=SNN&style=advantage&threshold=60&rivals=DUB,ORK,NOC,KIR"
         }
       ],
       "image": "ie/SNN.png",
@@ -938,13 +938,13 @@
           "minutes": 30,
           "image": "ie/KIR-30.png",
           "population_closer": 151996,
-          "live": "index.html?country=ie&airport=KIR&style=advantage&threshold=30"
+          "live": "index.html?country=ie&airport=KIR&style=advantage&threshold=30&rivals=DUB,ORK,SNN"
         },
         {
           "minutes": 60,
           "image": "ie/KIR-60.png",
           "population_closer": 88333,
-          "live": "index.html?country=ie&airport=KIR&style=advantage&threshold=60"
+          "live": "index.html?country=ie&airport=KIR&style=advantage&threshold=60&rivals=DUB,ORK,SNN"
         }
       ],
       "image": "ie/KIR.png",
@@ -975,13 +975,13 @@
           "minutes": 30,
           "image": "ie/NOC-30.png",
           "population_closer": 376727,
-          "live": "index.html?country=ie&airport=NOC&style=advantage&threshold=30"
+          "live": "index.html?country=ie&airport=NOC&style=advantage&threshold=30&rivals=DUB,ORK,SNN"
         },
         {
           "minutes": 60,
           "image": "ie/NOC-60.png",
           "population_closer": 269723,
-          "live": "index.html?country=ie&airport=NOC&style=advantage&threshold=60"
+          "live": "index.html?country=ie&airport=NOC&style=advantage&threshold=60&rivals=DUB,ORK,SNN"
         }
       ],
       "image": "ie/NOC.png",
@@ -999,8 +999,8 @@
       "no_rival": false,
       "population_study": 3349840,
       "population_closer": 2903220,
-      "population_closer_30": 2858900,
-      "population_closer_60": 2765270,
+      "population_closer_30": 1979100,
+      "population_closer_60": 2085120,
       "cutoffs": [
         {
           "minutes": 0,
@@ -1011,14 +1011,14 @@
         {
           "minutes": 30,
           "image": "nz/AKL-30.png",
-          "population_closer": 2858900,
-          "live": "index.html?country=nz&airport=AKL&style=advantage&threshold=30"
+          "population_closer": 1979100,
+          "live": "index.html?country=nz&airport=AKL&style=advantage&threshold=30&rivals=CHC,WLG,ZQN,DUD,HLZ,TRG,ROT,NPE,NPL,PMR,NSN,BHE,IVC"
         },
         {
           "minutes": 60,
           "image": "nz/AKL-60.png",
-          "population_closer": 2765270,
-          "live": "index.html?country=nz&airport=AKL&style=advantage&threshold=60"
+          "population_closer": 2085120,
+          "live": "index.html?country=nz&airport=AKL&style=advantage&threshold=60&rivals=CHC,WLG,ZQN,DUD,HLZ,TRG,ROT,NPE,NPL,PMR,NSN,BHE,IVC"
         }
       ],
       "image": "nz/AKL.png",
@@ -1036,8 +1036,8 @@
       "no_rival": false,
       "population_study": 1679620,
       "population_closer": 838810,
-      "population_closer_30": 835220,
-      "population_closer_60": 802400,
+      "population_closer_30": 668870,
+      "population_closer_60": 672640,
       "cutoffs": [
         {
           "minutes": 0,
@@ -1048,14 +1048,14 @@
         {
           "minutes": 30,
           "image": "nz/CHC-30.png",
-          "population_closer": 835220,
-          "live": "index.html?country=nz&airport=CHC&style=advantage&threshold=30"
+          "population_closer": 668870,
+          "live": "index.html?country=nz&airport=CHC&style=advantage&threshold=30&rivals=AKL,WLG,ZQN,DUD,HLZ,TRG,ROT,NPE,NPL,PMR,NSN,BHE,IVC"
         },
         {
           "minutes": 60,
           "image": "nz/CHC-60.png",
-          "population_closer": 802400,
-          "live": "index.html?country=nz&airport=CHC&style=advantage&threshold=60"
+          "population_closer": 672640,
+          "live": "index.html?country=nz&airport=CHC&style=advantage&threshold=60&rivals=AKL,WLG,ZQN,DUD,HLZ,TRG,ROT,NPE,NPL,PMR,NSN,BHE,IVC"
         }
       ],
       "image": "nz/CHC.png",
@@ -1073,8 +1073,8 @@
       "no_rival": false,
       "population_study": 1022810,
       "population_closer": 237900,
-      "population_closer_30": 177860,
-      "population_closer_60": 169670,
+      "population_closer_30": 182740,
+      "population_closer_60": 195760,
       "cutoffs": [
         {
           "minutes": 0,
@@ -1085,14 +1085,14 @@
         {
           "minutes": 30,
           "image": "nz/DUD-30.png",
-          "population_closer": 177860,
-          "live": "index.html?country=nz&airport=DUD&style=advantage&threshold=30"
+          "population_closer": 182740,
+          "live": "index.html?country=nz&airport=DUD&style=advantage&threshold=30&rivals=AKL,CHC,WLG,ZQN,HLZ,TRG,ROT,NPE,NPL,PMR,NSN,BHE,IVC"
         },
         {
           "minutes": 60,
           "image": "nz/DUD-60.png",
-          "population_closer": 169670,
-          "live": "index.html?country=nz&airport=DUD&style=advantage&threshold=60"
+          "population_closer": 195760,
+          "live": "index.html?country=nz&airport=DUD&style=advantage&threshold=60&rivals=AKL,CHC,WLG,ZQN,HLZ,TRG,ROT,NPE,NPL,PMR,NSN,BHE,IVC"
         }
       ],
       "image": "nz/DUD.png",
@@ -1110,8 +1110,8 @@
       "no_rival": false,
       "population_study": 2329810,
       "population_closer": 1025410,
-      "population_closer_30": 997830,
-      "population_closer_60": 910130,
+      "population_closer_30": 548680,
+      "population_closer_60": 574730,
       "cutoffs": [
         {
           "minutes": 0,
@@ -1122,14 +1122,14 @@
         {
           "minutes": 30,
           "image": "nz/WLG-30.png",
-          "population_closer": 997830,
-          "live": "index.html?country=nz&airport=WLG&style=advantage&threshold=30"
+          "population_closer": 548680,
+          "live": "index.html?country=nz&airport=WLG&style=advantage&threshold=30&rivals=AKL,CHC,ZQN,DUD,HLZ,TRG,ROT,NPE,NPL,PMR,NSN,BHE,IVC"
         },
         {
           "minutes": 60,
           "image": "nz/WLG-60.png",
-          "population_closer": 910130,
-          "live": "index.html?country=nz&airport=WLG&style=advantage&threshold=60"
+          "population_closer": 574730,
+          "live": "index.html?country=nz&airport=WLG&style=advantage&threshold=60&rivals=AKL,CHC,ZQN,DUD,HLZ,TRG,ROT,NPE,NPL,PMR,NSN,BHE,IVC"
         }
       ],
       "image": "nz/WLG.png",
@@ -1147,8 +1147,8 @@
       "no_rival": false,
       "population_study": 1024510,
       "population_closer": 125180,
-      "population_closer_30": 92920,
-      "population_closer_60": 72820,
+      "population_closer_30": 86680,
+      "population_closer_60": 90330,
       "cutoffs": [
         {
           "minutes": 0,
@@ -1159,14 +1159,14 @@
         {
           "minutes": 30,
           "image": "nz/ZQN-30.png",
-          "population_closer": 92920,
-          "live": "index.html?country=nz&airport=ZQN&style=advantage&threshold=30"
+          "population_closer": 86680,
+          "live": "index.html?country=nz&airport=ZQN&style=advantage&threshold=30&rivals=AKL,CHC,WLG,DUD,HLZ,TRG,ROT,NPE,NPL,PMR,NSN,BHE,IVC"
         },
         {
           "minutes": 60,
           "image": "nz/ZQN-60.png",
-          "population_closer": 72820,
-          "live": "index.html?country=nz&airport=ZQN&style=advantage&threshold=60"
+          "population_closer": 90330,
+          "live": "index.html?country=nz&airport=ZQN&style=advantage&threshold=60&rivals=AKL,CHC,WLG,DUD,HLZ,TRG,ROT,NPE,NPL,PMR,NSN,BHE,IVC"
         }
       ],
       "image": "nz/ZQN.png",
@@ -1197,13 +1197,13 @@
           "minutes": 30,
           "image": "nz/BHE-30.png",
           "population_closer": 174460,
-          "live": "index.html?country=nz&airport=BHE&style=advantage&threshold=30"
+          "live": "index.html?country=nz&airport=BHE&style=advantage&threshold=30&rivals=AKL,CHC,DUD,WLG,ZQN"
         },
         {
           "minutes": 60,
           "image": "nz/BHE-60.png",
           "population_closer": 163740,
-          "live": "index.html?country=nz&airport=BHE&style=advantage&threshold=60"
+          "live": "index.html?country=nz&airport=BHE&style=advantage&threshold=60&rivals=AKL,CHC,DUD,WLG,ZQN"
         }
       ],
       "image": "nz/BHE.png",
@@ -1234,13 +1234,13 @@
           "minutes": 30,
           "image": "nz/HLZ-30.png",
           "population_closer": 956760,
-          "live": "index.html?country=nz&airport=HLZ&style=advantage&threshold=30"
+          "live": "index.html?country=nz&airport=HLZ&style=advantage&threshold=30&rivals=AKL,CHC,DUD,WLG,ZQN"
         },
         {
           "minutes": 60,
           "image": "nz/HLZ-60.png",
           "population_closer": 808400,
-          "live": "index.html?country=nz&airport=HLZ&style=advantage&threshold=60"
+          "live": "index.html?country=nz&airport=HLZ&style=advantage&threshold=60&rivals=AKL,CHC,DUD,WLG,ZQN"
         }
       ],
       "image": "nz/HLZ.png",
@@ -1271,13 +1271,13 @@
           "minutes": 30,
           "image": "nz/IVC-30.png",
           "population_closer": 93660,
-          "live": "index.html?country=nz&airport=IVC&style=advantage&threshold=30"
+          "live": "index.html?country=nz&airport=IVC&style=advantage&threshold=30&rivals=AKL,CHC,DUD,WLG,ZQN"
         },
         {
           "minutes": 60,
           "image": "nz/IVC-60.png",
           "population_closer": 76990,
-          "live": "index.html?country=nz&airport=IVC&style=advantage&threshold=60"
+          "live": "index.html?country=nz&airport=IVC&style=advantage&threshold=60&rivals=AKL,CHC,DUD,WLG,ZQN"
         }
       ],
       "image": "nz/IVC.png",
@@ -1308,13 +1308,13 @@
           "minutes": 30,
           "image": "nz/NPE-30.png",
           "population_closer": 299110,
-          "live": "index.html?country=nz&airport=NPE&style=advantage&threshold=30"
+          "live": "index.html?country=nz&airport=NPE&style=advantage&threshold=30&rivals=AKL,CHC,DUD,WLG,ZQN"
         },
         {
           "minutes": 60,
           "image": "nz/NPE-60.png",
           "population_closer": 271090,
-          "live": "index.html?country=nz&airport=NPE&style=advantage&threshold=60"
+          "live": "index.html?country=nz&airport=NPE&style=advantage&threshold=60&rivals=AKL,CHC,DUD,WLG,ZQN"
         }
       ],
       "image": "nz/NPE.png",
@@ -1345,13 +1345,13 @@
           "minutes": 30,
           "image": "nz/NPL-30.png",
           "population_closer": 191430,
-          "live": "index.html?country=nz&airport=NPL&style=advantage&threshold=30"
+          "live": "index.html?country=nz&airport=NPL&style=advantage&threshold=30&rivals=AKL,CHC,DUD,WLG,ZQN"
         },
         {
           "minutes": 60,
           "image": "nz/NPL-60.png",
           "population_closer": 134280,
-          "live": "index.html?country=nz&airport=NPL&style=advantage&threshold=60"
+          "live": "index.html?country=nz&airport=NPL&style=advantage&threshold=60&rivals=AKL,CHC,DUD,WLG,ZQN"
         }
       ],
       "image": "nz/NPL.png",
@@ -1382,13 +1382,13 @@
           "minutes": 30,
           "image": "nz/NSN-30.png",
           "population_closer": 173610,
-          "live": "index.html?country=nz&airport=NSN&style=advantage&threshold=30"
+          "live": "index.html?country=nz&airport=NSN&style=advantage&threshold=30&rivals=AKL,CHC,DUD,WLG,ZQN"
         },
         {
           "minutes": 60,
           "image": "nz/NSN-60.png",
           "population_closer": 170290,
-          "live": "index.html?country=nz&airport=NSN&style=advantage&threshold=60"
+          "live": "index.html?country=nz&airport=NSN&style=advantage&threshold=60&rivals=AKL,CHC,DUD,WLG,ZQN"
         }
       ],
       "image": "nz/NSN.png",
@@ -1419,13 +1419,13 @@
           "minutes": 30,
           "image": "nz/PMR-30.png",
           "population_closer": 617100,
-          "live": "index.html?country=nz&airport=PMR&style=advantage&threshold=30"
+          "live": "index.html?country=nz&airport=PMR&style=advantage&threshold=30&rivals=AKL,CHC,DUD,WLG,ZQN"
         },
         {
           "minutes": 60,
           "image": "nz/PMR-60.png",
           "population_closer": 577060,
-          "live": "index.html?country=nz&airport=PMR&style=advantage&threshold=60"
+          "live": "index.html?country=nz&airport=PMR&style=advantage&threshold=60&rivals=AKL,CHC,DUD,WLG,ZQN"
         }
       ],
       "image": "nz/PMR.png",
@@ -1456,13 +1456,13 @@
           "minutes": 30,
           "image": "nz/ROT-30.png",
           "population_closer": 755290,
-          "live": "index.html?country=nz&airport=ROT&style=advantage&threshold=30"
+          "live": "index.html?country=nz&airport=ROT&style=advantage&threshold=30&rivals=AKL,CHC,DUD,WLG,ZQN"
         },
         {
           "minutes": 60,
           "image": "nz/ROT-60.png",
           "population_closer": 510710,
-          "live": "index.html?country=nz&airport=ROT&style=advantage&threshold=60"
+          "live": "index.html?country=nz&airport=ROT&style=advantage&threshold=60&rivals=AKL,CHC,DUD,WLG,ZQN"
         }
       ],
       "image": "nz/ROT.png",
@@ -1493,13 +1493,13 @@
           "minutes": 30,
           "image": "nz/TRG-30.png",
           "population_closer": 529900,
-          "live": "index.html?country=nz&airport=TRG&style=advantage&threshold=30"
+          "live": "index.html?country=nz&airport=TRG&style=advantage&threshold=30&rivals=AKL,CHC,DUD,WLG,ZQN"
         },
         {
           "minutes": 60,
           "image": "nz/TRG-60.png",
           "population_closer": 492610,
-          "live": "index.html?country=nz&airport=TRG&style=advantage&threshold=60"
+          "live": "index.html?country=nz&airport=TRG&style=advantage&threshold=60&rivals=AKL,CHC,DUD,WLG,ZQN"
         }
       ],
       "image": "nz/TRG.png",
@@ -1508,5 +1508,748 @@
       "bands_csv": "nz/TRG-bands.csv",
       "live": "index.html?country=nz&airport=TRG&style=advantage"
     }
-  ]
+  ],
+  "countries": {
+    "NZ": {
+      "country": "NZ",
+      "name": "New Zealand",
+      "contested_image": "nz/country-contested.png",
+      "contested_areas_csv": "nz/country-contested-areas.csv",
+      "cutoffs": [
+        {
+          "minutes": 0,
+          "image": "nz/country-0.png",
+          "areas_csv": "nz/country-0-areas.csv",
+          "airports": [
+            {
+              "code": "AKL",
+              "major": true,
+              "population": 1921330
+            },
+            {
+              "code": "CHC",
+              "major": true,
+              "population": 667980
+            },
+            {
+              "code": "WLG",
+              "major": true,
+              "population": 512680
+            },
+            {
+              "code": "DUD",
+              "major": true,
+              "population": 181350
+            },
+            {
+              "code": "ZQN",
+              "major": true,
+              "population": 83790
+            },
+            {
+              "code": "HLZ",
+              "major": false,
+              "population": 410780
+            },
+            {
+              "code": "PMR",
+              "major": false,
+              "population": 282120
+            },
+            {
+              "code": "TRG",
+              "major": false,
+              "population": 276360
+            },
+            {
+              "code": "NPE",
+              "major": false,
+              "population": 234060
+            },
+            {
+              "code": "ROT",
+              "major": false,
+              "population": 155100
+            },
+            {
+              "code": "NPL",
+              "major": false,
+              "population": 130220
+            },
+            {
+              "code": "NSN",
+              "major": false,
+              "population": 120730
+            },
+            {
+              "code": "IVC",
+              "major": false,
+              "population": 97940
+            },
+            {
+              "code": "BHE",
+              "major": false,
+              "population": 56080
+            }
+          ],
+          "population_regional": 1763390
+        },
+        {
+          "minutes": 30,
+          "image": "nz/country-30.png",
+          "areas_csv": "nz/country-30-areas.csv",
+          "airports": [
+            {
+              "code": "AKL",
+              "major": true,
+              "population": 1979100
+            },
+            {
+              "code": "CHC",
+              "major": true,
+              "population": 668870
+            },
+            {
+              "code": "WLG",
+              "major": true,
+              "population": 548680
+            },
+            {
+              "code": "DUD",
+              "major": true,
+              "population": 182740
+            },
+            {
+              "code": "ZQN",
+              "major": true,
+              "population": 86680
+            },
+            {
+              "code": "HLZ",
+              "major": false,
+              "population": 353520
+            },
+            {
+              "code": "PMR",
+              "major": false,
+              "population": 246120
+            },
+            {
+              "code": "TRG",
+              "major": false,
+              "population": 275850
+            },
+            {
+              "code": "NPE",
+              "major": false,
+              "population": 234060
+            },
+            {
+              "code": "ROT",
+              "major": false,
+              "population": 155100
+            },
+            {
+              "code": "NPL",
+              "major": false,
+              "population": 130220
+            },
+            {
+              "code": "NSN",
+              "major": false,
+              "population": 119840
+            },
+            {
+              "code": "IVC",
+              "major": false,
+              "population": 93660
+            },
+            {
+              "code": "BHE",
+              "major": false,
+              "population": 56080
+            }
+          ],
+          "population_regional": 1664450
+        },
+        {
+          "minutes": 60,
+          "image": "nz/country-60.png",
+          "areas_csv": "nz/country-60-areas.csv",
+          "airports": [
+            {
+              "code": "AKL",
+              "major": true,
+              "population": 2085120
+            },
+            {
+              "code": "CHC",
+              "major": true,
+              "population": 672640
+            },
+            {
+              "code": "WLG",
+              "major": true,
+              "population": 574730
+            },
+            {
+              "code": "DUD",
+              "major": true,
+              "population": 195760
+            },
+            {
+              "code": "ZQN",
+              "major": true,
+              "population": 90330
+            },
+            {
+              "code": "HLZ",
+              "major": false,
+              "population": 261060
+            },
+            {
+              "code": "PMR",
+              "major": false,
+              "population": 221930
+            },
+            {
+              "code": "TRG",
+              "major": false,
+              "population": 262290
+            },
+            {
+              "code": "NPE",
+              "major": false,
+              "population": 234060
+            },
+            {
+              "code": "ROT",
+              "major": false,
+              "population": 155100
+            },
+            {
+              "code": "NPL",
+              "major": false,
+              "population": 130220
+            },
+            {
+              "code": "NSN",
+              "major": false,
+              "population": 118360
+            },
+            {
+              "code": "IVC",
+              "major": false,
+              "population": 76990
+            },
+            {
+              "code": "BHE",
+              "major": false,
+              "population": 51930
+            }
+          ],
+          "population_regional": 1511940
+        }
+      ]
+    },
+    "AU": {
+      "country": "AU",
+      "name": "Australia",
+      "contested_image": "au/country-contested.png",
+      "contested_areas_csv": "au/country-contested-areas.csv",
+      "cutoffs": [
+        {
+          "minutes": 0,
+          "image": "au/country-0.png",
+          "areas_csv": "au/country-0-areas.csv",
+          "airports": [
+            {
+              "code": "MEL",
+              "major": true,
+              "population": 5900810
+            },
+            {
+              "code": "SYD",
+              "major": true,
+              "population": 5849420
+            },
+            {
+              "code": "BNE",
+              "major": true,
+              "population": 3139878
+            },
+            {
+              "code": "PER",
+              "major": true,
+              "population": 2863496
+            },
+            {
+              "code": "ADL",
+              "major": true,
+              "population": 1921737
+            },
+            {
+              "code": "CBR",
+              "major": true,
+              "population": 932166
+            },
+            {
+              "code": "OOL",
+              "major": true,
+              "population": 784070
+            },
+            {
+              "code": "HBA",
+              "major": true,
+              "population": 297283
+            },
+            {
+              "code": "CNS",
+              "major": true,
+              "population": 265961
+            },
+            {
+              "code": "DRW",
+              "major": true,
+              "population": 191964
+            },
+            {
+              "code": "NTL",
+              "major": false,
+              "population": 1288824
+            },
+            {
+              "code": "AVV",
+              "major": false,
+              "population": 893741
+            },
+            {
+              "code": "MCY",
+              "major": false,
+              "population": 768318
+            },
+            {
+              "code": "ABX",
+              "major": false,
+              "population": 535760
+            },
+            {
+              "code": "CFS",
+              "major": false,
+              "population": 383638
+            },
+            {
+              "code": "ROK",
+              "major": false,
+              "population": 282549
+            },
+            {
+              "code": "LST",
+              "major": false,
+              "population": 276407
+            },
+            {
+              "code": "TSV",
+              "major": false,
+              "population": 259629
+            },
+            {
+              "code": "BNK",
+              "major": false,
+              "population": 190530
+            },
+            {
+              "code": "MKY",
+              "major": false,
+              "population": 134464
+            },
+            {
+              "code": "KTA",
+              "major": false,
+              "population": 51064
+            },
+            {
+              "code": "PPP",
+              "major": false,
+              "population": 50159
+            },
+            {
+              "code": "ASP",
+              "major": false,
+              "population": 40035
+            },
+            {
+              "code": "BME",
+              "major": false,
+              "population": 27856
+            }
+          ],
+          "population_regional": 5182974
+        },
+        {
+          "minutes": 30,
+          "image": "au/country-30.png",
+          "areas_csv": "au/country-30-areas.csv",
+          "airports": [
+            {
+              "code": "MEL",
+              "major": true,
+              "population": 6393446
+            },
+            {
+              "code": "SYD",
+              "major": true,
+              "population": 6060426
+            },
+            {
+              "code": "BNE",
+              "major": true,
+              "population": 3261563
+            },
+            {
+              "code": "PER",
+              "major": true,
+              "population": 2863496
+            },
+            {
+              "code": "ADL",
+              "major": true,
+              "population": 1943526
+            },
+            {
+              "code": "CBR",
+              "major": true,
+              "population": 1008849
+            },
+            {
+              "code": "OOL",
+              "major": true,
+              "population": 818909
+            },
+            {
+              "code": "HBA",
+              "major": true,
+              "population": 299777
+            },
+            {
+              "code": "CNS",
+              "major": true,
+              "population": 278828
+            },
+            {
+              "code": "DRW",
+              "major": true,
+              "population": 191964
+            },
+            {
+              "code": "NTL",
+              "major": false,
+              "population": 1029177
+            },
+            {
+              "code": "AVV",
+              "major": false,
+              "population": 466625
+            },
+            {
+              "code": "MCY",
+              "major": false,
+              "population": 658987
+            },
+            {
+              "code": "ABX",
+              "major": false,
+              "population": 420409
+            },
+            {
+              "code": "CFS",
+              "major": false,
+              "population": 378367
+            },
+            {
+              "code": "ROK",
+              "major": false,
+              "population": 275466
+            },
+            {
+              "code": "LST",
+              "major": false,
+              "population": 273913
+            },
+            {
+              "code": "TSV",
+              "major": false,
+              "population": 246762
+            },
+            {
+              "code": "BNK",
+              "major": false,
+              "population": 155691
+            },
+            {
+              "code": "MKY",
+              "major": false,
+              "population": 134464
+            },
+            {
+              "code": "KTA",
+              "major": false,
+              "population": 51064
+            },
+            {
+              "code": "PPP",
+              "major": false,
+              "population": 50159
+            },
+            {
+              "code": "ASP",
+              "major": false,
+              "population": 40035
+            },
+            {
+              "code": "BME",
+              "major": false,
+              "population": 27856
+            }
+          ],
+          "population_regional": 4208975
+        },
+        {
+          "minutes": 60,
+          "image": "au/country-60.png",
+          "areas_csv": "au/country-60-areas.csv",
+          "airports": [
+            {
+              "code": "MEL",
+              "major": true,
+              "population": 6886263
+            },
+            {
+              "code": "SYD",
+              "major": true,
+              "population": 6214027
+            },
+            {
+              "code": "BNE",
+              "major": true,
+              "population": 3829453
+            },
+            {
+              "code": "PER",
+              "major": true,
+              "population": 2863496
+            },
+            {
+              "code": "ADL",
+              "major": true,
+              "population": 1943526
+            },
+            {
+              "code": "CBR",
+              "major": true,
+              "population": 1020619
+            },
+            {
+              "code": "OOL",
+              "major": true,
+              "population": 974600
+            },
+            {
+              "code": "HBA",
+              "major": true,
+              "population": 299777
+            },
+            {
+              "code": "CNS",
+              "major": true,
+              "population": 278828
+            },
+            {
+              "code": "DRW",
+              "major": true,
+              "population": 191964
+            },
+            {
+              "code": "NTL",
+              "major": false,
+              "population": 875576
+            },
+            {
+              "code": "AVV",
+              "major": false,
+              "population": 924
+            },
+            {
+              "code": "MCY",
+              "major": false,
+              "population": 104968
+            },
+            {
+              "code": "ABX",
+              "major": false,
+              "population": 381523
+            },
+            {
+              "code": "CFS",
+              "major": false,
+              "population": 370347
+            },
+            {
+              "code": "ROK",
+              "major": false,
+              "population": 269615
+            },
+            {
+              "code": "LST",
+              "major": false,
+              "population": 273913
+            },
+            {
+              "code": "TSV",
+              "major": false,
+              "population": 246762
+            },
+            {
+              "code": "BNK",
+              "major": false,
+              "population": 0
+            },
+            {
+              "code": "MKY",
+              "major": false,
+              "population": 134464
+            },
+            {
+              "code": "KTA",
+              "major": false,
+              "population": 51064
+            },
+            {
+              "code": "PPP",
+              "major": false,
+              "population": 50159
+            },
+            {
+              "code": "ASP",
+              "major": false,
+              "population": 40035
+            },
+            {
+              "code": "BME",
+              "major": false,
+              "population": 27856
+            }
+          ],
+          "population_regional": 2827206
+        }
+      ]
+    },
+    "IE": {
+      "country": "IE",
+      "name": "Ireland",
+      "contested_image": "ie/country-contested.png",
+      "contested_areas_csv": "ie/country-contested-areas.csv",
+      "cutoffs": [
+        {
+          "minutes": 0,
+          "image": "ie/country-0.png",
+          "areas_csv": "ie/country-0-areas.csv",
+          "airports": [
+            {
+              "code": "DUB",
+              "major": true,
+              "population": 2880314
+            },
+            {
+              "code": "ORK",
+              "major": true,
+              "population": 807218
+            },
+            {
+              "code": "SNN",
+              "major": true,
+              "population": 634781
+            },
+            {
+              "code": "NOC",
+              "major": false,
+              "population": 623896
+            },
+            {
+              "code": "KIR",
+              "major": false,
+              "population": 202930
+            }
+          ],
+          "population_regional": 826826
+        },
+        {
+          "minutes": 30,
+          "image": "ie/country-30.png",
+          "areas_csv": "ie/country-30-areas.csv",
+          "airports": [
+            {
+              "code": "DUB",
+              "major": true,
+              "population": 3048937
+            },
+            {
+              "code": "ORK",
+              "major": true,
+              "population": 833916
+            },
+            {
+              "code": "SNN",
+              "major": true,
+              "population": 737563
+            },
+            {
+              "code": "NOC",
+              "major": false,
+              "population": 376727
+            },
+            {
+              "code": "KIR",
+              "major": false,
+              "population": 151996
+            }
+          ],
+          "population_regional": 528723
+        },
+        {
+          "minutes": 60,
+          "image": "ie/country-60.png",
+          "areas_csv": "ie/country-60-areas.csv",
+          "airports": [
+            {
+              "code": "DUB",
+              "major": true,
+              "population": 3106438
+            },
+            {
+              "code": "ORK",
+              "major": true,
+              "population": 873355
+            },
+            {
+              "code": "SNN",
+              "major": true,
+              "population": 811290
+            },
+            {
+              "code": "NOC",
+              "major": false,
+              "population": 269723
+            },
+            {
+              "code": "KIR",
+              "major": false,
+              "population": 88333
+            }
+          ],
+          "population_regional": 358056
+        }
+      ]
+    }
+  }
 }

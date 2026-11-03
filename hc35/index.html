@@ -31,7 +31,7 @@
     .series-option:hover { background: #F6F0E6; }
     .series-option input { flex: 0 0 auto; margin: 2px 0 0; accent-color: #0E6B6B; }
     .series-option.disabled { color: #8A8781; cursor: default; }
-    select { min-width: 0; max-width: 100%; padding: 7px; border: 1px solid #DCD6CB; background: white; color: inherit; font: inherit; }
+    select, input[type="date"] { min-width: 0; max-width: 100%; padding: 7px; border: 1px solid #DCD6CB; background: white; color: inherit; font: inherit; }
     .chart-area { flex: 1 1 auto; min-height: 220px; min-width: 0; position: relative; background: transparent; }
     #chart { position: absolute; inset: 0; width: 100%; height: 100%; }
     #preview { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: white; z-index: 1; }
@@ -54,12 +54,13 @@
     <header><h1 id="title">Altitude chart</h1><p id="note"></p></header>
     <div class="controls" id="controls" hidden>
       <span id="view-control"><label for="view">Chart view</label> <select id="view"></select></span>
+      <span id="index-control" hidden></span>
       <span id="picks" hidden></span>
       <label id="real-control" hidden><input type="checkbox" id="real"> Today's dollars</label>
       <span id="range-control" hidden><label for="range" id="range-label">Axis range</label> <select id="range"></select></span>
     </div>
     <section class="chart-area" aria-label="Interactive chart">
-      <img id="preview" width="1200" height="750" src="hc35.png" alt="Residential mortgages Reserve Bank of New Zealand (RBNZ): Opening position, Interest charged, and Scheduled repayments (All lending)" fetchpriority="high" decoding="async">
+      <img id="preview" width="1200" height="750" src="hc35.png" alt="Residential mortgages Reserve Bank of New Zealand (RBNZ) · C35 and C30: Opening position, Interest charged, and Scheduled repayments (All lending)" fetchpriority="high" decoding="async">
       <div id="chart"></div><div id="status" role="status" aria-live="polite">Loading chart…</div>
     </section>
     <footer>
@@ -236,6 +237,20 @@
       }
 
       const isPickDefault = chosen => String(chosen) === String(manifest.pick.default || [0]);
+      const pickSlug = i => manifest.views[i].id || manifest.views[i].spec.replace(/\.json$/i, "").split("/").pop();
+      // Index date, or null while the chart shows plain values.
+      let indexDate = null;
+      let picked;
+
+      function loadIndex() {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement("script");
+          script.src = assetUrl("index_compare.js");
+          script.onload = resolve;
+          script.onerror = () => reject(new Error("Index helper is unavailable"));
+          document.head.append(script);
+        });
+      }
 
       function loadPicks(chosen) {
         return loadSpec(async signal => {
@@ -246,26 +261,48 @@
             if (!files.has(view.spec)) files.set(view.spec, readJson(view.spec, signal));
             return AltitudePick.viewSpec(await files.get(view.spec), view);
           }));
-          if (specs.length === 1) return specs[0];
+          if (specs.length === 1 && !indexDate) return specs[0];
           await loadPick();
-          return AltitudePick.combine(specs, manifest.pick, chosen, manifest.views.map(view => view.label));
+          return AltitudePick.combine(specs, manifest.pick, chosen, manifest.views.map(view => view.label), indexDate);
         }, isPickDefault(chosen));
       }
 
       // pick.js builds the boxes (see AltitudePick.setup).
       async function setupPicks(requested) {
         await loadPick();
-        const chosen = AltitudePick.setup(document.getElementById("picks"), manifest, requested, (picks, slugs) => {
+        if (manifest.index) {
+          document.getElementById("controls").dataset.keepOpen = "true";
+          await loadIndex();
+          indexDate = AltitudeIndex.setup(document.getElementById("index-control"), manifest.index,
+            new URLSearchParams(location.search).get("compare_from"), value => {
+              const turnedOn = value && !indexDate;
+              indexDate = value;
+              const url = new URL(location.href);
+              if (value) url.searchParams.set("compare_from", value);
+              else url.searchParams.delete("compare_from");
+              history.replaceState(null, "", url);
+              // A single currency becomes the index's default set; picks rebuild for the new axis rule.
+              const defaults = manifest.views.map((view, i) => (manifest.index.default || []).includes(view.label) ? pickSlug(i) : null).filter(Boolean);
+              buildPicks(turnedOn && picked.length < 2 && defaults.length ? defaults : picked.map(pickSlug));
+            });
+        }
+        document.getElementById("view-control").hidden = true;
+        document.getElementById("index-control").hidden = !manifest.index;
+        document.getElementById("picks").hidden = false;
+        document.getElementById("controls").hidden = false;
+        return buildPicks(requested);
+      }
+
+      function buildPicks(requested) {
+        picked = AltitudePick.setup(document.getElementById("picks"), manifest, requested, (picks, slugs) => {
+          picked = picks;
           const url = new URL(location.href);
           if (isPickDefault(picks)) url.searchParams.delete("series");
           else url.searchParams.set("series", slugs.join(","));
           history.replaceState(null, "", url);
           loadPicks(picks);
-        });
-        document.getElementById("view-control").hidden = true;
-        document.getElementById("picks").hidden = false;
-        document.getElementById("controls").hidden = false;
-        return loadPicks(chosen);
+        }, Boolean(indexDate));
+        return loadPicks(picked);
       }
 
       // A manifest with a real block ships cpi.json; the toggle stays in the link as ?real=1.

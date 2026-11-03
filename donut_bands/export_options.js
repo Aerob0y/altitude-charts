@@ -1,6 +1,43 @@
 (() => {
   const slug = text => String(text).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const escapeHtml = text => String(text).replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"})[c]);
+  const exportPresets = {
+    "1600,900": {margin: {t: 110, l: 70, r: 70, b: 140}, fontScale: 1, sourceSize: 12},
+    "1200,750": {margin: {t: 105, l: 65, r: 65, b: 130}, fontScale: 0.95, sourceSize: 11},
+    "800,600": {margin: {t: 95, l: 52, r: 52, b: 115}, fontScale: 0.9, sourceSize: 11, scale: 2},
+    "900,600": {margin: {t: 95, l: 55, r: 55, b: 115}, fontScale: 0.9, sourceSize: 11, scale: 2},
+    "1200,1200": {margin: {t: 115, l: 70, r: 70, b: 145}, fontScale: 1, sourceSize: 12, scale: 2},
+    "1200,627": {margin: {t: 95, l: 65, r: 65, b: 120}, fontScale: 0.9, sourceSize: 11, scale: 2}
+  };
+  const scaleFont = (font, scale) => font && font.size
+    ? {...font, size: Math.max(11, font.size * scale)}
+    : font;
+
+  function scaleLayoutFonts(layout, scale) {
+    layout.font = scaleFont(layout.font, scale);
+    if (layout.title && typeof layout.title === "object") layout.title.font = scaleFont(layout.title.font, scale);
+    if (layout.legend) layout.legend.font = scaleFont(layout.legend.font || layout.font, scale);
+    for (const key of Object.keys(layout).filter(key => /^[xy]axis\d*$/.test(key))) {
+      const axis = layout[key];
+      axis.tickfont = scaleFont(axis.tickfont || layout.font, scale);
+      if (axis.title && typeof axis.title === "object") axis.title.font = scaleFont(axis.title.font || layout.font, scale);
+    }
+    layout.annotations = (layout.annotations || []).map(annotation => ({
+      ...annotation,
+      font: scaleFont(annotation.font || layout.font, scale)
+    }));
+  }
+
+  const wrapSubtitle = (text, limit) => text.replace(/(<span[^>]*>)([^<]*)(<\/span>)/, (all, open, body, close) => {
+    const lines = [];
+    let line = "";
+    for (const word of body.split(/\s+/)) {
+      if (line && line.length + word.length + 1 > limit) { lines.push(line); line = ""; }
+      line += (line ? " " : "") + word;
+    }
+    if (line) lines.push(line);
+    return open + lines.join(`${close}<br>${open}`) + close;
+  });
 
   function setup(container, chart, manifest, fallback) {
     const details = document.createElement("details");
@@ -8,7 +45,7 @@
     details.innerHTML = `<summary>Download image</summary>
       <form class="image-options">
         <label>Format <select name="format"><option value="png">PNG</option><option value="svg">SVG</option></select></label>
-        <label>Size <select name="size"><option value="1600,900" selected>1600 × 900 (slides and posts)</option><option value="1200,750">1200 × 750 (chart library)</option><option value="custom">Custom</option></select></label>
+        <label>Size <select name="size"><option value="1600,900" selected>1600 × 900 (slides and posts)</option><option value="1200,750">1200 × 750 (chart library)</option><option value="800,600">Article: 800 × 600 (4:3)</option><option value="900,600">Article wide: 900 × 600 (3:2)</option><option value="1200,1200">LinkedIn square: 1200 × 1200</option><option value="1200,627">LinkedIn landscape: 1200 × 627</option><option value="custom">Custom</option></select></label>
         <span class="image-custom" hidden><label>Width <input name="width" type="number" min="100" max="8000" step="1" value="1600" required></label><label>Height <input name="height" type="number" min="100" max="8000" step="1" value="900" required></label></span>
         <label class="image-sharpness">Sharpness <select name="scale"><option value="1">1×</option><option value="2" selected>2×</option><option value="3">3×</option></select></label>
         <label class="image-clean"><input name="clean" type="checkbox" checked> Clean (hide chart buttons)</label>
@@ -54,7 +91,8 @@
       const [width, height] = field("size").value === "custom"
         ? [Number(field("width").value), Number(field("height").value)] : field("size").value.split(",").map(Number);
       const format = field("format").value;
-      const scale = format === "png" ? Number(field("scale").value) : 1;
+      const preset = exportPresets[field("size").value];
+      const scale = format === "png" ? (preset?.scale || Number(field("scale").value)) : 1;
       const save = form.querySelector("button");
       save.disabled = true;
       message.textContent = "Preparing image…";
@@ -70,9 +108,13 @@
         // Charts are transparent on the page; saved images are white.
         layout.paper_bgcolor = layout.plot_bgcolor = "#FFFFFF";
         if (chart._altitudeExportTitle) layout.title = structuredClone(chart._altitudeExportTitle);
+        // Long subtitles run off the right edge of the narrower presets.
+        if (typeof layout.title?.text === "string") layout.title.text = wrapSubtitle(layout.title.text, Math.floor((width - 120) / 7));
         if (chart._altitudeExportSelector && layout.xaxis) layout.xaxis.rangeselector = structuredClone(chart._altitudeExportSelector);
-        layout.margin = {...layout.margin, t: Math.max(layout.margin?.t || 0, 110)};
-        layout.margin = {...layout.margin, l: Math.max(layout.margin?.l || 0, 70), r: Math.max(layout.margin?.r || 0, 70), b: Math.max(layout.margin?.b || 0, 140)};
+        const margins = preset?.margin || {t: 110, l: 70, r: 70, b: 140};
+        layout.margin = {...layout.margin, t: Math.max(layout.margin?.t || 0, margins.t)};
+        layout.margin = {...layout.margin, l: Math.max(layout.margin?.l || 0, margins.l), r: Math.max(layout.margin?.r || 0, margins.r), b: Math.max(layout.margin?.b || 0, margins.b)};
+        scaleLayoutFonts(layout, preset?.fontScale || 1);
         for (const key of Object.keys(chart._fullLayout).filter(key => /^[xy]axis\d*$/.test(key))) {
           if (!layout[key]) continue;
           layout[key].range = [...chart._fullLayout[key].range];
@@ -81,7 +123,7 @@
           if (field("clean").checked && layout[key].rangeslider) layout[key].rangeslider.visible = false;
         }
         // Pinned a fixed distance above the image's bottom edge, so it sits the same at every image size.
-        layout.annotations = [...(layout.annotations || []), {text: "Source: " + escapeHtml(manifest.source || "not recorded"), xref: "paper", yref: "paper", x: 0, y: 0, yshift: -(layout.margin.b - 28), xanchor: "left", yanchor: "top", showarrow: false, font: {family: "Inter, Arial, sans-serif", size: 11, color: "#64676C"}}];
+        layout.annotations = [...(layout.annotations || []), {text: "Source: " + escapeHtml(manifest.source || "not recorded"), xref: "paper", yref: "paper", x: 0, y: 0, yshift: -(layout.margin.b - 28), xanchor: "left", yanchor: "top", showarrow: false, font: {family: "Inter, Arial, sans-serif", size: preset?.sourceSize || 11, color: "#64676C"}}];
         const data = structuredClone(chart.data);
         await Plotly.newPlot(temporary, data, layout, {displayModeBar: false, staticPlot: true});
         const picks = [...new Set((chart._altitudeSeriesNames || data.filter(trace => trace.mode !== "text").map(trace => trace.name || "series")).map(slug))].join("-");

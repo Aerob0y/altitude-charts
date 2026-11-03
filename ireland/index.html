@@ -196,6 +196,19 @@
         return pickReady;
       }
 
+      // index_compare.js adds the "Compare from" date for indexed pick charts (exchange rates).
+      let indexReady;
+      function loadIndex() {
+        indexReady ??= new Promise((resolve, reject) => {
+          const script = document.createElement("script");
+          script.src = assetUrl("index_compare.js");
+          script.onload = resolve;
+          script.onerror = () => reject(new Error("Index helper is unavailable"));
+          document.head.append(script);
+        });
+        return indexReady;
+      }
+
       const slugOf = item => item.spec.replace(/\.json$/i, "").split("/").pop();
       // Pick links name views by id where views share a spec file (rents by location).
       const pickSlugOf = item => item.id || slugOf(item);
@@ -429,8 +442,9 @@
             if (!files.has(view.spec)) files.set(view.spec, readJson(view.spec, folder, signal));
             return AltitudePick.viewSpec(await files.get(view.spec), view);
           }));
-          if (specs.length === 1) return specs[0];
-          return AltitudePick.combine(specs, manifest.pick, chosen, manifest.views.map(item => item.label));
+          const indexDate = manifest.index ? panel.indexDate : null;
+          if (specs.length === 1 && !indexDate) return specs[0];
+          return AltitudePick.combine(specs, manifest.pick, chosen, manifest.views.map(item => item.label), indexDate);
         }, isPickDefault(chosen));
       }
 
@@ -448,11 +462,27 @@
       }
 
       // pick.js builds the boxes (see AltitudePick.setup). The second panel's ids get a b- prefix.
-      function setupPicks(panel, requested) {
+      async function setupPicks(panel, requested) {
+        if (manifest.index) await loadIndex();
+        else panel.indexDate = null;
         const chosen = AltitudePick.setup(panel.picks, manifest, requested, picks => {
           loadPicks(panel, picks);
           writeUrl();
-        });
+        }, Boolean(panel.indexDate));
+        // Inside the picks box, so the next topic's setup clears it. Plain values until ticked.
+        if (manifest.index) {
+          const control = document.createElement("span");
+          panel.picks.prepend(control);
+          AltitudeIndex.setup(control, manifest.index, panel.indexDate, value => {
+            const turnedOn = value && !panel.indexDate;
+            panel.indexDate = value;
+            // A single currency becomes the index's default set; picks rebuild for the new axis rule.
+            const defaults = manifest.views.filter(item => (manifest.index.default || []).includes(item.label)).map(pickSlugOf);
+            setupPicks(panel, turnedOn && panel.chosen.length < 2 && defaults.length ? defaults
+              : panel.chosen.map(i => pickSlugOf(manifest.views[i])));
+            writeUrl();
+          });
+        }
         if (panel === second) {
           for (const node of panel.picks.querySelectorAll("[id]")) node.id = "b-" + node.id;
           for (const node of panel.picks.querySelectorAll("label[for]")) node.htmlFor = "b-" + node.htmlFor;

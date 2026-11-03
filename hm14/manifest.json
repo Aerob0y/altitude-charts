@@ -2,8 +2,8 @@
   "name": "hm14",
   "title": "Survey of expectations",
   "source": "Reserve Bank of New Zealand (RBNZ)",
-  "note": "Summarises surveyed expectations for inflation and other economic measures. Expectations are opinions, not guaranteed forecasts.",
-  "updated": "2026-10-27",
+  "note": "What forecasters and business people expected, quarterly. Inflation expectations are shown against the 1-3% target. The OCR, GDP growth, unemployment and NZ dollar charts set each one-year-ahead expectation beside what actually happened a year later, so they stop at the latest actual value. Each chart's camera button downloads that chart only.",
+  "updated": "2026-11-03",
   "views": [
     {
       "label": "Perception of monetary conditions (net) - End of current quarter",

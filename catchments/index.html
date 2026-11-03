@@ -41,7 +41,10 @@
           </select>
           <label for="airport">Airport</label>
           <select id="airport"></select>
-          <fieldset><legend>Competing airports</legend><div class="ticks" id="competitors"></div></fieldset>
+          <div id="competitors">
+            <fieldset><legend>Major airports</legend><div class="selection-actions"><button type="button" data-group="major-competitors" data-checked="true">Select all</button><button type="button" data-group="major-competitors" data-checked="false">Clear</button></div><div class="ticks" id="major-competitors"></div></fieldset>
+            <fieldset><legend>Regional airports</legend><div class="selection-actions"><button type="button" data-group="regional-competitors" data-checked="true">Select all</button><button type="button" data-group="regional-competitors" data-checked="false">Clear</button></div><div class="ticks" id="regional-competitors"></div></fieldset>
+          </div>
           <fieldset id="regions-box" hidden><legend id="regions-label">States shown</legend><div class="ticks" id="regions"></div></fieldset>
           <label for="style">Colour areas by</label>
           <select id="style">
@@ -49,15 +52,16 @@
             <option value="advantage">Time saved (minutes)</option>
           </select>
           <div class="pair">
-            <div><label for="threshold">Minutes saved to count</label><input id="threshold" type="number" min="0" max="240" step="5" value="0"></div>
+            <div><label for="threshold">Head start for major airports (minutes)</label><input id="threshold" type="number" min="0" max="240" step="5" value="0" aria-describedby="head-start-help"></div>
             <div><label for="radius">Study radius (km)</label><input id="radius" type="number" min="1" max="400" step="10" value="400"></div>
           </div>
+          <p class="hint" id="head-start-help">A regional airport only wins an area if it is this many minutes closer than a major airport.</p>
           <fieldset><legend>Map lines</legend><div class="ticks">
             <label><input id="block-borders" type="checkbox" checked> Show block borders</label>
             <label><input id="catchment-outline" type="checkbox" checked> Show catchment outline</label>
           </div></fieldset>
           <p class="hint">Areas within the radius (straight line) of the airport are shown. The gold outline surrounds the combined areas where
-            the airport is at least the chosen number of minutes closer by road than every selected competitor.</p>
+            the airport wins against every selected competitor, allowing for the head start for major airports.</p>
           <p class="hint">The outline uses a 150 m display margin to close small gaps in the saved boundaries. Totals use the original areas.</p>
         </form>
       </details>

@@ -19,6 +19,12 @@
     return items.slice(0, -1).join(", ") + ", and " + items[items.length - 1];
   }
 
+  function indexDateLabel(value) {
+    return new Intl.DateTimeFormat("en-NZ", {
+      day: "numeric", month: "long", year: "numeric", timeZone: "UTC"
+    }).format(new Date(value + "T12:00:00Z"));
+  }
+
   // Area fill tints from docs/STYLE.md (series_tints in standards.r).
   const TINTS = {"#12243D": "#D5DBE4", "#0E6B6B": "#CFE3E1", "#6C8EBF": "#DCE5F1", "#C8781E": "#F3DFC7"};
 
@@ -72,10 +78,10 @@
     return spec;
   }
 
-  function combine(specs, pick, chosen, labels) {
+  function combine(specs, pick, chosen, labels, indexDate) {
     const palette = pick.palette;
     labels = pick.items || labels;
-    const dims = chosen.map(i => pick.dims[i]);
+    const dims = indexDate ? chosen.map(() => "Index") : chosen.map(i => pick.dims[i]);
     const axes = dims.map(dim => dim === dims[0] ? "y" : "y2");
     const twoAxes = axes.includes("y2");
     const lines = [], endLabels = [], contextTraces = [];
@@ -84,6 +90,14 @@
       trace.meta?.standard_plot_role !== "shade_hover")?.name);
     const clash = new Set(names).size < names.length;
     specs.forEach((spec, k) => {
+      if (indexDate) {
+        const line = spec.data.find(trace => trace.mode !== "text" && Array.isArray(trace.x) && Array.isArray(trace.y));
+        const base = line && line.y.find((value, i) => line.x[i] >= indexDate && Number.isFinite(value));
+        if (Number.isFinite(base)) for (const trace of spec.data) {
+          if (Array.isArray(trace.y)) trace.y = trace.y.map(value => Number.isFinite(value) ? 100 * value / base : value);
+          else if (Number.isFinite(trace.y)) trace.y = 100 * trace.y / base;
+        }
+      }
       for (const source of spec.data) {
         if (source.meta?.standard_plot_role === "shade_hover") {
           if (k === 0) contextTraces.push(structuredClone(source));
@@ -126,17 +140,23 @@
       delete layout.yaxis2;
       layout.margin = {...layout.margin, r: Math.max(...specs.map(spec => spec.layout?.margin?.r || 0))};
     }
-    layout.title = {...layout.title, text: `<b>${escapeHtml(pick.title)}</b><br><span style='font-family:Inter, Arial, sans-serif; font-size:13px; font-weight:normal; color:#64676C;'>` +
-      `${escapeHtml(pick.subtitles?.[chosen[0]] || pick.subtitle)}: ${escapeHtml(shortTitle(chosen.map(i => labels[i])))}` +
-      `${pick.groups && !pick.subtitles ? escapeHtml(` (${pick.group_names?.[pick.groups[chosen[0]]] || pick.groups[chosen[0]]})`) : ""}</span>`};
+    if (indexDate) {
+      layout.yaxis = {...layout.yaxis, tickformat: ",.0f", tickprefix: ""};
+      delete layout.yaxis2;
+    }
+    const subtitle = indexDate ? escapeHtml(`Index, ${indexDateLabel(indexDate)} = 100. Higher means a stronger NZD. Source: RBNZ`) :
+        escapeHtml(pick.subtitles?.[chosen[0]] || pick.subtitle) + ": " + escapeHtml(shortTitle(chosen.map(i => labels[i]))) +
+        (pick.groups && !pick.subtitles ? escapeHtml(` (${pick.group_names?.[pick.groups[chosen[0]]] || pick.groups[chosen[0]]})`) : "");
+    layout.title = {...layout.title, text: `<b>${escapeHtml(pick.title)}</b><br><span style='font-family:Inter, Arial, sans-serif; font-size:13px; font-weight:normal; color:#64676C;'>${subtitle}</span>`};
     return {data: [...lines, ...endLabels, ...contextTraces], layout, config: specs[0].config};
   }
 
   const setupListeners = new WeakMap();
 
   // Keep tick order: the first chosen series sets the left axis.
-  function setup(container, manifest, requested, onChange) {
-    const pick = manifest.pick, dims = pick.dims, groups = pick.groups;
+  // indexed: every pick shares one "Index" axis (index_compare.js).
+  function setup(container, manifest, requested, onChange, indexed = false) {
+    const pick = manifest.pick, dims = indexed ? pick.dims.map(() => "Index") : pick.dims, groups = pick.groups;
     const names = pick.items || manifest.views.map(view => view.label);
     const slugs = manifest.views.map(view => view.id || view.spec.replace(/\.json$/i, "").split("/").pop());
     const groupOf = i => groups ? groups[i] : "";

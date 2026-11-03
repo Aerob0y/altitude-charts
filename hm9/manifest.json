@@ -2,8 +2,8 @@
   "name": "hm9",
   "title": "Labour market",
   "source": "RBNZ and Stats NZ series",
-  "note": "Brings together employment, participation, hours and wages to show how work and earnings are changing.",
-  "updated": "2026-10-27",
+  "note": "Four quarterly views: unemployment, participation, annual wage growth, and real wage growth (wage growth less CPI inflation), all in percent. Each chart's camera button downloads that chart only.",
+  "updated": "2026-11-03",
   "views": [
     {
       "label": "Labour force participation rate - % s.a.",

@@ -56,8 +56,12 @@
   function setAirport(code) {
     $("airport").value = code;
     const others = data.airports.filter(a => a.code !== code);
-    ticks($("competitors"), others.map(a => ({ value: a.code, label: a.code })),
-      others.filter(a => a.major).map(a => a.code));
+    for (const major of [true, false]) {
+      const group = others.filter(a => a.major === major);
+      ticks($(major ? "major-competitors" : "regional-competitors"),
+        group.map(a => ({ value: a.code, label: `${a.code} ${a.name}` })),
+        major ? group.map(a => a.code) : []);
+    }
   }
 
   async function setCountry(country, airport) {
@@ -124,21 +128,29 @@
     const threshold = Number($("threshold").value) || 0;
     const radius = Math.min(400, Math.max(1, Number($("radius").value) || 400));
     const regionFilter = $("regions-box").hidden ? null : new Set(ticked($("regions")));
+    const selectedMajor = data.airports.find(a => a.code === airport)?.major;
+    const airportMajor = new Map(data.airports.map(a => [a.code, a.major]));
     const out = [];
     data.areas.code.forEach((code, i) => {
       if (!(data.straight_km[airport][i] <= radius)) return;
       if (regionFilter && !regionFilter.has(data.areas.region[i])) return;
       const own = travel(airport, i);
-      let best = null;
+      let best = null, included = own.minutes != null;
       for (const c of competitors) {
         const t = travel(c, i);
-        if (t.minutes == null) { best = null; break; }
+        if (t.minutes == null) { best = null; included = false; break; }
         if (!best || t.minutes < best.minutes) best = { ...t, airport: c };
+        const sameType = selectedMajor === airportMajor.get(c);
+        const difference = t.minutes - own.minutes;
+        const counts = sameType ? difference >= 0 :
+          (!selectedMajor ? (threshold === 0 ? difference > 0 : difference >= threshold) :
+            (threshold === 0 ? difference >= 0 : own.minutes - t.minutes < threshold));
+        if (!counts) included = false;
       }
       const saving = own.minutes != null && best ? best.minutes - own.minutes : null;
       out.push({ i, code, name: data.areas.name[i], region: data.areas.region[i],
         population: data.areas.population[i], density: data.areas.density[i],
-        own, best, saving, included: saving != null && saving >= threshold });
+        own, best, saving, included: saving != null && included });
     });
     return { airport, competitors, threshold, radius, rows: out };
   }
@@ -222,7 +234,7 @@
     box.innerHTML = `<strong>${people(inside)}</strong> people live in ${escape(result.airport)}'s catchment, out of ` +
       `<strong>${people(total)}</strong> in the ${result.rows.length.toLocaleString("en-NZ")} areas shown. ` +
       (result.competitors.length
-        ? `Catchment means at least ${result.threshold} minutes closer by road than ${escape(result.competitors.join(", "))}.`
+        ? `Compared with ${escape(result.competitors.join(", "))}, with a ${result.threshold}-minute head start for major airports.`
         : "Tick at least one competing airport to see a catchment.") +
       (proxies ? ` ${proxies} areas use a straight-line estimate.` : "");
   }
@@ -283,6 +295,14 @@
     $("country").addEventListener("change", () => setCountry($("country").value));
     $("airport").addEventListener("change", () => { setAirport($("airport").value); update(true); });
     for (const id of ["competitors", "regions"]) $(id).addEventListener("change", () => update(id === "regions"));
+    for (const button of document.querySelectorAll(".selection-actions button")) {
+      button.addEventListener("click", () => {
+        for (const input of $(button.dataset.group).querySelectorAll("input")) {
+          input.checked = button.dataset.checked === "true";
+        }
+        update(false);
+      });
+    }
     $("style").addEventListener("change", () => update(false));
     for (const id of ["block-borders", "catchment-outline"]) $(id).addEventListener("change", () => update(false));
     for (const id of ["threshold", "radius"]) $(id).addEventListener("change", () => update(id === "radius"));

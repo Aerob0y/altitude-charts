@@ -21,7 +21,7 @@
     summary = document.createElement("summary");
     controls.before(options);
     options.append(summary, controls);
-    options.open = !narrow();
+    options.open = !narrow() || controls.dataset.keepOpen === "true";
     options.addEventListener("change", () => updateSummary());
     const note = document.getElementById("note");
     more = document.createElement("button");
@@ -46,7 +46,10 @@
     area.before(subtitle, dates);
     let wasNarrow = narrow();
     window.addEventListener("resize", () => {
-      if (wasNarrow !== narrow()) { wasNarrow = narrow(); options.open = !wasNarrow; }
+      if (wasNarrow !== narrow()) {
+        wasNarrow = narrow();
+        options.open = !wasNarrow || controls.dataset.keepOpen === "true";
+      }
       updateSummary();
     });
   }

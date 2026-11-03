@@ -24,6 +24,8 @@ fieldset { margin: 0; padding: 0; border: 0; }
 select, input[type="number"] { width: 100%; padding: 7px 8px; border: 1px solid #b7c5bf; border-radius: 3px; background: white; color: inherit; font: 14px Inter, Arial, sans-serif; }
 .ticks { display: flex; flex-wrap: wrap; gap: 4px 14px; }
 .ticks label { display: flex; align-items: center; gap: 5px; margin: 0; font-weight: 400; font-size: 14px; }
+.selection-actions { display: flex; gap: 8px; margin-bottom: 6px; }
+.selection-actions button { border: 1px solid #DCD6CB; background: white; color: #0E6B6B; padding: 3px 8px; font: 12px Inter, Arial, sans-serif; cursor: pointer; }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .hint { margin: 12px 0 0; color: #64676C; font-size: 12px; }
 
@@ -57,8 +59,21 @@ footer p { margin: 0 0 6px; overflow-wrap: anywhere; }
 .airport-grid h3 { margin: 10px 12px 4px; font: 16px/1.3 "Inter Tight", Inter, Arial, sans-serif; }
 .airport-grid p { margin: 0 12px 10px; font-size: 13px; color: #64676C; }
 .airport-grid .links { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 13px; }
+.country-map { margin: 24px 0; padding: 16px; background: white; }
+.country-map h2 { margin-top: 0 !important; }
+.country-map figure { margin: 0; }
+.country-map-body { display: grid; grid-template-columns: minmax(0, 3fr) minmax(220px, 1fr); gap: 20px; align-items: start; }
+.country-map figure { aspect-ratio: 4 / 3; }
+.country-map img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.country-airports h3 { margin: 0 0 8px; font-size: 14px; }
+.country-airports ul { list-style: none; margin: 0 0 20px; padding: 0; font-size: 13px; }
+.country-airports a { display: flex; gap: 10px; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #E6E3DD; }
+.country-airports span { flex-shrink: 0; color: #3B3D41; font-variant-numeric: tabular-nums; }
+.country-map-controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 8px; }
+.country-map .links { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 0; font-size: 13px; }
 
 @media (max-width: 799px) {
+  .country-map-body { grid-template-columns: minmax(0, 1fr); }
   .workspace { grid-template-columns: minmax(0, 1fr); gap: 14px; }
   .intro h1 { font-size: 25px; }
   #map { height: 70vh; min-height: 360px; }

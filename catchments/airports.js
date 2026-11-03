@@ -29,7 +29,9 @@
     // Cut-off maps exist only for airports with a rival, and only once the maps are rebuilt.
     const extra = [30, 60].map(minutes => (airport.cutoffs || []).find(c => c.minutes === minutes)).filter(Boolean);
     const cutoffs = document.createElement("p");
-    if (extra.length) cutoffs.textContent = extra.map(c => `At least ${c.minutes} min closer: ${people(c.population_closer)}.`).join(" ");
+    if (extra.length) cutoffs.textContent = extra.map(c => airport.major
+      ? `${c.minutes} min head start: ${people(c.population_closer)}.`
+      : `At least ${c.minutes} min closer: ${people(c.population_closer)}.`).join(" ");
     const links = document.createElement("p");
     links.className = "links";
     links.append(link(airport.live, "Live map"), link("airports/" + airport.image, "Image (PNG)", true),
@@ -39,13 +41,70 @@
     return li;
   }
 
+  function countryPanel(country) {
+    const records = Array.isArray(index.countries) ? index.countries : Object.values(index.countries || {});
+    const record = records.find(item => item.country === country);
+    if (!record || !record.cutoffs || !record.cutoffs.length) return null;
+    const panel = document.createElement("section");
+    panel.className = "country-map";
+    const heading = document.createElement("h2"); heading.textContent = "Whole country";
+    const figure = document.createElement("figure");
+    const image = document.createElement("img"); image.loading = "lazy"; image.width = 1920; image.height = 1440;
+    const body = document.createElement("div"); body.className = "country-map-body";
+    const airportList = document.createElement("aside"); airportList.className = "country-airports";
+    airportList.setAttribute("aria-label", `${record.name} airport catchment populations`);
+    const controls = document.createElement("p"); controls.className = "country-map-controls";
+    const downloads = document.createElement("p"); downloads.className = "links";
+    const update = cutoff => {
+      image.src = "airports/" + cutoff.image;
+      image.alt = cutoff.contested ? `${record.name}: where regional and major airports compete` :
+        `${record.name} airport catchments with a ${cutoff.minutes}-minute cut-off`;
+      controls.querySelectorAll("button").forEach(button => button.setAttribute("aria-pressed",
+        String(button.value === (cutoff.contested ? "contested" : String(cutoff.minutes)))));
+      downloads.replaceChildren(link("airports/" + cutoff.image, "Image (PNG)", true), link("airports/" + cutoff.areas_csv, "Area data (CSV)", true));
+      airportList.replaceChildren();
+      const airports = index.airports.filter(a => a.country === country);
+      const figures = cutoff.airports || [];
+      for (const [label, major] of [["Major airports", true], ["Regional airports", false]]) {
+        const heading = document.createElement("h3"); heading.textContent = label;
+        const list = document.createElement("ul");
+        for (const entry of figures.filter(a => Boolean(a.major) === major)) {
+          const airport = airports.find(a => a.code === entry.code);
+          const params = new URLSearchParams({country: country.toLowerCase(), airport: entry.code,
+            style: "advantage", threshold: cutoff.minutes,
+            rivals: airports.filter(a => a.code !== entry.code).map(a => a.code).join(",")});
+          const row = document.createElement("li");
+          const a = link("index.html?" + params, `${entry.code} ${airport?.name || entry.code}`);
+          const population = document.createElement("span");
+          population.textContent = entry.population > 0 ? people(entry.population) : "–";
+          a.append(population); row.append(a); list.append(row);
+        }
+        if (list.childElementCount) airportList.append(heading, list);
+      }
+    };
+    const choices = [...record.cutoffs];
+    if (record.contested_image) choices.unshift({contested: true, minutes: 0, image: record.contested_image,
+      areas_csv: record.contested_areas_csv, airports: record.cutoffs.find(c => c.minutes === 0)?.airports});
+    for (const cutoff of choices) {
+      const button = document.createElement("button"); button.type = "button"; button.className = "chip";
+      button.value = cutoff.contested ? "contested" : cutoff.minutes;
+      button.textContent = cutoff.contested ? "Contested" : `${cutoff.minutes} min`;
+      button.addEventListener("click", () => update(cutoff)); controls.append(button);
+    }
+    update(choices[0]); figure.append(image); body.append(figure, airportList);
+    panel.append(heading, controls, body, downloads);
+    return panel;
+  }
+
   function show(country) {
     for (const tab of $("countries").querySelectorAll("button")) tab.setAttribute("aria-pressed", tab.value === country);
     for (const group of $("groups").children) group.hidden = group.dataset.country !== country;
     history.replaceState(null, "", `?country=${country.toLowerCase()}`);
   }
 
-  fetch("airports/index.json").then(r => { if (!r.ok) throw new Error(); return r.json(); }).then(index => {
+  let index;
+  fetch("airports/index.json").then(r => { if (!r.ok) throw new Error(); return r.json(); }).then(loaded => {
+    index = loaded;
     const countries = Object.keys(COUNTRIES).filter(c => index.airports.some(a => a.country === c));
     for (const country of countries) {
       const tab = document.createElement("button");
@@ -54,6 +113,8 @@
       $("countries").append(tab);
       const group = document.createElement("section");
       group.dataset.country = country;
+      const wholeCountry = countryPanel(country);
+      if (wholeCountry) group.append(wholeCountry);
       for (const [label, major] of [["Major airports", true], ["Regional airports", false]]) {
         const list = index.airports.filter(a => a.country === country && Boolean(a.major) === major);
         if (!list.length) continue;
