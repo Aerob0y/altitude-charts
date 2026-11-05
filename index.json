@@ -485,13 +485,12 @@
       "beta": true
     },
     {
-      "key": "catchment-maps",
-      "title": "Airport catchment maps",
-      "page": "catchments/airports.html",
+      "key": "catchment-combined",
+      "title": "Airport catchment map",
+      "page": "catchments/combined.html",
       "beta": true,
       "wip": true,
-      "image": "catchments/airports/au/CBR-thumb.jpg",
-      "note": "Where each of 43 airports is the closest by road, with an image and data for each."
+      "note": "Ireland, New Zealand and Australia catchments in a clean, interactive vector map."
     },
     {
       "key": "wacc",
