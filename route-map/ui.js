@@ -46,7 +46,7 @@
     }
   }
   // The current map: a latitude-adjusted equirectangular projection, unchanged.
-  function flat_frame(arcs, reserve) {
+  function flat_frame(arcs, reserve, head) {
     const bounds = extent(arcs.flat()), centre = (bounds[0] + bounds[1]) / 2;
     const aspect = Math.max(.25, Math.cos((bounds[2] + bounds[3]) / 2 * Math.PI / 180));
     const scale = Math.min((W - 140) / ((bounds[1] - bounds[0]) * aspect), (H - reserve) / (bounds[3] - bounds[2]));
@@ -59,7 +59,7 @@
       bounds[3] = Math.min(90, middle_lat + (H - reserve) / scale / 2);
     }
     const plot_width = (bounds[1] - bounds[0]) * aspect * scale, plot_height = (bounds[3] - bounds[2]) * scale;
-    const left = (W - plot_width) / 2, top = 138 + (H - 240 - plot_height) / 2;
+    const left = (W - plot_width) / 2, top = head + (H - reserve - plot_height) / 2;
     const project = ([lon, lat]) => [left + (lon - bounds[0]) * aspect * scale, top + (bounds[3] - lat) * scale];
     const point = p => project([M.wrap(p[0], centre), p[1]]);
     // Unwrap each land ring before projecting, then draw copies across the date line.
@@ -95,14 +95,14 @@
     return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0][0];
   }
   // Polar, globe and world views. d3-geo clips land and paths at the horizon and the date line.
-  function round_frame(routes, centre, reserve) {
+  function round_frame(routes, centre, reserve, head) {
     const mode = $("projection").value, sphere = { type: "Sphere" };
     const lines = routes.map(r => [data.airports.get(r.origin), data.airports.get(r.destination)]);
     // Polar stops just short of the far point, where land shapes can't be drawn reliably.
     const projection = mode === "polar" ? d3.geoAzimuthalEquidistant().rotate([-centre[0], -centre[1]]).clipAngle(177)
       : mode === "globe" ? d3.geoOrthographic().rotate([-centre[0], -centre[1]])
       : d3.geoEqualEarth().rotate([-M.fit_extent(lines.flat()).slice(0, 2).reduce((a, b) => a + b) / 2, 0]);
-    const left = 70, top = 138, plot_width = W - 140, plot_height = H - reserve;
+    const left = 70, top = head, plot_width = W - 140, plot_height = H - reserve;
     // A globe always shows its whole disc; a part-globe crops awkwardly.
     const whole = mode === "globe" || $("extent").value === "world" || !lines.length;
     projection.precision(.2).fitExtent([[left + 30, top + 20], [left + plot_width - 30, top + plot_height - 20]],
@@ -149,8 +149,11 @@
         legend.set(colour, colour_by === "airline" ? route.airline || "Not supplied" : colour);
       }
       const legend_columns = Math.max(1, Math.floor((W - 84) / 240));
-      const legend_rows = legend.size > 1 ? Math.ceil(Math.min(legend.size, 20) / legend_columns) : 0;
-      const reserve = 240 + legend_rows * 24 + (legend.size > 20 ? 24 : 0);
+      // "Map only" drops the title, source, legend and notes so the map fills the image.
+      const words = $("map-text").value === "full";
+      const legend_rows = words && legend.size > 1 ? Math.ceil(Math.min(legend.size, 20) / legend_columns) : 0;
+      const head = words ? 138 : 24;
+      const reserve = words ? 240 + legend_rows * 24 + (legend.size > 20 ? 24 : 0) : 48;
       for (const option of $("metric").options) {
         option.disabled = option.value !== "equal" && (totals.some(r => r[option.value] == null) || !totals.some(r => r[option.value] > 0));
       }
@@ -159,7 +162,7 @@
       const codes = [...new Set(routes.flatMap(r => [r.origin, r.destination]))];
       const arcs = routes.map(r => M.great_circle(data.airports.get(r.origin), data.airports.get(r.destination)));
       const centre_code = $("centre").value || (routes.length ? busiest(routes) : codes[0]);
-      const frame = mode === "flat" ? flat_frame(arcs, reserve) : round_frame(routes, data.airports.get(centre_code), reserve);
+      const frame = mode === "flat" ? flat_frame(arcs, reserve, head) : round_frame(routes, data.airports.get(centre_code), reserve, head);
       const { left, top, plot_width, plot_height } = frame;
       const bg = $("background").value, colour = $("route-colour").value;
       const luminance = bg.slice(1).match(/../g).map(v => parseInt(v, 16)).reduce((sum, v, i) => sum + v * [.2126, .7152, .0722][i], 0);
@@ -169,11 +172,10 @@
         make("desc", { id: "map-desc" }, `${routes.length} airport-pair connections. ${$("source").value}. Great-circle paths; not actual flight tracks.`));
       const defs = make("defs"), clip = make("clipPath", { id: "map-clip" });
       clip.append(make("rect", { x: left, y: top, width: plot_width, height: plot_height }));
-      const glow = make("filter", { id: "route-glow", x: "-50%", y: "-50%", width: "200%", height: "200%" });
-      glow.append(make("feGaussianBlur", { stdDeviation: 3 })); defs.append(clip, glow); svg.append(defs);
+      defs.append(clip); svg.append(defs);
       svg.append(make("rect", { width: W, height: H, fill: bg }));
       const text = (x, y, size, value, fill = ink, attrs = {}) => make("text", { x, y, fill, "font-family": "Arial, sans-serif", "font-size": size, ...attrs }, value);
-      svg.append(text(42, 40, 12, "ALTITUDE  /  AIRPORT CONNECTIVITY", muted, { "letter-spacing": 2.5 }),
+      if (words) svg.append(text(42, 40, 12, "ALTITUDE  /  AIRPORT CONNECTIVITY", muted, { "letter-spacing": 2.5 }),
         text(42, 85, 30, $("title").value || "Airport connections", ink, { "font-weight": 600 }),
         text(42, 112, 14, $("source").value || "Source: user-supplied route table", muted));
       const geography = make("g", { "clip-path": "url(#map-clip)" }); svg.append(geography);
@@ -186,22 +188,31 @@
         const colour = route_colour(route);
         const d = frame.route(i); if (!d) return;
         const width = Number($("width").value) * (metric === "equal" ? 1 : Math.max(.15, route[metric] / max) * 3);
-        route_layer.append(make("path", { d, stroke: colour, "stroke-width": width + 4, opacity: .35, filter: "url(#route-glow)" }));
         const path = make("path", { d, stroke: colour, "stroke-width": width, opacity: .9 });
         path.append(make("title", {}, `${route.origin} ↔ ${route.destination}${metric === "equal" ? "" : `: ${route[metric].toLocaleString()} ${metric}`}`)); route_layer.append(path);
       });
-      const boxes = [];
-      const markers = make("g", { "clip-path": "url(#map-clip)" }); svg.append(markers);
+      // Dots go below every label, and labels avoid the dots as well as each other.
+      const highlight = new Set($("highlight").value.toUpperCase().split(/[^A-Z0-9]+/).filter(Boolean));
+      const accent = $("highlight-colour").value;
+      const markers = make("g", { "clip-path": "url(#map-clip)" }), labels = make("g", { "clip-path": "url(#map-clip)" });
+      svg.append(markers, labels);
+      const places = [], boxes = [];
       for (const code of codes) {
         const location = data.airports.get(code), xy = frame.point(location);
         if (!xy) continue;
-        const [x, y] = xy;
+        const [x, y] = xy, key = highlight.has(code) || highlight.has(location[2]?.toUpperCase());
         if (x < left || x > left + plot_width || y < top || y > top + plot_height) continue;
-        markers.append(make("circle", { cx: x, cy: y, r: 4.5, fill: ink, stroke: bg, "stroke-width": 1.5 }));
-        if ($("labels").value === "none") continue;
+        const r = key ? 7.5 : 4.5;
+        if (key) markers.append(make("circle", { cx: x, cy: y, r: r + 5, fill: "none", stroke: accent, "stroke-width": 2 }));
+        markers.append(make("circle", { cx: x, cy: y, r, fill: key ? accent : ink, stroke: bg, "stroke-width": 1.5 }));
+        boxes.push([x - r - 5, y - r - 5, x + r + 5, y + r + 5]);
+        places.push({ code, location, x, y, key });
+      }
+      // Highlighted airports choose their label position first.
+      if ($("labels").value !== "none") for (const { code, location, x, y, key } of places.sort((a, b) => b.key - a.key)) {
         const label = $("labels").value === "names" && location[2] !== code ? `${location[2]} · ${code}` : code;
-        const length = label.length * 8.4, height = 20;
-        const candidates = [[x + 10, y - 10], [x + 10, y + 24], [x - length - 10, y - 10], [x - length - 10, y + 24], [x - length / 2, y - 28], [x - length / 2, y + 42]];
+        const size = key ? 19 : 15, length = label.length * size * .56, height = size + 5, gap = key ? 14 : 10;
+        const candidates = [[x + gap, y - gap], [x + gap, y + gap + size], [x - length - gap, y - gap], [x - length - gap, y + gap + size], [x - length / 2, y - gap - 16], [x - length / 2, y + gap + size + 16]];
         const scored = candidates.map(([lx, ly]) => {
           const rect = [lx, ly - height, lx + length, ly + 4];
           const collisions = boxes.filter(b => rect[0] < b[2] + 4 && rect[2] > b[0] - 4 && rect[1] < b[3] + 4 && rect[3] > b[1] - 4).length;
@@ -209,9 +220,9 @@
           return { lx, ly, rect, score: collisions + (outside ? 100 : 0) };
         }).sort((a, b) => a.score - b.score)[0];
         boxes.push(scored.rect);
-        markers.append(text(scored.lx, scored.ly, 15, label, ink, { "font-weight": 600, stroke: bg, "stroke-width": 4, "paint-order": "stroke" }));
+        labels.append(text(scored.lx, scored.ly, size, label, key ? accent : ink, { "font-weight": key ? 700 : 600, stroke: bg, "stroke-width": 4, "paint-order": "stroke" }));
       }
-      if (legend.size > 1) {
+      if (words && legend.size > 1) {
         [...legend].slice(0, 20).forEach(([colour, label], i) => {
           const x = 42 + (i % legend_columns) * 240;
           const y = H - 90 - (legend_rows - 1 - Math.floor(i / legend_columns)) * 24;
@@ -220,7 +231,7 @@
         if (legend.size > 20) svg.append(text(42, H-66,12,`${legend.size-20} more colours - see route totals`,muted));
       }
       const note = metric === "equal" ? "Equal route widths" : `Width: ${metric} · largest pair ${max.toLocaleString()} ${metric}`;
-      svg.append(text(42, H - 52, 14, `${routes.length} CONNECTIONS  /  ${codes.length} AIRPORTS`, ink, { "letter-spacing": 1 }),
+      if (words) svg.append(text(42, H - 52, 14, `${routes.length} CONNECTIONS  /  ${codes.length} AIRPORTS`, ink, { "letter-spacing": 1 }),
         text(42, H - 27, 12, `${note}  ·  Great-circle connections; not flight tracks.  ·  Geography: Natural Earth`, muted));
       $("map").replaceChildren(svg); current_svg = svg;
       $("summary").textContent = `${routes.length} connections · ${codes.length} airports`;
@@ -231,7 +242,7 @@
         }
         return tr;
       }));
-      enable_exports(true); message("Map ready. SVG and PNG include the title, source and route-width units.");
+      enable_exports(true); message(words ? "Map ready. SVG and PNG include the title, source and route-width units." : "Map ready. Downloads show the map only, with no title, source or notes.");
     } catch (e) { enable_exports(false); message(e.message, true); }
   }
   function download(blob, name) {

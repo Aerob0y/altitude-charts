@@ -23,3 +23,14 @@ Australia/New Zealand and custom bounds apply only to the flat projection.
   [d3-array 3.2.4](https://github.com/d3/d3-array), official minified builds
   from npm. ISC licence in `vendor/LICENSE.d3-geo` and `vendor/LICENSE.d3-array`.
   About 53 KB together. No CDN calls at runtime.
+
+## November 2026 changes
+
+- Routes draw as plain lines (no glow).
+- Airport dots sit below every label, and labels avoid the dots.
+- "Highlight airports" takes codes such as `CBR, ZQN` and draws them with a
+  larger ringed dot and a bigger label in the highlight colour.
+- "Text on the image: Map only" drops the title, source, legend and notes so
+  the map fills the download.
+- The route box also accepts a table pasted from Excel (or CSV text) with a
+  header row: origin, destination and any of flights, seats, airline, colour.

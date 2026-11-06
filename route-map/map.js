@@ -21,6 +21,12 @@
     }
   }
   function parse_routes(text) {
+    // A pasted table (from Excel or a CSV) with origin and destination headings.
+    const lines = text.trim().split(/\r?\n/);
+    const headings = lines[0].split(/\t|,/).map(header);
+    if (headings.includes("origin") && headings.includes("destination")) {
+      return normalise(lines[0].includes("\t") ? lines.map(line => line.split("\t")) : parse_csv(text.trim()));
+    }
     const table = [['origin', 'destination', 'colour']];
     for (const entry of text.split(/[,\n\r]+/).map(s => s.trim()).filter(Boolean)) {
       const match = entry.match(/^(.*?)(?:\s+(#[0-9a-f]{6}))?$/i);
@@ -60,7 +66,7 @@
   }
   const number = (v, name, row, min, max) => {
     if (v == null || String(v).trim() === "") return null;
-    const n = Number(String(v).trim());
+    const n = Number(String(v).replace(/[,\s]/g, ""));
     if (!Number.isFinite(n) || n < min || n > max) throw Error(`Row ${row}: ${name} must be a number from ${min} to ${max}.`);
     return n;
   };
