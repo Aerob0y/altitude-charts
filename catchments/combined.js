@@ -4,20 +4,23 @@
   const COUNTRIES = {
     ie: { name: "Ireland", slug: "ireland", sources: "Sources: CSO Census 2022 population; Tailte Éireann boundaries; OpenRouteService drive times." },
     nz: { name: "New Zealand", slug: "new-zealand", sources: "Sources: legacy New Zealand catchment snapshot; OpenRouteService drive times. Population year and boundary vintage have not been verified." },
-    au: { name: "Australia", slug: "australia", sources: "Sources: Australian Bureau of Statistics estimated resident population (2025); 2021 statistical area boundaries; OpenRouteService drive times. Country backdrop: Natural Earth." }
+    au: { name: "Australia", roads: true, slug: "australia", sources: "Sources: Australian Bureau of Statistics estimated resident population (2025); 2021 statistical area boundaries; OpenRouteService drive times. Country backdrop: Natural Earth." }
   };
-  const COLOUR_OPTIONS = [["Navy", "#12243D"], ["Teal", "#0E6B6B"], ["Ochre", "#C8781E"], ["Slate blue", "#6C8EBF"], ["Olive", "#7E8C3A"], ["Mauve", "#9B5C7E"], ["Warm grey", "#8A8781"]];
+  const COLOUR_OPTIONS = [["Navy", "#12243D"], ["Teal", "#0E6B6B"], ["Ochre", "#C8781E"], ["Slate blue", "#6C8EBF"], ["Olive", "#7E8C3A"], ["Mauve", "#9B5C7E"], ["Warm grey", "#8A8781"], ["Gold", "#D9A441"], ["Brick", "#A5473B"], ["Sea green", "#3E9C86"], ["Dark slate", "#4A5566"], ["Sand", "#C9B68F"], ["Plum", "#5E3A5A"], ["Sky", "#9DB9D6"], ["Moss", "#55612A"]];
   const PALETTE = COLOUR_OPTIONS.map(([, colour]) => colour);
   const SEQUENTIAL = ["#E3EFEE", "#A9CFCC", "#5FA19C", "#0E6B6B", "#0A4646"];
+  // Population density is shown on a log scale (people vary by thousands of times), purple to yellow.
+  const DENSITY = ["#2B0A57", "#6A1B9A", "#B5367A", "#E5604D", "#F7A23B", "#F9E24B"];
   const NEUTRAL = "#EFEDE8";
   const HEAT_BASE = "#F3F1EC";
   const heatCache = new Map();
   const BANDS = [[0, 45, "Under 45 min"], [45, 90, "45 to 90 min"], [90, 150, "90 min to 2.5 hours"], [150, 240, "2.5 to 4 hours"], [240, Infinity, "Over 4 hours"]];
   const SVG_NS = "http://www.w3.org/2000/svg";
-  let data, shapes, countryLand = [], map, renderer, tiles, land, areas, outlines = [], airports, rows = [], headStartFrame = 0, heatLayers = [], heatPeak = 0, activeCountry = "ie", countryRequest = 0;
+  let data, shapes, countryLand = [], map, renderer, tiles, land, areas, outlines = [], airports, roads = null, roadLines = [], rows = [], headStartFrame = 0, heatLayers = [], heatPeak = 0, activeCountry = "ie", countryRequest = 0;
   const countryCache = new Map();
   const colourState = { individual: {}, selected: "#0E6B6B", competitors: "#C8781E" };
 
+  const perKm = value => value < 10 ? value.toFixed(1) : people(value);
   const people = value => Math.round(value).toLocaleString("en-NZ");
   const escape = value => String(value ?? "").replace(/[&<>\"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
   const hex = colour => [1, 3, 5].map(index => parseInt(colour.slice(index, index + 2), 16));
@@ -62,6 +65,14 @@
     catch (error) { countryCache.delete(code); throw error; }
   }
 
+  // Optional road lines between airport pairs, saved as roads-<country>.json by dev/build_catchment_roads.R.
+  const roadCache = new Map();
+  async function loadRoads(code) {
+    if (!COUNTRIES[code].roads) return { pairs: [] };
+    if (!roadCache.has(code)) roadCache.set(code, fetch(`roads-${code}.json`).then(response => response.ok ? response.json() : { pairs: [] }).catch(() => ({ pairs: [] })));
+    return roadCache.get(code);
+  }
+
   function buildControls() {
     $("focus").replaceChildren(new Option("Country view (all airports)", "all"), ...data.airports.map(airport => new Option(`${airport.name} (${airport.code})`, airport.code)));
     colourState.individual = {};
@@ -73,6 +84,7 @@
     }));
     const regions = [...new Set(data.areas.region.filter(Boolean))].sort();
     $("regions-box").hidden = activeCountry !== "au" || !regions.length;
+    $("regions-menu").open = false;
     $("regions").replaceChildren(...regions.map(region => {
       const label = document.createElement("label"); label.className = "check";
       const input = document.createElement("input"); input.type = "checkbox"; input.value = region; input.checked = true;
@@ -81,6 +93,9 @@
     document.querySelector("input[name=airport-colours][value=individual]").checked = true;
     buildColourMenu();
     $("notice").textContent = data.notice;
+    roadLines = []; $("roads-field").hidden = true;
+    const roadCountry = activeCountry;
+    loadRoads(roadCountry).then(file => { if (roadCountry !== activeCountry) return; const lines = file.pairs || []; if (file.source) $("source-note").textContent += ` Road lines: ${file.source}.`; roadLines = lines; $("roads-field").hidden = !lines.length; if (lines.length && map) update(false); });
     $("source-note").textContent = `${COUNTRIES[activeCountry].sources} Where a road time is missing, a straight-line estimate at 60 km/h is used and labelled.`;
     $("intro-copy").textContent = `Explore ${COUNTRIES[activeCountry].name} airport catchments by road. This work-in-progress map uses saved drive times and population data.`;
     $("catchment-result").setAttribute("aria-label", `${COUNTRIES[activeCountry].name} catchment map`);
@@ -233,21 +248,13 @@
     }
   }
 
-  // Share of the population living in areas that are less dense than this one, so each shade holds a
-  // similar number of people. A straight scale from the sparsest to the densest area leaves almost
-  // everywhere in the two palest shades.
-  function densityShare() {
-    const ordered = rows.filter(row => Number.isFinite(row.density)).sort((a, b) => a.density - b.density);
-    const total = ordered.reduce((sum, row) => sum + row.population, 0) || 1;
-    const densities = [], shares = [];
-    let running = 0;
-    for (const row of ordered) { running += row.population; densities.push(row.density); shares.push(running / total); }
-    return value => {
-      let low = 0, high = densities.length - 1;
-      if (high < 0) return 0;
-      while (low < high) { const mid = (low + high) >> 1; if (densities[mid] < value) low = mid + 1; else high = mid; }
-      return shares[low];
-    };
+  // Position (0 to 1) of a density on a log scale between the sparsest and densest areas shown.
+  function densityScale(values) {
+    const sorted = values.filter(value => value > 0).sort((a, b) => a - b);
+    const pick = share => sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * share))] ?? 1;
+    const low = Math.max(pick(.03), .1), high = Math.max(pick(.995), low * 10);
+    const span = Math.log10(high) - Math.log10(low);
+    return { low, high, at: value => value > 0 ? Math.max(0, Math.min(1, (Math.log10(value) - Math.log10(low)) / span)) : 0 };
   }
 
   // Population heat: people per km² smoothed with a Gaussian kernel, drawn as stacked vector contours.
@@ -339,14 +346,14 @@
     const density = mode === "density", heat = mode === "heat";
     const values = rows.map(row => row.density).filter(Number.isFinite);
     const low = Math.min(...values), high = Math.max(...values);
-    const share = density ? densityShare() : null;
+    const scaled = density ? densityScale(values) : null;
     const colour = row => {
       if (heat) return HEAT_BASE;
-      if (density) return ramp(SEQUENTIAL, share(row.density));
+      if (density) return ramp(DENSITY, scaled.at(row.density));
       const base = colourFor(row.win?.code, result);
       return row.win ? mix(NEUTRAL, base, .28 + .72 * Math.min(1, row.lead / 120)) : NEUTRAL;
     };
-    return { density, heat, colour, low, high };
+    return { density, heat, colour, low: scaled?.low ?? low, high: scaled?.high ?? high };
   }
 
   function popup(row, result) {
@@ -372,6 +379,12 @@
       const groups = result.focus === "all" ? [...new Set(rows.filter(row => row.win).map(row => row.win.code))].map(code => ({ code, indices: rows.filter(row => row.win?.code === code).map(row => row.index) })) : [{ code: result.focus, indices: rows.filter(row => row.included).map(row => row.index) }];
       outlines = groups.map(group => L.geoJSON(CatchmentOutline.merge(data.outlines.features, new Set(group.indices)), { renderer, interactive: false, style: { color: result.focus === "all" ? colourFor(group.code, result) : "#222326", weight: 1.8, fill: false } }).addTo(map));
     }
+    roads?.remove(); roads = null;
+    const shownRoads = $("roads-on").checked ? roadLines.filter(line => result.codes.includes(line.from) && result.codes.includes(line.to)) : [];
+    if (shownRoads.length) roads = L.layerGroup(shownRoads.flatMap(line => [
+      L.polyline(line.coordinates.map(([lng, lat]) => [lat, lng]), { renderer, interactive: false, color: "#FAFAF8", weight: 4.6, opacity: .9, lineCap: "round", lineJoin: "round" }),
+      L.polyline(line.coordinates.map(([lng, lat]) => [lat, lng]), { renderer, interactive: false, color: "#222326", weight: 2.4, dashArray: "8 6", lineCap: "butt", lineJoin: "round" })
+    ])).addTo(map);
     airports?.remove();
     airports = L.layerGroup(result.codes.map(code => {
       const airport = airportByCode(code), selectedAirport = code === result.focus;
@@ -408,7 +421,7 @@
     if (scale.heat) {
       $("legend").innerHTML = `<span>Fewer people</span><span class="ramp" style="background:linear-gradient(90deg, ${SEQUENTIAL.join(",")})"></span><span>${people(Math.round(heatPeak / 10) * 10)} people per km² at the peak (smoothed)</span>${countryLand.length ? '<span class="outside-range"><i></i>Outside 400 km airport coverage</span>' : ""}`;
     } else if (scale.density) {
-      $("legend").innerHTML = `<span>${people(scale.low)} people per km²</span><span class="ramp" style="background:linear-gradient(90deg, ${SEQUENTIAL.join(",")})"></span><span>${people(scale.high)} people per km²</span><span>Each shade holds about the same number of people</span>${countryLand.length ? '<span class="outside-range"><i></i>Outside 400 km airport coverage</span>' : ""}`;
+      $("legend").innerHTML = `<span>${perKm(scale.low)}</span><span class="ramp" style="background:linear-gradient(90deg, ${DENSITY.join(",")})"></span><span>${perKm(scale.high)} people per km² (log scale)</span>${countryLand.length ? '<span class="outside-range"><i></i>Outside 400 km airport coverage</span>' : ""}`;
     } else {
       const chips = airportColourMode() === "competing" && result.focus !== "all"
         ? `<span><i style="background:${colourState.selected}"></i>${result.focus} (selected)</span><span><i style="background:${colourState.competitors}"></i>Other airports</span>`
@@ -416,6 +429,7 @@
       const rampColour = result.focus === "all" ? "#64676C" : colourFor(result.focus, result);
       $("legend").innerHTML = `<span>${result.focus === "all" ? "Marginal" : "Less decisive"}</span><span class="ramp" style="background:linear-gradient(90deg, ${NEUTRAL}, ${rampColour})"></span><span>${result.focus === "all" ? "Clear lead" : "More decisive"}</span>${countryLand.length ? '<span class="outside-range"><i></i>Outside 400 km airport coverage</span>' : ""}${chips}${$("catchment-outline").checked ? '<span class="outline"></span><span>Catchment outline</span>' : ""}`;
     }
+    if (roads) $("legend").insertAdjacentHTML("beforeend", '<span class="road-key"></span><span>Road between airports</span>');
   }
 
   function addExportText(parent, text, x, y, size, weight = 400) {
@@ -662,7 +676,12 @@
     }
   }
 
-  function update(fit = false) { if (!data) return; syncCompetitors(); syncAirportColours(); const result = calculate(), scale = style(result); draw(result, scale, fit); labels(result, scale); renderTableAndChart(result); }
+  function syncRegions() {
+    const boxes = [...document.querySelectorAll("#regions input")], count = boxes.filter(input => input.checked).length;
+    $("regions-summary").textContent = count === boxes.length ? `All states (${count})` : `${count} of ${boxes.length} states`;
+  }
+
+  function update(fit = false) { if (!data) return; syncRegions(); syncCompetitors(); syncAirportColours(); const result = calculate(), scale = style(result); draw(result, scale, fit); labels(result, scale); renderTableAndChart(result); }
 
   async function switchCountry(code) {
     if (!COUNTRIES[code] || code === activeCountry) return;
@@ -713,9 +732,9 @@
     });
     $("head-start").addEventListener("input", event => { $("head-start").nextElementSibling.value = `${event.target.value} min`; cancelAnimationFrame(headStartFrame); headStartFrame = requestAnimationFrame(() => update(false)); });
     $("head-start").addEventListener("change", () => { cancelAnimationFrame(headStartFrame); update(false); });
-    for (const id of ["block-borders", "catchment-outline"]) $(id).addEventListener("change", () => update(false));
+    for (const id of ["block-borders", "catchment-outline", "roads-on"]) $(id).addEventListener("change", () => update(false));
     $("street-map").addEventListener("change", event => { event.target.checked ? tiles.addTo(map) : tiles.remove(); $("street-label").textContent = event.target.checked ? "On: street map behind" : "Off: clean vector view"; syncExportControls(); update(false); });
-    document.addEventListener("click", event => { const menu = $("competitor-menu"); if (menu.open && !menu.contains(event.target)) menu.open = false; });
+    document.addEventListener("click", event => { for (const id of ["competitor-menu", "regions-menu"]) { const menu = $(id); if (menu.open && !menu.contains(event.target)) menu.open = false; } });
   }
   window.addEventListener("DOMContentLoaded", start);
 })();
