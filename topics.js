@@ -11,7 +11,7 @@
   const logo = document.createElement("img");
   logo.src = new URL("images/csv-logo.svg", root).href;
   logo.alt = "CSV";
-  logo.width = 320; logo.height = 250;
+  logo.width = 340; logo.height = 290;
   brand.append(logo);
   const links = document.createElement("nav");
   links.className = "site-links";

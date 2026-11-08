@@ -220,7 +220,11 @@
           return { lx, ly, rect, score: collisions + (outside ? 100 : 0) };
         }).sort((a, b) => a.score - b.score)[0];
         boxes.push(scored.rect);
-        labels.append(text(scored.lx, scored.ly, size, label, key ? accent : ink, { "font-weight": key ? 700 : 600, stroke: bg, "stroke-width": 4, "paint-order": "stroke" }));
+        // The halo is its own text element below the label: PowerPoint, Illustrator and some
+        // viewers ignore paint-order and would draw the outline over the letters.
+        const weight = { "font-weight": key ? 700 : 600 };
+        labels.append(text(scored.lx, scored.ly, size, label, bg, { ...weight, stroke: bg, "stroke-width": 4, "stroke-linejoin": "round", "aria-hidden": "true" }),
+          text(scored.lx, scored.ly, size, label, key ? accent : ink, weight));
       }
       if (words && legend.size > 1) {
         [...legend].slice(0, 20).forEach(([colour, label], i) => {

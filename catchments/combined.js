@@ -16,7 +16,7 @@
   const heatCache = new Map();
   const BANDS = [[0, 45, "Under 45 min"], [45, 90, "45 to 90 min"], [90, 150, "90 min to 2.5 hours"], [150, 240, "2.5 to 4 hours"], [240, Infinity, "Over 4 hours"]];
   const SVG_NS = "http://www.w3.org/2000/svg";
-  let data, shapes, countryLand = [], map, renderer, tiles, land, areas, outlines = [], airports, roads = null, roadLines = [], rows = [], headStartFrame = 0, heatLayers = [], heatPeak = 0, activeCountry = "ie", countryRequest = 0;
+  let data, shapes, holeShapes = null, countryLand = [], map, renderer, tiles, land, holes, areas, outlines = [], airports, roads = null, roadLines = [], rows = [], headStartFrame = 0, heatLayers = [], heatPeak = 0, activeCountry = "ie", countryRequest = 0;
   const countryCache = new Map();
   const colourState = { individual: {}, selected: "#0E6B6B", competitors: "#C8781E" };
 
@@ -63,6 +63,17 @@
     }
     try { return await countryCache.get(code); }
     catch (error) { countryCache.delete(code); throw error; }
+  }
+
+  // No-block shapes are display-only, so fetch them after the catchment map.
+  const holesCache = new Map();
+  function loadHoles(code) {
+    if (!holesCache.has(code)) {
+      holesCache.set(code, fetch(`${code}-no-block.geojson`).then(response =>
+        response.ok ? response.json() : { type: "FeatureCollection", features: [] }
+      ).catch(() => ({ type: "FeatureCollection", features: [] })));
+    }
+    return holesCache.get(code);
   }
 
   // Optional road lines between airport pairs, saved as roads-<country>.json by dev/build_catchment_roads.R.
@@ -367,11 +378,23 @@
     const rowByIndex = new Map(rows.map(row => [row.index, row]));
     land?.remove();
     land = countryLand.length ? L.geoJSON({ type: "FeatureCollection", features: countryLand }, { renderer, interactive: false,
-      style: { className: "country-background", color: "#FAFAF8", weight: 0, fillColor: "#E9E7E2", fillOpacity: 1 }
+      style: { className: "country-background", color: "#DCD6CB", weight: .5, fillColor: "#F1EFEA", fillOpacity: 1 }
+    }).addTo(map) : null;
+    holes?.remove();
+    holes = holeShapes?.features.length ? L.geoJSON(holeShapes, {
+      renderer, interactive: false,
+      style: { color: "#E9E7E2", weight: 0, fillColor: "#E9E7E2", fillOpacity: 1 }
     }).addTo(map) : null;
     areas?.remove();
     areas = L.geoJSON(shapes, { renderer, filter: feature => rowByIndex.has(feature.properties.i), style: feature => {
-      const row = rowByIndex.get(feature.properties.i); return { fillColor: scale.colour(row), fillOpacity: $("street-map").checked ? .76 : 1, color: "#FAFAF8", weight: .5, opacity: $("block-borders").checked ? 1 : 0 };
+      const row = rowByIndex.get(feature.properties.i), fillColor = scale.colour(row);
+      const streetMap = $("street-map").checked, blockBorders = $("block-borders").checked;
+      // A same-colour opaque outline overlaps neighbouring fills by one pixel,
+      // preventing SVG anti-aliasing seams in the clean vector view. It is not
+      // used over translucent street-map fills, where overlaps would look dark.
+      return blockBorders ? { fillColor, fillOpacity: streetMap ? .76 : 1, color: "#FAFAF8", weight: .5, opacity: 1 } :
+        streetMap ? { fillColor, fillOpacity: .76, stroke: false } :
+          { fillColor, fillOpacity: 1, color: fillColor, weight: 1, opacity: 1 };
     }, onEachFeature: (feature, layer) => layer.bindPopup(() => popup(rowByIndex.get(feature.properties.i), result)) }).addTo(map);
     heatPeak = scale.heat ? drawHeat(areas).peak : (heatLayers.forEach(item => item.remove()), heatLayers = [], 0);
     outlines.forEach(outline => outline.remove()); outlines = [];
@@ -418,16 +441,17 @@
       const totals = result.codes.map(code => [code, rows.filter(row => row.win?.code === code).reduce((sum, row) => sum + row.population, 0)]).sort((a, b) => b[1] - a[1]);
       $("summary").innerHTML = totals.map(([code, total]) => `<strong>${code}</strong> ${people(total)}`).join(" · ") + " people in each catchment.";
     }
+    const noBlockKey = holeShapes?.features.length ? '<span class="no-block"><i></i>No catchment block</span>' : "";
     if (scale.heat) {
-      $("legend").innerHTML = `<span>Fewer people</span><span class="ramp" style="background:linear-gradient(90deg, ${SEQUENTIAL.join(",")})"></span><span>${people(Math.round(heatPeak / 10) * 10)} people per km² at the peak (smoothed)</span>${countryLand.length ? '<span class="outside-range"><i></i>Outside 400 km airport coverage</span>' : ""}`;
+      $("legend").innerHTML = `<span>Fewer people</span><span class="ramp" style="background:linear-gradient(90deg, ${SEQUENTIAL.join(",")})"></span><span>${people(Math.round(heatPeak / 10) * 10)} people per km² at the peak (smoothed)</span>${noBlockKey}`;
     } else if (scale.density) {
-      $("legend").innerHTML = `<span>${perKm(scale.low)}</span><span class="ramp" style="background:linear-gradient(90deg, ${DENSITY.join(",")})"></span><span>${perKm(scale.high)} people per km² (log scale)</span>${countryLand.length ? '<span class="outside-range"><i></i>Outside 400 km airport coverage</span>' : ""}`;
+      $("legend").innerHTML = `<span>${perKm(scale.low)}</span><span class="ramp" style="background:linear-gradient(90deg, ${DENSITY.join(",")})"></span><span>${perKm(scale.high)} people per km² (log scale)</span>${noBlockKey}`;
     } else {
       const chips = airportColourMode() === "competing" && result.focus !== "all"
         ? `<span><i style="background:${colourState.selected}"></i>${result.focus} (selected)</span><span><i style="background:${colourState.competitors}"></i>Other airports</span>`
         : result.codes.map(code => `<span><i style="background:${colourFor(code, result)}"></i>${code}</span>`).join("");
       const rampColour = result.focus === "all" ? "#64676C" : colourFor(result.focus, result);
-      $("legend").innerHTML = `<span>${result.focus === "all" ? "Marginal" : "Less decisive"}</span><span class="ramp" style="background:linear-gradient(90deg, ${NEUTRAL}, ${rampColour})"></span><span>${result.focus === "all" ? "Clear lead" : "More decisive"}</span>${countryLand.length ? '<span class="outside-range"><i></i>Outside 400 km airport coverage</span>' : ""}${chips}${$("catchment-outline").checked ? '<span class="outline"></span><span>Catchment outline</span>' : ""}`;
+      $("legend").innerHTML = `<span>${result.focus === "all" ? "Marginal" : "Less decisive"}</span><span class="ramp" style="background:linear-gradient(90deg, ${NEUTRAL}, ${rampColour})"></span><span>${result.focus === "all" ? "Clear lead" : "More decisive"}</span>${noBlockKey}${chips}${$("catchment-outline").checked ? '<span class="outline"></span><span>Catchment outline</span>' : ""}`;
     }
     if (roads) $("legend").insertAdjacentHTML("beforeend", '<span class="road-key"></span><span>Road between airports</span>');
   }
@@ -691,8 +715,12 @@
     try {
       const [nextData, nextShapes, nextLand] = await loadCountry(code);
       if (request !== countryRequest) return;
-      activeCountry = code; data = nextData; shapes = nextShapes; countryLand = nextLand;
+      activeCountry = code; data = nextData; shapes = nextShapes; holeShapes = null; countryLand = nextLand;
       buildControls(); update(true); syncExportControls();
+      loadHoles(code).then(nextHoles => {
+        if (code !== activeCountry) return;
+        holeShapes = nextHoles; update(false);
+      });
     } catch (error) {
       if (request === countryRequest) {
         $("map-subtitle").textContent = `The saved ${COUNTRIES[code].name} data could not be loaded. Please try again later.`;
@@ -711,6 +739,11 @@
     renderer = L.svg(); map = L.map("map", { renderer, scrollWheelZoom: true });
     tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: "© OpenStreetMap contributors" });
     update(true);
+    const initialCountry = activeCountry;
+    loadHoles(initialCountry).then(nextHoles => {
+      if (initialCountry !== activeCountry) return;
+      holeShapes = nextHoles; update(false);
+    });
     syncExportControls();
     $("export-svg").addEventListener("click", downloadSvg);
     $("export-png").addEventListener("click", downloadPng);
