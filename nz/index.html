@@ -705,6 +705,13 @@
         }
       });
 
+      // "Show legend" (phone_chart.js) applies to both charts.
+      document.addEventListener("altitude:legend", () => {
+        for (const panel of panels) {
+          if (panel.spec && !panel.el.hidden) draw(panel, panel.spec, panel.chart.layout?.xaxis?.range).catch(() => showError(panel));
+        }
+      });
+
       addEventListener("resize", refit);
       addEventListener("hashchange", route);
       readJson("index.json")

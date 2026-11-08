@@ -197,6 +197,12 @@
         try { await draw(activeSpec, dates); } catch (error) { showError(); }
       });
 
+      // "Show legend" (phone_chart.js) redraws in place, keeping the date window.
+      document.addEventListener("altitude:legend", async () => {
+        if (!activeSpec) return;
+        try { await draw(activeSpec, chart.layout?.xaxis?.range); } catch (error) { showError(); }
+      });
+
       async function loadSpec(getSpec, isDefault) {
         const number = ++requestNumber;
         fetchController?.abort();

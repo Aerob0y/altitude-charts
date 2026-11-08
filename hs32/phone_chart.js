@@ -13,6 +13,45 @@
     return lines.join("<br>");
   };
 
+  // "Show legend": swaps direct end labels for a legend below the chart (wide screens;
+  // phones always use the legend). Saved images copy the chart, so they follow it too.
+  let legendOn = false;
+  try { legendOn = localStorage.getItem("altitude-legend") === "1"; } catch (error) {}
+  const labelled = new Map();
+  const isEndLabel = trace => trace.mode === "text" && trace.showlegend === false;
+  let legendControl;
+
+  function showLegendControl(chart, hasLabels) {
+    const controls = document.getElementById("controls");
+    if (!legendControl) {
+      legendControl = document.createElement("label");
+      legendControl.className = "legend-control";
+      legendControl.title = "Show a legend below the chart instead of labels at the line ends";
+      const box = document.createElement("input");
+      box.type = "checkbox";
+      box.checked = legendOn;
+      box.addEventListener("change", () => {
+        legendOn = box.checked;
+        try { localStorage.setItem("altitude-legend", legendOn ? "1" : "0"); } catch (error) {}
+        // Each page redraws its chart(s) through its usual draw().
+        document.dispatchEvent(new CustomEvent("altitude:legend"));
+      });
+      legendControl.append(box, " Show legend");
+    }
+    if (legendControl.parentElement !== controls) controls.append(legendControl);
+    labelled.set(chart, hasLabels);
+    const wanted = !narrow() && [...labelled].some(([item, value]) => value && item.isConnected && !item.closest("[hidden]"));
+    legendControl.hidden = !wanted;
+    if (wanted && controls.hidden) controls.hidden = false;
+  }
+
+  function legendInstead(spec, layout) {
+    layout.showlegend = true;
+    // End labels widen the right margin; the legend doesn't need it.
+    layout.margin = {...layout.margin, r: layout.yaxis2 ? layout.margin?.r : 24};
+    return {data: spec.data.filter(trace => !isEndLabel(trace)), layout};
+  }
+
   function setup() {
     if (options) return;
     const controls = document.getElementById("controls");
@@ -74,7 +113,10 @@
     chart._altitudeExportTitle = structuredClone(spec.layout?.title);
     chart._altitudeExportSelector = structuredClone(spec.layout?.xaxis?.rangeselector);
     chart._altitudeSeriesNames = spec.data.filter(trace => trace.mode !== "text").map(trace => trace.name || "series");
-    if (!narrow()) return {data: spec.data, layout};
+    const hasLabels = spec.data.some(isEndLabel);
+    showLegendControl(chart, hasLabels);
+    updateSummary();
+    if (!narrow()) return hasLabels && legendOn ? legendInstead(spec, layout) : {data: spec.data, layout};
     const subtitle = target?.subtitle || shared.subtitle, dates = target?.dates || shared.dates;
     const title = typeof spec.layout?.title === "string" ? spec.layout.title : spec.layout?.title?.text || "";
     const parts = title.split(/<br\s*\/?\s*>/i);

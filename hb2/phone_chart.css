@@ -16,3 +16,5 @@
   .chart-dates button[aria-pressed="true"] { background: #222326; border-color: #222326; color: #F6F0E6; }
   .topic .chart-area, .page .chart-area { flex: 0 0 auto; height: min(70vh, 520px); min-height: 320px; }
 }
+.legend-control { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+.legend-control[hidden] { display: none; }

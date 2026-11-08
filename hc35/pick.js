@@ -54,6 +54,9 @@
     }
   }
 
+  // Matches standard_plot(): two non-breaking spaces keep end labels clear of the line.
+  const labelText = name => "\u00a0\u00a0" + name;
+
   const titleOf = (axis, text) => ({...(typeof axis?.title === "object" ? axis.title : {}), text});
 
   function viewSpec(source, view) {
@@ -67,7 +70,7 @@
       if (trace.mode === "text") {
         trace.x = [packed.dates[last]];
         trace.y = [values[last]];
-        trace.text = view.label;
+        trace.text = labelText(view.label);
       } else {
         trace.x = packed.dates;
         trace.y = values;
@@ -109,7 +112,7 @@
         recolour(trace, palette[k % palette.length], k === 0);
         if (clash) {
           trace.name = labels[chosen[k]];
-          if (trace.mode === "text") trace.text = trace.name;
+          if (trace.mode === "text") trace.text = labelText(trace.name);
         }
         // Plotly specs store a lone end label's y as a number.
         if (trace.mode === "text") {
