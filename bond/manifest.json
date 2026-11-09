@@ -3,7 +3,7 @@
   "title": "Rental market",
   "source": "Tenancy Services bond data (MBIE)",
   "note": "Shows tenancy bonds and weekly rents by location. Compare annual change or show rents in today's dollars.",
-  "updated": "2026-10-04",
+  "updated": "2026-11-10",
   "views": [
     {
       "label": "New Zealand",

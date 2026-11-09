@@ -3,7 +3,7 @@
   "title": "Ireland: house prices",
   "source": "CSO residential property price index",
   "note": "Monthly residential property prices for Ireland, Dublin and outside Dublin. Compare annual change in percent or the index (2015 = 100), for all dwellings, houses or apartments.",
-  "updated": "2026-10-09",
+  "updated": "2026-11-10",
   "views": [
     {
       "label": "All: Annual % change",

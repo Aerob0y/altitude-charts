@@ -4607,57 +4607,75 @@ Date,STATISTIC,property,Value
 2026-04-01,HPM09C04,National excluding Dublin - all residential properties,6.8
 2026-04-01,HPM09C04,National excluding Dublin - houses,6.6
 2026-04-01,HPM09C04,National excluding Dublin - apartments,9.7
-2026-05-01,HPM09C01,National - all residential properties,205.8
+2026-05-01,HPM09C01,National - all residential properties,205.9
 2026-05-01,HPM09C01,National - houses,206.4
 2026-05-01,HPM09C01,National - apartments,204.4
 2026-05-01,HPM09C01,Dublin - all residential properties,176.8
 2026-05-01,HPM09C01,Dublin - houses,176.1
-2026-05-01,HPM09C01,Dublin - apartments,181.8
-2026-05-01,HPM09C01,National excluding Dublin - all residential properties,236.4
+2026-05-01,HPM09C01,Dublin - apartments,181.9
+2026-05-01,HPM09C01,National excluding Dublin - all residential properties,236.5
 2026-05-01,HPM09C01,National excluding Dublin - houses,234
-2026-05-01,HPM09C01,National excluding Dublin - apartments,266
+2026-05-01,HPM09C01,National excluding Dublin - apartments,265.9
 2026-05-01,HPM09C04,National - all residential properties,6.1
 2026-05-01,HPM09C04,National - houses,5.9
 2026-05-01,HPM09C04,National - apartments,7.4
 2026-05-01,HPM09C04,Dublin - all residential properties,5.1
 2026-05-01,HPM09C04,Dublin - houses,4.7
-2026-05-01,HPM09C04,Dublin - apartments,6.3
+2026-05-01,HPM09C04,Dublin - apartments,6.4
 2026-05-01,HPM09C04,National excluding Dublin - all residential properties,6.9
 2026-05-01,HPM09C04,National excluding Dublin - houses,6.7
 2026-05-01,HPM09C04,National excluding Dublin - apartments,9.8
 2026-06-01,HPM09C01,National - all residential properties,207
 2026-06-01,HPM09C01,National - houses,207.5
-2026-06-01,HPM09C01,National - apartments,206
+2026-06-01,HPM09C01,National - apartments,206.1
 2026-06-01,HPM09C01,Dublin - all residential properties,177.5
 2026-06-01,HPM09C01,Dublin - houses,176.6
-2026-06-01,HPM09C01,Dublin - apartments,183
+2026-06-01,HPM09C01,Dublin - apartments,183.1
 2026-06-01,HPM09C01,National excluding Dublin - all residential properties,238.2
 2026-06-01,HPM09C01,National excluding Dublin - houses,235.7
 2026-06-01,HPM09C01,National excluding Dublin - apartments,268.8
 2026-06-01,HPM09C04,National - all residential properties,5.6
 2026-06-01,HPM09C04,National - houses,5.2
-2026-06-01,HPM09C04,National - apartments,7.9
+2026-06-01,HPM09C04,National - apartments,8
 2026-06-01,HPM09C04,Dublin - all residential properties,4.6
 2026-06-01,HPM09C04,Dublin - houses,3.9
-2026-06-01,HPM09C04,Dublin - apartments,7
+2026-06-01,HPM09C04,Dublin - apartments,7.1
 2026-06-01,HPM09C04,National excluding Dublin - all residential properties,6.4
 2026-06-01,HPM09C04,National excluding Dublin - houses,6.1
 2026-06-01,HPM09C04,National excluding Dublin - apartments,10
-2026-07-01,HPM09C01,National - all residential properties,208.6
-2026-07-01,HPM09C01,National - houses,209.3
-2026-07-01,HPM09C01,National - apartments,206.6
-2026-07-01,HPM09C01,Dublin - all residential properties,178.1
-2026-07-01,HPM09C01,Dublin - houses,177.4
+2026-07-01,HPM09C01,National - all residential properties,208.3
+2026-07-01,HPM09C01,National - houses,208.9
+2026-07-01,HPM09C01,National - apartments,206.5
+2026-07-01,HPM09C01,Dublin - all residential properties,178.2
+2026-07-01,HPM09C01,Dublin - houses,177.5
 2026-07-01,HPM09C01,Dublin - apartments,183.4
-2026-07-01,HPM09C01,National excluding Dublin - all residential properties,240.7
-2026-07-01,HPM09C01,National excluding Dublin - houses,238.3
-2026-07-01,HPM09C01,National excluding Dublin - apartments,270.1
-2026-07-01,HPM09C04,National - all residential properties,5.5
-2026-07-01,HPM09C04,National - houses,5.2
+2026-07-01,HPM09C01,National excluding Dublin - all residential properties,240
+2026-07-01,HPM09C01,National excluding Dublin - houses,237.5
+2026-07-01,HPM09C01,National excluding Dublin - apartments,269.7
+2026-07-01,HPM09C04,National - all residential properties,5.4
+2026-07-01,HPM09C04,National - houses,5
 2026-07-01,HPM09C04,National - apartments,7.5
-2026-07-01,HPM09C04,Dublin - all residential properties,4.4
-2026-07-01,HPM09C04,Dublin - houses,3.7
+2026-07-01,HPM09C04,Dublin - all residential properties,4.5
+2026-07-01,HPM09C04,Dublin - houses,3.8
 2026-07-01,HPM09C04,Dublin - apartments,6.8
-2026-07-01,HPM09C04,National excluding Dublin - all residential properties,6.4
-2026-07-01,HPM09C04,National excluding Dublin - houses,6.2
-2026-07-01,HPM09C04,National excluding Dublin - apartments,9.2
+2026-07-01,HPM09C04,National excluding Dublin - all residential properties,6.1
+2026-07-01,HPM09C04,National excluding Dublin - houses,5.8
+2026-07-01,HPM09C04,National excluding Dublin - apartments,9
+2026-08-01,HPM09C01,National - all residential properties,209.7
+2026-08-01,HPM09C01,National - houses,210.5
+2026-08-01,HPM09C01,National - apartments,206.8
+2026-08-01,HPM09C01,Dublin - all residential properties,178.4
+2026-08-01,HPM09C01,Dublin - houses,177.8
+2026-08-01,HPM09C01,Dublin - apartments,183.1
+2026-08-01,HPM09C01,National excluding Dublin - all residential properties,242.6
+2026-08-01,HPM09C01,National excluding Dublin - houses,240.2
+2026-08-01,HPM09C01,National excluding Dublin - apartments,271.9
+2026-08-01,HPM09C04,National - all residential properties,5.1
+2026-08-01,HPM09C04,National - houses,4.9
+2026-08-01,HPM09C04,National - apartments,6.6
+2026-08-01,HPM09C04,Dublin - all residential properties,3.9
+2026-08-01,HPM09C04,Dublin - houses,3.3
+2026-08-01,HPM09C04,Dublin - apartments,5.7
+2026-08-01,HPM09C04,National excluding Dublin - all residential properties,6.2
+2026-08-01,HPM09C04,National excluding Dublin - houses,6
+2026-08-01,HPM09C04,National excluding Dublin - apartments,8.6
