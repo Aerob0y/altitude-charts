@@ -46,8 +46,8 @@
     }
   }
   // The current map: a latitude-adjusted equirectangular projection, unchanged.
-  function flat_frame(arcs, reserve, head) {
-    const bounds = extent(arcs.flat()), centre = (bounds[0] + bounds[1]) / 2;
+  function flat_frame(arcs, rings, reserve, head) {
+    const bounds = extent(arcs.flat().concat(rings.flatMap(ring => ring.points))), centre = (bounds[0] + bounds[1]) / 2;
     const aspect = Math.max(.25, Math.cos((bounds[2] + bounds[3]) / 2 * Math.PI / 180));
     const scale = Math.min((W - 140) / ((bounds[1] - bounds[0]) * aspect), (H - reserve) / (bounds[3] - bounds[2]));
     // Fill the preview with context land, rather than an inset clipped rectangle.
@@ -86,7 +86,15 @@
         previous = xy; return `${move ? "M" : "L"}${xy[0].toFixed(2)},${xy[1].toFixed(2)}`;
       }).join("");
     };
-    return { left, top, plot_width, plot_height, land: land_paths, route, point };
+    const ring = points => {
+      let previous;
+      return points.map((p, i) => {
+        const longitude = i ? previous + M.wrap(p[0] - previous, 0) : M.wrap(p[0], centre);
+        previous = longitude; const [x, y] = project([longitude, p[1]]);
+        return `${i ? "L" : "M"}${x.toFixed(2)},${y.toFixed(2)}`;
+      }).join("") + "Z";
+    };
+    return { left, top, plot_width, plot_height, land: land_paths, route, ring, point };
   }
   // The airport with the most connections centres the polar and globe views.
   function busiest(routes) {
@@ -95,7 +103,7 @@
     return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0][0];
   }
   // Polar, globe and world views. d3-geo clips land and paths at the horizon and the date line.
-  function round_frame(routes, centre, reserve, head) {
+  function round_frame(routes, rings, centre, reserve, head) {
     const mode = $("projection").value, sphere = { type: "Sphere" };
     const lines = routes.map(r => [data.airports.get(r.origin), data.airports.get(r.destination)]);
     // Polar stops just short of the far point, where land shapes can't be drawn reliably.
@@ -106,13 +114,14 @@
     // A globe always shows its whole disc; a part-globe crops awkwardly.
     const whole = mode === "globe" || $("extent").value === "world" || !lines.length;
     projection.precision(.2).fitExtent([[left + 30, top + 20], [left + plot_width - 30, top + plot_height - 20]],
-      whole ? sphere : { type: "MultiLineString", coordinates: lines });
+      whole ? sphere : { type: "MultiLineString", coordinates: lines.concat(rings.map(ring => ring.points)) });
     const path = d3.geoPath(projection), rotate = projection.rotate(), facing = [-rotate[0], -rotate[1]];
     // Airports on the far side of the globe are hidden.
     const point = p => mode === "globe" && d3.geoDistance(p, facing) > Math.PI / 2 - 1e-6 ? null : projection(p);
     return { left, top, plot_width, plot_height, point,
       sphere: path(sphere), grid: $("grid").value === "show" ? path(d3.geoGraticule10()) : "",
-      land: [path(land)].filter(Boolean), route: i => path({ type: "LineString", coordinates: lines[i] }) };
+      land: [path(land)].filter(Boolean), route: i => path({ type: "LineString", coordinates: lines[i] }),
+      ring: points => path({ type: "Polygon", coordinates: [[...points, points[0]]] }) };
   }
   function export_size() {
     const custom = $("export-size").value === "custom";
@@ -122,6 +131,20 @@
     [export_width, export_height] = size;
     const ratio = export_width / export_height;
     W = Math.max(1200, 750 * ratio); H = W / ratio;
+  }
+  const ring_limits = { km: 20000, miles: 12400, nautical_miles: 10800 };
+  function distance_rings() {
+    const value = $("ring-distance").value.trim();
+    const codes = $("ring-airports").value.toUpperCase().split(/[\s,]+/).filter(Boolean);
+    const unit = $("ring-unit").value, limit = ring_limits[unit];
+    $("ring-distance").max = limit;
+    if (!value && !codes.length) return [];
+    const distance = Number(value);
+    if (!Number.isFinite(distance) || distance <= 0 || distance > limit) throw Error(`Distance rings: use a distance from 1 to ${limit.toLocaleString()} ${unit === "km" ? "km" : unit === "miles" ? "miles" : "nautical miles"}.`);
+    if (!codes.length) throw Error("Distance rings: enter at least one airport code.");
+    const unknown = [...new Set(codes.filter(code => !data.airports.has(code)))];
+    if (unknown.length) throw Error(`Distance rings: unknown airport codes: ${unknown.join(", ")}.`);
+    return [...new Set(codes)].map(code => ({ code, distance, unit, points: M.distance_circle(data.airports.get(code), distance, unit) }));
   }
   function render() {
     const mode = $("projection").value, round = mode !== "flat";
@@ -161,19 +184,20 @@
       const metric = $("metric").value, routes = totals.filter(r => metric === "equal" || r[metric] > 0);
       const codes = [...new Set(routes.flatMap(r => [r.origin, r.destination]))];
       const arcs = routes.map(r => M.great_circle(data.airports.get(r.origin), data.airports.get(r.destination)));
+      const rings = distance_rings();
       const centre_code = $("centre").value || (routes.length ? busiest(routes) : codes[0]);
-      const frame = mode === "flat" ? flat_frame(arcs, reserve, head) : round_frame(routes, data.airports.get(centre_code), reserve, head);
+      const frame = mode === "flat" ? flat_frame(arcs, rings, reserve, head) : round_frame(routes, rings, data.airports.get(centre_code), reserve, head);
       const { left, top, plot_width, plot_height } = frame;
       const bg = $("background").value, colour = $("route-colour").value;
       const luminance = bg.slice(1).match(/../g).map(v => parseInt(v, 16)).reduce((sum, v, i) => sum + v * [.2126, .7152, .0722][i], 0);
       const light = luminance < 140, ink = light ? "#e6f3ff" : "#102b3c", muted = light ? "#9bb5c9" : "#405c6c";
-      const svg = make("svg", { xmlns: NS, viewBox: `0 0 ${W} ${H}`, width: export_width, height: export_height, role: "img", "aria-labelledby": "map-title map-desc" });
+      const svg = make("svg", { xmlns: NS, viewBox: `0 0 ${W} ${H}`, width: export_width, height: export_height, overflow: "hidden", role: "img", "aria-labelledby": "map-title map-desc" });
       svg.append(make("title", { id: "map-title" }, $("title").value || "Airport connections"),
         make("desc", { id: "map-desc" }, `${routes.length} airport-pair connections. ${$("source").value}. Great-circle paths; not actual flight tracks.`));
       const defs = make("defs"), clip = make("clipPath", { id: "map-clip" });
       clip.append(make("rect", { x: left, y: top, width: plot_width, height: plot_height }));
       defs.append(clip); svg.append(defs);
-      svg.append(make("rect", { width: W, height: H, fill: bg }));
+      svg.append(make("rect", { width: W, height: H, fill: bg, "data-background": "true" }));
       const text = (x, y, size, value, fill = ink, attrs = {}) => make("text", { x, y, fill, "font-family": "Arial, sans-serif", "font-size": size, ...attrs }, value);
       if (words) svg.append(text(42, 40, 12, "ALTITUDE  /  AIRPORT CONNECTIVITY", muted, { "letter-spacing": 2.5 }),
         text(42, 85, 30, $("title").value || "Airport connections", ink, { "font-weight": 600 }),
@@ -182,6 +206,25 @@
       if (frame.sphere) geography.append(make("path", { d: frame.sphere, fill: "none", stroke: muted, "stroke-opacity": .6, "stroke-width": 1.2 }));
       if (frame.grid) geography.append(make("path", { d: frame.grid, fill: "none", stroke: muted, "stroke-opacity": .25, "stroke-width": .6 }));
       for (const d of frame.land) geography.append(make("path", { d, fill: light ? "#152e40" : "#d6e2e9", stroke: light ? "#2c495d" : "#acbfcd", "stroke-width": .7, "fill-rule": "evenodd" }));
+      const ring_colour = light ? "#8fd3cf" : "#0e6b6b";
+      if (rings.length && $("shade-outside-rings").checked) {
+        const mask = make("mask", { id: "outside-rings", maskUnits: "userSpaceOnUse", x: left, y: top, width: plot_width, height: plot_height });
+        mask.append(make("rect", { x: left, y: top, width: plot_width, height: plot_height, fill: "white" }));
+        rings.forEach(ring => mask.append(make("path", { d: frame.ring(ring.points), fill: "black" })));
+        defs.append(mask);
+        svg.append(make("rect", { x: left, y: top, width: plot_width, height: plot_height, fill: light ? "#081827" : "#12243d", opacity: .52, mask: "url(#outside-rings)", "clip-path": "url(#map-clip)" }));
+      }
+      if (rings.length) {
+        const ring_layer = make("g", { "clip-path": "url(#map-clip)", fill: "none", stroke: ring_colour }); svg.append(ring_layer);
+        rings.forEach(ring => {
+          ring_layer.append(make("path", { d: frame.ring(ring.points), "stroke-width": 1.5, "stroke-dasharray": "5 4" }));
+          const xy = frame.point(ring.points[0]); if (!xy) return;
+          const [x, y] = xy, label = `${ring.code} · ${ring.distance.toLocaleString()} ${ring.unit === "km" ? "km" : ring.unit === "miles" ? "mi" : "nm"}`;
+          const lx = Math.max(left + 4, Math.min(left + plot_width - label.length * 7, x + 8)), ly = Math.max(top + 14, y - 8);
+          ring_layer.append(text(lx, ly, 12, label, bg, { "font-weight": 600, stroke: bg, "stroke-width": 3, "paint-order": "stroke", "data-background-halo": "true", "aria-hidden": "true" }),
+            text(lx, ly, 12, label, ring_colour, { "font-weight": 600 }));
+        });
+      }
       const max = metric === "equal" ? 1 : Math.max(...routes.map(r => r[metric]));
       const route_layer = make("g", { "clip-path": "url(#map-clip)", fill: "none", "stroke-linecap": "round" }); svg.append(route_layer);
       routes.forEach((route, i) => {
@@ -223,7 +266,7 @@
         // The halo is its own text element below the label: PowerPoint, Illustrator and some
         // viewers ignore paint-order and would draw the outline over the letters.
         const weight = { "font-weight": key ? 700 : 600 };
-        labels.append(text(scored.lx, scored.ly, size, label, bg, { ...weight, stroke: bg, "stroke-width": 4, "stroke-linejoin": "round", "aria-hidden": "true" }),
+        labels.append(text(scored.lx, scored.ly, size, label, bg, { ...weight, stroke: bg, "stroke-width": 4, "stroke-linejoin": "round", "data-background-halo": "true", "aria-hidden": "true" }),
           text(scored.lx, scored.ly, size, label, key ? accent : ink, weight));
       }
       if (words && legend.size > 1) {
@@ -241,7 +284,8 @@
       $("summary").textContent = `${routes.length} connections · ${codes.length} airports`;
       $("route-totals").replaceChildren(...totals.map(r => {
         const tr = document.createElement("tr");
-        for (const value of [`${r.origin} ↔ ${r.destination}`, r.flights?.toLocaleString() ?? "Not supplied", r.seats?.toLocaleString() ?? "Not supplied", [...r.airlines].join(", ") || "Not supplied", route_colour(r)]) {
+        const distance = Math.round(M.great_circle_distance(data.airports.get(r.origin), data.airports.get(r.destination))).toLocaleString();
+        for (const value of [`${r.origin} ↔ ${r.destination}`, distance, r.flights?.toLocaleString() ?? "Not supplied", r.seats?.toLocaleString() ?? "Not supplied", [...r.airlines].join(", ") || "Not supplied", route_colour(r)]) {
           const td = document.createElement("td"); td.textContent = value; tr.append(td);
         }
         return tr;
@@ -253,8 +297,12 @@
     const url = URL.createObjectURL(blob), a = document.createElement("a");
     a.href = url; a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(url), 30000);
   }
-  const svg_blob = () => new Blob([new XMLSerializer().serializeToString(current_svg)], { type: "image/svg+xml;charset=utf-8" });
-  $("svg-export").addEventListener("click", () => download(svg_blob(), "altitude-route-map.svg"));
+  function svg_blob(transparent = false) {
+    const svg = current_svg.cloneNode(true);
+    if (transparent) svg.querySelectorAll("[data-background], [data-background-halo]").forEach(node => node.remove());
+    return new Blob([new XMLSerializer().serializeToString(svg)], { type: "image/svg+xml;charset=utf-8" });
+  }
+  $("svg-export").addEventListener("click", () => download(svg_blob($("transparent-svg").checked), "altitude-route-map.svg"));
   $("png-export").addEventListener("click", async () => {
     const size = [export_width, export_height];
     const print_size = ["3508,2480", "4961,3508"].includes($("export-size").value);
@@ -316,5 +364,27 @@
       await example();
     } catch (e) { message(e.message, true); }
   }
+  // Help tips sit in a fixed layer so they never run off a narrow screen.
+  let open_tip = null;
+  const hide_tip = () => { if (!open_tip) return; open_tip.classList.remove("open"); open_tip.previousElementSibling.setAttribute("aria-expanded", "false"); open_tip = null; };
+  const show_tip = button => {
+    const tip = button.nextElementSibling; if (open_tip === tip || !tip.textContent.trim()) return;
+    hide_tip(); tip.classList.add("open"); button.setAttribute("aria-expanded", "true"); open_tip = tip;
+    const b = button.getBoundingClientRect(), t = tip.getBoundingClientRect();
+    const left = Math.max(12, Math.min(innerWidth - t.width - 12, b.left - 12));
+    const below = b.bottom + 6, top = below + t.height > innerHeight - 12 && b.top - t.height - 6 > 12 ? b.top - t.height - 6 : below;
+    tip.style.left = `${left}px`; tip.style.top = `${top}px`;
+  };
+  document.querySelectorAll(".help").forEach(button => {
+    button.setAttribute("aria-expanded", "false");
+    button.addEventListener("pointerenter", e => { if (e.pointerType === "mouse") show_tip(button); });
+    button.addEventListener("pointerleave", e => { if (e.pointerType === "mouse") hide_tip(); });
+    button.addEventListener("focus", () => show_tip(button)); button.addEventListener("blur", hide_tip);
+    // Inside a label a click would also toggle its field, so keep the click on the button.
+    // Tapping shows the tip; tapping elsewhere (blur) hides it.
+    button.addEventListener("click", e => { e.preventDefault(); e.stopPropagation(); show_tip(button); });
+  });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") hide_tip(); });
+  addEventListener("scroll", hide_tip, { passive: true }); addEventListener("resize", hide_tip);
   start();
 })();

@@ -150,6 +150,25 @@
     return { routes: parsed, airports: coordinates };
   }
   const radians = Math.PI / 180;
+  const EARTH_RADIUS_KM = 6371.0088;
+  const distance_factors = { km: 1, miles: 1.609344, nautical_miles: 1.852 };
+  function great_circle_distance(a, b, unit = "km") {
+    if (!distance_factors[unit]) throw Error(`Unknown distance unit: ${unit}.`);
+    const lat_delta = (b[1] - a[1]) * radians, lon_delta = (b[0] - a[0]) * radians;
+    const h = Math.sin(lat_delta / 2) ** 2 + Math.cos(a[1] * radians) * Math.cos(b[1] * radians) * Math.sin(lon_delta / 2) ** 2;
+    return 2 * EARTH_RADIUS_KM * Math.atan2(Math.sqrt(h), Math.sqrt(1 - h)) / distance_factors[unit];
+  }
+  function distance_circle(centre, distance, unit = "km", steps = 144) {
+    if (!distance_factors[unit]) throw Error(`Unknown distance unit: ${unit}.`);
+    const angular_distance = distance * distance_factors[unit] / EARTH_RADIUS_KM;
+    const latitude = centre[1] * radians, longitude = centre[0] * radians;
+    return Array.from({ length: steps }, (_, i) => {
+      const bearing = i / steps * 2 * Math.PI;
+      const point_latitude = Math.asin(Math.sin(latitude) * Math.cos(angular_distance) + Math.cos(latitude) * Math.sin(angular_distance) * Math.cos(bearing));
+      const point_longitude = longitude + Math.atan2(Math.sin(bearing) * Math.sin(angular_distance) * Math.cos(latitude), Math.cos(angular_distance) - Math.sin(latitude) * Math.sin(point_latitude));
+      return [((point_longitude / radians + 540) % 360) - 180, point_latitude / radians];
+    });
+  }
   function great_circle(a, b, steps = 64) {
     const vector = ([lon, lat]) => [Math.cos(lat * radians) * Math.cos(lon * radians), Math.cos(lat * radians) * Math.sin(lon * radians), Math.sin(lat * radians)];
     const u = vector(a), v = vector(b);
@@ -186,7 +205,7 @@
     }
     return [...groups.values()];
   }
-  const api = { airports, set_airports, parse_routes, png_dpi, MAX_ROWS, parse_csv, normalise, great_circle, fit_extent, wrap, aggregate };
+  const api = { airports, set_airports, parse_routes, png_dpi, MAX_ROWS, parse_csv, normalise, great_circle, great_circle_distance, distance_circle, fit_extent, wrap, aggregate };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.RouteMap = api;
 })(typeof window !== "undefined" ? window : globalThis);

@@ -16,11 +16,13 @@ fieldset { border: 0; padding: 0; margin: 0 0 24px; min-width: 0; }
 fieldset:last-child { margin-bottom: 0; }
 legend { font-weight: bold; color: #0E6B6B; margin-bottom: 14px; }
 label { display: block; font-size: 12px; margin: 12px 0 5px; }
+.checkbox { display: flex; align-items: center; gap: 8px; }
 input, select, button { font: inherit; max-width: 100%; }
 input:not([type=range]):not([type=color]), select { width: 100%; padding: 8px; border: 1px solid #DCD6CB; background: white; color: #222326; border-radius: 3px; }
 input[type=file] { font-size: 12px; }
 input[type=range] { width: 100%; accent-color: #0E6B6B; }
 input[type=color] { width: 100%; height: 34px; border: 1px solid #DCD6CB; background: white; }
+.checkbox input[type=checkbox] { width: auto; flex: 0 0 auto; margin: 0; padding: 0; }
 button { padding: 8px 12px; border: 1px solid #DCD6CB; border-radius: 3px; background: white; color: #0E6B6B; cursor: pointer; }
 button:hover { background: #e6efea; }
 button:disabled { opacity: .45; cursor: default; }
@@ -51,3 +53,12 @@ footer { margin-top: 28px; border-top: 1px solid #DCD6CB; padding-top: 12px; }
 }
 
 textarea { width: 100%; max-width: 100%; padding: 8px; font: inherit; border: 1px solid #DCD6CB; border-radius: 3px; resize: vertical; }
+/* "?" help buttons: the explanation shows on hover, focus or tap. */
+.help { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; margin-left: 6px; padding: 0; border: 1px solid #DCD6CB; border-radius: 50%; background: white; color: #64676C; font-size: 10px; font-weight: 600; line-height: 1; vertical-align: 1px; cursor: help; }
+.help:hover, .help[aria-expanded=true] { background: #e6efea; color: #0E6B6B; border-color: #0E6B6B; }
+.help:has(+ .tip:empty) { display: none; }
+.tip { display: none; position: fixed; z-index: 10; width: min(300px, calc(100vw - 24px)); padding: 10px 12px; background: #222326; color: #F6F0E6; font-size: 12px; font-weight: 400; line-height: 1.45; border-radius: 4px; box-shadow: 0 4px 14px rgba(0, 0, 0, .18); }
+.tip.open { display: block; }
+.tip-p { display: block; }
+.tip-p + .tip-p { margin-top: 6px; }
+.summary-wrap { display: inline-flex; align-items: center; }

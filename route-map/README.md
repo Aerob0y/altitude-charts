@@ -17,6 +17,12 @@ Projections:
 
 Australia/New Zealand and custom bounds apply only to the flat projection.
 
+Distance rings can be drawn from one or more airport codes in kilometres,
+miles or nautical miles. They are labelled, included in automatic bounds and
+can shade the area outside the rings. Route totals show calculated great-circle
+distance in kilometres. SVG exports can omit their background and are clipped
+to the map canvas; background-colour label halos are also omitted in that mode.
+
 ## Bundled sources
 
 - [d3-geo 3.1.1](https://github.com/d3/d3-geo) and its dependency

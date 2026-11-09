@@ -24,19 +24,11 @@
     <div class="workspace">
       <form id="controls" aria-label="Map settings">
         <fieldset><legend>01 / Route data</legend>
-          <label for="typed-routes">Type or paste routes (IATA or ICAO codes)</label>
+          <label for="typed-routes">Type or paste routes<button type="button" class="help" aria-label="More information" aria-describedby="help-1">?</button><span class="tip" role="tooltip" id="help-1">Use IATA or ICAO airport codes. Separate routes with commas or new lines. Chains: AKL-ZQN-SYD. One to many: AKL-ZQN/SYD/MEL. Add #rrggbb to colour a route or group. You can also paste a table from Excel with a header row (origin, destination and any of flights, seats, airline, colour).</span></label>
           <textarea id="typed-routes" rows="4" placeholder="AKL-ZQN #ff8800&#10;AKL-SYD/MEL #62cfff"></textarea>
-          <p class="hint">Separate routes with commas or new lines. Chains: AKL-ZQN-SYD. One to many: AKL-ZQN/SYD/MEL. Add #rrggbb to colour a route or group. You can also paste a table from Excel with a header row (origin, destination and any of flights, seats, airline, colour).</p>
           <button id="draw-routes" type="button" disabled>Draw these routes</button>
-          <label for="upload">Open CSV or Excel (.xlsx)</label><input id="upload" type="file" accept=".csv,.xlsx">
-          <p class="hint">Up to 5 MB and 2,000 rows. Excel uses the first worksheet. Required columns: origin, destination.</p>
+          <label for="upload">Open CSV or Excel (.xlsx)<button type="button" class="help" aria-label="More information" aria-describedby="help-2">?</button><span class="tip" role="tooltip" id="help-2"><span class="tip-p">Up to 5 MB and 2,000 rows. Excel uses the first worksheet. Required columns: origin, destination.</span><span class="tip-p">Optional: flights, seats, airline, colour (or color, as #rrggbb), origin_lat, origin_lon, destination_lat, destination_lon. Flights and seats must be non-negative numbers. Use the same period for every row.</span><span class="tip-p">Coordinates use decimal degrees (longitude −180 to 180, latitude −90 to 90). Supply both for codes outside the lookup, or to override a location.</span><span class="tip-p">The lookup uses the repository airport table (9,803 airports). IATA and ICAO codes are accepted. Coordinates in your file override the lookup.</span><span class="tip-p">Rows for the same airport pair are added together, including both directions. Airline filtering happens before adding. Missing values are never treated as zero.</span></span></label><input id="upload" type="file" accept=".csv,.xlsx">
           <div class="actions"><button id="example" type="button">Queenstown example</button><a href="./sample.csv" download>Sample CSV</a><a href="./sample.xlsx" download>Sample Excel</a></div>
-          <details><summary>Columns and airport codes</summary>
-            <p>Optional: flights, seats, airline, colour (or color, as #rrggbb), origin_lat, origin_lon, destination_lat, destination_lon. Flights and seats must be non-negative numbers. Use the same period for every row.</p>
-            <p>Coordinates use decimal degrees (longitude −180 to 180, latitude −90 to 90). Supply both for codes outside the lookup, or to override a location.</p>
-            <p>The lookup uses the repository airport table (9,803 airports). IATA and ICAO codes are accepted. Coordinates in your file override the lookup.</p>
-            <p>Rows for the same airport pair are added together, including both directions. Airline filtering happens before adding. Missing values are never treated as zero.</p>
-          </details>
         </fieldset>
         <fieldset><legend>02 / Presentation</legend>
           <label for="title">Map title</label><input id="title" maxlength="65" value="Queenstown connections">
@@ -45,36 +37,40 @@
             <div><label for="airline">Airline</label><select id="airline"><option value="">All airlines</option></select></div></div>
           <div class="pair"><div><label for="labels">Airport labels</label><select id="labels"><option value="codes">Airport codes</option><option value="names">Names and codes</option><option value="none">None</option></select></div>
             <div><label for="width">Line thickness <output id="width-value">2</output></label><input id="width" type="range" min="1" max="5" step="0.5" value="2"></div></div>
-          <div class="pair colours"><div><label for="route-colour">Routes</label><input id="route-colour" type="color" value="#62cfff"></div>
-            <div><label for="background">Background</label><input id="background" type="color" value="#081827"></div></div>
+          <div class="pair colours"><div><label for="route-colour">Routes</label><input id="route-colour" type="color" value="#0e6b6b"></div>
+            <div><label for="background">Background</label><input id="background" type="color" value="#f6f0e6"></div></div>
           <div class="pair"><div><label for="highlight">Highlight airports</label><input id="highlight" placeholder="e.g. CBR, ZQN" autocomplete="off"></div>
             <div><label for="highlight-colour">Highlight colour</label><input id="highlight-colour" type="color" value="#e0bb7a"></div></div>
           <label for="colour-by">Colour routes</label><select id="colour-by"><option value="route">Route or group colours</option><option value="airline">By airline</option><option value="single">One colour</option></select>
-          <label for="projection">Projection</label><select id="projection"><option value="flat">Flat</option><option value="polar" selected>Polar, centred on an airport</option><option value="globe">Globe</option><option value="world">World (Equal Earth)</option></select>
+          <label for="projection">Projection<button type="button" class="help" aria-label="More information" aria-describedby="projection-hint">?</button><span class="tip" role="tooltip" id="projection-hint"></span></label><select id="projection"><option value="flat">Flat</option><option value="polar" selected>Polar, centred on an airport</option><option value="globe">Globe</option><option value="world">World (Equal Earth)</option></select>
           <div id="round-options"><div class="pair"><div><label for="centre">Centre on</label><select id="centre"><option value="">Busiest airport</option></select></div>
-            <div><label for="grid">Grid lines</label><select id="grid"><option value="show">Show</option><option value="none">Hide</option></select></div></div>
-            <p class="hint" id="projection-hint"></p></div>
+            <div><label for="grid">Grid lines</label><select id="grid"><option value="show">Show</option><option value="none">Hide</option></select></div></div></div>
           <label for="extent">Map extent</label><select id="extent"><option value="auto">Fit the routes</option><option value="tasman">Australia and New Zealand</option><option value="world">World</option><option value="custom">Custom bounds</option></select>
-          <div id="bounds" hidden><p class="hint">For the date line, set east above 180 (e.g. 190).</p><div class="pair">
+          <div id="bounds" hidden><div class="pair">
             <div><label for="west">West longitude</label><input id="west" type="number" min="-180" max="180" value="135" step="any"></div>
-            <div><label for="east">East longitude</label><input id="east" type="number" min="-180" max="540" value="180" step="any"></div>
+            <div><label for="east">East longitude<button type="button" class="help" aria-label="More information" aria-describedby="help-4">?</button><span class="tip" role="tooltip" id="help-4">For the date line, set east above 180 (e.g. 190).</span></label><input id="east" type="number" min="-180" max="540" value="180" step="any"></div>
             <div><label for="south">South latitude</label><input id="south" type="number" min="-90" max="90" value="-49" step="any"></div>
             <div><label for="north">North latitude</label><input id="north" type="number" min="-90" max="90" value="-23" step="any"></div>
           </div></div>
+          <details><summary>Distance rings</summary>
+            <label for="ring-airports">Airport codes<button type="button" class="help" aria-label="More information" aria-describedby="help-5">?</button><span class="tip" role="tooltip" id="help-5">Separate one or more IATA or ICAO codes with commas or spaces.</span></label><input id="ring-airports" maxlength="240" placeholder="AKL, ZQN">
+            <div class="pair"><div><label for="ring-distance">Distance</label><input id="ring-distance" type="number" min="1" max="20000" step="any" placeholder="500"></div>
+              <div><label for="ring-unit">Units</label><select id="ring-unit"><option value="km">Kilometres</option><option value="miles">Miles</option><option value="nautical_miles">Nautical miles</option></select></div></div>
+            <label class="checkbox"><input id="shade-outside-rings" type="checkbox"> Shade outside the rings</label>
+          </details>
         </fieldset>
         <fieldset><legend>03 / Export</legend>
           <label for="map-text">Text on the image</label><select id="map-text"><option value="full">Title, source, legend and notes</option><option value="none">Map only</option></select>
-          <label for="export-size">Size (pixels)</label><select id="export-size"><option value="1920,1080">1920 &times; 1080</option><option value="3840,2160" selected>3840 &times; 2160</option><option value="3508,2480">A4 landscape &middot; 300 dpi</option><option value="4961,3508">A3 landscape &middot; 300 dpi</option><option value="custom">Custom</option></select>
+          <label for="export-size">Size (pixels)<button type="button" class="help" aria-label="More information" aria-describedby="help-6">?</button><span class="tip" role="tooltip" id="help-6">PNG uses these dimensions. SVG stays vector and uses the same shape. Custom: 100 to 8,000 pixels per side, up to 40 million pixels.</span></label><select id="export-size"><option value="1920,1080">1920 &times; 1080</option><option value="3840,2160" selected>3840 &times; 2160</option><option value="3508,2480">A4 landscape &middot; 300 dpi</option><option value="4961,3508">A3 landscape &middot; 300 dpi</option><option value="custom">Custom</option></select>
           <div class="pair" id="export-custom" hidden><div><label for="export-width">Width</label><input id="export-width" type="number" min="100" max="8000" value="1920"></div><div><label for="export-height">Height</label><input id="export-height" type="number" min="100" max="8000" value="1080"></div></div>
-          <p class="hint">PNG uses these dimensions. SVG stays vector and uses the same shape. Custom: 100 to 8,000 pixels per side, up to 40 million pixels.</p>
+          <label class="checkbox"><input id="transparent-svg" type="checkbox"> Transparent SVG background<button type="button" class="help" aria-label="More information" aria-describedby="help-7">?</button><span class="tip" role="tooltip" id="help-7">PNG keeps the selected background colour. SVG exports are clipped to their canvas.</span></label>
         </fieldset>
       </form>
       <section class="result" aria-label="Route map preview">
-        <div class="export-bar"><span id="summary">Loading example…</span><div class="actions"><button id="svg-export" disabled>Download SVG</button><button id="png-export" disabled>Download PNG</button></div></div>
+        <div class="export-bar"><span class="summary-wrap"><span id="summary">Loading example…</span><button type="button" class="help" aria-label="More information" aria-describedby="help-8">?</button><span class="tip" role="tooltip" id="help-8">Paths show great-circle connections, not actual flight tracks. Widths compare airport-pair totals. Zero-value routes are hidden when a metric is selected.</span></span><div class="actions"><button id="svg-export" disabled>Download SVG</button><button id="png-export" disabled>Download PNG</button></div></div>
         <p id="status" role="status" aria-live="polite">Loading geography…</p>
         <div id="map"></div>
-        <p class="caption">Paths show great-circle connections, not actual flight tracks. Widths compare airport-pair totals. Zero-value routes are hidden when a metric is selected.</p>
-        <details><summary>Route totals</summary><div class="table-wrap"><table><thead><tr><th>Airport pair</th><th>Flights</th><th>Seats</th><th>Airlines</th><th>Colour</th></tr></thead><tbody id="route-totals"></tbody></table></div></details>
+        <details><summary>Route totals</summary><div class="table-wrap"><table><thead><tr><th>Airport pair</th><th>Great-circle distance (km)</th><th>Flights</th><th>Seats</th><th>Airlines</th><th>Colour</th></tr></thead><tbody id="route-totals"></tbody></table></div></details>
       </section>
     </div>
     <footer>Geography: <a href="https://www.naturalearthdata.com/downloads/110m-physical-vectors/">Natural Earth</a> (public domain). Airports: Altitude repository reference table. Coordinates in your upload override the lookup.</footer>
