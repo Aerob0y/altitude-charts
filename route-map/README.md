@@ -17,9 +17,16 @@ Projections:
 
 Australia/New Zealand and custom bounds apply only to the flat projection.
 
-Distance rings can be drawn from one or more airport codes in kilometres,
-miles or nautical miles. They are labelled, included in automatic bounds and
-can shade the area outside the rings. Route totals show calculated great-circle
+Distance rings are entered in rows. Each row takes one or more airport codes,
+one or more distances and a unit (kilometres, miles or nautical miles), and
+draws a ring for every airport at every distance (up to 60 rings in all). Rings
+are labelled and can shade the area outside them. They are not part of the
+automatic fit, so adding or changing rings never moves the map.
+
+Drag the preview to move the map; scroll, pinch, double-click or use the + and
+− buttons to zoom. Reset returns to the automatic fit. The move and zoom are
+applied to the projection itself, so SVG and PNG downloads match the preview.
+A new data set, projection, centre or extent resets the view. Route totals show calculated great-circle
 distance in kilometres. SVG exports can omit their background and are clipped
 to the map canvas; background-colour label halos are also omitted in that mode.
 

@@ -53,9 +53,9 @@
             <div><label for="north">North latitude</label><input id="north" type="number" min="-90" max="90" value="-23" step="any"></div>
           </div></div>
           <details><summary>Distance rings</summary>
-            <label for="ring-airports">Airport codes<button type="button" class="help" aria-label="More information" aria-describedby="help-5">?</button><span class="tip" role="tooltip" id="help-5">Separate one or more IATA or ICAO codes with commas or spaces.</span></label><input id="ring-airports" maxlength="240" placeholder="AKL, ZQN">
-            <div class="pair"><div><label for="ring-distance">Distance</label><input id="ring-distance" type="number" min="1" max="20000" step="any" placeholder="500"></div>
-              <div><label for="ring-unit">Units</label><select id="ring-unit"><option value="km">Kilometres</option><option value="miles">Miles</option><option value="nautical_miles">Nautical miles</option></select></div></div>
+            <p class="ring-intro">Each row draws a ring around every airport at every distance<button type="button" class="help" aria-label="More information" aria-describedby="help-5">?</button><span class="tip" role="tooltip" id="help-5">Separate IATA or ICAO codes, and distances, with commas or spaces. For example AKL, ZQN with 500, 1000 draws four rings. Add another row for a different set of airports, distances or units. Rings never move or resize the map.</span></p>
+            <div id="ring-list"></div>
+            <button id="add-ring" type="button">Add another row</button>
             <label class="checkbox"><input id="shade-outside-rings" type="checkbox"> Shade outside the rings</label>
           </details>
         </fieldset>
@@ -69,7 +69,8 @@
       <section class="result" aria-label="Route map preview">
         <div class="export-bar"><span class="summary-wrap"><span id="summary">Loading example…</span><button type="button" class="help" aria-label="More information" aria-describedby="help-8">?</button><span class="tip" role="tooltip" id="help-8">Paths show great-circle connections, not actual flight tracks. Widths compare airport-pair totals. Zero-value routes are hidden when a metric is selected.</span></span><div class="actions"><button id="svg-export" disabled>Download SVG</button><button id="png-export" disabled>Download PNG</button></div></div>
         <p id="status" role="status" aria-live="polite">Loading geography…</p>
-        <div id="map"></div>
+        <div class="map-frame"><div id="map"></div>
+          <div class="map-tools" role="group" aria-label="Move and zoom the map"><button id="zoom-in" type="button" aria-label="Zoom in">+</button><button id="zoom-out" type="button" aria-label="Zoom out">&minus;</button><button id="reset-view" type="button">Reset</button><button type="button" class="help" aria-label="More information" aria-describedby="help-9">?</button><span class="tip" role="tooltip" id="help-9">Drag the map to move it. Scroll, pinch or use + and &minus; to zoom. Downloads show the map exactly as it sits here. Reset goes back to the automatic fit.</span></div></div>
         <details><summary>Route totals</summary><div class="table-wrap"><table><thead><tr><th>Airport pair</th><th>Great-circle distance (km)</th><th>Flights</th><th>Seats</th><th>Airlines</th><th>Colour</th></tr></thead><tbody id="route-totals"></tbody></table></div></details>
       </section>
     </div>

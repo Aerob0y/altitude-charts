@@ -6,6 +6,8 @@
   const NS = "http://www.w3.org/2000/svg";
   let W = 1200, H = 750, export_width = 3840, export_height = 2160;
   let data, land, current_svg, upload_version = 0, export_busy = false;
+  // Pan and zoom, in SVG units, applied after the automatic fit: screen = fitted * k + (x, y).
+  let view = { k: 1, x: 0, y: 0 };
   const make = (tag, attrs = {}, text = "") => {
     const node = document.createElementNS(NS, tag);
     for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, value);
@@ -26,6 +28,7 @@
     $("title").value = demo ? "Queenstown connections" : "Airport connections";
     $("extent").value = "auto";
     $("metric").value = "equal";
+    view = { k: 1, x: 0, y: 0 };
     const codes = [...new Set(data.routes.flatMap(r => [r.origin, r.destination]))].sort();
     $("centre").replaceChildren(new Option("Busiest airport", ""), ...codes.map(c => new Option(c, c)));
     render();
@@ -47,7 +50,9 @@
   }
   // The current map: a latitude-adjusted equirectangular projection, unchanged.
   function flat_frame(arcs, rings, reserve, head) {
-    const bounds = extent(arcs.flat().concat(rings.flatMap(ring => ring.points))), centre = (bounds[0] + bounds[1]) / 2;
+    // Rings are left out of the fit so adding or changing them never moves the map.
+    const fit_points = arcs.flat();
+    const bounds = extent(fit_points.length ? fit_points : rings.flatMap(ring => ring.points)), centre = (bounds[0] + bounds[1]) / 2;
     const aspect = Math.max(.25, Math.cos((bounds[2] + bounds[3]) / 2 * Math.PI / 180));
     const scale = Math.min((W - 140) / ((bounds[1] - bounds[0]) * aspect), (H - reserve) / (bounds[3] - bounds[2]));
     // Fill the preview with context land, rather than an inset clipped rectangle.
@@ -60,7 +65,7 @@
     }
     const plot_width = (bounds[1] - bounds[0]) * aspect * scale, plot_height = (bounds[3] - bounds[2]) * scale;
     const left = (W - plot_width) / 2, top = head + (H - reserve - plot_height) / 2;
-    const project = ([lon, lat]) => [left + (lon - bounds[0]) * aspect * scale, top + (bounds[3] - lat) * scale];
+    const project = ([lon, lat]) => [view.x + view.k * (left + (lon - bounds[0]) * aspect * scale), view.y + view.k * (top + (bounds[3] - lat) * scale)];
     const point = p => project([M.wrap(p[0], centre), p[1]]);
     // Unwrap each land ring before projecting, then draw copies across the date line.
     const land_paths = [];
@@ -82,7 +87,7 @@
     // Separate paths at the projection seam rather than drawing across the map.
     const route = i => {
       let previous; return arcs[i].map(p => {
-        const xy = point(p), move = !previous || Math.abs(xy[0] - previous[0]) > 180 * aspect * scale;
+        const xy = point(p), move = !previous || Math.abs(xy[0] - previous[0]) > 180 * aspect * scale * view.k;
         previous = xy; return `${move ? "M" : "L"}${xy[0].toFixed(2)},${xy[1].toFixed(2)}`;
       }).join("");
     };
@@ -113,8 +118,11 @@
     const left = 70, top = head, plot_width = W - 140, plot_height = H - reserve;
     // A globe always shows its whole disc; a part-globe crops awkwardly.
     const whole = mode === "globe" || $("extent").value === "world" || !lines.length;
+    // Rings are left out of the fit so adding or changing them never moves the map.
     projection.precision(.2).fitExtent([[left + 30, top + 20], [left + plot_width - 30, top + plot_height - 20]],
-      whole ? sphere : { type: "MultiLineString", coordinates: lines.concat(rings.map(ring => ring.points)) });
+      whole ? sphere : { type: "MultiLineString", coordinates: lines });
+    const fitted = projection.translate();
+    projection.scale(projection.scale() * view.k).translate([fitted[0] * view.k + view.x, fitted[1] * view.k + view.y]);
     const path = d3.geoPath(projection), rotate = projection.rotate(), facing = [-rotate[0], -rotate[1]];
     // Airports on the far side of the globe are hidden.
     const point = p => mode === "globe" && d3.geoDistance(p, facing) > Math.PI / 2 - 1e-6 ? null : projection(p);
@@ -133,18 +141,44 @@
     W = Math.max(1200, 750 * ratio); H = W / ratio;
   }
   const ring_limits = { km: 20000, miles: 12400, nautical_miles: 10800 };
+  const unit_names = { km: "km", miles: "miles", nautical_miles: "nautical miles" };
+  const MAX_RINGS = 60;
+  let ring_rows = 0;
+  // One row per set of rings: every airport in the row gets a ring at every distance.
+  function add_ring_row(airports = "", distances = "", unit = "km") {
+    const n = ++ring_rows, row = document.createElement("div");
+    row.className = "ring-row";
+    row.innerHTML = `<div class="pair"><div><label for="ring-airports-${n}">Airport codes</label><input id="ring-airports-${n}" class="ring-airports" maxlength="240" placeholder="AKL, ZQN" autocomplete="off"></div>
+      <div><label for="ring-distances-${n}">Distances</label><input id="ring-distances-${n}" class="ring-distances" maxlength="120" placeholder="500, 1000" inputmode="decimal" autocomplete="off"></div></div>
+      <div class="ring-foot"><label class="sr-only" for="ring-unit-${n}">Units</label><select id="ring-unit-${n}" class="ring-unit"><option value="km">Kilometres</option><option value="miles">Miles</option><option value="nautical_miles">Nautical miles</option></select><button type="button" class="ring-remove" aria-label="Remove this row of rings">Remove</button></div>`;
+    row.querySelector(".ring-airports").value = airports;
+    row.querySelector(".ring-distances").value = distances;
+    row.querySelector(".ring-unit").value = unit;
+    row.querySelector(".ring-remove").addEventListener("click", () => {
+      row.remove(); if (!$("ring-list").children.length) add_ring_row(); render();
+    });
+    $("ring-list").append(row);
+    return row;
+  }
   function distance_rings() {
-    const value = $("ring-distance").value.trim();
-    const codes = $("ring-airports").value.toUpperCase().split(/[\s,]+/).filter(Boolean);
-    const unit = $("ring-unit").value, limit = ring_limits[unit];
-    $("ring-distance").max = limit;
-    if (!value && !codes.length) return [];
-    const distance = Number(value);
-    if (!Number.isFinite(distance) || distance <= 0 || distance > limit) throw Error(`Distance rings: use a distance from 1 to ${limit.toLocaleString()} ${unit === "km" ? "km" : unit === "miles" ? "miles" : "nautical miles"}.`);
-    if (!codes.length) throw Error("Distance rings: enter at least one airport code.");
-    const unknown = [...new Set(codes.filter(code => !data.airports.has(code)))];
-    if (unknown.length) throw Error(`Distance rings: unknown airport codes: ${unknown.join(", ")}.`);
-    return [...new Set(codes)].map(code => ({ code, distance, unit, points: M.distance_circle(data.airports.get(code), distance, unit) }));
+    const rings = [], seen = new Set();
+    for (const row of $("ring-list").children) {
+      const codes = row.querySelector(".ring-airports").value.toUpperCase().split(/[\s,]+/).filter(Boolean);
+      const values = row.querySelector(".ring-distances").value.split(/[\s,;]+/).filter(Boolean);
+      const unit = row.querySelector(".ring-unit").value, limit = ring_limits[unit];
+      if (!values.length && !codes.length) continue;
+      const distances = values.map(v => Number(v.replace(/_/g, "")));
+      if (!values.length || distances.some(d => !Number.isFinite(d) || d <= 0 || d > limit)) throw Error(`Distance rings: use distances from 1 to ${limit.toLocaleString()} ${unit_names[unit]}.`);
+      if (!codes.length) throw Error("Distance rings: enter at least one airport code in each row.");
+      const unknown = [...new Set(codes.filter(code => !data.airports.has(code)))];
+      if (unknown.length) throw Error(`Distance rings: unknown airport codes: ${unknown.join(", ")}.`);
+      for (const code of new Set(codes)) for (const distance of new Set(distances)) {
+        const key = `${code}|${distance}|${unit}`; if (seen.has(key)) continue; seen.add(key);
+        rings.push({ code, distance, unit, points: M.distance_circle(data.airports.get(code), distance, unit) });
+      }
+    }
+    if (rings.length > MAX_RINGS) throw Error(`Distance rings: draw at most ${MAX_RINGS} rings at once.`);
+    return rings;
   }
   function render() {
     const mode = $("projection").value, round = mode !== "flat";
@@ -216,11 +250,24 @@
       }
       if (rings.length) {
         const ring_layer = make("g", { "clip-path": "url(#map-clip)", fill: "none", stroke: ring_colour }); svg.append(ring_layer);
+        // Label each ring at the visible point nearest its northern edge that clears the other ring labels.
+        const placed = [], order = [0];
+        for (let step = 4; step <= 72; step += 4) order.push(step, -step);
         rings.forEach(ring => {
           ring_layer.append(make("path", { d: frame.ring(ring.points), "stroke-width": 1.5, "stroke-dasharray": "5 4" }));
-          const xy = frame.point(ring.points[0]); if (!xy) return;
-          const [x, y] = xy, label = `${ring.code} · ${ring.distance.toLocaleString()} ${ring.unit === "km" ? "km" : ring.unit === "miles" ? "mi" : "nm"}`;
-          const lx = Math.max(left + 4, Math.min(left + plot_width - label.length * 7, x + 8)), ly = Math.max(top + 14, y - 8);
+          const label = `${ring.code} · ${ring.distance.toLocaleString()} ${ring.unit === "km" ? "km" : ring.unit === "miles" ? "mi" : "nm"}`;
+          const length = label.length * 7, count = ring.points.length;
+          let spot = null;
+          for (const offset of order) {
+            const xy = frame.point(ring.points[(offset + count) % count]); if (!xy) continue;
+            const box = [xy[0] + 8, xy[1] - 20, xy[0] + 8 + length, xy[1] - 4];
+            if (box[0] < left + 4 || box[2] > left + plot_width - 4 || box[1] < top + 4 || box[3] > top + plot_height - 4) continue;
+            if (placed.some(o => box[0] < o[2] && box[2] > o[0] && box[1] < o[3] && box[3] > o[1])) continue;
+            spot = box; break;
+          }
+          if (!spot) return;
+          placed.push(spot);
+          const lx = spot[0], ly = spot[3] - 4;
           ring_layer.append(text(lx, ly, 12, label, bg, { "font-weight": 600, stroke: bg, "stroke-width": 3, "paint-order": "stroke", "data-background-halo": "true", "aria-hidden": "true" }),
             text(lx, ly, 12, label, ring_colour, { "font-weight": 600 }));
         });
@@ -281,6 +328,7 @@
       if (words) svg.append(text(42, H - 52, 14, `${routes.length} CONNECTIONS  /  ${codes.length} AIRPORTS`, ink, { "letter-spacing": 1 }),
         text(42, H - 27, 12, `${note}  ·  Great-circle connections; not flight tracks.  ·  Geography: Natural Earth`, muted));
       $("map").replaceChildren(svg); current_svg = svg;
+      $("reset-view").disabled = view.k === 1 && view.x === 0 && view.y === 0;
       $("summary").textContent = `${routes.length} connections · ${codes.length} airports`;
       $("route-totals").replaceChildren(...totals.map(r => {
         const tr = document.createElement("tr");
@@ -386,5 +434,61 @@
   });
   document.addEventListener("keydown", e => { if (e.key === "Escape") hide_tip(); });
   addEventListener("scroll", hide_tip, { passive: true }); addEventListener("resize", hide_tip);
+  // Pan and zoom. Each change redraws the map, so the preview and downloads always match.
+  let frame_pending = false;
+  const redraw = () => { if (frame_pending) return; frame_pending = true; requestAnimationFrame(() => { frame_pending = false; render(); }); };
+  const to_svg = (clientX, clientY) => {
+    const rect = current_svg.getBoundingClientRect();
+    return [(clientX - rect.left) * W / rect.width, (clientY - rect.top) * H / rect.height];
+  };
+  const zoom_at = (factor, [px, py]) => {
+    const k = Math.max(.2, Math.min(40, view.k * factor)); factor = k / view.k;
+    view = { k, x: px + (view.x - px) * factor, y: py + (view.y - py) * factor };
+    redraw();
+  };
+  const reset_view = () => { view = { k: 1, x: 0, y: 0 }; redraw(); };
+  const pointers = new Map();
+  let gesture = null;
+  const pinch = () => {
+    const [a, b] = [...pointers.values()];
+    return { mid: to_svg((a[0] + b[0]) / 2, (a[1] + b[1]) / 2), gap: Math.hypot(a[0] - b[0], a[1] - b[1]) };
+  };
+  $("map").addEventListener("pointerdown", e => {
+    if (!current_svg || e.button > 0) return;
+    $("map").setPointerCapture(e.pointerId); pointers.set(e.pointerId, [e.clientX, e.clientY]);
+    $("map").classList.add("dragging");
+    gesture = pointers.size === 2 ? pinch() : null;
+  });
+  $("map").addEventListener("pointermove", e => {
+    if (!pointers.has(e.pointerId)) return;
+    const previous = pointers.get(e.pointerId); pointers.set(e.pointerId, [e.clientX, e.clientY]);
+    if (pointers.size === 1) {
+      const scale = W / current_svg.getBoundingClientRect().width;
+      view.x += (e.clientX - previous[0]) * scale; view.y += (e.clientY - previous[1]) * scale; redraw();
+    } else if (pointers.size === 2 && gesture) {
+      const next = pinch();
+      view.x += next.mid[0] - gesture.mid[0]; view.y += next.mid[1] - gesture.mid[1];
+      gesture = next.gap && gesture.gap ? (zoom_at(next.gap / gesture.gap, next.mid), next) : next;
+      redraw();
+    }
+  });
+  const release = e => {
+    pointers.delete(e.pointerId); gesture = pointers.size === 2 ? pinch() : null;
+    if (!pointers.size) $("map").classList.remove("dragging");
+  };
+  $("map").addEventListener("pointerup", release); $("map").addEventListener("pointercancel", release);
+  $("map").addEventListener("wheel", e => {
+    if (!current_svg) return; e.preventDefault();
+    zoom_at(Math.exp(-Math.max(-100, Math.min(100, e.deltaMode ? e.deltaY * 33 : e.deltaY)) * .002), to_svg(e.clientX, e.clientY));
+  }, { passive: false });
+  $("map").addEventListener("dblclick", e => { if (current_svg) zoom_at(e.shiftKey ? .5 : 2, to_svg(e.clientX, e.clientY)); });
+  const centre_point = () => [W / 2, H / 2];
+  $("zoom-in").addEventListener("click", () => zoom_at(1.5, centre_point()));
+  $("zoom-out").addEventListener("click", () => zoom_at(1 / 1.5, centre_point()));
+  $("reset-view").addEventListener("click", reset_view);
+  // A new projection, centre or extent starts from a fresh automatic fit.
+  for (const id of ["projection", "centre", "extent", "west", "east", "south", "north"]) $(id).addEventListener("input", () => { view = { k: 1, x: 0, y: 0 }; }, true);
+  $("add-ring").addEventListener("click", () => add_ring_row().querySelector("input").focus());
+  add_ring_row();
   start();
 })();
