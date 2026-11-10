@@ -44,25 +44,27 @@
 <main id="main">
 <section class="section-tight">
   <div class="wrap">
-    <a class="latest" href="published/2025-08-small-airports-conference.pdf">
-      <img src="images/chart-catchments.svg" alt="Map of New Zealand coloured by nearest major airport by road" width="1200" height="750" loading="lazy">
+    <a class="latest" href="posts/growing-like-donuts/">
+      <div class="latest-art" aria-hidden="true"><span>AUCKLAND</span><strong>GROWTH<br>WENT OUT</strong><em>2013–2023</em></div>
       <span class="copy">
-        <span class="kicker">Latest · Aviation · 23 Aug 2025</span>
-        <span class="t">NZ Airports: Small Airports Conference</span>
-        <span class="textlink arrow" style="padding: 0">Read the post (PDF)</span>
+        <span class="kicker">Latest · Miscelenous · 22 Oct 2026</span>
+        <span class="t">Growing like donuts</span>
+        <span class="textlink arrow" style="padding: 0">Read the post</span>
       </span>
     </a>
 
     <div class="post-filters">
       <div class="chips" role="group" aria-label="Filter by topic">
         <button class="chip" type="button" data-topic="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-topic="Miscelenous" aria-pressed="false">Miscelenous</button>
         <button class="chip" type="button" data-topic="Aviation" aria-pressed="false">Aviation</button>
         <button class="chip" type="button" data-topic="Economic updates" aria-pressed="false">Economic updates</button>
       </div>
       <label for="year" style="margin-left: auto">Year</label>
-      <select id="year" class="chip"><option value="all">All years</option><option value="2025">2025</option><option value="2024">2024</option></select>
+      <select id="year" class="chip"><option value="all">All years</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option></select>
     </div>
     <ul class="post-list" id="post-list">
+      <li data-topic="Miscelenous" data-year="2026"><a href="posts/growing-like-donuts/"><span class="d">22 Oct 2026</span><span class="t">Growing like donuts</span><span class="c">Miscelenous</span></a></li>
       <li data-topic="Aviation" data-year="2025"><a href="published/2025-08-small-airports-conference.pdf"><span class="d">23 Aug 2025</span><span class="t">NZ Airports: Small Airports Conference</span><span class="c">Aviation</span></a></li>
       <li data-topic="Economic updates" data-year="2025"><a href="published/2025-07-economic-update.pdf"><span class="d">18 Jul 2025</span><span class="t">2025 July Economic Update</span><span class="c">Economic updates</span></a></li>
       <li data-topic="Economic updates" data-year="2024"><a href="published/2024-08-economic-snapshot.pdf"><span class="d">30 Aug 2024</span><span class="t">2024 August Economic Snapshot</span><span class="c">Economic updates</span></a></li>
@@ -88,7 +90,7 @@
   var items = document.querySelectorAll('#post-list li');
   function apply() {
     var shown = 0;
-    items().forEach(function (li) {
+    items.forEach(function (li) {
       var ok = (topic === 'all' || li.dataset.topic === topic) && (year === 'all' || li.dataset.year === year);
       li.hidden = !ok; if (ok) shown++;
     });

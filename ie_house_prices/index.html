@@ -58,6 +58,7 @@
       <span id="picks" hidden></span>
       <label id="real-control" hidden><input type="checkbox" id="real"> Today's dollars</label>
       <span id="range-control" hidden><label for="range" id="range-label">Axis range</label> <select id="range"></select></span>
+      <span id="smoothing-control" hidden><label for="smoothing">Smoothing</label> <select id="smoothing"><option value="off">Off</option><option value="week">1 week</option><option value="month">1 month</option><option value="quarter">3 months</option><option value="year">12 months</option></select></span>
     </div>
     <section class="chart-area" aria-label="Interactive chart">
       <img id="preview" width="1200" height="750" src="ie_house_prices.png" alt="Ireland: house prices All · Annual change (%) · Source: CSO residential property price index" fetchpriority="high" decoding="async">
@@ -98,6 +99,70 @@
       let wasNarrow = innerWidth < 600;
       const realBox = document.getElementById("real");
       let cpi, realOn = new URLSearchParams(location.search).get("real") === "1";
+      const smoothingSelect = document.getElementById("smoothing");
+      const smoothingControl = document.getElementById("smoothing-control");
+
+      const smoothingDays = {off: 0, week: 7, month: 30, quarter: 90, year: 365};
+      const smoothingLabel = {week: "1-week", month: "1-month", quarter: "3-month", year: "12-month"};
+
+      function dateExtent(spec) {
+        const values = (spec.data || []).flatMap(trace => trace.x || []).map(Date.parse).filter(Number.isFinite);
+        return values.length ? [Math.min(...values), Math.max(...values)] : null;
+      }
+
+      // manifest.smoothing.auto false (monthly rents): start off and keep the reader's choice when zooming.
+      function smoothingDefault(range, spec) {
+        if (manifest?.smoothing?.auto === false) return "off";
+        const dates = Array.isArray(range) && range.length === 2 ? range.map(Date.parse) : dateExtent(spec);
+        if (!dates?.every(Number.isFinite)) return "off";
+        const years = Math.abs(dates[1] - dates[0]) / (365.25 * 24 * 60 * 60 * 1000);
+        const choice = years <= 1.1 ? "off" : years <= 5.1 ? "week" : "month";
+        const options = manifest?.smoothing?.options || Object.keys(smoothingDays);
+        return options.includes(choice) ? choice : options.includes("month") ? "month" : "off";
+      }
+
+      function trailingAverage(x, y, days) {
+        const output = [], values = [];
+        let total = 0, first = 0;
+        for (let i = 0; i < x.length; i++) {
+          const time = Date.parse(x[i]), value = y[i] == null || y[i] === "" ? Number.NaN : Number(y[i]);
+          if (!Number.isFinite(time) || !Number.isFinite(value)) { output.push(y[i]); continue; }
+          values.push([time, value]);
+          total += value;
+          while (values[first][0] <= time - days * 24 * 60 * 60 * 1000) total -= values[first++][1];
+          output.push(total / (values.length - first));
+        }
+        return output;
+      }
+
+      function applySmoothing(spec, choice) {
+        if (choice === "off" || !manifest?.smoothing) return spec;
+        const smoothed = structuredClone(spec);
+        const latest = new Map();
+        const keepRaw = manifest.smoothing.keep_raw === true;
+        smoothed.data = smoothed.data.flatMap(trace => {
+          if (trace.type !== "scatter" || !String(trace.mode || "").includes("lines") || !trace.meta?.smoothing) return [trace];
+          const y = trailingAverage(trace.x || [], trace.y || [], smoothingDays[choice]);
+          const last = [...y.keys()].reverse().find(index => Number.isFinite(Number(y[index])));
+          if (last !== undefined) latest.set(trace.name, {x: trace.x[last], y: y[last]});
+          const average = {...trace, y};
+          if (!keepRaw) return [average];
+          // The monthly line stays as a faint guide behind its average.
+          const raw = {...trace, name: `${trace.name} (monthly)`, showlegend: false, opacity: 0.35,
+            line: {...trace.line, width: 1}, fill: "none"};
+          return [raw, average];
+        }).map(trace => {
+          const last = trace.mode === "text" && latest.get(trace.name);
+          return last ? {...trace, x: [last.x], y: [last.y]} : trace;
+        });
+        const layout = smoothed.layout ||= {};
+        const title = typeof layout.title === "string" ? {text: layout.title} : {...layout.title};
+        const note = keepRaw ? `Solid line: ${smoothingLabel[choice]} average. Faint line: ${manifest.smoothing.frequency}.`
+          : `${smoothingLabel[choice]} average of ${manifest.smoothing.frequency}.`;
+        title.text = (title.text || "") + `<br><span style='font-family:Inter, Arial, sans-serif; font-size:13px; font-weight:normal; color:#64676C;'>${note}</span>`;
+        layout.title = title;
+        return smoothed;
+      }
 
       function assetUrl(path) {
         if (typeof path !== "string" || !path) throw new Error("Missing chart asset");
@@ -161,13 +226,33 @@
         realBox.disabled = !adjustable;
         realBox.parentElement.title = adjustable ? "Adjust dollar amounts for inflation (CPI)" : "Only dollar amounts can be adjusted";
         if (adjustable && realOn) spec = AltitudeReal.apply(spec, cpi);
+        const defaultChoice = smoothingDefault(xRange || spec.layout?.xaxis?.range, spec);
+        const choice = smoothingSelect.dataset.userChoice === "true" ? smoothingSelect.value : defaultChoice;
+        smoothingSelect.value = choice;
+        spec = applySmoothing(spec, choice);
         const layout = frameLayout(spec);
         const limit = rangeLimit();
         if (limit) layout.yaxis = {...layout.yaxis, range: [-limit, limit], autorange: false};
         if (xRange) layout.xaxis = {...layout.xaxis, range: xRange, autorange: false};
         const phone = AltitudePhone.prepare(chart, spec, layout);
+        chart._altitudeSmoothingRange = JSON.stringify(phone.layout.xaxis?.range || null);
         await Plotly.react(chart, phone.data, phone.layout, config);
         await AltitudeZeroAxes.attach(chart, Plotly);
+        if (manifest?.smoothing && !chart._altitudeSmoothingHandler) {
+          chart._altitudeSmoothingHandler = event => {
+            if (manifest.smoothing.auto === false) return;
+            if (!Object.keys(event).some(key => /^xaxis\.(range|autorange)/.test(key))) return;
+            const range = chart.layout?.xaxis?.range;
+            if (JSON.stringify(range || null) === chart._altitudeSmoothingRange) return;
+            const next = smoothingDefault(range, activeSpec);
+            smoothingSelect.dataset.userChoice = "false";
+            if (smoothingSelect.value !== next) {
+              smoothingSelect.value = next;
+              draw(activeSpec, range).catch(showError);
+            }
+          };
+          chart.on("plotly_relayout", chart._altitudeSmoothingHandler);
+        }
       }
 
       // manifest.y_range (card spending) offers fixed ± y-axis ranges on some views.
@@ -196,6 +281,21 @@
         const dates = chart.layout?.xaxis?.range;
         try { await draw(activeSpec, dates); } catch (error) { showError(); }
       });
+
+      function setupSmoothing() {
+        if (!manifest.smoothing) return;
+        const options = manifest.smoothing.options || Object.keys(smoothingDays);
+        [...smoothingSelect.options].forEach(option => {
+          option.hidden = !options.includes(option.value);
+          option.disabled = !options.includes(option.value);
+        });
+        smoothingSelect.addEventListener("change", () => {
+          smoothingSelect.dataset.userChoice = "true";
+          if (activeSpec) draw(activeSpec, chart.layout?.xaxis?.range).catch(showError);
+        });
+        smoothingControl.hidden = false;
+        document.getElementById("controls").hidden = false;
+      }
 
       // "Show legend" (phone_chart.js) redraws in place, keeping the date window.
       document.addEventListener("altitude:legend", async () => {
@@ -367,6 +467,7 @@
           }
           await setupReal();
           setupRange();
+          setupSmoothing();
           if (manifest.pick) {
             return await setupPicks((new URLSearchParams(location.search).get("series") || "").split(",").filter(Boolean));
           }

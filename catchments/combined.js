@@ -548,7 +548,8 @@
   function createExportSvg(includeTiles = false) {
     const mapRect = map.getContainer().getBoundingClientRect();
     const width = Math.max(1200, mapRect.width), scale = width / mapRect.width;
-    const headerHeight = 82, mapHeight = mapRect.height * scale, footerHeight = 185;
+    const mapOnly = $("export-map-only").checked;
+    const headerHeight = mapOnly ? 0 : 82, mapHeight = mapRect.height * scale, footerHeight = mapOnly ? 0 : 185;
     const svg = document.createElementNS(SVG_NS, "svg");
     svg.setAttribute("xmlns", SVG_NS); svg.setAttribute("width", width); svg.setAttribute("height", headerHeight + mapHeight + footerHeight);
     svg.setAttribute("viewBox", `0 0 ${width} ${headerHeight + mapHeight + footerHeight}`);
@@ -567,8 +568,10 @@
       const footer = document.createElementNS(SVG_NS, "rect");
       footer.setAttribute("y", headerHeight + mapHeight); footer.setAttribute("width", width); footer.setAttribute("height", footerHeight); footer.setAttribute("fill", "#FAFAF8"); svg.append(footer);
     }
-    addExportText(svg, $("map-title").textContent, 24, 34, 25, 600);
-    addExportText(svg, $("map-subtitle").textContent, 24, 59, 15);
+    if (!mapOnly) {
+      addExportText(svg, $("map-title").textContent, 24, 34, 25, 600);
+      addExportText(svg, $("map-subtitle").textContent, 24, 59, 15);
+    }
     const vector = map.getContainer().querySelector(".leaflet-overlay-pane svg");
     if (!vector) throw Error("The map is not ready to export.");
     const vectorRect = vector.getBoundingClientRect(), defs = document.createElementNS(SVG_NS, "defs"), clip = document.createElementNS(SVG_NS, "clipPath"), clipRect = document.createElementNS(SVG_NS, "rect"), mapGroup = document.createElementNS(SVG_NS, "g");
@@ -583,9 +586,11 @@
       const label = addExportText(mapGroup, tooltip.textContent.trim(), (rect.left + rect.width / 2 - mapRect.left) * scale, headerHeight + (rect.bottom - mapRect.top) * scale, 12 * scale, 600);
       label.setAttribute("text-anchor", "middle"); label.setAttribute("stroke", "#FAFAF8"); label.setAttribute("stroke-width", 3 * scale); label.setAttribute("paint-order", "stroke");
     }
-    const legendBottom = addExportLegend(svg, headerHeight + mapHeight + 27, width);
-    const source = [...document.querySelectorAll("footer p")].map(paragraph => paragraph.innerText.trim()).filter(Boolean).join(" ") + (includeTiles ? " Street map: © OpenStreetMap contributors." : "");
-    addWrappedExportText(svg, source, 24, legendBottom + 18, 11, 190);
+    if (!mapOnly) {
+      const legendBottom = addExportLegend(svg, headerHeight + mapHeight + 27, width);
+      const source = [...document.querySelectorAll("footer p")].map(paragraph => paragraph.innerText.trim()).filter(Boolean).join(" ") + (includeTiles ? " Street map: © OpenStreetMap contributors." : "");
+      addWrappedExportText(svg, source, 24, legendBottom + 18, 11, 190);
+    }
     return { svg, width, height: headerHeight + mapHeight + footerHeight, headerHeight, mapHeight, mapRect, scale };
   }
 

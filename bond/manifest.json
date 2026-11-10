@@ -6110,6 +6110,15 @@
     "cpi": "cpi.json",
     "label": "September 2026 prices"
   },
+  "smoothing": {
+    "frequency": "monthly figures",
+    "options": [
+      "off",
+      "year"
+    ],
+    "auto": false,
+    "keep_raw": true
+  },
   "pick": {
     "labels": ["Location 1", "Location 2", "Location 3", "Location 4"],
     "title": "Rental market",

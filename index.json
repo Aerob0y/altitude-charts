@@ -481,29 +481,25 @@
     {
       "key": "catchments",
       "title": "Airport catchments",
-      "page": "catchments/index.html",
-      "beta": true
-    },
-    {
-      "key": "catchment-combined",
-      "title": "Airport catchment map",
-      "page": "catchments/combined.html",
+      "page": "catchments/combined/index.html",
       "beta": true,
-      "wip": true,
       "note": "Ireland, New Zealand and Australia catchments in a clean, interactive vector map."
     },
     {
       "key": "wacc",
       "title": "WACC calculator",
       "page": "wacc/index.html",
-      "beta": true
+      "beta": true,
+      "wip": true,
+      "note": "Compare cost of capital scenarios."
     },
     {
       "key": "donut",
       "title": "Where Auckland builds (3D map)",
       "page": "donut/index.html",
-      "beta": true,
-      "section": "miscellaneous"
+      "beta": false,
+      "section": "miscellaneous",
+      "image": "images/chart-donut.png"
     }
   ]
 }

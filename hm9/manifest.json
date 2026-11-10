@@ -6,108 +6,132 @@
   "updated": "2026-11-03",
   "views": [
     {
-      "label": "Labour force participation rate - % s.a.",
-      "spec": "labour-force-participation-rate-s-a.json"
+      "label": "All series: Labour force participation rate - % s.a.",
+      "spec": "all-series-labour-force-participation-rate-s-a.json"
     },
     {
-      "label": "Unemployment rate - % s.a.",
-      "spec": "unemployment-rate-s-a.json"
+      "label": "All series: Unemployment rate - % s.a.",
+      "spec": "all-series-unemployment-rate-s-a.json"
     },
     {
-      "label": "Not in labour force - 000s s.a.",
-      "spec": "not-in-labour-force-000s-s-a.json"
+      "label": "All series: Not in labour force - 000s s.a.",
+      "spec": "all-series-not-in-labour-force-000s-s-a.json"
     },
     {
-      "label": "Working-age population - 000s s.a.",
-      "spec": "working-age-population-000s-s-a.json"
+      "label": "All series: Working-age population - 000s s.a.",
+      "spec": "all-series-working-age-population-000s-s-a.json"
     },
     {
-      "label": "Labour cost index (LCI) - Index",
-      "spec": "labour-cost-index-lci-index.json"
+      "label": "All series: Labour cost index (LCI) - Index",
+      "spec": "all-series-labour-cost-index-lci-index.json"
     },
     {
-      "label": "Labour cost index (LCI) - y/y%",
-      "spec": "labour-cost-index-lci-y-y.json"
+      "label": "All series: Labour cost index (LCI) - y/y%",
+      "spec": "all-series-labour-cost-index-lci-y-y.json"
     },
     {
-      "label": "Not in labour force - y/y%",
-      "spec": "not-in-labour-force-y-y.json"
+      "label": "All series: Not in labour force - y/y%",
+      "spec": "all-series-not-in-labour-force-y-y.json"
     },
     {
-      "label": "Working-age population - y/y%",
-      "spec": "working-age-population-y-y.json"
+      "label": "All series: Working-age population - y/y%",
+      "spec": "all-series-working-age-population-y-y.json"
     },
     {
-      "label": "Labour force - Employed (y/y%)",
-      "spec": "labour-force-employed-y-y.json"
+      "label": "All series: Labour force - Employed (y/y%)",
+      "spec": "all-series-labour-force-employed-y-y.json"
     },
     {
-      "label": "Labour force - Unemployed (y/y%)",
-      "spec": "labour-force-unemployed-y-y.json"
+      "label": "All series: Labour force - Unemployed (y/y%)",
+      "spec": "all-series-labour-force-unemployed-y-y.json"
     },
     {
-      "label": "Labour force - Total (y/y%)",
-      "spec": "labour-force-total-y-y.json"
+      "label": "All series: Labour force - Total (y/y%)",
+      "spec": "all-series-labour-force-total-y-y.json"
     },
     {
-      "label": "Labour force - Employed (000s s.a.)",
-      "spec": "labour-force-employed-000s-s-a.json"
+      "label": "All series: Labour force - Employed (000s s.a.)",
+      "spec": "all-series-labour-force-employed-000s-s-a.json"
     },
     {
-      "label": "Labour force - Unemployed (000s s.a.)",
-      "spec": "labour-force-unemployed-000s-s-a.json"
+      "label": "All series: Labour force - Unemployed (000s s.a.)",
+      "spec": "all-series-labour-force-unemployed-000s-s-a.json"
     },
     {
-      "label": "Labour force - Total (000s s.a.)",
-      "spec": "labour-force-total-000s-s-a.json"
+      "label": "All series: Labour force - Total (000s s.a.)",
+      "spec": "all-series-labour-force-total-000s-s-a.json"
     },
     {
-      "label": "Private sector wages - $",
-      "spec": "private-sector-wages.json"
+      "label": "All series: Private sector wages - $",
+      "spec": "all-series-private-sector-wages.json"
     },
     {
-      "label": "Private sector wages - q/q%",
-      "spec": "private-sector-wages-q-q.json"
+      "label": "All series: Private sector wages - q/q%",
+      "spec": "all-series-private-sector-wages-q-q.json"
     },
     {
-      "label": "Private sector wages - y/y%",
-      "spec": "private-sector-wages-y-y.json"
+      "label": "All series: Private sector wages - y/y%",
+      "spec": "all-series-private-sector-wages-y-y.json"
     },
     {
-      "label": "Public sector wages - $",
-      "spec": "public-sector-wages.json"
+      "label": "All series: Public sector wages - $",
+      "spec": "all-series-public-sector-wages.json"
     },
     {
-      "label": "Public sector wages - q/q%",
-      "spec": "public-sector-wages-q-q.json"
+      "label": "All series: Public sector wages - q/q%",
+      "spec": "all-series-public-sector-wages-q-q.json"
     },
     {
-      "label": "Public sector wages - y/y%",
-      "spec": "public-sector-wages-y-y.json"
+      "label": "All series: Public sector wages - y/y%",
+      "spec": "all-series-public-sector-wages-y-y.json"
     },
     {
-      "label": "Average hourly earnings (ordinary time and overtime) - $",
-      "spec": "average-hourly-earnings-ordinary-time-and-overtime.json"
+      "label": "All series: Average hourly earnings (ordinary time and overtime) - $",
+      "spec": "all-series-average-hourly-earnings-ordinary-time-and-overtime.json"
     },
     {
-      "label": "Average hourly earnings (ordinary time and overtime) - q/q%",
-      "spec": "average-hourly-earnings-ordinary-time-and-overtime-q-q.json"
+      "label": "All series: Average hourly earnings (ordinary time and overtime) - q/q%",
+      "spec": "all-series-average-hourly-earnings-ordinary-time-and-overtime-q-q.json"
     },
     {
-      "label": "Average hourly earnings (ordinary time and overtime) - y/y%",
-      "spec": "average-hourly-earnings-ordinary-time-and-overtime-y-y.json"
+      "label": "All series: Average hourly earnings (ordinary time and overtime) - y/y%",
+      "spec": "all-series-average-hourly-earnings-ordinary-time-and-overtime-y-y.json"
+    },
+    {
+      "label": "Real wages (after inflation): Private sector wages",
+      "spec": "real-wages-after-inflation-private-sector-wages.json"
+    },
+    {
+      "label": "Real wages (after inflation): Public sector wages",
+      "spec": "real-wages-after-inflation-public-sector-wages.json"
+    },
+    {
+      "label": "Real wages (after inflation): Labour cost index",
+      "spec": "real-wages-after-inflation-labour-cost-index.json"
+    },
+    {
+      "label": "Real wages (after inflation): Hourly earnings",
+      "spec": "real-wages-after-inflation-hourly-earnings.json"
     }
   ],
   "data": "data.csv",
   "image": "hm9.png",
-  "image_alt": "Labour market RBNZ and Stats NZ series: Labour force participation rate - % s.a. and Labour cost index (LCI) - y/y%",
+  "image_alt": "Labour market Annual wage growth after inflation, per cent, quarterly. Source: Stats NZ wages and Stats NZ CPI via RBNZ",
   "pick": {
     "labels": ["Metric 1", "Metric 2", "Metric 3", "Metric 4"],
     "title": "Labour market",
     "subtitle": "RBNZ and Stats NZ series",
     "palette": ["#12243D", "#0E6B6B", "#C8781E", "#6C8EBF", "#7E8C3A", "#9B5C7E", "#8A8781"],
     "margin_r": 24,
-    "default": [0, 5],
-    "dims": ["Total %", "Total %", "000's", "000's", "Index", "%", "%", "Total %", "Total %", "Total %", "Total %", "000's", "000's", "000's", "$", "%", "%", "$", "%", "%", "$", "%", "%"]
+    "default": [23, 24, 25, 26],
+    "dims": ["Total %", "Total %", "000's", "000's", "Index", "%", "%", "Total %", "Total %", "Total %", "Total %", "000's", "000's", "000's", "$", "%", "%", "$", "%", "%", "$", "%", "%", "%", "%", "%", "%"],
+    "groups": ["all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "all", "real", "real", "real", "real"],
+    "items": ["Labour force participation rate - % s.a.", "Unemployment rate - % s.a.", "Not in labour force - 000s s.a.", "Working-age population - 000s s.a.", "Labour cost index (LCI) - Index", "Labour cost index (LCI) - y/y%", "Not in labour force - y/y%", "Working-age population - y/y%", "Labour force - Employed (y/y%)", "Labour force - Unemployed (y/y%)", "Labour force - Total (y/y%)", "Labour force - Employed (000s s.a.)", "Labour force - Unemployed (000s s.a.)", "Labour force - Total (000s s.a.)", "Private sector wages - $", "Private sector wages - q/q%", "Private sector wages - y/y%", "Public sector wages - $", "Public sector wages - q/q%", "Public sector wages - y/y%", "Average hourly earnings (ordinary time and overtime) - $", "Average hourly earnings (ordinary time and overtime) - q/q%", "Average hourly earnings (ordinary time and overtime) - y/y%", "Private sector wages", "Public sector wages", "Labour cost index", "Hourly earnings"],
+    "group_label": "Show",
+    "group_names": {
+      "all": "All series",
+      "real": "Real wages (after inflation)"
+    },
+    "subtitles": ["RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "RBNZ and Stats NZ series (All series)", "Annual wage growth less CPI inflation, per cent (Stats NZ wages and CPI, via RBNZ)", "Annual wage growth less CPI inflation, per cent (Stats NZ wages and CPI, via RBNZ)", "Annual wage growth less CPI inflation, per cent (Stats NZ wages and CPI, via RBNZ)", "Annual wage growth less CPI inflation, per cent (Stats NZ wages and CPI, via RBNZ)"]
   }
 }
