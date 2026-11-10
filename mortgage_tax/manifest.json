@@ -1,0 +1,20 @@
+{
+  "name": "mortgage_tax",
+  "title": "Mortgage repayments and the tax take",
+  "source": "RBNZ C35 and the Treasury",
+  "note": "Scheduled mortgage repayments to registered banks (principal and interest) and the interest part alone, compared with the government's core Crown tax revenue. Both are totals over the latest 12 months, in NZD billions, at each quarter end.",
+  "updated": "2026-11-11",
+  "views": [
+    {
+      "label": "NZD billions",
+      "spec": "nzd-billions.json"
+    },
+    {
+      "label": "As a share of the tax take",
+      "spec": "as-a-share-of-the-tax-take.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "mortgage_tax.png",
+  "image_alt": "Mortgage repayments and the tax take Rolling 12-month totals, NZD billions, quarterly. Source: RBNZ C35 (bank mortgage repayments) and the Treasury (core Crown tax revenue)"
+}

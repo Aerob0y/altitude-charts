@@ -133,7 +133,7 @@
       const from = specs[second].layout.yaxis || {};
       layout.yaxis2 = {
         ...(layout.yaxis2 || {}), overlaying: "y", side: "right", anchor: "x", showgrid: false,
-        rangemode: "tozero", automargin: true, zerolinecolor: "#222326",
+        rangemode: from.rangemode || "normal", automargin: true, zerolinecolor: "#222326",
         tickformat: from.tickformat, tickprefix: from.tickprefix, color: palette[second % palette.length],
         title: titleOf(layout.yaxis2, dims[second])
       };
@@ -144,7 +144,8 @@
       layout.margin = {...layout.margin, r: Math.max(...specs.map(spec => spec.layout?.margin?.r || 0))};
     }
     if (indexDate) {
-      layout.yaxis = {...layout.yaxis, tickformat: ",.0f", tickprefix: ""};
+      // An index fits its data rather than starting at zero.
+      layout.yaxis = {...layout.yaxis, tickformat: ",.0f", tickprefix: "", rangemode: "normal"};
       delete layout.yaxis2;
     }
     const subtitle = indexDate ? escapeHtml(`Index, ${indexDateLabel(indexDate)} = 100. Higher means a stronger NZD. Source: RBNZ`) :

@@ -235,6 +235,19 @@
       "wip": false
     },
     {
+      "name": "oecd_confidence",
+      "title": "Business and consumer confidence",
+      "source": "OECD",
+      "note": "Monthly business and consumer confidence indexes for New Zealand, Australia, Ireland, the UK and the US. New Zealand business confidence is based on the NZIER survey. An index of 100 is the long-run average; it is not a percentage or an optimists-minus-pessimists balance.",
+      "target": "oecd",
+      "updated": "2026-11-10",
+      "page": "oecd_confidence/index.html",
+      "image": "oecd_confidence/oecd_confidence.png",
+      "site": "nz",
+      "menu": "Economic",
+      "wip": true
+    },
+    {
       "name": "fuel",
       "title": "Jet fuel price",
       "source": "US Energy Information Administration (EIA)",
@@ -272,6 +285,19 @@
       "site": "nz",
       "menu": "Economic",
       "wip": false
+    },
+    {
+      "name": "nz_au",
+      "title": "New Zealand and Australia compared",
+      "source": "Stats NZ via RBNZ, Australian Bureau of Statistics (ABS) and OECD",
+      "note": "Unemployment, labour force participation, wage growth and household spending after inflation in New Zealand and Australia, quarterly from 2015. Rates are per cent; growth is the annual % change against the same quarter a year earlier. Australian monthly figures are averaged (rates) or added up (spending) to quarters. New Zealand wages are the labour cost index for all sectors; Australian wages are the private-sector wage price index. Spending is card spending in New Zealand and the ABS household spending indicator in Australia, each less its own CPI inflation.",
+      "target": "abs",
+      "updated": "2026-11-11",
+      "page": "nz_au/index.html",
+      "image": "nz_au/nz_au.png",
+      "site": "nz",
+      "menu": "Economic",
+      "wip": true
     },
     {
       "name": "hm5",
@@ -415,6 +441,19 @@
       "site": "ireland",
       "menu": "Aviation",
       "wip": false
+    },
+    {
+      "name": "mortgage_tax",
+      "title": "Mortgage repayments and the tax take",
+      "source": "RBNZ C35 and the Treasury",
+      "note": "Scheduled mortgage repayments to registered banks (principal and interest) and the interest part alone, compared with the government's core Crown tax revenue. Both are totals over the latest 12 months, in NZD billions, at each quarter end.",
+      "target": "treasury",
+      "updated": "2026-11-11",
+      "page": "mortgage_tax/index.html",
+      "image": "mortgage_tax/mortgage_tax.png",
+      "site": "nz",
+      "menu": "Economic",
+      "wip": true
     }
   ],
   "sites": [

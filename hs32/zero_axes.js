@@ -3,9 +3,12 @@
   const handlers = new WeakMap();
   const dateValue = value => typeof value === "number" ? value : Date.parse(value);
 
-  // Bars and filled areas keep zero in view; stacked ones are fitted to their totals.
-  function ranges(data, window, alignZeros = false, barmode = "") {
-    const bounds = [[Infinity, -Infinity], [Infinity, -Infinity]], counts = [0, 0], anchored = [false, false];
+  // Levels (axes with rangemode "tozero", set from the guide by axis_includes_zero() in R),
+  // bars and filled areas keep zero in view; other axes fit the data. Stacks fit their totals.
+  // Two axes share a zero line only when both include zero.
+  function ranges(data, window, alignZeros = false, barmode = "", zeroAxes = [false, false]) {
+    const bounds = [[Infinity, -Infinity], [Infinity, -Infinity]], counts = [0, 0];
+    const anchored = [Boolean(zeroAxes[0]), Boolean(zeroAxes[1])];
     const stacks = [new Map(), new Map()];
     const dates = window?.map(dateValue);
     for (const trace of data) {
@@ -28,19 +31,20 @@
         counts[axis]++;
       });
     }
-    if (!counts[0] || (alignZeros && !counts[1])) return null;
+    const align = alignZeros && anchored[0] && anchored[1];
+    if (!counts[0] || (align && !counts[1])) return null;
     const padded = bounds.map(([min, max], axis) => {
       if (!counts[axis]) return [0, 1];
       // Two axes pad past the shared zero so it never sits on an edge.
-      if (alignZeros || anchored[axis]) [min, max] = [Math.min(min, 0), Math.max(max, 0)];
+      if (anchored[axis]) [min, max] = [Math.min(min, 0), Math.max(max, 0)];
       const padding = (max - min || Math.max(Math.abs(min), 1)) * 0.08;
       const range = [min - padding, max + padding];
       // Padding alone should not push an all-positive (or all-negative) axis across zero.
-      if (min >= 0 && (max > 0 || alignZeros)) range[0] = Math.max(range[0], 0);
-      if (!alignZeros && max <= 0 && min < 0) range[1] = Math.min(range[1], 0);
+      if (min >= 0 && (max > 0 || align)) range[0] = Math.max(range[0], 0);
+      if (!align && max <= 0 && min < 0) range[1] = Math.min(range[1], 0);
       return range;
     });
-    if (!alignZeros) return padded;
+    if (!align) return padded;
     const share = Math.max(...padded.map(([min, max]) => -min / (max - min)));
     return padded.map(([min, max]) => {
       const span = Math.max(share ? -min / share : 0, max / (1 - share));
@@ -59,10 +63,11 @@
       ? ["yaxis", "yaxis2"] : ["yaxis"];
     const managed = new Set();
     const fixed = new Set(keys.filter(key => chart.layout[key]?.autorange === false));
+    const zeroAxes = keys.map(key => chart.layout[key]?.rangemode === "tozero");
     const align = async () => {
       const xaxis = chart._fullLayout?.xaxis;
       const result = ranges(chart.data, xaxis?.type === "date" ? xaxis.range : null, keys.length === 2,
-        chart._fullLayout?.barmode || chart.layout?.barmode);
+        chart._fullLayout?.barmode || chart.layout?.barmode, zeroAxes);
       if (!result) return;
       const updates = {};
       for (const [i, key] of keys.entries()) {

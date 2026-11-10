@@ -1,0 +1,68 @@
+{
+  "name": "oecd_confidence",
+  "title": "Business and consumer confidence",
+  "source": "OECD",
+  "note": "Monthly business and consumer confidence indexes for New Zealand, Australia, Ireland, the UK and the US. New Zealand business confidence is based on the NZIER survey. An index of 100 is the long-run average; it is not a percentage or an optimists-minus-pessimists balance.",
+  "updated": "2026-11-10",
+  "views": [
+    {
+      "label": "Business: New Zealand",
+      "spec": "business-new-zealand.json"
+    },
+    {
+      "label": "Business: Australia",
+      "spec": "business-australia.json"
+    },
+    {
+      "label": "Business: Ireland",
+      "spec": "business-ireland.json"
+    },
+    {
+      "label": "Business: United Kingdom",
+      "spec": "business-united-kingdom.json"
+    },
+    {
+      "label": "Business: United States",
+      "spec": "business-united-states.json"
+    },
+    {
+      "label": "Consumer: New Zealand",
+      "spec": "consumer-new-zealand.json"
+    },
+    {
+      "label": "Consumer: Australia",
+      "spec": "consumer-australia.json"
+    },
+    {
+      "label": "Consumer: Ireland",
+      "spec": "consumer-ireland.json"
+    },
+    {
+      "label": "Consumer: United Kingdom",
+      "spec": "consumer-united-kingdom.json"
+    },
+    {
+      "label": "Consumer: United States",
+      "spec": "consumer-united-states.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "oecd_confidence.png",
+  "image_alt": "Business confidence Monthly index, long-run average = 100. Source: OECD.",
+  "pick": {
+    "labels": ["Country 1", "Country 2", "Country 3", "Country 4", "Country 5"],
+    "title": "Business and consumer confidence",
+    "subtitle": "OECD",
+    "palette": ["#12243D", "#0E6B6B", "#C8781E", "#6C8EBF", "#7E8C3A", "#9B5C7E", "#8A8781"],
+    "margin_r": 24,
+    "default": [0, 1],
+    "dims": ["Index", "Index", "Index", "Index", "Index", "Index", "Index", "Index", "Index", "Index"],
+    "groups": ["Business", "Business", "Business", "Business", "Business", "Consumer", "Consumer", "Consumer", "Consumer", "Consumer"],
+    "items": ["New Zealand", "Australia", "Ireland", "United Kingdom", "United States", "New Zealand", "Australia", "Ireland", "United Kingdom", "United States"],
+    "group_label": "Measure",
+    "group_names": {
+      "Business": "Business confidence",
+      "Consumer": "Consumer confidence"
+    }
+  }
+}
