@@ -13,12 +13,13 @@
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <script src="js/navigation.js" defer></script>
 </head>
-<body>
+<body class="ins-page">
 <a class="skip" href="#main">Skip to content</a>
 <div class="top">
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="./" aria-label="CSV Consulting home"><img src="images/csv-logo.svg" alt="CSV" width="340" height="290"></a>
+    <span class="page-title">Charts and insights</span>
     <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" hidden>
       <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
@@ -60,6 +61,8 @@
       <div class="chips" role="group" aria-label="Filter by subject">
         <button type="button" class="chip" data-cat="Best Of" aria-pressed="true">Best Of</button><button type="button" class="chip" data-cat="all" aria-pressed="false">All</button><button type="button" class="chip" data-cat="Economy" aria-pressed="false">Economy</button><button type="button" class="chip" data-cat="Housing" aria-pressed="false">Housing</button><button type="button" class="chip" data-cat="Tourism and aviation" aria-pressed="false">Tourism and aviation</button><button type="button" class="chip" data-cat="Aviation tools" aria-pressed="false">Aviation tools</button><button type="button" class="chip" data-cat="Miscellaneous" aria-pressed="false">Miscellaneous</button>
       </div>
+      <label for="topic" class="visually-hidden">Subject</label>
+      <select id="topic" class="topic-select"><option value="Best Of">Best Of</option><option value="all">All subjects</option><option value="Economy">Economy</option><option value="Housing">Housing</option><option value="Tourism and aviation">Tourism and aviation</option><option value="Aviation tools">Aviation tools</option><option value="Miscellaneous">Miscellaneous</option></select>
       <label for="country" class="visually-hidden">Country</label>
       <select id="country"><option value="all">All countries</option><option value="New Zealand">New Zealand</option><option value="Ireland">Ireland</option></select>
       <label for="q" class="visually-hidden">Search charts</label>
@@ -195,13 +198,22 @@
     count.textContent = shown + (shown === 1 ? ' chart' : ' charts');
     none.hidden = shown > 0;
   }
-  chips.forEach(function (c) {
-    c.addEventListener('click', function () {
-      cat = c.dataset.cat;
-      chips.forEach(function (o) { o.setAttribute('aria-pressed', o === c ? 'true' : 'false'); });
-      apply();
-    });
-  });
+  // Phones show the subject as a dropdown instead of the chips; keep both in step.
+  var topic = document.getElementById('topic');
+  function setCat(value) {
+    cat = value; topic.value = value;
+    chips.forEach(function (o) { o.setAttribute('aria-pressed', o.dataset.cat === value ? 'true' : 'false'); });
+    apply();
+  }
+  chips.forEach(function (c) { c.addEventListener('click', function () { setCat(c.dataset.cat); }); });
+  topic.addEventListener('change', function () { setCat(topic.value); });
+  // Best Of charts sit at the top of every list.
+  function bestFirst() {
+    var best = [];
+    items().forEach(function (li) { if ((li.dataset.tags || '').split('|').indexOf('Best Of') !== -1) best.push(li); });
+    for (var k = best.length - 1; k >= 0; k--) grid.prepend(best[k]);
+  }
+  bestFirst();
   document.getElementById('country').addEventListener('change', function (ev) { country = ev.target.value; apply(); });
   document.getElementById('q').addEventListener('input', function (ev) { q = ev.target.value.trim().toLowerCase(); apply(); });
   apply();
@@ -230,6 +242,7 @@
     (index.tools || []).forEach(function (tool) {
       if (tool.key !== 'route-map-projections' && !tool.wip) add(tool.key, tool.page.replace(/index\.html$/, ''), tool.image, tool.title, tool.note || '', tool.section === 'miscellaneous' ? 'Miscellaneous' : 'Aviation tools', 'All');
     });
+    bestFirst();
     apply();
   }).catch(function () {});
 })();

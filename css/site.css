@@ -230,6 +230,24 @@ p { margin: 0; }
 .chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--tan); font-weight: 600; }
 .filters select, .filters input { font: inherit; font-size: 15px; padding: 8px 12px; border: 1px solid #C9C5BC; background: #fff; color: var(--ink); min-height: 40px; }
 .filters input { width: 200px; }
+.filters .topic-select { display: none; }
+.page-title { display: none; }
+@media (max-width: 600px) {
+  /* Phones skip the Insights intro: a short title by the menu, then the filters. */
+  .ins-page .page-title { display: block; font-family: var(--display); font-weight: 600; font-size: 20px; line-height: 1.2; white-space: nowrap; color: var(--ink); }
+  .ins-page .brand img { height: 40px; }
+  .ins-page .ins-hero { display: none; }
+  .ins-page #browse { padding-top: 16px; }
+  .ins-page .filters h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+@media (max-width: 600px) {
+  .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding-bottom: 16px; }
+  .filters h2 { grid-column: 1 / -1; margin: 0 0 4px; font-size: 28px; }
+  .filters .chips { display: none; }
+  .filters .topic-select { display: block; }
+  .filters select, .filters input { width: 100%; min-width: 0; }
+  .filters input, .filters .lead { grid-column: 1 / -1; }
+}
 .count { margin: 16px 0 0; }
 .chart-grid { list-style: none; margin: 0; padding: 24px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 36px 28px; }
 .chart-grid a { text-decoration: none; color: var(--body); display: flex; flex-direction: column; gap: 4px; }

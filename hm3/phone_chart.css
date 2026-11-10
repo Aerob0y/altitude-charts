@@ -1,7 +1,9 @@
 .chart-options > summary, .chart-subtitle, .chart-dates, .note-more { display: none; }
 .chart-options { flex: 0 0 auto; min-width: 0; }
 @media (max-width: 599px) {
-  body .topic, body .page { height: auto; min-height: 100%; }
+  /* Grow with the content and let the page scroll; shrinking to the screen pushed the footer over the chart. */
+  body .topic, body .page { flex: 0 0 auto; height: auto; min-height: 100%; }
+  .topic .panels { flex: 0 0 auto; }
   #note:not(.expanded) { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
   .note-more { display: inline-block; padding: 2px 0; border: 0; background: none; color: #0E6B6B; font: 12px Inter, Arial, sans-serif; text-decoration: underline; cursor: pointer; }
   .chart-options > summary { display: block; padding: 9px; border: 1px solid #DCD6CB; background: white; font-size: 12px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
