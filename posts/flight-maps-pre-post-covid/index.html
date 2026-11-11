@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://csv.co.nz/posts/flight-maps-pre-post-covid/">
+<title>Flight maps: pre and post Covid · CSV Consulting</title>
+<meta name="description" content="Auckland flies to almost as many international destinations as before Covid, but the list has changed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
+<script src="../../js/navigation.js" defer></script>
+<style>
+/* Image carousel for this post only. */
+.post > p { margin: 0 0 1em; }
+.carousel { position: relative; margin: 36px 0; }
+.carousel .track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; background: #12243d; }
+.carousel .track::-webkit-scrollbar { display: none; }
+.carousel .slide { flex: 0 0 100%; scroll-snap-align: start; margin: 0; aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; }
+.carousel .slide img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.carousel .controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 12px; }
+.carousel .caption { margin: 10px 0 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.carousel button { width: 40px; height: 40px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font-size: 18px; cursor: pointer; }
+.carousel button:hover, .carousel button:focus-visible { background: var(--ink); color: var(--paper); }
+.carousel .dots { display: flex; gap: 8px; }
+.carousel .dots button { width: 10px; height: 10px; padding: 0; border-radius: 50%; border-color: var(--muted); }
+.carousel .dots button[aria-current="true"] { background: var(--ink); border-color: var(--ink); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="top">
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="../../" aria-label="CSV Consulting home"><img src="../../images/csv-logo.svg" alt="CSV" width="340" height="290"></a>
+  <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" hidden><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+  <nav class="nav" id="main-nav" aria-label="Main"><a href="../../work.html">Selected work</a><a href="../../insights.html">Insights</a><a href="../../posts.html" aria-current="page">Posts</a><a href="../../about.html">About</a><a class="btn-outline" href="../../contact.html">Discuss a project</a></nav>
+</div></header>
+</div>
+<main id="main"><section class="section"><div class="wrap post">
+  <p class="meta">Aviation · 11 Nov 2026</p>
+  <h1>Flight maps: pre and post Covid</h1>
+  <p class="intro">I'm challenging myself to post a graph a day for 6 weeks. Day 1 is Aviation Week.</p>
+  <p>I mapped every international route from Auckland in 2012, 2019 and 2026.</p>
+  <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Auckland's international route maps">
+    <div class="track" tabindex="0">
+      <figure class="slide" aria-roledescription="slide" aria-label="1 of 3" data-caption="Both periods: 2012 and 2019 above, 2019 and 2026 below."><img src="both-2012-2019-2026.png" width="1200" height="1254" alt="Two maps of Auckland's direct international routes: 2012 and 2019 above, 2019 and 2026 below."></figure>
+      <figure class="slide" aria-roledescription="slide" aria-label="2 of 3" data-caption="2012 and 2019: grey routes ran in both years, red in 2012 only, green in 2019 only."><img src="2012-vs-2019.png" width="1200" height="627" loading="lazy" alt="Map of Auckland's direct international routes in 2012 and 2019. Ten destinations were added, including Doha, Dubai, Houston, Chicago and Bali."></figure>
+      <figure class="slide" aria-roledescription="slide" aria-label="3 of 3" data-caption="2019 and 2026: grey routes ran in both years, red in 2019 only, green in 2026 only."><img src="2019-vs-2026.png" width="1200" height="627" loading="lazy" alt="Map of Auckland's direct international routes in 2019 and 2026. Bangkok, Osaka, Manila, Suva and Chicago have gone; New York, Dallas, Hobart, Haikou and Western Sydney are new."></figure>
+    </div>
+    <div class="controls">
+      <button type="button" class="prev" aria-label="Previous map">&larr;</button>
+      <div class="dots"></div>
+      <button type="button" class="next" aria-label="Next map">&rarr;</button>
+    </div>
+    <p class="caption" aria-live="polite"></p>
+  </div>
+  <p>2012 to 2019 was a boom. Auckland went from 33 direct destinations to 42. Doha, Dubai, Houston, Chicago and Bali all arrived.</p>
+  <p>2019 to 2026 is a reshuffle. While Auckland still has 41 destinations, the list has had a real switch-up.</p>
+  <p>Gone are Bangkok, Osaka, Manila, Suva and Chicago. Thai never came back after Covid, and Air New Zealand paused Chicago in 2024 over engine problems. But we've got new flights to New York, Dallas, Hobart, Haikou and the new Western Sydney airport.</p>
+  <p>The network has tilted towards the United States and away from Asia. International seats are still 9% below 2019, but growing.</p>
+  <p class="source">Direct international routes from Auckland Airport. Routes with fewer than 50 flights a year are left out, except Western Sydney, which only opened this year.<br>Maps made with the <a href="../../route-map/">CSV route map</a>. Try it yourself.</p>
+  <p><a class="textlink arrow" href="../../contact.html">Need analysis like this? Get in touch.</a></p>
+</div></section></main>
+<script>
+(() => {
+  const box = document.querySelector(".carousel"), track = box.querySelector(".track");
+  const slides = [...track.children], dots = box.querySelector(".dots"), caption = box.querySelector(".caption");
+  let index = 0;
+  const go = i => { index = (i + slides.length) % slides.length; track.scrollTo({ left: index * track.clientWidth }); show(); };
+  const show = () => {
+    caption.textContent = slides[index].dataset.caption;
+    dots.querySelectorAll("button").forEach((d, i) => d.setAttribute("aria-current", String(i === index)));
+  };
+  slides.forEach((s, i) => {
+    const b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-label", `Show map ${i + 1}`);
+    b.addEventListener("click", () => go(i)); dots.append(b);
+  });
+  box.querySelector(".prev").addEventListener("click", () => go(index - 1));
+  box.querySelector(".next").addEventListener("click", () => go(index + 1));
+  track.addEventListener("scroll", () => { const i = Math.round(track.scrollLeft / track.clientWidth); if (i !== index) { index = i; show(); } }, { passive: true });
+  track.addEventListener("keydown", e => { if (e.key === "ArrowRight") go(index + 1); if (e.key === "ArrowLeft") go(index - 1); });
+  show();
+})();
+</script>
+<footer class="site-foot"><div class="wrap"><img src="../../images/csv-logo.svg" alt="CSV" width="340" height="290"><span>CSV Consulting is a trading name of CSV Limited.</span><nav class="foot-links" aria-label="Footer"><a href="../../work.html">Selected work</a><a href="../../insights.html">Insights</a><a href="../../posts.html">Posts</a><a href="../../about.html">About</a><a href="mailto:mike@csv.co.nz">mike@csv.co.nz</a></nav><span>Dublin, Ireland</span></div></footer>
+</body>
+</html>

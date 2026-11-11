@@ -2,23 +2,37 @@
   "name": "fuel",
   "title": "Jet fuel price",
   "source": "US Energy Information Administration (EIA)",
-  "note": "Daily US Gulf Coast jet fuel spot price, a benchmark for airline fuel costs, in US dollars per barrel or New Zealand dollars per barrel at the RBNZ exchange rate.",
-  "updated": "2026-11-03",
+  "note": "Daily US Gulf Coast jet fuel spot price, a benchmark for airline fuel costs, per barrel in US dollars and in New Zealand dollars at the RBNZ exchange rate. Today's dollars adjust NZ dollar prices for NZ inflation (Stats NZ CPI) and US dollar prices for US inflation (US CPI, via FRED).",
+  "updated": "2026-11-12",
   "views": [
+    {
+      "label": "NZD per Barrel",
+      "spec": "nzd-per-barrel.json"
+    },
     {
       "label": "USD per Barrel",
       "spec": "usd-per-barrel.json"
     },
     {
-      "label": "NZD per Barrel",
-      "spec": "nzd-per-barrel.json"
+      "label": "NZD per Barrel (today's dollars)",
+      "spec": "nzd-per-barrel-today-s-dollars.json"
+    },
+    {
+      "label": "USD per Barrel (today's dollars)",
+      "spec": "usd-per-barrel-today-s-dollars.json"
     }
   ],
   "data": "data.csv",
   "image": "fuel.png",
-  "image_alt": "Jet fuel price US Energy Information Administration (EIA): USD per Barrel",
-  "real": {
-    "cpi": "cpi.json",
-    "label": "September 2026 prices"
+  "image_alt": "Jet fuel price NZD per Barrel, USD per Barrel, NZD per Barrel (today's dollars), USD per Barrel (today's dollars). Source: US Energy Information Administration (EIA), RBNZ, Stats NZ and US BLS. Today's dollars: September 2026 NZ prices; October 2026 US prices",
+  "pick": {
+    "labels": ["Series 1", "Series 2", "Series 3", "Series 4"],
+    "title": "Jet fuel price",
+    "subtitle": "US Energy Information Administration (EIA)",
+    "palette": ["#12243D", "#0E6B6B", "#C8781E", "#6C8EBF", "#7E8C3A", "#9B5C7E", "#8A8781"],
+    "margin_r": 24,
+    "default": [0, 1, 2, 3],
+    "dims": ["NZD per barrel", "USD per barrel", "NZD per barrel", "USD per barrel"],
+    "colours": ["#12243D", "#0E6B6B", "#12243D", "#0E6B6B"]
   }
 }

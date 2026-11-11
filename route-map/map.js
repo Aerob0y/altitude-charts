@@ -108,17 +108,20 @@
     const rows = table.slice(1).filter(row => row.some(v => v != null && String(v).trim()));
     if (!rows.length) throw Error("No routes found.");
     if (rows.length > MAX_ROWS) throw Error(`Use at most ${MAX_ROWS} route rows.`);
-    const coordinates = new Map();
+    const coordinates = new Map(), dot_colours = new Map();
     const parsed = rows.map((values, i) => {
       const row = i + 2, record = Object.fromEntries(columns.map((key, j) => [key, values[j] ?? ""]));
       if (values.length > columns.length) throw Error(`Row ${row}: more fields than column headings.`);
       const colour = String(record.colour || record.color || "").trim().toLowerCase();
       if (colour && !/^#[0-9a-f]{6}$/.test(colour)) throw Error(`Row ${row}: colour must be #rrggbb.`);
-      const result = { colour, airline: String(record.airline || "").trim().slice(0, 100) };
+      const result = { colour, airline: String(record.airline || "").trim().slice(0, 100), label: String(record.label || "").trim().slice(0, 40) };
       for (const end of ["origin", "destination"]) {
         const code = String(record[end]).trim().toUpperCase();
         if (!/^[A-Z0-9]{3,4}$/.test(code)) throw Error(`Row ${row}: ${end} must be a 3–4 character airport code.`);
         result[end] = code;
+        const dot = String(record[`${end}_colour`] || record[`${end}_color`] || "").trim().toLowerCase();
+        if (dot && !/^#[0-9a-f]{6}$/.test(dot)) throw Error(`Row ${row}: ${end}_colour must be #rrggbb.`);
+        if (dot) dot_colours.set(code, dot);
         const lat = number(record[`${end}_lat`], `${end}_lat`, row, -90, 90);
         const lon = number(record[`${end}_lon`], `${end}_lon`, row, -180, 180);
         if ((lat == null) !== (lon == null)) throw Error(`Row ${row}: supply both latitude and longitude for ${code}.`);
@@ -147,7 +150,7 @@
         throw Error(`Route ${route.origin}–${route.destination}: endpoints must have different coordinates and cannot be exactly opposite on Earth.`);
       }
     }
-    return { routes: parsed, airports: coordinates };
+    return { routes: parsed, airports: coordinates, dot_colours };
   }
   const radians = Math.PI / 180;
   const EARTH_RADIUS_KM = 6371.0088;
@@ -198,7 +201,7 @@
     const groups = new Map();
     for (const route of routes.filter(r => !airline || r.airline === airline)) {
       const pair = [route.origin, route.destination].sort(), key = pair.join("-") + (colour_by === "route" ? "|" + (route.colour || "") : colour_by === "airline" ? "|" + (route.airline || "") : "");
-      if (!groups.has(key)) groups.set(key, { origin: pair[0], destination: pair[1], flights: 0, seats: 0, colour: route.colour || "", airline: route.airline || "", airlines: new Set() });
+      if (!groups.has(key)) groups.set(key, { origin: pair[0], destination: pair[1], flights: 0, seats: 0, colour: route.colour || "", label: route.label || "", airline: route.airline || "", airlines: new Set() });
       const group = groups.get(key);
       for (const metric of ["flights", "seats"]) group[metric] = group[metric] == null || route[metric] == null ? null : group[metric] + route[metric];
       if (route.airline) group.airlines.add(route.airline);

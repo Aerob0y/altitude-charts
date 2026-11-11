@@ -197,6 +197,8 @@
       globe: "Shows the half of the world facing the centre airport. Routes to the far side stop at the horizon.", world: "Whole-world view with areas in proportion." }[mode] || "";
     $("bounds").hidden = $("extent").value !== "custom";
     $("width-value").value = $("width").value;
+    $("route-opacity-value").value = `${Math.round($("route-opacity").value * 100)}%`;
+    $("dot-size-value").value = `${$("dot-size").value}×`;
     if (!data || !land) return null;
     try {
       export_size();
@@ -212,14 +214,16 @@
       const legend = new Map();
       for (const route of totals) {
         const colour = route_colour(route);
-        legend.set(colour, colour_by === "airline" ? route.airline || "Not supplied" : colour);
+        if (!legend.has(colour) || route.label) legend.set(colour, colour_by === "airline" ? route.airline || "Not supplied" : route.label || colour);
       }
       const legend_columns = Math.max(1, Math.floor((W - 84) / 240));
       // "Map only" drops the title, source, legend and notes so the map fills the image.
-      const words = $("map-text").value === "full" && (for_export || $("preview-text").checked);
+      const words = $("map-text").value !== "none" && (for_export || $("preview-text").checked);
+      // "Title and legend" leaves out the kicker, source and footer notes.
+      const simple = words && $("map-text").value === "simple";
       const legend_rows = words && legend.size > 1 ? Math.ceil(Math.min(legend.size, 20) / legend_columns) : 0;
-      const head = words ? 138 : 24;
-      const reserve = words ? 240 + legend_rows * 24 + (legend.size > 20 ? 24 : 0) : 48;
+      const head = simple ? 84 : words ? 138 : 24;
+      const reserve = simple ? 84 + legend_rows * 28 : words ? 240 + legend_rows * 24 + (legend.size > 20 ? 24 : 0) : 48;
       for (const option of $("metric").options) {
         option.disabled = option.value !== "equal" && (totals.some(r => r[option.value] == null) || !totals.some(r => r[option.value] > 0));
       }
@@ -242,7 +246,8 @@
       defs.append(clip); svg.append(defs);
       svg.append(make("rect", { width: W, height: H, fill: bg, "data-background": "true" }));
       const text = (x, y, size, value, fill = ink, attrs = {}) => make("text", { x, y, fill, "font-family": "Arial, sans-serif", "font-size": size, ...attrs }, value);
-      if (words) svg.append(text(42, 40, 12, "ALTITUDE  /  AIRPORT CONNECTIVITY", muted, { "letter-spacing": 2.5 }),
+      if (simple) svg.append(text(42, 56, 30, $("title").value || "Airport connections", ink, { "font-weight": 600 }));
+      else if (words) svg.append(text(42, 40, 12, "ALTITUDE  /  AIRPORT CONNECTIVITY", muted, { "letter-spacing": 2.5 }),
         text(42, 85, 30, $("title").value || "Airport connections", ink, { "font-weight": 600 }),
         text(42, 112, 14, $("source").value || "Source: user-supplied route table", muted));
       const geography = make("g", { "clip-path": "url(#map-clip)" }); svg.append(geography);
@@ -287,7 +292,7 @@
         const colour = route_colour(route);
         const d = frame.route(i); if (!d) return;
         const width = Number($("width").value) * (metric === "equal" ? 1 : Math.max(.15, route[metric] / max) * 3);
-        const path = make("path", { d, stroke: colour, "stroke-width": width, opacity: .9 });
+        const path = make("path", { d, stroke: colour, "stroke-width": width, opacity: Number($("route-opacity").value) });
         path.append(make("title", {}, `${route.origin} ↔ ${route.destination}${metric === "equal" ? "" : `: ${route[metric].toLocaleString()} ${metric}`}`)); route_layer.append(path);
       });
       // Dots go below every label, and labels avoid the dots as well as each other.
@@ -301,40 +306,52 @@
         if (!xy) continue;
         const [x, y] = xy, key = highlight.has(code) || highlight.has(location[2]?.toUpperCase());
         if (x < left || x > left + plot_width || y < top || y > top + plot_height) continue;
-        const r = key ? 7.5 : 4.5;
+        const r = (key ? 7.5 : 4.5) * Number($("dot-size").value);
         if (key) markers.append(make("circle", { cx: x, cy: y, r: r + 5, fill: "none", stroke: accent, "stroke-width": 2 }));
-        markers.append(make("circle", { cx: x, cy: y, r, fill: key ? accent : ink, stroke: bg, "stroke-width": 1.5 }));
+        markers.append(make("circle", { cx: x, cy: y, r, fill: key ? accent : data.dot_colours?.get(code) || ink, stroke: bg, "stroke-width": 1.5 }));
         boxes.push([x - r - 5, y - r - 5, x + r + 5, y + r + 5]);
         places.push({ code, location, x, y, key });
       }
       // Highlighted airports choose their label position first.
       if ($("labels").value !== "none") for (const { code, location, x, y, key } of places.sort((a, b) => b.key - a.key)) {
         const label = $("labels").value === "names" && location[2] !== code ? `${location[2]} · ${code}` : code;
-        const size = key ? 19 : 15, length = label.length * size * .56, height = size + 5, gap = key ? 14 : 10;
-        const candidates = [[x + gap, y - gap], [x + gap, y + gap + size], [x - length - gap, y - gap], [x - length - gap, y + gap + size], [x - length / 2, y - gap - 16], [x - length / 2, y + gap + size + 16]];
-        const scored = candidates.map(([lx, ly]) => {
+        const size = key ? 19 : 15, length = label.length * size * .56, height = size + 5, gap = (key ? 14 : 10) + ((key ? 7.5 : 4.5) * (Number($("dot-size").value) - 1));
+        // Try eight positions round the dot, stepping further out until one is clear.
+        const candidates = [];
+        for (let step = 0; step < 6; step++) {
+          const g = gap + step * 14;
+          candidates.push(...[[x + g, y - g * .6], [x + g, y + g * .6 + size], [x - length - g, y - g * .6], [x - length - g, y + g * .6 + size],
+            [x - length / 2, y - g - 6], [x - length / 2, y + g + size + 6], [x + g, y + size / 2 - 2], [x - length - g, y + size / 2 - 2]].map(c => [...c, step]));
+        }
+        const scored = candidates.map(([lx, ly, step]) => {
           const rect = [lx, ly - height, lx + length, ly + 4];
           const collisions = boxes.filter(b => rect[0] < b[2] + 4 && rect[2] > b[0] - 4 && rect[1] < b[3] + 4 && rect[3] > b[1] - 4).length;
           const outside = rect[0] < left || rect[2] > left + plot_width || rect[1] < top || rect[3] > top + plot_height;
-          return { lx, ly, rect, score: collisions + (outside ? 100 : 0) };
+          return { lx, ly, rect, step, score: collisions * 10 + (outside ? 100 : 0) + step };
         }).sort((a, b) => a.score - b.score)[0];
+        const [x1, y1, x2, y2] = scored.rect, tx = Math.max(x1, Math.min(x, x2)), ty = Math.max(y1, Math.min(y, y2));
+        const d = Math.hypot(tx - x, ty - y) || 1, r0 = (key ? 7.5 : 4.5) * Number($("dot-size").value) + 1;
+        // Only labels pushed well away from their dot need a leader line.
+        if (d - r0 > 24) {
+          labels.append(make("line", { x1: x + (tx - x) / d * r0, y1: y + (ty - y) / d * r0, x2: tx, y2: ty, stroke: muted, "stroke-width": 1 }));
+        }
         boxes.push(scored.rect);
         // The halo is its own text element below the label: PowerPoint, Illustrator and some
         // viewers ignore paint-order and would draw the outline over the letters.
         const weight = { "font-weight": key ? 700 : 600 };
         labels.append(text(scored.lx, scored.ly, size, label, bg, { ...weight, stroke: bg, "stroke-width": 4, "stroke-linejoin": "round", "data-background-halo": "true", "aria-hidden": "true" }),
-          text(scored.lx, scored.ly, size, label, key ? accent : ink, weight));
+          text(scored.lx, scored.ly, size, label, key ? accent : $("label-colour").checked && data.dot_colours?.get(code) || ink, weight));
       }
       if (words && legend.size > 1) {
         [...legend].slice(0, 20).forEach(([colour, label], i) => {
           const x = 42 + (i % legend_columns) * 240;
-          const y = H - 90 - (legend_rows - 1 - Math.floor(i / legend_columns)) * 24;
-          svg.append(make("line", {x1:x, x2:x+24, y1:y-4, y2:y-4, stroke:colour, "stroke-width":3}), text(x+32,y,12,label.slice(0,26),ink));
+          const y = (simple ? H - 36 : H - 90) - (legend_rows - 1 - Math.floor(i / legend_columns)) * (simple ? 28 : 24);
+          svg.append(make("line", {x1:x, x2:x+24, y1:y-(simple?5:4), y2:y-(simple?5:4), stroke:colour, "stroke-width":simple?4:3}), text(x+32,y,simple?16:12,label.slice(0,26),ink));
         });
-        if (legend.size > 20) svg.append(text(42, H-66,12,`${legend.size-20} more colours - see route totals`,muted));
+        if (legend.size > 20 && !simple) svg.append(text(42, H-66,12,`${legend.size-20} more colours - see route totals`,muted));
       }
       const note = metric === "equal" ? "Equal route widths" : `Width: ${metric} · largest pair ${max.toLocaleString()} ${metric}`;
-      if (words) svg.append(text(42, H - 52, 14, `${routes.length} CONNECTIONS  /  ${codes.length} AIRPORTS`, ink, { "letter-spacing": 1 }),
+      if (words && !simple) svg.append(text(42, H - 52, 14, `${routes.length} CONNECTIONS  /  ${codes.length} AIRPORTS`, ink, { "letter-spacing": 1 }),
         text(42, H - 27, 12, `${note}  ·  Great-circle connections; not flight tracks.  ·  Geography: Natural Earth`, muted));
       if (for_export) return svg;
       $("map").replaceChildren(svg); current_svg = svg;

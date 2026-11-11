@@ -2,8 +2,8 @@
 (() => {
   const $ = id => document.getElementById(id);
   const COUNTRIES = {
-    ie: { name: "Ireland", slug: "ireland", sources: "Sources: CSO Census 2022 population; Tailte Éireann boundaries; OpenRouteService drive times." },
-    nz: { name: "New Zealand", slug: "new-zealand", sources: "Sources: legacy New Zealand catchment snapshot; OpenRouteService drive times. Population year and boundary vintage have not been verified." },
+    ie: { name: "Ireland", roads: true, slug: "ireland", sources: "Sources: CSO Census 2022 population; Tailte Éireann boundaries; OpenRouteService drive times." },
+    nz: { name: "New Zealand", roads: true, slug: "new-zealand", sources: "Sources: legacy New Zealand catchment snapshot; OpenRouteService drive times. Population year and boundary vintage have not been verified." },
     au: { name: "Australia", roads: true, slug: "australia", sources: "Sources: Australian Bureau of Statistics estimated resident population (2025); 2021 statistical area boundaries; OpenRouteService drive times. Country backdrop: Natural Earth." }
   };
   const COLOUR_OPTIONS = [["Navy", "#12243D"], ["Teal", "#0E6B6B"], ["Ochre", "#C8781E"], ["Slate blue", "#6C8EBF"], ["Olive", "#7E8C3A"], ["Mauve", "#9B5C7E"], ["Warm grey", "#8A8781"], ["Gold", "#D9A441"], ["Brick", "#A5473B"], ["Sea green", "#3E9C86"], ["Dark slate", "#4A5566"], ["Sand", "#C9B68F"], ["Plum", "#5E3A5A"], ["Sky", "#9DB9D6"], ["Moss", "#55612A"]];

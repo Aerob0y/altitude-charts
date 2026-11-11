@@ -251,9 +251,9 @@
       "name": "fuel",
       "title": "Jet fuel price",
       "source": "US Energy Information Administration (EIA)",
-      "note": "Daily US Gulf Coast jet fuel spot price, a benchmark for airline fuel costs, in US dollars per barrel or New Zealand dollars per barrel at the RBNZ exchange rate.",
+      "note": "Daily US Gulf Coast jet fuel spot price, a benchmark for airline fuel costs, per barrel in US dollars and in New Zealand dollars at the RBNZ exchange rate. Today's dollars adjust NZ dollar prices for NZ inflation (Stats NZ CPI) and US dollar prices for US inflation (US CPI, via FRED).",
       "target": "fuel",
-      "updated": "2026-11-03",
+      "updated": "2026-11-12",
       "page": "fuel/index.html",
       "image": "fuel/fuel.png",
       "site": "nz",
@@ -539,6 +539,15 @@
       "beta": false,
       "section": "miscellaneous",
       "image": "images/chart-donut.png"
+    },
+    {
+      "key": "post-jet-fuel",
+      "title": "Draft post: Jet fuel just hit a record in New Zealand dollars",
+      "page": "posts/jet-fuel-record-nzd/index.html",
+      "beta": false,
+      "wip": true,
+      "image": "images/post-jet-fuel.png",
+      "note": "Day 3 of 42. Not yet on the Posts page."
     }
   ]
 }

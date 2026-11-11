@@ -2,7 +2,8 @@
 // colours come from the palette in pick order; the first series' unit goes on the
 // left axis and any other unit on the right; with two axes each axis takes the
 // colour of its first line and is titled with its unit, the legend replaces the
-// end labels; with one axis it is muted grey.
+// end labels; with one axis it is muted grey. pick.colours, when given, fixes each
+// view's colour instead.
 (() => {
   function rgba(hex, alpha) {
     const n = parseInt(String(hex).replace("#", ""), 16);
@@ -83,6 +84,7 @@
 
   function combine(specs, pick, chosen, labels, indexDate) {
     const palette = pick.palette;
+    const colourOf = k => pick.colours?.[chosen[k]] || palette[k % palette.length];
     labels = pick.items || labels;
     const dims = indexDate ? chosen.map(() => "Index") : chosen.map(i => pick.dims[i]);
     const axes = dims.map(dim => dim === dims[0] ? "y" : "y2");
@@ -109,7 +111,7 @@
         const trace = structuredClone(source);
         trace.yaxis = axes[k];
         trace.legendgroup = "series_" + (k + 1);
-        recolour(trace, palette[k % palette.length], k === 0);
+        recolour(trace, colourOf(k), k === 0);
         if (clash) {
           trace.name = labels[chosen[k]];
           if (trace.mode === "text") trace.text = labelText(trace.name);
@@ -127,14 +129,14 @@
 
     const layout = structuredClone(specs[0].layout || {});
     const second = axes.indexOf("y2");
-    layout.yaxis = {...layout.yaxis, color: twoAxes ? palette[0] : "#64676C", zerolinecolor: "#222326"};
+    layout.yaxis = {...layout.yaxis, color: twoAxes ? colourOf(0) : "#64676C", zerolinecolor: "#222326"};
     if (twoAxes) {
       layout.yaxis.title = titleOf(layout.yaxis, dims[0]);
       const from = specs[second].layout.yaxis || {};
       layout.yaxis2 = {
         ...(layout.yaxis2 || {}), overlaying: "y", side: "right", anchor: "x", showgrid: false,
         rangemode: from.rangemode || "normal", automargin: true, zerolinecolor: "#222326",
-        tickformat: from.tickformat, tickprefix: from.tickprefix, color: palette[second % palette.length],
+        tickformat: from.tickformat, tickprefix: from.tickprefix, color: colourOf(second),
         title: titleOf(layout.yaxis2, dims[second])
       };
       layout.showlegend = true;
