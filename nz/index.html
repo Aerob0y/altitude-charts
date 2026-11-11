@@ -61,8 +61,14 @@
     #preview { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: white; z-index: 1; }
     .status { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: #64676C; background: #FAFAF8; z-index: 2; }
 
+    /* Wide screens: one chart is at most 1200 x 750 px and the page is centred on it; compare allows two
+       charts of that size. The chart shrinks to fit shorter screens, and any spare height goes below the footer. */
+    .topic > * { width: 100%; max-width: 1200px; margin-inline: auto; }
+    .topic.comparing > * { max-width: 2416px; }
+    @media (min-width: 600px) { .topic .chart-area { flex: 1 1 750px; max-height: 750px; } }
+
     /* Compare: a second chart panel, beside the first on wide screens and under it on narrow ones */
-    .panels { flex: 1 1 auto; min-height: 0; display: flex; gap: 16px; }
+    .panels { flex: 0 1 auto; min-height: 0; display: flex; gap: 16px; }
     .panel { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
     .compare { display: flex; align-items: center; gap: 6px 12px; flex-wrap: wrap; }
     .compare button { padding: 7px 12px; border: 1px solid #0E6B6B; background: white; color: #0E6B6B; font: inherit; font-weight: 600; cursor: pointer; }
@@ -71,7 +77,7 @@
     .compare input { accent-color: #0E6B6B; }
     /* Side by side, the two charts' tops line up however many pick boxes each has. */
     @media (min-width: 900px) {
-      .topic.comparing .panels { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr auto; gap: 10px 16px; }
+      .topic.comparing .panels { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto minmax(260px, 750px) auto; gap: 10px 16px; }
       .topic.comparing .panel { display: contents; }
       .topic.comparing .controls, .topic.comparing .chart-options { align-self: start; }
       .topic.comparing #b-panel .controls { grid-area: 1 / 2; }

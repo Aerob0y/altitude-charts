@@ -245,7 +245,7 @@
       "image": "oecd_confidence/oecd_confidence.png",
       "site": "nz",
       "menu": "Economic",
-      "wip": true
+      "wip": false
     },
     {
       "name": "fuel",
@@ -481,7 +481,7 @@
       "menus": [
         {
           "label": "Economic",
-          "topics": ["hb1", "hb2", "yield", "hc35", "hm1", "hm2", "ect", "hm3", "hm5", "hm8", "hm9", "hm10", "hm14", "oecd_cpi", "hs32", "bond"]
+          "topics": ["hb1", "hb2", "yield", "hc35", "hm1", "hm2", "ect", "hm3", "hm5", "hm8", "hm9", "hm10", "hm14", "oecd_cpi", "oecd_confidence", "hs32", "bond"]
         },
         {
           "label": "Tourism & Migration",

@@ -62,3 +62,16 @@ footer p { margin: 4px 0; }
   form { padding: 16px 0 0; }
   #map { height: 62vh; min-height: 380px; }
 }
+/* ?embed=1 (blog posts): just the map and its steps, keeping the map credits. */
+.embed body { background: transparent; }
+.embed .bar, .embed .intro, .embed .notes, .embed footer > :not(#credits) { display: none; }
+.embed main { padding: 0; }
+.embed footer { margin-top: 8px; }
+.embed .workspace { display: flex; flex-direction: column; gap: 10px; }
+.embed form { order: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; padding: 0; border: 0; }
+.embed form > fieldset:first-child, .embed #since-box { flex: 1 0 100%; }
+.embed .result { order: 1; }
+.embed fieldset { margin: 0; }
+.embed fieldset:first-child .choice { display: inline-flex; margin: 2px 16px 2px 0; }
+.embed .actions a { display: none; }
+.embed #map { height: min(460px, 62vh); min-height: 320px; }

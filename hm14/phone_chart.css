@@ -20,3 +20,4 @@
 }
 .legend-control { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
 .legend-control[hidden] { display: none; }
+.embed .chart-headline { display: block; margin-bottom: 2px; color: #222326; font: 600 16px/1.3 "Inter Tight", Inter, Arial, sans-serif; }

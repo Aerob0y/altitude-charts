@@ -1,0 +1,177 @@
+[
+ {
+  "code": "AKL",
+  "name": "Auckland",
+  "country": "New Zealand",
+  "routes": 62,
+  "seats": 11297000
+ },
+ {
+  "code": "AMS",
+  "name": "Amsterdam Schiphol",
+  "country": "Netherlands",
+  "routes": 268,
+  "seats": 41595000
+ },
+ {
+  "code": "ATL",
+  "name": "Atlanta",
+  "country": "United States",
+  "routes": 242,
+  "seats": 62899000
+ },
+ {
+  "code": "BNE",
+  "name": "Brisbane",
+  "country": "Australia",
+  "routes": 79,
+  "seats": 15372000
+ },
+ {
+  "code": "CDG",
+  "name": "Paris Charles de Gaulle",
+  "country": "France",
+  "routes": 269,
+  "seats": 42891000
+ },
+ {
+  "code": "CHC",
+  "name": "Christchurch",
+  "country": "New Zealand",
+  "routes": 27,
+  "seats": 4172000
+ },
+ {
+  "code": "DEN",
+  "name": "Denver",
+  "country": "United States",
+  "routes": 233,
+  "seats": 50222000
+ },
+ {
+  "code": "DFW",
+  "name": "Dallas Fort Worth",
+  "country": "United States",
+  "routes": 272,
+  "seats": 51797000
+ },
+ {
+  "code": "DUB",
+  "name": "Dublin",
+  "country": "Ireland",
+  "routes": 198,
+  "seats": 22166000
+ },
+ {
+  "code": "DXB",
+  "name": "Dubai",
+  "country": "United Arab Emirates",
+  "routes": 258,
+  "seats": 49828000
+ },
+ {
+  "code": "HND",
+  "name": "Tokyo Haneda",
+  "country": "Japan",
+  "routes": 103,
+  "seats": 55703000
+ },
+ {
+  "code": "ICN",
+  "name": "Seoul Incheon",
+  "country": "South Korea",
+  "routes": 162,
+  "seats": 44773000
+ },
+ {
+  "code": "IST",
+  "name": "Istanbul",
+  "country": "Turkey",
+  "routes": 314,
+  "seats": 51095000
+ },
+ {
+  "code": "JFK",
+  "name": "New York JFK",
+  "country": "United States",
+  "routes": 200,
+  "seats": 37083000
+ },
+ {
+  "code": "LAX",
+  "name": "Los Angeles",
+  "country": "United States",
+  "routes": 177,
+  "seats": 44763000
+ },
+ {
+  "code": "LGW",
+  "name": "London Gatwick",
+  "country": "United Kingdom",
+  "routes": 216,
+  "seats": 24676000
+ },
+ {
+  "code": "LHR",
+  "name": "London Heathrow",
+  "country": "United Kingdom",
+  "routes": 222,
+  "seats": 51448000
+ },
+ {
+  "code": "MAN",
+  "name": "Manchester",
+  "country": "United Kingdom",
+  "routes": 200,
+  "seats": 19280000
+ },
+ {
+  "code": "MEL",
+  "name": "Melbourne",
+  "country": "Australia",
+  "routes": 72,
+  "seats": 22065000
+ },
+ {
+  "code": "ORD",
+  "name": "Chicago O'Hare",
+  "country": "United States",
+  "routes": 272,
+  "seats": 55932000
+ },
+ {
+  "code": "PER",
+  "name": "Perth",
+  "country": "Australia",
+  "routes": 51,
+  "seats": 9793000
+ },
+ {
+  "code": "SIN",
+  "name": "Singapore Changi",
+  "country": "Singapore",
+  "routes": 162,
+  "seats": 43087000
+ },
+ {
+  "code": "SYD",
+  "name": "Sydney",
+  "country": "Australia",
+  "routes": 98,
+  "seats": 26202000
+ },
+ {
+  "code": "WLG",
+  "name": "Wellington",
+  "country": "New Zealand",
+  "routes": 20,
+  "seats": 2950000
+ },
+ {
+  "code": "ZQN",
+  "name": "Queenstown",
+  "country": "New Zealand",
+  "routes": 7,
+  "seats": 1752000
+ }
+]

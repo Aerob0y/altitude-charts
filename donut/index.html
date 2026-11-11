@@ -6,6 +6,8 @@
   <link rel="canonical" href="https://csv.co.nz/donut/">
   <title>Where Auckland builds · Altitude</title>
   <link rel="icon" href="data:,">
+  <!-- ?embed=1 (blog posts): just the chart, just the map and its steps. -->
+  <script>if (new URLSearchParams(location.search).get("embed") === "1") document.documentElement.classList.add("embed");</script>
   <link rel="stylesheet" href="../topics.css">
   <script defer src="../topics.js"></script>
   <link rel="stylesheet" href="donut.css">
@@ -72,7 +74,7 @@
     </section>
     <footer>
       <p id="source">Source: Stats NZ building consents and Census usually resident population counts.</p>
-      <p>Map tiles © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.
+      <p id="credits">Map tiles © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.
         Map drawn with <a href="https://deck.gl">deck.gl</a>.</p>
     </footer>
   </main>

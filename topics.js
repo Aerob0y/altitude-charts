@@ -1,5 +1,7 @@
 (() => {
   "use strict";
+  // Embedded pages (?embed=1, set in each page's head) leave out the site header.
+  if (document.documentElement.classList.contains("embed")) return;
   const root = new URL("./", document.currentScript.src);
   // The CSV site header, so chart pages and the site's own pages read as one site.
   const nav = document.createElement("header");

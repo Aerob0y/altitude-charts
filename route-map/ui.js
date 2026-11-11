@@ -3,6 +3,7 @@
 (() => {
   "use strict";
   const $ = id => document.getElementById(id), M = RouteMap;
+  const phone = matchMedia("(max-width: 800px)");
   const NS = "http://www.w3.org/2000/svg";
   let W = 1200, H = 750, export_width = 3840, export_height = 2160;
   let data, land, current_svg, upload_version = 0, export_busy = false;
@@ -14,8 +15,12 @@
     if (text) node.textContent = text;
     return node;
   };
+  // The status line sits over the map. It stays for loading and errors, and fades after a few seconds otherwise.
+  let status_timer = 0;
   function message(text, error = false) {
-    $("status").textContent = text; $("status").classList.toggle("error", error);
+    clearTimeout(status_timer);
+    $("status").textContent = text; $("status").classList.toggle("error", error); $("status").hidden = !text;
+    if (text && !error && !/^(Loading|Reading)/.test(text)) status_timer = setTimeout(() => { $("status").hidden = true; }, 4000);
   }
   function enable_exports(enabled) {
     for (const id of ["svg-export", "png-export"]) $(id).disabled = !enabled || export_busy;
@@ -24,15 +29,15 @@
     data = next;
     $("airline").replaceChildren(new Option("All airlines", ""),
       ...[...new Set(data.routes.map(r => r.airline).filter(Boolean))].sort().map(a => new Option(a, a)));
-    $("source").value = demo ? "Demonstration data · illustrative annual seats and flights" : `Source: ${name.slice(0, 65)} · add your period`;
-    $("title").value = demo ? "Queenstown connections" : "Airport connections";
+    $("source").value = demo ? "Representative examples" : `Source: ${name.slice(0, 65)} · add your period`;
+    $("title").value = demo ? "Airport connections" : "Airport connections";
     $("extent").value = "auto";
     $("metric").value = "equal";
     view = { k: 1, x: 0, y: 0 };
     const codes = [...new Set(data.routes.flatMap(r => [r.origin, r.destination]))].sort();
     $("centre").replaceChildren(new Option("Busiest airport", ""), ...codes.map(c => new Option(c, c)));
     render();
-    message(demo ? "Example only: these figures do not describe a published airline schedule." : `Opened ${name}. Your file has stayed in this browser.`);
+    message(demo ? "" : `Opened ${name}. Your file has stayed in this browser.`);
   }
   function extent(points) {
     switch ($("extent").value) {
@@ -180,7 +185,8 @@
     if (rings.length > MAX_RINGS) throw Error(`Distance rings: draw at most ${MAX_RINGS} rings at once.`);
     return rings;
   }
-  function render() {
+  // render() draws the page preview. render(true) builds the download version and returns it.
+  function render(for_export = false) {
     const mode = $("projection").value, round = mode !== "flat";
     // Regional presets and lat/long bounds only make sense on the flat map.
     for (const value of ["tasman", "custom"]) $("extent").querySelector(`[value=${value}]`).disabled = round;
@@ -191,9 +197,12 @@
       globe: "Shows the half of the world facing the centre airport. Routes to the far side stop at the horizon.", world: "Whole-world view with areas in proportion." }[mode] || "";
     $("bounds").hidden = $("extent").value !== "custom";
     $("width-value").value = $("width").value;
-    if (!data || !land) return;
+    if (!data || !land) return null;
     try {
       export_size();
+      // On a phone the preview is taller than the download so the map has room; downloads keep their own shape.
+      if (!for_export && phone.matches) { W = 1000; H = 1250; }
+      $("map").style.setProperty("--ratio", String(W / H));
       const colour_by = $("colour-by").value;
       const totals = M.aggregate(data.routes, $("airline").value, colour_by);
       const airline_names = [...new Set(data.routes.map(r => r.airline || "Not supplied"))].sort();
@@ -207,7 +216,7 @@
       }
       const legend_columns = Math.max(1, Math.floor((W - 84) / 240));
       // "Map only" drops the title, source, legend and notes so the map fills the image.
-      const words = $("map-text").value === "full";
+      const words = $("map-text").value === "full" && (for_export || $("preview-text").checked);
       const legend_rows = words && legend.size > 1 ? Math.ceil(Math.min(legend.size, 20) / legend_columns) : 0;
       const head = words ? 138 : 24;
       const reserve = words ? 240 + legend_rows * 24 + (legend.size > 20 ? 24 : 0) : 48;
@@ -239,7 +248,7 @@
       const geography = make("g", { "clip-path": "url(#map-clip)" }); svg.append(geography);
       if (frame.sphere) geography.append(make("path", { d: frame.sphere, fill: "none", stroke: muted, "stroke-opacity": .6, "stroke-width": 1.2 }));
       if (frame.grid) geography.append(make("path", { d: frame.grid, fill: "none", stroke: muted, "stroke-opacity": .25, "stroke-width": .6 }));
-      for (const d of frame.land) geography.append(make("path", { d, fill: light ? "#152e40" : "#d6e2e9", stroke: light ? "#2c495d" : "#acbfcd", "stroke-width": .7, "fill-rule": "evenodd" }));
+      for (const d of frame.land) geography.append(make("path", { d, fill: light ? "#152e40" : "#2b4c6f", stroke: light ? "#2c495d" : "#3f6288", "stroke-width": .7, "fill-rule": "evenodd" }));
       const ring_colour = light ? "#8fd3cf" : "#0e6b6b";
       if (rings.length && $("shade-outside-rings").checked) {
         const mask = make("mask", { id: "outside-rings", maskUnits: "userSpaceOnUse", x: left, y: top, width: plot_width, height: plot_height });
@@ -327,9 +336,10 @@
       const note = metric === "equal" ? "Equal route widths" : `Width: ${metric} · largest pair ${max.toLocaleString()} ${metric}`;
       if (words) svg.append(text(42, H - 52, 14, `${routes.length} CONNECTIONS  /  ${codes.length} AIRPORTS`, ink, { "letter-spacing": 1 }),
         text(42, H - 27, 12, `${note}  ·  Great-circle connections; not flight tracks.  ·  Geography: Natural Earth`, muted));
+      if (for_export) return svg;
       $("map").replaceChildren(svg); current_svg = svg;
       $("reset-view").disabled = view.k === 1 && view.x === 0 && view.y === 0;
-      $("summary").textContent = `${routes.length} connections · ${codes.length} airports`;
+      $("totals-count").textContent = ` (${routes.length} connections · ${codes.length} airports)`;
       $("route-totals").replaceChildren(...totals.map(r => {
         const tr = document.createElement("tr");
         const distance = Math.round(M.great_circle_distance(data.airports.get(r.origin), data.airports.get(r.destination))).toLocaleString();
@@ -338,15 +348,16 @@
         }
         return tr;
       }));
-      enable_exports(true); message(words ? "Map ready. SVG and PNG include the title, source and route-width units." : "Map ready. Downloads show the map only, with no title, source or notes.");
-    } catch (e) { enable_exports(false); message(e.message, true); }
+      enable_exports(true);
+    } catch (e) { enable_exports(false); message(e.message, true); if (for_export) throw e; }
+    return null;
   }
   function download(blob, name) {
     const url = URL.createObjectURL(blob), a = document.createElement("a");
     a.href = url; a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(url), 30000);
   }
   function svg_blob(transparent = false) {
-    const svg = current_svg.cloneNode(true);
+    const svg = render(true);
     if (transparent) svg.querySelectorAll("[data-background], [data-background-halo]").forEach(node => node.remove());
     return new Blob([new XMLSerializer().serializeToString(svg)], { type: "image/svg+xml;charset=utf-8" });
   }
@@ -393,15 +404,39 @@
     } catch (e) { if (version === upload_version) message(`${e.message} Previous map retained.`, true); }
     finally { $("upload").value = ""; }
   });
-  async function example() {
-    const version = ++upload_version;
+  // Example routes: one small CSV per hub airport, loaded only when picked.
+  let example_list = [];
+  async function load_example(code) {
+    const version = ++upload_version, hub = example_list.find(e => e.code === code);
+    if (!hub) return;
     try {
-      const response = await fetch("./sample.csv"); if (!response.ok) throw Error("Could not load the example.");
+      message("Loading…");
+      const response = await fetch(`./examples/${code}.csv`); if (!response.ok) throw Error("Could not load that example. Reload the page.");
       const next = M.normalise(M.parse_csv(await response.text()));
-      if (version === upload_version) install(next, "Queenstown example", true);
+      if (version !== upload_version) return;
+      install(next, hub.name, true);
+      const name = M.airports[code]?.[2] || hub.name;
+      $("title").value = `${name} connections`; $("source").value = "Representative examples";
+      $("metric").value = "seats"; $("highlight").value = code; $("centre").value = code;
+      $("labels").value = data.airports.size > 60 ? "none" : "codes";
+      $("example-pick").value = code;
+      render(); message("");
     } catch (e) { message(e.message, true); }
   }
-  $("example").addEventListener("click", example);
+  async function load_example_list() {
+    const response = await fetch("./examples.json"); if (!response.ok) throw Error("Could not load the example list.");
+    example_list = await response.json();
+    const groups = new Map();
+    for (const hub of example_list) (groups.get(hub.country) || groups.set(hub.country, []).get(hub.country)).push(hub);
+    const order = ["New Zealand", "Australia", "Ireland", "United Kingdom", "United States"];
+    const countries = [...groups.keys()].sort((a, b) => (order.indexOf(a) + 1 || 99) - (order.indexOf(b) + 1 || 99) || a.localeCompare(b));
+    $("example-pick").replaceChildren(...countries.map(country => {
+      const group = document.createElement("optgroup"); group.label = country;
+      group.append(...groups.get(country).sort((a, b) => a.name.localeCompare(b.name)).map(h => new Option(`${h.name} (${h.code})`, h.code)));
+      return group;
+    }));
+  }
+  $("example-pick").addEventListener("change", () => load_example($("example-pick").value));
   async function start() {
     try {
       const response = await fetch("./land.geojson"); if (!response.ok) throw Error("Could not load geography. Reload the page.");
@@ -409,7 +444,8 @@
       const lookup = await fetch("./airports.json"); if (!lookup.ok) throw Error("Could not load airport lookup. Reload the page.");
       M.set_airports(await lookup.json());
       $("draw-routes").disabled = false;
-      await example();
+      await load_example_list();
+      await load_example("AKL");
     } catch (e) { message(e.message, true); }
   }
   // Help tips sit in a fixed layer so they never run off a narrow screen.
@@ -488,6 +524,21 @@
   $("reset-view").addEventListener("click", reset_view);
   // A new projection, centre or extent starts from a fresh automatic fit.
   for (const id of ["projection", "centre", "extent", "west", "east", "south", "north"]) $(id).addEventListener("input", () => { view = { k: 1, x: 0, y: 0 }; }, true);
+  // Settings groups remember whether they were open; the panel can be hidden to give the map the full width.
+  const group_key = "route-map-groups";
+  let saved = {}; try { saved = JSON.parse(localStorage.getItem(group_key) || "{}"); } catch (e) { /* storage unavailable */ }
+  document.querySelectorAll("details.group").forEach(group => {
+    const name = group.dataset.group;
+    if (name in saved) group.open = Boolean(saved[name]);
+    group.addEventListener("toggle", () => { saved[name] = group.open; try { localStorage.setItem(group_key, JSON.stringify(saved)); } catch (e) { /* ignore */ } });
+  });
+  $("panel-toggle").addEventListener("click", () => {
+    const hidden = $("workspace").classList.toggle("panel-hidden");
+    $("panel-toggle").textContent = hidden ? "Show settings" : "Hide settings"; $("panel-toggle").setAttribute("aria-expanded", String(!hidden));
+  });
+  $("download-menu").addEventListener("click", e => { if (e.target.closest("button")) $("download-menu").open = false; });
+  document.addEventListener("click", e => { if (!e.target.closest("#download-menu")) $("download-menu").open = false; });
+  phone.addEventListener("change", () => { view = { k: 1, x: 0, y: 0 }; render(); });
   $("add-ring").addEventListener("click", () => add_ring_row().querySelector("input").focus());
   add_ring_row();
   start();

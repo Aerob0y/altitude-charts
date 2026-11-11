@@ -120,7 +120,15 @@
     const subtitle = target?.subtitle || shared.subtitle, dates = target?.dates || shared.dates;
     const title = typeof spec.layout?.title === "string" ? spec.layout.title : spec.layout?.title?.text || "";
     const parts = title.split(/<br\s*\/?\s*>/i);
-    subtitle.textContent = new DOMParser().parseFromString(parts.slice(1).join(" "), "text/html").body.textContent;
+    const plain = html => new DOMParser().parseFromString(html, "text/html").body.textContent;
+    subtitle.textContent = plain(parts.slice(1).join(" "));
+    // Embedded charts have no page title, so the chart's own headline goes above its subtitle.
+    if (document.documentElement.classList.contains("embed") && parts[0]) {
+      const headline = document.createElement("strong");
+      headline.className = "chart-headline";
+      headline.textContent = plain(parts[0]);
+      subtitle.prepend(headline);
+    }
     layout.title = {text: ""};
     const numericXAxis = ["linear", "category"].includes(layout.xaxis?.type);
     layout.margin = {...layout.margin, t: 12, l: 45, r: layout.yaxis2 ? 45 : 18, b: numericXAxis ? 135 : 100};

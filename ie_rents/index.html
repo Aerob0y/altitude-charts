@@ -7,6 +7,8 @@
   <link rel="icon" href="data:,">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Inter+Tight:wght@600&display=swap">
+  <!-- ?embed=1 (blog posts): just the chart, no site header, title, controls or footer. -->
+  <script>if (new URLSearchParams(location.search).get("embed") === "1") document.documentElement.classList.add("embed");</script>
   <link rel="stylesheet" href="../topics.css">
   <script defer src="../topics.js"></script>
   <link rel="stylesheet" href="export_options.css">
@@ -41,6 +43,10 @@
     #downloads { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 4px; }
     a { color: #0E6B6B; text-underline-offset: 3px; }
     :focus-visible { outline: 2px solid #0E6B6B; outline-offset: 3px; }
+    .embed body { background: transparent; }
+    .embed .page { min-height: 0; padding: 0; gap: 0; }
+    .embed .page > header, .embed .controls, .embed .page > footer { display: none !important; }
+    .embed #preview, .embed #status { background: transparent; }
     @media (max-width: 599px) {
       .page { padding: 10px; gap: 8px; }
       h1 { font-size: 23px; }
@@ -75,6 +81,7 @@
   <script>
     (() => {
       const chart = document.getElementById("chart");
+      const embedded = document.documentElement.classList.contains("embed");
       const preview = document.getElementById("preview");
       const plotlyReady = new Promise((resolve, reject) => {
         const script = document.createElement("script");
@@ -220,7 +227,7 @@
         if (!Array.isArray(spec.data)) throw new Error("Invalid chart");
         // The toolbar covers the chart title on phones.
         const config = {...spec.config, responsive: true};
-        if (innerWidth < 600) config.displayModeBar = false;
+        if (innerWidth < 600 || embedded) config.displayModeBar = false;
         // real.js rescales dollar series when "Today's dollars" is ticked; other charts grey it out.
         const adjustable = !!cpi && AltitudeReal.adjustable(spec);
         realBox.disabled = !adjustable;

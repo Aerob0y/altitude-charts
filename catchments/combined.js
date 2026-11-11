@@ -16,7 +16,10 @@
   const heatCache = new Map();
   const BANDS = [[0, 45, "Under 45 min"], [45, 90, "45 to 90 min"], [90, 150, "90 min to 2.5 hours"], [150, 240, "2.5 to 4 hours"], [240, Infinity, "Over 4 hours"]];
   const SVG_NS = "http://www.w3.org/2000/svg";
-  let data, shapes, holeShapes = null, countryLand = [], map, renderer, tiles, land, holes, areas, outlines = [], airports, roads = null, roadLines = [], rows = [], headStartFrame = 0, heatLayers = [], heatPeak = 0, activeCountry = "ie", countryRequest = 0;
+  // Downloads use a fixed wide frame, whatever shape the map has on screen.
+  const EXPORT_WIDTH = 1280, EXPORT_HEIGHT = 720;
+  const millions = value => value >= 995000 ? `${(value / 1e6).toFixed(2)}m` : value >= 10000 ? `${Math.round(value / 1000)}k` : people(value);
+  let homeBounds = null, data, shapes, holeShapes = null, countryLand = [], map, renderer, tiles, land, holes, areas, outlines = [], airports, roads = null, roadLines = [], rows = [], headStartFrame = 0, heatLayers = [], heatPeak = 0, activeCountry = "nz", countryRequest = 0;
   const countryCache = new Map();
   const colourState = { individual: {}, selected: "#0E6B6B", competitors: "#C8781E" };
 
@@ -108,7 +111,7 @@
     const roadCountry = activeCountry;
     loadRoads(roadCountry).then(file => { if (roadCountry !== activeCountry) return; const lines = file.pairs || []; if (file.source) $("source-note").textContent += ` Road lines: ${file.source}.`; roadLines = lines; $("roads-field").hidden = !lines.length; if (lines.length && map) update(false); });
     $("source-note").textContent = `${COUNTRIES[activeCountry].sources} Where a road time is missing, a straight-line estimate at 60 km/h is used and labelled.`;
-    $("intro-copy").textContent = `Explore ${COUNTRIES[activeCountry].name} airport catchments by road. This work-in-progress map uses saved drive times and population data.`;
+    $("intro-copy").textContent = `Drive times by road from every small area in ${COUNTRIES[activeCountry].name} to each airport.`;
     $("catchment-result").setAttribute("aria-label", `${COUNTRIES[activeCountry].name} catchment map`);
     document.querySelectorAll(".countries [data-country]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.country === activeCountry)));
   }
@@ -198,12 +201,12 @@
         band.shown += row.population;
         if (row.included) band.catchment += row.population;
       });
-      let shown = 0, catchment = 0;
-      table.innerHTML = `<thead><tr><th>Drive time</th><th>All areas shown</th><th>Cumulative</th><th>Catchment</th><th>Cumulative</th></tr></thead><tbody>` +
-        BANDS.map(([lower, upper, label], index) => {
-          shown += bandTotals[index].shown; catchment += bandTotals[index].catchment;
-          return `<tr><td>${label}</td><td>${people(bandTotals[index].shown)}</td><td>${people(shown)}</td><td>${people(bandTotals[index].catchment)}</td><td>${people(catchment)}</td></tr>`;
-        }).join("") + `</tbody><tfoot><tr><td>Total</td><td>${people(shown)}</td><td></td><td>${people(catchment)}</td><td></td></tr></tfoot>`;
+      const shown = bandTotals.reduce((sum, band) => sum + band.shown, 0), catchment = bandTotals.reduce((sum, band) => sum + band.catchment, 0);
+      const share = value => catchment ? `${(100 * value / catchment).toFixed(1)}%` : "—";
+      table.innerHTML = `<thead><tr><th>Drive time</th><th>All areas shown</th><th>Catchment</th><th>Share of catchment</th></tr></thead><tbody>` +
+        BANDS.map(([, , label], index) => `<tr><td>${label}</td><td>${people(bandTotals[index].shown)}</td><td>${people(bandTotals[index].catchment)}</td><td>${share(bandTotals[index].catchment)}</td></tr>`).join("") +
+        `</tbody><tfoot><tr><td>Total</td><td>${people(shown)}</td><td>${people(catchment)}</td><td>${catchment ? "100%" : "—"}</td></tr></tfoot>`;
+      $("table-columns").hidden = true;
       $("data-title").textContent = `Population by drive time to ${airportByCode(result.focus).name}`;
       $("chart-title").textContent = `${airportByCode(result.focus).code} catchment population by drive time`;
       const values = bandTotals.map(band => band.catchment), total = values.reduce((sum, value) => sum + value, 0), max = Math.max(1, total);
@@ -241,11 +244,12 @@
       });
       const extraTenths = routed ? 1000 - shares.reduce((sum, share) => sum + share.tenths, 0) : 0;
       [...shares.keys()].sort((left, right) => shares[right].remainder - shares[left].remainder).slice(0, extraTenths).forEach(index => shares[index].tenths++);
-      table.innerHTML = `<thead><tr><th>Airport</th>${BANDS.map(([, , label]) => `<th>${label}</th>`).join("")}<th>Catchment</th><th>Share</th></tr></thead><tbody>` +
-        ordered.map((item, index) => { const total = item.bands.reduce((sum, value) => sum + value, 0); return `<tr><td>${airportByCode(item.code).name} (${item.code})</td>${item.bands.map(value => `<td>${people(value)}</td>`).join("")}<td>${people(total)}</td><td>${(shares[index].tenths / 10).toFixed(1)}%</td></tr>`; }).join("") +
-        (noRoute ? `<tr><td>No route</td>${BANDS.map(() => `<td>—</td>`).join("")}<td>${people(noRoute)}</td><td>—</td></tr>` : "") +
-        `</tbody><tfoot><tr><td>Total</td>${BANDS.map((_, index) => `<td>${people(ordered.reduce((sum, item) => sum + item.bands[index], 0))}</td>`).join("")}<td>${people(routed + noRoute)}</td><td>${noRoute ? "—" : "100%"}</td></tr></tfoot>`;
+      table.innerHTML = `<thead><tr><th>Airport</th>${BANDS.map(([, , label]) => `<th class="band">${label}</th>`).join("")}<th>Catchment</th><th>Share</th></tr></thead><tbody>` +
+        ordered.map((item, index) => { const total = item.bands.reduce((sum, value) => sum + value, 0); return `<tr><td>${airportByCode(item.code).name} (${item.code})</td>${item.bands.map(value => `<td class="band">${people(value)}</td>`).join("")}<td>${people(total)}</td><td>${(shares[index].tenths / 10).toFixed(1)}%</td></tr>`; }).join("") +
+        (noRoute ? `<tr><td>No route</td>${BANDS.map(() => `<td class="band">—</td>`).join("")}<td>${people(noRoute)}</td><td>—</td></tr>` : "") +
+        `</tbody><tfoot><tr><td>Total</td>${BANDS.map((_, index) => `<td class="band">${people(ordered.reduce((sum, item) => sum + item.bands[index], 0))}</td>`).join("")}<td>${people(routed + noRoute)}</td><td>${noRoute ? "—" : "100%"}</td></tr></tfoot>`;
       $("data-title").textContent = "Catchment by airport and drive time";
+      $("table-columns").hidden = false;
       $("chart-title").textContent = "People closer to each airport";
       const totals = ordered.map(item => ({ code: item.code, total: item.bands.reduce((sum, value) => sum + value, 0) }));
       const maximum = Math.max(1, ...totals.map(item => item.total)), left = 62, right = 48, top = 12, rowHeight = Math.max(25, Math.min(42, 840 / totals.length)), plotWidth = 410 - left - right;
@@ -414,16 +418,16 @@
       return L.circleMarker([airport.lat, airport.lon], { renderer, radius: selectedAirport ? 7 : 5.5, color: "#222326", weight: 2.2, fillColor: "#FFFFFF", fillOpacity: 1 })
         .bindTooltip(airport.code, { permanent: true, direction: "top", className: "airport-label", offset: [0, -5] });
     })).addTo(map);
-    if (fit) map.fitBounds(countryLand.length ? land.getBounds() : mainlandBounds(areas), { padding: [18, 18] });
+    if (fit) { homeBounds = countryLand.length ? land.getBounds() : mainlandBounds(areas); map.fitBounds(homeBounds, { padding: [18, 18] }); }
   }
 
   // Remote islands (for example the Chatham Islands) would zoom the map out to the whole Pacific,
-  // so fit to the areas whose centres sit inside the middle 99% of the country.
+  // so fit to the areas whose centres sit inside the middle 99.6% of the country.
   function mainlandBounds(layer) {
     const items = [];
     layer.eachLayer(item => { const bounds = item.getBounds(); if (bounds.isValid()) items.push({ bounds, centre: bounds.getCenter() }); });
     if (items.length < 50) return layer.getBounds();
-    const range = key => { const values = items.map(item => item.centre[key]).sort((a, b) => a - b); return [values[Math.floor(values.length * .005)], values[Math.ceil(values.length * .995) - 1]]; };
+    const range = key => { const values = items.map(item => item.centre[key]).sort((a, b) => a - b); return [values[Math.floor(values.length * .002)], values[Math.ceil(values.length * .998) - 1]]; };
     const [south, north] = range("lat"), [west, east] = range("lng"), result = L.latLngBounds([]);
     items.filter(item => item.centre.lat >= south && item.centre.lat <= north && item.centre.lng >= west && item.centre.lng <= east).forEach(item => result.extend(item.bounds));
     return result.isValid() ? result : layer.getBounds();
@@ -436,11 +440,13 @@
     const proxies = rows.filter(row => row.own?.proxy || row.win?.proxy).length;
     if (focusAirport) {
       const inside = rows.filter(row => row.included).reduce((sum, row) => sum + row.population, 0), total = rows.reduce((sum, row) => sum + row.population, 0);
-      $("summary").innerHTML = `<strong>${people(inside)}</strong> people live in ${escape(focusAirport.name)}’s catchment, out of ${people(total)} in the areas shown.${proxies ? ` ${proxies} areas use a straight-line estimate.` : ""}`;
+      $("summary").innerHTML = `<strong>${millions(inside)}</strong> people live in ${escape(focusAirport.code)}’s catchment (${total ? Math.round(100 * inside / total) : 0}% of the ${millions(total)} in the areas shown).`;
     } else {
       const totals = result.codes.map(code => [code, rows.filter(row => row.win?.code === code).reduce((sum, row) => sum + row.population, 0)]).sort((a, b) => b[1] - a[1]);
-      $("summary").innerHTML = totals.map(([code, total]) => `<strong>${code}</strong> ${people(total)}`).join(" · ") + " people in each catchment.";
+      const top = totals.slice(0, 5).map(([code, total]) => `${code} <strong>${millions(total)}</strong>`).join(" · ");
+      $("summary").innerHTML = `People closer to each airport: ${top}${totals.length > 5 ? ` and ${totals.length - 5} more in the table` : ""}.`;
     }
+    $("proxy-note").textContent = proxies ? `${people(proxies)} areas have no saved road time, so they use a straight-line estimate at 60 km/h.` : "";
     const noBlockKey = holeShapes?.features.length ? '<span class="no-block"><i></i>No catchment block</span>' : "";
     if (scale.heat) {
       $("legend").innerHTML = `<span>Fewer people</span><span class="ramp" style="background:linear-gradient(90deg, ${SEQUENTIAL.join(",")})"></span><span>${people(Math.round(heatPeak / 10) * 10)} people per km² at the peak (smoothed)</span>${noBlockKey}`;
@@ -545,7 +551,31 @@
     return y + legendHeight;
   }
 
+  // Redraw the map at the export size for the area in view, copy it, then put the page map back.
+  // Leaflet redraws synchronously here, so the page never paints the resized map.
+  // Street-map PNGs keep the on-screen shape, because tiles for a new frame would need to load first.
+  function withExportFrame(callback) {
+    const container = map.getContainer(), centre = map.getCenter(), zoom = map.getZoom(), view = map.getBounds(), zoomSnap = map.options.zoomSnap;
+    const target = homeBounds && view.intersects(homeBounds) ? L.latLngBounds(
+      [Math.max(view.getSouth(), homeBounds.getSouth()), Math.max(view.getWest(), homeBounds.getWest())],
+      [Math.min(view.getNorth(), homeBounds.getNorth()), Math.min(view.getEast(), homeBounds.getEast())]) : view;
+    const style = container.getAttribute("style") || "";
+    try {
+      container.style.width = `${EXPORT_WIDTH}px`; container.style.height = `${EXPORT_HEIGHT}px`;
+      map.options.zoomSnap = 0; map.invalidateSize({ animate: false, pan: false });
+      map.fitBounds(target, { animate: false, padding: [24, 24] });
+      return callback();
+    } finally {
+      container.setAttribute("style", style); map.options.zoomSnap = zoomSnap;
+      map.invalidateSize({ animate: false, pan: false }); map.setView(centre, zoom, { animate: false });
+    }
+  }
+
   function createExportSvg(includeTiles = false) {
+    return includeTiles ? buildExportSvg(true) : withExportFrame(() => buildExportSvg(false));
+  }
+
+  function buildExportSvg(includeTiles) {
     const mapRect = map.getContainer().getBoundingClientRect();
     const width = Math.max(1200, mapRect.width), scale = width / mapRect.width;
     const mapOnly = $("export-map-only").checked;
@@ -588,7 +618,7 @@
     }
     if (!mapOnly) {
       const legendBottom = addExportLegend(svg, headerHeight + mapHeight + 27, width);
-      const source = [...document.querySelectorAll("footer p")].map(paragraph => paragraph.innerText.trim()).filter(Boolean).join(" ") + (includeTiles ? " Street map: © OpenStreetMap contributors." : "");
+      const source = [...document.querySelectorAll("footer p")].map(paragraph => paragraph.textContent.trim()).filter(Boolean).join(" ") + (includeTiles ? " Street map: © OpenStreetMap contributors." : "");
       addWrappedExportText(svg, source, 24, legendBottom + 18, 11, 190);
     }
     return { svg, width, height: headerHeight + mapHeight + footerHeight, headerHeight, mapHeight, mapRect, scale };
@@ -659,9 +689,9 @@
     const snapshot = createExportSvg(includeTiles), xml = new XMLSerializer().serializeToString(snapshot.svg);
     const svgBlob = new Blob([xml], { type: "image/svg+xml;charset=utf-8" }), svgUrl = URL.createObjectURL(svgBlob);
     try {
-      const svgImage = await loadImage(svgUrl), outputScale = 1600 / snapshot.width;
+      const svgImage = await loadImage(svgUrl), outputScale = 2;
       const canvas = document.createElement("canvas");
-      canvas.width = 1600; canvas.height = Math.ceil(snapshot.height * outputScale);
+      canvas.width = Math.ceil(snapshot.width * outputScale); canvas.height = Math.ceil(snapshot.height * outputScale);
       const context = canvas.getContext("2d");
       context.fillStyle = "#FAFAF8"; context.fillRect(0, 0, canvas.width, canvas.height);
       if (includeTiles) {
@@ -739,9 +769,10 @@
   async function start() {
     try {
       [data, shapes, countryLand] = await loadCountry(activeCountry);
-    } catch (error) { $("map-subtitle").textContent = "The saved Ireland data could not be loaded. Please try again later."; return; }
+    } catch (error) { $("map-subtitle").textContent = `The saved ${COUNTRIES[activeCountry].name} data could not be loaded. Please try again later.`; return; }
     buildControls(); $("notice").textContent = data.notice;
-    renderer = L.svg(); map = L.map("map", { renderer, scrollWheelZoom: true });
+    renderer = L.svg(); map = L.map("map", { renderer, scrollWheelZoom: false, zoomSnap: .25, zoomControl: false });
+    setUpMapControls();
     tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: "© OpenStreetMap contributors" });
     update(true);
     const initialCountry = activeCountry;
@@ -772,7 +803,60 @@
     $("head-start").addEventListener("change", () => { cancelAnimationFrame(headStartFrame); update(false); });
     for (const id of ["block-borders", "catchment-outline", "roads-on"]) $(id).addEventListener("change", () => update(false));
     $("street-map").addEventListener("change", event => { event.target.checked ? tiles.addTo(map) : tiles.remove(); $("street-label").textContent = event.target.checked ? "On: street map behind" : "Off: clean vector view"; syncExportControls(); update(false); });
-    document.addEventListener("click", event => { for (const id of ["competitor-menu", "regions-menu"]) { const menu = $(id); if (menu.open && !menu.contains(event.target)) menu.open = false; } });
+    setUpPageControls();
+    document.addEventListener("click", event => { for (const id of ["competitor-menu", "regions-menu", "colour-menu", "download-menu"]) { const menu = $(id); if (menu.open && !menu.contains(event.target)) menu.open = false; } });
   }
+  // Zoom buttons and full screen sit bottom right. A full-width map would trap the page scroll,
+  // so the wheel zooms only with Ctrl or ⌘ held (also how trackpad pinches arrive), and on
+  // touch screens one finger scrolls the page while two fingers move and zoom the map.
+  function setUpMapControls() {
+    L.control.zoom({ position: "bottomright" }).addTo(map);
+    const Fullscreen = L.Control.extend({ options: { position: "bottomright" }, onAdd() {
+      const box = L.DomUtil.create("div", "leaflet-bar leaflet-control leaflet-control-fullscreen"), link = L.DomUtil.create("a", "", box);
+      link.href = "#"; link.role = "button"; link.title = "Full screen"; link.setAttribute("aria-label", "Full screen"); link.textContent = "⤢";
+      L.DomEvent.on(link, "click", event => {
+        L.DomEvent.preventDefault(event);
+        const frame = $("map-frame");
+        if (document.fullscreenElement) document.exitFullscreen(); else frame.requestFullscreen?.();
+      });
+      L.DomEvent.disableClickPropagation(box);
+      return box;
+    } });
+    if (document.fullscreenEnabled) new Fullscreen().addTo(map);
+    document.addEventListener("fullscreenchange", () => map.invalidateSize());
+    let hintTimer = 0;
+    const hint = text => { $("map-hint").textContent = text; $("map-hint").classList.add("show"); clearTimeout(hintTimer); hintTimer = setTimeout(() => $("map-hint").classList.remove("show"), 1200); };
+    map.getContainer().addEventListener("wheel", event => {
+      if (!event.ctrlKey && !event.metaKey && !document.fullscreenElement) { hint(/Mac/.test(navigator.platform) ? "Hold ⌘ and scroll to zoom" : "Hold Ctrl and scroll to zoom"); return; }
+      event.preventDefault();
+      map.setZoomAround(map.mouseEventToContainerPoint(event), map.getZoom() - Math.max(-1, Math.min(1, event.deltaY / 60)) * .5);
+    }, { passive: false });
+    if (matchMedia("(pointer: coarse)").matches) {
+      map.dragging.disable();
+      map.getContainer().addEventListener("touchstart", event => { if (event.touches.length === 1) hint("Use two fingers to move the map"); }, { passive: true });
+    }
+    map.on("click", () => setOptionsOpen(false));
+  }
+
+  function setOptionsOpen(open) {
+    $("options").hidden = !open;
+    $("options-toggle").setAttribute("aria-expanded", String(open));
+  }
+
+  function setUpPageControls() {
+    $("options-toggle").addEventListener("click", () => setOptionsOpen($("options").hidden));
+    $("options-close").addEventListener("click", () => setOptionsOpen(false));
+    document.addEventListener("keydown", event => { if (event.key === "Escape" && !$("options").hidden) { setOptionsOpen(false); $("options-toggle").focus(); } });
+    $("key-toggle").addEventListener("click", () => {
+      const collapsed = $("map-key").classList.toggle("collapsed");
+      $("key-toggle").textContent = collapsed ? "Show key" : "Hide key";
+      $("key-toggle").setAttribute("aria-expanded", String(!collapsed));
+    });
+    $("table-columns").addEventListener("click", () => {
+      const compact = $("table-wrap").classList.toggle("compact");
+      $("table-columns").textContent = compact ? "Show drive-time columns" : "Hide drive-time columns";
+    });
+  }
+
   window.addEventListener("DOMContentLoaded", start);
 })();

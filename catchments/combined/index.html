@@ -21,19 +21,18 @@
   <header class="bar"><a class="brand" href="../">Altitude</a><span>Mapping tools</span></header>
   <main>
     <header class="intro">
-      <p class="eyebrow">AIRPORT CATCHMENTS <span class="beta">Beta</span></p>
-      <h1>Who lives closer to which airport?</h1>
-      <p id="intro-copy">Explore airport catchments by road. This map uses saved drive times and population data.</p>
+      <div>
+        <h1>Who lives closer to which airport? <span class="beta">Beta</span></h1>
+        <p id="intro-copy">Drive times by road from every small area to each airport.</p>
+      </div>
+      <nav class="countries" aria-label="Area covered">
+        <button type="button" data-country="nz" aria-pressed="true">New Zealand</button>
+        <button type="button" data-country="au" aria-pressed="false">Australia</button>
+        <button type="button" data-country="ie" aria-pressed="false">Ireland</button>
+      </nav>
     </header>
 
-    <nav class="countries" aria-label="Area covered">
-      <button type="button" data-country="nz" aria-pressed="false">New Zealand</button>
-      <button type="button" data-country="au" aria-pressed="false">Australia</button>
-      <button type="button" data-country="ie" aria-pressed="true">Ireland</button>
-    </nav>
-
-    <details class="options" id="options" open><summary>Map options</summary>
-    <form class="controls" aria-label="Catchment map controls">
+    <div class="toolbar">
       <label class="field">Focus airport
         <select id="focus"><option value="all">Country view (all airports)</option></select>
       </label>
@@ -43,54 +42,75 @@
           <div id="competitors"></div>
         </div></details>
       </div>
-      <div class="field" id="regions-box" hidden><span>States shown</span>
-        <details id="regions-menu"><summary id="regions-summary">All states</summary><div class="menu-panel"><div class="checks" id="regions"></div></div></details>
-      </div>
-      <fieldset class="field wide"><legend>Colour areas by</legend><div class="segments">
-        <label><input type="radio" name="colour" value="density"> Population density</label>
-        <label><input type="radio" name="colour" value="heat"> Population heat</label>
-        <label><input type="radio" name="colour" value="size" checked> Catchment size</label>
-      </div></fieldset>
-      <fieldset class="field"><legend>Airport colours</legend><div class="segments">
-        <label><input type="radio" name="airport-colours" value="individual" checked> Individual</label>
-        <label id="competing-colours-label"><input type="radio" name="airport-colours" value="competing" disabled> Competing</label>
-      </div>
-        <details id="colour-menu"><summary>Change colours</summary><div class="menu-panel" id="colour-options"></div></details>
-        <small id="colour-help">Choose a focus airport to compare it with the other airports.</small>
-      </fieldset>
-      <label class="field" for="head-start">Head start for major airports
-        <span class="range"><input id="head-start" type="range" min="0" max="120" step="5" value="0"><output for="head-start">0 min</output></span>
-        <small>A regional airport only wins an area if it is this many minutes closer than a major airport.</small>
-      </label>
-      <fieldset class="field"><legend>Map lines</legend><div class="checks">
-        <label><input id="block-borders" type="checkbox" checked> Show block borders</label>
-        <label><input id="catchment-outline" type="checkbox" checked> Show catchment outline</label>
-        <label id="roads-field" hidden><input id="roads-on" type="checkbox"> Show roads between airports</label>
-      </div></fieldset>
-      <label class="field">Street map
-        <span class="switch"><input id="street-map" type="checkbox" role="switch"><span id="street-label">Off: clean vector view</span></span>
-        <small>Zoom and drag work either way.</small>
-      </label>
-    </form>
-    </details>
+      <button type="button" class="options-toggle" id="options-toggle" aria-expanded="false" aria-controls="options">Map options</button>
+    </div>
 
     <section class="result" aria-label="Catchment map" id="catchment-result">
-      <div class="map-head"><div><h2 id="map-title">Ireland: closest airport by road</h2><p id="map-subtitle">Loading saved catchment data…</p></div><div class="export-controls"><label class="export-clean"><input id="export-map-only" type="checkbox"> Map only</label><button id="export-svg" type="button" disabled>Download SVG</button><button id="export-png" type="button" disabled>Download PNG</button></div></div>
       <p id="export-status" class="export-status" role="status" aria-live="polite"></p>
-      <div class="map-layout">
+
+      <div class="map-frame" id="map-frame">
         <div id="map"></div>
-        <div class="map-side">
-          <div class="legend" id="legend" aria-live="polite"></div>
-          <p class="summary" id="summary" role="status" aria-live="polite"></p>
+        <div class="map-head"><h2 id="map-title">New Zealand: closest airport by road</h2><p id="map-subtitle">Loading saved catchment data…</p></div>
+        <div class="map-key" id="map-key">
+          <button type="button" class="key-toggle" id="key-toggle" aria-expanded="true" aria-controls="key-body">Hide key</button>
+          <div id="key-body">
+            <div class="legend" id="legend" aria-live="polite"></div>
+            <p class="summary" id="summary" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+        <details class="download" id="download-menu"><summary>Download</summary><div class="menu-panel">
+            <button id="export-png" type="button" disabled>PNG image</button>
+            <button id="export-svg" type="button" disabled>SVG (vector)</button>
+            <label class="export-clean"><input id="export-map-only" type="checkbox"> Map only, no title or key</label>
+            <small>Downloads are wide (16:9) and show the area you are looking at.</small>
+          </div></details>
+        <p class="map-hint" id="map-hint" aria-hidden="true"></p>
+
+        <div class="options-panel" id="options" role="dialog" aria-label="Map options" hidden>
+          <div class="options-head"><strong>Map options</strong><button type="button" id="options-close">Done</button></div>
+          <form class="controls" aria-label="Catchment map controls">
+            <div class="field" id="regions-box" hidden><span>States shown</span>
+              <details id="regions-menu"><summary id="regions-summary">All states</summary><div class="menu-panel"><div class="checks" id="regions"></div></div></details>
+            </div>
+            <fieldset class="field wide"><legend>Colour areas by</legend><div class="segments">
+              <label><input type="radio" name="colour" value="density"> Population density</label>
+              <label><input type="radio" name="colour" value="heat"> Population heat</label>
+              <label><input type="radio" name="colour" value="size" checked> Catchment size</label>
+            </div></fieldset>
+            <fieldset class="field"><legend>Airport colours <span class="tip" tabindex="0" aria-label="About airport colours">i<span class="tip-text" id="colour-help">Choose a focus airport to compare it with the other airports.</span></span></legend><div class="segments">
+              <label><input type="radio" name="airport-colours" value="individual" checked> Individual</label>
+              <label id="competing-colours-label"><input type="radio" name="airport-colours" value="competing" disabled> Competing</label>
+            </div>
+              <details id="colour-menu"><summary>Change colours</summary><div class="menu-panel" id="colour-options"></div></details>
+            </fieldset>
+            <div class="field"><label for="head-start">Head start for major airports <span class="tip" tabindex="0" aria-label="About the head start">i<span class="tip-text">A regional airport only wins an area if it is this many minutes closer than a major airport.</span></span></label>
+              <span class="range"><input id="head-start" type="range" min="0" max="120" step="5" value="0"><output for="head-start">0 min</output></span>
+            </div>
+            <fieldset class="field"><legend>Map lines</legend><div class="checks">
+              <label><input id="block-borders" type="checkbox" checked> Show block borders</label>
+              <label><input id="catchment-outline" type="checkbox" checked> Show catchment outline</label>
+              <label id="roads-field" hidden><input id="roads-on" type="checkbox"> Show roads between airports</label>
+            </div></fieldset>
+            <label class="field">Street map
+              <span class="switch"><input id="street-map" type="checkbox" role="switch"><span id="street-label">Off: clean vector view</span></span>
+            </label>
+          </form>
         </div>
       </div>
-      <h2 class="data-title" id="data-title">Catchment population</h2>
+
       <div class="data-layout">
-        <div class="table-wrap"><table id="catchment-table"></table></div>
+        <div>
+          <h2 class="data-title" id="data-title">Catchment population</h2>
+          <div class="table-wrap compact" id="table-wrap"><table id="catchment-table"></table></div>
+          <button type="button" class="link-button" id="table-columns" hidden>Show drive-time columns</button>
+        </div>
         <figure class="chart-box"><figcaption id="chart-title"></figcaption><svg id="catchment-chart" viewBox="0 0 420 280" role="img" aria-label="Chart of catchment population"></svg></figure>
       </div>
     </section>
-    <footer><p id="notice"></p><p id="source-note">Sources: CSO Census 2022 population; Tailte Éireann boundaries; OpenRouteService drive times. Where a road time is missing, a straight-line estimate at 60 km/h is used and labelled.</p></footer>
+    <footer>
+      <p id="source-note">Sources: CSO Census 2022 population; Tailte Éireann boundaries; OpenRouteService drive times. Where a road time is missing, a straight-line estimate at 60 km/h is used and labelled.</p>
+      <details class="notes"><summary>Notes on the data</summary><p id="notice"></p><p id="proxy-note"></p></details>
+    </footer>
   </main>
 </body>
 </html>
