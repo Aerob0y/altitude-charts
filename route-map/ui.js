@@ -54,16 +54,16 @@
     }
   }
   // The current map: a latitude-adjusted equirectangular projection, unchanged.
-  function flat_frame(arcs, rings, reserve, head) {
+  function flat_frame(arcs, rings, reserve, head, bleed = false) {
     // Rings are left out of the fit so adding or changing them never moves the map.
     const fit_points = arcs.flat();
     const bounds = extent(fit_points.length ? fit_points : rings.flatMap(ring => ring.points)), centre = (bounds[0] + bounds[1]) / 2;
     const aspect = Math.max(.25, Math.cos((bounds[2] + bounds[3]) / 2 * Math.PI / 180));
-    const scale = Math.min((W - 140) / ((bounds[1] - bounds[0]) * aspect), (H - reserve) / (bounds[3] - bounds[2]));
+    const scale = Math.min((W - (bleed ? 0 : 140)) / ((bounds[1] - bounds[0]) * aspect), (H - reserve) / (bounds[3] - bounds[2]));
     // Fill the preview with context land, rather than an inset clipped rectangle.
-    if ($("extent").value === "auto") {
+    if ($("extent").value === "auto" || bleed) {
       const middle_lat = (bounds[2] + bounds[3]) / 2;
-      const span = Math.min(360, (W - 84) / (aspect * scale));
+      const span = Math.min(360, (W - (bleed ? 0 : 84)) / (aspect * scale));
       bounds[0] = centre - span / 2; bounds[1] = centre + span / 2;
       bounds[2] = Math.max(-90, middle_lat - (H - reserve) / scale / 2);
       bounds[3] = Math.min(90, middle_lat + (H - reserve) / scale / 2);
@@ -220,20 +220,26 @@
       // "Map only" drops the title, source, legend and notes so the map fills the image.
       const words = $("map-text").value !== "none" && (for_export || $("preview-text").checked);
       // "Title and legend" leaves out the kicker, source and footer notes.
-      const simple = words && $("map-text").value === "simple";
+      // "Full-bleed" fills the whole image with map and lays the title and legend over it.
+      const overlay = words && $("map-text").value === "overlay";
+      const simple = words && ["simple", "overlay"].includes($("map-text").value);
       const legend_rows = words && legend.size > 1 ? Math.ceil(Math.min(legend.size, 20) / legend_columns) : 0;
-      const head = simple ? 84 : words ? 138 : 24;
-      const reserve = simple ? 84 + legend_rows * 28 : words ? 240 + legend_rows * 24 + (legend.size > 20 ? 24 : 0) : 48;
+      const head = overlay ? 0 : simple ? 84 : words ? 138 : 24;
+      const reserve = overlay ? 0 : simple ? 84 + legend_rows * 28 : words ? 240 + legend_rows * 24 + (legend.size > 20 ? 24 : 0) : 48;
       for (const option of $("metric").options) {
         option.disabled = option.value !== "equal" && (totals.some(r => r[option.value] == null) || !totals.some(r => r[option.value] > 0));
       }
       if ($("metric").selectedOptions[0].disabled) $("metric").value = "equal";
       const metric = $("metric").value, routes = totals.filter(r => metric === "equal" || r[metric] > 0);
       const codes = [...new Set(routes.flatMap(r => [r.origin, r.destination]))];
+      // Optional: airport dot area in proportion to the seats or flights through it.
+      const sized = $("dot-by-metric").checked && metric !== "equal", through = new Map();
+      if (sized) routes.forEach(r => [r.origin, r.destination].forEach(c => through.set(c, (through.get(c) || 0) + r[metric])));
+      const busiest_airport = Math.max(1, ...through.values());
       const arcs = routes.map(r => M.great_circle(data.airports.get(r.origin), data.airports.get(r.destination)));
       const rings = distance_rings();
       const centre_code = $("centre").value || (routes.length ? busiest(routes) : codes[0]);
-      const frame = mode === "flat" ? flat_frame(arcs, rings, reserve, head) : round_frame(routes, rings, data.airports.get(centre_code), reserve, head);
+      const frame = mode === "flat" ? flat_frame(arcs, rings, reserve, head, overlay) : round_frame(routes, rings, data.airports.get(centre_code), reserve, head);
       const { left, top, plot_width, plot_height } = frame;
       const bg = $("background").value, colour = $("route-colour").value;
       const luminance = bg.slice(1).match(/../g).map(v => parseInt(v, 16)).reduce((sum, v, i) => sum + v * [.2126, .7152, .0722][i], 0);
@@ -246,14 +252,16 @@
       defs.append(clip); svg.append(defs);
       svg.append(make("rect", { width: W, height: H, fill: bg, "data-background": "true" }));
       const text = (x, y, size, value, fill = ink, attrs = {}) => make("text", { x, y, fill, "font-family": "Arial, sans-serif", "font-size": size, ...attrs }, value);
-      if (simple) svg.append(text(42, 56, 30, $("title").value || "Airport connections", ink, { "font-weight": 600 }));
-      else if (words) svg.append(text(42, 40, 12, "ALTITUDE  /  AIRPORT CONNECTIVITY", muted, { "letter-spacing": 2.5 }),
+      if (simple && !overlay) svg.append(text(42, 56, 30, $("title").value || "Airport connections", ink, { "font-weight": 600 }));
+      else if (words && !simple) svg.append(text(42, 40, 12, "ALTITUDE  /  AIRPORT CONNECTIVITY", muted, { "letter-spacing": 2.5 }),
         text(42, 85, 30, $("title").value || "Airport connections", ink, { "font-weight": 600 }),
         text(42, 112, 14, $("source").value || "Source: user-supplied route table", muted));
       const geography = make("g", { "clip-path": "url(#map-clip)" }); svg.append(geography);
       if (frame.sphere) geography.append(make("path", { d: frame.sphere, fill: "none", stroke: muted, "stroke-opacity": .6, "stroke-width": 1.2 }));
       if (frame.grid) geography.append(make("path", { d: frame.grid, fill: "none", stroke: muted, "stroke-opacity": .25, "stroke-width": .6 }));
-      for (const d of frame.land) geography.append(make("path", { d, fill: light ? "#152e40" : "#2b4c6f", stroke: light ? "#2c495d" : "#3f6288", "stroke-width": .7, "fill-rule": "evenodd" }));
+      const land_fill = $("land").dataset.custom ? $("land").value : light ? "#152e40" : "#2b4c6f";
+      const land_stroke = $("land").dataset.custom ? land_fill : light ? "#2c495d" : "#3f6288";
+      for (const d of frame.land) geography.append(make("path", { d, fill: land_fill, stroke: land_stroke, "stroke-width": .7, "fill-rule": "evenodd" }));
       const ring_colour = light ? "#8fd3cf" : "#0e6b6b";
       if (rings.length && $("shade-outside-rings").checked) {
         const mask = make("mask", { id: "outside-rings", maskUnits: "userSpaceOnUse", x: left, y: top, width: plot_width, height: plot_height });
@@ -306,7 +314,8 @@
         if (!xy) continue;
         const [x, y] = xy, key = highlight.has(code) || highlight.has(location[2]?.toUpperCase());
         if (x < left || x > left + plot_width || y < top || y > top + plot_height) continue;
-        const r = (key ? 7.5 : 4.5) * Number($("dot-size").value);
+        const r = sized ? Math.max(1, 13.5 * Number($("dot-size").value) * Math.sqrt((through.get(code) || 0) / busiest_airport))
+          : (key ? 7.5 : 4.5) * Number($("dot-size").value);
         if (key) markers.append(make("circle", { cx: x, cy: y, r: r + 5, fill: "none", stroke: accent, "stroke-width": 2 }));
         markers.append(make("circle", { cx: x, cy: y, r, fill: key ? accent : data.dot_colours?.get(code) || ink, stroke: bg, "stroke-width": 1.5 }));
         boxes.push([x - r - 5, y - r - 5, x + r + 5, y + r + 5]);
@@ -342,7 +351,21 @@
         labels.append(text(scored.lx, scored.ly, size, label, bg, { ...weight, stroke: bg, "stroke-width": 4, "stroke-linejoin": "round", "data-background-halo": "true", "aria-hidden": "true" }),
           text(scored.lx, scored.ly, size, label, key ? accent : $("label-colour").checked && data.dot_colours?.get(code) || ink, weight));
       }
-      if (words && legend.size > 1) {
+      if (overlay) {
+        // Title top left and legend bottom left, each on a soft panel in the background colour.
+        const title = $("title").value || "Airport connections", entries = [...legend].slice(0, 8);
+        const title_width = Math.min(W - 48, title.length * 14.5 + 48);
+        svg.append(make("rect", { x: 24, y: 24, width: title_width, height: 60, rx: 6, fill: bg, opacity: .85, "data-background": "true" }),
+          text(48, 64, 30, title, ink, { "font-weight": 600 }));
+        if (legend.size > 1) {
+          const legend_width = 48 + 32 + Math.max(...entries.map(([, label]) => label.length)) * 9.5, legend_height = 24 + entries.length * 30;
+          svg.append(make("rect", { x: 24, y: H - 24 - legend_height, width: legend_width, height: legend_height, rx: 6, fill: bg, opacity: .85, "data-background": "true" }));
+          entries.forEach(([colour, label], i) => {
+            const y = H - 24 - legend_height + 36 + i * 30;
+            svg.append(make("line", { x1: 48, x2: 72, y1: y - 6, y2: y - 6, stroke: colour, "stroke-width": 5 }), text(84, y, 18, label.slice(0, 40), ink));
+          });
+        }
+      } else if (words && legend.size > 1) {
         [...legend].slice(0, 20).forEach(([colour, label], i) => {
           const x = 42 + (i % legend_columns) * 240;
           const y = (simple ? H - 36 : H - 90) - (legend_rows - 1 - Math.floor(i / legend_columns)) * (simple ? 28 : 24);
@@ -396,6 +419,7 @@
     finally { URL.revokeObjectURL(url); export_busy = false; enable_exports(Boolean(current_svg)); }
   });
   $("controls").addEventListener("submit", e => e.preventDefault());
+  $("land").addEventListener("input", e => { e.target.dataset.custom = "1"; });
   $("controls").addEventListener("input", e => { if (!["upload", "typed-routes"].includes(e.target.id)) render(); });
   $("draw-routes").addEventListener("click", () => {
     try { const next = M.parse_routes($("typed-routes").value); ++upload_version; install(next, "Typed route list"); }

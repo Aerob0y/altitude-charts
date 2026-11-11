@@ -541,6 +541,15 @@
       "image": "images/chart-donut.png"
     },
     {
+      "key": "post-flight-maps-review",
+      "title": "Review: Auckland's international network",
+      "page": "posts/flight-maps-pre-post-covid/index.html",
+      "beta": false,
+      "wip": true,
+      "image": "posts/flight-maps-pre-post-covid/2019-vs-2026.png",
+      "note": "Day 1 revision: consistent route counts and regional seat capacity."
+    },
+    {
       "key": "post-jet-fuel",
       "title": "Draft post: Jet fuel just hit a record in New Zealand dollars",
       "page": "posts/jet-fuel-record-nzd/index.html",
@@ -548,6 +557,15 @@
       "wip": true,
       "image": "images/post-jet-fuel.png",
       "note": "Day 3 of 42. Not yet on the Posts page."
+    },
+    {
+      "key": "post-us-canada-routes",
+      "title": "Draft post: Every air route in the US and Canada on one map",
+      "page": "posts/us-canada-air-routes/index.html",
+      "beta": false,
+      "wip": true,
+      "image": "images/post-us-canada-routes.png",
+      "note": "Day 2 of 42. Not yet on the Posts page."
     }
   ]
 }

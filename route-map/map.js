@@ -40,7 +40,7 @@
     }
     return normalise(table);
   }
-  const MAX_ROWS = 2000;
+  const MAX_ROWS = 10000;
   function png_dpi(bytes, dpi) {
     const chunk = new Uint8Array(21), view = new DataView(chunk.buffer);
     view.setUint32(0, 9); chunk.set([112, 72, 89, 115], 4);

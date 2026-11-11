@@ -1,0 +1,42 @@
+{
+  "minimum_flights": 50,
+  "analysis_date": "11 November 2026",
+  "counts": {
+    "airports_2019": 42,
+    "airports_2026": 40,
+    "retained": 36,
+    "removed": 6,
+    "added": 4
+  },
+  "seats": {
+    "year_2019": 6964491,
+    "year_2026": 6343011
+  },
+  "below_threshold_2026": [
+    {
+      "destination": "BWN",
+      "flights": 1,
+      "seats": 254
+    },
+    {
+      "destination": "HGH",
+      "flights": 36,
+      "seats": 9468
+    },
+    {
+      "destination": "POM",
+      "flights": 19,
+      "seats": 3211
+    },
+    {
+      "destination": "TFU",
+      "flights": 35,
+      "seats": 11649
+    },
+    {
+      "destination": "WSI",
+      "flights": 29,
+      "seats": 5128
+    }
+  ]
+}
