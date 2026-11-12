@@ -451,6 +451,7 @@ Date,Series,Label,Value,Frequency
 2026-07-01,inflation_ie,Ireland HICP annual % change,3.1,M
 2026-08-01,inflation_ie,Ireland HICP annual % change,3.4,M
 2026-09-01,inflation_ie,Ireland HICP annual % change,3.8,M
+2026-10-01,inflation_ie,Ireland HICP annual % change,4,M
 1991-01-01,inflation_ea,Euro area HICP annual % change,NA,M
 1991-02-01,inflation_ea,Euro area HICP annual % change,NA,M
 1991-03-01,inflation_ea,Euro area HICP annual % change,NA,M
@@ -879,6 +880,7 @@ Date,Series,Label,Value,Frequency
 2026-07-01,inflation_ea,Euro area HICP annual % change,2.9,M
 2026-08-01,inflation_ea,Euro area HICP annual % change,3.2,M
 2026-09-01,inflation_ea,Euro area HICP annual % change,3.8,M
+2026-10-01,inflation_ea,Euro area HICP annual % change,4,M
 1999-01-01,deposit_rate,ECB deposit facility rate (%),2,D
 1999-01-02,deposit_rate,ECB deposit facility rate (%),2,D
 1999-01-03,deposit_rate,ECB deposit facility rate (%),2,D
@@ -11023,6 +11025,40 @@ Date,Series,Label,Value,Frequency
 2026-10-07,deposit_rate,ECB deposit facility rate (%),2.5,D
 2026-10-08,deposit_rate,ECB deposit facility rate (%),2.5,D
 2026-10-09,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-10,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-11,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-12,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-13,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-14,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-15,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-16,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-17,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-18,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-19,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-20,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-21,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-22,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-23,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-24,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-25,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-26,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-27,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-28,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-29,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-30,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-10-31,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-11-01,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-11-02,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-11-03,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-11-04,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-11-05,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-11-06,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-11-07,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-11-08,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-11-09,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-11-10,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-11-11,deposit_rate,ECB deposit facility rate (%),2.5,D
+2026-11-12,deposit_rate,ECB deposit facility rate (%),2.5,D
 1993-01-01,yield_ie,Ireland 10-year government yield (%),9.8755,M
 1993-02-01,yield_ie,Ireland 10-year government yield (%),9.2625,M
 1993-03-01,yield_ie,Ireland 10-year government yield (%),8.6195,M
@@ -11427,6 +11463,8 @@ Date,Series,Label,Value,Frequency
 2026-06-01,yield_ie,Ireland 10-year government yield (%),3.1264,M
 2026-07-01,yield_ie,Ireland 10-year government yield (%),3.2549,M
 2026-08-01,yield_ie,Ireland 10-year government yield (%),3.35,M
+2026-09-01,yield_ie,Ireland 10-year government yield (%),3.5911,M
+2026-10-01,yield_ie,Ireland 10-year government yield (%),3.5525,M
 2000-01-01,mortgage_ie,Ireland new mortgage rate (%),4.27,M
 2000-02-01,mortgage_ie,Ireland new mortgage rate (%),4.32,M
 2000-03-01,mortgage_ie,Ireland new mortgage rate (%),4.55,M
@@ -11747,6 +11785,7 @@ Date,Series,Label,Value,Frequency
 2026-06-01,mortgage_ie,Ireland new mortgage rate (%),3.44,M
 2026-07-01,mortgage_ie,Ireland new mortgage rate (%),3.45,M
 2026-08-01,mortgage_ie,Ireland new mortgage rate (%),3.45,M
+2026-09-01,mortgage_ie,Ireland new mortgage rate (%),3.44,M
 2000-01-01,mortgage_ea,Euro area new mortgage rate (%),6.19,M
 2000-02-01,mortgage_ea,Euro area new mortgage rate (%),6.28,M
 2000-03-01,mortgage_ea,Euro area new mortgage rate (%),6.25,M
@@ -12067,6 +12106,7 @@ Date,Series,Label,Value,Frequency
 2026-06-01,mortgage_ea,Euro area new mortgage rate (%),3.48,M
 2026-07-01,mortgage_ea,Euro area new mortgage rate (%),3.52,M
 2026-08-01,mortgage_ea,Euro area new mortgage rate (%),3.6,M
+2026-09-01,mortgage_ea,Euro area new mortgage rate (%),3.62,M
 1999-01-04,eur_usd,US dollars per euro,1.1789,D
 1999-01-05,eur_usd,US dollars per euro,1.179,D
 1999-01-06,eur_usd,US dollars per euro,1.1743,D
@@ -19239,6 +19279,30 @@ Date,Series,Label,Value,Frequency
 2026-10-06,eur_usd,US dollars per euro,1.1269,D
 2026-10-07,eur_usd,US dollars per euro,1.1177,D
 2026-10-08,eur_usd,US dollars per euro,1.1186,D
+2026-10-09,eur_usd,US dollars per euro,1.1206,D
+2026-10-12,eur_usd,US dollars per euro,1.1181,D
+2026-10-13,eur_usd,US dollars per euro,1.1188,D
+2026-10-14,eur_usd,US dollars per euro,1.1195,D
+2026-10-15,eur_usd,US dollars per euro,1.1208,D
+2026-10-16,eur_usd,US dollars per euro,1.1253,D
+2026-10-19,eur_usd,US dollars per euro,1.1225,D
+2026-10-20,eur_usd,US dollars per euro,1.1215,D
+2026-10-21,eur_usd,US dollars per euro,1.1234,D
+2026-10-22,eur_usd,US dollars per euro,1.1205,D
+2026-10-23,eur_usd,US dollars per euro,1.1193,D
+2026-10-26,eur_usd,US dollars per euro,1.1188,D
+2026-10-27,eur_usd,US dollars per euro,1.115,D
+2026-10-28,eur_usd,US dollars per euro,1.1133,D
+2026-10-29,eur_usd,US dollars per euro,1.113,D
+2026-10-30,eur_usd,US dollars per euro,1.1172,D
+2026-11-02,eur_usd,US dollars per euro,1.1216,D
+2026-11-03,eur_usd,US dollars per euro,1.1179,D
+2026-11-04,eur_usd,US dollars per euro,1.1267,D
+2026-11-05,eur_usd,US dollars per euro,1.1224,D
+2026-11-06,eur_usd,US dollars per euro,1.1165,D
+2026-11-09,eur_usd,US dollars per euro,1.1193,D
+2026-11-10,eur_usd,US dollars per euro,1.1214,D
+2026-11-11,eur_usd,US dollars per euro,1.1127,D
 1999-01-04,eur_gbp,Pounds sterling per euro,0.7111,D
 1999-01-05,eur_gbp,Pounds sterling per euro,0.7122,D
 1999-01-06,eur_gbp,Pounds sterling per euro,0.7076,D
@@ -26411,6 +26475,30 @@ Date,Series,Label,Value,Frequency
 2026-10-06,eur_gbp,Pounds sterling per euro,0.8488,D
 2026-10-07,eur_gbp,Pounds sterling per euro,0.84645,D
 2026-10-08,eur_gbp,Pounds sterling per euro,0.84698,D
+2026-10-09,eur_gbp,Pounds sterling per euro,0.84763,D
+2026-10-12,eur_gbp,Pounds sterling per euro,0.84478,D
+2026-10-13,eur_gbp,Pounds sterling per euro,0.8446,D
+2026-10-14,eur_gbp,Pounds sterling per euro,0.84385,D
+2026-10-15,eur_gbp,Pounds sterling per euro,0.8461,D
+2026-10-16,eur_gbp,Pounds sterling per euro,0.84385,D
+2026-10-19,eur_gbp,Pounds sterling per euro,0.84205,D
+2026-10-20,eur_gbp,Pounds sterling per euro,0.84028,D
+2026-10-21,eur_gbp,Pounds sterling per euro,0.83825,D
+2026-10-22,eur_gbp,Pounds sterling per euro,0.8377,D
+2026-10-23,eur_gbp,Pounds sterling per euro,0.83728,D
+2026-10-26,eur_gbp,Pounds sterling per euro,0.8382,D
+2026-10-27,eur_gbp,Pounds sterling per euro,0.83658,D
+2026-10-28,eur_gbp,Pounds sterling per euro,0.83785,D
+2026-10-29,eur_gbp,Pounds sterling per euro,0.83578,D
+2026-10-30,eur_gbp,Pounds sterling per euro,0.8338,D
+2026-11-02,eur_gbp,Pounds sterling per euro,0.8358,D
+2026-11-03,eur_gbp,Pounds sterling per euro,0.83358,D
+2026-11-04,eur_gbp,Pounds sterling per euro,0.8346,D
+2026-11-05,eur_gbp,Pounds sterling per euro,0.83393,D
+2026-11-06,eur_gbp,Pounds sterling per euro,0.83415,D
+2026-11-09,eur_gbp,Pounds sterling per euro,0.8343,D
+2026-11-10,eur_gbp,Pounds sterling per euro,0.83545,D
+2026-11-11,eur_gbp,Pounds sterling per euro,0.83618,D
 1999-01-04,eur_nzd,NZ dollars per euro,2.2229,D
 1999-01-05,eur_nzd,NZ dollars per euro,2.2011,D
 1999-01-06,eur_nzd,NZ dollars per euro,2.189,D
@@ -33583,3 +33671,27 @@ Date,Series,Label,Value,Frequency
 2026-10-06,eur_nzd,NZ dollars per euro,2.0061,D
 2026-10-07,eur_nzd,NZ dollars per euro,1.9977,D
 2026-10-08,eur_nzd,NZ dollars per euro,2.0014,D
+2026-10-09,eur_nzd,NZ dollars per euro,1.9961,D
+2026-10-12,eur_nzd,NZ dollars per euro,1.9968,D
+2026-10-13,eur_nzd,NZ dollars per euro,1.9931,D
+2026-10-14,eur_nzd,NZ dollars per euro,1.9941,D
+2026-10-15,eur_nzd,NZ dollars per euro,2.0012,D
+2026-10-16,eur_nzd,NZ dollars per euro,1.9868,D
+2026-10-19,eur_nzd,NZ dollars per euro,1.9792,D
+2026-10-20,eur_nzd,NZ dollars per euro,1.9748000000000001,D
+2026-10-21,eur_nzd,NZ dollars per euro,1.9735,D
+2026-10-22,eur_nzd,NZ dollars per euro,1.9724,D
+2026-10-23,eur_nzd,NZ dollars per euro,1.9682,D
+2026-10-26,eur_nzd,NZ dollars per euro,1.9695,D
+2026-10-27,eur_nzd,NZ dollars per euro,1.9552,D
+2026-10-28,eur_nzd,NZ dollars per euro,1.9833,D
+2026-10-29,eur_nzd,NZ dollars per euro,1.9817,D
+2026-10-30,eur_nzd,NZ dollars per euro,1.9823,D
+2026-11-02,eur_nzd,NZ dollars per euro,1.9934,D
+2026-11-03,eur_nzd,NZ dollars per euro,1.9876,D
+2026-11-04,eur_nzd,NZ dollars per euro,1.9988,D
+2026-11-05,eur_nzd,NZ dollars per euro,1.9966,D
+2026-11-06,eur_nzd,NZ dollars per euro,2.0141,D
+2026-11-09,eur_nzd,NZ dollars per euro,1.9941,D
+2026-11-10,eur_nzd,NZ dollars per euro,1.9925,D
+2026-11-11,eur_nzd,NZ dollars per euro,1.9928,D

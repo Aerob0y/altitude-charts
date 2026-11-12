@@ -110,9 +110,9 @@
     roadLines = []; $("roads-field").hidden = true;
     const roadCountry = activeCountry;
     loadRoads(roadCountry).then(file => { if (roadCountry !== activeCountry) return; const lines = file.pairs || []; if (file.source) $("source-note").textContent += ` Road lines: ${file.source}.`; roadLines = lines; $("roads-field").hidden = !lines.length; if (lines.length && map) update(false); });
-    $("source-note").textContent = `${COUNTRIES[activeCountry].sources} Where a road time is missing, a straight-line estimate at 60 km/h is used and labelled.`;
-    $("intro-copy").textContent = `Drive times by road from every small area in ${COUNTRIES[activeCountry].name} to each airport.`;
-    $("catchment-result").setAttribute("aria-label", `${COUNTRIES[activeCountry].name} catchment map`);
+    $("source-note").textContent = `${data.sources || COUNTRIES[activeCountry].sources} Where a road time is missing, a straight-line estimate at 60 km/h is used and labelled.`;
+    $("intro-copy").textContent = `Drive times by road from every small area in ${data.name || COUNTRIES[activeCountry].name} to each airport.`;
+    $("catchment-result").setAttribute("aria-label", `${data.name || COUNTRIES[activeCountry].name} catchment map`);
     document.querySelectorAll(".countries [data-country]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.country === activeCountry)));
   }
 
@@ -435,7 +435,7 @@
 
   function labels(result, scale) {
     const focusAirport = result.focus === "all" ? null : airportByCode(result.focus);
-    $("map-title").textContent = focusAirport ? `${focusAirport.name}: where it is closest by road` : `${COUNTRIES[activeCountry].name}: closest airport by road`;
+    $("map-title").textContent = focusAirport ? `${focusAirport.name}: where it is closest by road` : `${data.name || COUNTRIES[activeCountry].name}: closest airport by road`;
     $("map-subtitle").textContent = focusAirport ? `Compared with the selected airports${result.headStart ? `, with a ${result.headStart}-minute head start for major airports` : ""}.` : `Each area is assigned to the closest selected airport${result.headStart ? `, with a ${result.headStart}-minute head start for major airports` : ""}.`;
     const proxies = rows.filter(row => row.own?.proxy || row.win?.proxy).length;
     if (focusAirport) {

@@ -3,7 +3,7 @@
   "title": "Accommodation",
   "source": "Stats NZ accommodation data",
   "note": "Compare monthly domestic and international guest nights, occupancy and capacity utilisation for New Zealand or a regional tourism organisation.",
-  "updated": "2026-10-09",
+  "updated": "2026-11-13",
   "views": [
     {
       "label": "New Zealand: Guest nights",
@@ -36,10 +36,6 @@
     {
       "label": "Bay of Plenty: Occupancy rate (%)",
       "spec": "bay-of-plenty-occupancy-rate.json"
-    },
-    {
-      "label": "Bay of Plenty: Capacity utilisation (%)",
-      "spec": "bay-of-plenty-capacity-utilisation.json"
     },
     {
       "label": "Canterbury: Guest nights",
