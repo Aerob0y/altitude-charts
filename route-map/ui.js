@@ -54,6 +54,8 @@
     }
   }
   // The current map: a latitude-adjusted equirectangular projection, unchanged.
+  // A darker shade of a #rrggbb colour, for dot outlines.
+  const darker = hex => /^#[0-9a-f]{6}$/i.test(hex) ? "#" + hex.slice(1).match(/../g).map(v => Math.round(parseInt(v, 16) * .6).toString(16).padStart(2, "0")).join("") : hex;
   function flat_frame(arcs, rings, reserve, head, bleed = false) {
     // Rings are left out of the fit so adding or changing them never moves the map.
     const fit_points = arcs.flat();
@@ -212,8 +214,11 @@
         ? `hsl(${airline_names.indexOf(route.airline || "Not supplied") * 137.508 % 360}, 75%, 60%)`
         : colour_by === "route" ? route.colour || $("route-colour").value : $("route-colour").value;
       const legend = new Map();
+      // With labels in the file, only labelled colours go in the legend (lets a smooth scale show a few key steps).
+      const labelled = colour_by === "route" && totals.some(r => r.label);
       for (const route of totals) {
         const colour = route_colour(route);
+        if (labelled && !route.label) continue;
         if (!legend.has(colour) || route.label) legend.set(colour, colour_by === "airline" ? route.airline || "Not supplied" : route.label || colour);
       }
       const legend_columns = Math.max(1, Math.floor((W - 84) / 240));
@@ -317,7 +322,8 @@
         const r = sized ? Math.max(1, 13.5 * Number($("dot-size").value) * Math.sqrt((through.get(code) || 0) / busiest_airport))
           : (key ? 7.5 : 4.5) * Number($("dot-size").value);
         if (key) markers.append(make("circle", { cx: x, cy: y, r: r + 5, fill: "none", stroke: accent, "stroke-width": 2 }));
-        markers.append(make("circle", { cx: x, cy: y, r, fill: key ? accent : data.dot_colours?.get(code) || ink, stroke: bg, "stroke-width": 1.5 }));
+        const fill = key ? accent : data.dot_colours?.get(code) || ink;
+        markers.append(make("circle", { cx: x, cy: y, r, fill, stroke: $("dot-ring-dark").checked ? darker(fill) : bg, "stroke-width": 1.5 }));
         boxes.push([x - r - 5, y - r - 5, x + r + 5, y + r + 5]);
         places.push({ code, location, x, y, key });
       }
@@ -357,7 +363,17 @@
         const title_width = Math.min(W - 48, title.length * 14.5 + 48);
         svg.append(make("rect", { x: 24, y: 24, width: title_width, height: 60, rx: 6, fill: bg, opacity: .85, "data-background": "true" }),
           text(48, 64, 30, title, ink, { "font-weight": 600 }));
-        if (legend.size > 1) {
+        if ($("dot-scale").checked) {
+          // A gradient bar from Low to High for airport colours, bottom left.
+          const scale_title = $("dot-scale-title").value || "Airport colour", bar = 260, top_y = H - 24 - 104;
+          const gradient = make("linearGradient", { id: "dot-scale-gradient" });
+          gradient.append(make("stop", { offset: "0", "stop-color": $("dot-scale-low").value }), make("stop", { offset: "1", "stop-color": $("dot-scale-high").value }));
+          defs.append(gradient);
+          svg.append(make("rect", { x: 24, y: top_y, width: bar + 48, height: 104, rx: 6, fill: bg, opacity: .85, "data-background": "true" }),
+            text(48, top_y + 34, 18, scale_title.slice(0, 30), ink, { "font-weight": 600 }),
+            make("rect", { x: 48, y: top_y + 48, width: bar, height: 14, rx: 7, fill: "url(#dot-scale-gradient)" }),
+            text(48, top_y + 86, 16, "Low", muted), text(48 + bar, top_y + 86, 16, "High", muted, { "text-anchor": "end" }));
+        } else if (legend.size > 1) {
           const legend_width = 48 + 32 + Math.max(...entries.map(([, label]) => label.length)) * 9.5, legend_height = 24 + entries.length * 30;
           svg.append(make("rect", { x: 24, y: H - 24 - legend_height, width: legend_width, height: legend_height, rx: 6, fill: bg, opacity: .85, "data-background": "true" }));
           entries.forEach(([colour, label], i) => {

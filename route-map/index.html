@@ -44,6 +44,10 @@
           <div class="pair"><div><label for="route-opacity">Route opacity <output id="route-opacity-value">90%</output></label><input id="route-opacity" type="range" min="0.1" max="1" step="0.05" value="0.9"></div>
             <div><label for="dot-size">Airport size <output id="dot-size-value">1&times;</output></label><input id="dot-size" type="range" min="0" max="6" step="0.25" value="1"></div></div>
           <label class="checkbox"><input id="label-colour" type="checkbox"> Colour labels to match airport dots</label>
+          <label class="checkbox"><input id="dot-ring-dark" type="checkbox"> Outline airport dots in a darker shade</label>
+          <label class="checkbox"><input id="dot-scale" type="checkbox"> Show a Low to High scale for airport colours<button type="button" class="help" aria-label="More information" aria-describedby="help-scale">?</button><span class="tip" role="tooltip" id="help-scale">For airport colours supplied in the file (origin_colour, destination_colour) on a smooth scale. Shown with "Title and legend on a full-bleed map". Pick the scale's end colours and its name below.</span></label>
+          <div class="pair colours"><div><label for="dot-scale-low">Scale low</label><input id="dot-scale-low" type="color" value="#c9c5bc"></div><div><label for="dot-scale-high">Scale high</label><input id="dot-scale-high" type="color" value="#0e6b6b"></div></div>
+          <label for="dot-scale-title">Scale name</label><input id="dot-scale-title" value="Airport connectivity" autocomplete="off">
           <label class="checkbox"><input id="dot-by-metric" type="checkbox"> Size airports by seats or flights</label>
           <label for="colour-by">Colour routes</label><select id="colour-by"><option value="route">Route or group colours</option><option value="airline">By airline</option><option value="single">One colour</option></select>
           

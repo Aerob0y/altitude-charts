@@ -320,7 +320,16 @@
         try {
           const spec = await getSpec(fetchController.signal);
           if (number !== requestNumber) return;
-          await draw(spec);
+          // A shared link can open a date window without changing the chart's defaults.
+          const years = Number(new URLSearchParams(location.search).get("years"));
+          const extent = dateExtent(spec);
+          let initialRange;
+          if (Number.isInteger(years) && years > 0 && years <= 100 && extent) {
+            const end = new Date(extent[1]), start = new Date(extent[1]);
+            start.setUTCFullYear(start.getUTCFullYear() - years);
+            initialRange = [start.toISOString().slice(0, 10), end.toISOString().slice(0, 10)];
+          }
+          await draw(spec, initialRange);
           if (number !== requestNumber) return;
           activeSpec = spec;
           preview.hidden = true;

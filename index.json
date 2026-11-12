@@ -551,7 +551,7 @@
     },
     {
       "key": "post-jet-fuel",
-      "title": "Draft post: Jet fuel just hit a record in New Zealand dollars",
+      "title": "Draft post: Think filling your car is expensive?",
       "page": "posts/jet-fuel-record-nzd/index.html",
       "beta": false,
       "wip": true,
@@ -560,12 +560,21 @@
     },
     {
       "key": "post-us-canada-routes",
-      "title": "Draft post: Domestic means something different around the world",
+      "title": "Draft post: Flight maps, the US and Canada vs Europe",
       "page": "posts/flight-maps-us-canada-europe/index.html",
       "beta": false,
       "wip": true,
       "image": "images/post-us-canada-routes.png",
       "note": "Day 2 of 42. Not yet on the Posts page."
+    },
+    {
+      "key": "post-connecting",
+      "title": "Draft post: Where passengers change planes",
+      "page": "posts/where-passengers-change-planes/index.html",
+      "beta": false,
+      "wip": true,
+      "image": "images/post-connecting.png",
+      "note": "Day 2 of 42, short alternative. Not yet on the Posts page."
     }
   ]
 }
