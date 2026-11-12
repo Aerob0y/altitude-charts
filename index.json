@@ -560,8 +560,8 @@
     },
     {
       "key": "post-us-canada-routes",
-      "title": "Draft post: Every air route in the US and Canada on one map",
-      "page": "posts/us-canada-air-routes/index.html",
+      "title": "Draft post: Domestic means something different around the world",
+      "page": "posts/flight-maps-us-canada-europe/index.html",
       "beta": false,
       "wip": true,
       "image": "images/post-us-canada-routes.png",
