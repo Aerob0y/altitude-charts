@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://csv.co.nz/posts/real-card-spending/">
+<title>Are we spending less? · CSV Consulting</title>
+<meta name="description" content="New Zealand card spending is flat in dollars over three years, but down about 9% after inflation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
+<script src="../../js/navigation.js" defer></script>
+<style>
+.post > p { margin: 0 0 1em; }
+.post .intro { margin-bottom: 30px; }
+.post figure img { display:block; width:100%; height:auto; }
+.post .wide { width:min(1100px, calc(100vw - 48px)); margin-left:50%; transform:translateX(-50%); }
+.map-open { display:block; padding:0; border:0; background:transparent; width:100%; cursor:zoom-in; }
+.map-open:focus-visible { outline:3px solid var(--teal); outline-offset:5px; }
+.post table { width:100%; border-collapse:collapse; font-size:14px; font-variant-numeric:tabular-nums; }
+.post th, .post td { text-align:right; padding:10px 6px; border-bottom:1px solid var(--line); }
+.post th:first-child, .post td:first-child { text-align:left; padding-left:0; }
+.post tfoot { font-weight:600; }
+.post caption { text-align:left; font-weight:600; margin-bottom:10px; }
+.post .downloads { display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:10px; font-size:14px; }
+.lightbox { width:100vw; height:100vh; max-width:none; max-height:none; padding:0; border:0; background:#FAFAF8; }
+.lightbox::backdrop { background:rgba(18,36,61,.85); }
+.lightbox .viewport { width:100%; height:100%; overflow:auto; display:flex; align-items:center; }
+.lightbox img { width:100%; min-width:1000px; height:auto; }
+.lightbox .close { position:fixed; top:14px; right:14px; padding:10px 16px; background:#FAFAF8; border:1px solid #222326; color:#222326; cursor:pointer; }
+.post .chart-image { display:none; }
+@media(max-width:600px) {
+ .post .chart-image { display:block; }
+ .post h1 { font-size:36px; }
+ .post .wide { width:calc(100vw - 32px); }
+ .post th, .post td { padding:9px 3px; font-size:12px; }
+ .post .chart-live { display:none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="top">
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="../../" aria-label="CSV Consulting home"><img src="../../images/csv-logo.svg" alt="CSV" width="340" height="290"></a>
+  <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" hidden><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+  <nav class="nav" id="main-nav" aria-label="Main"><a href="../../work.html">Selected work</a><a href="../../insights.html">Insights</a><a href="../../posts.html" aria-current="page">Posts</a><a href="../../about.html">About</a><a class="btn-outline" href="../../contact.html">Discuss a project</a></nav>
+</div></header>
+</div>
+<!-- Draft (WIP): not linked from posts.html or the sitemap until Mike approves it. -->
+<main id="main"><section class="section"><article class="wrap post">
+  <p class="meta">Economy · 19 Nov 2026</p>
+  <h1>Are we spending less?</h1>
+  <p class="intro">In dollars, card spending has gone nowhere for three years. Take out inflation and it has fallen.</p>
+  <p>New Zealanders spent $9,683 million on cards in September 2026, seasonally adjusted. In September 2023 it was $9,712 million, almost exactly the same.</p>
+  <p>Prices rose over those three years, though. In today's prices, September 2023 spending was worth $10,603 million. So in real terms, card spending is down about 9%. Even against a year ago, it is up 1.1% in dollars but down 2.5% after inflation.</p>
+  <figure class="wide">
+    <div class="chart-live"><iframe src="../../ect/?embed=1&amp;view=nzd-millions&amp;real=1" title="Monthly card spending in New Zealand, NZD millions in today's prices" loading="lazy"></iframe></div>
+    <button class="map-open chart-image" type="button" aria-label="Enlarge the card spending chart"><img src="real-spending-article-800x600.png" width="1600" height="1200" loading="lazy" alt="Monthly card spending in September 2026 prices over 10 years: total, hospitality, fuel, consumables and durables. Total spending has drifted down from about $10,600 million in 2023 to $9,683 million in September 2026."></button>
+    <figcaption>Monthly card spending, NZD millions in September 2026 prices, seasonally adjusted where available.</figcaption>
+    <div class="downloads"><a href="real-spending-linkedin-1200x627.png" download>High-resolution chart PNG</a></div>
+  </figure>
+  <p>Spending is flat on the till, but people are getting less for it.</p>
+  <p>Try the <a href="../../ect/?view=nzd-millions&amp;real=1">card spending chart</a> yourself.</p>
+  <p class="source">Source: Stats NZ electronic card transactions; Stats NZ consumers price index via the Reserve Bank of New Zealand (RBNZ).<br>Units: NZD millions a month, seasonally adjusted. Today's prices use the September 2026 quarter CPI.<br>Data covers: October 2002 to September 2026.<br>Data last updated: 10 Nov 2026.</p>
+  <p><a class="textlink arrow" href="../../contact.html">Need analysis like this? Get in touch.</a></p>
+</article></section></main>
+<dialog class="lightbox" aria-label="Enlarged wages chart"><div class="viewport"><img alt=""></div><button type="button" class="close">Close chart</button></dialog>
+<script>
+(() => {
+  const dialog = document.querySelector('.lightbox'), image = dialog.querySelector('img');
+  document.querySelectorAll('.map-open').forEach(button => button.addEventListener('click', () => {
+    const source = button.querySelector('img'); image.src = source.src; image.alt = source.alt; dialog.showModal();
+  }));
+  dialog.querySelector('.close').addEventListener('click', () => dialog.close());
+})();
+</script>
+<footer class="site-foot"><div class="wrap"><img src="../../images/csv-logo.svg" alt="CSV" width="340" height="290"><span>CSV Consulting is a trading name of CSV Limited.</span><nav class="foot-links" aria-label="Footer"><a href="../../work.html">Selected work</a><a href="../../insights.html">Insights</a><a href="../../posts.html">Posts</a><a href="../../about.html">About</a><a href="mailto:mike@csv.co.nz">mike@csv.co.nz</a></nav><span>Dublin, Ireland</span></div></footer>
+</body>
+</html>

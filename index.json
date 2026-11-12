@@ -227,7 +227,7 @@
       "source": "OECD",
       "note": "Consumer prices, annual % change, quarterly. Compare published quarterly observations for New Zealand, Australia, Ireland, the UK, the US and the OECD total.",
       "target": "oecd",
-      "updated": "2026-11-10",
+      "updated": "2026-11-12",
       "page": "oecd_cpi/index.html",
       "image": "oecd_cpi/oecd_cpi.png",
       "site": "nz",
@@ -240,7 +240,7 @@
       "source": "OECD",
       "note": "Monthly business and consumer confidence indexes for New Zealand, Australia, Ireland, the UK and the US. New Zealand business confidence is based on the NZIER survey. An index of 100 is the long-run average; it is not a percentage or an optimists-minus-pessimists balance.",
       "target": "oecd",
-      "updated": "2026-11-10",
+      "updated": "2026-11-12",
       "page": "oecd_confidence/index.html",
       "image": "oecd_confidence/oecd_confidence.png",
       "site": "nz",
@@ -559,6 +559,33 @@
       "note": "Day 3 of 42. Not yet on the Posts page."
     },
     {
+      "key": "post-real-wages",
+      "title": "Draft post: Is pay keeping up with prices?",
+      "page": "posts/real-wages-after-inflation/index.html",
+      "beta": false,
+      "wip": true,
+      "image": "images/post-real-wages.png",
+      "note": "Day 8 of 42. Not yet on the Posts page."
+    },
+    {
+      "key": "post-real-card-spending",
+      "title": "Draft post: Are we spending less?",
+      "page": "posts/real-card-spending/index.html",
+      "beta": false,
+      "wip": true,
+      "image": "images/post-real-card-spending.png",
+      "note": "Day 9 of 42. Not yet on the Posts page."
+    },
+    {
+      "key": "post-confidence",
+      "title": "Draft post: Businesses are upbeat. Households are not.",
+      "page": "posts/business-consumer-confidence/index.html",
+      "beta": false,
+      "wip": true,
+      "image": "images/post-confidence.png",
+      "note": "Day 10 of 42. Not yet on the Posts page."
+    },
+    {
       "key": "post-us-canada-routes",
       "title": "Draft post: Domestic means something different around the world",
       "page": "posts/flight-maps-us-canada-europe/index.html",
@@ -575,6 +602,24 @@
       "wip": true,
       "image": "images/post-connecting.png",
       "note": "Day 2 of 42, short alternative. Not yet on the Posts page."
+    },
+    {
+      "key": "post-visitor-nights",
+      "title": "Draft post: Where visitors sleep",
+      "page": "posts/where-visitors-sleep/index.html",
+      "beta": false,
+      "wip": true,
+      "image": "images/post-visitor-nights.png",
+      "note": "Day 6 of 42. Not yet on the Posts page."
+    },
+    {
+      "key": "post-airport-catchments",
+      "title": "Draft post: How safe is your airport's catchment?",
+      "page": "posts/airport-catchments/index.html",
+      "beta": false,
+      "wip": true,
+      "image": "images/post-airport-catchments.png",
+      "note": "Day 4 of 42. New Zealand, Australia and Ireland. Not yet on the Posts page."
     }
   ]
 }

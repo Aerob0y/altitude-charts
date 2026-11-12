@@ -66,6 +66,10 @@
       "spec": "spreads-10-year-bond-minus-swap.json"
     },
     {
+      "label": "Spreads: Bonds: 10-year minus 90-day (OECD, monthly)",
+      "spec": "spreads-bonds-10-year-minus-90-day-oecd-monthly.json"
+    },
+    {
       "label": "Rates: Official Cash Rate (OCR)",
       "spec": "rates-official-cash-rate-ocr.json"
     },
@@ -104,7 +108,7 @@
   ],
   "data": "data.csv",
   "image": "yield.png",
-  "image_alt": "Yield curve Rate differences, basis points. Source: RBNZ",
+  "image_alt": "Yield curve Rate differences, basis points. Source: RBNZ; OECD for the long-run spread",
   "pick": {
     "labels": ["Series 1", "Series 2", "Series 3", "Series 4"],
     "title": "Yield curve",
@@ -112,9 +116,9 @@
     "palette": ["#12243D", "#0E6B6B", "#C8781E", "#6C8EBF", "#7E8C3A", "#9B5C7E", "#8A8781"],
     "margin_r": 24,
     "default": [0],
-    "dims": ["bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "%", "%", "%", "%", "%", "%", "%", "%", "%"],
-    "groups": ["spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "rates", "rates", "rates", "rates", "rates", "rates", "rates", "rates", "rates"],
-    "items": ["Bonds: 10-year minus 90-day bank bill", "Swaps: 10-year minus 2-year", "Swaps: 10-year minus 1-year", "Swaps: 5-year minus 2-year", "Swaps: 10-year minus 5-year", "Swaps: 10-year minus OCR", "Swaps: 2-year minus OCR", "Bonds: 10-year minus 2-year", "Bonds: 10-year minus 1-year", "Bonds: 5-year minus 2-year", "Bonds: 10-year minus 5-year", "Bonds: 10-year minus OCR", "Bonds: 2-year minus OCR", "2-year bond minus swap", "10-year bond minus swap", "Official Cash Rate (OCR)", "1 year (bond)", "2 year (bond)", "5 year (bond)", "10 year (bond)", "1 year (swap)", "2 year (swap)", "5 year (swap)", "10 year (swap)"],
+    "dims": ["bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "bps", "%", "%", "%", "%", "%", "%", "%", "%", "%"],
+    "groups": ["spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "spread", "rates", "rates", "rates", "rates", "rates", "rates", "rates", "rates", "rates"],
+    "items": ["Bonds: 10-year minus 90-day bank bill", "Swaps: 10-year minus 2-year", "Swaps: 10-year minus 1-year", "Swaps: 5-year minus 2-year", "Swaps: 10-year minus 5-year", "Swaps: 10-year minus OCR", "Swaps: 2-year minus OCR", "Bonds: 10-year minus 2-year", "Bonds: 10-year minus 1-year", "Bonds: 5-year minus 2-year", "Bonds: 10-year minus 5-year", "Bonds: 10-year minus OCR", "Bonds: 2-year minus OCR", "2-year bond minus swap", "10-year bond minus swap", "Bonds: 10-year minus 90-day (OECD, monthly)", "Official Cash Rate (OCR)", "1 year (bond)", "2 year (bond)", "5 year (bond)", "10 year (bond)", "1 year (swap)", "2 year (swap)", "5 year (swap)", "10 year (swap)"],
     "group_label": "Show",
     "group_names": {
       "spread": "Spreads",
