@@ -1,12 +1,22 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-14",
   "airports": [
     {
       "code": "ADL",
       "name": "Adelaide Airport",
       "country": "AU",
       "major": true,
-      "rivals": ["BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 1989393,
       "population_closer": 1943526,
@@ -43,7 +53,17 @@
       "name": "Brisbane Airport",
       "country": "AU",
       "major": true,
-      "rivals": ["ADL", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 5152741,
       "population_closer": 3949475,
@@ -80,7 +100,17 @@
       "name": "Canberra Airport",
       "country": "AU",
       "major": true,
-      "rivals": ["ADL", "BNE", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 8523325,
       "population_closer": 1164643,
@@ -117,7 +147,17 @@
       "name": "Cairns Airport",
       "country": "AU",
       "major": true,
-      "rivals": ["ADL", "BNE", "CBR", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": true,
       "population_study": 527925,
       "population_closer": 527925,
@@ -142,7 +182,17 @@
       "name": "Darwin Airport",
       "country": "AU",
       "major": true,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": true,
       "population_study": 191964,
       "population_closer": 191964,
@@ -167,7 +217,17 @@
       "name": "Hobart Airport",
       "country": "AU",
       "major": true,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": true,
       "population_study": 574614,
       "population_closer": 574614,
@@ -192,7 +252,17 @@
       "name": "Melbourne Airport",
       "country": "AU",
       "major": true,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 7372339,
       "population_closer": 7120836,
@@ -229,7 +299,17 @@
       "name": "Gold Coast Airport",
       "country": "AU",
       "major": true,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 5272285,
       "population_closer": 1229209,
@@ -266,7 +346,17 @@
       "name": "Perth Airport",
       "country": "AU",
       "major": true,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "SYD"
+      ],
       "no_rival": true,
       "population_study": 2863496,
       "population_closer": 2863496,
@@ -291,7 +381,17 @@
       "name": "Sydney Airport",
       "country": "AU",
       "major": true,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER"
+      ],
       "no_rival": false,
       "population_study": 8360413,
       "population_closer": 7185274,
@@ -328,7 +428,18 @@
       "name": "Albury Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 8492001,
       "population_closer": 535760,
@@ -365,7 +476,18 @@
       "name": "Alice Springs Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": true,
       "population_study": 40035,
       "population_closer": 40035,
@@ -390,7 +512,18 @@
       "name": "Avalon Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 7305502,
       "population_closer": 893741,
@@ -427,7 +560,18 @@
       "name": "Broome Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": true,
       "population_study": 27856,
       "population_closer": 27856,
@@ -452,7 +596,18 @@
       "name": "Ballina Byron Gateway Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 5223156,
       "population_closer": 547661,
@@ -489,7 +644,18 @@
       "name": "Coffs Harbour Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 5870631,
       "population_closer": 570186,
@@ -526,7 +692,18 @@
       "name": "Karratha Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": true,
       "population_study": 51064,
       "population_closer": 51064,
@@ -551,7 +728,18 @@
       "name": "Launceston Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 867503,
       "population_closer": 277331,
@@ -588,7 +776,18 @@
       "name": "Sunshine Coast Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 5054253,
       "population_closer": 872229,
@@ -625,7 +824,18 @@
       "name": "Mackay Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 658372,
       "population_closer": 455632,
@@ -662,7 +872,18 @@
       "name": "Newcastle Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 8379121,
       "population_closer": 1492924,
@@ -699,7 +920,18 @@
       "name": "Whitsunday Coast Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 594415,
       "population_closer": 569019,
@@ -736,7 +968,18 @@
       "name": "Rockhampton Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 779065,
       "population_closer": 528846,
@@ -773,7 +1016,18 @@
       "name": "Townsville Airport",
       "country": "AU",
       "major": false,
-      "rivals": ["ADL", "BNE", "CBR", "CNS", "DRW", "HBA", "MEL", "OOL", "PER", "SYD"],
+      "rivals": [
+        "ADL",
+        "BNE",
+        "CBR",
+        "CNS",
+        "DRW",
+        "HBA",
+        "MEL",
+        "OOL",
+        "PER",
+        "SYD"
+      ],
       "no_rival": false,
       "population_study": 711548,
       "population_closer": 445587,
@@ -806,34 +1060,71 @@
       "live": "index.html?country=au&airport=TSV&style=advantage"
     },
     {
+      "code": "BFS",
+      "name": "Belfast International Airport",
+      "country": "IE",
+      "major": true,
+      "rivals": ["DUB"],
+      "no_rival": false,
+      "population_study": 7029231,
+      "population_closer": 2141597,
+      "population_closer_30": 1756950,
+      "population_closer_60": 2102149,
+      "cutoffs": [
+        {
+          "minutes": 0,
+          "image": "ie/BFS.png",
+          "population_closer": 2141597,
+          "live": "index.html?country=ie&airport=BFS&style=advantage"
+        },
+        {
+          "minutes": 30,
+          "image": "ie/BFS-30.png",
+          "population_closer": 1756950,
+          "live": "index.html?country=ie&airport=BFS&style=advantage&threshold=30&rivals=DUB,ORK,SNN,NOC,KIR,BHD,LDY,WAT"
+        },
+        {
+          "minutes": 60,
+          "image": "ie/BFS-60.png",
+          "population_closer": 2102149,
+          "live": "index.html?country=ie&airport=BFS&style=advantage&threshold=60&rivals=DUB,ORK,SNN,NOC,KIR,BHD,LDY,WAT"
+        }
+      ],
+      "image": "ie/BFS.png",
+      "thumb": "ie/BFS-thumb.jpg",
+      "areas_csv": "ie/BFS-areas.csv",
+      "bands_csv": "ie/BFS-bands.csv",
+      "live": "index.html?country=ie&airport=BFS&style=advantage"
+    },
+    {
       "code": "DUB",
       "name": "Dublin Airport",
       "country": "IE",
       "major": true,
-      "rivals": ["ORK", "SNN"],
+      "rivals": ["BFS"],
       "no_rival": false,
-      "population_study": 5149139,
-      "population_closer": 3166157,
-      "population_closer_30": 3048937,
-      "population_closer_60": 3106438,
+      "population_study": 7052320,
+      "population_closer": 4910723,
+      "population_closer_30": 2846232,
+      "population_closer_60": 3113033,
       "cutoffs": [
         {
           "minutes": 0,
           "image": "ie/DUB.png",
-          "population_closer": 3166157,
+          "population_closer": 4910723,
           "live": "index.html?country=ie&airport=DUB&style=advantage"
         },
         {
           "minutes": 30,
           "image": "ie/DUB-30.png",
-          "population_closer": 3048937,
-          "live": "index.html?country=ie&airport=DUB&style=advantage&threshold=30&rivals=ORK,SNN,NOC,KIR"
+          "population_closer": 2846232,
+          "live": "index.html?country=ie&airport=DUB&style=advantage&threshold=30&rivals=ORK,SNN,NOC,KIR,BFS,BHD,LDY,WAT"
         },
         {
           "minutes": 60,
           "image": "ie/DUB-60.png",
-          "population_closer": 3106438,
-          "live": "index.html?country=ie&airport=DUB&style=advantage&threshold=60&rivals=ORK,SNN,NOC,KIR"
+          "population_closer": 3113033,
+          "live": "index.html?country=ie&airport=DUB&style=advantage&threshold=60&rivals=ORK,SNN,NOC,KIR,BFS,BHD,LDY,WAT"
         }
       ],
       "image": "ie/DUB.png",
@@ -843,34 +1134,182 @@
       "live": "index.html?country=ie&airport=DUB&style=advantage"
     },
     {
+      "code": "BHD",
+      "name": "George Best Belfast City Airport",
+      "country": "IE",
+      "major": false,
+      "rivals": ["BFS", "DUB"],
+      "no_rival": false,
+      "population_study": 7009987,
+      "population_closer": 875572,
+      "population_closer_30": 0,
+      "population_closer_60": 0,
+      "cutoffs": [
+        {
+          "minutes": 0,
+          "image": "ie/BHD.png",
+          "population_closer": 875572,
+          "live": "index.html?country=ie&airport=BHD&style=advantage"
+        },
+        {
+          "minutes": 30,
+          "image": "ie/BHD-30.png",
+          "population_closer": 0,
+          "live": "index.html?country=ie&airport=BHD&style=advantage&threshold=30&rivals=BFS,DUB"
+        },
+        {
+          "minutes": 60,
+          "image": "ie/BHD-60.png",
+          "population_closer": 0,
+          "live": "index.html?country=ie&airport=BHD&style=advantage&threshold=60&rivals=BFS,DUB"
+        }
+      ],
+      "image": "ie/BHD.png",
+      "thumb": "ie/BHD-thumb.jpg",
+      "areas_csv": "ie/BHD-areas.csv",
+      "bands_csv": "ie/BHD-bands.csv",
+      "live": "index.html?country=ie&airport=BHD&style=advantage"
+    },
+    {
+      "code": "KIR",
+      "name": "Kerry Airport",
+      "country": "IE",
+      "major": false,
+      "rivals": ["BFS", "DUB"],
+      "no_rival": false,
+      "population_study": 7052320,
+      "population_closer": 1173093,
+      "population_closer_30": 1073252,
+      "population_closer_60": 760204,
+      "cutoffs": [
+        {
+          "minutes": 0,
+          "image": "ie/KIR.png",
+          "population_closer": 1173093,
+          "live": "index.html?country=ie&airport=KIR&style=advantage"
+        },
+        {
+          "minutes": 30,
+          "image": "ie/KIR-30.png",
+          "population_closer": 1073252,
+          "live": "index.html?country=ie&airport=KIR&style=advantage&threshold=30&rivals=BFS,DUB"
+        },
+        {
+          "minutes": 60,
+          "image": "ie/KIR-60.png",
+          "population_closer": 760204,
+          "live": "index.html?country=ie&airport=KIR&style=advantage&threshold=60&rivals=BFS,DUB"
+        }
+      ],
+      "image": "ie/KIR.png",
+      "thumb": "ie/KIR-thumb.jpg",
+      "areas_csv": "ie/KIR-areas.csv",
+      "bands_csv": "ie/KIR-bands.csv",
+      "live": "index.html?country=ie&airport=KIR&style=advantage"
+    },
+    {
+      "code": "LDY",
+      "name": "City of Derry Airport",
+      "country": "IE",
+      "major": false,
+      "rivals": ["BFS", "DUB"],
+      "no_rival": false,
+      "population_study": 7013474,
+      "population_closer": 585158,
+      "population_closer_30": 345176,
+      "population_closer_60": 1465,
+      "cutoffs": [
+        {
+          "minutes": 0,
+          "image": "ie/LDY.png",
+          "population_closer": 585158,
+          "live": "index.html?country=ie&airport=LDY&style=advantage"
+        },
+        {
+          "minutes": 30,
+          "image": "ie/LDY-30.png",
+          "population_closer": 345176,
+          "live": "index.html?country=ie&airport=LDY&style=advantage&threshold=30&rivals=BFS,DUB"
+        },
+        {
+          "minutes": 60,
+          "image": "ie/LDY-60.png",
+          "population_closer": 1465,
+          "live": "index.html?country=ie&airport=LDY&style=advantage&threshold=60&rivals=BFS,DUB"
+        }
+      ],
+      "image": "ie/LDY.png",
+      "thumb": "ie/LDY-thumb.jpg",
+      "areas_csv": "ie/LDY-areas.csv",
+      "bands_csv": "ie/LDY-bands.csv",
+      "live": "index.html?country=ie&airport=LDY&style=advantage"
+    },
+    {
+      "code": "NOC",
+      "name": "Ireland West Airport Knock",
+      "country": "IE",
+      "major": false,
+      "rivals": ["BFS", "DUB"],
+      "no_rival": false,
+      "population_study": 7052320,
+      "population_closer": 1234447,
+      "population_closer_30": 674715,
+      "population_closer_60": 534380,
+      "cutoffs": [
+        {
+          "minutes": 0,
+          "image": "ie/NOC.png",
+          "population_closer": 1234447,
+          "live": "index.html?country=ie&airport=NOC&style=advantage"
+        },
+        {
+          "minutes": 30,
+          "image": "ie/NOC-30.png",
+          "population_closer": 674715,
+          "live": "index.html?country=ie&airport=NOC&style=advantage&threshold=30&rivals=BFS,DUB"
+        },
+        {
+          "minutes": 60,
+          "image": "ie/NOC-60.png",
+          "population_closer": 534380,
+          "live": "index.html?country=ie&airport=NOC&style=advantage&threshold=60&rivals=BFS,DUB"
+        }
+      ],
+      "image": "ie/NOC.png",
+      "thumb": "ie/NOC-thumb.jpg",
+      "areas_csv": "ie/NOC-areas.csv",
+      "bands_csv": "ie/NOC-bands.csv",
+      "live": "index.html?country=ie&airport=NOC&style=advantage"
+    },
+    {
       "code": "ORK",
       "name": "Cork Airport",
       "country": "IE",
-      "major": true,
-      "rivals": ["DUB", "SNN"],
+      "major": false,
+      "rivals": ["BFS", "DUB"],
       "no_rival": false,
-      "population_study": 5149139,
-      "population_closer": 948809,
-      "population_closer_30": 833916,
-      "population_closer_60": 873355,
+      "population_study": 7046551,
+      "population_closer": 1383479,
+      "population_closer_30": 1164720,
+      "population_closer_60": 861290,
       "cutoffs": [
         {
           "minutes": 0,
           "image": "ie/ORK.png",
-          "population_closer": 948809,
+          "population_closer": 1383479,
           "live": "index.html?country=ie&airport=ORK&style=advantage"
         },
         {
           "minutes": 30,
           "image": "ie/ORK-30.png",
-          "population_closer": 833916,
-          "live": "index.html?country=ie&airport=ORK&style=advantage&threshold=30&rivals=DUB,SNN,NOC,KIR"
+          "population_closer": 1164720,
+          "live": "index.html?country=ie&airport=ORK&style=advantage&threshold=30&rivals=BFS,DUB"
         },
         {
           "minutes": 60,
           "image": "ie/ORK-60.png",
-          "population_closer": 873355,
-          "live": "index.html?country=ie&airport=ORK&style=advantage&threshold=60&rivals=DUB,SNN,NOC,KIR"
+          "population_closer": 861290,
+          "live": "index.html?country=ie&airport=ORK&style=advantage&threshold=60&rivals=BFS,DUB"
         }
       ],
       "image": "ie/ORK.png",
@@ -883,31 +1322,31 @@
       "code": "SNN",
       "name": "Shannon Airport",
       "country": "IE",
-      "major": true,
-      "rivals": ["DUB", "ORK"],
+      "major": false,
+      "rivals": ["BFS", "DUB"],
       "no_rival": false,
-      "population_study": 5149139,
-      "population_closer": 1034173,
-      "population_closer_30": 737563,
-      "population_closer_60": 811290,
+      "population_study": 7052320,
+      "population_closer": 1835411,
+      "population_closer_30": 1633820,
+      "population_closer_60": 1123178,
       "cutoffs": [
         {
           "minutes": 0,
           "image": "ie/SNN.png",
-          "population_closer": 1034173,
+          "population_closer": 1835411,
           "live": "index.html?country=ie&airport=SNN&style=advantage"
         },
         {
           "minutes": 30,
           "image": "ie/SNN-30.png",
-          "population_closer": 737563,
-          "live": "index.html?country=ie&airport=SNN&style=advantage&threshold=30&rivals=DUB,ORK,NOC,KIR"
+          "population_closer": 1633820,
+          "live": "index.html?country=ie&airport=SNN&style=advantage&threshold=30&rivals=BFS,DUB"
         },
         {
           "minutes": 60,
           "image": "ie/SNN-60.png",
-          "population_closer": 811290,
-          "live": "index.html?country=ie&airport=SNN&style=advantage&threshold=60&rivals=DUB,ORK,NOC,KIR"
+          "population_closer": 1123178,
+          "live": "index.html?country=ie&airport=SNN&style=advantage&threshold=60&rivals=BFS,DUB"
         }
       ],
       "image": "ie/SNN.png",
@@ -917,85 +1356,53 @@
       "live": "index.html?country=ie&airport=SNN&style=advantage"
     },
     {
-      "code": "KIR",
-      "name": "Kerry Airport",
+      "code": "WAT",
+      "name": "Waterford Airport",
       "country": "IE",
       "major": false,
-      "rivals": ["DUB", "ORK", "SNN"],
+      "rivals": ["BFS", "DUB"],
       "no_rival": false,
-      "population_study": 5149139,
-      "population_closer": 202930,
-      "population_closer_30": 151996,
-      "population_closer_60": 88333,
+      "population_study": 7052320,
+      "population_closer": 1326482,
+      "population_closer_30": 1026536,
+      "population_closer_60": 286809,
       "cutoffs": [
         {
           "minutes": 0,
-          "image": "ie/KIR.png",
-          "population_closer": 202930,
-          "live": "index.html?country=ie&airport=KIR&style=advantage"
+          "image": "ie/WAT.png",
+          "population_closer": 1326482,
+          "live": "index.html?country=ie&airport=WAT&style=advantage"
         },
         {
           "minutes": 30,
-          "image": "ie/KIR-30.png",
-          "population_closer": 151996,
-          "live": "index.html?country=ie&airport=KIR&style=advantage&threshold=30&rivals=DUB,ORK,SNN"
+          "image": "ie/WAT-30.png",
+          "population_closer": 1026536,
+          "live": "index.html?country=ie&airport=WAT&style=advantage&threshold=30&rivals=BFS,DUB"
         },
         {
           "minutes": 60,
-          "image": "ie/KIR-60.png",
-          "population_closer": 88333,
-          "live": "index.html?country=ie&airport=KIR&style=advantage&threshold=60&rivals=DUB,ORK,SNN"
+          "image": "ie/WAT-60.png",
+          "population_closer": 286809,
+          "live": "index.html?country=ie&airport=WAT&style=advantage&threshold=60&rivals=BFS,DUB"
         }
       ],
-      "image": "ie/KIR.png",
-      "thumb": "ie/KIR-thumb.jpg",
-      "areas_csv": "ie/KIR-areas.csv",
-      "bands_csv": "ie/KIR-bands.csv",
-      "live": "index.html?country=ie&airport=KIR&style=advantage"
-    },
-    {
-      "code": "NOC",
-      "name": "Ireland West Airport Knock",
-      "country": "IE",
-      "major": false,
-      "rivals": ["DUB", "ORK", "SNN"],
-      "no_rival": false,
-      "population_study": 5149139,
-      "population_closer": 623896,
-      "population_closer_30": 376727,
-      "population_closer_60": 269723,
-      "cutoffs": [
-        {
-          "minutes": 0,
-          "image": "ie/NOC.png",
-          "population_closer": 623896,
-          "live": "index.html?country=ie&airport=NOC&style=advantage"
-        },
-        {
-          "minutes": 30,
-          "image": "ie/NOC-30.png",
-          "population_closer": 376727,
-          "live": "index.html?country=ie&airport=NOC&style=advantage&threshold=30&rivals=DUB,ORK,SNN"
-        },
-        {
-          "minutes": 60,
-          "image": "ie/NOC-60.png",
-          "population_closer": 269723,
-          "live": "index.html?country=ie&airport=NOC&style=advantage&threshold=60&rivals=DUB,ORK,SNN"
-        }
-      ],
-      "image": "ie/NOC.png",
-      "thumb": "ie/NOC-thumb.jpg",
-      "areas_csv": "ie/NOC-areas.csv",
-      "bands_csv": "ie/NOC-bands.csv",
-      "live": "index.html?country=ie&airport=NOC&style=advantage"
+      "image": "ie/WAT.png",
+      "thumb": "ie/WAT-thumb.jpg",
+      "areas_csv": "ie/WAT-areas.csv",
+      "bands_csv": "ie/WAT-bands.csv",
+      "live": "index.html?country=ie&airport=WAT&style=advantage"
     },
     {
       "code": "AKL",
       "name": "Auckland Airport",
       "country": "NZ",
       "major": true,
-      "rivals": ["CHC", "DUD", "WLG", "ZQN"],
+      "rivals": [
+        "CHC",
+        "DUD",
+        "WLG",
+        "ZQN"
+      ],
       "no_rival": false,
       "population_study": 3349840,
       "population_closer": 2903220,
@@ -1032,7 +1439,12 @@
       "name": "Christchurch Airport",
       "country": "NZ",
       "major": true,
-      "rivals": ["AKL", "DUD", "WLG", "ZQN"],
+      "rivals": [
+        "AKL",
+        "DUD",
+        "WLG",
+        "ZQN"
+      ],
       "no_rival": false,
       "population_study": 1679620,
       "population_closer": 838810,
@@ -1069,7 +1481,12 @@
       "name": "Dunedin Airport",
       "country": "NZ",
       "major": true,
-      "rivals": ["AKL", "CHC", "WLG", "ZQN"],
+      "rivals": [
+        "AKL",
+        "CHC",
+        "WLG",
+        "ZQN"
+      ],
       "no_rival": false,
       "population_study": 1022810,
       "population_closer": 237900,
@@ -1106,7 +1523,12 @@
       "name": "Wellington Airport",
       "country": "NZ",
       "major": true,
-      "rivals": ["AKL", "CHC", "DUD", "ZQN"],
+      "rivals": [
+        "AKL",
+        "CHC",
+        "DUD",
+        "ZQN"
+      ],
       "no_rival": false,
       "population_study": 2329810,
       "population_closer": 1025410,
@@ -1143,7 +1565,12 @@
       "name": "Queenstown Airport",
       "country": "NZ",
       "major": true,
-      "rivals": ["AKL", "CHC", "DUD", "WLG"],
+      "rivals": [
+        "AKL",
+        "CHC",
+        "DUD",
+        "WLG"
+      ],
       "no_rival": false,
       "population_study": 1024510,
       "population_closer": 125180,
@@ -1180,7 +1607,13 @@
       "name": "Marlborough Airport",
       "country": "NZ",
       "major": false,
-      "rivals": ["AKL", "CHC", "DUD", "WLG", "ZQN"],
+      "rivals": [
+        "AKL",
+        "CHC",
+        "DUD",
+        "WLG",
+        "ZQN"
+      ],
       "no_rival": false,
       "population_study": 2015670,
       "population_closer": 176810,
@@ -1217,7 +1650,13 @@
       "name": "Hamilton Airport",
       "country": "NZ",
       "major": false,
-      "rivals": ["AKL", "CHC", "DUD", "WLG", "ZQN"],
+      "rivals": [
+        "AKL",
+        "CHC",
+        "DUD",
+        "WLG",
+        "ZQN"
+      ],
       "no_rival": false,
       "population_study": 3932990,
       "population_closer": 1189160,
@@ -1254,7 +1693,13 @@
       "name": "Invercargill Airport",
       "country": "NZ",
       "major": false,
-      "rivals": ["AKL", "CHC", "DUD", "WLG", "ZQN"],
+      "rivals": [
+        "AKL",
+        "CHC",
+        "DUD",
+        "WLG",
+        "ZQN"
+      ],
       "no_rival": false,
       "population_study": 447230,
       "population_closer": 97940,
@@ -1291,7 +1736,13 @@
       "name": "Hawke's Bay Airport",
       "country": "NZ",
       "major": false,
-      "rivals": ["AKL", "CHC", "DUD", "WLG", "ZQN"],
+      "rivals": [
+        "AKL",
+        "CHC",
+        "DUD",
+        "WLG",
+        "ZQN"
+      ],
       "no_rival": false,
       "population_study": 3864580,
       "population_closer": 334760,
@@ -1328,7 +1779,13 @@
       "name": "New Plymouth Airport",
       "country": "NZ",
       "major": false,
-      "rivals": ["AKL", "CHC", "DUD", "WLG", "ZQN"],
+      "rivals": [
+        "AKL",
+        "CHC",
+        "DUD",
+        "WLG",
+        "ZQN"
+      ],
       "no_rival": false,
       "population_study": 4033550,
       "population_closer": 207900,
@@ -1365,7 +1822,13 @@
       "name": "Nelson Airport",
       "country": "NZ",
       "major": false,
-      "rivals": ["AKL", "CHC", "DUD", "WLG", "ZQN"],
+      "rivals": [
+        "AKL",
+        "CHC",
+        "DUD",
+        "WLG",
+        "ZQN"
+      ],
       "no_rival": false,
       "population_study": 2014600,
       "population_closer": 174500,
@@ -1402,7 +1865,13 @@
       "name": "Palmerston North Airport",
       "country": "NZ",
       "major": false,
-      "rivals": ["AKL", "CHC", "DUD", "WLG", "ZQN"],
+      "rivals": [
+        "AKL",
+        "CHC",
+        "DUD",
+        "WLG",
+        "ZQN"
+      ],
       "no_rival": false,
       "population_study": 3602810,
       "population_closer": 667740,
@@ -1439,7 +1908,13 @@
       "name": "Rotorua Airport",
       "country": "NZ",
       "major": false,
-      "rivals": ["AKL", "CHC", "DUD", "WLG", "ZQN"],
+      "rivals": [
+        "AKL",
+        "CHC",
+        "DUD",
+        "WLG",
+        "ZQN"
+      ],
       "no_rival": false,
       "population_study": 3896140,
       "population_closer": 855360,
@@ -1476,7 +1951,13 @@
       "name": "Tauranga Airport",
       "country": "NZ",
       "major": false,
-      "rivals": ["AKL", "CHC", "DUD", "WLG", "ZQN"],
+      "rivals": [
+        "AKL",
+        "CHC",
+        "DUD",
+        "WLG",
+        "ZQN"
+      ],
       "no_rival": false,
       "population_study": 3558440,
       "population_closer": 859850,
@@ -2146,7 +2627,7 @@
     },
     "IE": {
       "country": "IE",
-      "name": "Ireland",
+      "name": "Ireland and Northern Ireland",
       "contested_image": "ie/country-contested.png",
       "contested_areas_csv": "ie/country-contested-areas.csv",
       "cutoffs": [
@@ -2158,22 +2639,42 @@
             {
               "code": "DUB",
               "major": true,
-              "population": 2880314
+              "population": 2596252
             },
             {
-              "code": "ORK",
+              "code": "BFS",
               "major": true,
-              "population": 807218
+              "population": 733624
+            },
+            {
+              "code": "BHD",
+              "major": false,
+              "population": 875572
             },
             {
               "code": "SNN",
-              "major": true,
-              "population": 634781
+              "major": false,
+              "population": 632236
+            },
+            {
+              "code": "ORK",
+              "major": false,
+              "population": 621825
+            },
+            {
+              "code": "LDY",
+              "major": false,
+              "population": 469245
+            },
+            {
+              "code": "WAT",
+              "major": false,
+              "population": 465952
             },
             {
               "code": "NOC",
               "major": false,
-              "population": 623896
+              "population": 454684
             },
             {
               "code": "KIR",
@@ -2181,7 +2682,7 @@
               "population": 202930
             }
           ],
-          "population_regional": 826826
+          "population_regional": 3722444
         },
         {
           "minutes": 30,
@@ -2191,30 +2692,50 @@
             {
               "code": "DUB",
               "major": true,
-              "population": 3048937
+              "population": 2846232
             },
             {
-              "code": "ORK",
+              "code": "BFS",
               "major": true,
-              "population": 833916
+              "population": 1756950
+            },
+            {
+              "code": "BHD",
+              "major": false,
+              "population": 0
             },
             {
               "code": "SNN",
-              "major": true,
-              "population": 737563
+              "major": false,
+              "population": 588636
+            },
+            {
+              "code": "ORK",
+              "major": false,
+              "population": 606767
+            },
+            {
+              "code": "LDY",
+              "major": false,
+              "population": 331446
+            },
+            {
+              "code": "WAT",
+              "major": false,
+              "population": 346023
             },
             {
               "code": "NOC",
               "major": false,
-              "population": 376727
+              "population": 373336
             },
             {
               "code": "KIR",
               "major": false,
-              "population": 151996
+              "population": 202930
             }
           ],
-          "population_regional": 528723
+          "population_regional": 2449138
         },
         {
           "minutes": 60,
@@ -2224,30 +2745,50 @@
             {
               "code": "DUB",
               "major": true,
-              "population": 3106438
+              "population": 3113033
             },
             {
-              "code": "ORK",
+              "code": "BFS",
               "major": true,
-              "population": 873355
+              "population": 2102149
+            },
+            {
+              "code": "BHD",
+              "major": false,
+              "population": 0
             },
             {
               "code": "SNN",
-              "major": true,
-              "population": 811290
+              "major": false,
+              "population": 526825
+            },
+            {
+              "code": "ORK",
+              "major": false,
+              "population": 591585
+            },
+            {
+              "code": "LDY",
+              "major": false,
+              "population": 1465
+            },
+            {
+              "code": "WAT",
+              "major": false,
+              "population": 198821
             },
             {
               "code": "NOC",
               "major": false,
-              "population": 269723
+              "population": 315512
             },
             {
               "code": "KIR",
               "major": false,
-              "population": 88333
+              "population": 202930
             }
           ],
-          "population_regional": 358056
+          "population_regional": 1837138
         }
       ]
     }

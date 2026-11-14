@@ -3,10 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://csv.co.nz/posts/where-visitors-sleep/">
-<title>Where visitors sleep · CSV Consulting</title>
-<meta name="description" content="Maps of where New Zealanders live and where visitors spend their nights in commercial accommodation.">
+<title>An airport's market isn't just the people who live nearby · CSV Consulting</title>
+<meta name="description" content="Where potential outbound travellers live, where international visitors stay, and the gap between the two, by tourism region.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
@@ -25,6 +24,8 @@
 .post th:first-child, .post td:first-child { text-align:left; padding-left:0; }
 .post tfoot { font-weight:600; }
 .post caption { text-align:left; font-weight:600; margin-bottom:10px; }
+.post .callouts { margin:0 0 1.2em; padding:14px 18px; border-left:3px solid var(--teal); background:rgba(14,107,107,.06); }
+.post .callouts p { margin:0; }
 .post .downloads { display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:10px; font-size:14px; }
 .lightbox { width:100vw; height:100vh; max-width:none; max-height:none; padding:0; border:0; background:#FAFAF8; }
 .lightbox::backdrop { background:rgba(18,36,61,.85); }
@@ -52,31 +53,42 @@
 </div>
 <!-- Draft (WIP): not linked from posts.html or the sitemap until Mike approves it. -->
 <main id="main"><section class="section"><article class="wrap post">
-  <p class="meta">Tourism · 16 Nov 2026</p>
-  <h1>Where visitors sleep</h1>
-  <p class="intro">Where New Zealanders live, next to where visitors spend their nights.</p>
+  <p class="meta">Tourism and aviation · 14 Nov 2026</p>
+  <h1>An airport's market isn't just the people who live nearby</h1>
+  <p class="intro">Who is an airport serving? Inbound or outbound?</p>
+  <p>Auckland has ~1/3 of New Zealand's residents but 22.5% of international guest nights. Queenstown has 0.6% of residents and 17.3% of international guest nights. Rotorua, the West Coast and Fiordland lean the same way.</p>
+  <p>While this isn't the best measure to show inbound/outbound airport split (Queenstown for example is 90% inbound) it does show the stark difference in how tourism is unevenly distributed around the country. Maybe places like Queenstown need a little more love to support the number of visitors?</p>
   <figure class="wide">
-    <button class="map-open desktop-only" type="button" aria-label="Enlarge the maps"><img src="people-vs-visitor-nights.png" width="2400" height="1500" loading="lazy" alt="Two maps of New Zealand. Left: people per square kilometre, concentrated in Auckland, Hamilton, Wellington, Christchurch and Dunedin. Right: guest nights per square kilometre, spread more widely, with high levels around Queenstown, Rotorua, Taupō, the West Coast and Kaikōura."></button>
-    <button class="map-open phone-only" type="button" aria-label="Enlarge the maps"><img src="people-vs-visitor-nights-phone.png" width="1200" height="2850" loading="lazy" alt="Two maps of New Zealand, one above the other. Top: people per square kilometre. Bottom: guest nights per square kilometre."></button>
-    <figcaption>People per square kilometre, and guest nights a year per square kilometre, by SA2 area. Both maps use a log scale.</figcaption>
-    <div class="downloads"><a href="people-vs-visitor-nights.png" download>High-resolution map PNG</a><a href="by_rto.csv" download>Guest nights and population by region CSV</a></div>
+    <button class="map-open desktop-only" type="button" aria-label="Enlarge the maps"><img src="where-visitors-sleep-maps.png" width="3550" height="2250" loading="lazy" alt="Three maps of New Zealand by tourism region. Left: each region's share of the resident population; Auckland is largest at 32.9%. Middle: each region's share of international commercial guest nights; Auckland has 22.5% and Queenstown 17.3%. Right: the difference in percentage points; Queenstown is +16.6 pp and Auckland is −10.4 pp."></button>
+    <div class="phone-only">
+    <button class="map-open" type="button" aria-label="Enlarge the population map"><img src="map-1-population-share.png" width="1050" height="1440" loading="lazy" alt="Map of New Zealand by tourism region: each region's share of the resident population. Auckland is largest at 32.9%; Queenstown has 0.6%."></button>
+    <button class="map-open" type="button" aria-label="Enlarge the international nights map"><img src="map-2-international-nights-share.png" width="1050" height="1440" loading="lazy" alt="Map of New Zealand by tourism region: each region's share of international commercial guest nights. Auckland has 22.5% and Queenstown 17.3%."></button>
+    <button class="map-open" type="button" aria-label="Enlarge the gap map"><img src="map-3-share-gap.png" width="1050" height="1440" loading="lazy" alt="Map of New Zealand by tourism region: international guest-night share minus resident-population share, in percentage points. Queenstown is +16.6 pp and Auckland is −10.4 pp."></button>
+    </div>
+    <figcaption>Shares of New Zealand totals, by tourism region, year to September 2026. The first two maps use the same bands. Hatched regions have no separate figure in the accommodation data.</figcaption>
+    <div class="downloads"><a href="where-visitors-sleep-maps.png" download>All three maps (PNG)</a><a href="map-1-population-share.png" download>Population map</a><a href="map-2-international-nights-share.png" download>International nights map</a><a href="map-3-share-gap.png" download>Gap map</a><a href="where-visitors-sleep-by-region.csv" download>Data by region (CSV)</a></div>
   </figure>
-  <p>Most people live in a handful of cities. Visitors spread much further. Fiordland, Mackenzie, Kaikōura and Queenstown each host more than 120 guest nights a year for every person who lives there. Auckland and Waikato host about 5 and 3.</p>
+  <div class="callouts">
+    <p><strong>Auckland: 32.9% of residents; 22.5% of international commercial guest nights.</strong></p>
+    <p><strong>Queenstown: 0.6% of residents; 17.3% of international commercial guest nights.</strong></p>
+  </div>
+  <p>Auckland is the biggest single region on both measures, but it is not close to balance: it has 32.9% of residents and 22.5% of international commercial guest nights, a gap of −10.4 pp. Its resident base is still the larger share of the two. Queenstown has 0.6% of residents and 17.3% of international nights, a gap of +16.6 pp. That is the clearest example of a destination whose overseas visitor market is large relative to the people who live there.</p>
   <table>
-    <caption>Most and fewest guest nights per resident, year to September 2026</caption>
-    <thead><tr><th>Region</th><th>Residents</th><th>Guest nights</th><th>Nights per resident</th></tr></thead>
+    <caption>Share of New Zealand totals, year to September 2026</caption>
+    <thead><tr><th>Region</th><th>Residents (% of NZ)</th><th>International nights (% of NZ)</th><th>Gap (percentage points)</th></tr></thead>
     <tbody>
-      <tr><td>Fiordland</td><td>4,640</td><td>737,200</td><td>159</td></tr>
-      <tr><td>Mackenzie</td><td>5,460</td><td>840,800</td><td>154</td></tr>
-      <tr><td>Kaikōura</td><td>4,150</td><td>507,600</td><td>122</td></tr>
-      <tr><td>Queenstown</td><td>33,170</td><td>4,028,300</td><td>121</td></tr>
-      <tr><td>Wānaka</td><td>17,270</td><td>941,300</td><td>55</td></tr>
-      <tr><td>Auckland</td><td>1,688,430</td><td>8,451,200</td><td>5</td></tr>
-      <tr><td>Waikato</td><td>412,130</td><td>1,233,400</td><td>3</td></tr>
+      <tr><td>Queenstown</td><td>0.6</td><td>17.3</td><td>+16.6 pp</td></tr>
+      <tr><td>Fiordland</td><td>0.1</td><td>3.1</td><td>+3.0 pp</td></tr>
+      <tr><td>Mackenzie</td><td>0.1</td><td>3.0</td><td>+2.9 pp</td></tr>
+      <tr><td>Rotorua</td><td>1.5</td><td>5.3</td><td>+3.9 pp</td></tr>
+      <tr><td>Canterbury</td><td>11.3</td><td>10.7</td><td>−0.6 pp</td></tr>
+      <tr><td>Wellington</td><td>9.6</td><td>4.7</td><td>−4.9 pp</td></tr>
+      <tr><td>Auckland</td><td>32.9</td><td>22.5</td><td>−10.4 pp</td></tr>
+      <tr><td>Waikato</td><td>8.0</td><td>2.1</td><td>−5.9 pp</td></tr>
     </tbody>
   </table>
-  <p>How I made it: each region's guest nights are shared across its small areas in line with where people live. That keeps the totals right, but within a region it puts visitors where residents are, not exactly where the hotels are.</p>
-  <p class="source">Source: MBIE Accommodation Data Programme, guest nights in commercial accommodation (hotels, motels, holiday parks, backpackers and lodges; not holiday homes or Airbnb), all property types, year to September 2026; Stats NZ estimated resident population by SA2 at 30 June 2025; Stats NZ regional tourism organisation areas 2020.<br>Units: people per km² and guest nights per km² a year. About 2% of New Zealand's guest nights are not reported by any region; they are shared across Rangitikei, Tararua, Horowhenua, Waimate and Kawerau, which MBIE does not report separately.<br>Data last updated: 12 Nov 2026.</p>
+  <p>These maps compare resident population with international commercial accommodation nights. They indicate market orientation, rather than airport passenger flows. Length of stay, accommodation coverage, airport catchments and visitors travelling through other gateways affect the relationship. The gap compares each region's weight in the national totals, not the mix of visitors within the region: a small region such as Queenstown has so few residents that its own visitor mix is far more one-sided than the gap suggests. A negative gap means a region has a larger share of residents than of international nights. It says nothing about how attractive a destination is or how well its airport performs.</p>
+  <p class="source">Source: MBIE Accommodation Data Programme (ADP), international guest nights in commercial accommodation (hotels, motels, holiday parks, backpackers and lodges; not holiday homes or Airbnb; not all visitor stays or unique visitors), all property types, October 2025 to September 2026. Stats NZ estimated resident population by SA2 at 30 June 2025, added up by Stats NZ regional tourism organisation areas 2020.<br>Units: percentage of the New Zealand total. Population shares use the SA2 total (5,131,370 people) and nights shares use the published ADP New Zealand total (15,087,700 nights). Gap = international nights share minus population share, in percentage points.<br>Coverage: 144,400 international nights (1.0% of the total) are not attributed to any reported region. Horowhenua, Kawerau, Rangitikei, Tararua, Waimate have no separate ADP figure, so they are hatched and have no gap. 4,890 residents live outside the mapped tourism regions.<br>Data period: October 2025 to September 2026.</p>
   <p><a class="textlink arrow" href="../../contact.html">Need analysis like this? Get in touch.</a></p>
 </article></section></main>
 <dialog class="lightbox" aria-label="Enlarged map"><div class="viewport"><img alt=""></div><button type="button" class="close">Close map</button></dialog>

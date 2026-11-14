@@ -604,15 +604,6 @@
       "note": "Day 2 of 42, short alternative. Not yet on the Posts page."
     },
     {
-      "key": "post-visitor-nights",
-      "title": "Draft post: Where visitors sleep",
-      "page": "posts/where-visitors-sleep/index.html",
-      "beta": false,
-      "wip": true,
-      "image": "images/post-visitor-nights.png",
-      "note": "Day 6 of 42. Not yet on the Posts page."
-    },
-    {
       "key": "post-airport-catchments",
       "title": "Draft post: How safe is your airport's catchment?",
       "page": "posts/airport-catchments/index.html",
