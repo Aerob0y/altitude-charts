@@ -602,15 +602,6 @@
       "wip": true,
       "image": "images/post-connecting.png",
       "note": "Day 2 of 42, short alternative. Not yet on the Posts page."
-    },
-    {
-      "key": "post-airport-catchments",
-      "title": "Draft post: How safe is your airport's catchment?",
-      "page": "posts/airport-catchments/index.html",
-      "beta": false,
-      "wip": true,
-      "image": "images/post-airport-catchments.png",
-      "note": "Day 4 of 42. New Zealand, Australia and Ireland. Not yet on the Posts page."
     }
   ]
 }
