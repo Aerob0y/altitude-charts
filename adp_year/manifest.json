@@ -1,0 +1,28 @@
+{
+  "name": "adp_year",
+  "title": "Accommodation: the latest year",
+  "source": "Stats NZ accommodation data",
+  "note": "Compare monthly domestic and international guest nights, occupancy and capacity utilisation for New Zealand or a regional tourism organisation.",
+  "updated": "2026-11-13",
+  "views": [
+    {
+      "label": "Guest nights by region",
+      "spec": "guest-nights-by-region.json"
+    },
+    {
+      "label": "Occupancy by region",
+      "spec": "occupancy-by-region.json"
+    },
+    {
+      "label": "Guest nights by property type",
+      "spec": "guest-nights-by-property-type.json"
+    },
+    {
+      "label": "Occupancy by property type",
+      "spec": "occupancy-by-property-type.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "adp_year.png",
+  "image_alt": "Accommodation: the latest year Change in guest nights, %, Oct 2025 to Sept 2026 against the 12 months before · Source: Stats NZ accommodation data"
+}

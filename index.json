@@ -339,6 +339,19 @@
       "wip": false
     },
     {
+      "name": "adp_year",
+      "title": "Accommodation: the latest year",
+      "source": "Stats NZ accommodation data",
+      "note": "Compare monthly domestic and international guest nights, occupancy and capacity utilisation for New Zealand or a regional tourism organisation.",
+      "target": "adp",
+      "updated": "2026-11-13",
+      "page": "adp_year/index.html",
+      "image": "adp_year/adp_year.png",
+      "site": "nz",
+      "menu": "Tourism & Migration",
+      "wip": true
+    },
+    {
       "name": "hs32",
       "title": "Banks: loans by product",
       "source": "Reserve Bank of New Zealand (RBNZ)",
@@ -588,11 +601,11 @@
     },
     {
       "key": "post-accommodation-recovery",
-      "title": "Draft post: Accommodation recovery by region and property type",
+      "title": "Draft post: A better year for accommodation, led by international guests and hotels",
       "page": "posts/accommodation-recovery/index.html",
       "beta": false,
       "wip": true,
-      "note": "Occupancy, domestic and international guest nights, and the survey break."
+      "note": "Four charts: guest nights and occupancy by region, property type, and the ten-year view across the survey change."
     },
     {
       "key": "post-migration",

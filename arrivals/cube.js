@@ -139,6 +139,25 @@ window.AltitudeCube = (() => {
     return null;
   }
 
+  // The legend sits below the plot, placed relative to the plot's height. With
+  // several rows (narrow frames, many groups) it ran past the bottom of the chart
+  // and was cut off, so widen the bottom margin to fit the rows it will need.
+  function reserveLegend(layout, names) {
+    const width = Math.max(240, innerWidth - 60);
+    let rows = 1, used = 0;
+    for (const name of names) {
+      const item = 40 + 7 * name.length;
+      if (used && used + item > width) { rows++; used = 0; }
+      used += item;
+    }
+    const narrow = innerWidth < 600;
+    const chartHeight = document.getElementById("chart")?.clientHeight || 500;
+    const legendRows = 22 * rows;
+    const plotHeight = Math.max(150, chartHeight - (layout.margin?.t || 110) - 60 - legendRows);
+    const offset = (narrow ? 0.25 : Math.abs(layout.legend?.y ?? 0.1)) * plotHeight;
+    layout.margin = {...layout.margin, b: Math.round(Math.max(layout.margin?.b || 0, 40 + offset + legendRows))};
+  }
+
   function retitle(layout, subtitle) {
     const title = layout.title?.text || "";
     const match = title.match(/^(.*<span[^>]*>)(.*)(<\/span>.*)$/s);
@@ -227,21 +246,33 @@ window.AltitudeCube = (() => {
     const layout = structuredClone(template.layout);
     retitle(layout, subtitle);
     layout.showlegend = !!split && groups.length > 1;
+    if (layout.showlegend) reserveLegend(layout, groups.map(g => g.name));
     const series = groups.map(group => ({group, y: overTime(cube, group, period, measure)}));
     const traceFor = ({group, y}) => ({name: group.name, x: cube.months, y, legendgroup: group.name,
       hovertemplate: `${group.name}: %{y:${format}}${suffix}<extra></extra>`});
     let data;
     if (cube.quantities && period === "rolling" && !isPct && !rate && measure === "arrivals") {
-      // A separate stack for each complete run prevents Plotly filling a survey gap with zero.
+      // A separate stack for each run of months with the same series present, so Plotly
+      // never fills a survey gap with zero, and a group that only exists in some years
+      // (e.g. "Lodges and other" from 2020) doesn't blank the years before it.
       const runs = [];
       for (let i = 0; i < cube.months.length; i++) {
-        if (!series.length || series.some(item => item.y[i] == null)) continue;
-        if (!runs.length || runs[runs.length - 1][1] !== i) runs.push([i, i + 1]);
-        else runs[runs.length - 1][1]++;
+        const present = series.map((item, j) => item.y[i] == null ? -1 : j).filter(j => j >= 0);
+        if (!present.length) continue;
+        const key = present.join(",");
+        const last = runs[runs.length - 1];
+        if (last && last.end === i && last.key === key) last.end++;
+        else runs.push({start: i, end: i + 1, key, members: present});
       }
-      data = runs.flatMap(([start, end], run) => series.map(item => ({...traceFor(item),
-        x: cube.months.slice(start, end), y: item.y.slice(start, end), type: "scatter", mode: "lines",
-        line: {color: item.group.colour, width: 1.5}, stackgroup: `run-${run}`, showlegend: run === 0})));
+      const shown = new Set();
+      data = runs.flatMap(({start, end, members}, run) => members.map(j => {
+        const item = series[j];
+        const first = !shown.has(j);
+        shown.add(j);
+        return {...traceFor(item), x: cube.months.slice(start, end), y: item.y.slice(start, end),
+          type: "scatter", mode: "lines", line: {color: item.group.colour, width: 1.5},
+          stackgroup: `run-${run}`, showlegend: first};
+      }));
     } else {
       data = series.map(item => {
         const trace = traceFor(item);
