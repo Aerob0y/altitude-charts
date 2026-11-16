@@ -521,7 +521,7 @@
       "key": "catchments",
       "title": "Airport catchments",
       "page": "catchments/combined/index.html",
-      "beta": true,
+      "beta": false,
       "note": "Ireland, New Zealand and Australia catchments in a clean, interactive vector map."
     },
     {
