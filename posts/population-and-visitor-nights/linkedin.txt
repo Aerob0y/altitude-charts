@@ -1,0 +1,21 @@
+<!-- Draft revision for #427; preserves the existing LinkedIn copy. -->
+
+A small population can host a big visitor market
+
+Where people live and where visitors stay are two very different maps of New Zealand.
+
+Auckland has 32.9% of the residents in this comparison and 22.5% of international commercial guest nights. Queenstown has just 0.6% of residents, but 17.3% of those nights.
+
+That is a lot of visitors for a small local population. It helps explain why a town can need services and transport on a scale its resident numbers alone would never suggest.
+
+I find this a useful starting point for thinking about airports. Local residents provide one market. People travelling to the region provide another.
+
+The maps do not measure airport passengers. Visitors can arrive through another airport, drive between regions or stay outside commercial accommodation.
+
+But the contrast asks a useful question: when we plan for a place, are we counting only the people who live there, or also the people who come to stay?
+
+Source: MBIE Accommodation Data Programme (year to September 2026); Stats NZ resident population (30 June 2025).
+
+Maps: https://csv.co.nz/posts/population-and-visitor-nights/
+
+Alt text: Three tourism-region maps compare shares of residents, international commercial guest nights and the difference. Auckland has 32.9% of residents and 22.5% of nights; Queenstown has 0.6% and 17.3%.

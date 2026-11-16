@@ -541,6 +541,39 @@
       "image": "images/chart-donut.png"
     },
     {
+      "key": "post-who-is-visiting",
+      "title": "Draft post: September beat 2019. Who is visiting?",
+      "page": "posts/who-is-visiting/index.html",
+      "beta": false,
+      "wip": true,
+      "note": "Day 5 of 42. Visitor arrivals and country mix, September 2026."
+    },
+    {
+      "key": "post-population-visitor-nights",
+      "title": "Draft post: A small population can host a big visitor market",
+      "page": "posts/population-and-visitor-nights/index.html",
+      "beta": false,
+      "wip": true,
+      "image": "images/post-visitor-nights.png",
+      "note": "Day 6 of 42. Short revision; the existing public article is preserved."
+    },
+    {
+      "key": "post-where-visitors-stay",
+      "title": "Draft post: How full is full? It depends where you stay.",
+      "page": "posts/where-visitors-stay/index.html",
+      "beta": false,
+      "wip": true,
+      "note": "Day 7 of 42. Accommodation occupancy across selected regions."
+    },
+    {
+      "key": "post-migration",
+      "title": "Draft post: A migration gain can hide a loss of New Zealanders",
+      "page": "posts/migration/index.html",
+      "beta": false,
+      "wip": true,
+      "note": "Day 11 of 42. The two flows behind the net migration total."
+    },
+    {
       "key": "post-flight-maps-review",
       "title": "Review: Auckland's international network",
       "page": "posts/flight-maps-pre-post-covid/index.html",

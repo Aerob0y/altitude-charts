@@ -1,0 +1,19 @@
+<!-- DRAFT: 20 November 2026 is a planned series slot, not a publication date. Use the existing LinkedIn PNG in this folder. -->
+
+Businesses are upbeat. Households are not.
+
+New Zealand businesses and households are telling different stories about the economy.
+
+In the September 2026 data, the OECD business confidence index for New Zealand reached 102.8, its highest since February 2014. Consumer confidence was 97.9, still below its long-run average.
+
+The OECD puts each index on a scale where 100 is its own long-run average. These are survey measures of confidence, rather than growth forecasts.
+
+New Zealand also had the highest business reading among the five countries I track in this data snapshot. The September readings for the UK, US and Ireland ranged from 97.7 to 100.8; Australia was 99.9 in August, its latest available month.
+
+That compares each country with its own history. It does not mean New Zealand has the strongest economy.
+
+I will be watching whether business optimism turns into more hiring and investment, and whether households start to feel it. Confidence is encouraging. What happens to jobs and spending will matter more.
+
+Explore the chart: https://csv.co.nz/oecd_confidence/
+
+Source: OECD business and consumer confidence indicators. Monthly indexes, long-run average = 100; New Zealand to September 2026.
