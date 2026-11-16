@@ -24,6 +24,7 @@
     .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 13px; }
     #real-control { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
     #real-control[hidden] { display: none; }
+    #cube { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; min-width: 0; max-width: 100%; }
     #picks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; min-width: 0; max-width: 100%; }
     .series-picker { position: relative; display: block; min-width: 0; max-width: 100%; }
     .series-button { display: block; max-width: 100%; width: 520px; padding: 8px 10px; border: 1px solid #DCD6CB; background: white; color: inherit; font: inherit; text-align: left; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -62,12 +63,13 @@
       <span id="view-control"><label for="view">Chart view</label> <select id="view"></select></span>
       <span id="index-control" hidden></span>
       <span id="picks" hidden></span>
+      <span id="cube" hidden></span>
       <label id="real-control" hidden><input type="checkbox" id="real"> Today's dollars</label>
       <span id="range-control" hidden><label for="range" id="range-label">Axis range</label> <select id="range"></select></span>
       <span id="smoothing-control" hidden><label for="smoothing">Smoothing</label> <select id="smoothing"><option value="off">Off</option><option value="week">1 week</option><option value="month">1 month</option><option value="quarter">3 months</option><option value="year">12 months</option></select></span>
     </div>
     <section class="chart-area" aria-label="Interactive chart">
-      <img id="preview" width="1200" height="750" src="adp.png" alt="Accommodation: New Zealand Monthly guest nights. Source: Stats NZ accommodation data" fetchpriority="high" decoding="async">
+      <img id="preview" width="1200" height="750" src="adp.png" alt="Accommodation Guest nights per month. Source: Stats NZ accommodation data" fetchpriority="high" decoding="async">
       <div id="chart"></div><div id="status" role="status" aria-live="polite">Loading chart…</div>
     </section>
     <footer>
@@ -428,6 +430,22 @@
       }
 
       // A manifest with a real block ships cpi.json; the toggle stays in the link as ?real=1.
+      // cube.js re-totals a data cube for charts whose manifest has a cube block (Show as, Split by and filters).
+      async function setupCube() {
+        await new Promise((resolve, reject) => {
+          const script = document.createElement("script");
+          script.src = assetUrl("cube.js");
+          script.onload = resolve;
+          script.onerror = () => reject(new Error("Chart controls are unavailable"));
+          document.head.append(script);
+        });
+        const [cube, ...templates] = await Promise.all([readJson(manifest.cube), ...manifest.views.map(view => readJson(view.spec))]);
+        document.getElementById("view-control").hidden = true;
+        document.getElementById("cube").hidden = false;
+        document.getElementById("controls").hidden = false;
+        AltitudeCube.setup(document.getElementById("cube"), cube, templates, (spec, isDefault) => loadSpec(async () => spec, isDefault));
+      }
+
       async function setupReal() {
         if (!manifest.real) return;
         try {
@@ -484,6 +502,7 @@
           await setupReal();
           setupRange();
           setupSmoothing();
+          if (manifest.cube) return await setupCube();
           if (manifest.pick) {
             return await setupPicks((new URLSearchParams(location.search).get("series") || "").split(",").filter(Boolean));
           }

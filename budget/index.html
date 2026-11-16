@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>New Zealand Budget explorer · CSV</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Inter+Tight:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="budget.css">
+  <script defer src="plotly.min.js"></script>
+  <script defer src="budget.js"></script>
+  <script defer src="ui.js"></script>
+</head>
+<body>
+  <header class="bar"><a href="../wip.html">.CSV <span> / Work in progress</span></a><span>NEW ZEALAND</span></header>
+  <main>
+    <header class="intro">
+      <p class="eyebrow">THE GOVERNMENT'S BOOKS</p>
+      <h1>Where does the money go?</h1>
+      <p class="lead">Explore central government spending. Choose two years, then open a category to see what sits inside it.</p>
+      <p class="source">Treasury's September 2026 forecast release. Years ended 30 June. Figures are in the dollars of each year.</p>
+    </header>
+    <noscript>This explorer needs JavaScript. Download the source workbook from the link below to explore the figures in Excel.</noscript>
+    <p id="status" role="status" aria-live="polite">Loading Treasury spending data…</p>
+    <div id="explorer" hidden>
+      <section class="controls" aria-label="Comparison settings">
+        <label>Compare from<select id="from-year"></select></label>
+        <label>Compare to<select id="to-year"></select></label>
+        <label>Comparison view<select id="measure"><option value="dollars">Spending (NZ dollars)</option><option value="share">Share of all expenses (%)</option></select></label>
+        <label class="check"><input type="checkbox" id="forecasts"> Include forecasts to 2031</label>
+      </section>
+      <p id="comparison-note" class="hint"></p>
+      <nav id="breadcrumbs" aria-label="Spending categories"></nav>
+      <section class="summary" aria-label="Selected category summary">
+        <div><p id="total-label"></p><strong id="total"></strong><span id="total-status"></span></div>
+        <div><p id="change-label"></p><strong id="change"></strong><span id="change-percent"></span></div>
+        <div><p>Share of all expenses</p><strong id="share"></strong><span>Core Crown expenses</span></div>
+      </section>
+      <section aria-labelledby="chart-title">
+        <h2 id="chart-title">Spending over time</h2>
+        <p id="chart-subtitle" class="hint"></p>
+        <div id="trend" role="img" aria-label="Stacked spending by category over time; exact values are in the tables below"></div>
+        <p id="chart-warning" class="hint" role="status"></p>
+      </section>
+      <section aria-labelledby="waffle-title">
+        <h2 id="waffle-title">How the two years compare</h2>
+        <p id="waffle-subtitle" class="hint"></p>
+        <div id="waffles" class="waffles"></div>
+        <div id="waffle-legend" class="waffle-legend" aria-label="Waffle chart categories"></div>
+        <p id="waffle-note" class="hint"></p>
+      </section>
+      <section aria-labelledby="breakdown-title">
+        <div class="section-head"><h2 id="breakdown-title">Spending breakdown</h2><button id="download" type="button">Download reformatted data CSV</button></div>
+        <p id="finding"></p>
+        <p class="hint" id="table-hint">Open a category for its detail and history. Change is the second year minus the first.</p>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Spending comparison; scroll horizontally on small screens">
+          <table><caption id="table-caption"></caption><thead id="table-head"></thead><tbody id="table-body"></tbody><tfoot id="table-foot"></tfoot></table>
+        </div>
+        <div id="source-notes" class="source-notes"></div>
+      </section>
+      <details class="history"><summary>View exact annual figures</summary><div class="table-wrap" tabindex="0"><table><caption id="history-caption"></caption><thead><tr><th scope="col">Year ended June</th><th scope="col">Status in this release</th><th scope="col">NZ$ million</th></tr></thead><tbody id="history-body"></tbody></table></div></details>
+    </div>
+    <section class="method" aria-labelledby="method-title">
+      <h2 id="method-title">What these figures mean</h2>
+      <p><strong>Scope:</strong> core Crown expenses, including transfers to fund services. This is not total Crown spending or the cost of new Budget initiatives alone. Capital purchases and debt repayments are outside this expense measure. Some expenses, such as depreciation, do not involve a cash payment in the same year.</p>
+      <p><strong>Time:</strong> 2022 means the year ended 30 June 2022. This is a fixed snapshot of Treasury's 29 September 2026 release: 2022–2025 are actuals, 2026 is unaudited actual, and 2027–2031 are forecasts. Later releases can revise these figures.</p>
+      <p><strong>Changes:</strong> amounts are not adjusted for inflation or population growth. Opening a category shows which items account for its change. It does not, on its own, establish why costs changed. Classification changes and temporary programmes can affect comparisons; Treasury's table notes appear with the relevant detail.</p>
+      <p><strong>Forecast adjustments:</strong> future operating allowances and the top-down expense adjustment are separate entries. The latter is negative. Both are included in the total and shares, so the breakdown reconciles.</p>
+      <p><strong>Download:</strong> the reformatted CSV includes high-level spending, tax, balance, revenue and GDP history from 1972, plus this detailed PREFU hierarchy and forecasts. The sources stay separate where their overlapping values differ. Accounting and year-end breaks are labelled.</p>
+      <p><strong>Next stage:</strong> visualising the longer history, inflation and population comparisons, and tax scenarios. This version does not classify spending as forced or optional.</p>
+    </section>
+    <footer><p>Sources: <a href="https://www.budget.govt.nz/budget/forecasts/prefu2026.htm">The Treasury, Pre-election Economic and Fiscal Update 2026</a>, Core Crown Expense Tables; and <a href="https://www.treasury.govt.nz/publications/information-release/data-fiscal-time-series-historical-fiscal-indicators">Fiscal Time Series Historical Fiscal Indicators 1972–2026</a>.</p><p><a href="https://www.budget.govt.nz/budget/excel/prefu2026/prefu26-data-expense-tables.xlsx">Download the original PREFU workbook</a> · <a href="data.json">Detailed explorer data</a> · <a href="history.json">Historical data</a></p></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,1121 @@
+{
+  "title": "New Zealand Budget explorer",
+  "units": "NZ dollars, millions",
+  "period": "Years ended 30 June",
+  "years": [2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031],
+  "statuses": ["Actual", "Actual", "Actual", "Actual", "Unaudited Actual", "Forecast", "Forecast", "Forecast", "Forecast", "Forecast"],
+  "source": {
+    "name": "The Treasury",
+    "release": "Pre-election Economic and Fiscal Update 2026",
+    "published": "29 September 2026",
+    "retrieved": "16 November 2026",
+    "url": "https://www.budget.govt.nz/budget/forecasts/prefu2026.htm",
+    "workbook_url": "https://www.budget.govt.nz/budget/excel/prefu2026/prefu26-data-expense-tables.xlsx",
+    "sheet": "Core Crown Expense Tables",
+    "md5": "1f7c67dd975bdfebb5526fcd45f8f97d"
+  },
+  "root": {
+    "id": "r25",
+    "name": "Core Crown expenses",
+    "source_label": "Core Crown expenses",
+    "source_row": 25,
+    "values": [125641, 127574, 138998, 141675, 146219, 154609, 158308, 163238, 168642, 173668],
+    "children": [
+      {
+        "id": "r7",
+        "name": "Social security and welfare",
+        "source_label": "Social security and welfare",
+        "source_row": 7,
+        "values": [42860, 41514, 44589, 47503, 50224, 53391, 55098, 56384, 58048, 60286],
+        "children": [
+          {
+            "id": "r37",
+            "name": "Welfare benefits",
+            "source_label": "Welfare benefits (see below)1,2",
+            "source_row": 37,
+            "values": [39187, 37576, 40294, 43525, 46166, 48757, 50599, 51848, 53800, 55980],
+            "children": [
+              {
+                "id": "r54",
+                "name": "New Zealand Superannuation",
+                "source_label": "New Zealand Superannuation",
+                "source_row": 54,
+                "values": [17764, 19517, 21574, 23191, 24721, 26480, 28321, 29706, 31237, 32888],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r55",
+                "name": "Jobseeker Support and Emergency Benefit",
+                "source_label": "Jobseeker Support and Emergency Benefit",
+                "source_row": 55,
+                "values": [3330, 3473, 4062, 4641, 4926, 5031, 5011, 4904, 5001, 5109],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r56",
+                "name": "Supported Living Payment",
+                "source_label": "Supported Living Payment",
+                "source_row": 56,
+                "values": [2047, 2311, 2530, 2668, 2826, 3006, 3190, 3286, 3434, 3581],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r57",
+                "name": "Sole Parent Support",
+                "source_label": "Sole Parent Support",
+                "source_row": 57,
+                "values": [1704, 1917, 2097, 2255, 2386, 2438, 2392, 2234, 2240, 2284],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r58",
+                "name": "Family Tax Credit",
+                "source_label": "Family Tax Credit",
+                "source_row": 58,
+                "values": [2017, 2151, 2297, 2434, 2438, 2574, 2603, 2676, 2633, 2680],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r59",
+                "name": "Other Working for Families tax credits",
+                "source_label": "Other Working for Families tax credits",
+                "source_row": 59,
+                "values": [519, 476, 448, 561, 620, 843, 610, 579, 561, 546],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r60",
+                "name": "Accommodation Assistance",
+                "source_label": "Accommodation Assistance",
+                "source_row": 60,
+                "values": [2386, 2349, 2411, 2232, 2306, 2233, 2330, 2221, 2247, 2283],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r61",
+                "name": "Income-Related Rents",
+                "source_label": "Income-Related Rents",
+                "source_row": 61,
+                "values": [1323, 1322, 1517, 1752, 1963, 1896, 1881, 1873, 1946, 2019],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r62",
+                "name": "Disability Assistance",
+                "source_label": "Disability Assistance",
+                "source_row": 62,
+                "values": [412, 431, 464, 492, 518, 531, 538, 538, 545, 558],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r63",
+                "name": "Winter Energy Payment",
+                "source_label": "Winter Energy Payment",
+                "source_row": 63,
+                "values": [513, 519, 537, 562, 582, 595, 604, 613, 624, 635],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r64",
+                "name": "Best start",
+                "source_label": "Best start",
+                "source_row": 64,
+                "values": [308, 321, 336, 346, 339, 286, 275, 281, 274, 279],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r65",
+                "name": "Orphan's/Unsupported Child's Benefit",
+                "source_label": "Orphan's/Unsupported Child's Benefit",
+                "source_row": 65,
+                "values": [313, 350, 384, 402, 416, 433, 447, 453, 460, 465],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r66",
+                "name": "Hardship Assistance",
+                "source_label": "Hardship Assistance",
+                "source_row": 66,
+                "values": [497, 673, 667, 755, 810, 803, 737, 738, 773, 815],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r67",
+                "name": "Paid Parental Leave",
+                "source_label": "Paid Parental Leave",
+                "source_row": 67,
+                "values": [603, 608, 647, 709, 726, 760, 800, 840, 885, 930],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r68",
+                "name": "Childcare Assistance",
+                "source_label": "Childcare Assistance",
+                "source_row": 68,
+                "values": [132, 139, 165, 167, 160, 164, 173, 176, 180, 184],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r69",
+                "name": "FamilyBoost tax credit",
+                "source_label": "FamilyBoost tax credit",
+                "source_row": 69,
+                "values": [0, 0, 0, 51, 137, 168, 166, 163, 159, 154],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r70",
+                "name": "Veteran's Pension",
+                "source_label": "Veteran's Pension",
+                "source_row": 70,
+                "values": [134, 132, 132, 132, 132, 133, 134, 134, 134, 135],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r71",
+                "name": "Emergency Housing Assistance",
+                "source_label": "Emergency Housing Assistance1",
+                "source_row": 71,
+                "values": [0, 0, 0, 74, 40, 42, 57, 64, 65, 68],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r72",
+                "name": "Wage Subsidy Scheme",
+                "source_label": "Wage Subsidy Scheme",
+                "source_row": 72,
+                "values": [4689, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r73",
+                "name": "Cost of living payment",
+                "source_label": "Cost of living payment",
+                "source_row": 73,
+                "values": [0, 600, 0, 0, 0, 0, 0, 0, 0, 0],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r74",
+                "name": "Covid leave support",
+                "source_label": "Covid leave support",
+                "source_row": 74,
+                "values": [471, 273, 13, 0, 0, 0, 0, 0, 0, 0],
+                "children": [],
+                "notes": []
+              },
+              {
+                "id": "r75",
+                "name": "Other benefits",
+                "source_label": "Other benefits2,3",
+                "source_row": 75,
+                "values": [25, 14, 12, 101, 120, 341, 330, 369, 402, 367],
+                "children": [],
+                "notes": []
+              }
+            ],
+            "notes": ["1. Previously included within Accommodation Assistance.", "2. The '2023 Actual' has been restated to reclassify expenses from other benefits to other non-departmental expenses within the social security and welfare expenses table above.", "3. The '2025 Actual' has been restated to reclassify expenses from other non-departmental expenses to other benefits within the social security and welfare expenses table above."]
+          },
+          {
+            "id": "r38",
+            "name": "Departmental expenses",
+            "source_label": "Departmental expenses",
+            "source_row": 38,
+            "values": [2747, 2782, 3013, 2782, 2934, 3313, 3219, 3136, 2807, 2796],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r39",
+            "name": "Social rehabilitation and compensation",
+            "source_label": "Social rehabilitation and compensation",
+            "source_row": 39,
+            "values": [358, 386, 415, 447, 481, 516, 555, 597, 642, 690],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r40",
+            "name": "Flexi-wage subsidy",
+            "source_label": "Flexi-wage subsidy",
+            "source_row": 40,
+            "values": [59, 52, 25, 27, 0, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r41",
+            "name": "Other non-departmental expenses",
+            "source_label": "Other non-departmental expenses1,2",
+            "source_row": 41,
+            "values": [509, 718, 842, 722, 643, 805, 725, 803, 799, 820],
+            "children": [],
+            "notes": []
+          }
+        ],
+        "notes": ["1. The '2023 Actual' has been restated to include expenses previously classified as other benefits within the welfare benefit expenses table below.", "2. The '2025 Actual' has been restated to exclude expenses previously classified as other benefits within the welfare benefit expenses table below."]
+      },
+      {
+        "id": "r8",
+        "name": "Health",
+        "source_label": "Health",
+        "source_row": 8,
+        "values": [27781, 28489, 29999, 30311, 32917, 34472, 34094, 34209, 34294, 34452],
+        "children": [
+          {
+            "id": "r102",
+            "name": "Departmental outputs",
+            "source_label": "Departmental outputs",
+            "source_row": 102,
+            "values": [386, 222, 265, 222, 212, 227, 218, 216, 225, 225],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r103",
+            "name": "Purchasing of health services",
+            "source_label": "Purchasing of health services1,5",
+            "source_row": 103,
+            "values": [17727, 21363, 23712, 24320, 26591, 27361, 27167, 27177, 27103, 27107],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r104",
+            "name": "National disability support services",
+            "source_label": "National disability support services4",
+            "source_row": 104,
+            "values": [1870, 2062, 2340, 2425, 2487, 3073, 2793, 2794, 2788, 2788],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r105",
+            "name": "National Pharmaceuticals Purchasing",
+            "source_label": "National Pharmaceuticals Purchasing2",
+            "source_row": 105,
+            "values": [1085, 1186, 1806, 1690, 1760, 1807, 1808, 1808, 1808, 1808],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r106",
+            "name": "Other non-departmental outputs",
+            "source_label": "Other non-departmental outputs4",
+            "source_row": 106,
+            "values": [770, 583, 612, 619, 594, 657, 659, 688, 731, 763],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r107",
+            "name": "Health payments to ACC",
+            "source_label": "Health payments to ACC",
+            "source_row": 107,
+            "values": [896, 952, 1010, 1026, 1221, 1312, 1411, 1517, 1631, 1753],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r108",
+            "name": "National health response to COVID-19",
+            "source_label": "National health response to COVID-193",
+            "source_row": 108,
+            "values": [4965, 2112, 247, 0, 0, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r109",
+            "name": "Other expenses",
+            "source_label": "Other expenses",
+            "source_row": 109,
+            "values": [82, 9, 7, 9, 52, 35, 38, 9, 8, 8],
+            "children": [],
+            "notes": []
+          }
+        ],
+        "notes": ["1.  Reforms to the NZ health system took place from 1 July 2022 with the regional DHB systems replaced by a national health system.", "2.  Previously included in purchasing of health services.", "3.  This line includes spending in relation to vaccines, managed isolation and quarantine as well as other COVID-19 response costs.", "4.  The '2025 Actual' has been restated to reclassify expenses from national disability support services to other non-departmental outputs.", "5.  From 2026/27 onwards, funding to Health New Zealand for capital charge costs are excluded as it is now exempt from the regime. This change is fiscally neutral to the Crown as this reduction in", "expense also results in a reduction to revenue. It does not reflect a change in the funding the health system has available for health infrastructure development or service delivery."]
+      },
+      {
+        "id": "r9",
+        "name": "Education",
+        "source_label": "Education",
+        "source_row": 9,
+        "values": [18023, 18403, 20223, 20895, 21206, 22187, 22069, 21948, 21952, 22019],
+        "children": [
+          {
+            "id": "r126",
+            "name": "Early childhood education",
+            "source_label": "Early childhood education",
+            "source_row": 126,
+            "values": [2247, 2355, 2710, 3074, 3018, 3104, 3164, 3222, 3256, 3280],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r127",
+            "name": "Primary and secondary schools",
+            "source_label": "Primary and secondary schools (see below)",
+            "source_row": 127,
+            "values": [8478, 8616, 9741, 9950, 10223, 11214, 11274, 11093, 11065, 11046],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r128",
+            "name": "Tertiary funding",
+            "source_label": "Tertiary funding (see below)",
+            "source_row": 128,
+            "values": [4804, 4663, 5014, 5171, 5293, 5386, 5326, 5244, 5268, 5299],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r129",
+            "name": "Departmental expenses",
+            "source_label": "Departmental expenses",
+            "source_row": 129,
+            "values": [1962, 2188, 2513, 2576, 2550, 2389, 2254, 2337, 2311, 2342],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r130",
+            "name": "COVID-19 apprentice support",
+            "source_label": "COVID-19 apprentice support",
+            "source_row": 130,
+            "values": [255, 141, 90, 48, 20, 26, 26, 26, 26, 26],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r131",
+            "name": "Other education expenses",
+            "source_label": "Other education expenses1",
+            "source_row": 131,
+            "values": [277, 440, 155, 76, 102, 68, 25, 26, 26, 26],
+            "children": [],
+            "notes": []
+          }
+        ],
+        "notes": "1. Includes training incentive allowance."
+      },
+      {
+        "id": "r10",
+        "name": "Core government services",
+        "source_label": "Core government services",
+        "source_row": 10,
+        "values": [5720, 6806, 8468, 7908, 5980, 6657, 6387, 6329, 6327, 6263],
+        "children": [
+          {
+            "id": "r211",
+            "name": "Departmental expenses",
+            "source_label": "Departmental expenses",
+            "source_row": 211,
+            "values": [2477, 2736, 2733, 2652, 2742, 2990, 2930, 2897, 2846, 2844],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r212",
+            "name": "International Development Cooperation",
+            "source_label": "International Development Cooperation",
+            "source_row": 212,
+            "values": [827, 971, 1202, 953, 956, 1151, 982, 982, 982, 982],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r213",
+            "name": "Tax receivable write-down and impairments",
+            "source_label": "Tax receivable write-down and impairments",
+            "source_row": 213,
+            "values": [662, 1453, 2393, 1872, 1170, 1375, 1384, 1390, 1400, 1410],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r214",
+            "name": "Non-departmental expenses",
+            "source_label": "Non-departmental expenses1,2",
+            "source_row": 214,
+            "values": [928, 703, 401, 513, 778, 364, 546, 564, 663, 602],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r215",
+            "name": "North Island weather events 2023",
+            "source_label": "North Island weather events 2023",
+            "source_row": 215,
+            "values": [0, 0, 794, 960, 34, 7, 1, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r216",
+            "name": "Science expenses",
+            "source_label": "Science expenses",
+            "source_row": 216,
+            "values": [114, 128, 115, 119, 124, 82, 75, 46, 16, 9],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r217",
+            "name": "Indemnity and guarantee expenses",
+            "source_label": "Indemnity and guarantee expenses",
+            "source_row": 217,
+            "values": [3, 24, 38, 34, 29, 24, 23, 23, 23, 23],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r218",
+            "name": "Shovel ready project funding",
+            "source_label": "Shovel ready project funding",
+            "source_row": 218,
+            "values": [0, 3, 14, 11, 0, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r219",
+            "name": "Other expenses",
+            "source_label": "Other expenses1,2",
+            "source_row": 219,
+            "values": [709, 788, 778, 794, 147, 664, 446, 427, 397, 393],
+            "children": [],
+            "notes": []
+          }
+        ],
+        "notes": ["1.  The '2023 Actual' has been restated to update sub-classifications.", "2.  The '2025 Actual' has been restated to reclassify expenses from other non-departmental expenses to other expenses."]
+      },
+      {
+        "id": "r11",
+        "name": "Law and order",
+        "source_label": "Law and order",
+        "source_row": 11,
+        "values": [5444, 6165, 6527, 6734, 7077, 7762, 7486, 7340, 7369, 7404],
+        "children": [
+          {
+            "id": "r232",
+            "name": "Police",
+            "source_label": "Police",
+            "source_row": 232,
+            "values": [2206, 2476, 2630, 2716, 2827, 2923, 2698, 2640, 2640, 2633],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r233",
+            "name": "Department of Corrections",
+            "source_label": "Department of Corrections",
+            "source_row": 233,
+            "values": [1645, 1798, 1952, 2077, 2221, 2395, 2415, 2437, 2457, 2504],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r234",
+            "name": "Ministry of Justice",
+            "source_label": "Ministry of Justice",
+            "source_row": 234,
+            "values": [704, 748, 814, 821, 859, 911, 891, 868, 870, 866],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r235",
+            "name": "NZ Customs Service",
+            "source_label": "NZ Customs Service1",
+            "source_row": 235,
+            "values": [200, 190, 197, 224, 234, 276, 289, 293, 293, 293],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r236",
+            "name": "Other departments",
+            "source_label": "Other departments1",
+            "source_row": 236,
+            "values": [152, 231, 235, 200, 190, 242, 232, 233, 233, 233],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r240",
+            "name": "Non-departmental outputs",
+            "source_label": "Non-departmental outputs",
+            "source_row": 240,
+            "values": [537, 712, 646, 658, 701, 784, 697, 689, 687, 686],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r241",
+            "name": "Other expenses",
+            "source_label": "Other expenses",
+            "source_row": 241,
+            "values": [0, 10, 53, 38, 45, 231, 264, 180, 189, 189],
+            "children": [],
+            "notes": []
+          }
+        ],
+        "notes": "1.  The '2023 Actual' has been restated to update sub-classifications."
+      },
+      {
+        "id": "r12",
+        "name": "Transport and communications",
+        "source_label": "Transport and communications",
+        "source_row": 12,
+        "values": [4657, 5472, 5487, 5472, 6035, 5333, 5408, 5650, 5591, 5635],
+        "children": [
+          {
+            "id": "r253",
+            "name": "Departmental outputs",
+            "source_label": "Departmental outputs",
+            "source_row": 253,
+            "values": [82, 124, 105, 87, 86, 89, 74, 73, 72, 72],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r254",
+            "name": "Waka Kotahi NZ Transport Agency",
+            "source_label": "Waka Kotahi NZ Transport Agency",
+            "source_row": 254,
+            "values": [2782, 2212, 3311, 3991, 3959, 3921, 3869, 4532, 4929, 5269],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r255",
+            "name": "Rail funding",
+            "source_label": "Rail funding",
+            "source_row": 255,
+            "values": [310, 567, 745, 758, 624, 501, 368, 249, 209, 4],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r256",
+            "name": "Funding to support the aviation and transport industries",
+            "source_label": "Funding to support the aviation and transport industries",
+            "source_row": 256,
+            "values": [554, 197, 89, 76, 0, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r257",
+            "name": "North Island weather events 2023",
+            "source_label": "North Island weather events 2023",
+            "source_row": 257,
+            "values": [0, 250, 312, 191, 0, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r258",
+            "name": "Funding to support Waka Kotahi NZ Transport Agency due to impact of COVID-19",
+            "source_label": "Funding to support Waka Kotahi NZ Transport Agency due to impact of COVID-19",
+            "source_row": 258,
+            "values": [128, 18, 19, 62, 0, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r259",
+            "name": "Shovel ready project funding to Crown Infrastructure Partners",
+            "source_label": "Shovel ready project funding to Crown Infrastructure Partners",
+            "source_row": 259,
+            "values": [0, 0, 326, 0, 0, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r260",
+            "name": "Funding National Land Transport Fund shortfall due to changes in fuel excise duty and road user charges",
+            "source_label": "Funding National Land Transport Fund shortfall due to changes in fuel excise duty and road user charges1, 2",
+            "source_row": 260,
+            "values": [411, 1613, 0, 0, 0, 275, 649, 423, 98, 31],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r261",
+            "name": "Other non-departmental expenses",
+            "source_label": "Other non-departmental expenses",
+            "source_row": 261,
+            "values": [200, 395, 317, 231, 206, 184, 147, 119, 119, 119],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r262",
+            "name": "Other expenses",
+            "source_label": "Other expenses2, 3",
+            "source_row": 262,
+            "values": [190, 96, 263, 76, 1160, 363, 301, 254, 164, 140],
+            "children": [],
+            "notes": []
+          }
+        ],
+        "notes": ["1. Renamed from 'Transport temporary relief package'.", "2. Largely reflects operating funding to Waka Kotahi NZ Transport Agency to account for the shortfall in revenue as a result of changes in fuel excise duty and road user charges.", "3. The '2022 Actual' for other expenses include costs in relation to the Government's response to COVID-19.", "4. Increase in 2026 largely reflects the divestment of the City Rail Link project."]
+      },
+      {
+        "id": "r13",
+        "name": "Economic and industrial services",
+        "source_label": "Economic and industrial services",
+        "source_row": 13,
+        "values": [8078, 3690, 4010, 3514, 3012, 3768, 3043, 3233, 3265, 3294],
+        "children": [
+          {
+            "id": "r277",
+            "name": "Departmental outputs",
+            "source_label": "Departmental outputs",
+            "source_row": 277,
+            "values": [626, 695, 762, 727, 821, 891, 818, 802, 781, 785],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r278",
+            "name": "Non-departmental outputs",
+            "source_label": "Non-departmental outputs1,2,4",
+            "source_row": 278,
+            "values": [1701, 1573, 1830, 1254, 1259, 1485, 1351, 1542, 1572, 1577],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r279",
+            "name": "KiwiSaver (includes HomeStart grant)",
+            "source_label": "KiwiSaver (includes HomeStart grant)",
+            "source_row": 279,
+            "values": [964, 997, 1014, 1020, 470, 494, 516, 541, 565, 589],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r280",
+            "name": "Initial fair value write-down on the Small Business Cashflow Scheme loans",
+            "source_label": "Initial fair value write-down on the Small Business Cashflow Scheme loans",
+            "source_row": 280,
+            "values": [230, 54, 0, 0, 0, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r281",
+            "name": "COVID-19 Resurgence Support payments",
+            "source_label": "COVID-19 Resurgence Support payments",
+            "source_row": 281,
+            "values": [4019, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r282",
+            "name": "Shovel ready project to support energy projects",
+            "source_label": "Shovel ready project to support energy projects",
+            "source_row": 282,
+            "values": [14, 13, 9, 3, 7, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r283",
+            "name": "Shovel ready project funding to support regional projects",
+            "source_label": "Shovel ready project funding to support regional projects",
+            "source_row": 283,
+            "values": [174, 67, 0, 0, 0, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r284",
+            "name": "Worker redeployment package",
+            "source_label": "Worker redeployment package",
+            "source_row": 284,
+            "values": [6, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r285",
+            "name": "Other expenses",
+            "source_label": "Other expenses3,4",
+            "source_row": 285,
+            "values": [344, 290, 394, 510, 455, 898, 358, 348, 347, 343],
+            "children": [],
+            "notes": []
+          }
+        ],
+        "notes": ["1. Non-departmental outputs include Provincial Growth Fund expenses.", "2. Non-departmental outputs include employment initiatives previously presented separately.", "3. The '2022 Actual' other expenses include costs in relation to the Government's response to COVID-19.", "4. The '2025 Actual' has been restated to reclassify expenses from non-departmental outputs to other expenses.", "Source:                The Treasury"]
+      },
+      {
+        "id": "r14",
+        "name": "Defence",
+        "source_label": "Defence",
+        "source_row": 14,
+        "values": [2832, 2886, 3163, 3271, 3525, 3878, 3858, 3900, 3936, 3948],
+        "children": [
+          {
+            "id": "r299",
+            "name": "New Zealand Defence Force expenses",
+            "source_label": "New Zealand Defence Force expenses",
+            "source_row": 299,
+            "values": [2672, 2754, 3033, 3074, 3364, 3611, 3594, 3649, 3686, 3699],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r300",
+            "name": "Other expenses",
+            "source_label": "Other expenses",
+            "source_row": 300,
+            "values": [160, 132, 130, 197, 161, 267, 264, 251, 250, 249],
+            "children": [],
+            "notes": []
+          }
+        ],
+        "notes": []
+      },
+      {
+        "id": "r15",
+        "name": "Heritage, culture and recreation",
+        "source_label": "Heritage, culture and recreation",
+        "source_row": 15,
+        "values": [1468, 1537, 1504, 1457, 1439, 1442, 1412, 1396, 1365, 1357],
+        "children": [
+          {
+            "id": "r310",
+            "name": "Departmental outputs",
+            "source_label": "Departmental outputs",
+            "source_row": 310,
+            "values": [374, 449, 473, 463, 515, 517, 505, 483, 469, 461],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r311",
+            "name": "Non-departmental outputs",
+            "source_label": "Non-departmental outputs",
+            "source_row": 311,
+            "values": [809, 837, 871, 872, 790, 775, 780, 780, 778, 778],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r312",
+            "name": "Screen Production Grants",
+            "source_label": "Screen Production Grants",
+            "source_row": 312,
+            "values": [69, 66, 43, 52, 66, 74, 70, 70, 70, 70],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r313",
+            "name": "COVID-19 cultural sector response",
+            "source_label": "COVID-19 cultural sector response",
+            "source_row": 313,
+            "values": [73, 70, 36, 0, 0, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r314",
+            "name": "Other expenses",
+            "source_label": "Other expenses1",
+            "source_row": 314,
+            "values": [143, 115, 81, 70, 68, 76, 57, 63, 48, 48],
+            "children": [],
+            "notes": []
+          }
+        ],
+        "notes": "1.  The '2022 Actual' other expenses include costs in relation to the Government's response to COVID-19."
+      },
+      {
+        "id": "r16",
+        "name": "Primary services",
+        "source_label": "Primary services",
+        "source_row": 16,
+        "values": [949, 1156, 1062, 996, 1030, 1351, 1136, 1126, 1180, 1098],
+        "children": [
+          {
+            "id": "r326",
+            "name": "Departmental expenses",
+            "source_label": "Departmental expenses",
+            "source_row": 326,
+            "values": [724, 788, 775, 740, 778, 937, 884, 883, 871, 871],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r327",
+            "name": "Non-departmental outputs",
+            "source_label": "Non-departmental outputs",
+            "source_row": 327,
+            "values": [106, 149, 131, 114, 108, 209, 150, 142, 208, 209],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r328",
+            "name": "Other expenses",
+            "source_label": "Other expenses1",
+            "source_row": 328,
+            "values": [119, 219, 156, 142, 144, 205, 102, 101, 101, 18],
+            "children": [],
+            "notes": []
+          }
+        ],
+        "notes": "1. From '2023 Actual' onwards other expenses include aquaculture settlements, expenses associated with sustainable food and fibre futures and the 2023 North Island weather events."
+      },
+      {
+        "id": "r17",
+        "name": "Housing and community development",
+        "source_label": "Housing and community development",
+        "source_row": 17,
+        "values": [2033, 2312, 2512, 2150, 1958, 2289, 1908, 1852, 1749, 1795],
+        "children": [
+          {
+            "id": "r340",
+            "name": "Departmental outputs",
+            "source_label": "Departmental outputs",
+            "source_row": 340,
+            "values": [255, 259, 286, 279, 286, 263, 255, 252, 252, 252],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r341",
+            "name": "Community services",
+            "source_label": "Community services",
+            "source_row": 341,
+            "values": [438, 477, 396, 436, 435, 437, 409, 408, 408, 408],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r342",
+            "name": "Housing Acceleration Fund",
+            "source_label": "Housing Acceleration Fund",
+            "source_row": 342,
+            "values": [22, 30, 78, 157, 173, 254, 265, 243, 117, 71],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r343",
+            "name": "Transitional housing",
+            "source_label": "Transitional housing1",
+            "source_row": 343,
+            "values": [324, 318, 360, 354, 329, 361, 328, 301, 314, 301],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r344",
+            "name": "Water infrastructure",
+            "source_label": "Water infrastructure",
+            "source_row": 344,
+            "values": [239, 301, 319, 94, 71, 92, 5, 5, 5, 5],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r345",
+            "name": "Shovel ready project funding to support housing projects",
+            "source_label": "Shovel ready project funding to support housing projects",
+            "source_row": 345,
+            "values": [35, 39, 46, 58, 17, 12, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r346",
+            "name": "Warm up New Zealand",
+            "source_label": "Warm up New Zealand",
+            "source_row": 346,
+            "values": [62, 34, 1, 76, 82, 101, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r347",
+            "name": "Other non-departmental expenses",
+            "source_label": "Other non-departmental expenses",
+            "source_row": 347,
+            "values": [601, 681, 869, 658, 548, 476, 456, 487, 495, 595],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r348",
+            "name": "Other expenses",
+            "source_label": "Other expenses2",
+            "source_row": 348,
+            "values": [57, 173, 157, 38, 17, 293, 190, 156, 158, 163],
+            "children": [],
+            "notes": []
+          }
+        ],
+        "notes": ["1. Previously included in other non-departmental expenses.", "2. Includes housing subsidies previously presented separately."]
+      },
+      {
+        "id": "r18",
+        "name": "Environmental protection",
+        "source_label": "Environmental protection",
+        "source_row": 18,
+        "values": [2549, 2381, 2297, 2410, 2509, 2874, 2716, 2691, 2609, 2641],
+        "children": [
+          {
+            "id": "r361",
+            "name": "NZ Emissions Trading Scheme",
+            "source_label": "NZ Emissions Trading Scheme1",
+            "source_row": 361,
+            "values": [1540, 1215, 894, 1111, 1325, 1261, 1335, 1400, 1449, 1477],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r362",
+            "name": "Departmental outputs",
+            "source_label": "Departmental outputs",
+            "source_row": 362,
+            "values": [690, 776, 845, 787, 780, 966, 868, 808, 797, 794],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r363",
+            "name": "Non-departmental outputs",
+            "source_label": "Non-departmental outputs",
+            "source_row": 363,
+            "values": [170, 165, 354, 406, 265, 546, 494, 472, 351, 358],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r364",
+            "name": "Clean car discount",
+            "source_label": "Clean car discount",
+            "source_row": 364,
+            "values": [128, 203, 116, 0, 0, 0, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r365",
+            "name": "Accelerating energy efficiency and fuel switching",
+            "source_label": "Accelerating energy efficiency and fuel switching",
+            "source_row": 365,
+            "values": [0, 2, 42, 90, 77, 64, 0, 0, 0, 0],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r366",
+            "name": "Other expenses",
+            "source_label": "Other expenses1",
+            "source_row": 366,
+            "values": [21, 20, 46, 16, 62, 37, 19, 11, 12, 12],
+            "children": [],
+            "notes": []
+          }
+        ],
+        "notes": ["1. '2022 Actual' and '2023 Actual' were restated to update sub-classifications.", "Source:                The Treasury"]
+      },
+      {
+        "id": "r19",
+        "name": "GSF pension expenses",
+        "source_label": "GSF pension expenses",
+        "source_row": 19,
+        "values": [94, 61, 69, 65, 61, 46, 48, 47, 46, 45],
+        "children": [],
+        "notes": []
+      },
+      {
+        "id": "r20",
+        "name": "Other",
+        "source_label": "Other",
+        "source_row": 20,
+        "values": [269, 133, 145, 127, 189, 210, 81, 277, 276, 276],
+        "children": [],
+        "notes": []
+      },
+      {
+        "id": "r21",
+        "name": "Finance costs",
+        "source_label": "Finance costs",
+        "source_row": 21,
+        "values": [2884, 6569, 8943, 8862, 9057, 10291, 11396, 12481, 13502, 13689],
+        "children": [
+          {
+            "id": "r378",
+            "name": "Interest on financial liabilities",
+            "source_label": "Interest on financial liabilities",
+            "source_row": 378,
+            "values": [2796, 6154, 8329, 8291, 8698, 9940, 11002, 12064, 13081, 13279],
+            "children": [],
+            "notes": []
+          },
+          {
+            "id": "r379",
+            "name": "Interest unwind on provisions",
+            "source_label": "Interest unwind on provisions",
+            "source_row": 379,
+            "values": [88, 415, 614, 571, 359, 351, 394, 417, 421, 410],
+            "children": [],
+            "notes": []
+          }
+        ],
+        "notes": []
+      },
+      {
+        "id": "r22",
+        "name": "Forecast new operating spending",
+        "source_label": "Forecast new operating spending",
+        "source_row": 22,
+        "values": [0, 0, 0, 0, 0, 1258, 2968, 5025, 7783, 10116],
+        "children": [],
+        "notes": []
+      },
+      {
+        "id": "r23",
+        "name": "Top-down operating expense adjustment",
+        "source_label": "Top-down operating expense adjustment",
+        "source_row": 23,
+        "values": [0, 0, 0, 0, 0, -2600, -800, -650, -650, -650],
+        "children": [],
+        "notes": []
+      }
+    ],
+    "notes": []
+  }
+}

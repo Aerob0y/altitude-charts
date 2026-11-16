@@ -143,7 +143,7 @@
     layout.legend = {...layout.legend, orientation: "h", x: 0, xanchor: "left", y: numericXAxis ? -0.32 : -0.16, yanchor: "top", font: {...layout.legend?.font, size: 10}};
     layout.hoverlabel = {...layout.hoverlabel, namelength: -1};
     const data = spec.data.filter(trace => trace.mode !== "text").map(trace => ({...structuredClone(trace),
-      name: wrap(trace.name || ""), showlegend: true, hoverlabel: {...trace.hoverlabel, namelength: -1}}));
+      name: wrap(trace.name || ""), showlegend: trace.showlegend !== false, hoverlabel: {...trace.hoverlabel, namelength: -1}}));
     dates.replaceChildren();
     const rangeButtons = numericXAxis ? [] : spec.layout?.xaxis?.rangeselector?.buttons || [];
     if (layout.xaxis?.rangeselector) layout.xaxis.rangeselector.visible = false;
