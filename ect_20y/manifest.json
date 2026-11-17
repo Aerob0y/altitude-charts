@@ -1,0 +1,24 @@
+{
+  "name": "ect_20y",
+  "title": "Card spending: 20 years by category",
+  "source": "Stats NZ electronic card transactions",
+  "note": "Compare monthly card spending by category in NZD millions or annual percent change; levels use seasonal adjustment where available.",
+  "updated": "2026-11-10",
+  "views": [
+    {
+      "label": "Change by category",
+      "spec": "change-by-category.json"
+    },
+    {
+      "label": "Spending by category",
+      "spec": "spending-by-category.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "ect_20y.png",
+  "image_alt": "Card spending: 20 years of change Change in 12 months of spending, in September 2026 prices, against the same 12 months 20 years earlier. Source: Stats NZ",
+  "real": {
+    "cpi": "cpi.json",
+    "label": "September 2026 prices"
+  }
+}

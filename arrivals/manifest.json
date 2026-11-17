@@ -3,7 +3,7 @@
   "title": "International arrivals",
   "source": "Stats NZ international travel (unpublished monthly data)",
   "note": "Everyone arriving in New Zealand by air or sea each month: visitors, returning NZ residents and migrants (people arriving to live here, recorded from October 2021). Country is where visitors and migrants lived before, or the main country NZ residents visited. New Zealand airports are Auckland, Christchurch, Queenstown and the rest together. July 2025 has no Stats NZ file, so it is estimated from July 2024 and flagged on the chart. NZ residents' travel purpose was barely recorded in 2019 (most were coded Other), so compare residents by purpose only from 2022. Stats NZ rounds counts to a multiple of 3, so small groups are approximate.",
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "views": [
     {
       "label": "Arrivals per month",
@@ -20,6 +20,6 @@
   ],
   "data": null,
   "image": "arrivals.png",
-  "image_alt": "International arrivals Arrivals per month by passenger type · Jul 2025 estimated · People arriving · Source: Stats NZ",
+  "image_alt": "International arrivals Arrivals per month by passenger type · People arriving · Source: Stats NZ",
   "cube": "cube.json"
 }

@@ -2,7 +2,7 @@
   "name": "nz_au",
   "title": "New Zealand and Australia compared",
   "source": "Stats NZ via RBNZ, Australian Bureau of Statistics (ABS) and OECD",
-  "note": "Unemployment, labour force participation, wage growth and household spending after inflation in New Zealand and Australia, quarterly from 2015. Rates are per cent; growth is the annual % change against the same quarter a year earlier. Australian monthly figures are averaged (rates) or added up (spending) to quarters. New Zealand wages are the labour cost index for all sectors; Australian wages are the private-sector wage price index. Spending is card spending in New Zealand and the ABS household spending indicator in Australia, each less its own CPI inflation.",
+  "note": "Unemployment, labour force participation, wage growth, wages after inflation and household spending after inflation in New Zealand and Australia, quarterly from 2015. Rates are per cent; growth is the annual % change against the same quarter a year earlier. Australian monthly figures are averaged (rates) or added up (spending) to quarters. New Zealand wages are the labour cost index for all sectors; Australian wages are the private-sector wage price index. Spending is card spending in New Zealand and the ABS household spending indicator in Australia, each less its own CPI inflation. Real wages are each country's wage index divided by its own CPI, set to 100 on the 2019 average, so the lines show how far pay has moved ahead of or behind prices.",
   "updated": "2026-11-11",
   "views": [
     {
@@ -20,6 +20,10 @@
     {
       "label": "Household spending after inflation",
       "spec": "household-spending-after-inflation.json"
+    },
+    {
+      "label": "Real wages (2019 = 100)",
+      "spec": "real-wages-2019-100.json"
     }
   ],
   "data": "data.csv",

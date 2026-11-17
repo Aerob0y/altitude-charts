@@ -1,0 +1,16 @@
+{
+  "name": "ect_total",
+  "title": "Card spending: dollars and today's dollars",
+  "source": "Stats NZ electronic card transactions",
+  "note": "Compare monthly card spending by category in NZD millions or annual percent change; levels use seasonal adjustment where available.",
+  "updated": "2026-11-10",
+  "views": [
+    {
+      "label": "Total spending",
+      "spec": "total-spending.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "ect_total.png",
+  "image_alt": "Card spending: the total Monthly card spending, NZD millions, seasonally adjusted. Adjusted for inflation to September 2026 prices. Source: Stats NZ"
+}

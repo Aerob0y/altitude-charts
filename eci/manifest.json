@@ -1,0 +1,20 @@
+{
+  "name": "eci",
+  "title": "Economic complexity",
+  "source": "The Growth Lab at Harvard University, Growth Projections and Complexity Rankings, Harvard Dataverse",
+  "note": "The Economic Complexity Index scores each country on how many different goods it exports and how few other countries can make them. It counts goods exports only, not services such as tourism, education or software. Ranks use the HS92 product classification.",
+  "updated": "2026-11-17",
+  "views": [
+    {
+      "label": "Ranking among similar countries",
+      "spec": "ranking-among-similar-countries.json"
+    },
+    {
+      "label": "Rank over time",
+      "spec": "rank-over-time.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "eci.png",
+  "image_alt": "Economic complexity: New Zealand and similar countries Complexity score, 2024, with world rank out of 145 countries · Source: Harvard Growth Lab"
+}

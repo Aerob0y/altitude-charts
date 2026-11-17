@@ -142,6 +142,12 @@
     layout.showlegend = true;
     layout.legend = {...layout.legend, orientation: "h", x: 0, xanchor: "left", y: numericXAxis ? -0.32 : -0.16, yanchor: "top", font: {...layout.legend?.font, size: 10}};
     layout.hoverlabel = {...layout.hoverlabel, namelength: -1};
+    // A chart can ask to keep its own fonts and margins (the horizontal group bars in cube.js).
+    if (spec.layout?.meta?.keepLayout) {
+      layout.showlegend = false;
+      layout.margin = {...spec.layout.margin, t: 12, b: 40};
+      for (const key of ["xaxis", "yaxis"]) layout[key].tickfont = spec.layout[key]?.tickfont;
+    }
     const data = spec.data.filter(trace => trace.mode !== "text").map(trace => ({...structuredClone(trace),
       name: wrap(trace.name || ""), showlegend: trace.showlegend !== false, hoverlabel: {...trace.hoverlabel, namelength: -1}}));
     dates.replaceChildren();

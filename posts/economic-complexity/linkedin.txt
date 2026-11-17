@@ -1,0 +1,19 @@
+<!-- DRAFT: Day 13 of 42, issue #434. Do not post the site URL until approved and published. Use eci-linkedin-1200x627.png in this folder. -->
+
+How complex is what New Zealand sells?
+
+I'd always assumed what we sell overseas is fairly simple: milk powder, logs, meat. Harvard's economic complexity ranking more or less agrees.
+
+The Growth Lab at Harvard scores each country on how many different goods it exports, and how few other countries can make them.
+
+In 2024 New Zealand ranked 49th out of 145 countries. Behind Ireland (14th), Denmark (22nd) and Norway (40th), but well ahead of Australia (73rd).
+
+We've drifted down a little: 40th in 1995, 53rd for most of 2016 to 2021, 49th now. Australia has fallen from 33rd to 73rd.
+
+There's a catch, though. The ranking only counts goods. Tourism, education and software don't show up at all, and those are some of the first things I'd mention if someone asked what New Zealand is good at.
+
+So I'd read it as a ranking of what we ship, rather than everything we do. I'd be curious where we'd land if services were counted too.
+
+Source: The Growth Lab at Harvard University, Growth Projections and Complexity Rankings, Harvard Dataverse (version 12.0, February 2026). Goods exports, HS92 classification.
+
+[Read the post](https://csv.co.nz/posts/economic-complexity/).

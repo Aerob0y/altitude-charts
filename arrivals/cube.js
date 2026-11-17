@@ -8,6 +8,7 @@
 // Measure (arrivals, or the change on a year earlier or on 2019, in people or %).
 window.AltitudeCube = (() => {
   const dot = " · ";
+  const embedParams = new URLSearchParams(location.search);
   // Rises above this come from a near-empty base (e.g. NZ residents' travel
   // purpose, barely recorded in 2019) and are left out.
   const maxPct = 500;
@@ -164,6 +165,64 @@ window.AltitudeCube = (() => {
     layout.title = {...layout.title, text: match ? match[1] + subtitle + match[3] : title};
   }
 
+  // The latest-12-months comparison as horizontal bars, largest at the top, one row per
+  // group in the same colour as the time chart. Group names run along the side so they
+  // stay readable on a phone. Groups with no 2019 figure (e.g. Migrant) are left out.
+  const shortNames = {"Visiting friends and relatives": "Friends and<br>relatives", "China and Hong Kong": "China and<br>Hong Kong",
+    "Pacific Islands": "Pacific<br>Islands"};
+  function horizontalBars(groups, values, text, format, suffix, name) {
+    const rows = groups.map((g, i) => ({name: g.name, colour: g.colour, value: values[i], text: text[i]}))
+      .filter(row => row.value != null).sort((a, b) => a.value - b.value);
+    const label = row => innerWidth < 700 && shortNames[row.name] || row.name;
+    return {type: "bar", orientation: "h", name, x: rows.map(r => r.value), y: rows.map(label),
+      marker: {color: rows.map(r => r.colour)}, text: rows.map(r => r.text),
+      textposition: "outside", textfont: {size: 15, color: "#222"}, cliponaxis: false,
+      hovertemplate: `%{y}: %{x:${format}}${suffix}<extra></extra>`};
+  }
+
+  function horizontalLayout(layout, values, tickformat, suffix) {
+    const present = values.filter(v => v != null);
+    const low = Math.min(0, ...present), high = Math.max(0, ...present);
+    const pad = (high - low) * 0.3 || 1;
+    layout.xaxis = {zeroline: true, zerolinewidth: 1.5, showgrid: true, fixedrange: true, tickfont: {size: 13},
+      tickformat, ticksuffix: suffix, range: [low < 0 ? low - pad : 0, high > 0 ? high + pad : 0]};
+    layout.yaxis = {automargin: true, fixedrange: true, type: "category", tickfont: {size: 14}, ticklen: 8,
+      tickcolor: "rgba(0,0,0,0)"};
+    layout.bargap = 0.3;
+    layout.margin = {...layout.margin, l: 10, r: 24, b: 40};
+    layout.showlegend = false;
+    layout.meta = {...layout.meta, keepLayout: true};
+    return layout;
+  }
+
+  // ?title=... and ?sub=... replace the chart's title and subtitle (used by blog embeds
+  // that sit two to a row and need short headings).
+  function setTitles(layout, title, sub) {
+    const match = (layout.title?.text || "").match(/^(.*?)(<span[^>]*>)(.*)(<\/span>.*)$/s);
+    if (!match) return;
+    const head = title == null ? match[1] : `<b>${title}</b><br>`;
+    layout.title = {...layout.title, text: head + match[2] + (sub == null ? match[3] : sub) + match[4]};
+  }
+
+  // ?from=2023-01 starts a time chart at that month, so the recent change fills the plot
+  // instead of the 2020 collapse. Y limits fit the months that stay.
+  function applyFrom(spec, from, months) {
+    const keep = months.map(m => m >= from + "-01");
+    for (const trace of spec.data) {
+      if (!Array.isArray(trace.x) || trace.x.length !== months.length) continue;
+      trace.x = trace.x.filter((_, i) => keep[i]);
+      trace.y = trace.y.filter((_, i) => keep[i]);
+    }
+    const first = months.find((m, i) => keep[i]);
+    const last = new Date(months[months.length - 1] + "T00:00:00Z");
+    last.setUTCMonth(last.getUTCMonth() + 1);
+    spec.layout.xaxis = {...spec.layout.xaxis, range: [first, last.toISOString().slice(0, 10)], autorange: false};
+    delete spec.layout.xaxis.rangeselector;
+    delete spec.layout.xaxis.rangeslider;
+    spec.layout.yaxis = {...spec.layout.yaxis, autorange: true};
+    delete spec.layout.yaxis.range;
+  }
+
   function describe(cube, show, period, measure) {
     const label = i => cube.month_labels[i];
     const n = cube.months.length;
@@ -229,6 +288,11 @@ window.AltitudeCube = (() => {
       const data = [{type: "bar", name: describe(cube, show, period, measure), x: names, y: values,
         marker: {color: groups.map(g => g.colour)}, text, textposition: "outside", cliponaxis: false,
         hovertemplate: `%{x}: %{y:${format}}${suffix}<extra></extra>`}];
+      if (!cube.quantities) {
+        setTitles(layout, embedParams.get("title"), embedParams.get("sub"));
+        return {data: [horizontalBars(groups, values, text, format, suffix, describe(cube, show, period, measure))],
+          layout: horizontalLayout(layout, values, format, suffix), config: template.config};
+      }
       layout.xaxis = {...layout.xaxis, categoryarray: names};
       // Group names overlap on a phone, so slant them.
       if (innerWidth < 600) Object.assign(layout.xaxis, {tickangle: -45, automargin: true});
@@ -250,7 +314,8 @@ window.AltitudeCube = (() => {
     retitle(layout, subtitle);
     layout.showlegend = !!split && groups.length > 1;
     if (layout.showlegend) reserveLegend(layout, groups.map(g => g.name));
-    const series = groups.map(group => ({group, y: overTime(cube, group, period, measure)}));
+    const series = groups.map(group => ({group, y: overTime(cube, group, period, measure)}))
+      .filter(item => item.y.some(v => v != null));
     const traceFor = ({group, y}) => ({name: group.name, x: cube.months, y, legendgroup: group.name,
       hovertemplate: `${group.name}: %{y:${format}}${suffix}<extra></extra>`});
     let data;
@@ -318,6 +383,10 @@ window.AltitudeCube = (() => {
         if (filters[dim] >= 0) filterLabels.push(select.selectedOptions[0].textContent);
       }
       const spec = build(cube, templates, choice, split, filters, filterLabels);
+      if (choice.show === "time" && params.get("from")) {
+        applyFrom(spec, params.get("from"), cube.months);
+        setTitles(spec.layout, params.get("title"), params.get("sub"));
+      }
       const url = new URL(location.href);
       for (const [key, value] of Object.entries({...choice, split: splitSelect.value})) url.searchParams.set(key, value);
       for (const [dim, select] of Object.entries(filterSelects)) {

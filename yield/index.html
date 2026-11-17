@@ -40,12 +40,18 @@
     #preview { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: white; z-index: 1; }
     #status { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: #64676C; background: #FAFAF8; z-index: 2; }
     [hidden] { display: none !important; }
+    /* Wide screens: same cap as the topic pages (site.html). The chart is at most 1200 x 750 px and the page is
+       centred on it; the chart shrinks to fit shorter screens, and spare height goes below the footer.
+       Blog embeds (?embed=1) still fill their frame. */
+    html:not(.embed) .page > * { width: 100%; max-width: 1200px; margin-inline: auto; }
+    @media (min-width: 600px) { html:not(.embed) .chart-area { flex: 1 1 750px; max-height: 750px; } }
     footer { border-top: 1px solid #DCD6CB; padding-top: 8px; font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
     #downloads { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 4px; }
     a { color: #0E6B6B; text-underline-offset: 3px; }
     :focus-visible { outline: 2px solid #0E6B6B; outline-offset: 3px; }
     .embed body { background: transparent; }
     .embed .page { min-height: 0; padding: 0; gap: 0; }
+    .embed .chart-options, .embed .legend-control { display: none !important; }
     .embed .page > header, .embed .controls, .embed .page > footer { display: none !important; }
     .embed #preview, .embed #status { background: transparent; }
     @media (max-width: 599px) {

@@ -90,6 +90,7 @@
     const axes = dims.map(dim => dim === dims[0] ? "y" : "y2");
     const twoAxes = axes.includes("y2");
     const lines = [], endLabels = [], contextTraces = [];
+    let layout_bar = false;
     // Views can share a series name (e.g. a value and its % change); then name them by view.
     const names = specs.map(spec => spec.data.find(trace => trace.mode !== "text" &&
       trace.meta?.standard_plot_role !== "shade_hover")?.name);
@@ -112,6 +113,14 @@
         trace.yaxis = axes[k];
         trace.legendgroup = "series_" + (k + 1);
         recolour(trace, colourOf(k), k === 0);
+        // Per-page options (hm9): first series as bars, other lines smoothed.
+        const isLine = trace.mode !== "text" && trace.type !== "bar" && /lines/.test(trace.mode || "lines");
+        if (isLine && pick.bar_first && k === 0 && dims[0] !== "Index" && !indexDate) {
+          trace.type = "bar";
+          trace.marker = {...trace.marker, color: colourOf(k)};
+          delete trace.mode; delete trace.line; delete trace.fill; delete trace.fillcolor;
+          layout_bar = true;
+        } else if (isLine && pick.smooth) trace.line = {...trace.line, shape: "spline", smoothing: 0.6};
         if (clash) {
           trace.name = labels[chosen[k]];
           if (trace.mode === "text") trace.text = labelText(trace.name);
@@ -128,6 +137,7 @@
     spaceLabels(lines, endLabels);
 
     const layout = structuredClone(specs[0].layout || {});
+    if (layout_bar) layout.bargap = 0.15;
     const second = axes.indexOf("y2");
     layout.yaxis = {...layout.yaxis, color: twoAxes ? colourOf(0) : "#64676C", zerolinecolor: "#222326"};
     if (twoAxes) {
@@ -150,8 +160,9 @@
       layout.yaxis = {...layout.yaxis, tickformat: ",.0f", tickprefix: "", rangemode: "normal"};
       delete layout.yaxis2;
     }
+    const presetLabel = pick.presets?.find(preset => preset.items.length === chosen.length && preset.items.every((item, k) => item === chosen[k]))?.label;
     const subtitle = indexDate ? escapeHtml(`Index, ${indexDateLabel(indexDate)} = 100. Higher means a stronger NZD. Source: RBNZ`) :
-        escapeHtml(pick.subtitles?.[chosen[0]] || pick.subtitle) + ": " + escapeHtml(shortTitle(chosen.map(i => labels[i]))) +
+        escapeHtml(pick.subtitles?.[chosen[0]] || pick.subtitle) + ": " + escapeHtml(presetLabel ? presetLabel.toLowerCase() : shortTitle(chosen.map(i => labels[i]))) +
         (pick.groups && !pick.subtitles ? escapeHtml(` (${pick.group_names?.[pick.groups[chosen[0]]] || pick.groups[chosen[0]]})`) : "");
     layout.title = {...layout.title, text: `<b>${escapeHtml(pick.title)}</b><br><span style='font-family:Inter, Arial, sans-serif; font-size:13px; font-weight:normal; color:#64676C;'>${subtitle}</span>`};
     return {data: [...lines, ...endLabels, ...contextTraces], layout, config: specs[0].config};
@@ -167,7 +178,7 @@
     const slugs = manifest.views.map(view => view.id || view.spec.replace(/\.json$/i, "").split("/").pop());
     const groupOf = i => groups ? groups[i] : "";
     const twoUnits = picks => picks.filter((i, k) => new Set(picks.slice(0, k + 1).map(j => dims[j])).size <= 2);
-    let chosen = [...new Set(requested.map(slug => slugs.indexOf(slug)).filter(i => i >= 0))];
+    let chosen = [...new Set(requested.map(slug => slugs.indexOf(pick.aliases?.[slug] || slug)).filter(i => i >= 0))];
     chosen = twoUnits(chosen.filter(i => groupOf(i) === groupOf(chosen[0]))).slice(0, pick.labels.length);
     if (!chosen.length) chosen = [...(pick.default || [0])];
 
@@ -184,6 +195,11 @@
       container.append(text, select);
       return select;
     };
+    const presetSelect = pick.presets && addSelect("pick-preset", "View");
+    if (presetSelect) {
+      presetSelect.append(new Option("Choose a view", ""));
+      pick.presets.forEach((preset, n) => presetSelect.append(new Option(preset.label, String(n))));
+    }
     const groupSelect = groups && addSelect("pick-group", pick.group_label || "Group");
     const groupNames = pick.group_names || {};
     if (groupSelect) [...new Set([...Object.keys(groupNames), ...groups])].filter(group => groups.includes(group))
@@ -264,6 +280,10 @@
       const group = groupOf(chosen[0]);
       if (groupSelect) groupSelect.value = group;
       headings.forEach(({heading, group: mine}) => { heading.hidden = mine !== group; heading.style.display = mine === group ? "block" : "none"; });
+      if (presetSelect) {
+        const match = pick.presets.findIndex(preset => preset.items.length === chosen.length && preset.items.every((item, k) => item === chosen[k]));
+        presetSelect.value = match >= 0 ? String(match) : "";
+      }
       button.textContent = "Series: " + chosen.map(i => names[i]).join(", ") + " ▾";
       const units = new Set(chosen.map(i => dims[i]));
       options.forEach(({row, input}, i) => {
@@ -288,6 +308,11 @@
       const inGroup = names.map((_, i) => i).filter(i => groups[i] === group);
       const kept = chosen.map(i => inGroup.find(j => names[j] === names[i])).filter(i => i !== undefined);
       chosen = twoUnits(kept.length ? kept : inGroup.slice(0, 1));
+      changed();
+    });
+    presetSelect?.addEventListener("change", () => {
+      if (presetSelect.value === "") return;
+      chosen = [...pick.presets[Number(presetSelect.value)].items];
       changed();
     });
     fill();

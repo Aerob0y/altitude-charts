@@ -199,7 +199,7 @@
       "name": "hm9",
       "title": "Labour market",
       "source": "RBNZ and Stats NZ series",
-      "note": "Four quarterly views: unemployment, participation, annual wage growth, and real wage growth (wage growth less CPI inflation), all in percent. Each chart's camera button downloads that chart only.",
+      "note": "Quarterly unemployment, participation, wage growth and wages after inflation (wage growth less CPI inflation, or an index of wages divided by CPI). Each chart's camera button downloads that chart only.",
       "target": "rbnz",
       "updated": "2026-11-17",
       "page": "hm9/index.html",
@@ -290,7 +290,7 @@
       "name": "nz_au",
       "title": "New Zealand and Australia compared",
       "source": "Stats NZ via RBNZ, Australian Bureau of Statistics (ABS) and OECD",
-      "note": "Unemployment, labour force participation, wage growth and household spending after inflation in New Zealand and Australia, quarterly from 2015. Rates are per cent; growth is the annual % change against the same quarter a year earlier. Australian monthly figures are averaged (rates) or added up (spending) to quarters. New Zealand wages are the labour cost index for all sectors; Australian wages are the private-sector wage price index. Spending is card spending in New Zealand and the ABS household spending indicator in Australia, each less its own CPI inflation.",
+      "note": "Unemployment, labour force participation, wage growth, wages after inflation and household spending after inflation in New Zealand and Australia, quarterly from 2015. Rates are per cent; growth is the annual % change against the same quarter a year earlier. Australian monthly figures are averaged (rates) or added up (spending) to quarters. New Zealand wages are the labour cost index for all sectors; Australian wages are the private-sector wage price index. Spending is card spending in New Zealand and the ABS household spending indicator in Australia, each less its own CPI inflation. Real wages are each country's wage index divided by its own CPI, set to 100 on the 2019 average, so the lines show how far pay has moved ahead of or behind prices.",
       "target": "abs",
       "updated": "2026-11-11",
       "page": "nz_au/index.html",
@@ -349,6 +349,45 @@
       "image": "adp_year/adp_year.png",
       "site": "nz",
       "menu": "Tourism & Migration",
+      "wip": false
+    },
+    {
+      "name": "ect_total",
+      "title": "Card spending: dollars and today's dollars",
+      "source": "Stats NZ electronic card transactions",
+      "note": "Compare monthly card spending by category in NZD millions or annual percent change; levels use seasonal adjustment where available.",
+      "target": "ect",
+      "updated": "2026-11-10",
+      "page": "ect_total/index.html",
+      "image": "ect_total/ect_total.png",
+      "site": "nz",
+      "menu": "Economic",
+      "wip": true
+    },
+    {
+      "name": "ect_20y",
+      "title": "Card spending: 20 years by category",
+      "source": "Stats NZ electronic card transactions",
+      "note": "Compare monthly card spending by category in NZD millions or annual percent change; levels use seasonal adjustment where available.",
+      "target": "ect",
+      "updated": "2026-11-10",
+      "page": "ect_20y/index.html",
+      "image": "ect_20y/ect_20y.png",
+      "site": "nz",
+      "menu": "Economic",
+      "wip": true
+    },
+    {
+      "name": "eci",
+      "title": "Economic complexity",
+      "source": "The Growth Lab at Harvard University, Growth Projections and Complexity Rankings, Harvard Dataverse",
+      "note": "The Economic Complexity Index scores each country on how many different goods it exports and how few other countries can make them. It counts goods exports only, not services such as tourism, education or software. Ranks use the HS92 product classification.",
+      "target": "eci",
+      "updated": "2026-11-17",
+      "page": "eci/index.html",
+      "image": "eci/eci.png",
+      "site": "nz",
+      "menu": "Economic",
       "wip": true
     },
     {
@@ -474,7 +513,7 @@
       "source": "Stats NZ international travel (unpublished monthly data)",
       "note": "Everyone arriving in New Zealand by air or sea each month: visitors, returning NZ residents and migrants (people arriving to live here, recorded from October 2021). Country is where visitors and migrants lived before, or the main country NZ residents visited. New Zealand airports are Auckland, Christchurch, Queenstown and the rest together. July 2025 has no Stats NZ file, so it is estimated from July 2024 and flagged on the chart. NZ residents' travel purpose was barely recorded in 2019 (most were coded Other), so compare residents by purpose only from 2022. Stats NZ rounds counts to a multiple of 3, so small groups are approximate.",
       "target": "arrivals",
-      "updated": "2026-11-17",
+      "updated": "2026-11-18",
       "page": "arrivals/index.html",
       "image": "arrivals/arrivals.png",
       "site": "nz",
@@ -524,7 +563,7 @@
         },
         {
           "label": "Tourism & Migration",
-          "topics": ["adp", "fuel"]
+          "topics": ["adp", "adp_year", "fuel"]
         }
       ]
     },
@@ -588,23 +627,6 @@
       "note": "Explore government spending, compare years and open categories for more detail."
     },
     {
-      "key": "post-who-is-visiting",
-      "title": "Draft post: Who's back since Covid? Holidaymakers, mostly",
-      "page": "posts/who-is-visiting/index.html",
-      "beta": false,
-      "wip": true,
-      "note": "Day 5 of 42. Which visitor groups are back to 2019, and where New Zealanders travel now."
-    },
-    {
-      "key": "post-population-visitor-nights",
-      "title": "Draft post: A small population can host a big visitor market",
-      "page": "posts/population-and-visitor-nights/index.html",
-      "beta": false,
-      "wip": true,
-      "image": "images/post-visitor-nights.png",
-      "note": "Day 6 of 42. Short revision; the existing public article is preserved."
-    },
-    {
       "key": "post-where-visitors-stay",
       "title": "Draft post: How full is full? It depends where you stay.",
       "page": "posts/where-visitors-stay/index.html",
@@ -629,22 +651,13 @@
       "note": "Day 11 of 42. The two flows behind the net migration total."
     },
     {
-      "key": "post-flight-maps-review",
-      "title": "Review: Auckland's international network",
-      "page": "posts/flight-maps-pre-post-covid/index.html",
+      "key": "post-economic-complexity",
+      "title": "Draft post: How complex is what New Zealand sells?",
+      "page": "posts/economic-complexity/index.html",
       "beta": false,
       "wip": true,
-      "image": "posts/flight-maps-pre-post-covid/2019-vs-2026.png",
-      "note": "Day 1 revision: consistent route counts and regional seat capacity."
-    },
-    {
-      "key": "post-jet-fuel",
-      "title": "Draft post: Think filling your car is expensive?",
-      "page": "posts/jet-fuel-record-nzd/index.html",
-      "beta": false,
-      "wip": true,
-      "image": "images/post-jet-fuel.png",
-      "note": "Day 3 of 42. Not yet on the Posts page."
+      "image": "images/post-economic-complexity.png",
+      "note": "Day 13 of 42. Not yet on the Posts page."
     },
     {
       "key": "post-real-wages",
@@ -672,24 +685,6 @@
       "wip": true,
       "image": "images/post-confidence.png",
       "note": "Day 10 of 42. Not yet on the Posts page."
-    },
-    {
-      "key": "post-us-canada-routes",
-      "title": "Draft post: Domestic means something different around the world",
-      "page": "posts/flight-maps-us-canada-europe/index.html",
-      "beta": false,
-      "wip": true,
-      "image": "images/post-us-canada-routes.png",
-      "note": "Day 2 of 42. Not yet on the Posts page."
-    },
-    {
-      "key": "post-connecting",
-      "title": "Draft post: Where passengers change planes",
-      "page": "posts/where-passengers-change-planes/index.html",
-      "beta": false,
-      "wip": true,
-      "image": "images/post-connecting.png",
-      "note": "Day 2 of 42, short alternative. Not yet on the Posts page."
     }
   ]
 }

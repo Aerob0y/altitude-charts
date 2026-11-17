@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://csv.co.nz/posts/economic-complexity/">
+<title>How complex is what New Zealand sells? · CSV Consulting</title>
+<meta name="description" content="Harvard's economic complexity ranking puts New Zealand 49th out of 145 countries. It only counts goods exports, though.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
+<script src="../../js/navigation.js" defer></script>
+<style>
+.post > p { margin: 0 0 1em; }
+.post .intro { margin-bottom: 30px; }
+.post figure img { display:block; width:100%; height:auto; }
+.post .wide { width:min(1100px, calc(100vw - 48px)); margin-left:50%; transform:translateX(-50%); }
+.map-open { display:block; padding:0; border:0; background:transparent; width:100%; cursor:zoom-in; }
+.map-open:focus-visible { outline:3px solid var(--teal); outline-offset:5px; }
+.post table { width:100%; border-collapse:collapse; font-size:14px; font-variant-numeric:tabular-nums; }
+.post th, .post td { text-align:right; padding:10px 6px; border-bottom:1px solid var(--line); }
+.post th:first-child, .post td:first-child { text-align:left; padding-left:0; }
+.post tfoot { font-weight:600; }
+.post caption { text-align:left; font-weight:600; margin-bottom:10px; }
+.post .downloads { display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:10px; font-size:14px; }
+.lightbox { width:100vw; height:100vh; max-width:none; max-height:none; padding:0; border:0; background:#FAFAF8; }
+.lightbox::backdrop { background:rgba(18,36,61,.85); }
+.lightbox .viewport { width:100%; height:100%; overflow:auto; display:flex; align-items:center; }
+.lightbox img { width:100%; min-width:1000px; height:auto; }
+.lightbox .close { position:fixed; top:14px; right:14px; padding:10px 16px; background:#FAFAF8; border:1px solid #222326; color:#222326; cursor:pointer; }
+.post .chart-image { display:none; }
+@media(max-width:600px) {
+ .post .chart-image { display:block; }
+ .post h1 { font-size:36px; }
+ .post .wide { width:calc(100vw - 32px); }
+ .post th, .post td { padding:9px 3px; font-size:12px; }
+ .post .chart-live { display:none; }
+}
+.post .chart-frame { width:100%; height:610px; border:0; display:block; }
+.post figure { margin:28px 0; }
+.post figcaption { font-size:13px; color:var(--muted); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="top">
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="../../" aria-label="CSV Consulting home"><img src="../../images/csv-logo.svg" alt="CSV" width="340" height="290"></a>
+  <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" hidden><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+  <nav class="nav" id="main-nav" aria-label="Main"><a href="../../work.html">Selected work</a><a href="../../insights.html">Insights</a><a href="../../posts.html" aria-current="page">Posts</a><a href="../../about.html">About</a><a class="btn-outline" href="../../contact.html">Discuss a project</a></nav>
+</div></header>
+</div>
+<!-- Draft (WIP): not linked from posts.html or the sitemap until Mike approves it. -->
+<main id="main"><section class="section"><article class="wrap post">
+<p class="meta">Draft · Economy</p>
+<h1>How complex is what New Zealand sells?</h1>
+<p class="intro">I'd always assumed what we sell overseas is fairly simple: milk powder, logs, meat. Harvard's economic complexity ranking more or less agrees.</p>
+<p>The Growth Lab at Harvard University scores each country on how many different goods it exports, and how few other countries can make them. Lots of products that few others can make means a high score.</p>
+<p>In 2024 New Zealand ranked 49th out of 145 countries. That puts us behind Ireland (14th), Denmark (22nd) and Norway (40th), but well ahead of Australia (73rd).</p>
+<figure><iframe class="chart-frame" src="../../eci/?embed=1&amp;view=ranking-among-similar-countries" title="Economic Complexity Index score in 2024 for New Zealand and eleven similar countries, labelled with world rank" loading="lazy"></iframe><figcaption>Economic Complexity Index score, 2024. Higher means a more diverse and harder-to-copy mix of goods exports.</figcaption></figure>
+<p>We've drifted down a little over time: 40th in 1995, 53rd for most of 2016 to 2021, and 49th now. Australia has fallen much further, from 33rd in 1995 to 73rd, and has ranked below us every year since 2004.</p>
+<figure><iframe class="chart-frame" src="../../eci/?embed=1&amp;view=rank-over-time" title="World economic complexity rank for New Zealand, Australia, Ireland and Denmark, 1995 to 2024" loading="lazy"></iframe><figcaption>World rank, 1995 to 2024. 1st is the most complex. Between 140 and 145 countries are ranked each year.</figcaption></figure>
+<p>There's a catch, though. The ranking only counts goods. Tourism, education and software don't show up at all, and those are some of the first things I'd mention if someone asked what New Zealand is good at.</p>
+<p>So I'd read this as a ranking of what we ship, rather than everything we do. I'd be curious to see where we'd land if services were counted too.</p>
+<p class="source">Source: <a href="https://doi.org/10.7910/DVN/XTAQMC">The Growth Lab at Harvard University, Growth Projections and Complexity Rankings, Harvard Dataverse</a> (version 12.0, released 8 February 2026).<br>Units: Economic Complexity Index score and world rank, yearly, goods exports only (HS92 product classification).</p>
+<div class="downloads"><a href="eci-linkedin-1200x627.png" download>High-resolution chart PNG</a><a href="../../eci/data.csv" download>Data (CSV)</a></div>
+<p><a href="linkedin.txt" download>Download LinkedIn draft</a></p>
+<p><a class="textlink arrow" href="../../contact.html">Need analysis like this? Get in touch.</a></p>
+</article></section></main>
+<footer class="site-foot"><div class="wrap"><img src="../../images/csv-logo.svg" alt="CSV" width="340" height="290"><span>CSV Consulting is a trading name of CSV Limited.</span><nav class="foot-links" aria-label="Footer"><a href="../../work.html">Selected work</a><a href="../../insights.html">Insights</a><a href="../../posts.html">Posts</a><a href="../../about.html">About</a><a href="mailto:mike@csv.co.nz">mike@csv.co.nz</a></nav><span>Dublin, Ireland</span></div></footer>
+</body>
+</html>
