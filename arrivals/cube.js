@@ -195,8 +195,9 @@ window.AltitudeCube = (() => {
     const rate = quantity === "occupancy" || quantity === "utilisation";
     const n = cube.months.length;
     const latest = cube.months.slice(-12);
+    // By group, only the latest 12 months and the base they are compared with matter.
     const usesMonth = month => show === "time" || latest.includes(month) ||
-      cube.months.indexOf(month) >= n - 24 || month.startsWith("2019");
+      (measure.startsWith("ly") ? cube.months.indexOf(month) >= n - 24 : measure.startsWith("vs19") && month.startsWith("2019"));
     const shownEstimates = cube.estimated.filter(usesMonth);
     const isPct = measure.endsWith("_pct");
 
@@ -229,6 +230,8 @@ window.AltitudeCube = (() => {
         marker: {color: groups.map(g => g.colour)}, text, textposition: "outside", cliponaxis: false,
         hovertemplate: `%{x}: %{y:${format}}${suffix}<extra></extra>`}];
       layout.xaxis = {...layout.xaxis, categoryarray: names};
+      // Group names overlap on a phone, so slant them.
+      if (innerWidth < 600) Object.assign(layout.xaxis, {tickangle: -45, automargin: true});
       if (cube.quantities) {
         layout.xaxis.type = "category";
         delete layout.xaxis.range;
@@ -297,7 +300,9 @@ window.AltitudeCube = (() => {
       [["", "Nothing (total)"], ...dims.filter(dim => !cube.quantities || dim !== "Region").map(dim => [dim, dim]), ...(cube.quantities ? [["Guest origin", "Guest origin"]] : [])], params.get("split") ?? cube.default_split);
     const filterSelects = Object.fromEntries(dims.map(dim => [dim,
       addSelect(box, "cube-" + dim.replace(/\W+/g, "-").toLowerCase(), dim,
-        [[-1, "All"], ...cube.dims[dim].map((label, i) => [i, label]).filter(([, label]) => dim !== "Property type" || label !== "Total")])]));
+        [[-1, "All"], ...cube.dims[dim].map((label, i) => [i, label]).filter(([, label]) => dim !== "Property type" || label !== "Total")],
+        // A filter can be set by label in the link, e.g. ?Passenger%20type=Visitor (used by blog embeds).
+        params.has(dim) ? cube.dims[dim].indexOf(params.get(dim)) : -1)]));
 
     let first = true;
     function redraw() {
@@ -315,6 +320,9 @@ window.AltitudeCube = (() => {
       const spec = build(cube, templates, choice, split, filters, filterLabels);
       const url = new URL(location.href);
       for (const [key, value] of Object.entries({...choice, split: splitSelect.value})) url.searchParams.set(key, value);
+      for (const [dim, select] of Object.entries(filterSelects)) {
+        if (filters[dim] >= 0) url.searchParams.set(dim, select.selectedOptions[0].textContent); else url.searchParams.delete(dim);
+      }
       history.replaceState(null, "", url);
       draw(spec, first);
       first = false;

@@ -1,0 +1,24 @@
+{
+  "name": "migration",
+  "title": "Migration",
+  "source": "Stats NZ international migration",
+  "note": "Long-term migrant arrivals, departures and net migration in rolling 12-month totals, measured in people, with net migration and arrivals split into NZ and non-NZ citizens. Citizenship is the passport used, not where people came from or went. Recent estimates are provisional.",
+  "updated": "2026-11-17",
+  "views": [
+    {
+      "label": "Net migration by citizenship",
+      "spec": "net-migration-by-citizenship.json"
+    },
+    {
+      "label": "Migrant arrivals, departures and net migration",
+      "spec": "migrant-arrivals-departures-and-net-migration.json"
+    },
+    {
+      "label": "Migrant arrivals by citizenship",
+      "spec": "migrant-arrivals-by-citizenship.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "migration.png",
+  "image_alt": "Net migration by citizenship Long-term migrants, rolling 12-month totals, people. Recent months are provisional. Source: Stats NZ"
+}

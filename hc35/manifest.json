@@ -3,7 +3,7 @@
   "title": "Residential mortgages",
   "source": "Reserve Bank of New Zealand (RBNZ) · C35 and C30",
   "note": "Shows the quarterly mortgage-loan reconciliation or monthly new commitments split by loan-to-value ratio. New lending is a flow, not the total mortgage stock.",
-  "updated": "2026-11-03",
+  "updated": "2026-11-17",
   "views": [
     {
       "label": "All lending: Opening position",

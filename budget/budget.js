@@ -51,5 +51,35 @@
     addNode(data.root);
     return [header,...records].map(row=>row.map(quote).join(',')).join('\r\n')+'\r\n';
   }
-  return {walk,validate,compare,rows,csv,validateHistory,fullCsv};
+  function historicalView(data,history){
+    const firstRecent=data.years[0],cut=history.years.findIndex(year=>year>=firstRecent);
+    if(cut<0)throw Error('Historical data do not overlap recent data');
+    const years=[...history.years.slice(0,cut),...data.years];
+    const historical=new Map(history.series.map(series=>[series.id,series]));
+    const recent=new Map();walk(data.root,node=>recent.set(node.id,node));
+    const definitions=[
+      ['social-security-welfare-gsf','Social security and welfare, including GSF',['r7','r19'],'r7'],
+      ['health','Health',['r8'],'r8'],['education','Education',['r9'],'r9'],
+      ['core-government-services','Core government services',['r10'],'r10'],
+      ['law-and-order','Law and order',['r11'],'r11'],['defence','Defence',['r14'],'r14'],
+      ['transport-and-communications','Transport and communications',['r12'],'r12'],
+      ['economic-and-industrial-services','Economic and industrial services',['r13'],'r13'],
+      ['other-functions-combined','Other functions combined',['r15','r16','r17','r18','r20'],null],
+      ['finance-costs','Finance costs',['r21'],'r21'],
+      ['net-foreign-exchange-gains-losses','Net foreign exchange gains or losses',[],null],
+      [null,'Reconciliation and forecast adjustments',['r22','r23'],null]
+    ];
+    const headline=historical.get('core-crown-expenses-or-financial-net-expenditure');
+    const total=[...headline.values.slice(0,cut),...data.root.values];
+    const groups=definitions.map(([historicalId,name,recentIds,selectedId])=>{
+      const old=historicalId?historical.get(historicalId):null;
+      if(historicalId&&!old)throw Error('Missing historical series: '+historicalId);
+      const values=[...(old?old.values.slice(0,cut).map(value=>Number.isFinite(value)?value:0):Array(cut).fill(0)),...data.years.map((_,i)=>recentIds.reduce((sum,id)=>sum+recent.get(id).values[i],0))];
+      return {id:historicalId||'forecast-allowances-and-adjustments',name,selectedId,values};
+    });
+    for(let i=0;i<cut;i++)groups.at(-1).values[i]=total[i]-groups.slice(0,-1).reduce((sum,group)=>sum+group.values[i],0);
+    total.forEach((value,i)=>{if(Math.abs(groups.reduce((sum,group)=>sum+group.values[i],0)-value)>.01)throw Error('Historical groups do not reconcile: '+years[i]);});
+    return {years,total,groups,bySelectedId:new Map(groups.filter(group=>group.selectedId).map(group=>[group.selectedId,group]))};
+  }
+  return {walk,validate,compare,rows,csv,validateHistory,fullCsv,historicalView};
 });

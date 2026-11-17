@@ -47,7 +47,12 @@ long format with stable path IDs, source rows, accounting basis, year end and a
 comparability note. It keeps overlapping historical and PREFU observations as
 separate rows rather than silently choosing one vintage.
 The annual chart starts from standard_plot and plotly_to_spec_json, then groups
-the largest categories into a stacked bar view. Two 100-tile waffles compare
+the largest categories into a stacked view. At the root and for directly
+matched high-level categories, it uses Treasury's broad-trend functions through
+2021 and joins the detailed PREFU series from 2022. Social welfare includes GSF
+throughout that view; five small functions are combined; and a labelled
+reconciliation series absorbs historical differences. Deeper drill-downs keep
+the exact 2022–2031 PREFU bars. Two 100-tile waffles compare
 the composition of the selected years. Negative forecast adjustments are not
 drawn as waffle tiles; the page names them and keeps them in the chart, totals
 and table. plotly.min.js is copied from the

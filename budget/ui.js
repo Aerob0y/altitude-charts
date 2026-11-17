@@ -17,6 +17,7 @@
   try {
     const data = Budget.validate(await json('data.json'));
     const history = Budget.validateHistory(await json('history.json'));
+    const historicalView = Budget.historicalView(data, history);
     let spec = null;
     try { spec = await json('trend.json'); } catch (_) { $('chart-warning').textContent = 'The chart could not load. All figures remain available in the tables.'; }
     const nodes = new Map(), parents = new Map();
@@ -39,6 +40,18 @@
       const groups = ranked.slice(0, 6).map(node => ({id: node.id, name: node.name, nodes: [node]}));
       if (ranked.length > 6) groups.push({id: null, name: 'Other and adjustments', nodes: ranked.slice(6)});
       return groups.map((group, i) => ({...group, colour: colours[i], values: data.years.map((_, year) => group.nodes.reduce((sum, node) => sum + node.values[year], 0))}));
+    }
+    function chartData(from, to) {
+      const mapped = historicalView.bySelectedId.get(selected.id);
+      if (selected !== data.root && !mapped) return {long: false, years: data.years, total: data.root.values, groups: visualGroups(from, to)};
+      if (mapped) return {long: true, years: historicalView.years, total: historicalView.total,
+        groups: [{...mapped, colour: colours[0]}], label: mapped.name};
+      const recentOffset = historicalView.years.length - data.years.length;
+      const ranked = [...historicalView.groups].sort((a, b) => Math.max(Math.abs(b.values[recentOffset + from]), Math.abs(b.values[recentOffset + to])) - Math.max(Math.abs(a.values[recentOffset + from]), Math.abs(a.values[recentOffset + to])) || a.name.localeCompare(b.name));
+      const groups = ranked.slice(0, 6).map(group => ({...group}));
+      if (ranked.length > 6) groups.push({id: null, name: 'Other and adjustments', values: historicalView.years.map((_, i) => ranked.slice(6).reduce((sum, group) => sum + group.values[i], 0))});
+      return {long: true, years: historicalView.years, total: historicalView.total,
+        groups: groups.map((group, i) => ({...group, colour: colours[i]})), label: selected.name};
     }
     function tileCounts(groups, year) {
       const amounts = groups.map(group => group.nodes.reduce((sum, node) => sum + Math.max(0, node.values[year]), 0));
@@ -94,24 +107,33 @@
         return;
       }
       const currentRevision = ++revision;
-      const last = $('forecasts').checked ? data.years.length - 1 : lastActual;
       const share = $('measure').value === 'share';
-      const from = Number($('from-year').value), to = Number($('to-year').value), groups = visualGroups(from, to);
-      const dates = data.years.map(year => `${year}-06-30`);
-      const traces = groups.map(group => ({type: 'bar', name: group.name, legendgroup: group.name, x: dates.slice(0, last + 1),
-        y: group.values.slice(0, last + 1).map((value, i) => share ? 100 * value / data.root.values[i] : value / 1000), marker: {color: group.colour},
-        hovertemplate: `%{x|%Y}: ${share ? '' : 'NZ$'}%{y:,.2f}${share ? '%' : 'b'}<extra>${group.name}</extra>`}));
+      const from = Number($('from-year').value), to = Number($('to-year').value), chart = chartData(from, to);
+      const finalYear = data.years[$('forecasts').checked ? data.years.length - 1 : lastActual];
+      const last = chart.years.findIndex(year => year === finalYear);
+      const dates = chart.years.map(year => `${year}-${year <= 1989 ? '03-31' : '06-30'}`);
+      const traces = chart.groups.map(group => chart.long ? ({type: 'scatter', mode: 'lines', stackgroup: chart.groups.length > 1 ? 'spending' : undefined,
+        fill: chart.groups.length > 1 ? undefined : 'tozeroy', name: group.name, legendgroup: group.name, x: dates.slice(0, last + 1),
+        y: group.values.slice(0, last + 1).map((value, i) => share ? 100 * value / chart.total[i] : value / 1000),
+        line: {color: group.colour, width: chart.groups.length > 1 ? .8 : 2}, fillcolor: group.colour,
+        hovertemplate: `%{x|%Y}: ${share ? '' : 'NZ$'}%{y:,.2f}${share ? '%' : 'b'}<extra>${group.name}</extra>`}) :
+        ({type: 'bar', name: group.name, legendgroup: group.name, x: dates.slice(0, last + 1),
+          y: group.values.slice(0, last + 1).map((value, i) => share ? 100 * value / chart.total[i] : value / 1000), marker: {color: group.colour},
+          hovertemplate: `%{x|%Y}: ${share ? '' : 'NZ$'}%{y:,.2f}${share ? '%' : 'b'}<extra>${group.name}</extra>`}));
       const layout = structuredClone(spec.layout);
-      layout.title = {text: ''}; layout.annotations = []; layout.showlegend = groups.length > 1; layout.barmode = 'relative'; layout.bargap = .25;
+      layout.title = {text: ''}; layout.annotations = []; layout.showlegend = chart.groups.length > 1; layout.barmode = 'relative'; layout.bargap = .25; layout.hovermode = 'x unified';
       layout.autosize = true; delete layout.width; delete layout.height;
-      layout.margin = {l: 58, r: 15, t: 12, b: groups.length > 1 ? 105 : 42};
+      layout.margin = {l: 58, r: 15, t: 12, b: chart.groups.length > 1 ? 105 : 42};
       layout.legend = {...layout.legend, orientation: 'h', x: 0, xanchor: 'left', y: -.18, yanchor: 'top', traceorder: 'normal'};
       layout.yaxis = {...layout.yaxis, autorange: true, rangemode: 'tozero', title: {text: ''}, tickformat: ',.1f', tickprefix: share ? '' : '$', ticksuffix: share ? '%' : 'b', fixedrange: true};
+      const tickIndexes = chart.long ? chart.years.map((year, i) => year === chart.years[0] || (year % 5 === 0 && finalYear - year > 1) || year === finalYear ? i : -1).filter(i => i >= 0) : chart.years.slice(0, last + 1).map((_, i) => i);
       layout.xaxis = {...layout.xaxis, type: 'date', range: [dates[0], dates[last]], autorange: false,
-        tickformat: '%Y', tickmode: 'array', tickvals: dates.slice(0, last + 1),
-        ticktext: data.years.slice(0, last + 1).map(String), fixedrange: true};
+        tickformat: '%Y', tickmode: 'array', tickvals: tickIndexes.map(i => dates[i]),
+        ticktext: tickIndexes.map(i => String(chart.years[i])), fixedrange: true};
       delete layout.xaxis.rangeselector; delete layout.xaxis.rangeslider;
       layout.shapes = $('forecasts').checked ? [{type: 'rect', xref: 'x', yref: 'paper', x0: `${data.years[lastActual]}-12-31`, x1: dates[last], y0: 0, y1: 1, fillcolor: '#EFE8DC', line: {width: 0}, layer: 'below'}] : [];
+      if (chart.long) layout.shapes.push({type: 'line', xref: 'x', yref: 'paper', x0: '1993-12-31', x1: '1993-12-31', y0: 0, y1: 1, line: {color: '#777', width: 1, dash: 'dot'}},
+        {type: 'line', xref: 'x', yref: 'paper', x0: '2021-12-31', x1: '2021-12-31', y0: 0, y1: 1, line: {color: '#777', width: 1, dash: 'dot'}});
       if ($('forecasts').checked) layout.annotations = [{xref: 'paper', yref: 'paper', x: .99, y: .99, text: 'Forecast', showarrow: false, xanchor: 'right'}];
       chartQueue = chartQueue.catch(() => {}).then(() => {
         if (currentRevision !== revision) return;
@@ -123,6 +145,7 @@
       const shareMode = $('measure').value === 'share';
       const summary = Budget.compare(selected, from, to, data.root);
       const rows = Budget.rows(selected, from, to, data.root);
+      const chart = chartData(from, to);
       $('comparison-note').textContent = `${data.years[from]} (${data.statuses[from].toLowerCase()}) compared with ${data.years[to]} (${data.statuses[to].toLowerCase()}). ${from > to ? 'You are comparing back to an earlier year. ' : ''}Source snapshot: 29 September 2026.`;
       const path = pathTo(selected), crumbs = [];
       path.forEach((node, i) => {
@@ -138,8 +161,8 @@
       $('change').textContent = `${summary.change > 0 ? '+' : summary.change < 0 ? '−' : ''}${money(Math.abs(summary.change))}`;
       $('change-percent').textContent = summary.percent === null ? 'Percentage change unavailable from a zero base' : `${signed(summary.percent)}% in nominal dollars`;
       $('share').textContent = `${number(summary.share)}%`;
-      $('chart-title').textContent = `${selected.name} over time`;
-      $('chart-subtitle').textContent = `${shareMode ? 'Share of all core Crown expenses, per cent' : 'NZ dollars, billions; not adjusted for inflation'}. Stacked by the largest categories in the two selected years. ${$('forecasts').checked ? 'Shading shows forecasts.' : '2026 is unaudited actual.'}`;
+      $('chart-title').textContent = `${chart.label || selected.name} over time`;
+      $('chart-subtitle').textContent = chart.long ? `${shareMode ? 'Share of all core Crown expenses, per cent' : 'NZ dollars, billions; not adjusted for inflation'}. Approximate: Treasury's broad-trend historical functions are used to 2021; the detailed PREFU series starts in 2022. History changes from March to June years in 1990 and from cash to accrual accounting in 1994. Dotted lines mark 1994 and the source join. ${$('forecasts').checked ? 'Shading shows forecasts.' : '2026 is unaudited actual.'}` : `${shareMode ? 'Share of all core Crown expenses, per cent' : 'NZ dollars, billions; not adjusted for inflation'}. Detailed PREFU data are available from 2022. ${$('forecasts').checked ? 'Shading shows forecasts.' : '2026 is unaudited actual.'}`;
       drawWaffles(visualGroups(from, to), from, to);
       $('breakdown-title').textContent = selected.children.length ? 'Inside this category' : 'Year comparison';
       $('table-caption').textContent = shareMode ? 'Share of all core Crown expenses (%). Changes are percentage points.' : 'NZ dollars, millions. Percentage changes use the first selected year as the base.';

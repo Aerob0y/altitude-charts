@@ -1,17 +1,16 @@
-<!-- DRAFT: Day 11, issue #432. Do not post the site URL until approved and published. Chart image pending; see README. -->
+<!-- DRAFT: Day 11, issue #432. Do not post the site URL until approved and published.
+     Image: net-migration-linkedin-1200x627.png. -->
 
 A migration gain can hide a loss of New Zealanders
 
-New Zealand gained 22,600 people through migration in the year to September 2026. But that single number hides two very different stories.
+New Zealand gained 22,600 people through migration in the year to September 2026. But I think that single number hides two quite different stories.
 
-There was a net gain of 60,400 non-New Zealand citizens, alongside a net loss of 37,800 New Zealand citizens. Net means arrivals minus departures: people are moving in both directions.
+There was a net gain of 60,400 non-New Zealand citizens, alongside a net loss of 37,800 New Zealand citizens. Net means arrivals minus departures, so people are moving in both directions.
 
-That is why I look past the headline. A growing population can sit alongside a loss of New Zealand citizens. For employers, the useful questions are who is arriving, who is leaving, and whether their skills match the jobs available.
+On these figures, New Zealand has lost more of its own citizens than it gained in every 12-month period since 2001, apart from the Covid years. A growing population can sit alongside a steady loss of New Zealanders.
 
-Citizenship tells us which passport someone used, rather than where they came from or where they are going. A New Zealander leaving is not automatically moving to Australia.
+Citizenship is the passport someone used, not where they came from or went. And these are provisional estimates, so they'll be revised. I'd watch both sides of the flow rather than the total.
 
-These are provisional estimates of people changing their country of residence, not holiday trips. They will be revised as Stats NZ learns more about how long travellers stay. I would watch both sides of the flow.
+Source: Stats NZ, International migration: September 2026. Year ended September 2026; provisional estimates.
 
-Source: [Stats NZ, 12 November 2026](https://www.stats.govt.nz/news/net-migration-gain-of-22600/). Year ended September 2026; provisional estimates.
-
-[Read the post](https://csv.co.nz/posts/migration/).
+Read the post: https://csv.co.nz/posts/migration/

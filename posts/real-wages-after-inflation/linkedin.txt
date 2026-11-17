@@ -1,19 +1,17 @@
-<!-- DRAFT: 18 November 2026 is a planned series slot, not a publication date. Use the existing LinkedIn PNG in this folder. -->
+<!-- DRAFT: 18 November 2026 is a planned series slot, not a publication date. Image: real-wages-linkedin-1200x627.png in this folder (September 2026 data). -->
 
-Is pay keeping up with prices?
+A pay rise can still leave you buying less.
 
-A pay rise can look good on paper and still leave you feeling worse off.
+In the year to September, average hourly earnings in New Zealand rose 2.9%. Consumer prices rose 3.7%.
 
-In the June 2026 quarter, New Zealand hourly earnings were up 2.9% on a year earlier. Consumer prices rose 4.1%. Pay growth was 1.2 percentage points behind inflation.
+Put another way: $100 of hourly pay a year ago is now about $102.90, but a basket of goods that cost $100 now costs about $103.70.
 
-That ended 15 consecutive quarters in which average hourly earnings grew faster than prices. The private sector, public sector and labour cost index measures also fell behind inflation in June.
+That's the second quarter in a row that prices have grown faster than pay, after 15 quarters where pay was ahead. The gap has narrowed a little since June, and public sector pay is now close to level. Private sector pay is still well behind.
 
-I use this chart to look past the size of a pay rise. Above zero, wage growth is beating inflation. Below zero, prices are winning. It is a national comparison: your own pay and household bills may tell a different story.
+It's an average across the country, so it won't describe everyone's pay rise, and your own costs will differ from the CPI basket.
 
-For households, the gap helps explain why a higher wage does not always feel like progress. For businesses, it is a reason to watch how much room customers have to spend.
-
-I will be watching whether the next wage figures close that gap.
+I'll be watching whether the next figures get back above zero.
 
 Explore the chart: https://csv.co.nz/hm9/
 
-Source: Stats NZ via RBNZ. Annual growth rates, June 2026 quarter.
+Source: Stats NZ via RBNZ. Annual growth rates, September 2026 quarter.
