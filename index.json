@@ -627,22 +627,6 @@
       "note": "Explore government spending, compare years and open categories for more detail."
     },
     {
-      "key": "post-where-visitors-stay",
-      "title": "Draft post: How full is full? It depends where you stay.",
-      "page": "posts/where-visitors-stay/index.html",
-      "beta": false,
-      "wip": true,
-      "note": "Day 7 of 42. Accommodation occupancy across selected regions."
-    },
-    {
-      "key": "post-accommodation-recovery",
-      "title": "Draft post: A better year for accommodation, led by international guests and hotels",
-      "page": "posts/accommodation-recovery/index.html",
-      "beta": false,
-      "wip": true,
-      "note": "Four charts: guest nights and occupancy by region, property type, and the ten-year view across the survey change."
-    },
-    {
       "key": "post-migration",
       "title": "Draft post: A migration gain can hide a loss of New Zealanders",
       "page": "posts/migration/index.html",

@@ -144,8 +144,9 @@
     layout.hoverlabel = {...layout.hoverlabel, namelength: -1};
     // A chart can ask to keep its own fonts and margins (the horizontal group bars in cube.js).
     if (spec.layout?.meta?.keepLayout) {
-      layout.showlegend = false;
-      layout.margin = {...spec.layout.margin, t: 12, b: 40};
+      layout.showlegend = !!spec.layout.meta.keepLegend;
+      if (spec.layout.meta.keepLegend) layout.legend = spec.layout.legend;
+      layout.margin = {...spec.layout.margin, t: 12, b: spec.layout.margin?.b ?? 40};
       for (const key of ["xaxis", "yaxis"]) layout[key].tickfont = spec.layout[key]?.tickfont;
     }
     const data = spec.data.filter(trace => trace.mode !== "text").map(trace => ({...structuredClone(trace),

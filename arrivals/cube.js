@@ -195,6 +195,40 @@ window.AltitudeCube = (() => {
     return layout;
   }
 
+  // ?stack=Region with show=group: one stacked column per group of the split (e.g. NZ port),
+  // each made of the stack dimension's groups, so the mix behind each column is visible.
+  function stackedGroups(cube, layout, config, split, stackDim, filters, measure, format) {
+    const stackNames = cube.dims[stackDim];
+    const columns = totals(cube, split, {...filters, [stackDim]: -1}).map(g => g.name);
+    const perStack = stackNames.map((name, i) => {
+      const found = totals(cube, split, {...filters, [stackDim]: i});
+      return columns.map(column => {
+        const group = found.find(g => g.name === column);
+        return group ? byGroup(cube, group, measure) : null;
+      });
+    });
+    const data = stackNames.map((name, i) => ({type: "bar", name, x: columns, y: perStack[i],
+      marker: {color: cube.colours[i % cube.colours.length]},
+      hovertemplate: `${name}: %{y:${format}}<extra>%{x}</extra>`}));
+    const sums = columns.map((_, c) => perStack.reduce((a, row) => a + (row[c] || 0), 0));
+    const fmt = v => (v >= 0 ? "+" : "") + Math.round(v).toLocaleString("en-NZ");
+    const narrow = innerWidth < 700;
+    const label = c => narrow && c === "Other NZ ports" ? "Other" : c;
+    data.forEach(trace => { trace.x = columns.map(label); });
+    layout.annotations = sums.map((v, i) => ({x: label(columns[i]), y: v, xref: "x", yref: "y", text: fmt(v), showarrow: false,
+      yshift: v >= 0 ? 12 : -12, font: {size: 14, color: "#222"}}));
+    layout.barmode = "relative";
+    layout.xaxis = {type: "category", fixedrange: true, tickfont: {size: 13}, tickangle: 0};
+    layout.yaxis = {fixedrange: true, tickformat: ",d", zeroline: true, zerolinewidth: 1.5, showgrid: true, tickfont: {size: 13},
+      range: [Math.min(0, ...sums) * 1.3, Math.max(0, ...sums) * 1.3]};
+    layout.showlegend = true;
+    layout.legend = {orientation: "h", x: 0, y: 0, yref: "container", yanchor: "bottom", font: {size: 13}};
+    layout.margin = {...layout.margin, l: 70, r: 20, b: narrow ? 190 : 110};
+    layout.bargap = 0.3;
+    layout.meta = {...layout.meta, keepLayout: true, keepLegend: true};
+    return {data, layout, config};
+  }
+
   // ?title=... and ?sub=... replace the chart's title and subtitle (used by blog embeds
   // that sit two to a row and need short headings).
   function setTitles(layout, title, sub) {
@@ -281,6 +315,11 @@ window.AltitudeCube = (() => {
       const template = templates[cube.templates.compare];
       const layout = structuredClone(template.layout);
       retitle(layout, subtitle);
+      const stackDim = embedParams.get("stack");
+      if (stackDim && cube.dims[stackDim] && !cube.quantities && !isPct) {
+        setTitles(layout, embedParams.get("title"), embedParams.get("sub"));
+        return stackedGroups(cube, layout, template.config, split, stackDim, filters, measure, format);
+      }
       const names = groups.map(g => g.name);
       const values = groups.map(g => byGroup(cube, g, measure));
       const text = values.map(v => v == null ? "" : ((isPct || rate) ? `${measure !== "arrivals" && v >= 0 ? "+" : ""}${Math.round(v)}%` :
