@@ -222,8 +222,8 @@ window.AltitudeCube = (() => {
     layout.yaxis = {fixedrange: true, tickformat: ",d", zeroline: true, zerolinewidth: 1.5, showgrid: true, tickfont: {size: 13},
       range: [Math.min(0, ...sums) * 1.3, Math.max(0, ...sums) * 1.3]};
     layout.showlegend = true;
-    layout.legend = {orientation: "h", x: 0, y: 0, yref: "container", yanchor: "bottom", font: {size: 13}};
-    layout.margin = {...layout.margin, l: 70, r: 20, b: narrow ? 190 : 110};
+    layout.legend = {orientation: "h", x: 0, y: 0, yref: "container", yanchor: "bottom", font: {size: 11}, itemsizing: "constant", tracegroupgap: 0};
+    layout.margin = {...layout.margin, l: 70, r: 20, b: narrow ? 110 : 80};
     layout.bargap = 0.3;
     layout.meta = {...layout.meta, keepLayout: true, keepLegend: true};
     return {data, layout, config};
@@ -424,6 +424,11 @@ window.AltitudeCube = (() => {
       const spec = build(cube, templates, choice, split, filters, filterLabels);
       if (choice.show === "time" && params.get("from")) {
         applyFrom(spec, params.get("from"), cube.months);
+        // The bars on the right of each pair name the groups in the same colours, so the
+        // legend here would only take room from the plot.
+        spec.layout.showlegend = false;
+        spec.layout.margin = {...spec.layout.margin, b: 40};
+        spec.layout.meta = {...spec.layout.meta, keepLayout: true};
         setTitles(spec.layout, params.get("title"), params.get("sub"));
       }
       const url = new URL(location.href);
