@@ -116,12 +116,15 @@
         // Per-page options (hm9): first series as bars, other lines smoothed.
         const isLine = trace.mode !== "text" && trace.type !== "bar" && /lines/.test(trace.mode || "lines");
         if (isLine && pick.bar_first && k === 0 && dims[0] !== "Index" && !indexDate) {
+          const colour = colourOf(k);
           trace.type = "bar";
-          trace.marker = {...trace.marker, color: colourOf(k)};
+          // Use the matching palette tint so the bars remain visible without
+          // overpowering the lines on the light chart background.
+          trace.marker = {...trace.marker, color: TINTS[String(colour).toUpperCase()] || colour};
           delete trace.mode; delete trace.line; delete trace.fill; delete trace.fillcolor;
           layout_bar = true;
         } else if (isLine && pick.smooth) trace.line = {...trace.line, shape: "spline", smoothing: 0.6};
-        if (clash) {
+        if (clash || pick.items) {
           trace.name = labels[chosen[k]];
           if (trace.mode === "text") trace.text = labelText(trace.name);
         }
