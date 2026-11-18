@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blog WIP · CSV Consulting</title>
+<meta name="description" content="Draft blog posts for review.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<script src="js/navigation.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="top">
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="CSV Consulting home"><img src="images/csv-logo.svg" alt="CSV" width="340" height="290"></a>
+    <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" hidden>
+      <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <nav class="nav" id="main-nav" aria-label="Main">
+        <a href="work.html">Selected work</a>
+        <a href="insights.html">Insights</a>
+        <a href="posts.html">Posts</a>
+        <a href="about.html">About</a>
+        <a class="btn-outline" href="contact.html">Discuss a project</a>
+    </nav>
+  </div>
+</header>
+<section class="ins-hero">
+  <div class="wrap">
+    <div class="stack">
+      <p class="kicker">Blog WIP · drafts</p>
+      <h1>Posts in progress.</h1>
+      <p class="lead">A private preview of blog posts that are still being written. Use the link to share a draft for review before it goes on the Posts page.</p>
+      <div class="actions"><a class="btn" href="#browse">See the drafts</a><a class="textlink" href="posts.html">Published posts</a></div>
+    </div>
+  </div>
+</section>
+</div>
+<main id="main">
+<section class="section" id="browse" aria-labelledby="browse-h">
+  <div class="wrap">
+    <div class="filters">
+      <h2 id="browse-h">Draft posts</h2>
+      <p class="lead">Posts flagged <code>blog = TRUE</code> in the tools list in <code>dev/publish_all.R</code> appear here. When a post goes on the <a href="posts.html">Posts page</a>, its card comes off. Charts in progress are on the <a href="wip.html">WIP page</a>.</p>
+    </div>
+    <p class="small count" id="count" aria-live="polite">0 posts</p>
+    <ul class="chart-grid" id="chart-grid"></ul>
+    <p class="empty" id="none">No posts are currently in draft.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="working-h" style="background: var(--tan)">
+  <div class="wrap">
+    <h2 class="section-title" id="working-h">How this page works</h2>
+    <div class="topic-groups">
+      <div class="topic-group">
+        <h3>Work in progress</h3>
+        <p>Cards added to this page are visible to anyone with the direct link, but this page is not linked from the public site and asks search engines not to index it.</p>
+      </div>
+      <div class="topic-group">
+        <h3>Ready to publish</h3>
+        <p>When a post is published, add it to the <a href="posts.html">Posts page</a> and remove its card here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <img src="images/csv-logo.svg" alt="CSV" width="340" height="290">
+    <span>CSV Consulting is a trading name of CSV Limited.</span>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="work.html">Selected work</a><a href="insights.html">Insights</a><a href="posts.html">Posts</a><a href="about.html">About</a><a href="mailto:mike@csv.co.nz">mike@csv.co.nz</a>
+    </nav>
+    <span>Dublin, Ireland</span>
+  </div>
+</footer>
+<script>
+(function () {
+  // Lists the draft posts flagged blog in the tools list in dev/publish_all.R.
+  var grid = document.getElementById('chart-grid'), count = document.getElementById('count'), none = document.getElementById('none');
+  fetch('index.json').then(function (r) { if (!r.ok) throw Error(); return r.json(); }).then(function (index) {
+    var posts = (index.tools || []).filter(function (tool) { return tool.blog; });
+    posts.forEach(function (post) {
+      var li = document.createElement('li'), a = document.createElement('a'), thumb = document.createElement('span');
+      a.href = post.page.replace(/index\.html$/, ''); thumb.className = 'thumb';
+      if (post.image) { var im = document.createElement('img'); im.src = post.image; im.alt = ''; im.loading = 'lazy'; im.width = 640; im.height = 320; thumb.append(im); }
+      var c = document.createElement('span'), t = document.createElement('span'), d = document.createElement('span');
+      c.className = 'cat'; c.textContent = 'Draft post';
+      t.className = 't'; t.textContent = (post.title || post.key).replace(/^Draft post:\s*/, ''); d.className = 'd'; d.textContent = post.note || '';
+      a.append(thumb, c, t, d); li.append(a); grid.append(li);
+    });
+    count.textContent = posts.length + (posts.length === 1 ? ' post' : ' posts');
+    none.hidden = posts.length > 0;
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>

@@ -47,7 +47,7 @@
   <div class="wrap">
     <div class="filters">
       <h2 id="browse-h">Find a chart</h2>
-      <p class="lead">Unfinished charts and tools, ready to share for review. Items flagged as WIP in <code>dev/publish_all.R</code> appear here; when one is finished, it moves to <a href="insights.html">Insights</a>.</p>
+      <p class="lead">Unfinished charts and tools, ready to share for review. Items flagged as WIP in <code>dev/publish_all.R</code> appear here; when one is finished, it moves to <a href="insights.html">Insights</a>. Draft posts are on the <a href="blog_wip.html">blog WIP page</a>.</p>
     </div>
     <p class="small count" id="count" aria-live="polite">0 charts</p>
     <ul class="chart-grid" id="chart-grid"></ul>
@@ -89,7 +89,8 @@
     var wip = (index.charts || []).filter(function (ch) { return ch.wip; });
     // Tools flagged wip in the tools list in dev/publish_all.R appear here too.
     (index.tools || []).forEach(function (tool) {
-      if (tool.wip) wip.push({ link: tool.page.replace(/index\.html$/, ''), image: tool.image, title: tool.title, note: tool.note });
+      // Draft posts (blog = TRUE) are listed on blog_wip.html instead.
+      if (tool.wip && !tool.blog) wip.push({ link: tool.page.replace(/index\.html$/, ''), image: tool.image, title: tool.title, note: tool.note });
     });
     wip.forEach(function (ch) {
       var li = document.createElement('li'), a = document.createElement('a'), thumb = document.createElement('span');

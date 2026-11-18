@@ -12,8 +12,10 @@ We've drifted down a little: 40th in 1995, 53rd for most of 2016 to 2021, 49th n
 
 There's a catch, though. The ranking only counts goods. Tourism, education and software don't show up at all, and those are some of the first things I'd mention if someone asked what New Zealand is good at.
 
-So I'd read it as a ranking of what we ship, rather than everything we do. I'd be curious where we'd land if services were counted too.
+The World Bank's goods-based measure, Economic Fitness, agrees: 54th of 171. But WIPO's wider Global Innovation Index puts us 26th of 139, and Australia 22nd.
 
-Source: The Growth Lab at Harvard University, Growth Projections and Complexity Rankings, Harvard Dataverse (version 12.0, February 2026). Goods exports, HS92 classification.
+So I'd read the goods rankings as a measure of what we ship, rather than everything we do.
+
+Sources: The Growth Lab at Harvard University, Growth Projections and Complexity Rankings, Harvard Dataverse (version 12.0, February 2026), goods exports, HS92 classification; World Bank, Economic Fitness 2 (2024); WIPO (2025), Global Innovation Index 2025, DOI 10.34667/tind.58864.
 
 [Read the post](https://csv.co.nz/posts/economic-complexity/).

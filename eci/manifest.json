@@ -1,9 +1,9 @@
 {
   "name": "eci",
   "title": "Economic complexity",
-  "source": "The Growth Lab at Harvard University, Growth Projections and Complexity Rankings, Harvard Dataverse",
-  "note": "The Economic Complexity Index scores each country on how many different goods it exports and how few other countries can make them. It counts goods exports only, not services such as tourism, education or software. Ranks use the HS92 product classification.",
-  "updated": "2026-11-17",
+  "source": "The Growth Lab at Harvard University, Growth Projections and Complexity Rankings, Harvard Dataverse; World Bank, Economic Fitness 2; WIPO (2025), Global Innovation Index 2025",
+  "note": "The Economic Complexity Index scores each country on how many different goods it exports and how few other countries can make them. It counts goods exports only, not services such as tourism, education or software. Ranks use the HS92 product classification. The World Bank's Economic Fitness is another goods-based measure; WIPO's Global Innovation Index takes a wider view of research, skills, business and creative output.",
+  "updated": "2026-11-18",
   "views": [
     {
       "label": "Ranking among similar countries",
@@ -12,6 +12,14 @@
     {
       "label": "Rank over time",
       "spec": "rank-over-time.json"
+    },
+    {
+      "label": "Economic Fitness ranking",
+      "spec": "economic-fitness-ranking.json"
+    },
+    {
+      "label": "Goods versus innovation",
+      "spec": "goods-versus-innovation.json"
     }
   ],
   "data": "data.csv",

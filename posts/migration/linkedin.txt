@@ -1,16 +1,18 @@
 <!-- DRAFT: Day 11, issue #432. Do not post the site URL until approved and published.
-     Image: net-migration-linkedin-1200x627.png. -->
+     Images (in this order), built by build_linkedin.R:
+     1. migration-flows-linkedin-1200x627.png
+        Alt text: Line chart of long-term migrant arrivals, departures and net migration for New Zealand over the last 20 years, as rolling 12-month totals. Arrivals peaked at about 233,000 in the year to October 2023 and are now about 136,000. Departures are about 113,000, a little below their 2025 high of about 120,000. Net migration, the shaded gap between them, fell from about 134,000 in 2023 to about 23,000 in the year to September 2026. It was below zero around 2011 to 2013 and in 2021 to 2022.
+     2. net-migration-by-citizenship-linkedin-1200x627.png
+        Alt text: Line chart of net migration by citizenship for New Zealand over the last 20 years, as rolling 12-month totals. Non-New Zealand citizens are a net gain in almost every period, peaking at about 175,000 in 2023 and now about 60,000. New Zealand citizens are a net loss in every period except during Covid in 2020 and 2021, reaching about 46,000 in 2024 and now about 38,000. The shaded total is about 23,000. -->
 
 A migration gain can hide a loss of New Zealanders
 
-New Zealand gained 22,600 people through migration in the year to September 2026. But I think that single number hides two quite different stories.
+New Zealand gained 22,600 people through migration in the year to September 2026. Behind that, about 136,100 people arrived to live here and 113,500 left.
 
-There was a net gain of 60,400 non-New Zealand citizens, alongside a net loss of 37,800 New Zealand citizens. Net means arrivals minus departures, so people are moving in both directions.
+Split by passport, it's two different stories: a net gain of 60,400 non-New Zealand citizens and a net loss of 37,800 New Zealand citizens.
 
-On these figures, New Zealand has lost more of its own citizens than it gained in every 12-month period over the last 20 years, apart from the Covid years. A growing population can sit alongside a steady loss of New Zealanders.
+That loss isn't new. In every 12-month period of the last 20 years, apart from Covid, more New Zealanders left than came home. It peaked at about 45,900 in the year to April 2024. I'd watch both sides of the flow, not just the total.
 
-Citizenship is the passport someone used, not where they came from or went. And these are provisional estimates, so they'll be revised. I'd watch both sides of the flow rather than the total.
-
-Source: Stats NZ, International migration: September 2026. Year ended September 2026; provisional estimates.
+Source: Stats NZ. Provisional estimates, rounded.
 
 Read the post: https://csv.co.nz/posts/migration/

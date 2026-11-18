@@ -1,21 +1,13 @@
-<!-- DRAFT: 19 November 2026 is a planned series slot, not a publication date. Use the existing LinkedIn PNG in this folder. -->
-
 Are we spending less?
 
-The same number on the till can hide a very different story.
+In dollars, New Zealand card spending looks flat. It was NZ$9,683 million in September 2026 and NZ$9,712 million three years earlier.
 
-Card spending in New Zealand was NZ$9,683 million in September 2026, seasonally adjusted. Three years earlier it was NZ$9,712 million. In dollars, almost nothing had changed.
+After inflation, it is a different picture. In September 2026 prices, spending is down about 9% in three years. In the ten years to 2019 it grew about 4% a year after inflation, so this looks like a break from the trend to me.
 
-Prices had changed, though. Using the consumers price index, that September 2023 spending was worth NZ$10,603 million in September 2026 prices. On this measure, spending fell about 9% over three years.
+Fuel is down most, about 32% since 2019 after inflation. Durables are down about 14% and hospitality about 10%. Everyday consumables are up about 3%.
 
-Even compared with September 2025, spending rose 1.1% in dollars but fell 2.5% after inflation.
+This covers card payments only, not all household spending, and I have used the broad consumers price index. I'd be cautious about reading too much into one measure.
 
-I find the inflation-adjusted line more useful when asking how much spending has recovered. A business can have steady sales in dollars while its customers have less purchasing power.
-
-This covers card payments, rather than all household spending, and uses the broad CPI to adjust prices. It also measures the total, rather than spending per person.
-
-I will be watching for growth that gets ahead of prices.
-
-Explore the chart: https://csv.co.nz/ect/?view=nzd-millions&real=1
+Full post: https://csv.co.nz/posts/real-card-spending/
 
 Source: Stats NZ electronic card transactions and CPI via RBNZ. Monthly, seasonally adjusted; September 2026 prices.

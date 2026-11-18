@@ -1,17 +1,13 @@
-<!-- DRAFT: 18 November 2026 is a planned series slot, not a publication date. Image: real-wages-linkedin-1200x627.png in this folder (September 2026 data). -->
+Pay rises aren't as good as they look.
 
-A pay rise can still leave you buying less.
+Over the last 10 years, average hourly earnings in New Zealand rose about 4.2% a year. Take out inflation and it's closer to 0.9%.
 
-In the year to September, average hourly earnings in New Zealand rose 2.9%. Consumer prices rose 3.7%.
+The best-looking pay rises were some of the worst for buying power. In the year to March 2023, pay was up 7.6%, the fastest in a decade. But prices were rising almost as fast, so pay was only 0.9 points ahead. A year earlier, pay was 2 points behind prices.
 
-Put another way: $100 of hourly pay a year ago is now about $102.90, but a basket of goods that cost $100 now costs about $103.70.
+Right now pay is up 2.9% and prices 3.7%. That's the second quarter in a row of going backwards.
 
-That's the second quarter in a row that prices have grown faster than pay, after 15 quarters where pay was ahead. The gap has narrowed a little since June, and public sector pay is now close to level. Private sector pay is still well behind.
+Over 20 years, pay after inflation is up about 22%. GDP per working-age person, after inflation, is up about 14%. So I don't think pay has fallen behind the economy. It looks more like the economy per person just hasn't grown much.
 
-It's an average across the country, so it won't describe everyone's pay rise, and your own costs will differ from the CPI basket.
+Full article: https://csv.co.nz/posts/real-wages-after-inflation/
 
-I'll be watching whether the next figures get back above zero.
-
-Explore the chart: https://csv.co.nz/hm9/
-
-Source: Stats NZ via RBNZ. Annual growth rates, September 2026 quarter.
+Source: Stats NZ via RBNZ. Data to September 2026 (GDP to June 2026).

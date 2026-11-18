@@ -290,7 +290,7 @@
       "name": "nz_au",
       "title": "New Zealand and Australia compared",
       "source": "Stats NZ via RBNZ, Australian Bureau of Statistics (ABS) and OECD",
-      "note": "Unemployment, labour force participation, wage growth, wages after inflation and household spending after inflation in New Zealand and Australia, quarterly from 2015. Rates are per cent; growth is the annual % change against the same quarter a year earlier. Australian monthly figures are averaged (rates) or added up (spending) to quarters. New Zealand wages are the labour cost index for all sectors; Australian wages are the private-sector wage price index. Spending is card spending in New Zealand and the ABS household spending indicator in Australia, each less its own CPI inflation. Real wages are each country's wage index divided by its own CPI, set to 100 on the 2019 average, so the lines show how far pay has moved ahead of or behind prices.",
+      "note": "Unemployment, labour force participation, wage growth, wages after inflation and household spending after inflation in New Zealand and Australia, quarterly from 2015. Rates are per cent; growth is the annual % change against the same quarter a year earlier. Australian monthly figures are averaged (rates) or added up (spending) to quarters. New Zealand wages are the labour cost index for all sectors; Australian wages are the all-sector wage price index, the matching measure of what employers pay for the same job. Spending is card spending in New Zealand and the ABS household spending indicator in Australia, each less its own CPI inflation. Real wages are each country's wage index divided by its own CPI, set to 100 on the 2019 average, so the lines show how far pay has moved ahead of or behind prices.",
       "target": "abs",
       "updated": "2026-11-11",
       "page": "nz_au/index.html",
@@ -380,10 +380,10 @@
     {
       "name": "eci",
       "title": "Economic complexity",
-      "source": "The Growth Lab at Harvard University, Growth Projections and Complexity Rankings, Harvard Dataverse",
-      "note": "The Economic Complexity Index scores each country on how many different goods it exports and how few other countries can make them. It counts goods exports only, not services such as tourism, education or software. Ranks use the HS92 product classification.",
+      "source": "The Growth Lab at Harvard University, Growth Projections and Complexity Rankings, Harvard Dataverse; World Bank, Economic Fitness 2; WIPO (2025), Global Innovation Index 2025",
+      "note": "The Economic Complexity Index scores each country on how many different goods it exports and how few other countries can make them. It counts goods exports only, not services such as tourism, education or software. Ranks use the HS92 product classification. The World Bank's Economic Fitness is another goods-based measure; WIPO's Global Innovation Index takes a wider view of research, skills, business and creative output.",
       "target": "eci",
-      "updated": "2026-11-17",
+      "updated": "2026-11-18",
       "page": "eci/index.html",
       "image": "eci/eci.png",
       "site": "nz",
@@ -627,28 +627,12 @@
       "note": "Explore government spending, compare years and open categories for more detail."
     },
     {
-      "key": "post-migration",
-      "title": "Draft post: A migration gain can hide a loss of New Zealanders",
-      "page": "posts/migration/index.html",
-      "beta": false,
-      "wip": true,
-      "note": "Day 11 of 42. The two flows behind the net migration total."
-    },
-    {
-      "key": "post-economic-complexity",
-      "title": "Draft post: How complex is what New Zealand sells?",
-      "page": "posts/economic-complexity/index.html",
-      "beta": false,
-      "wip": true,
-      "image": "images/post-economic-complexity.png",
-      "note": "Day 13 of 42. Not yet on the Posts page."
-    },
-    {
       "key": "post-real-wages",
       "title": "Draft post: Is pay keeping up with prices?",
       "page": "posts/real-wages-after-inflation/index.html",
       "beta": false,
       "wip": true,
+      "blog": true,
       "image": "images/post-real-wages.png",
       "note": "Day 8 of 42. Not yet on the Posts page."
     },
@@ -658,6 +642,7 @@
       "page": "posts/real-card-spending/index.html",
       "beta": false,
       "wip": true,
+      "blog": true,
       "image": "images/post-real-card-spending.png",
       "note": "Day 9 of 42. Not yet on the Posts page."
     },
@@ -667,8 +652,28 @@
       "page": "posts/business-consumer-confidence/index.html",
       "beta": false,
       "wip": true,
+      "blog": true,
       "image": "images/post-confidence.png",
       "note": "Day 10 of 42. Not yet on the Posts page."
+    },
+    {
+      "key": "post-migration",
+      "title": "Draft post: A migration gain can hide a loss of New Zealanders",
+      "page": "posts/migration/index.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "note": "Day 11 of 42. The two flows behind the net migration total."
+    },
+    {
+      "key": "post-economic-complexity",
+      "title": "Draft post: How complex is what New Zealand sells?",
+      "page": "posts/economic-complexity/index.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "image": "images/post-economic-complexity.png",
+      "note": "Day 13 of 42. Not yet on the Posts page."
     }
   ]
 }
