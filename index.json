@@ -666,6 +666,15 @@
       "note": "Day 11 of 42. The two flows behind the net migration total."
     },
     {
+      "key": "post-nz-australia",
+      "title": "Draft post: Australia looks to be pulling ahead of New Zealand",
+      "page": "posts/new-zealand-and-australia/index.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "note": "Day 12 of 42. Five NZ and Australia charts. Not yet on the Posts page."
+    },
+    {
       "key": "post-economic-complexity",
       "title": "Draft post: How complex is what New Zealand sells?",
       "page": "posts/economic-complexity/index.html",

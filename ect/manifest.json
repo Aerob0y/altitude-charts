@@ -12,6 +12,10 @@
     {
       "label": "NZD millions",
       "spec": "nzd-millions.json"
+    },
+    {
+      "label": "Total, before and after inflation",
+      "spec": "total-before-and-after-inflation.json"
     }
   ],
   "data": "data.csv",

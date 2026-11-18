@@ -1,0 +1,21 @@
+<!-- DRAFT: Day 12, issue #433. Do not post the site URL until approved and published.
+     Images (in this order), 1200 x 627 at 2x. Alt text is in docs/blog/posts/12-nz-australia/linkedin.md:
+     1. nz-au-1-real-wages.png
+     2. nz-au-2-wage-growth.png
+     3. nz-au-3-unemployment.png
+     4. nz-au-4-participation.png
+     5. nz-au-5-spending.png -->
+
+Australia looks to be pulling ahead of New Zealand
+
+I put the two side by side on five measures.
+
+After inflation, wages in both countries are below 2019: New Zealand about 7% below, Australia about 5%. Wage growth has slowed to 2.1% here, while Australia is still at 3.5%.
+
+Unemployment is 5.7% in New Zealand and 4.6% in Australia, having been level in late 2022. New Zealand still leads on participation. Household spending after inflation is down 1.8% here and up 2.7% there.
+
+I'll be watching whether our wage growth picks up.
+
+Source: Stats NZ via RBNZ, ABS, OECD.
+
+Read the post: https://csv.co.nz/posts/new-zealand-and-australia/

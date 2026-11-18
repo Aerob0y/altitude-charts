@@ -1,12 +1,4 @@
-Are we spending less?
-
-In dollars, New Zealand card spending looks flat. It was NZ$9,683 million in September 2026 and NZ$9,712 million three years earlier.
-
-After inflation, it is a different picture. In September 2026 prices, spending is down about 9% in three years. In the ten years to 2019 it grew about 4% a year after inflation, so this looks like a break from the trend to me.
-
-Fuel is down most, about 32% since 2019 after inflation. Durables are down about 14% and hospitality about 10%. Everyday consumables are up about 3%.
-
-This covers card payments only, not all household spending, and I have used the broad consumers price index. I'd be cautious about reading too much into one measure.
+Card spending in New Zealand has barely moved in 3 years. Accounting for inflation, that's a 9% drop from Sep 2023 to Sep 2026. Even worse, Sep 2023 is barely different from Sep 2019. A 9% drop over 7 years. Wild. Some of that is fuel, where consumption is dropping over time, but even after accounting for that, every category looks weak.
 
 Full post: https://csv.co.nz/posts/real-card-spending/
 
