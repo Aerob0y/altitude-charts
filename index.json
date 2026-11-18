@@ -637,16 +637,6 @@
       "note": "Day 8 of 42. Not yet on the Posts page."
     },
     {
-      "key": "post-real-card-spending",
-      "title": "Draft post: Are we spending less?",
-      "page": "posts/real-card-spending/index.html",
-      "beta": false,
-      "wip": true,
-      "blog": true,
-      "image": "images/post-real-card-spending.png",
-      "note": "Day 9 of 42. Not yet on the Posts page."
-    },
-    {
       "key": "post-confidence",
       "title": "Draft post: Businesses are upbeat. Households are not.",
       "page": "posts/business-consumer-confidence/index.html",
