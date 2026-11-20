@@ -89,10 +89,11 @@
     var posts = (index.tools || []).filter(function (tool) { return tool.blog; });
     posts.forEach(function (post) {
       var li = document.createElement('li'), a = document.createElement('a'), thumb = document.createElement('span');
-      a.href = post.page.replace(/index\.html$/, ''); thumb.className = 'thumb';
+      li.id = post.key;
+      a.href = post.planned ? '#' + post.key : post.page.replace(/index\.html$/, ''); thumb.className = 'thumb';
       if (post.image) { var im = document.createElement('img'); im.src = post.image; im.alt = ''; im.loading = 'lazy'; im.width = 640; im.height = 320; thumb.append(im); }
       var c = document.createElement('span'), t = document.createElement('span'), d = document.createElement('span');
-      c.className = 'cat'; c.textContent = 'Draft post';
+      c.className = 'cat'; c.textContent = post.planned ? 'Planned post' : 'Draft post';
       t.className = 't'; t.textContent = (post.title || post.key).replace(/^Draft post:\s*/, ''); d.className = 'd'; d.textContent = post.note || '';
       a.append(thumb, c, t, d); li.append(a); grid.append(li);
     });

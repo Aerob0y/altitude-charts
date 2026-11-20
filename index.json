@@ -532,6 +532,45 @@
       "site": "nz",
       "menu": "Tourism & Migration",
       "wip": true
+    },
+    {
+      "name": "government_spending",
+      "title": "Government spending by function, 2000/01 to 2025/26",
+      "source": "Treasury and Stats NZ",
+      "note": "Core Crown expenses. Adjusted for inflation with CPI (June years). Source: Treasury, Stats NZ. Views show percent of GDP or 2026 NZ dollars per person; shaded periods mark governments.",
+      "target": "treasury",
+      "updated": "2026-11-11",
+      "page": "government_spending/index.html",
+      "image": "government_spending/government_spending.png",
+      "site": "nz",
+      "menu": "Economic",
+      "wip": true
+    },
+    {
+      "name": "nz_super",
+      "title": "NZ Super: more people, or bigger payments?",
+      "source": "nz_super",
+      "note": "nz_super",
+      "target": "treasury",
+      "updated": "2026-11-11",
+      "page": "nz_super/index.html",
+      "image": "nz_super/nz_super.png",
+      "site": "nz",
+      "menu": "Economic",
+      "wip": true
+    },
+    {
+      "name": "tax_and_ageing",
+      "title": "Where tax comes from, and who pays it",
+      "source": "tax_and_ageing",
+      "note": "tax_and_ageing",
+      "target": "treasury",
+      "updated": "2026-11-11",
+      "page": "tax_and_ageing/index.html",
+      "image": "tax_and_ageing/tax_and_ageing.png",
+      "site": "nz",
+      "menu": "Economic",
+      "wip": true
     }
   ],
   "sites": [
@@ -662,7 +701,7 @@
       "beta": false,
       "wip": true,
       "blog": true,
-      "note": "Day 12 of 42. Five NZ and Australia charts. Not yet on the Posts page."
+      "note": "Post 12 · Day 12 · planned for Sunday 22 November 2026. Five NZ and Australia charts. Not yet on the Posts page."
     },
     {
       "key": "post-economic-complexity",
@@ -672,7 +711,296 @@
       "wip": true,
       "blog": true,
       "image": "images/post-economic-complexity.png",
-      "note": "Day 13 of 42. Not yet on the Posts page."
+      "note": "Post 13 · Day 13 · planned for Monday 23 November 2026. Not yet on the Posts page."
+    },
+    {
+      "key": "post-14",
+      "title": "Draft post: Is ageing why government spending keeps rising?",
+      "page": "posts/government-spending/index.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "note": "Post 14 · Day 14 · planned for Tuesday 24 November 2026. Four charts. Not yet on the Posts page."
+    },
+    {
+      "key": "post-15",
+      "title": "Post 15: Air New Zealand revenue",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 15 · planned for Wednesday 25 November 2026 · Needs work."
+    },
+    {
+      "key": "post-16",
+      "title": "Post 16: Air New Zealand CASK",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 16 · planned for Thursday 26 November 2026 · Idea."
+    },
+    {
+      "key": "post-17",
+      "title": "Post 17: Domestic competition index",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 17 · planned for Friday 27 November 2026 · Idea."
+    },
+    {
+      "key": "post-18",
+      "title": "Post 18: Growth by airport in New Zealand",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 18 · planned for Saturday 28 November 2026 · Idea."
+    },
+    {
+      "key": "post-19",
+      "title": "Post 19: Tasman competition",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 19 · planned for Sunday 29 November 2026 · Idea."
+    },
+    {
+      "key": "post-20",
+      "title": "Post 20: Growth vs fuel",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 20 · planned for Monday 30 November 2026 · Idea."
+    },
+    {
+      "key": "post-21",
+      "title": "Post 21: Queenstown Airport vs visitor numbers",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 21 · planned for Tuesday 1 December 2026 · Idea."
+    },
+    {
+      "key": "post-22",
+      "title": "Post 22: Mortgages and loan types",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 22 · planned for Wednesday 2 December 2026 · Ready."
+    },
+    {
+      "key": "post-23",
+      "title": "Post 23: Mortgage repayments compared with the tax take",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 23 · planned for Thursday 3 December 2026 · Ready."
+    },
+    {
+      "key": "post-24",
+      "title": "Post 24: House prices",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 24 · planned for Friday 4 December 2026 · Ready."
+    },
+    {
+      "key": "post-25",
+      "title": "Post 25: The rental market",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 25 · planned for Saturday 5 December 2026 · Ready."
+    },
+    {
+      "key": "post-26",
+      "title": "Post 26: Building investment",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 26 · planned for Sunday 6 December 2026 · Ready."
+    },
+    {
+      "key": "post-27",
+      "title": "Post 27: Dublin density",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 27 · planned for Monday 7 December 2026 · Idea."
+    },
+    {
+      "key": "post-28",
+      "title": "Post 28: Buy or rent",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 28 · planned for Tuesday 8 December 2026 · Idea."
+    },
+    {
+      "key": "post-29",
+      "title": "Post 29: Real interest rates",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 29 · planned for Wednesday 9 December 2026 · Suggestion."
+    },
+    {
+      "key": "post-30",
+      "title": "Post 30: Swap rates and fixed mortgages",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 30 · planned for Thursday 10 December 2026 · Ready."
+    },
+    {
+      "key": "post-31",
+      "title": "Post 31: The yield curve as a recession signal",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 31 · planned for Friday 11 December 2026 · Ready."
+    },
+    {
+      "key": "post-32",
+      "title": "Post 32: Why the NZ dollar is so low",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 32 · planned for Saturday 12 December 2026 · Ready."
+    },
+    {
+      "key": "post-33",
+      "title": "Post 33: Tradable and non-tradable inflation",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 33 · planned for Sunday 13 December 2026 · Ready."
+    },
+    {
+      "key": "post-34",
+      "title": "Post 34: Our inflation compared with other countries",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 34 · planned for Monday 14 December 2026 · Ready."
+    },
+    {
+      "key": "post-35",
+      "title": "Post 35: What forecasters expect",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 35 · planned for Tuesday 15 December 2026 · Ready."
+    },
+    {
+      "key": "post-36",
+      "title": "Post 36: Waterford: an airport worth developing",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 36 · planned for Wednesday 16 December 2026 · Needs work."
+    },
+    {
+      "key": "post-37",
+      "title": "Post 37: Mexico City",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 37 · planned for Thursday 17 December 2026 · Idea."
+    },
+    {
+      "key": "post-38",
+      "title": "Post 38: Ski Central",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 38 · planned for Friday 18 December 2026 · Idea."
+    },
+    {
+      "key": "post-39",
+      "title": "Post 39: Western Sydney Airport catchment",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 39 · planned for Saturday 19 December 2026 · Suggestion."
+    },
+    {
+      "key": "post-40",
+      "title": "Post 40: Canberra as an international gateway",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 40 · planned for Sunday 20 December 2026 · Suggestion."
+    },
+    {
+      "key": "post-41",
+      "title": "Post 41: Shannon and the west of Ireland",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 41 · planned for Monday 21 December 2026 · Suggestion."
+    },
+    {
+      "key": "post-42",
+      "title": "Post 42: Roundup of the six weeks",
+      "page": "blog_wip.html",
+      "beta": false,
+      "wip": true,
+      "blog": true,
+      "planned": true,
+      "note": "Day 42 · planned for Tuesday 22 December 2026 · Suggestion."
     }
   ]
 }

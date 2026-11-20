@@ -1,0 +1,20 @@
+{
+  "name": "government_spending",
+  "title": "Government spending by function, 2000/01 to 2025/26",
+  "source": "Treasury and Stats NZ",
+  "note": "Core Crown expenses. Adjusted for inflation with CPI (June years). Source: Treasury, Stats NZ. Views show percent of GDP or 2026 NZ dollars per person; shaded periods mark governments.",
+  "updated": "2026-11-11",
+  "views": [
+    {
+      "label": "Spending as a share of GDP",
+      "spec": "spending-as-a-share-of-gdp.json"
+    },
+    {
+      "label": "Real spending per person",
+      "spec": "real-spending-per-person.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "government_spending.png",
+  "image_alt": "Government spending by function, 2000/01 to 2025/26 Percent of GDP, June years. Core Crown expenses. Adjusted for inflation with CPI (June years). Source: Treasury, Stats NZ."
+}

@@ -1,0 +1,24 @@
+{
+  "name": "tax_and_ageing",
+  "title": "Where tax comes from, and who pays it",
+  "source": "tax_and_ageing",
+  "note": "tax_and_ageing",
+  "updated": "2026-11-11",
+  "views": [
+    {
+      "label": "Tax by source",
+      "spec": "tax-by-source.json"
+    },
+    {
+      "label": "Income tax rate at typical earnings",
+      "spec": "income-tax-rate-at-typical-earnings.json"
+    },
+    {
+      "label": "People supporting each person aged 65+",
+      "spec": "people-supporting-each-person-aged-65.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "tax_and_ageing.png",
+  "image_alt": "Tax revenue by source Percent of GDP, June years. Source: Treasury."
+}

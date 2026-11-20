@@ -1,0 +1,20 @@
+{
+  "name": "nz_super",
+  "title": "NZ Super: more people, or bigger payments?",
+  "source": "nz_super",
+  "note": "nz_super",
+  "updated": "2026-11-11",
+  "views": [
+    {
+      "label": "More people or bigger payments",
+      "spec": "more-people-or-bigger-payments.json"
+    },
+    {
+      "label": "Recipients and life expectancy",
+      "spec": "recipients-and-life-expectancy.json"
+    }
+  ],
+  "data": "data.csv",
+  "image": "nz_super.png",
+  "image_alt": "NZ Super: more people, or bigger payments? Change since 2000/01, 2026 NZ dollars, millions. NZ Super is set with reference to the average wage, so payments rise faster than prices. Source: Treasury, MSD, Stats NZ."
+}
