@@ -676,16 +676,6 @@
       "note": "Day 8 of 42. Not yet on the Posts page."
     },
     {
-      "key": "post-confidence",
-      "title": "Draft post: Businesses are upbeat. Households are not.",
-      "page": "posts/business-consumer-confidence/index.html",
-      "beta": false,
-      "wip": true,
-      "blog": true,
-      "image": "images/post-confidence.png",
-      "note": "Day 10 of 42. Not yet on the Posts page."
-    },
-    {
       "key": "post-migration",
       "title": "Draft post: A migration gain can hide a loss of New Zealanders",
       "page": "posts/migration/index.html",
